@@ -1,0 +1,28 @@
+seed: 42
+output_dir: outputs/ranker/baseline_v1
+
+model:
+  pretrained_name: bert-base-uncased
+  dropout: 0.1
+
+data:
+  train_samples: data/hotpotqa_distractor/samples/train.jsonl
+  val_samples: data/hotpotqa_distractor/samples/val.jsonl
+  test_samples: data/hotpotqa_distractor/samples/test.jsonl
+
+  train_memory: data/hotpotqa_distractor/memory/train.jsonl
+  val_memory: data/hotpotqa_distractor/memory/val.jsonl
+  test_memory: data/hotpotqa_distractor/memory/test.jsonl
+
+train:
+  batch_size: 4
+  num_workers: 0
+  epochs: 3
+  lr: 2.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.06
+  max_length: 384
+  grad_accum_steps: 1
+  max_grad_norm: 1.0
+  log_every: 50
+  fp16: true

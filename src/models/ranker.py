@@ -1,0 +1,63 @@
+from typing import List, Tuple
+
+import torch
+import torch.nn as nn
+from transformers import AutoModel
+
+
+class CrossEncoderRanker(nn.Module):
+    def __init__(self, pretrained_name: str, dropout: float = 0.1):
+        super().__init__()
+        self.encoder = AutoModel.from_pretrained(pretrained_name)
+        hidden_size = self.encoder.config.hidden_size
+        self.dropout = nn.Dropout(dropout)
+        self.scorer = nn.Linear(hidden_size, 1)
+
+    def forward(
+        self,
+        input_ids: torch.Tensor,
+        attention_mask: torch.Tensor,
+        token_type_ids: torch.Tensor = None,
+    ) -> torch.Tensor:
+        outputs = self.encoder(
+            input_ids=input_ids,
+            attention_mask=attention_mask,
+            token_type_ids=token_type_ids,
+        )
+
+        cls_state = outputs.last_hidden_state[:, 0, :]
+        cls_state = self.dropout(cls_state)
+        flat_scores = self.scorer(cls_state).squeeze(-1)  # [num_pairs]
+        return flat_scores
+
+    @staticmethod
+    def pack_scores(
+        flat_scores: torch.Tensor,
+        candidate_counts: List[int],
+    ) -> Tuple[torch.Tensor, torch.Tensor]:
+        batch_size = len(candidate_counts)
+        max_candidates = max(candidate_counts)
+
+        # Use the minimum representable value for the current dtype to stay fp16-safe.
+        neg_large = torch.finfo(flat_scores.dtype).min
+
+        padded_scores = flat_scores.new_full((batch_size, max_candidates), neg_large)
+        mask = torch.zeros(
+            (batch_size, max_candidates),
+            dtype=torch.bool,
+            device=flat_scores.device,
+        )
+
+        cursor = 0
+        for i, count in enumerate(candidate_counts):
+            padded_scores[i, :count] = flat_scores[cursor: cursor + count]
+            mask[i, :count] = True
+            cursor += count
+
+        if cursor != flat_scores.size(0):
+            raise ValueError(
+                "flat_scores count does not match candidate_counts: "
+                f"flat={flat_scores.size(0)}, packed={cursor}"
+            )
+
+        return padded_scores, mask
