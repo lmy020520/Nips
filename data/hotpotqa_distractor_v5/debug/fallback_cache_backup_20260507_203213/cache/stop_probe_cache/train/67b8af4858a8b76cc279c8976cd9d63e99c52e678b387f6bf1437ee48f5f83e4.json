@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "David Leitch",
+  "pred_answer": "David Leitch",
+  "normalized_gold": "david leitch",
+  "normalized_pred": "david leitch",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac435dc554299204fd21f0c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac435dc554299204fd21f0c::Zazie Beetz::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac435dc554299204fd21f0c::Deadpool 2::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac435dc554299204fd21f0c::Deadpool 2::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac435dc554299204fd21f0c::Zazie Beetz",
+        "5ac435dc554299204fd21f0c::Deadpool 2"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac435dc554299204fd21f0c::Zazie Beetz::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac435dc554299204fd21f0c::Deadpool 2::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac435dc554299204fd21f0c::Deadpool 2::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac435dc554299204fd21f0c::Deadpool 2::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The film is being directed by David Leitch from a script by Rhett Reese and Paul Wernick, with Ryan Reynolds starring in the title role alongside Morena Baccarin, T. J. Miller, Leslie Uggams, Brianna Hildebrand, Stefan Kapičić, Zazie Beetz, Josh Brolin, and Jack Kesy.\n[2] Deadpool 2 is an upcoming American superhero film based on the Marvel Comics character Deadpool, distributed by 20th Century Fox.\n[3] Beetz has been cast as the Marvel Comics character Neena Thurman / Domino in \"Deadpool 2\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

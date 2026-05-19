@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Franck Ribéry",
+  "pred_answer": "Franck Ribéry",
+  "normalized_gold": "franck ribéry",
+  "normalized_pred": "franck ribéry",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a86f99c5542991e7718169f",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a86f99c5542991e7718169f::Franck Ribéry::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a86f99c5542991e7718169f::2007–08 FC Bayern Munich season::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a86f99c5542991e7718169f::1984–85 FC Bayern Munich season::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a86f99c5542991e7718169f::Franck Ribéry",
+        "5a86f99c5542991e7718169f::2007–08 FC Bayern Munich season"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a86f99c5542991e7718169f::Franck Ribéry::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a86f99c5542991e7718169f::2007–08 FC Bayern Munich season::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a86f99c5542991e7718169f::1984–85 FC Bayern Munich season::7",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a86f99c5542991e7718169f::1984–85 FC Bayern Munich season::7",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Qualification for the 1984–85 European Cup Winners' Cup was a result of winning the 1983–84 DFB-Pokal.\n[2] Prior to the beginning of the 2007–08 season, Bayern Munich underwent a major restructuring of the team, releasing or retiring nine players while adding ten others to the squad, most notably Luca Toni and Franck Ribéry.\n[3] Franck Henry Pierre Ribéry (] ; born 7 April 1983) is a French professional footballer who plays for German club Bayern Munich."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Independence, Kansas",
+  "pred_answer": "Independence, Kansas",
+  "normalized_gold": "independence kansas",
+  "normalized_pred": "independence kansas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd1faa55429933744ab733",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd1faa55429933744ab733::Antwoine Sanders::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd1faa55429933744ab733::Charles Wright (gridiron football)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd1faa55429933744ab733::Independence Community College::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd1faa55429933744ab733::Independence Community College::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd1faa55429933744ab733::Antwoine Sanders",
+        "5abd1faa55429933744ab733::Independence Community College"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd1faa55429933744ab733::Antwoine Sanders::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd1faa55429933744ab733::Charles Wright (gridiron football)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd1faa55429933744ab733::Independence Community College::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd1faa55429933744ab733::Independence Community College::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd1faa55429933744ab733::Independence Community College::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Independence Community College is a community college in Independence, Kansas, United States.\n[2] It is located between Tulsa, Kansas City, Wichita, Kansas and Joplin, Missouri and was formerly known as Independence Community Junior College.\n[3] He first enrolled at Highland Community College before transferring to Fort Scott Community College and lastly the University of Tulsa.\n[4] He first enrolled at Independence Community College before transferring to Arizona Western College and later the University of Utah."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

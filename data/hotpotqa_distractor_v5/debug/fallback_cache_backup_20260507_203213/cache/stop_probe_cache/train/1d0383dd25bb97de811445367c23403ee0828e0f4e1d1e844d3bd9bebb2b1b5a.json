@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jessie",
+  "pred_answer": "Jessie",
+  "normalized_gold": "jessie",
+  "normalized_pred": "jessie",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae818fe55429952e35eaa13",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae818fe55429952e35eaa13::Toy Story 2::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae818fe55429952e35eaa13::Jessie (Toy Story)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae818fe55429952e35eaa13::Joan Cusack::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae818fe55429952e35eaa13::Bud Luckey::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae818fe55429952e35eaa13::Jessie (Toy Story)",
+        "5ae818fe55429952e35eaa13::Joan Cusack"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae818fe55429952e35eaa13::Toy Story 2::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae818fe55429952e35eaa13::Jessie (Toy Story)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae818fe55429952e35eaa13::Joan Cusack::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae818fe55429952e35eaa13::Bud Luckey::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae818fe55429952e35eaa13::Bud Luckey::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] As a voice for animated characters Luckey is known as the voice of Rick Dicker in \"The Incredibles\", Chuckles the Clown in \"Toy Story 3\" and \"Toy Story 4\" and as the \"Winnie the Pooh\" character Eeyore from A. A. Milne's classic children's book series \"Winnie-the-Pooh\".\n[2] She is also known as the voice of Jessie in the \"Toy Story\" franchise.\n[3] Jessie The Yodeling Cowgirl is a fictional character from the films \"Toy Story 2\" and \"Toy Story 3\".\n[4] Many of the original characters and voices from \"Toy Story\" return for this sequel, and several new characters—including Jessie (voiced by Joan Cusack), Barbie (voiced by Jodi Benson), Stinky Pete (voiced by Kelsey Grammer) and Mrs. Potato Head (voiced by Estelle Harris)—are introduced."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

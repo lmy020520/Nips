@@ -1,0 +1,119 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bill Watts",
+  "pred_answer": "Bill Watts",
+  "normalized_gold": "bill watts",
+  "normalized_pred": "bill watts",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab922ce554299753720f729",
+    "t": 6,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab922ce554299753720f729::Jerry Stubbs::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab922ce554299753720f729::Bill Watts::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab922ce554299753720f729::Bill Watts::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab922ce554299753720f729::Jerry Stubbs::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab922ce554299753720f729::derived::0"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5ab922ce554299753720f729::Billy Sandow::4"
+      },
+      {
+        "step_id": 6,
+        "unit_id": "5ab922ce554299753720f729::derived::7"
+      },
+      {
+        "step_id": 7,
+        "unit_id": "5ab922ce554299753720f729::Big Boss Man (wrestler)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab922ce554299753720f729::Jerry Stubbs::1",
+        "5ab922ce554299753720f729::Bill Watts::0",
+        "5ab922ce554299753720f729::Bill Watts",
+        "5ab922ce554299753720f729::Jerry Stubbs"
+      ],
+      "k_br": 2.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab922ce554299753720f729::Jerry Stubbs::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab922ce554299753720f729::Bill Watts::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab922ce554299753720f729::Bill Watts::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab922ce554299753720f729::Jerry Stubbs::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab922ce554299753720f729::Billy Sandow::4",
+          "added_step": 5
+        },
+        {
+          "unit_id": "5ab922ce554299753720f729::Big Boss Man (wrestler)::0",
+          "added_step": 7
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5ab922ce554299753720f729::derived::0",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5ab922ce554299753720f729::derived::7",
+          "added_step": 6
+        }
+      ],
+      "last_added_unit_id": "5ab922ce554299753720f729::Big Boss Man (wrestler)::0",
+      "last_updated_step": 7
+    },
+    "K_t": "Evidence:\n[1] Watts was famous under his \"Cowboy\" gimmick in his wrestling career, and then as a tough, no-nonsense promoter in the Mid-South United States, which grew to become the Universal Wrestling Federation (UWF).\n[2] In 2004, World Wrestling Entertainment (WWE), the WWF's successor, reinstated the WWE Hall of Fame, which included inductees that were alumni of WWE, NWA, JCP, and WCW.\n[3] Ray Washington Traylor Jr. (May 2, 1963 – September 22, 2004) was an American professional wrestler who was best known for his appearances with the World Wrestling Federation (WWF) under the ring name (The) Big Boss Man (sometimes spelled Bossman), as well as for his appearances with World Championship Wrestling (WCW) as The Boss, The Man, The Guardian Angel, and Big Bubba Rogers.\n[4] He was a charter inductee of the Wrestling Observer Newsletter Hall of Fame in 1996.\n\nNotes:\n[bridge] Bill Watts was a former professional wrestler and promoter known for his work in the Mid-South United States.\n[bridge] The WWE Hall of Fame includes inductees from various wrestling organizations such as NWA, JCP, and WCW."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

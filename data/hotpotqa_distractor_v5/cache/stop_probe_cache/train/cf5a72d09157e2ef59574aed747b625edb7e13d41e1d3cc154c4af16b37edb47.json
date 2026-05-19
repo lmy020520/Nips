@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Big Rig Bounty Hunters",
+  "pred_answer": "Big Rig Bounty Hunters",
+  "normalized_gold": "big rig bounty hunters",
+  "normalized_pred": "big rig bounty hunters",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8fb4385542995b44242090",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8fb4385542995b44242090::Big Rig Bounty Hunters::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8fb4385542995b44242090::Dance Moms (season 3)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8fb4385542995b44242090::History (U.S. TV network)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8fb4385542995b44242090::NHL on Hughes::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8fb4385542995b44242090::Big Rig Bounty Hunters",
+        "5a8fb4385542995b44242090::History (U.S. TV network)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8fb4385542995b44242090::Big Rig Bounty Hunters::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8fb4385542995b44242090::Dance Moms (season 3)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8fb4385542995b44242090::History (U.S. TV network)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8fb4385542995b44242090::NHL on Hughes::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8fb4385542995b44242090::NHL on Hughes::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] NHL on Hughes is the de facto name of a TV program that broadcast National Hockey League games on the defunct independent Hughes Television Network during the 1979–80 season.\n[2] History (originally The History Channel from 1995 to 2008) is an American digital cable and satellite television network that is owned by A&E Networks, a joint venture between the Hearst Corporation and the Disney–ABC Television Group division of the Walt Disney Company.\n[3] The third season of \"Dance Moms\", an American dance reality TV program created by Collins Avenue Productions, began airing on January 1, 2013 on Lifetime television network.\n[4] Big Rig Bounty Hunters is an American reality TV program, which aired from February 14, 2013, to June 30, 2014, on the History Channel."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

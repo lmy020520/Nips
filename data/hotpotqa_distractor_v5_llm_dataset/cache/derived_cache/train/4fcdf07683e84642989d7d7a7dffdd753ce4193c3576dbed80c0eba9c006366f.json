@@ -1,0 +1,24 @@
+{
+  "should_derive": true,
+  "reason": "The current evidence mentions 'publications such as' but does not specify which publication. The gold answer suggests 'The Daily Beast'. The raw candidates do not directly mention this, but we can derive a bridge note to connect the host of Reid Report to political commentary in publications, and a verification note to check if any candidate mentions 'The Daily Beast' or similar.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "The host of Reid Report is a regular political commentator in publications.",
+      "source_unit_ids": [
+        "5a826b8f5542995ce29dcd01::Robert Gersony::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "None of the raw candidates mention 'The Daily Beast' or any specific publication for political commentary.",
+      "source_unit_ids": [
+        "5a826b8f5542995ce29dcd01::Robert Gersony::0",
+        "5a826b8f5542995ce29dcd01::Thomas Reid::7",
+        "5a826b8f5542995ce29dcd01::The State of the World's Children::0"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

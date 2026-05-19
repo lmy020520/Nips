@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "New York State Route 102",
+  "pred_answer": "New York State Route 102",
+  "normalized_gold": "new york state route 102",
+  "normalized_pred": "new york state route 102",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e87fa5542991319bc94d0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e87fa5542991319bc94d0::Meadowbrook State Parkway::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e87fa5542991319bc94d0::Glen Cove Road::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e87fa5542991319bc94d0::New York State Route 102::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7e87fa5542991319bc94d0::Farm to Market Road 157::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e87fa5542991319bc94d0::Meadowbrook State Parkway",
+        "5a7e87fa5542991319bc94d0::New York State Route 102"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e87fa5542991319bc94d0::Meadowbrook State Parkway::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e87fa5542991319bc94d0::Glen Cove Road::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e87fa5542991319bc94d0::New York State Route 102::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7e87fa5542991319bc94d0::Farm to Market Road 157::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e87fa5542991319bc94d0::Farm to Market Road 157::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Farm to Market Road 157 (FM 157) is a Farm to Market Road in the US state of Texas, traveling from an exit on Texas State Highway 121 south, through Euless, Bedford, Fort Worth, and Arlington in Tarrant County, then enters Johnson County, and passes through Mansfield, and Venus, before entering Ellis County, and terminating at an intersection with Farm to Market Road 66 in Maypearl.\n[2] New York State Route 102 (NY 102) is an east–west state highway in Nassau County, New York, in the United States.\n[3] Glen Cove Road is a major north–south thoroughfare through north-central Nassau County on Long Island, New York, in the United States.\n[4] The Meadowbrook State Parkway (also known as the Meadowbrook, the Meadowbrook Parkway or the MSP) is a 12.52 mi parkway in Nassau County, New York, in the United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

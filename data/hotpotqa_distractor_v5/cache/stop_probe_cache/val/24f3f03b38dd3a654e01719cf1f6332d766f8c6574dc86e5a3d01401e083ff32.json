@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Boeing Commercial Airplanes",
+  "pred_answer": "Boeing Commercial Airplanes",
+  "normalized_gold": "boeing commercial airplanes",
+  "normalized_pred": "boeing commercial airplanes",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7ca9b95542996dd594b96c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7ca9b95542996dd594b96c::TWA Flight 841 (1979)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7ca9b95542996dd594b96c::Boeing 727::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7ca9b95542996dd594b96c::Boeing 727::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7ca9b95542996dd594b96c::TWA Flight 841 (1979)",
+        "5a7ca9b95542996dd594b96c::Boeing 727"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7ca9b95542996dd594b96c::TWA Flight 841 (1979)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7ca9b95542996dd594b96c::Boeing 727::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7ca9b95542996dd594b96c::Boeing 727::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7ca9b95542996dd594b96c::Boeing 727::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Boeing 727 is a midsized, narrow-body three-engined jet aircraft built by Boeing Commercial Airplanes from the early 1960s to 1984.\n[2] It has three Pratt & Whitney JT8D engines below the T-tail, one on each side of the rear fuselage with a center engine that connects through an S-duct to an inlet at the base of the fin.\n[3] The pilots were able to regain control of the aircraft and made a successful emergency landing at Detroit Metropolitan Airport."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Irish",
+  "pred_answer": "Irish",
+  "normalized_gold": "irish",
+  "normalized_pred": "irish",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84b7785542991dd0999dad",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84b7785542991dd0999dad::Going to America::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84b7785542991dd0999dad::Are You Right There Father Ted?::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84b7785542991dd0999dad::Dermot Morgan::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a84b7785542991dd0999dad::A Christmassy Ted::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84b7785542991dd0999dad::Are You Right There Father Ted?",
+        "5a84b7785542991dd0999dad::Dermot Morgan"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84b7785542991dd0999dad::Going to America::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84b7785542991dd0999dad::Are You Right There Father Ted?::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84b7785542991dd0999dad::Dermot Morgan::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a84b7785542991dd0999dad::A Christmassy Ted::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84b7785542991dd0999dad::A Christmassy Ted::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"A Christmassy Ted\" is an episode of the Channel 4 sitcom \"Father Ted\".\n[2] Dermot John Morgan (31 March 1952 – 28 February 1998) was an Irish comedian, actor and previously a schoolteacher, who achieved international renown for his role as Father Ted Crilly in the Channel 4 sitcom \"Father Ted\".\n[3] It is notable for being the first episode aired after the death of Dermot Morgan, who had died the day after filming for the final episode had been completed.\n[4] The show's star Dermot Morgan died the day after filming was completed."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Old Forester",
+  "pred_answer": "Old Forester",
+  "normalized_gold": "old forester",
+  "normalized_pred": "old forester",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f77485542997ba9cb327b",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f77485542997ba9cb327b::Brown-Forman::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f77485542997ba9cb327b::Servis::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f77485542997ba9cb327b::Brown-Forman::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8f77485542997ba9cb327b::Old Forester::3"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8f77485542997ba9cb327b::Yuengling::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f77485542997ba9cb327b::Brown-Forman",
+        "5a8f77485542997ba9cb327b::Old Forester"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f77485542997ba9cb327b::Brown-Forman::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f77485542997ba9cb327b::Servis::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f77485542997ba9cb327b::Brown-Forman::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8f77485542997ba9cb327b::Old Forester::3",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8f77485542997ba9cb327b::Yuengling::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f77485542997ba9cb327b::Yuengling::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It is one of the largest breweries by volume in the country.\n[2] During the Prohibition period from 1920 to 1933, it was one of only 10 brands authorized for lawful production (for medicinal purposes).\n[3] Based in Louisville, Kentucky, it manufactures several well known brands throughout the world, including Jack Daniel's, Early Times, Old Forester, Woodford Reserve, Canadian Mist, GlenDronach, BenRiach, Glenglassaugh, Finlandia, Herradura, Korbel, and Chambord.\n[4] From 1991 to 2008, the brand was owned and manufactured by Italian white goods company Antonio Merloni SpA."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

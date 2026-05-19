@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Bobby Flay",
+  "pred_answer": "Bobby Flay",
+  "normalized_gold": "bobby flay",
+  "normalized_pred": "bobby flay",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7f7d3c5542994857a76748",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7f7d3c5542994857a76748::Damaris Phillips::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7f7d3c5542994857a76748::Junk Food Flip::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7f7d3c5542994857a76748::Southern at Heart::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7f7d3c5542994857a76748::Damaris Phillips::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7f7d3c5542994857a76748::Damaris Phillips",
+        "5a7f7d3c5542994857a76748::Southern at Heart"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7f7d3c5542994857a76748::Damaris Phillips::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7f7d3c5542994857a76748::Junk Food Flip::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7f7d3c5542994857a76748::Southern at Heart::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7f7d3c5542994857a76748::Damaris Phillips::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7f7d3c5542994857a76748::Damaris Phillips::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She hosted the Food Network show \"Southern at Heart\" for five seasons from 2013 to 2016.\n[2] Southern at Heart with Damaris Phillips, commonly known by its shortened title Southern at Heart, is an American cooking-themed series that aired on Food Network.\n[3] Junk Food Flip is an American cooking-themed television series that airs on Cooking Channel.\n[4] She currently co-hosts \"The Bobby and Damaris Show\" on Food Network with Bobby Flay."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "River Don Navigation",
+  "pred_answer": "River Don Navigation",
+  "normalized_gold": "river don navigation",
+  "normalized_pred": "river don navigation",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7ca16d55429907fabeefd5",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7ca16d55429907fabeefd5::Botanical Garden Atocha-La Liria::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7ca16d55429907fabeefd5::Stainforth and Keadby Canal::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7ca16d55429907fabeefd5::Stainforth and Keadby Canal::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7ca16d55429907fabeefd5::Crowle, Lincolnshire::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7ca16d55429907fabeefd5::Seneca River Crossing Canals Historic District::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7ca16d55429907fabeefd5::Stainforth and Keadby Canal",
+        "5a7ca16d55429907fabeefd5::Crowle, Lincolnshire"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7ca16d55429907fabeefd5::Botanical Garden Atocha-La Liria::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7ca16d55429907fabeefd5::Stainforth and Keadby Canal::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7ca16d55429907fabeefd5::Stainforth and Keadby Canal::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7ca16d55429907fabeefd5::Crowle, Lincolnshire::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7ca16d55429907fabeefd5::Seneca River Crossing Canals Historic District::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7ca16d55429907fabeefd5::Seneca River Crossing Canals Historic District::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The district includes more than a mile of the Enlarged Erie Canal prism (built here between 1849 and 1857); towpath and heelpath; a drydock; the remains of the Richmond (Montezuma) Aqueduct crossing the Seneca River; remnants of the original Erie Canal, built between 1817 and 1825 and including Lock #62 and piers of the original mule bridge from that era; and a culvert that carries a stream beneat\n[2] Crowle is a small town and civil parish on the Isle of Axholme in North Lincolnshire, England.\n[3] It opened in 1802, passed into the control of the River Don Navigation in 1849, and within a year was controlled by the first of several railway companies.\n[4] The Stainforth and Keadby Canal is a navigable canal in South Yorkshire and Lincolnshire, England."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

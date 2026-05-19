@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Candlestick Park",
+  "pred_answer": "Candlestick Park",
+  "normalized_gold": "candlestick park",
+  "normalized_pred": "candlestick park",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85f0de5542991dd0999ecd",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85f0de5542991dd0999ecd::Candlestick Park::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85f0de5542991dd0999ecd::Chris Washington::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85f0de5542991dd0999ecd::1970 San Francisco Giants season::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85f0de5542991dd0999ecd::1972 San Francisco 49ers season::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85f0de5542991dd0999ecd::Candlestick Park",
+        "5a85f0de5542991dd0999ecd::1970 San Francisco Giants season"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85f0de5542991dd0999ecd::Candlestick Park::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85f0de5542991dd0999ecd::Chris Washington::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85f0de5542991dd0999ecd::1970 San Francisco Giants season::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85f0de5542991dd0999ecd::1972 San Francisco 49ers season::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85f0de5542991dd0999ecd::1972 San Francisco 49ers season::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 1972 San Francisco 49ers season was the team's 23rd year with the National Football League.\n[2] The 1970 San Francisco Giants season was the Giants' 88th year in Major League Baseball, their 13th year in San Francisco since their move from New York following the 1957 season, and their 11th at Candlestick Park.\n[3] He played professionally in the National Football League (NFL) for the Tampa Bay Buccaneers, San Francisco 49ers and the Phoenix Cardinals.\n[4] The stadium was originally the home of Major League Baseball's San Francisco Giants, who played there from 1960 until moving into Pacific Bell Park (since renamed AT&T Park) in 2000."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

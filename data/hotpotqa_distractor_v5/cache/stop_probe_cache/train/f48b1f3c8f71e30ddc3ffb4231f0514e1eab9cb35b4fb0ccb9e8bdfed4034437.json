@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Rochelle Humes",
+  "pred_answer": "Rochelle Humes",
+  "normalized_gold": "rochelle humes",
+  "normalized_pred": "rochelle humes",
+  "exact_match": true,
+  "context_exact_match": false,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8ce953554299585d9e3763",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8ce953554299585d9e3763::Children in Need 2015::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8ce953554299585d9e3763::Rochelle Humes::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8ce953554299585d9e3763::Datura (band)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8ce953554299585d9e3763::Children in Need 2015",
+        "5a8ce953554299585d9e3763::Rochelle Humes"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8ce953554299585d9e3763::Children in Need 2015::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8ce953554299585d9e3763::Rochelle Humes::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8ce953554299585d9e3763::Datura (band)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8ce953554299585d9e3763::Datura (band)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It was created in 1991 by the musicians Ciro Pagano and Stefano Mazzavillani (ex-members of the Italian electro pop group \"Gaznevada\", one of the Italian pop groups of the decade of 1980) and the DJs Ricci (Riccardo Testoni) who is now deceased, and Cirillo (Carlo Andrea Raggi), who is one of Italy's most famous DJs and continues to work in Italy, Ibiza, Morocco, and England.\n[2] Rochelle Eulah Eileen Humes (née Wiseman; born 21 March 1989) is an English singer and television presenter, best known for her work in pop groups S Club 8 and The Saturdays.\n[3] Children in Need 2015 is a campaign held in the United Kingdom to raise money for the charity Children in Need."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hugo and Nebula Awards,",
+  "pred_answer": "Hugo and Nebula Awards,",
+  "normalized_gold": "hugo and nebula awards",
+  "normalized_pred": "hugo and nebula awards",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab43beb55429942dd415ef4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab43beb55429942dd415ef4::Orson Scott Card::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab43beb55429942dd415ef4::Sam Stone::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab43beb55429942dd415ef4::Heartfire::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab43beb55429942dd415ef4::List of awards and nominations received by Lost::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab43beb55429942dd415ef4::Orson Scott Card",
+        "5ab43beb55429942dd415ef4::Heartfire"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab43beb55429942dd415ef4::Orson Scott Card::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab43beb55429942dd415ef4::Sam Stone::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab43beb55429942dd415ef4::Heartfire::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab43beb55429942dd415ef4::List of awards and nominations received by Lost::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab43beb55429942dd415ef4::List of awards and nominations received by Lost::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It has been nominated for a variety of different awards, including 54 Primetime Emmy Awards (eleven wins), 48 Saturn Awards (thirteen wins), 33 Teen Choice Awards, 17 Television Critics Association Awards (four wins), 12 Golden Reel Awards (five wins), eight Satellite Awards (one win), seven Golden Globe Awards (one win), six Producers Guild of America Awards (one win), six Writers Guild of Americ\n[2] It is the fifth book in Card's \"The Tales of Alvin Maker\" series and is about Alvin Miller, the Seventh son of a seventh son.\n[3] This made her the first female writer to win the Award since Tanith Lee did so in 1980.\n[4] His novel \"Ender's Game\" (1985) and its sequel \"Speaker for the Dead\" (1986) both won Hugo and Nebula Awards, making Card the only author to win both science fiction's top U.S. prizes in consecutive years."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

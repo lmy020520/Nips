@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "The Boz",
+  "pred_answer": "The Boz",
+  "normalized_gold": "the boz",
+  "normalized_pred": "the boz",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a83718a554299123d8c2129",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a83718a554299123d8c2129::Lui Passaglia::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a83718a554299123d8c2129::Tom Brown (guard)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a83718a554299123d8c2129::Brian Bosworth::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a83718a554299123d8c2129::Phase IV (2002 film)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a83718a554299123d8c2129::Frank Chiesurin::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a83718a554299123d8c2129::Brian Bosworth",
+        "5a83718a554299123d8c2129::Phase IV (2002 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a83718a554299123d8c2129::Lui Passaglia::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a83718a554299123d8c2129::Tom Brown (guard)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a83718a554299123d8c2129::Brian Bosworth::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a83718a554299123d8c2129::Phase IV (2002 film)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a83718a554299123d8c2129::Frank Chiesurin::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a83718a554299123d8c2129::Frank Chiesurin::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Best known for his recurring role as the partner of a closeted gay football player in the drama series \"Playmakers\", he has also had roles in a variety of American and Canadian productions, including the films \"\", \"The Prize Winner of Defiance, Ohio\", \"Lie with Me\", \"Suits\" and \"Cake\" and the television series \"Big Wolf on Campus\", \"Un gars, une fille\", \"Doc\", \"Largo Winch\", \"Météo+\", \"Les Bleus d\n[2] Phase IV is a 2002 Canadian direct-to-video film, starring Dean Cain and Brian Bosworth.\n[3] Brian Keith Bosworth (born March 9, 1965), nicknamed \"The Boz,\" is a former American professional football player who played as a linebacker for the Seattle Seahawks in the National Football League (NFL).\n[4] Tom Brown (born December 5, 1936) is a former professional Canadian football player, and a former outstanding American college football player."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

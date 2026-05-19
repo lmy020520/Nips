@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Van Trump Glacier",
+  "pred_answer": "Van Trump Glacier",
+  "normalized_gold": "van trump glacier",
+  "normalized_pred": "van trump glacier",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7399fa55429978a71e903e",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7399fa55429978a71e903e::Van Trump Glacier::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7399fa55429978a71e903e::Lilian Gibbs::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7399fa55429978a71e903e::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7399fa55429978a71e903e::P. B. Van Trump::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7399fa55429978a71e903e::Hazard Stevens::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7399fa55429978a71e903e::Van Trump Glacier",
+        "5a7399fa55429978a71e903e::P. B. Van Trump"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7399fa55429978a71e903e::Van Trump Glacier::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7399fa55429978a71e903e::Lilian Gibbs::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7399fa55429978a71e903e::P. B. Van Trump::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7399fa55429978a71e903e::Hazard Stevens::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a7399fa55429978a71e903e::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a7399fa55429978a71e903e::Hazard Stevens::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Van Trump Glacier is actually a scattering of glaciers and snowfields located on the southern flank of Mount Rainier in Washington.\n[2] Stevens and Philemon Beecher Van Trump made the first documented successful climb of Mount Rainier on August 17, 1870.\n[3] Philemon Beecher Van Trump (1839–1916), also known as P. B. Van Trump, was an American pioneering mountaineer and writer who lived in the state of Washington.\n[4] She was the first woman and the first botanist to ascend Mount Kinabalu in February 1910.\n\nNotes:\n[bridge] Van Trump Glacier is named after Philemon Beecher Van Trump, who made the first documented successful climb of Mount Rainier with Hazard Stevens in 1870."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

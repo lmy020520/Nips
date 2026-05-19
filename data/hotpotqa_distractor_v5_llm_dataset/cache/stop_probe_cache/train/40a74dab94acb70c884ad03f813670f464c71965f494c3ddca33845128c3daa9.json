@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1804",
+  "pred_answer": "1804",
+  "normalized_gold": "1804",
+  "normalized_pred": "1804",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8fd7cb5542990a9849356b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8fd7cb5542990a9849356b::Pink permits::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8fd7cb5542990a9849356b::The Scarlet Letter::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8fd7cb5542990a9849356b::Nathaniel Hawthorne::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8fd7cb5542990a9849356b::Out Campaign::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8fd7cb5542990a9849356b::The Scarlet Letter",
+        "5a8fd7cb5542990a9849356b::Nathaniel Hawthorne"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8fd7cb5542990a9849356b::Pink permits::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8fd7cb5542990a9849356b::The Scarlet Letter::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8fd7cb5542990a9849356b::Nathaniel Hawthorne::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8fd7cb5542990a9849356b::Out Campaign::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8fd7cb5542990a9849356b::Out Campaign::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The campaign aims to create more openness about being an atheist by providing a means by which atheists can identify themselves to others by displaying the movement's scarlet letter \"A\", a scarlet colored capital \"A\" in the Zapfino typeface, and an allusion to the scarlet letter \"A\" worn by Hester Prynne after being convicted of adultery in Nathaniel Hawthorne's \"The Scarlet Letter\".\n[2] Nathaniel Hawthorne ( ; born Nathaniel Hathorne; July 4, 1804 – May 19, 1864) was an American novelist, dark romantic, and short story writer.\n[3] The Scarlet Letter: A Romance is an 1850 fictional novel in a historical setting, written by American author Nathaniel Hawthorne.\n[4] The official in charge replied that he did not know how he could explain to his fifteen-year-old daughter what the scarlet \"A\" meant, therefore he could not pass the film."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

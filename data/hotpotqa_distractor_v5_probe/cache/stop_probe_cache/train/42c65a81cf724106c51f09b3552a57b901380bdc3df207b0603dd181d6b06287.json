@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "The University of Alabama System",
+  "pred_answer": "The University of Alabama System",
+  "normalized_gold": "the university of alabama system",
+  "normalized_pred": "the university of alabama system",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7553905542993748c8982c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7553905542993748c8982c::University of Alabama::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7553905542993748c8982c::List of Columbia University people::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7553905542993748c8982c::University of Alabama System::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7553905542993748c8982c::Columbia University::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7553905542993748c8982c::Malcolm Portera::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7553905542993748c8982c::University of Alabama System",
+        "5a7553905542993748c8982c::Columbia University"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7553905542993748c8982c::University of Alabama::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7553905542993748c8982c::List of Columbia University people::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7553905542993748c8982c::University of Alabama System::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7553905542993748c8982c::Columbia University::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7553905542993748c8982c::Malcolm Portera::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7553905542993748c8982c::Malcolm Portera::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He has also served as the interim president of the University of Alabama in Huntsville and the University of Alabama at Birmingham.\n[2] Columbia University (Columbia; officially Columbia University in the City of New York), established in 1754, is a private Ivy League research university in Upper Manhattan, New York City, often cited as one of the world's most prestigious universities.\n[3] The University of Alabama System is Alabama’s largest higher education enterprise, comprising three doctoral research institutions.\n[4] For further listing of notable Columbians see: Notable alumni at Columbia College of Columbia University; Columbia University School of General Studies; Columbia Law School; Columbia Business School; Columbia University Graduate School of Journalism; Columbia Graduate School of Architecture, Planning and Preservation; Columbia University College of Physicians and Surgeons; Columbia University Grad"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

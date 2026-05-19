@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Oklahoma City Thunder",
+  "pred_answer": "Oklahoma City Thunder",
+  "normalized_gold": "oklahoma city thunder",
+  "normalized_pred": "oklahoma city thunder",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a80e3f855429938b6142236",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a80e3f855429938b6142236::1957–58 St. Louis Hawks season::9"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a80e3f855429938b6142236::Juwan Howard::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a80e3f855429938b6142236::2012 NBA Finals::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a80e3f855429938b6142236::2001–02 Dallas Mavericks season::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a80e3f855429938b6142236::Juwan Howard",
+        "5a80e3f855429938b6142236::2012 NBA Finals"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a80e3f855429938b6142236::1957–58 St. Louis Hawks season::9",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a80e3f855429938b6142236::Juwan Howard::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a80e3f855429938b6142236::2012 NBA Finals::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a80e3f855429938b6142236::2001–02 Dallas Mavericks season::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a80e3f855429938b6142236::2001–02 Dallas Mavericks season::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] At midseason, Hardaway was traded along with Juwan Howard to the Denver Nuggets for Nick Van Exel and Raef LaFrentz.\n[2] The Eastern Conference champion Miami Heat defeated the Western Conference champion Oklahoma City Thunder 4 games to 1 to win their second NBA title.\n[3] Howard won his first NBA championship with Miami in the 2012 NBA Finals and his second NBA championship in the 2013 NBA Finals.\n[4] Needing one more win for their first NBA Championship, the Hawks beat the Celtics 110–109."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

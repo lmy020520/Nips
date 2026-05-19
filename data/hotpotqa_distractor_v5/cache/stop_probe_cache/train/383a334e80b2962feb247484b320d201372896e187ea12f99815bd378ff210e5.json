@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bob Jones University",
+  "pred_answer": "Bob Jones University",
+  "normalized_gold": "bob jones university",
+  "normalized_pred": "bob jones university",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a731fcb5542994cef4bc469",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a731fcb5542994cef4bc469::Bob Jones University::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a731fcb5542994cef4bc469::Rhonda Paisley::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a731fcb5542994cef4bc469::Thomas A. Wofford::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a731fcb5542994cef4bc469::Bob Jones University",
+        "5a731fcb5542994cef4bc469::Rhonda Paisley"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a731fcb5542994cef4bc469::Bob Jones University::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a731fcb5542994cef4bc469::Rhonda Paisley::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a731fcb5542994cef4bc469::Thomas A. Wofford::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a731fcb5542994cef4bc469::Thomas A. Wofford::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Born in Madden Station, Laurens County, South Carolina, he attended the public schools and graduated from the University of South Carolina at Columbia in 1928, and from Harvard University Law School in 1931.\n[2] Rhonda Paisley (born 1960) is an author, and former politician from Northern Ireland.\n[3] Bob Jones University (BJU) is a private, non-denominational Protestant university in Greenville, South Carolina, United States, known for its conservative cultural and religious positions."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

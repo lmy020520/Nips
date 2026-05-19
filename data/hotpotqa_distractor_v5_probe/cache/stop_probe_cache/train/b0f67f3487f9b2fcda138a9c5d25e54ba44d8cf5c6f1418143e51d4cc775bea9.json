@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Luis Buñuel.",
+  "pred_answer": "Luis Buñuel.",
+  "normalized_gold": "luis buñuel",
+  "normalized_pred": "luis buñuel",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c4cda554299653c1aa02f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c4cda554299653c1aa02f::That Obscure Object of Desire::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c4cda554299653c1aa02f::Revolutionary Army of the Infant Jesus::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c4cda554299653c1aa02f::Fernando Rey::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8c4cda554299653c1aa02f::USNS Mission San Fernando (T-AO-122)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c4cda554299653c1aa02f::That Obscure Object of Desire",
+        "5a8c4cda554299653c1aa02f::Fernando Rey"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c4cda554299653c1aa02f::That Obscure Object of Desire::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c4cda554299653c1aa02f::Revolutionary Army of the Infant Jesus::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c4cda554299653c1aa02f::Fernando Rey::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8c4cda554299653c1aa02f::USNS Mission San Fernando (T-AO-122)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c4cda554299653c1aa02f::USNS Mission San Fernando (T-AO-122)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She was a member of the \"Mission Buenaventura\"-class oiler and was named for Mission San Fernando Rey de España in Los Angeles.\n[2] A suave, international actor best known for his roles in the films of surrealist director Luis Buñuel (\"Tristana\", 1970; \"Discreet Charm of the Bourgeoisie\", 1972; \"That Obscure Object of Desire\", 1977) and as a drug lord in \"The French Connection\" (1971), he appeared in more than 150 films over half a century.\n[3] Their name is a reference to the terrorist group in Luis Buñuel's final film, \"That Obscure Object of Desire.\"\n[4] That Obscure Object of Desire (French: Cet obscur objet du désir ; Spanish: Ese oscuro objeto del deseo ), a French and Spanish co-production released in 1977, was the final film directed by Luis Buñuel."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

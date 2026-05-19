@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Glacial Lake Albany",
+  "pred_answer": "Glacial Lake Albany",
+  "normalized_gold": "glacial lake albany",
+  "normalized_pred": "glacial lake albany",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab34b9b55429976abd1bc87",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab34b9b55429976abd1bc87::Rensselaer Lake::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab34b9b55429976abd1bc87::Woodlawn Preserve::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab34b9b55429976abd1bc87::Albany Pine Bush::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab34b9b55429976abd1bc87::Spanish Lake community::15"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab34b9b55429976abd1bc87::Woodlawn Preserve",
+        "5ab34b9b55429976abd1bc87::Albany Pine Bush"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab34b9b55429976abd1bc87::Rensselaer Lake::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab34b9b55429976abd1bc87::Woodlawn Preserve::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab34b9b55429976abd1bc87::Albany Pine Bush::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab34b9b55429976abd1bc87::Spanish Lake community::15",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab34b9b55429976abd1bc87::Spanish Lake community::15",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Spanish Lake drained off and became farmland.\n[2] The Albany Pine Bush was formed thousands of years ago, following the drainage of Glacial Lake Albany.\n[3] The Woodlawn Preserve is the only patch of the Albany Pine Bush in the city of Schenectady, New York's Woodlawn neighborhood; it is home to some of the most biologically diverse parcels in Schenectady County due to the combination of swamp, wetlands, water bodies, and dune vegetation.\n[4] It is part of a 57 acre park and the state's Albany Pine Bush Preserve."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

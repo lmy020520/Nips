@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Franconia Notch",
+  "pred_answer": "Franconia Notch",
+  "normalized_gold": "franconia notch",
+  "normalized_pred": "franconia notch",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd5b9555429933744ab78c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd5b9555429933744ab78c::Franconia Notch::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd5b9555429933744ab78c::Carter Notch::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd5b9555429933744ab78c::Super two::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd5b9555429933744ab78c::Evans Notch::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd5b9555429933744ab78c::Franconia Notch",
+        "5abd5b9555429933744ab78c::Super two"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd5b9555429933744ab78c::Franconia Notch::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd5b9555429933744ab78c::Carter Notch::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd5b9555429933744ab78c::Super two::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd5b9555429933744ab78c::Evans Notch::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd5b9555429933744ab78c::Evans Notch::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] 1410 ft ) is a mountain pass located in the White Mountains in Maine, United States, about 1 mi east of the New Hampshire border.\n[2] It has also been used in cases where environmental concerns are prevalent, such as where Interstate 93 becomes a super two in Franconia Notch, New Hampshire.\n[3] Carter Notch is a high mountain pass through the White Mountains of New Hampshire.\n[4] 1950 ft ) is a major mountain pass through the White Mountains of New Hampshire."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

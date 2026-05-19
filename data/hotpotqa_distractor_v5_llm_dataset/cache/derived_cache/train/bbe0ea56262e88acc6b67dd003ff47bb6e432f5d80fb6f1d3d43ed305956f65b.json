@@ -1,0 +1,30 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for a route through Marcellus and a town in Onondaga County with population 7,209. Raw candidates mention NY 174, NY 20N, and NY 321, but none directly mention Marcellus or the specific town. A bridge note can connect NY 174 to Marcellus if supported, and a verification note can check if any candidate passes through a town with that population.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "New York State Route 174 passes through Marcellus, New York.",
+      "source_unit_ids": [
+        "5a7ec74f55429934daa2fc62::New York State Route 174::1"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "New York State Route 321 is a state highway in Onondaga County, but it does not pass through Marcellus.",
+      "source_unit_ids": [
+        "5a7ec74f55429934daa2fc62::New York State Route 321::0"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "New York State Route 20N is a state highway in central New York, but it is not in Onondaga County.",
+      "source_unit_ids": [
+        "5a7ec74f55429934daa2fc62::New York State Route 20N::0"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

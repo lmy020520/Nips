@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Kerry Washington",
+  "pred_answer": "Kerry Washington",
+  "normalized_gold": "kerry washington",
+  "normalized_pred": "kerry washington",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b5b855542995d1e6f1388",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b5b855542995d1e6f1388::Dog-Whistle Politics (Scandal)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b5b855542995d1e6f1388::Heavy Is the Head (Scandal)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b5b855542995d1e6f1388::Scandal (TV series)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8b5b855542995d1e6f1388::The Price of Free and Fair Elections::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b5b855542995d1e6f1388::Dog-Whistle Politics (Scandal)",
+        "5a8b5b855542995d1e6f1388::Scandal (TV series)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b5b855542995d1e6f1388::Dog-Whistle Politics (Scandal)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b5b855542995d1e6f1388::Heavy Is the Head (Scandal)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b5b855542995d1e6f1388::Scandal (TV series)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8b5b855542995d1e6f1388::The Price of Free and Fair Elections::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b5b855542995d1e6f1388::The Price of Free and Fair Elections::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"The Price of Free and Fair Elections\" is the 18th episode and season finale of the third season of the American political thriller television series \"Scandal\", and is the 47th overall episode.\n[2] Scandal is an American political thriller television series starring Kerry Washington.\n[3] \"Heavy Is the Head\" is the season premiere of the fifth season of the American political thriller television series \"Scandal\", and the 70th episode overall.\n[4] \"Dog-Whistle Politics\" is the fourth episode of the fifth season, and the 73rd overall of the American political thriller television series \"Scandal\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Lennon–McCartney",
+  "pred_answer": "Lennon–McCartney",
+  "normalized_gold": "lennon–mccartney",
+  "normalized_pred": "lennon–mccartney",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a72b4fe5542991f9a20c578",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a72b4fe5542991f9a20c578::Being for the Benefit of Mr. Kite!::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a72b4fe5542991f9a20c578::Laurence Batty::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a72b4fe5542991f9a20c578::William Batty::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a72b4fe5542991f9a20c578::I'm So Paid::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a72b4fe5542991f9a20c578::Being for the Benefit of Mr. Kite!",
+        "5a72b4fe5542991f9a20c578::William Batty"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a72b4fe5542991f9a20c578::Being for the Benefit of Mr. Kite!::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a72b4fe5542991f9a20c578::Laurence Batty::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a72b4fe5542991f9a20c578::William Batty::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a72b4fe5542991f9a20c578::I'm So Paid::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a72b4fe5542991f9a20c578::I'm So Paid::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Akon mentions Olympic Athlete Usain Bolt in his verse because the runner mentions that he listens to Akon's music.\n[2] Also, while in operation for only two years, Batty's most lasting legacy is probably Batty's Grand National Hippodrome, also known as Batty's Hippodrome, an open-air amphitheate he erected in 1851 in Kensington Gardens, London, to attract audiences from the Crystal Palace Exhibition nearby.\n[3] Laurence William Batty (born 15 February 1964), sometimes known as George Batty, is an English retired football goalkeeper who played in the Football League for Fulham.\n[4] The song is credited to Lennon–McCartney."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

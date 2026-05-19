@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "salt crystallisation",
+  "pred_answer": "salt crystallisation",
+  "normalized_gold": "salt crystallisation",
+  "normalized_pred": "salt crystallisation",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac40cd95542997ea680c9be",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac40cd95542997ea680c9be::McMahon Services::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac40cd95542997ea680c9be::Intract::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac40cd95542997ea680c9be::Dry Creek, South Australia::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac40cd95542997ea680c9be::Hundred of Yatala::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac40cd95542997ea680c9be::McMahon Services",
+        "5ac40cd95542997ea680c9be::Dry Creek, South Australia"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac40cd95542997ea680c9be::McMahon Services::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac40cd95542997ea680c9be::Intract::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac40cd95542997ea680c9be::Dry Creek, South Australia::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac40cd95542997ea680c9be::Hundred of Yatala::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac40cd95542997ea680c9be::Hundred of Yatala::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Hundred of Yatala is a cadastral unit of hundred in South Australia covering much of the Adelaide metropolitan area north of the River Torrens.\n[2] Dry Creek is a mostly industrial suburb north of Adelaide, containing significant wetlands and a substantial area formerly devoted to salt crystallisation pans, managed by Ridley Corporation, which plans to redevelop the site for housing.\n[3] Intract will be building the 15km-long shared path as part of the Northern Connector freeway project in South Australia.\n[4] It was established at Dry Creek in Adelaide in 1990."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Bert Trautmann",
+  "pred_answer": "Bert Trautmann",
+  "normalized_gold": "bert trautmann",
+  "normalized_pred": "bert trautmann",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7516c855429916b0164251",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7516c855429916b0164251::Peter Murphy (footballer, born 1922)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7516c855429916b0164251::Ken Green (footballer, born 1924)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7516c855429916b0164251::Bert Trautmann::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7516c855429916b0164251::Peter Murphy (footballer, born 1922)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7516c855429916b0164251::Peter Murphy (footballer, born 1922)",
+        "5a7516c855429916b0164251::Bert Trautmann"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7516c855429916b0164251::Peter Murphy (footballer, born 1922)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7516c855429916b0164251::Ken Green (footballer, born 1924)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7516c855429916b0164251::Bert Trautmann::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7516c855429916b0164251::Peter Murphy (footballer, born 1922)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7516c855429916b0164251::Peter Murphy (footballer, born 1922)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Peter Murphy (7 March 1922 – 7 April 1975), often referred to as \"Spud\" Murphy, was an English footballer who played as an inside left.\n[2] Bernhard Carl \"Bert\" Trautmann OBE (22 October 1923 – 19 July 2013) was a German professional footballer who played as a goalkeeper for Manchester City from 1949 to 1964.\n[3] He played for Birmingham City from 1943 to 1959, making 443 appearances in all competitions and scoring 3 goals, and played in the 1956 FA Cup final which Birmingham lost to Manchester City 3–1.\n[4] He is possibly best remembered for the incident in the 1956 FA Cup Final when Manchester City's goalkeeper Bert Trautmann broke a bone in his neck when diving at Murphy's feet."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

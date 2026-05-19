@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Charley Pride",
+  "pred_answer": "Charley Pride",
+  "normalized_gold": "charley pride",
+  "normalized_pred": "charley pride",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab3da6b554299753aec59ca",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab3da6b554299753aec59ca::Have I Got Some Blues for You::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab3da6b554299753aec59ca::Laura (What's He Got That I Ain't Got)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab3da6b554299753aec59ca::Charley Pride::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab3da6b554299753aec59ca::You've Got a Way::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab3da6b554299753aec59ca::Have I Got Some Blues for You",
+        "5ab3da6b554299753aec59ca::Charley Pride"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab3da6b554299753aec59ca::Have I Got Some Blues for You::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab3da6b554299753aec59ca::Laura (What's He Got That I Ain't Got)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab3da6b554299753aec59ca::Charley Pride::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab3da6b554299753aec59ca::You've Got a Way::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab3da6b554299753aec59ca::You've Got a Way::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"You've Got a Way\" is a song co-written and recorded by Canadian country music singer Shania Twain.\n[2] Charley Frank Pride (born March 18, 1934) is an American country music singer, musician/guitarist, recording artist, performer, and business owner.\n[3] \"Laura (What's He Got That I Ain't Got)\" is a song co-written and recorded by American country music singer Leon Ashley.\n[4] \"Have I Got Some Blues for You\" is a song recorded by American country music artist Charley Pride."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

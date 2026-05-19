@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"Cloud Atlas\"",
+  "pred_answer": "\"Cloud Atlas\"",
+  "normalized_gold": "cloud atlas",
+  "normalized_pred": "cloud atlas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a802bfd554299485f59857d",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a802bfd554299485f59857d::Bae Doona::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a802bfd554299485f59857d::Look Back in Anger (TV series)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a802bfd554299485f59857d::As One (film)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a802bfd554299485f59857d::Bae Doona",
+        "5a802bfd554299485f59857d::Look Back in Anger (TV series)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a802bfd554299485f59857d::Bae Doona::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a802bfd554299485f59857d::Look Back in Anger (TV series)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a802bfd554299485f59857d::As One (film)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a802bfd554299485f59857d::As One (film)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] \"Korea\") is a 2012 South Korean sports drama film starring Ha Ji-won and Bae Doona.\n[2] Look Back in Anger () is a 2000 South Korean television series about two brothers' love for two women that aired on KBS2.\n[3] She has had English-speaking roles in the Wachowski films \"Cloud Atlas\" (2012) and \"Jupiter Ascending\" (2015), and the TV series \"Sense8\" (2015-present)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

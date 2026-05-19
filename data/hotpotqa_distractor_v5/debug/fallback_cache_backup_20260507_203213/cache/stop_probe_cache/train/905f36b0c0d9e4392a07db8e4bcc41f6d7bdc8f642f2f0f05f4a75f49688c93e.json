@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "mountain peak",
+  "pred_answer": "mountain peak",
+  "normalized_gold": "mountain peak",
+  "normalized_pred": "mountain peak",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d3e055542995ed0d16645",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d3e055542995ed0d16645::Sherpi Kangri::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d3e055542995ed0d16645::Lacustrine deposits::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d3e055542995ed0d16645::Trivor::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7d3e055542995ed0d16645::LNG storage tank::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d3e055542995ed0d16645::Sherpi Kangri",
+        "5a7d3e055542995ed0d16645::Trivor"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d3e055542995ed0d16645::Sherpi Kangri::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d3e055542995ed0d16645::Lacustrine deposits::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d3e055542995ed0d16645::Trivor::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7d3e055542995ed0d16645::LNG storage tank::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d3e055542995ed0d16645::LNG storage tank::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A liquefied natural gas storage tank or LNG storage tank is a specialized type of storage tank used for the storage of Liquefied Natural Gas.\n[2] Trivor (Urdu: ترِووُر‎ ) is one of the high peaks of the Hispar Muztagh, a subrange of the Karakoram range in the Gilgit-Baltistan of Pakistan.\n[3] A common characteristic of lacustrine deposits is that a river or stream channel has carried sediment into the basin.\n[4] Sherpi Kangri is a mountain peak in the Karakoram Range."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

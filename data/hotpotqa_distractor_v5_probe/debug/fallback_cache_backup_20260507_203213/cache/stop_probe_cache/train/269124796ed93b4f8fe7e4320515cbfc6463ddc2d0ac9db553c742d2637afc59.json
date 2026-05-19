@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1962",
+  "pred_answer": "1962",
+  "normalized_gold": "1962",
+  "normalized_pred": "1962",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac03b22554299012d1db5dd",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac03b22554299012d1db5dd::John Glenn::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac03b22554299012d1db5dd::United States Senate election in Ohio, 1974::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac03b22554299012d1db5dd::John Glenn::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac03b22554299012d1db5dd::John Glenn",
+        "5ac03b22554299012d1db5dd::United States Senate election in Ohio, 1974"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac03b22554299012d1db5dd::John Glenn::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac03b22554299012d1db5dd::United States Senate election in Ohio, 1974::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac03b22554299012d1db5dd::John Glenn::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac03b22554299012d1db5dd::John Glenn::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] In 1962 he became the first American to orbit the Earth, circling it three times.\n[2] The 1974 United States Senate election in Ohio took place on November 3, 1974.\n[3] John Herschel Glenn Jr. (July 18, 1921 – December 8, 2016) was a United States Marine Corps aviator, engineer, astronaut, and United States Senator from Ohio."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

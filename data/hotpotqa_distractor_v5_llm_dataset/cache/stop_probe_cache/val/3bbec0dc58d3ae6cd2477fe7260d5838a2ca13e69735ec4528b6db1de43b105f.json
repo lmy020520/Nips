@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Silvergate Media",
+  "pred_answer": "Silvergate Media",
+  "normalized_gold": "silvergate media",
+  "normalized_pred": "silvergate media",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7427d5542997b22f6a653",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7427d5542997b22f6a653::Zen (TV series)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7427d5542997b22f6a653::Cusi Cram::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7427d5542997b22f6a653::The Octonauts::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae7427d5542997b22f6a653::Lead Balloon::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7427d5542997b22f6a653::Cusi Cram",
+        "5ae7427d5542997b22f6a653::The Octonauts"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7427d5542997b22f6a653::Zen (TV series)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7427d5542997b22f6a653::Cusi Cram::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7427d5542997b22f6a653::The Octonauts::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae7427d5542997b22f6a653::Lead Balloon::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7427d5542997b22f6a653::Lead Balloon::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Lead Balloon is a British television series produced by Open Mike Productions for BBC Four.\n[2] The Octonauts is a British children's television series, produced by Silvergate Media for the BBC channel CBeebies.\n[3] Following her graduation from Brown University, Cram focused on play-writing and screenwriting, namely for the series \"Arthur\", \"The Octonauts\", and \"The Big C\".\n[4] Zen is a British television series produced by Left Bank Pictures for the BBC, co-produced with WGBH Boston for its \"Masterpiece\" anthology series, Mediaset and ZDF."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

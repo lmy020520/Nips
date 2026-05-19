@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Monfragüe",
+  "pred_answer": "Monfragüe",
+  "normalized_gold": "monfragüe",
+  "normalized_pred": "monfragüe",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a771fc255429937353601de",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a771fc255429937353601de::Monfragüe::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a771fc255429937353601de::Picos de Europa National Park::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a771fc255429937353601de::Lake Ercina::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a771fc255429937353601de::Monfragüe",
+        "5a771fc255429937353601de::Picos de Europa National Park"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a771fc255429937353601de::Monfragüe::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a771fc255429937353601de::Picos de Europa National Park::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a771fc255429937353601de::Lake Ercina::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a771fc255429937353601de::Lake Ercina::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Situated next to Lake Enol, together, they forms the group known as Lakes of Covadonga within the Picos de Europa National Park.\n[2] The Picos de Europa National Park (Spanish: \"Parque Nacional de Picos de Europa\" ) is a National Park in the Picos de Europa mountain range, in northern Spain.\n[3] Monfragüe (Spanish: \"Parque Nacional Monfragüe\") is a Spanish national park noted for its bird-life."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "record producer",
+  "pred_answer": "record producer",
+  "normalized_gold": "record producer",
+  "normalized_pred": "record producer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae163655542997b2ef7d1c4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae163655542997b2ef7d1c4::Ultimate Hits: Rock and Roll Never Forgets::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae163655542997b2ef7d1c4::Sweet Freedom (Michael McDonald album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae163655542997b2ef7d1c4::Michael McDonald (musician)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae163655542997b2ef7d1c4::Uriah Heep discography::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae163655542997b2ef7d1c4::Sweet Freedom (Michael McDonald album)",
+        "5ae163655542997b2ef7d1c4::Michael McDonald (musician)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae163655542997b2ef7d1c4::Ultimate Hits: Rock and Roll Never Forgets::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae163655542997b2ef7d1c4::Sweet Freedom (Michael McDonald album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae163655542997b2ef7d1c4::Michael McDonald (musician)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae163655542997b2ef7d1c4::Uriah Heep discography::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae163655542997b2ef7d1c4::Uriah Heep discography::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The band's best selling album is \"Sweet Freedom\" which was released in 1972 and its worldwide sales are more than 4 million copies.\n[2] Michael McDonald (born February 12, 1952) is an American singer, songwriter, keyboardist and record producer.\n[3] Sweet Freedom (also known as Sweet Freedom – The Best of Michael McDonald in some countries) is a compilation album by American singer and songwriter Michael McDonald, released in 1986 on the Warner Bros. label.\n[4] Ultimate Hits: Rock and Roll Never Forgets is a compilation album by American rock singer–songwriter Bob Seger."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

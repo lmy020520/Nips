@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Canal",
+  "pred_answer": "Canal",
+  "normalized_gold": "canal",
+  "normalized_pred": "canal",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adeef285542993344016bc1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adeef285542993344016bc1::Rapidan Dam Canal of the Rappahannock Navigation::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adeef285542993344016bc1::Pennsylvania Canal (Susquehanna Division)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adeef285542993344016bc1::Main Line of Public Works::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adeef285542993344016bc1::Pennsylvania Canal (Delaware Division)::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adeef285542993344016bc1::Rapidan Dam Canal of the Rappahannock Navigation",
+        "5adeef285542993344016bc1::Main Line of Public Works"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adeef285542993344016bc1::Rapidan Dam Canal of the Rappahannock Navigation::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adeef285542993344016bc1::Pennsylvania Canal (Susquehanna Division)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adeef285542993344016bc1::Main Line of Public Works::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adeef285542993344016bc1::Pennsylvania Canal (Delaware Division)::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adeef285542993344016bc1::Pennsylvania Canal (Delaware Division)::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Commonwealth of Pennsylvania built the Delaware canal to feed anthracite stone coal to energy-hungry Philadelphia as part of its transportation infrastructure building plan known as the Main Line of Public Works—a legislative initiative creating a collection of self-reinforcing internal improvements to commercial transportation capabilities.\n[2] The Main Line of Public Works was a package of legislation supporting a vision passed in 1826 — a collection of various long proposed canal and road projects that became a canal system (1824 proposals and studies) and later added railroads (amendments in 1828) designed to cross the breadth of Pennsylvania (mainly, southern) with the visionary goal of providing the best commercial means of transpor\n[3] Meeting the West Branch Canal and the North Branch Canal at Northumberland, it formed a link between the public and private canals upriver and the main east–west Pennsylvania Canal route known as the Main Line of Public Works which was devised to connect Philadelphia to Pittsburgh, southern New York, northern Pennsylvania and Lake Erie using most of the far reaches of the Susquehanna's tributaries\n[4] The Rapidan Dam Canal of the Rappahannock Navigation is a canal intended to safely carry Batteaus, sturdy flat-bottomed boats used primarily for transporting cargo, around the rapids at the confluence of the Rappahannock and Rapidan Rivers."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "director",
+  "pred_answer": "director",
+  "normalized_gold": "director",
+  "normalized_pred": "director",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae37a345542990afbd1e173",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae37a345542990afbd1e173::Kenneth Branagh::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae37a345542990afbd1e173::Scattergood Pulls the Strings::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae37a345542990afbd1e173::Christy Cabanne::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae37a345542990afbd1e173::Kenneth Branagh::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae37a345542990afbd1e173::Kenneth Branagh",
+        "5ae37a345542990afbd1e173::Christy Cabanne"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae37a345542990afbd1e173::Kenneth Branagh::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae37a345542990afbd1e173::Scattergood Pulls the Strings::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae37a345542990afbd1e173::Christy Cabanne::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae37a345542990afbd1e173::Kenneth Branagh::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae37a345542990afbd1e173::Kenneth Branagh::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He has directed or starred in several film adaptations of William Shakespeare's plays, including \"Henry V\" (1989) (for which he was nominated for the Academy Awards for Best Actor and Best Director), \"Much Ado About Nothing\" (1993), \"Othello\" (1995), \"Hamlet\" (1996) (for which he was nominated for the Academy Award for Best Adapted Screenplay), \"Love's Labour's Lost\" (2000), and \"As You Like It\" (\n[2] William Christy Cabanne (April 16, 1888 – October 15, 1950) was an American film director, screenwriter and silent film actor.\n[3] Scattergood Pulls the Strings is a 1941 American comedy film directed by Christy Cabanne and written by Christy Cabanne and Bernard Schubert.\n[4] Sir Kenneth Charles Branagh ( ; born 10 December 1960) is a Northern Irish actor, director, producer, and screenwriter originally from Belfast."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Morten Andersen",
+  "pred_answer": "Morten Andersen",
+  "normalized_gold": "morten andersen",
+  "normalized_pred": "morten andersen",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abed82e5542990832d3a0fa",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abed82e5542990832d3a0fa::Falcons–Saints rivalry::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abed82e5542990832d3a0fa::Morten Andersen::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abed82e5542990832d3a0fa::Penn–Princeton basketball rivalry::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abed82e5542990832d3a0fa::Falcons–Saints rivalry",
+        "5abed82e5542990832d3a0fa::Morten Andersen"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abed82e5542990832d3a0fa::Falcons–Saints rivalry::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abed82e5542990832d3a0fa::Morten Andersen::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abed82e5542990832d3a0fa::Penn–Princeton basketball rivalry::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abed82e5542990832d3a0fa::Penn–Princeton basketball rivalry::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Unlike many notable college basketball rivalries, such as Carolina–Duke, which involves teams that often both get invited to the same NCAA tournaments, Notre Dame–UCLA, which involves geographically remote teams, Illinois–Missouri, which involves non-conference rivals, or Alabama–Auburn, which takes a back seat to the football rivalry, this is a rivalry of geographically close, conference rivals,\n[2] Morten Andersen (born August 19, 1960), nicknamed \"The Great Dane\", is a Danish former American football kicker and All-American at Michigan State University.\n[3] They have also drawn coaches from the same families, and even shared a head coach: recent Falcons coach Jim L. Mora is the son of longtime Saints coach Jim E. Mora, and former Falcons and Saints coach Wade Phillips is the son of former Saints coach Bum Phillips."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

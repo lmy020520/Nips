@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Valerie Hobson",
+  "pred_answer": "Valerie Hobson",
+  "normalized_gold": "valerie hobson",
+  "normalized_pred": "valerie hobson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a771f1555429966f1a36c81",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a771f1555429966f1a36c81::Valerie Hobson::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a771f1555429966f1a36c81::Larne Lough::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a771f1555429966f1a36c81::Badger's Green (play)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a771f1555429966f1a36c81::Larne::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a771f1555429966f1a36c81::Valerie Hobson",
+        "5a771f1555429966f1a36c81::Badger's Green (play)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a771f1555429966f1a36c81::Valerie Hobson::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a771f1555429966f1a36c81::Larne Lough::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a771f1555429966f1a36c81::Badger's Green (play)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a771f1555429966f1a36c81::Larne::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a771f1555429966f1a36c81::Larne::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Larne (from Irish: \"Latharna\" , the name of a Gaelic territory) is a seaport and industrial market town, as well as a civil parish, on the east coast of County Antrim, Northern Ireland with a population of 18,323 people in the 2008 Estimate.\n[2] The play has been adapted for the screen three times: a 1934 version starring Valerie Hobson, a 1938 version starring Maurice Denham and a 1949 version starring Garry Marsh.\n[3] Larne Lough (sometimes Larne Loch, Lough Larne or Loch Larne; from Irish: \"Loch Latharna\" ) is a sea lough or inlet in County Antrim, Northern Ireland.\n[4] She was born Babette Valerie Louise Hobson in Larne, County Antrim, in present-day Northern Ireland."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

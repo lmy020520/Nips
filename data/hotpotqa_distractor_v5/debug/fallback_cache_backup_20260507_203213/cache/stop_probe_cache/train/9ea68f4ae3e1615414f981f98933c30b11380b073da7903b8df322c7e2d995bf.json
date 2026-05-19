@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Rihanna",
+  "pred_answer": "Rihanna",
+  "normalized_gold": "rihanna",
+  "normalized_pred": "rihanna",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a817221554299260e20a28d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a817221554299260e20a28d::Walks Like Rihanna::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a817221554299260e20a28d::Free (Cody Simpson album)::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a817221554299260e20a28d::Word of Mouth (The Wanted album)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a817221554299260e20a28d::Jackinabox::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a817221554299260e20a28d::Walks Like Rihanna",
+        "5a817221554299260e20a28d::Word of Mouth (The Wanted album)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a817221554299260e20a28d::Walks Like Rihanna::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a817221554299260e20a28d::Free (Cody Simpson album)::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a817221554299260e20a28d::Word of Mouth (The Wanted album)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a817221554299260e20a28d::Jackinabox::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a817221554299260e20a28d::Jackinabox::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Jackinabox is the third studio album by the British band Turin Brakes.\n[2] Word of Mouth is the third studio album by English-Irish boy band The Wanted.\n[3] And we approached it with a real rock-like sensibility to the recording in the sense that everything's tracked live with the band, like the instrumentation is all live.\n[4] \"Walks Like Rihanna\" is a song by the British-Irish boy band The Wanted."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

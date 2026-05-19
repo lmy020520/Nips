@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Father Was a Fullback",
+  "pred_answer": "Father Was a Fullback",
+  "normalized_gold": "father was a fullback",
+  "normalized_pred": "father was a fullback",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a776cbd5542993735360273",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a776cbd5542993735360273::Gina Pareño::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a776cbd5542993735360273::Delia Razon::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a776cbd5542993735360273::Maureen O'Hara::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a776cbd5542993735360273::Father Was a Fullback::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a776cbd5542993735360273::Father Was a Fullback::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a776cbd5542993735360273::Maureen O'Hara",
+        "5a776cbd5542993735360273::Father Was a Fullback"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a776cbd5542993735360273::Gina Pareño::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a776cbd5542993735360273::Delia Razon::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a776cbd5542993735360273::Maureen O'Hara::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a776cbd5542993735360273::Father Was a Fullback::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a776cbd5542993735360273::Father Was a Fullback::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a776cbd5542993735360273::Father Was a Fullback::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Father Was a Fullback is a 1949 film black-and-white of Twentieth Century Fox based on a comedy by Clifford Goldsmith.\n[2] The film stars Fred MacMurray, Maureen O'Hara, Natalie Wood, and Betty Lynn.\n[3] Maureen O'Hara (born Maureen FitzSimons; 17 August 192024 October 2015) was an Irish-born Irish/American actress and singer.\n[4] She made her debut in 1949 in the LVN Pictures' \"Krus na Bituin.\""
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

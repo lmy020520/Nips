@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Maria",
+  "pred_answer": "Maria",
+  "normalized_gold": "maria",
+  "normalized_pred": "maria",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0a386554299603e41842c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0a386554299603e41842c::A Head in the Polls::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0a386554299603e41842c::Celestine and Etta Tavernier::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0a386554299603e41842c::Claudia Schiffer::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0a386554299603e41842c::Funeral for a Fiend::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0a386554299603e41842c::A Head in the Polls",
+        "5ae0a386554299603e41842c::Claudia Schiffer"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0a386554299603e41842c::A Head in the Polls::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0a386554299603e41842c::Celestine and Etta Tavernier::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0a386554299603e41842c::Claudia Schiffer::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0a386554299603e41842c::Funeral for a Fiend::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0a386554299603e41842c::Funeral for a Fiend::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Funeral for a Fiend\" is the eighth episode of \"The Simpsons\"<nowiki>'</nowiki> nineteenth season.\n[2] Claudia Maria Schiffer (] ; born 25 August 1970) is a German supermodel, actress and fashion designer.\n[3] Celestine makes a further guest appearance in 1993, while Etta makes a guest appearance in 1994, both visiting remaining members of the Tavernier family.\n[4] Claudia Schiffer makes a guest appearance as herself."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

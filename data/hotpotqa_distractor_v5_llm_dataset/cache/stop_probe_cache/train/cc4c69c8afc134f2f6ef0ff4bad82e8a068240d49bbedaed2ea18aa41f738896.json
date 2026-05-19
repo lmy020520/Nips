@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Canadian-born",
+  "pred_answer": "Canadian-born",
+  "normalized_gold": "canadian-born",
+  "normalized_pred": "canadian-born",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79cb275542994bb94570af",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79cb275542994bb94570af::Ruben Carbajal::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79cb275542994bb94570af::Ryan Tyler::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79cb275542994bb94570af::Glenn Ford::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a79cb275542994bb94570af::Torpedo Run::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a79cb275542994bb94570af::Ruben Carbajal::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79cb275542994bb94570af::Glenn Ford",
+        "5a79cb275542994bb94570af::Torpedo Run"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79cb275542994bb94570af::Ruben Carbajal::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79cb275542994bb94570af::Ryan Tyler::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79cb275542994bb94570af::Glenn Ford::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a79cb275542994bb94570af::Torpedo Run::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a79cb275542994bb94570af::Ruben Carbajal::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a79cb275542994bb94570af::Ruben Carbajal::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Along with commercials for Chuck E. Cheese and Propositions, he was also on a college student's film One Last Run in which he starred as the son of the main character.\n[2] It was filmed in Metrocolor CinemaScope, and it stars Glenn Ford as a World War II submarine commander in the Pacific who is obsessed with sinking a particular Japanese aircraft carrier.\n[3] Gwyllyn Samuel Newton \"Glenn\" Ford (May 1, 1916 – August 30, 2006) was a Canadian-born actor who held dual Canadian and American citizenship.\n[4] Signed to the Arista Nashville label, she made her debut with the single \"Run, Run, Run\" on the \"Billboard\" Hot Country Singles & Tracks (now Hot Country Songs) charts."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

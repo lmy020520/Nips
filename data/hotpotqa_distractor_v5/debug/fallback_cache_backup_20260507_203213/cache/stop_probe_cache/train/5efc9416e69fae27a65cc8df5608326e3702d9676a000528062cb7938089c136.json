@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Daniel Boone",
+  "pred_answer": "Daniel Boone",
+  "normalized_gold": "daniel boone",
+  "normalized_pred": "daniel boone",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a734f0b5542994cef4bc52d",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a734f0b5542994cef4bc52d::Daniel Boone::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a734f0b5542994cef4bc52d::Liberty Generation::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a734f0b5542994cef4bc52d::Liberty Generation::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a734f0b5542994cef4bc52d::Daniel Boone",
+        "5a734f0b5542994cef4bc52d::Liberty Generation"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a734f0b5542994cef4bc52d::Daniel Boone::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a734f0b5542994cef4bc52d::Liberty Generation::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a734f0b5542994cef4bc52d::Liberty Generation::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a734f0b5542994cef4bc52d::Liberty Generation::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] According to the authors, notable members include King George III, Czarina Catherine the Great, George Washington, and Daniel Boone.\n[2] The Liberty Generation is an identified cohort within the Strauss–Howe generational theory that describes the generation of people who were born from approximately 1724–1741.\n[3] There, he founded the village of Boonesborough, Kentucky, one of the first American settlements west of the Appalachians."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

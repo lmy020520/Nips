@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "James Mitchell",
+  "pred_answer": "James Mitchell",
+  "normalized_gold": "james mitchell",
+  "normalized_pred": "james mitchell",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae746895542997b22f6a66d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae746895542997b22f6a66d::James Mitchell (actor)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae746895542997b22f6a66d::Marked Men (1919 film)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae746895542997b22f6a66d::The Peacemaker (1956 film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae746895542997b22f6a66d::The Shadow Riders (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae746895542997b22f6a66d::James Mitchell (actor)",
+        "5ae746895542997b22f6a66d::The Peacemaker (1956 film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae746895542997b22f6a66d::James Mitchell (actor)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae746895542997b22f6a66d::Marked Men (1919 film)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae746895542997b22f6a66d::The Peacemaker (1956 film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae746895542997b22f6a66d::The Shadow Riders (film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae746895542997b22f6a66d::The Shadow Riders (film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Shadow Riders is a 1982 American made-for-television western film directed by Andrew V. McLaglen and starring Tom Selleck, Sam Elliott, Dominique Dunne, and Katharine Ross.\n[2] The Peacemaker (1956) is a western film directed by Ted Post and starring James Mitchell, Rosemarie Bowe, and Jan Merlin.\n[3] It is a remake of the 1916 film \"The Three Godfathers\", which also starred Carey.\n[4] Although he is best known to television audiences as Palmer Cortlandt on the soap opera \"All My Children\" (1979–2010), theatre and dance historians remember him as one of Agnes de Mille's leading dancers."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

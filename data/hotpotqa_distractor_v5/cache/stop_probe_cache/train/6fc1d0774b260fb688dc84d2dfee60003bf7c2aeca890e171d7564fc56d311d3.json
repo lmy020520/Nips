@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Warrington Wolves",
+  "pred_answer": "Warrington Wolves",
+  "normalized_gold": "warrington wolves",
+  "normalized_pred": "warrington wolves",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab67a3155429953192ad2d0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab67a3155429953192ad2d0::Warrington Wolves::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab67a3155429953192ad2d0::Dave Hunt (Oregon politician)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab67a3155429953192ad2d0::Glyn Shaw::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab67a3155429953192ad2d0::Clackamas County Fair and Rodeo::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab67a3155429953192ad2d0::Warrington Wolves",
+        "5ab67a3155429953192ad2d0::Glyn Shaw"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab67a3155429953192ad2d0::Warrington Wolves::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab67a3155429953192ad2d0::Dave Hunt (Oregon politician)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab67a3155429953192ad2d0::Glyn Shaw::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab67a3155429953192ad2d0::Clackamas County Fair and Rodeo::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab67a3155429953192ad2d0::Clackamas County Fair and Rodeo::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Clackamas Country Fair and Rodeo is a week-long event held at the Clackamas County Fairgrounds in the city of Canby in Clackamas County, Oregon, United States during the third week of August.\n[2] Glyndwr \"Glyn\" Shaw (born April 11, 1951 in Rhigos) is a Welsh dual-code international rugby union and professional rugby league footballer who played in the 1970s, and 1980s, playing representative level rugby union (RU) for Wales, and at club level for Neath RFC, playing at Prop forward, i.e. number 1 or 3, and playing representative level rugby league (RL) for Great Britain, and Wales, and at c\n[3] A Democrat, he was the Oregon House Speaker and served as State Representative for District 40 of the Oregon House of Representatives representing Clackamas County from 2003 to 2013.\n[4] Warrington Wolves R.L.F.C. is a professional rugby league football club based in Warrington, England that competes in Super League."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

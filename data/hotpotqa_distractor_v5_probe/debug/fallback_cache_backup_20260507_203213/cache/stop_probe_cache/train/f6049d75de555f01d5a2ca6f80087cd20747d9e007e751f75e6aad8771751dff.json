@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Herman Webster Mudgett",
+  "pred_answer": "Herman Webster Mudgett",
+  "normalized_gold": "herman webster mudgett",
+  "normalized_pred": "herman webster mudgett",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79d1275542994bb94570d8",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79d1275542994bb94570d8::William Henry Webster::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79d1275542994bb94570d8::Lorena (song)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79d1275542994bb94570d8::H. H. Holmes::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a79d1275542994bb94570d8::Anthony Boucher::3"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a79d1275542994bb94570d8::Bouchercon XXI::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79d1275542994bb94570d8::H. H. Holmes",
+        "5a79d1275542994bb94570d8::Anthony Boucher"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79d1275542994bb94570d8::William Henry Webster::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79d1275542994bb94570d8::Lorena (song)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79d1275542994bb94570d8::H. H. Holmes::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a79d1275542994bb94570d8::Anthony Boucher::3",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a79d1275542994bb94570d8::Bouchercon XXI::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a79d1275542994bb94570d8::Bouchercon XXI::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It is named in honour of writer, reviewer, and editor Anthony Boucher; also the inspiration for the Anthony Awards, which have been issued at the convention since 1986.\n[2] In addition to \"Anthony Boucher\", White also employed the pseudonym \"H. H. Holmes\", which was the pseudonym of a late-19th-century American serial killer; Boucher would also write light verse and sign it \"Herman W. Mudgett\" (another of the murderer's aliases).\n[3] Herman Webster Mudgett (May 16, 1861 – May 7, 1896), better known under the name of Dr. Henry Howard Holmes or more commonly H. H. Holmes, was an American serial killer of the 19th century.\n[4] Henry Webster's friend Joseph Philbrick Webster wrote the music, and the song was first published in Chicago in 1857."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ted Danson",
+  "pred_answer": "Ted Danson",
+  "normalized_gold": "ted danson",
+  "normalized_pred": "ted danson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abb134e5542992ccd8e7eff",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abb134e5542992ccd8e7eff::Bored to Death::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abb134e5542992ccd8e7eff::Ted Danson::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abb134e5542992ccd8e7eff::I Do, Adieu::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abb134e5542992ccd8e7eff::Bored to Death",
+        "5abb134e5542992ccd8e7eff::Ted Danson"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abb134e5542992ccd8e7eff::Bored to Death::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abb134e5542992ccd8e7eff::Ted Danson::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abb134e5542992ccd8e7eff::I Do, Adieu::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abb134e5542992ccd8e7eff::I Do, Adieu::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Before this episode aired, Ted Danson decided to renew his contract with the show as Sam Malone, while Shelley Long decided to quit the series, which could conclude the on-and-off romance of \"Sam and Diane\" that went on for the first five years since 1982.\n[2] Edward Bridge \"Ted\" Danson III (born December 29, 1947) is an American actor, author, and producer well known for his role as lead character Sam Malone on the NBC sitcom \"Cheers\" and for his role as Dr. John Becker on the CBS sitcom \"Becker\".\n[3] Bored to Death is an American comedy series that ran on HBO from September 20, 2009 to November 28, 2011."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

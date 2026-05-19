@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "South Hills Village",
+  "pred_answer": "South Hills Village",
+  "normalized_gold": "south hills village",
+  "normalized_pred": "south hills village",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a777ebb55429967ab1051d1",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a777ebb55429967ab1051d1::South Hills Village::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a777ebb55429967ab1051d1::Washington Mall::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a777ebb55429967ab1051d1::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a777ebb55429967ab1051d1::Blue Line (Pittsburgh)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a777ebb55429967ab1051d1::South Hills Village::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a777ebb55429967ab1051d1::South Hills Village",
+        "5a777ebb55429967ab1051d1::Blue Line (Pittsburgh)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a777ebb55429967ab1051d1::South Hills Village::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a777ebb55429967ab1051d1::Washington Mall::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a777ebb55429967ab1051d1::Blue Line (Pittsburgh)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a777ebb55429967ab1051d1::South Hills Village::6",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a777ebb55429967ab1051d1::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a777ebb55429967ab1051d1::South Hills Village::6",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] South Hills Village was the largest in Greater Pittsburgh until the Monroeville Mall, also built by the Oxford Development Company, opened in 1969.\n[2] The Blue Line is a Pittsburgh Light Rail line that runs between Downtown Pittsburgh via the Overbrook neighborhood to Library (formerly the 47L Library via Overbrook route) and South Hills Village (formerly 47S South Hills Village via Overbrook).\n[3] Washington Mall is a mostly defunct enclosed shopping mall located in South Strabane Township, Washington County, Pennsylvania, just outside the city of Washington, formerly managed by J J Gumberg Co. and now by Oxford Development Company.\n[4] It was developed by the Oxford Development Co. as the first shopping complex in Greater Pittsburgh to be built as a fully enclosed structure.\n\nNotes:\n[bridge] South Hills Village is a mall developed by Oxford Development Company."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

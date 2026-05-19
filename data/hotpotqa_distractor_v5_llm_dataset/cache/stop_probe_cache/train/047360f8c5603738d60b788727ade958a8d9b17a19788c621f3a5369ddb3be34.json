@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Tennessee Valley Authority",
+  "pred_answer": "Tennessee Valley Authority",
+  "normalized_gold": "tennessee valley authority",
+  "normalized_pred": "tennessee valley authority",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b4e5155429949d91db53e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b4e5155429949d91db53e::Tennessee Valley Authority::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b4e5155429949d91db53e::Nickajack Dam::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b4e5155429949d91db53e::Kentucky Dam::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b4e5155429949d91db53e::Tennessee Valley Authority",
+        "5a8b4e5155429949d91db53e::Nickajack Dam"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b4e5155429949d91db53e::Tennessee Valley Authority::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b4e5155429949d91db53e::Nickajack Dam::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b4e5155429949d91db53e::Kentucky Dam::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b4e5155429949d91db53e::Kentucky Dam::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The dam is the lowermost of nine dams on the river owned and operated by the Tennessee Valley Authority, which built the dam in the late 1930s and early 1940s to improve navigation on the lower part of the river and reduce flooding on the lower Ohio and Mississippi rivers.\n[2] It is one of nine dams on the Tennessee River owned and operated by the Tennessee Valley Authority, which built the dam in the mid-1960s to replace the outdated Hales Bar Dam 6 mi upstream.\n[3] The Tennessee Valley Authority (TVA) is a federally owned corporation in the United States created by congressional charter on May 18, 1933 to provide navigation, flood control, electricity generation, fertilizer manufacturing, and economic development to the Tennessee Valley, a region particularly affected by the Great Depression."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

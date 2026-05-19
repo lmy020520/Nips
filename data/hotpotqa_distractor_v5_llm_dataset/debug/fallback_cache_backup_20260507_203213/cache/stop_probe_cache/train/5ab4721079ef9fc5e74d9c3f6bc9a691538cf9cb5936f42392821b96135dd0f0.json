@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Chandrasekhar number",
+  "pred_answer": "Chandrasekhar number",
+  "normalized_gold": "chandrasekhar number",
+  "normalized_pred": "chandrasekhar number",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a732a5c55429901807daf9e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a732a5c55429901807daf9e::Subrahmanyan Chandrasekhar::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a732a5c55429901807daf9e::Chandrasekhar number::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a732a5c55429901807daf9e::Saturation vapor density::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a732a5c55429901807daf9e::Subrahmanyan Chandrasekhar",
+        "5a732a5c55429901807daf9e::Chandrasekhar number"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a732a5c55429901807daf9e::Subrahmanyan Chandrasekhar::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a732a5c55429901807daf9e::Chandrasekhar number::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a732a5c55429901807daf9e::Saturation vapor density::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a732a5c55429901807daf9e::Saturation vapor density::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It is useful for getting an exact quantity of water vapor in the air from a relative humidity (RH = % local air humidity measured / local total air humidity possible ) Given an RH percentage, the density of water in the air is given by RH × SVD = Actual Vapor Density .\n[2] The Chandrasekhar number is a dimensionless quantity used in magnetic convection to represent ratio of the Lorentz force to the viscosity.\n[3] Subrahmanyan Chandrasekhar, FRS (Tamil: சுப்பிரமணியன் சந்திரசேகர் ; ; 19 October 1910 – 21 August 1995), was an Indian American astrophysicist who was awarded the 1983 Nobel Prize for Physics with William A. Fowler \"for his theoretical studies of the physical processes of importance to the structure and evolution of the stars\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

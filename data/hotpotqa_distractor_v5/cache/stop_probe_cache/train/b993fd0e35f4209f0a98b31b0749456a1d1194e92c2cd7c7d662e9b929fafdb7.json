@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "British",
+  "pred_answer": "British",
+  "normalized_gold": "british",
+  "normalized_pred": "british",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abee8755542993fe9a41d96",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abee8755542993fe9a41d96::German Autumn (book)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abee8755542993fe9a41d96::The Curry Mile::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abee8755542993fe9a41d96::C. S. Lewis::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abee8755542993fe9a41d96::Perelandra::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abee8755542993fe9a41d96::The Destiny of The Mother Church::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abee8755542993fe9a41d96::C. S. Lewis",
+        "5abee8755542993fe9a41d96::Perelandra"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abee8755542993fe9a41d96::German Autumn (book)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abee8755542993fe9a41d96::The Curry Mile::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abee8755542993fe9a41d96::C. S. Lewis::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abee8755542993fe9a41d96::Perelandra::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abee8755542993fe9a41d96::The Destiny of The Mother Church::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abee8755542993fe9a41d96::The Destiny of The Mother Church::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Destiny of The Mother Church, by Bliss Knapp is a controversial book published by Christian Science Publishing Society in 1991.\n[2] Perelandra (also titled Voyage to Venus in a later edition published by Pan Books) is the second book in the \"Space Trilogy\" of C. S. Lewis, set in the Field of Arbol.\n[3] Clive Staples Lewis (29 November 1898 – 22 November 1963) was a British novelist, poet, academic, medievalist, literary critic, essayist, lay theologian, broadcaster, lecturer, and Christian apologist.\n[4] The debut novel was also the first book published by Suitcase Press."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1989",
+  "pred_answer": "1989",
+  "normalized_gold": "1989",
+  "normalized_pred": "1989",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7ba03c554299294a54aa34",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7ba03c554299294a54aa34::Connor Cook::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7ba03c554299294a54aa34::1980 Oakland Raiders season::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7ba03c554299294a54aa34::Terrelle Pryor::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7ba03c554299294a54aa34::2013 Oakland Raiders season::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7ba03c554299294a54aa34::List of Oakland Raiders head coaches::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7ba03c554299294a54aa34::Terrelle Pryor",
+        "5a7ba03c554299294a54aa34::2013 Oakland Raiders season"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7ba03c554299294a54aa34::Connor Cook::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7ba03c554299294a54aa34::1980 Oakland Raiders season::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7ba03c554299294a54aa34::Terrelle Pryor::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7ba03c554299294a54aa34::2013 Oakland Raiders season::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7ba03c554299294a54aa34::List of Oakland Raiders head coaches::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7ba03c554299294a54aa34::List of Oakland Raiders head coaches::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Raiders franchise was founded in Oakland, California in 1959 and became the eighth member of the American Football League (AFL) in 1960 as a replacement for the Minnesota Vikings, who had moved to the NFL.\n[2] The Raiders entered the season with a new quarterback in Terrelle Pryor.\n[3] Terrelle Pryor Sr. (born June 20, 1989) is an American football wide receiver for the Washington Redskins of the National Football League (NFL).\n[4] Still playing in Oakland the Raiders entered the season with a new Quarterback after acquiring Dan Pastorini from the Houston Oilers for Kenny Stabler."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

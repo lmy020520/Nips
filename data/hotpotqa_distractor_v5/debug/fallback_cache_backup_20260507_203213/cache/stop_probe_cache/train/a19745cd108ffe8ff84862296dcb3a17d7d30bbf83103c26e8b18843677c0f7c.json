@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "University of Colorado",
+  "pred_answer": "University of Colorado",
+  "normalized_gold": "university of colorado",
+  "normalized_pred": "university of colorado",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a823e0455429940e5e1a809",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a823e0455429940e5e1a809::Miracle at Michigan::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a823e0455429940e5e1a809::Greg McMurtry::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a823e0455429940e5e1a809::Michael Westbrook::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a823e0455429940e5e1a809::Michael Westbrook::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a823e0455429940e5e1a809::Miracle at Michigan",
+        "5a823e0455429940e5e1a809::Michael Westbrook"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a823e0455429940e5e1a809::Miracle at Michigan::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a823e0455429940e5e1a809::Greg McMurtry::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a823e0455429940e5e1a809::Michael Westbrook::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a823e0455429940e5e1a809::Michael Westbrook::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a823e0455429940e5e1a809::Michael Westbrook::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Westbrook played college football for the University of Colorado, and was recognized as an All-American.\n[2] Michael Deanailo Westbrook (born July 7, 1972) is a former American college and professional football player who was a wide receiver in the National Football League (NFL) and is also a former mixed martial artist.\n[3] He played college football as a wide receiver for the University of Michigan from 1986 to 1989.\n[4] The Miracle at Michigan refers to the final play that occurred during the American football game played on September 24, 1994 between the Colorado Buffaloes and Michigan Wolverines at Michigan Stadium in Ann Arbor, Michigan."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

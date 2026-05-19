@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Turkey",
+  "pred_answer": "Turkey",
+  "normalized_gold": "turkey",
+  "normalized_pred": "turkey",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac40ff05542997ea680c9cf",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac40ff05542997ea680c9cf::Treaty of Aynalıkavak::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac40ff05542997ea680c9cf::Aynalıkavak Palace::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac40ff05542997ea680c9cf::Italian Synagogue (Istanbul)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac40ff05542997ea680c9cf::Dushanbe Synagogue::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac40ff05542997ea680c9cf::Aynalıkavak Palace",
+        "5ac40ff05542997ea680c9cf::Italian Synagogue (Istanbul)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac40ff05542997ea680c9cf::Treaty of Aynalıkavak::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac40ff05542997ea680c9cf::Aynalıkavak Palace::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac40ff05542997ea680c9cf::Italian Synagogue (Istanbul)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac40ff05542997ea680c9cf::Dushanbe Synagogue::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac40ff05542997ea680c9cf::Dushanbe Synagogue::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Dushanbe Synagogue, also known as the Bukharian Synagogue, located in Dushanbe, the capital of Tajikistan, was constructed in the 19th century in one of the two Jewish Quarters in Dushanbe at the time.\n[2] The Italian Synagogue, also known as Kal de los Frankos, is a synagogue located north of the Golden Horn in Istanbul, Turkey.\n[3] Aynalıkavak Palace (Turkish: \"Aynalıkavak Kasrı\" ) is a former Ottoman palace located in the Hasköy neighborhood of Beyoğlu district in Istanbul, Turkey.\n[4] Aynalıkavak is a palace in Istanbul where the treaty was signed."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

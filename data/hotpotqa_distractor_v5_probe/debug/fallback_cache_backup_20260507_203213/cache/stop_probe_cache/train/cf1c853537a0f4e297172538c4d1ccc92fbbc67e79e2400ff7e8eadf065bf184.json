@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Giant Squid",
+  "pred_answer": "Giant Squid",
+  "normalized_gold": "giant squid",
+  "normalized_pred": "giant squid",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3b8ce5542990afbd1e1ba",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3b8ce5542990afbd1e1ba::Jersey Shore shark attacks of 1916::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3b8ce5542990afbd1e1ba::2012–13 North American drought::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3b8ce5542990afbd1e1ba::Monster in the Creek::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae3b8ce5542990afbd1e1ba::1901 eastern United States heat wave::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3b8ce5542990afbd1e1ba::Jersey Shore shark attacks of 1916",
+        "5ae3b8ce5542990afbd1e1ba::Monster in the Creek"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3b8ce5542990afbd1e1ba::Jersey Shore shark attacks of 1916::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3b8ce5542990afbd1e1ba::2012–13 North American drought::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3b8ce5542990afbd1e1ba::Monster in the Creek::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae3b8ce5542990afbd1e1ba::1901 eastern United States heat wave::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3b8ce5542990afbd1e1ba::1901 eastern United States heat wave::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 1901 eastern United States heat wave was the most severe and deadly heat wave in the United States prior to the 1930s dust bowl.\n[2] Monster in the Creek is the first EP and second release by post-metal band Giant Squid.\n[3] The 2012–13 North American drought, an expansion of the 2010–13 Southern United States drought, originated in the midst of a record-breaking heat wave.\n[4] The incidents occurred during a deadly summer heat wave and polio epidemic in the United States that drove thousands of people to the seaside resorts of the Jersey Shore."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

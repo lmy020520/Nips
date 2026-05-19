@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mikhail Ivanovich Glinka",
+  "pred_answer": "Mikhail Ivanovich Glinka",
+  "normalized_gold": "mikhail ivanovich glinka",
+  "normalized_pred": "mikhail ivanovich glinka",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a39085542996c55b2dd40",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a39085542996c55b2dd40::Lina Bruna Rasa::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a39085542996c55b2dd40::Mikhail Glinka::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a39085542996c55b2dd40::Pietro Mascagni::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a39085542996c55b2dd40::Nestor Kukolnik::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a39085542996c55b2dd40::Mikhail Glinka",
+        "5a7a39085542996c55b2dd40::Pietro Mascagni"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a39085542996c55b2dd40::Lina Bruna Rasa::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a39085542996c55b2dd40::Mikhail Glinka::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a39085542996c55b2dd40::Pietro Mascagni::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a39085542996c55b2dd40::Nestor Kukolnik::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a39085542996c55b2dd40::Nestor Kukolnik::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Today, he is best remembered for having contributed to the libretto of the first Russian opera, \"A Life for the Tsar\" by Mikhail Glinka.\n[2] While it was often held that Mascagni, like Leoncavallo, was a \"one-opera man\" who could never repeat his first success, \"L'amico Fritz\" and \"Iris\" have remained in the repertoire in Europe (especially Italy) since their premieres.\n[3] Mikhail Ivanovich Glinka (Russian: Михаи́л Ива́нович Гли́нка ; 1 June [O.S. 20 May] 1804 15 February [O.S. 3 February] 1857 ) was the first Russian composer to gain wide recognition within his own country, and is often regarded as the fountainhead of Russian classical music.\n[4] She was particularly noted for her performances in the verismo repertoire and was a favourite of Pietro Mascagni who considered her the ideal Santuzza."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

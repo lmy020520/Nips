@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1826",
+  "pred_answer": "1826",
+  "normalized_gold": "1826",
+  "normalized_pred": "1826",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6c5a65542995eadef0093",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6c5a65542995eadef0093::John Metcalfe (librarian)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6c5a65542995eadef0093::State Library of New South Wales::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6c5a65542995eadef0093::Frank Francis::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6c5a65542995eadef0093::John Metcalfe (librarian)",
+        "5ab6c5a65542995eadef0093::State Library of New South Wales"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6c5a65542995eadef0093::John Metcalfe (librarian)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6c5a65542995eadef0093::State Library of New South Wales::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6c5a65542995eadef0093::Frank Francis::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6c5a65542995eadef0093::Frank Francis::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Almost all his working life was at the British Museum, first as an assistant keeper in the department of printed books, and later as secretary of the museum, keeper of printed books and, between 1959 and 1968, director and principal librarian of the museum.\n[2] It is the oldest library in Australia, being the first established in New South Wales (now a state of Australia) in 1826.\n[3] He was the Principal Librarian at the Public Library of New South Wales (now State Library of New South Wales) from 1942 until 1958 and University Librarian at the University of New South Wales from 1959–1966."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

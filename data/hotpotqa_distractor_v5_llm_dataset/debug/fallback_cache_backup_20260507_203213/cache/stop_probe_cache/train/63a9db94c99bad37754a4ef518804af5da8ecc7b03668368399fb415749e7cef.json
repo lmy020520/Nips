@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the works of Bedřich Smetana",
+  "pred_answer": "the works of Bedřich Smetana",
+  "normalized_gold": "the works of bedřich smetana",
+  "normalized_pred": "the works of bedřich smetana",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7bef2b5542996dd594b856",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7bef2b5542996dd594b856::The Sweet Sex and Love::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7bef2b5542996dd594b856::Aladdin (1958 film)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7bef2b5542996dd594b856::Kim Sung-soo (actor)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7bef2b5542996dd594b856::Genome Hazard::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7bef2b5542996dd594b856::The Sweet Sex and Love",
+        "5a7bef2b5542996dd594b856::Kim Sung-soo (actor)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7bef2b5542996dd594b856::The Sweet Sex and Love::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7bef2b5542996dd594b856::Aladdin (1958 film)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7bef2b5542996dd594b856::Kim Sung-soo (actor)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7bef2b5542996dd594b856::Genome Hazard::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7bef2b5542996dd594b856::Genome Hazard::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Nameless\") is a 2013 Japanese-South Korean action thriller film directed by Kim Sung-soo based on a novel by Shiro Tsukasaki.\n[2] After beginning his career as a fashion model, Kim made his acting debut in the tokusatsu series \"Vectorman\" and the erotic film \"The Sweet Sex and Love\".\n[3] Sony Records has digitally remastered the stereo recording for release on CD.\n[4] The entire score was based on a digitally remastered recording of the works of Bedřich Smetana."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

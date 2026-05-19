@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Elizabeth Taylor",
+  "pred_answer": "Elizabeth Taylor",
+  "normalized_gold": "elizabeth taylor",
+  "normalized_pred": "elizabeth taylor",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab801da5542990e739ec7c9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab801da5542990e739ec7c9::Moody's Mood for Love::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab801da5542990e739ec7c9::I'm in the Mood for Love (Eddie Fisher album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab801da5542990e739ec7c9::Eddie Fisher (singer)::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab801da5542990e739ec7c9::Eddie Fisher (singer)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab801da5542990e739ec7c9::I'm in the Mood for Love (Eddie Fisher album)",
+        "5ab801da5542990e739ec7c9::Eddie Fisher (singer)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab801da5542990e739ec7c9::Moody's Mood for Love::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab801da5542990e739ec7c9::I'm in the Mood for Love (Eddie Fisher album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab801da5542990e739ec7c9::Eddie Fisher (singer)::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab801da5542990e739ec7c9::Eddie Fisher (singer)::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab801da5542990e739ec7c9::Eddie Fisher (singer)::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Fisher divorced his first wife, actress Debbie Reynolds, to marry Reynolds' best friend, actress Elizabeth Taylor, after Taylor's husband, film producer Mike Todd, was killed in a plane crash.\n[2] The scandalous affair was widely reported, bringing unfavorable publicity to Fisher.\n[3] I'm in the Mood for Love is the name of a 1952 album by Eddie Fisher, reissued in 1955, featuring the song of the same name.\n[4] \"Moody's Mood for Love\" is a 1952 song by Eddie Jefferson, whose melody is derived from an improvised solo by jazz saxophonist James Moody on a 1949 recording of the 1935 song \"I'm in the Mood for Love\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

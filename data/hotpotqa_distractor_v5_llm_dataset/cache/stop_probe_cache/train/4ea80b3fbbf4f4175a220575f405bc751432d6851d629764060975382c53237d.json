@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Harvard Project Physics",
+  "pred_answer": "Harvard Project Physics",
+  "normalized_gold": "harvard project physics",
+  "normalized_pred": "harvard project physics",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a8647554299042af8f65c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a8647554299042af8f65c::Fletcher Watson::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a8647554299042af8f65c::Harvard Project Physics::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a8647554299042af8f65c::Catherine E. Snow::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a8647554299042af8f65c::Fletcher Watson",
+        "5a7a8647554299042af8f65c::Harvard Project Physics"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a8647554299042af8f65c::Fletcher Watson::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a8647554299042af8f65c::Harvard Project Physics::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a8647554299042af8f65c::Catherine E. Snow::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a8647554299042af8f65c::Catherine E. Snow::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] In 2009 Snow was appointed to the Patricia Albjerg Graham Professorship in the Harvard Graduate School of Education, having previously held the Henry Lee Shattuck Professorship also in the Harvard Graduate School of Education.\n[2] Harvard Project Physics, also called Project Physics, was a national curriculum development project to create a secondary school physics education program in the United States during the Cold War era.\n[3] Fletcher G. Watson (c. 1912 – 7 May 1997) was an American professor of science education at the Harvard Graduate School of Education (1946–77), where he served as the Henry Lee Shattuck Professor of Education (1966–77)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"How I Raised, Folded, Bluffed, Flirted, Cursed, and Won Millions at the World Series of Poker\"",
+  "pred_answer": "\"How I Raised, Folded, Bluffed, Flirted, Cursed, and Won Millions at the World Series of Poker\"",
+  "normalized_gold": "how i raised folded bluffed flirted cursed and won millions at the world series of poker",
+  "normalized_pred": "how i raised folded bluffed flirted cursed and won millions at the world series of poker",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f533d5542992414482a4c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f533d5542992414482a4c::The Apprentice (U.S. season 8)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f533d5542992414482a4c::Annie Duke::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f533d5542992414482a4c::The Apprentice (U.S. season 13)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f533d5542992414482a4c::The Apprentice (U.S. season 8)",
+        "5a8f533d5542992414482a4c::Annie Duke"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f533d5542992414482a4c::The Apprentice (U.S. season 8)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f533d5542992414482a4c::Annie Duke::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f533d5542992414482a4c::The Apprentice (U.S. season 13)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f533d5542992414482a4c::The Apprentice (U.S. season 13)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Celebrity Apprentice 6 (also known as All-Star Celebrity Apprentice or The Apprentice 13) is the sixth installment of the reality game show, \"Celebrity Apprentice\", which premiered on Sunday, March 3, 2013.\n[2] She has written a number of instructional books for poker players, including \"Decide to Play Great Poker\" and \"The Middle Zone\", and she published her autobiography, \"How I Raised, Folded, Bluffed, Flirted, Cursed, and Won Millions at the World Series of Poker\", in 2005.\n[3] Joan Rivers was the winner, while Annie Duke was the runner-up."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

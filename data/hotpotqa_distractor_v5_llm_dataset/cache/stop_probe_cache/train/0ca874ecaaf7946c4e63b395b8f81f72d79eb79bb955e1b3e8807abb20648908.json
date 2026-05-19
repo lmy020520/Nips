@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"Dressed to Kill\"",
+  "pred_answer": "\"Dressed to Kill\"",
+  "normalized_gold": "dressed to kill",
+  "normalized_pred": "dressed to kill",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae80d2f554299540e5a570a",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae80d2f554299540e5a570a::The Brave One (2007 film)::6"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae80d2f554299540e5a570a::Eric Roberts::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae80d2f554299540e5a570a::Nancy Allen (actress)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae80d2f554299540e5a570a::RoboCop 3::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae80d2f554299540e5a570a::The Brave One (2007 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae80d2f554299540e5a570a::Nancy Allen (actress)",
+        "5ae80d2f554299540e5a570a::RoboCop 3"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae80d2f554299540e5a570a::The Brave One (2007 film)::6",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae80d2f554299540e5a570a::Eric Roberts::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae80d2f554299540e5a570a::Nancy Allen (actress)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae80d2f554299540e5a570a::RoboCop 3::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae80d2f554299540e5a570a::The Brave One (2007 film)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae80d2f554299540e5a570a::The Brave One (2007 film)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Brave One is a 2007 American psychological thriller film directed by Neil Jordan, produced by Joel Silver, and starring Jodie Foster and Terrence Howard.\n[2] RoboCop 3 is a 1993 American cyberpunk action film directed by Fred Dekker and written by Frank Miller and Dekker.\n[3] Nancy Anne Allen (born June 24, 1950) is an American actress and cancer activist best known for her roles in the films \"Carrie\" (1976), \"RoboCop\" (1987), and \"Dressed to Kill\" (1980), the latter of which earned her a Golden Globe nomination.\n[4] His career began with a well-received performance in \"King of the Gypsies\" (1978), for which he earned his first Golden Globe Award nomination."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

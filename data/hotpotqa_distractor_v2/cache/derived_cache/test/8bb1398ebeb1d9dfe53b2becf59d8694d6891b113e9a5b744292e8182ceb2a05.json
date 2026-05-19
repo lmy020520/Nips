@@ -1,0 +1,30 @@
+{
+  "should_derive": true,
+  "reason": "The recent probe feedback indicates a false stop with answer conflict, and the derive_goal is to bridge query entity to answer candidate. Current evidence includes information about Alan Dean Foster as a writer and John Lanchester's background, but lacks explicit profession for John Lanchester. Deriving bridge notes can help connect entities to clarify professions and correct the answer focus.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Alan Dean Foster is identified as an American writer of fantasy and science fiction.",
+      "source_unit_ids": [
+        "5a8b42be55429949d91db515::Alan Dean Foster::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "John Lanchester's background includes education in England, but his profession is not explicitly stated in the current evidence.",
+      "source_unit_ids": [
+        "5a8b42be55429949d91db515::John Lanchester::1"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "Orphan Star is a science fiction novel by American writer Alan Dean Foster.",
+      "source_unit_ids": [
+        "5a8b42be55429949d91db515::Orphan Star::0"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

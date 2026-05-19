@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Tony Scott",
+  "pred_answer": "Tony Scott",
+  "normalized_gold": "tony scott",
+  "normalized_pred": "tony scott",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2d83855429928c42394f6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2d83855429928c42394f6::Kinky (Kinky album)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2d83855429928c42394f6::Kingpin (TV series)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2d83855429928c42394f6::Man on Fire (2004 film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae2d83855429928c42394f6::You Got Served::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2d83855429928c42394f6::Kinky (Kinky album)",
+        "5ae2d83855429928c42394f6::Man on Fire (2004 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2d83855429928c42394f6::Kinky (Kinky album)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2d83855429928c42394f6::Kingpin (TV series)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2d83855429928c42394f6::Man on Fire (2004 film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae2d83855429928c42394f6::You Got Served::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2d83855429928c42394f6::You Got Served::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] You Got Served is a 2004 American dance drama film written and directed by Chris Stokes, manager of its stars, recording artist Marques Houston and boy band B2K.\n[2] Man on Fire is a 2004 British-American crime thriller film directed by Tony Scott from a screenplay by Brian Helgeland, and based on the 1980 novel of the same name by A. J. Quinnell.\n[3] Commercials for the mini-series on NBC featured the song \"Más\" by the Mexican band Kinky.\n[4] Another of their songs, \"Más\", is featured in the PS2 video game SSX 3 and in the 2004 film Man on Fire."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

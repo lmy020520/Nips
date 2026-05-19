@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Martin Edwards",
+  "pred_answer": "Martin Edwards",
+  "normalized_gold": "martin edwards",
+  "normalized_pred": "martin edwards",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a80951d5542995d8a8ddfa6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a80951d5542995d8a8ddfa6::Berserk: The Golden Age Arc::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a80951d5542995d8a8ddfa6::The Golden Age of Murder::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a80951d5542995d8a8ddfa6::Martin Edwards (author)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a80951d5542995d8a8ddfa6::Charles West (author)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a80951d5542995d8a8ddfa6::The Golden Age of Murder",
+        "5a80951d5542995d8a8ddfa6::Martin Edwards (author)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a80951d5542995d8a8ddfa6::Berserk: The Golden Age Arc::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a80951d5542995d8a8ddfa6::The Golden Age of Murder::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a80951d5542995d8a8ddfa6::Martin Edwards (author)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a80951d5542995d8a8ddfa6::Charles West (author)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a80951d5542995d8a8ddfa6::Charles West (author)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Charles West (born 1927), British crime novelist, is a former actor.\n[2] Martin Edwards (born 7 July 1955), whose full name is Kenneth Martin Edwards, is a British crime novelist, critic and solicitor.\n[3] The Golden Age of Murder is a book written by Martin Edwards and published by HarperCollins on 7 May 2015 which later went on to win the Edgar Award for Best Critical / Biographical Work in 2016.\n[4] Berserk: The Golden Age Arc (Japanese: ベルセルク 黄金時代篇 , Hepburn: Beruseruku Ōgon Jidai-hen ) is a series of films, an effort to adapt the Golden Age Arc of Kentaro Miura's \"Berserk\" manga series."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

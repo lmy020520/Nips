@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "United States",
+  "pred_answer": "United States",
+  "normalized_gold": "united states",
+  "normalized_pred": "united states",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8fc1ca55429918e830d2cb",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8fc1ca55429918e830d2cb::Ernest Schmidt::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8fc1ca55429918e830d2cb::Pittsburg State University::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8fc1ca55429918e830d2cb::Blue Howell::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8fc1ca55429918e830d2cb::Ernest Schmidt",
+        "5a8fc1ca55429918e830d2cb::Pittsburg State University"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8fc1ca55429918e830d2cb::Ernest Schmidt::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8fc1ca55429918e830d2cb::Pittsburg State University::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8fc1ca55429918e830d2cb::Blue Howell::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8fc1ca55429918e830d2cb::Blue Howell::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He was the fifth head football coach at Kansas State Teachers College of Pittsburg—now known as Pittsburg State University—in Pittsburg, Kansas, serving for eight seasons, from 1929 to 1935 and again in 1937, compiling a record of 35–30–6.\n[2] Pittsburg State University, also called Pitt State or PSU, is a public university with approximately 7,479 students (6,000 undergraduates and 1,400 graduate students) located in Pittsburg, Kansas, United States.\n[3] Ernest J. Schmidt (February 12, 1911 – September 6, 1986) was an American college basketball player born in Nashville, Kansas."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

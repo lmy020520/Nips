@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "\"La Bamba\"",
+  "pred_answer": "La Bamba",
+  "normalized_gold": "la bamba",
+  "normalized_pred": "la bamba",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e9f9a55429934daa2fc47",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e9f9a55429934daa2fc47::Hollies Sing Dylan::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e9f9a55429934daa2fc47::Stuck on You (Lionel Richie song)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e9f9a55429934daa2fc47::Selena singles discography::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7e9f9a55429934daa2fc47::La Bamba (song)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7e9f9a55429934daa2fc47::Enamorada de Ti::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e9f9a55429934daa2fc47::Selena singles discography",
+        "5a7e9f9a55429934daa2fc47::La Bamba (song)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e9f9a55429934daa2fc47::Hollies Sing Dylan::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e9f9a55429934daa2fc47::Stuck on You (Lionel Richie song)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e9f9a55429934daa2fc47::Selena singles discography::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7e9f9a55429934daa2fc47::La Bamba (song)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7e9f9a55429934daa2fc47::Enamorada de Ti::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e9f9a55429934daa2fc47::Enamorada de Ti::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The selection of artists to sing duets with Selena began in late summer 2011.\n[2] \"La Bamba\" has been covered by numerous artists, most notably by Los Lobos, whose version was the title track of the 1987 film \"La Bamba\" and reached No. 1 in the U.S. and UK singles charts in the same year.\n[3] In 1987, her cover of Ritchie Valens' \"La Bamba\" peaked at number 19 on the United States \"Billboard\" Hot Latin Songs chart, her first entry.\n[4] As such, the single's cover photo shows Richie wearing a cowboy hat, and indeed, \"Stuck on You\" peaked at number 24 on the country chart."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

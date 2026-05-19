@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Coal Wars",
+  "pred_answer": "The Coal Wars",
+  "normalized_gold": "the coal wars",
+  "normalized_pred": "the coal wars",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a71952b5542994082a3e87e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a71952b5542994082a3e87e::Charles Everett Lively::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a71952b5542994082a3e87e::Jack Lively::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a71952b5542994082a3e87e::Coal Wars::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a71952b5542994082a3e87e::Everett McGill::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a71952b5542994082a3e87e::Charles Everett Lively",
+        "5a71952b5542994082a3e87e::Coal Wars"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a71952b5542994082a3e87e::Charles Everett Lively::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a71952b5542994082a3e87e::Jack Lively::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a71952b5542994082a3e87e::Coal Wars::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a71952b5542994082a3e87e::Everett McGill::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a71952b5542994082a3e87e::Everett McGill::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Everett McGill (born Charles Everett McGill III, October 21, 1945) is an American actor, who first rose to prominence for his portrayal of a neanderthal in \"Quest for Fire\" (1981).\n[2] The Coal Wars, or the Coal Mine Wars, were a series of armed labor conflicts in the United States, roughly between 1890 and 1930.\n[3] Henry Everett \"Jack\" Lively (May 29, 1885 – December 5, 1967) was a right-handed pitcher in Major League Baseball, playing for the Detroit Tigers during the 1911 season.\n[4] Charles Everett Lively (1887–1962) was a private detective affiliated with the Baldwin-Felts Detective Agency."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

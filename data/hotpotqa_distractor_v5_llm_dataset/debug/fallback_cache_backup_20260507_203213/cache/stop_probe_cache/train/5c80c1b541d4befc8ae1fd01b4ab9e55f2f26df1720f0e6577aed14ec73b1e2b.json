@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New York",
+  "pred_answer": "New York",
+  "normalized_gold": "new york",
+  "normalized_pred": "new york",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac41b655542991943173914",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac41b655542991943173914::Al D'Amato::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac41b655542991943173914::Pete V. Domenici United States Courthouse::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac41b655542991943173914::Alfonse M. D'Amato United States Courthouse::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac41b655542991943173914::Erie Federal Courthouse::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac41b655542991943173914::Al D'Amato",
+        "5ac41b655542991943173914::Alfonse M. D'Amato United States Courthouse"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac41b655542991943173914::Al D'Amato::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac41b655542991943173914::Pete V. Domenici United States Courthouse::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac41b655542991943173914::Alfonse M. D'Amato United States Courthouse::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac41b655542991943173914::Erie Federal Courthouse::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac41b655542991943173914::Erie Federal Courthouse::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Erie Federal Courthouse and Post Office, also known as Erie Federal Courthouse, in Erie, Pennsylvania, is a complex of buildings that serve as a courthouse of the United States District Court for the Western District of Pennsylvania, and house other federal functions.\n[2] The Alfonse M. D'Amato United States Courthouse is a federal courthouse for the United States District Court for the Eastern District of New York.\n[3] The building was completed in 1998 and named in honor of Senator Pete Domenici at a ceremony in 2004.\n[4] He subsequently founded a lobbying firm, Park Strategies."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

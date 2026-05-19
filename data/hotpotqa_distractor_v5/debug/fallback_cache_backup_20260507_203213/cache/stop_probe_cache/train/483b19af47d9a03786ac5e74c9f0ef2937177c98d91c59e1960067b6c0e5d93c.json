@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Toyota Crown",
+  "pred_answer": "Toyota Crown",
+  "normalized_gold": "toyota crown",
+  "normalized_pred": "toyota crown",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a774c5d5542994aec3b7277",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a774c5d5542994aec3b7277::Toyopet Master::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a774c5d5542994aec3b7277::Acura ILX::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a774c5d5542994aec3b7277::Toyota Crown::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a774c5d5542994aec3b7277::Toyota Century::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a774c5d5542994aec3b7277::Toyopet Master",
+        "5a774c5d5542994aec3b7277::Toyota Crown"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a774c5d5542994aec3b7277::Toyopet Master::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a774c5d5542994aec3b7277::Acura ILX::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a774c5d5542994aec3b7277::Toyota Crown::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a774c5d5542994aec3b7277::Toyota Century::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a774c5d5542994aec3b7277::Toyota Century::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Although the Century is a premium, full size luxury sedan, it is not available at Japanese Lexus dealerships; it can only be purchased at specifically identified \"Toyota Store\" locations.\n[2] The Toyota Crown (Japanese: トヨタクラウン \"Toyota Kuraun\") is a line of full-size luxury sedans by Toyota primarily aimed at the Japanese market and sold in other select Asian markets.\n[3] The Acura ILX is a compact luxury sedan for Honda's luxury brand Acura.\n[4] The Toyopet Master was an evolution of an earlier Toyota sedan called the Toyota SF/RH model (also known as the Super), and was sold in parallel with the first Toyota Crown."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

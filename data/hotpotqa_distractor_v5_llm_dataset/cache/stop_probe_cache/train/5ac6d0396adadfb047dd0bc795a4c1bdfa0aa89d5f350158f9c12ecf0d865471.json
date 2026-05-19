@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jackass Number Two",
+  "pred_answer": "Jackass Number Two",
+  "normalized_gold": "jackass number two",
+  "normalized_pred": "jackass number two",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a86584a55429960ec39b669",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a86584a55429960ec39b669::Wildboyz::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a86584a55429960ec39b669::Jackass Number Two::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a86584a55429960ec39b669::Jackass Number Two: Music from the Motion Picture::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a86584a55429960ec39b669::Great West End Theatres::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a86584a55429960ec39b669::Off West End::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a86584a55429960ec39b669::Jackass Number Two",
+        "5a86584a55429960ec39b669::Great West End Theatres"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a86584a55429960ec39b669::Wildboyz::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a86584a55429960ec39b669::Jackass Number Two::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a86584a55429960ec39b669::Jackass Number Two: Music from the Motion Picture::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a86584a55429960ec39b669::Great West End Theatres::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a86584a55429960ec39b669::Off West End::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a86584a55429960ec39b669::Off West End::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It is usually used synonymously with the more widespread term \"Fringe\" (or, specifically, \"the London Fringe\"), but sometimes is also used to refer to more mainstream or commercial theatre which is located within London but outside of the centre, or to especially small and non-commercial theatres located within the centre.\n[2] Great West End Theatres is a documentary series detailing the history, architecture and theatrical anecdotes of the 40 West End Theatres of London (as covered by the monthly Society of London Theatre list), released individually as All-Region DVDs and also as digital downloads and the first 10 episodes were broadcast from 3 August 2013 in the UK by the BSkyB digital satellite channel Sky Arts 2 an\n[3] Jackass Number Two: Music from the Motion Picture is the soundtrack from the movie Jackass Number Two.\n[4] It is the sequel to \"\" (2002), both based upon the MTV series \"Jackass\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

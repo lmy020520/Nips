@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "vocal range",
+  "pred_answer": "vocal range",
+  "normalized_gold": "vocal range",
+  "normalized_pred": "vocal range",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae670a45542992ae0d1634c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae670a45542992ae0d1634c::Freddie Mercury::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae670a45542992ae0d1634c::Anita Lipnicka::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae670a45542992ae0d1634c::Barcelona (album)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae670a45542992ae0d1634c::In the Now::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae670a45542992ae0d1634c::Freddie Mercury",
+        "5ae670a45542992ae0d1634c::Barcelona (album)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae670a45542992ae0d1634c::Freddie Mercury::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae670a45542992ae0d1634c::Anita Lipnicka::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae670a45542992ae0d1634c::Barcelona (album)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae670a45542992ae0d1634c::In the Now::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae670a45542992ae0d1634c::In the Now::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In the Now is the second solo album by British singer-songwriter Barry Gibb, released on 7 October 2016 by Columbia Records.\n[2] It is the second and final solo album recorded by Mercury.\n[3] In 1998 Lipnicka released her second solo album \"To, co naprawdę\" (What Is Real).\n[4] He was known for his flamboyant stage persona and four-octave vocal range."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

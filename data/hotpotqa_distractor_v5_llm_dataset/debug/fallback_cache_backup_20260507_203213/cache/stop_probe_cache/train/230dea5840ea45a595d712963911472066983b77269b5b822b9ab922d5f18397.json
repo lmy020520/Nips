@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "A pioneer of the American animation industry, he introduced several developments in the production of cartoons",
+  "pred_answer": "A pioneer of the American animation industry, he introduced several developments in the production of cartoons",
+  "normalized_gold": "a pioneer of the american animation industry he introduced several developments in the production of cartoons",
+  "normalized_pred": "a pioneer of the american animation industry he introduced several developments in the production of cartoons",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77f3765542992a6e59e01b",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77f3765542992a6e59e01b::Walt Disney Animation Studios::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77f3765542992a6e59e01b::Armand Serrano::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77f3765542992a6e59e01b::Walt Disney::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77f3765542992a6e59e01b::Joyce Wieland::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a77f3765542992a6e59e01b::The Walt Disney Company::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77f3765542992a6e59e01b::Walt Disney",
+        "5a77f3765542992a6e59e01b::Joyce Wieland"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77f3765542992a6e59e01b::Walt Disney Animation Studios::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77f3765542992a6e59e01b::Armand Serrano::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77f3765542992a6e59e01b::Walt Disney::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77f3765542992a6e59e01b::Joyce Wieland::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a77f3765542992a6e59e01b::The Walt Disney Company::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77f3765542992a6e59e01b::The Walt Disney Company::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Disney was founded on October 16, 1923 – by brothers Walt Disney and Roy O. Disney – as the Disney Brothers Cartoon Studio, and established itself as a leader in the American animation industry before diversifying into live-action film production, television, and theme parks.\n[2] Joyce Wieland, OC (June 30, 1930 – June 27, 1998) was a Canadian experimental filmmaker and mixed media artist.\n[3] A pioneer of the American animation industry, he introduced several developments in the production of cartoons.\n[4] He has been in the animation industry for more than 2 decades and currently serving as Visual Development artist for Walt Disney Animation Studios in Burbank, California."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

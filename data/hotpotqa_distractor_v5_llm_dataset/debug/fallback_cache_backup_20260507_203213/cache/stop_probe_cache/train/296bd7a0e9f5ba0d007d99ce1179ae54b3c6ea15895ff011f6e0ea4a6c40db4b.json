@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"American Pie\"",
+  "pred_answer": "\"American Pie\"",
+  "normalized_gold": "american pie",
+  "normalized_pred": "american pie",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89a1a7554299669944a555",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89a1a7554299669944a555::Noah Beery Sr.::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89a1a7554299669944a555::Desmond Askew::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89a1a7554299669944a555::Eugene Levy::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a89a1a7554299669944a555::Repli-Kate::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a89a1a7554299669944a555::Desmond Askew::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89a1a7554299669944a555::Eugene Levy",
+        "5a89a1a7554299669944a555::Repli-Kate"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89a1a7554299669944a555::Noah Beery Sr.::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89a1a7554299669944a555::Desmond Askew::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89a1a7554299669944a555::Eugene Levy::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a89a1a7554299669944a555::Repli-Kate::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a89a1a7554299669944a555::Desmond Askew::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a89a1a7554299669944a555::Desmond Askew::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Desmond Askew (born 17 December 1972) is an English actor of film and television.\n[2] Repli-Kate is a 2002 sex comedy film from National Lampoon, directed by Frank Longo and starring Ali Landry, James Roday, Desmond Askew and Eugene Levy.\n[3] He is the only actor to have appeared in all eight of the \"American Pie\" films, in his role as Noah Levenstein.\n[4] He has appeared in films such as \"Go\" (1999), \"Repli-Kate\" (2002), \"The Hills Have Eyes\" (2006) and \"Turistas\" (2006)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

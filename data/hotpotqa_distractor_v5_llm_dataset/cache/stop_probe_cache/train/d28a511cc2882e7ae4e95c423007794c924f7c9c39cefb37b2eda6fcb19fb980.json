@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Pizza Hut",
+  "pred_answer": "Pizza Hut",
+  "normalized_gold": "pizza hut",
+  "normalized_pred": "pizza hut",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85a9845542991dd0999e81",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85a9845542991dd0999e81::Pizza Hut::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85a9845542991dd0999e81::Yum! Brands::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85a9845542991dd0999e81::Chefette::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85a9845542991dd0999e81::Pizza Hut",
+        "5a85a9845542991dd0999e81::Yum! Brands"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85a9845542991dd0999e81::Pizza Hut::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85a9845542991dd0999e81::Yum! Brands::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85a9845542991dd0999e81::Chefette::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85a9845542991dd0999e81::Chefette::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Chefette Restaurants is the largest fast food restaurant chain based in the Caribbean island nation of Barbados.\n[2] and formerly Tricon Global Restaurants, Inc., is an American fast food company.\n[3] Pizza Hut has over 15,000 locations worldwide as of 2015, and is a subsidiary of Yum!"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

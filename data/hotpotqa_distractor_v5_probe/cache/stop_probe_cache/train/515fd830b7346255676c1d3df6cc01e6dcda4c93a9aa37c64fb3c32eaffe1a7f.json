@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Chiang Chieh-shih",
+  "pred_answer": "Chiang Chieh-shih",
+  "normalized_gold": "chiang chieh-shih",
+  "normalized_pred": "chiang chieh-shih",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7fdc8d5542994857a76809",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7fdc8d5542994857a76809::Zhongshan Road (Taipei)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7fdc8d5542994857a76809::Fuxi::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7fdc8d5542994857a76809::Chiang Kai-shek::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7fdc8d5542994857a76809::New Jersey Route 3::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7fdc8d5542994857a76809::Zhongshan Road (Taipei)",
+        "5a7fdc8d5542994857a76809::Chiang Kai-shek"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7fdc8d5542994857a76809::Zhongshan Road (Taipei)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7fdc8d5542994857a76809::Fuxi::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7fdc8d5542994857a76809::Chiang Kai-shek::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7fdc8d5542994857a76809::New Jersey Route 3::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7fdc8d5542994857a76809::New Jersey Route 3::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A commuting route for northern New Jersey to the Lincoln Tunnel into New York City by way of Route 495, Route 3 also provides access to the Meadowlands Sports Complex in East Rutherford.\n[2] Chiang Kai-shek (October 31, 1887 – April 5, 1975), also romanized as Chiang Chieh-shih and known as Chiang Chungcheng, was a Chinese statesman, political and military leader who served as the leader of the Republic of China.\n[3] Fuxi ([fu˧˥ ɕi˥ ]; Chinese: 伏羲 ), also romanized as Fu-hsi, is a culture hero in Chinese legend and mythology, credited (along with his sister Nüwa) with creating humanity and the invention of hunting, fishing and cooking as well as the Cangjie system of writing Chinese characters c. 2,000 BCE.\n[4] Zhongshan is notable as the commuting route of former ROC president Chiang Kai-shek between the Presidential Building and his Shilin District residence."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

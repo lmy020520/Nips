@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Robin McKinley",
+  "pred_answer": "Robin McKinley",
+  "normalized_gold": "robin mckinley",
+  "normalized_pred": "robin mckinley",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1eb795542997283cd22eb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1eb795542997283cd22eb::Robin McKinley::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1eb795542997283cd22eb::The Outlaws of Sherwood::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1eb795542997283cd22eb::Richard North Patterson::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae1eb795542997283cd22eb::Exile (Patterson novel)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1eb795542997283cd22eb::Robin McKinley",
+        "5ae1eb795542997283cd22eb::Richard North Patterson"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1eb795542997283cd22eb::Robin McKinley::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1eb795542997283cd22eb::The Outlaws of Sherwood::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1eb795542997283cd22eb::Richard North Patterson::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae1eb795542997283cd22eb::Exile (Patterson novel)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1eb795542997283cd22eb::Exile (Patterson novel)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Exile is a political thriller by Richard North Patterson, published in 2007, which engages the Israeli-Palestinian conflict through a fictional trial for an accused Palestinian political assassin being defended by her former lover, a Jewish-American lawyer.\n[2] Richard North Patterson (born February 22, 1947 in Berkeley, California) is an American fiction writer, attorney and political commentator.\n[3] The story includes both the traditional Robin Hood characters — Little John, Much, Friar Tuck, Marian and Alan-a-dale — and characters of McKinley's own invention.\n[4] Jennifer Carolyn Robin McKinley (born November 16, 1952), known as Robin McKinley, is an American author of fantasy and children's books."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

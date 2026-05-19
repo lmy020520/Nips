@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "three",
+  "pred_answer": "three",
+  "normalized_gold": "three",
+  "normalized_pred": "three",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae736cb5542991bbc9761c2",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae736cb5542991bbc9761c2::USS Intrepid (CV-11)::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae736cb5542991bbc9761c2::USS Wasp (CV-18)::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae736cb5542991bbc9761c2::John Glenn::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae736cb5542991bbc9761c2::USS Randolph (CV-15)::4"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae736cb5542991bbc9761c2::USS Kearsarge (CV-33)::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae736cb5542991bbc9761c2::John Glenn",
+        "5ae736cb5542991bbc9761c2::USS Randolph (CV-15)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae736cb5542991bbc9761c2::USS Intrepid (CV-11)::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae736cb5542991bbc9761c2::USS Wasp (CV-18)::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae736cb5542991bbc9761c2::John Glenn::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae736cb5542991bbc9761c2::USS Randolph (CV-15)::4",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae736cb5542991bbc9761c2::USS Kearsarge (CV-33)::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae736cb5542991bbc9761c2::USS Kearsarge (CV-33)::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] \"Kearsarge\" was the recovery ship for the last two manned Project Mercury space missions in 1962–1963.\n[2] In the early 1960s she served as the recovery ship for two Project Mercury space missions, including John Glenn's historic first orbital flight.\n[3] In 1962 he became the first American to orbit the Earth, circling it three times.\n[4] She played a prominent role in the manned space program, serving as the recovery ship for five missions: Gemini IV, Gemini VI, Gemini VII, Gemini IX and Gemini XII."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Miss Teen USA",
+  "pred_answer": "Miss Teen USA",
+  "normalized_gold": "miss teen usa",
+  "normalized_pred": "miss teen usa",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae65e115542996d980e7b1a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae65e115542996d980e7b1a::Bridgette Wilson::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae65e115542996d980e7b1a::Mortal Kombat: Annihilation::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae65e115542996d980e7b1a::Mortal Kombat (film)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae65e115542996d980e7b1a::Mortal Kombat: Defenders of the Realm::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae65e115542996d980e7b1a::Bridgette Wilson",
+        "5ae65e115542996d980e7b1a::Mortal Kombat (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae65e115542996d980e7b1a::Bridgette Wilson::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae65e115542996d980e7b1a::Mortal Kombat: Annihilation::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae65e115542996d980e7b1a::Mortal Kombat (film)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae65e115542996d980e7b1a::Mortal Kombat: Defenders of the Realm::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae65e115542996d980e7b1a::Mortal Kombat: Defenders of the Realm::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Mortal Kombat: Defenders of the Realm (known as Mortal Kombat: The Animated Series outside of the U.S.) is a cartoon series based on the popular \"Mortal Kombat\" video game series.\n[2] It is a loose adaptation of the early entries in the fighting game series \"Mortal Kombat\".\n[3] The storyline was largely an adaptation of \"Mortal Kombat 3\", following a band of warriors as they attempt to save Earth from the evil Shao Kahn.\n[4] Wilson began her career as an actress after being crowned Miss Teen USA in 1990, playing the character of Lisa Fenimore on the soap opera \"Santa Barbara\" from April 1992 to January 1993."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

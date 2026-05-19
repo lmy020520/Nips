@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "English singer",
+  "pred_answer": "English singer",
+  "normalized_gold": "english singer",
+  "normalized_pred": "english singer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7cbfca554299683c1c6363",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7cbfca554299683c1c6363::David Gilmour (album)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7cbfca554299683c1c6363::David Gilmour in Concert::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7cbfca554299683c1c6363::Roger Daltrey::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7cbfca554299683c1c6363::David Gilmour::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7cbfca554299683c1c6363::David Gilmour Live 1984::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7cbfca554299683c1c6363::Roger Daltrey",
+        "5a7cbfca554299683c1c6363::David Gilmour"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7cbfca554299683c1c6363::David Gilmour (album)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7cbfca554299683c1c6363::David Gilmour in Concert::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7cbfca554299683c1c6363::Roger Daltrey::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7cbfca554299683c1c6363::David Gilmour::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7cbfca554299683c1c6363::David Gilmour Live 1984::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7cbfca554299683c1c6363::David Gilmour Live 1984::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Pink Floyd's David Gilmour or simply David Gilmour is a film by David Gilmour from his 1984 tour from the album \"About Face\" for Europe.\n[2] David Jon Gilmour, {'1': \", '2': \", '3': \", '4': \"} (born 6 March 1946) is an English guitarist, singer and songwriter best known as a longtime member of the progressive rock band Pink Floyd.\n[3] Roger Harry Daltrey, {'1': \", '2': \", '3': \", '4': \"} (born 1 March 1944) is an English singer and actor.\n[4] David Gilmour in Concert is a DVD of Pink Floyd guitarist David Gilmour's solo concert at the Royal Festival Hall, London in June 2001, as part of the Robert Wyatt-curated Meltdown festival."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

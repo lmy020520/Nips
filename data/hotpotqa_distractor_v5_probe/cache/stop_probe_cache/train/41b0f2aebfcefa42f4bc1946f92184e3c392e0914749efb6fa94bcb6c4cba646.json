@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Taylor Cole",
+  "pred_answer": "Taylor Cole",
+  "normalized_gold": "taylor cole",
+  "normalized_pred": "taylor cole",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a797b225542994bb9457015",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a797b225542994bb9457015::12 Rounds::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a797b225542994bb9457015::Taylor Cole::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a797b225542994bb9457015::12 Rounds (film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a797b225542994bb9457015::12 Rounds 2: Reloaded::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a797b225542994bb9457015::Taylor Cole",
+        "5a797b225542994bb9457015::12 Rounds (film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a797b225542994bb9457015::12 Rounds::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a797b225542994bb9457015::Taylor Cole::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a797b225542994bb9457015::12 Rounds (film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a797b225542994bb9457015::12 Rounds 2: Reloaded::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a797b225542994bb9457015::12 Rounds 2: Reloaded::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] 12 Rounds 2: Reloaded (also known as 12 Rounds 2 and 12 Rounds: Reloaded) is a 2013 American action film directed by Roel Reiné and produced by WWE Studios.\n[2] 12 Rounds is a 2009 American action film directed by Renny Harlin and produced by WWE Studios.\n[3] Taylor Cole (born April 29, 1984 ) is an American actress and former fashion model.\n[4] 12 Rounds played the Reading Festival in 1996."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

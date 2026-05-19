@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the Mediterranean Sea",
+  "pred_answer": "the Mediterranean Sea",
+  "normalized_gold": "the mediterranean sea",
+  "normalized_pred": "the mediterranean sea",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a90959d5542995651fb519f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a90959d5542995651fb519f::Acre, Israel::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a90959d5542995651fb519f::Ibrahim Hussein (runner)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a90959d5542995651fb519f::Ibrahim Hazimeh::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a90959d5542995651fb519f::Upper Lonsdale::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a90959d5542995651fb519f::Acre, Israel",
+        "5a90959d5542995651fb519f::Ibrahim Hazimeh"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a90959d5542995651fb519f::Acre, Israel::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a90959d5542995651fb519f::Ibrahim Hussein (runner)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a90959d5542995651fb519f::Ibrahim Hazimeh::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a90959d5542995651fb519f::Upper Lonsdale::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a90959d5542995651fb519f::Upper Lonsdale::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Upper Lonsdale is a suburban area in both the City and District of North Vancouver.\n[2] Ibrahim Hazimeh (born 1933 in Acco, Palestine) is a Palestinian artist.\n[3] Ibrahim Kipkemboi Hussein (born June 1958 in Kapsabet, Rift Valley) is a retired long-distance runner from Kenya, who was a three-time winner of the Boston Marathon in 1988, 1991, and 1992.\n[4] The city occupies an important location, as it sits on the coast of the Mediterranean Sea, traditionally linking the waterways and commercial activity with the Levant."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

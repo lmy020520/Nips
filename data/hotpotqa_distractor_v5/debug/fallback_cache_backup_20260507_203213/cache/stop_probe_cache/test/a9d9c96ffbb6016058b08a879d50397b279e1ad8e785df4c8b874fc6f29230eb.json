@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Eli Manning",
+  "pred_answer": "Eli Manning",
+  "normalized_gold": "eli manning",
+  "normalized_pred": "eli manning",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5da8d55429929b08079d1",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5da8d55429929b08079d1::1997 Tennessee Volunteers football team::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5da8d55429929b08079d1::Shane Bannon::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5da8d55429929b08079d1::Manning Field at John L. Guidry Stadium::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae5da8d55429929b08079d1::Eli Manning::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae5da8d55429929b08079d1::Philip Rivers::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5da8d55429929b08079d1::Manning Field at John L. Guidry Stadium",
+        "5ae5da8d55429929b08079d1::Eli Manning"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5da8d55429929b08079d1::1997 Tennessee Volunteers football team::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5da8d55429929b08079d1::Shane Bannon::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5da8d55429929b08079d1::Manning Field at John L. Guidry Stadium::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae5da8d55429929b08079d1::Eli Manning::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae5da8d55429929b08079d1::Philip Rivers::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5da8d55429929b08079d1::Philip Rivers::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He played college football at North Carolina State University, and was drafted in the first round of the 2004 NFL Draft with the fourth overall pick by the New York Giants, who traded him to the Chargers for their first overall pick, quarterback Eli Manning.\n[2] He was drafted as the first overall pick in the 2004 NFL Draft by the San Diego Chargers and was immediately traded to the Giants who in return gave up a package, highlighted by fourth overall selection Philip Rivers.\n[3] The playing surface is named Manning Field after the Manning family because Peyton Manning, Eli Manning and Archie Manning hold the Manning Passing Academy football camp at the facility.\n[4] Bannon is the first Yale Football player to be drafted by an NFL team since the Tampa Bay Buccaneers drafted tight end Nate Lawrie in the sixth round (181st pick overall) of the 2004 NFL Draft."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

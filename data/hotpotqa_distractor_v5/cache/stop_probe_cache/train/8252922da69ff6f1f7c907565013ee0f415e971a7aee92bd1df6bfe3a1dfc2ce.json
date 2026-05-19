@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Roy Sætre Khantatat",
+  "pred_answer": "Roy Sætre Khantatat",
+  "normalized_gold": "roy sætre khantatat",
+  "normalized_pred": "roy sætre khantatat",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79ce3a554299148911fa5c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79ce3a554299148911fa5c::Roy Khan::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79ce3a554299148911fa5c::Feels Like Heaven (Reigan Derry song)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79ce3a554299148911fa5c::Jon Hume::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a79ce3a554299148911fa5c::Roy Khan::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79ce3a554299148911fa5c::Roy Khan",
+        "5a79ce3a554299148911fa5c::Jon Hume"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79ce3a554299148911fa5c::Roy Khan::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79ce3a554299148911fa5c::Feels Like Heaven (Reigan Derry song)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79ce3a554299148911fa5c::Jon Hume::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a79ce3a554299148911fa5c::Roy Khan::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a79ce3a554299148911fa5c::Roy Khan::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Roy Sætre Khantatat (born March 12, 1970), is a Norwegian singer-songwriter.\n[2] Jon Hume (born 6 November 1983) is the lead singer of Evermore.\n[3] It was written by Derry, Jon Hume, Hayley Warner and Phil Barton.\n[4] Commonly known as Roy Khan or simply Khan, he was the lead vocalist for the symphonic power metal band Kamelot from 1997 to his departure in 2011."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

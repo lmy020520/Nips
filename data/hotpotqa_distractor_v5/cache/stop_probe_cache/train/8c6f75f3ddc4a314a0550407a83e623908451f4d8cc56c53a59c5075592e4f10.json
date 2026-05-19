@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Red Headed Stranger",
+  "pred_answer": "Red Headed Stranger",
+  "normalized_gold": "red headed stranger",
+  "normalized_pred": "red headed stranger",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab860535542992aa3b8c8cd",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab860535542992aa3b8c8cd::Red Headed Stranger::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab860535542992aa3b8c8cd::Revolutions of Time...The Journey 1975/1993::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab860535542992aa3b8c8cd::Yesterday's Wine::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab860535542992aa3b8c8cd::Red Headed Stranger",
+        "5ab860535542992aa3b8c8cd::Revolutions of Time...The Journey 1975/1993"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab860535542992aa3b8c8cd::Red Headed Stranger::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab860535542992aa3b8c8cd::Revolutions of Time...The Journey 1975/1993::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab860535542992aa3b8c8cd::Yesterday's Wine::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab860535542992aa3b8c8cd::Yesterday's Wine::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Yesterday's Wine is the thirteenth studio album and a concept album by country singer Willie Nelson.\n[2] Revolutions of Time...The Journey 1975/1993 is a three-disc box set by country singer Willie Nelson, released on November 14, 1995.\n[3] Red Headed Stranger is the eighteenth studio album by American outlaw country singer Willie Nelson."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

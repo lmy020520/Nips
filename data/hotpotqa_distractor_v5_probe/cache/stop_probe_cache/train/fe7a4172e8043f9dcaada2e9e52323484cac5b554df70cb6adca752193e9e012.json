@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "public",
+  "pred_answer": "public",
+  "normalized_gold": "public",
+  "normalized_pred": "public",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac426b4554299204fd21efe",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac426b4554299204fd21efe::San Angelo Regional Airport::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac426b4554299204fd21efe::KLST::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac426b4554299204fd21efe::Fairbanks International Airport::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac426b4554299204fd21efe::Pensacola International Airport::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac426b4554299204fd21efe::San Angelo Regional Airport",
+        "5ac426b4554299204fd21efe::Fairbanks International Airport"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac426b4554299204fd21efe::San Angelo Regional Airport::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac426b4554299204fd21efe::KLST::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac426b4554299204fd21efe::Fairbanks International Airport::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac426b4554299204fd21efe::Pensacola International Airport::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac426b4554299204fd21efe::Pensacola International Airport::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Pensacola International Airport (IATA: PNS, ICAO: KPNS, FAA LID: PNS) , formerly Pensacola Gulf Coast Regional Airport and Pensacola Regional Airport (Hagler Field), is a public use airport three nautical miles (6 km) northeast of the central business district of Pensacola, in Escambia County, Florida, United States.\n[2] Fairbanks International Airport (IATA: FAI, ICAO: PAFA, FAA LID: FAI) is a state-owned public-use airport located three miles (5 km) southwest of the central business district of Fairbanks, a city in the Fairbanks North Star Borough of the United States state of Alaska.\n[3] The two stations share studios located on Armstrong Street in San Angelo and its transmitter is located near Eola.\n[4] San Angelo Regional Airport (IATA: SJT, ICAO: KSJT, FAA LID: SJT) , also known as Mathis Field, is a public airport serving the city of San Angelo, in Tom Green County, Texas, USA."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

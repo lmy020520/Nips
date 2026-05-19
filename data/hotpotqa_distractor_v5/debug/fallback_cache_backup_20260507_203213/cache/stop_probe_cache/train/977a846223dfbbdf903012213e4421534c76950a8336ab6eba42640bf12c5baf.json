@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Because the Night",
+  "pred_answer": "Because the Night",
+  "normalized_gold": "because the night",
+  "normalized_pred": "because the night",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a73a5d955429978a71e9060",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a73a5d955429978a71e9060::Because the Night::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a73a5d955429978a71e9060::The Promised Land (Bruce Springsteen song)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a73a5d955429978a71e9060::MTV Unplugged (10,000 Maniacs album)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a73a5d955429978a71e9060::MTV Unplugged (Mariah Carey EP)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a73a5d955429978a71e9060::Because the Night",
+        "5a73a5d955429978a71e9060::MTV Unplugged (10,000 Maniacs album)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a73a5d955429978a71e9060::Because the Night::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a73a5d955429978a71e9060::The Promised Land (Bruce Springsteen song)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a73a5d955429978a71e9060::MTV Unplugged (10,000 Maniacs album)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a73a5d955429978a71e9060::MTV Unplugged (Mariah Carey EP)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a73a5d955429978a71e9060::MTV Unplugged (Mariah Carey EP)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] MTV Unplugged is a live EP by American singer and songwriter Mariah Carey, released in the United States on June 2, 1992 by Columbia Records.\n[2] MTV Unplugged is a 1993 live album by 10,000 Maniacs, recorded for the \"MTV Unplugged\" series.\n[3] \"The Promised Land\" is a song by Bruce Springsteen from his 1978 album \"Darkness on the Edge of Town\".\n[4] \"Because the Night\" is a song written by Bruce Springsteen and Patti Smith that was first released in 1978 as a single off the Patti Smith Group album \"Easter\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

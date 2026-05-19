@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Baltimore Convention Center",
+  "pred_answer": "Baltimore Convention Center",
+  "normalized_gold": "baltimore convention center",
+  "normalized_pred": "baltimore convention center",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7be385542993667793ffa",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7be385542993667793ffa::2015–16 Baltimore Blast season::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7be385542993667793ffa::Minneapolis Convention Center::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7be385542993667793ffa::Royal Farms Arena::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab7be385542993667793ffa::Hotel Charbonneau::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7be385542993667793ffa::2015–16 Baltimore Blast season",
+        "5ab7be385542993667793ffa::Royal Farms Arena"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7be385542993667793ffa::2015–16 Baltimore Blast season::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7be385542993667793ffa::Minneapolis Convention Center::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7be385542993667793ffa::Royal Farms Arena::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab7be385542993667793ffa::Hotel Charbonneau::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7be385542993667793ffa::Hotel Charbonneau::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] During the first half of the 20th century, Priest River and the Hotel Charbonneau, which is located one block away from where the train station used to be, was a popular stopping-off point for people traveling to nearby Spokane, Coeur d'Alene, Sandpoint, and Priest Lake.\n[2] The arena is located about a block away from the Baltimore Convention Center on the corner of Baltimore Street and Hopkins Place; it is also only a short distance from the Inner Harbor.\n[3] It is located one block away from Nicollet Mall near Orchestra Hall.\n[4] The Blast, an Eastern Division team in the Major Arena Soccer League, play their home games at Royal Farms Arena in downtown Baltimore, Maryland."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1992",
+  "pred_answer": "1992",
+  "normalized_gold": "1992",
+  "normalized_pred": "1992",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae11e3a5542997b2ef7d0d9",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae11e3a5542997b2ef7d0d9::Sealand Road::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae11e3a5542997b2ef7d0d9::Deva Stadium::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae11e3a5542997b2ef7d0d9::Sealand Road::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae11e3a5542997b2ef7d0d9::Sealand Road",
+        "5ae11e3a5542997b2ef7d0d9::Deva Stadium"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae11e3a5542997b2ef7d0d9::Sealand Road::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae11e3a5542997b2ef7d0d9::Deva Stadium::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae11e3a5542997b2ef7d0d9::Sealand Road::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae11e3a5542997b2ef7d0d9::Sealand Road::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It was much-loved by supporters of Chester, who followed their team there for 84 years, and after its closure spent an hour making the journey across Cheshire to watch their team play games at Macclesfield Town's Moss Rose ground for two years before the completion of the Deva Stadium in 1992.\n[2] The Deva Stadium (also currently known as the \"Lookers Vauxhall Stadium\" due to sponsorship reasons) is an association football stadium in the United Kingdom, that is the home of Chester F.C., the effective successor club to the liquidated Chester City F.C. The name \"Deva\" comes from the original Roman name for the fort \"Deva Victrix\", which became the city of Chester, in North West England.\n[3] Sealand Road was the home stadium of Chester City Football Club (until 1983 known as Chester Football Club) from 1906 until 1990."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "four",
+  "pred_answer": "four",
+  "normalized_gold": "four",
+  "normalized_pred": "four",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "The evidence supports both hops: (1) the 2009 U.S. Open was held on Long Island, and (2) Long Island comprises four counties.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "The evidence supports both hops: (1) the 2009 U.S. Open was held on Long Island, and (2) Long Island comprises four counties.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f4966554299458435d59c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f4966554299458435d59c::2009 U.S. Open (golf)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f4966554299458435d59c::2002 U.S. Open (golf)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f4966554299458435d59c::Long Island::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8f4966554299458435d59c::2009 U.S. Open (golf)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8f4966554299458435d59c::2003 U.S. Open (golf)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f4966554299458435d59c::2009 U.S. Open (golf)::0",
+        "5a8f4966554299458435d59c::Long Island",
+        "5a8f4966554299458435d59c::2009 U.S. Open (golf)"
+      ],
+      "k_br": 2.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f4966554299458435d59c::2009 U.S. Open (golf)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f4966554299458435d59c::2002 U.S. Open (golf)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f4966554299458435d59c::Long Island::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8f4966554299458435d59c::2009 U.S. Open (golf)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8f4966554299458435d59c::2003 U.S. Open (golf)::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f4966554299458435d59c::2003 U.S. Open (golf)::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Jim Furyk won his only major championship, three shots ahead of runner-up Stephen Leaney.\n[2] Lucas Glover won his only major title, two strokes ahead of runners-up Ricky Barnes, David Duval, and Phil Mickelson.\n[3] The island comprises four counties in the U.S. state of New York: Kings and Queens (which comprise the New York City boroughs of Brooklyn and Queens, respective\n[4] The 2002 United States Open Championship was the 102nd U.S. Open, held June 13–16 at the Black Course of Bethpage State Park in Farmingdale, New York, east of N"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

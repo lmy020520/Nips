@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "E pluribus unum",
+  "pred_answer": "E pluribus unum",
+  "normalized_gold": "e pluribus unum",
+  "normalized_pred": "e pluribus unum",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a9098b95542995651fb51ac",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a9098b95542995651fb51ac::Deus seja louvado::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a9098b95542995651fb51ac::Semper Gumby::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a9098b95542995651fb51ac::In God We Trust::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a9098b95542995651fb51ac::Eletrobras::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a9098b95542995651fb51ac::Deus seja louvado",
+        "5a9098b95542995651fb51ac::In God We Trust"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a9098b95542995651fb51ac::Deus seja louvado::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a9098b95542995651fb51ac::Semper Gumby::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a9098b95542995651fb51ac::In God We Trust::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a9098b95542995651fb51ac::Eletrobras::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a9098b95542995651fb51ac::Eletrobras::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Brazilian federal government owns 52% stake in Eletrobras, rest of shares are traded on BM&F Bovespa.\n[2] It was adopted as the nation's motto in 1956 as an alternative or replacement to the unofficial motto of \"E pluribus unum\", which was adopted when the Great Seal of the United States was created and adopted in 1782.\n[3] Semper Gumby is an unofficial motto for the United States Marine Corps, United States Coast Guard, United States Public Health Service Commissioned Corps, Navy submariners, Navy Seabees, Army Unit Supply Specialists, and the Civil Air Patrol.\n[4] The Federal Government at the time got inspired by theist doctrines of other secular states such as the United States of America that were already using the motto \"In God We Trust\" in its dollar banknotes."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

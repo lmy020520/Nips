@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Basketball",
+  "pred_answer": "Basketball",
+  "normalized_gold": "basketball",
+  "normalized_pred": "basketball",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9d5665542994dbf019858",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9d5665542994dbf019858::Basketball at the 2014 Asian Games::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9d5665542994dbf019858::Wheelchair rugby at the 2014 Asian Para Games::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9d5665542994dbf019858::Samsan World Gymnasium::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab9d5665542994dbf019858::Cricket at the 2014 Asian Games::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9d5665542994dbf019858::Basketball at the 2014 Asian Games",
+        "5ab9d5665542994dbf019858::Samsan World Gymnasium"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9d5665542994dbf019858::Basketball at the 2014 Asian Games::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9d5665542994dbf019858::Wheelchair rugby at the 2014 Asian Para Games::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9d5665542994dbf019858::Samsan World Gymnasium::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab9d5665542994dbf019858::Cricket at the 2014 Asian Games::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9d5665542994dbf019858::Cricket at the 2014 Asian Games::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Cricket was one of the 36 sports at 2014 Asian Games held in Incheon, South Korea from 20 September – 3 October 2014.\n[2] It has hosted numerous international tournaments such as the 2014 World Wheelchair Basketball Championship and the basketball event of the 2014 Asian Games.\n[3] Wheelchair rugby was one of the 23 sports featured at the 2nd Asian Para Games 2014, which took place in Incheon, South Korea on October 16–24, 2014.\n[4] Basketball was one of the 36 sports featured at the 17th Asian Games 2014, which took place in Incheon, South Korea on September 20 – October 3, 2014."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

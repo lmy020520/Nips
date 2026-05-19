@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Dig It",
+  "pred_answer": "Dig It",
+  "normalized_gold": "dig it",
+  "normalized_pred": "dig it",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a80e3ec554299260e20a1a8",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a80e3ec554299260e20a1a8::Let It Be... Naked::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a80e3ec554299260e20a1a8::Dig It (Beatles song)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a80e3ec554299260e20a1a8::Let It Be... Naked::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a80e3ec554299260e20a1a8::Let It Be... Naked",
+        "5a80e3ec554299260e20a1a8::Dig It (Beatles song)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a80e3ec554299260e20a1a8::Let It Be... Naked::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a80e3ec554299260e20a1a8::Dig It (Beatles song)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a80e3ec554299260e20a1a8::Let It Be... Naked::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a80e3ec554299260e20a1a8::Let It Be... Naked::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] \"Naked\" also omits two minor tracks, \"Dig It\" and \"Maggie Mae\", replacing them with \"Don't Let Me Down\", originally featured only as the B-side of the \"Get Back\" single.\n[2] This song and the 39-second \"Maggie Mae\" appear on the \"Let It Be\" album, but are not included on the \"Let It Be... Naked\" album, instead being replaced with \"Don't Let Me Down\".\n[3] Let It Be... Naked is an alternative mix of the Beatles' 1970 album \"Let It Be\", released in 2003."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,85 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Ayumi Shinozaki",
+  "pred_answer": "Ayumi Shinozaki",
+  "normalized_gold": "ayumi shinozaki",
+  "normalized_pred": "ayumi shinozaki",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a8a7255429941d65f2696",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a8a7255429941d65f2696::Corpse Party::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a8a7255429941d65f2696::Hatoful Boyfriend::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a8a7255429941d65f2696::Asami Imai::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a8a7255429941d65f2696::derived::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a8a7255429941d65f2696::Corpse Party",
+        "5a7a8a7255429941d65f2696::Asami Imai"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a8a7255429941d65f2696::Corpse Party::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a8a7255429941d65f2696::Hatoful Boyfriend::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a8a7255429941d65f2696::Asami Imai::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a7a8a7255429941d65f2696::derived::2",
+          "added_step": 3
+        }
+      ],
+      "last_added_unit_id": "5a7a8a7255429941d65f2696::derived::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The first game in the series was developed using the RPG Maker software and released in 1996 for the PC-9801.\n[2] Asami Imai (今井 麻美 , Imai Asami , born May 16, 1977 in Tokyo) is a female Japanese voice actress and singer who affiliated with Early Wing.\n[3] It was developed by manga artist Hato Moa's dōjin circle PigeoNation Inc., and is the successor of a Flash game of the same name she created for April Fools' Day in 2011.\n[4] Corpse Party (コープスパーティー , Kōpusu Pātī ) is a survival horror, adventure, and dōjin soft video game series originally created by Makoto Kedōin and developed by Team GrisGris.\n\nNotes:\n[verification] Asami Imai voiced the character Ayumi Shinozaki in the Corpse Party series."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

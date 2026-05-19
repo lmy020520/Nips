@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "G20",
+  "pred_answer": "G20",
+  "normalized_gold": "g20",
+  "normalized_pred": "g20",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf388b5542993344016c41",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf388b5542993344016c41::G20::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf388b5542993344016c41::Financial Stability Forum::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf388b5542993344016c41::Australia–China relations::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf388b5542993344016c41::Argentina–Indonesia relations::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf388b5542993344016c41::G20",
+        "5adf388b5542993344016c41::Australia–China relations"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf388b5542993344016c41::G20::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf388b5542993344016c41::Financial Stability Forum::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf388b5542993344016c41::Australia–China relations::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf388b5542993344016c41::Argentina–Indonesia relations::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf388b5542993344016c41::Argentina–Indonesia relations::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Both countries are members of Group of 77, the G-20 major economies, the G20 developing nations, and Forum of East Asia-Latin America Cooperation.\n[2] Australia–China relations, often known as Sino–Australian relations, refers to the relations between the Commonwealth of Australia and China.\n[3] Its founding resulted from discussions among Finance Ministers and Central Bank Governors of the G7 countries, and a study which they commissioned.\n[4] The G20 (or G-20 or Group of Twenty) is an international forum for the governments and central bank governors from 20 major economies."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

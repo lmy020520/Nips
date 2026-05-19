@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "1846",
+  "pred_answer": "1846",
+  "normalized_gold": "1846",
+  "normalized_pred": "1846",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a808f8f5542996402f6a559",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a808f8f5542996402f6a559::Richard J. Berkley::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a808f8f5542996402f6a559::Mark Jackson (wide receiver)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a808f8f5542996402f6a559::Grinnell College::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a808f8f5542996402f6a559::Richard J. Berkley::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a808f8f5542996402f6a559::Richard J. Berkley",
+        "5a808f8f5542996402f6a559::Grinnell College"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a808f8f5542996402f6a559::Richard J. Berkley::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a808f8f5542996402f6a559::Mark Jackson (wide receiver)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a808f8f5542996402f6a559::Grinnell College::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a808f8f5542996402f6a559::Richard J. Berkley::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a808f8f5542996402f6a559::Richard J. Berkley::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Richard Jackson Berkley was born in January 20, 1928, in Marshalltown, Iowa.\n[2] It was founded in 1846, when a group of New England Congregationalists established the Trustees of Iowa College.\n[3] Jackson attended high school at Terre Haute South Vigo High School and Alton Senior High School.\n[4] Berkley completed high school in Marshalltown and then attended Grinnell College in Grinnell, Iowa, where he studied mathematics and statistics."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

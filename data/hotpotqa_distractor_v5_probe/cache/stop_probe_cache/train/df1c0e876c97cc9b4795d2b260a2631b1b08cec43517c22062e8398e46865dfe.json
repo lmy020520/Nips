@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fawad Alam",
+  "pred_answer": "Fawad Alam",
+  "normalized_gold": "fawad alam",
+  "normalized_pred": "fawad alam",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc82b0554299658360045d",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc82b0554299658360045d::Hamza Tariq::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc82b0554299658360045d::Jamie Atkinson::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc82b0554299658360045d::Tariq Alam::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abc82b0554299658360045d::Fawad Alam::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abc82b0554299658360045d::Syed Mumtaz Alam Gillani::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc82b0554299658360045d::Tariq Alam",
+        "5abc82b0554299658360045d::Fawad Alam"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc82b0554299658360045d::Hamza Tariq::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc82b0554299658360045d::Jamie Atkinson::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc82b0554299658360045d::Tariq Alam::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abc82b0554299658360045d::Fawad Alam::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abc82b0554299658360045d::Syed Mumtaz Alam Gillani::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc82b0554299658360045d::Syed Mumtaz Alam Gillani::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Syed Mumtaz Alam Gillani (also spelled \"Gilani\" and \"Geelani\") (born 20 January 1940) is a Pakistani lawyer and former federal minister of Human Rights, a new portfolio, the Ministry of Human Rights which was carved out of the ministry of law and justice.\n[2] Fawad Alam (Urdu: فواد عالم, born 8 October 1985) is a Pakistani cricketer.\n[3] His son Fawad Alam, is a Test and ODI cricketer for Pakistan.\n[4] James John Atkinson (born 24 August 1990 in Hong Kong) is an international cricketer who plays cricket for Hong Kong."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "composer",
+  "pred_answer": "composer",
+  "normalized_gold": "composer",
+  "normalized_pred": "composer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac272f05542992f1f2b38d2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac272f05542992f1f2b38d2::Violin Sonatina (Dvořák)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac272f05542992f1f2b38d2::Giacomo Puccini::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac272f05542992f1f2b38d2::Antonín Dvořák::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac272f05542992f1f2b38d2::Moravian Duets::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac272f05542992f1f2b38d2::Giacomo Puccini",
+        "5ac272f05542992f1f2b38d2::Antonín Dvořák"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac272f05542992f1f2b38d2::Violin Sonatina (Dvořák)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac272f05542992f1f2b38d2::Giacomo Puccini::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac272f05542992f1f2b38d2::Antonín Dvořák::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac272f05542992f1f2b38d2::Moravian Duets::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac272f05542992f1f2b38d2::Moravian Duets::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Moravian Duets (in Czech: \"Moravské dvojzpěvy\" ) by Antonín Dvořák is a cycle of 23 Moravian folk poetry settings for two voices with piano accompaniment, composed between 1875 and 1881.\n[2] Antonín Leopold Dvořák ( ; ] ; 8 September 1841 – 1 May 1904) was a Czech composer.\n[3] Giacomo Antonio Domenico Michele Secondo Maria Puccini (] ; 22 December 1858 29 November 1924) was an Italian opera composer who has been called \"the greatest composer of Italian opera after Verdi\".\n[4] 100, B. 183, was written by Antonín Dvořák between November 19 and December 3, 1893, in New York City."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

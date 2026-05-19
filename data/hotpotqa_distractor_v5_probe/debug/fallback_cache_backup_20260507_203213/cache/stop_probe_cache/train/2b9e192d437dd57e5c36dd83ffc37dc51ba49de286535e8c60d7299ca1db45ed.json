@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "February 23, 1979",
+  "pred_answer": "February 23, 1979",
+  "normalized_gold": "february 23 1979",
+  "normalized_pred": "february 23 1979",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae61ec75542995703ce8b12",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae61ec75542995703ce8b12::Losing Our Religion::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae61ec75542995703ce8b12::Rachael Kohn::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae61ec75542995703ce8b12::S. E. Cupp::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae61ec75542995703ce8b12::John Corrigan::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae61ec75542995703ce8b12::Losing Our Religion",
+        "5ae61ec75542995703ce8b12::S. E. Cupp"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae61ec75542995703ce8b12::Losing Our Religion::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae61ec75542995703ce8b12::Rachael Kohn::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae61ec75542995703ce8b12::S. E. Cupp::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae61ec75542995703ce8b12::John Corrigan::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae61ec75542995703ce8b12::John Corrigan::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] John Corrigan (born 1952) is an American religion scholar, known for being the author of a number of books on religion.\n[2] Sarah Elizabeth Cupp (born February 23, 1979) is an American conservative political commentator and writer.\n[3] Rachael Kohn (born 1953) is an Australian author and broadcaster who since 1992 has presented and produced programs on Religion and Spirituality for ABC Radio National, beginning with Religion Report, Religion Today, and since 1997, The Spirit of Things.\n[4] Losing Our Religion: The Liberal Media's Attack on Christianity (2010) is a book-length critique of media bias by author, journalist, and conservative political commentator S. E. Cupp."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

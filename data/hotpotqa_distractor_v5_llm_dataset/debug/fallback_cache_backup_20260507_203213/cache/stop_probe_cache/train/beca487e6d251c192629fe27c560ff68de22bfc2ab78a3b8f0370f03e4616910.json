@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "any sporting venue",
+  "pred_answer": "any sporting venue",
+  "normalized_gold": "any sporting venue",
+  "normalized_pred": "any sporting venue",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc3948554299700f9d782b",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc3948554299700f9d782b::Melbourne Cricket Ground::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc3948554299700f9d782b::2002 AFL Grand Final::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc3948554299700f9d782b::2016 AFL Grand Final::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc3948554299700f9d782b::Melbourne Cricket Ground",
+        "5abc3948554299700f9d782b::2002 AFL Grand Final"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc3948554299700f9d782b::Melbourne Cricket Ground::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc3948554299700f9d782b::2002 AFL Grand Final::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc3948554299700f9d782b::2016 AFL Grand Final::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc3948554299700f9d782b::2016 AFL Grand Final::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The 2016 AFL Grand Final was an Australian rules football match contested between the Sydney Swans and the Western Bulldogs .\n[2] The 2002 AFL Grand Final was an Australian rules football game contested between the Brisbane Lions and the Collingwood Football Club, held at the Melbourne Cricket Ground in Melbourne on 28 September 2002.\n[3] Home to the Melbourne Cricket Club, it is the 10th-largest stadium in the world, the largest in Australia, the largest in the Southern Hemisphere, the largest cricket ground by capacity, and has the tallest light towers of any sporting venue."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

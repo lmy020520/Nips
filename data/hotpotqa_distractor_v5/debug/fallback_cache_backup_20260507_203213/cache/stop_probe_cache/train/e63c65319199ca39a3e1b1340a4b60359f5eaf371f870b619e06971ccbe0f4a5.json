@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mohamed Sissoko",
+  "pred_answer": "Mohamed Sissoko",
+  "normalized_gold": "mohamed sissoko",
+  "normalized_pred": "mohamed sissoko",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5aba607555429901930fa79f",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5aba607555429901930fa79f::Manong::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5aba607555429901930fa79f::Sir Lionel::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5aba607555429901930fa79f::Oumar Sissoko::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5aba607555429901930fa79f::Mohamed Sissoko::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5aba607555429901930fa79f::Miray Daner::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5aba607555429901930fa79f::Oumar Sissoko",
+        "5aba607555429901930fa79f::Mohamed Sissoko"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5aba607555429901930fa79f::Manong::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5aba607555429901930fa79f::Sir Lionel::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5aba607555429901930fa79f::Oumar Sissoko::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5aba607555429901930fa79f::Mohamed Sissoko::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5aba607555429901930fa79f::Miray Daner::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5aba607555429901930fa79f::Miray Daner::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Miray Naz Daner (born 15 January 1999) is a Turkish actress.\n[2] Mohamed Lamine \"Momo\" Sissoko Gillan (born 22 January 1985) is a Malian footballer who plays as a defensive midfielder for Mitra Kukar in the Liga 1.\n[3] His cousin Mohamed Sissoko is also a professional footballer and was also capped for Mali.\n[4] He is a double cousin of Lancelot and cousin of Lancelot's younger half-brother Ector de Maris (not to be confused with the older Sir Ector, who was King Arthur's foster-father)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

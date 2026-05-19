@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Samuel Ray Delany",
+  "pred_answer": "Samuel Ray Delany",
+  "normalized_gold": "samuel ray delany",
+  "normalized_pred": "samuel ray delany",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5a18f55429960a22e0313",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5a18f55429960a22e0313::The Motion of Light in Water::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5a18f55429960a22e0313::Harlan Coben::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5a18f55429960a22e0313::Samuel R. Delany::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae5a18f55429960a22e0313::Aye, and Gomorrah::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5a18f55429960a22e0313::Harlan Coben",
+        "5ae5a18f55429960a22e0313::Samuel R. Delany"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5a18f55429960a22e0313::The Motion of Light in Water::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5a18f55429960a22e0313::Harlan Coben::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5a18f55429960a22e0313::Samuel R. Delany::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae5a18f55429960a22e0313::Aye, and Gomorrah::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5a18f55429960a22e0313::Aye, and Gomorrah::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Aye, and Gomorrah...\" is a science fiction short story by American writer Samuel R. Delany.\n[2] Samuel Ray Delany Jr. ( ; born April 1, 1942), Chip Delany to his friends, is an American author, professor and literary critic.\n[3] Harlan Coben (born January 4, 1962) is an American writer of mystery novels and thrillers.\n[4] The Motion of Light in Water: Sex and Science Fiction Writing in the East Village is an autobiography by science fiction author Samuel R. Delany in which he recounts his experiences as growing up a gay African American, as well as some of his time in an interracial and open marriage with Marilyn Hacker."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

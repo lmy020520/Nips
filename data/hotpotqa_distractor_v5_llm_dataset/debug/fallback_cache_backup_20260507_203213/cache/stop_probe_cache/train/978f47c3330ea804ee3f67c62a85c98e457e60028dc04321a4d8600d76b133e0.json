@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "locations",
+  "pred_answer": "locations",
+  "normalized_gold": "locations",
+  "normalized_pred": "locations",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7fd835542994a481bbe64",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7fd835542994a481bbe64::PRR MP70::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7fd835542994a481bbe64::Pennsylvania Railroad 4935::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7fd835542994a481bbe64::Railroad Museum of Long Island::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae7fd835542994a481bbe64::Alpine Spaniel::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7fd835542994a481bbe64::PRR MP70",
+        "5ae7fd835542994a481bbe64::Railroad Museum of Long Island"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7fd835542994a481bbe64::PRR MP70::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7fd835542994a481bbe64::Pennsylvania Railroad 4935::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7fd835542994a481bbe64::Railroad Museum of Long Island::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae7fd835542994a481bbe64::Alpine Spaniel::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7fd835542994a481bbe64::Alpine Spaniel::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Evidence held at the Natural History Museum in Bern show that two distinct breeds of dog were being used in the area during this time period.\n[2] It has two locations, a main location in Riverhead, and a satellite location in Greenport, west of the North Ferry to Shelter Island.\n[3] It is one of 15 remaining PRR GG1 locomotives, and one of two (along with PRR 4800) at the Railroad Museum of Pennsylvania.\n[4] A single example is preserved at the Railroad Museum of Long Island."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

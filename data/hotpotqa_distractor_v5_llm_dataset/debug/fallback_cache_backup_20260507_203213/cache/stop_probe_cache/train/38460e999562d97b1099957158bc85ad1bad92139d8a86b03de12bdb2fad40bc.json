@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Dawn of the Planet of the Apes",
+  "pred_answer": "Dawn of the Planet of the Apes",
+  "normalized_gold": "dawn of the planet of the apes",
+  "normalized_pred": "dawn of the planet of the apes",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5e49f55429929b08079f8",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5e49f55429929b08079f8::Dawn of the Planet of the Apes::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5e49f55429929b08079f8::War for the Planet of the Apes::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5e49f55429929b08079f8::Matt Reeves::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5e49f55429929b08079f8::Dawn of the Planet of the Apes",
+        "5ae5e49f55429929b08079f8::War for the Planet of the Apes"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5e49f55429929b08079f8::Dawn of the Planet of the Apes::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5e49f55429929b08079f8::War for the Planet of the Apes::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5e49f55429929b08079f8::Matt Reeves::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5e49f55429929b08079f8::Matt Reeves::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Reeves has since directed the found-footage horror film \"Cloverfield\" (2008), the romantic horror film \"Let Me In\" (2010), and the science fiction sequels \"Dawn of the Planet of the Apes\" (2014) and \"War for the Planet of the Apes\" (2017).\n[2] War for the Planet of the Apes is a 2017 American science fiction film directed by Matt Reeves and written by Mark Bomback and Reeves.\n[3] Dawn of the Planet of the Apes is a 2014 American science fiction film directed by Matt Reeves and written by Mark Bomback, Rick Jaffa and Amanda Silver."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

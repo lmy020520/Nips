@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1937",
+  "pred_answer": "1937",
+  "normalized_gold": "1937",
+  "normalized_pred": "1937",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9adfc5542996be2020585",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9adfc5542996be2020585::Tauriel::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9adfc5542996be2020585::Atticus Finch::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9adfc5542996be2020585::The Hobbit (film series)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab9adfc5542996be2020585::The Hobbit: The Battle of the Five Armies::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9adfc5542996be2020585::Tauriel",
+        "5ab9adfc5542996be2020585::The Hobbit (film series)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9adfc5542996be2020585::Tauriel::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9adfc5542996be2020585::Atticus Finch::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9adfc5542996be2020585::The Hobbit (film series)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab9adfc5542996be2020585::The Hobbit: The Battle of the Five Armies::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9adfc5542996be2020585::The Hobbit: The Battle of the Five Armies::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is the third and final installment in Peter Jackson's three-part film adaptation based on the novel \"The Hobbit\" by J. R. R. Tolkien, following \"\" (2012) and \"\" (2013), and together they act as a prequel to Jackson's \"The Lord of the Rings\" film trilogy.\n[2] They are based on the 1937 novel \"The Hobbit\" by J. R. R. Tolkien, with large portions of the trilogy inspired by the appendices to \"The Return of the King\", which expand on the story told in \"The Hobbit\", as well as new material and characters written especially for the films.\n[3] Atticus Finch is a fictional character in author Harper Lee's Pulitzer Prize winning novel of 1960, \"To Kill a Mockingbird\".\n[4] Tauriel is a fictional character from Peter Jackson's feature film adaptation of J.R.R. Tolkien's \"The Hobbit\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Femmes d’Aujourd’hui",
+  "pred_answer": "Femmes d’Aujourd’hui",
+  "normalized_gold": "femmes daujourdhui",
+  "normalized_pred": "femmes daujourdhui",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7133b65542994082a3e65f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7133b65542994082a3e65f::Femmes d'aujourd'hui::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7133b65542994082a3e65f::Femmes d’Aujourd’hui::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7133b65542994082a3e65f::Janus (science fiction magazine)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7133b65542994082a3e65f::Ornament and Crime::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7133b65542994082a3e65f::Femmes d’Aujourd’hui",
+        "5a7133b65542994082a3e65f::Janus (science fiction magazine)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7133b65542994082a3e65f::Femmes d'aujourd'hui::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7133b65542994082a3e65f::Femmes d’Aujourd’hui::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7133b65542994082a3e65f::Janus (science fiction magazine)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7133b65542994082a3e65f::Ornament and Crime::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7133b65542994082a3e65f::Ornament and Crime::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Ornament and Crime was an essay and a lecture by modernist architect Adolf Loos, that criticizes ornament in art, first given on 21 January 1908 in Vienna and first published in \"Cahiers d'aujourd'hui\" (issue 5 of 1910) under the German title \"Ornament und Verbrechen\".\n[2] Janus was a feminist science fiction fanzine edited by Janice Bogstad and Jeanne Gomoll in Madison, Wisconsin, and closely associated with that city's science fiction convention, WisCon (Several early WisCon program books doubled as special issues of \"Janus\".)\n[3] Femmes d’Aujourd’hui (meaning \"Women of Today\" in English) is a French language weekly women's magazine published in Mechelen, Belgium.\n[4] Femmes d'aujourd'hui is the second studio album by Jeanne Mas, released in April 1986 by Pathé Marconi."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Keith Partridge",
+  "pred_answer": "Keith Partridge",
+  "normalized_gold": "keith partridge",
+  "normalized_pred": "keith partridge",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae6096555429929b0807a98",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae6096555429929b0807a98::Simon Turner (album)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae6096555429929b0807a98::David Cassidy::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae6096555429929b0807a98::Get Lucky (Jermaine Stewart song)::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae6096555429929b0807a98::Simon Turner (album)",
+        "5ae6096555429929b0807a98::David Cassidy"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae6096555429929b0807a98::Simon Turner (album)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae6096555429929b0807a98::David Cassidy::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae6096555429929b0807a98::Get Lucky (Jermaine Stewart song)::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae6096555429929b0807a98::Get Lucky (Jermaine Stewart song)::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Climie is a songwriter and the former lead singer of the 1980s, UK pop duo, Climie Fisher, but is now more well known for his work as a collaborator with Eric Clapton.\n[2] He is known for his role as Keith Partridge, the son of Shirley Partridge (played by his stepmother Shirley Jones), in the 1970s musical-sitcom \"The Partridge Family\", which led to his becoming one of popular culture's teen idols and pop singers of the 1970s.\n[3] At the time Turner was being widely promoted in the UK pop press as a homegrown alternative to David Cassidy."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Brother's Keeper",
+  "pred_answer": "Brother's Keeper",
+  "normalized_gold": "brothers keeper",
+  "normalized_pred": "brothers keeper",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7f14f555429934daa2fcc5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7f14f555429934daa2fcc5::Koi Kei Bakery::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7f14f555429934daa2fcc5::Eternal Happiness::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7f14f555429934daa2fcc5::Brother's Keeper (2013 TV series)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7f14f555429934daa2fcc5::Slow Boat Home::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7f14f555429934daa2fcc5::Koi Kei Bakery",
+        "5a7f14f555429934daa2fcc5::Brother's Keeper (2013 TV series)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7f14f555429934daa2fcc5::Koi Kei Bakery::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7f14f555429934daa2fcc5::Eternal Happiness::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7f14f555429934daa2fcc5::Brother's Keeper (2013 TV series)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7f14f555429934daa2fcc5::Slow Boat Home::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7f14f555429934daa2fcc5::Slow Boat Home::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Slow Boat Home (Chinese: 情越海岸線; literally \"love exceeds the coastline\") is a 2013 Hong Kong romantic comedy television drama produced by Leung Choi-yuen and TVB, starring Raymond Wong Ho-yin, Ruco Chan and Aimee Chan.\n[2] Brother's Keeper (Chinese: 巨輪; literally \"big wheel\") is a Hong Kong television drama serial produced by Amy Wong and TVB.\n[3] Eternal Happiness (Traditional Chinese: ; literally \"Reincarnated Fate\") is a 2002 TVB television drama from Hong Kong based on a short story of the same name by Qing dynasty novelist Chen Duansheng.\n[4] Koi Kei was founded by Leoung Chan-Kuong, an immigrant from Foshan, China, who initially started selling peanut brittle and ginger candy on a pushcart in Macau."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

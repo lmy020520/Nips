@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Eastbound & Down",
+  "pred_answer": "Eastbound & Down",
+  "normalized_gold": "eastbound & down",
+  "normalized_pred": "eastbound & down",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7cdeaa554299683c1c63ae",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7cdeaa554299683c1c63ae::Elizabeth De Razzo::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7cdeaa554299683c1c63ae::Santo, Sam and Ed’s Total Football::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7cdeaa554299683c1c63ae::Eastbound &amp; Down::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7cdeaa554299683c1c63ae::Santo, Sam and Ed's Cup Fever!::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7cdeaa554299683c1c63ae::Elizabeth De Razzo",
+        "5a7cdeaa554299683c1c63ae::Eastbound &amp; Down"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7cdeaa554299683c1c63ae::Elizabeth De Razzo::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7cdeaa554299683c1c63ae::Santo, Sam and Ed’s Total Football::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7cdeaa554299683c1c63ae::Eastbound &amp; Down::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7cdeaa554299683c1c63ae::Santo, Sam and Ed's Cup Fever!::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7cdeaa554299683c1c63ae::Santo, Sam and Ed's Cup Fever!::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] is an association football themed comedy television show in Australia on SBS.\n[2] Eastbound & Down is an American sports comedy television series that was broadcast on HBO, starring Danny McBride as Kenny Powers, a former professional baseball pitcher, who after an up and down career in the major leagues is forced to return to his hometown middle-school in Shelby, North Carolina, as a substitute physical education teacher.\n[3] Santo, Sam and Ed’s Total Football was an Australian association football themed comedy television show, hosted by Santo Cilauro, Sam Pang and Ed Kavalee.\n[4] Elizabeth De Razzo (born December 27, 1980) is an actress who is best known for her recurring role Maria in \"Eastbound & Down\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

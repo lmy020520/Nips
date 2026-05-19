@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2006",
+  "pred_answer": "2006",
+  "normalized_gold": "2006",
+  "normalized_pred": "2006",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1582f554299422ee99664",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1582f554299422ee99664::Only Love Can Break a Heart::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1582f554299422ee99664::Rock the House Live!::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1582f554299422ee99664::Gene Pitney::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae1582f554299422ee99664::N.E. Heart Break (song)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1582f554299422ee99664::Only Love Can Break a Heart",
+        "5ae1582f554299422ee99664::Gene Pitney"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1582f554299422ee99664::Only Love Can Break a Heart::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1582f554299422ee99664::Rock the House Live!::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1582f554299422ee99664::Gene Pitney::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae1582f554299422ee99664::N.E. Heart Break (song)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1582f554299422ee99664::N.E. Heart Break (song)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"N.E. Heart Break\" is a 1989 song performed by American R&B quintet New Edition.\n[2] Gene Francis Alan Pitney (February 17, 1940 – April 5, 2006) was an American singer-songwriter, musician, and sound engineer.\n[3] The band performed a set of 22 songs (including \"The Way Back Machine\" guitar solo by Howard Leese); but only 14 were used on the album, missing most of their recent successful singles \"These Dreams\", \"Never\", \"Alone\", \"What About Love\", \"All I Wanna Do Is Make Love to You\" and their classic \"Crazy on You\", trying to demonstrate that Heart wasn't a band of ballad hits, but instead an arena rock st\n[4] \"Only Love Can Break a Heart\" is the title of a popular song from 1962, performed by the American singer-songwriter Gene Pitney."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

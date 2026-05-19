@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hilton's DoubleTree",
+  "pred_answer": "Hilton's DoubleTree",
+  "normalized_gold": "hiltons doubletree",
+  "normalized_pred": "hiltons doubletree",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe457a5542993f32c2a0d7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe457a5542993f32c2a0d7::Tropicana Las Vegas::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe457a5542993f32c2a0d7::M Resort::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe457a5542993f32c2a0d7::Tropicana Country Club::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe457a5542993f32c2a0d7::Tropicana Las Vegas::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe457a5542993f32c2a0d7::Tropicana Las Vegas",
+        "5abe457a5542993f32c2a0d7::Tropicana Country Club"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe457a5542993f32c2a0d7::Tropicana Las Vegas::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe457a5542993f32c2a0d7::M Resort::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe457a5542993f32c2a0d7::Tropicana Country Club::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe457a5542993f32c2a0d7::Tropicana Las Vegas::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe457a5542993f32c2a0d7::Tropicana Las Vegas::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Tropicana Las Vegas is a hotel and casino on the Las Vegas Strip in Paradise, Nevada.\n[2] Tropicana Country Club was an 18-hole golf course in Las Vegas, Nevada, located across the Tropicana Las Vegas.\n[3] M Resort Spa Casino is a boutique hotel, spa and casino in Henderson, Nevada, owned by Gaming and Leisure Properties and operated by Penn National Gaming.\n[4] It is owned and operated by Penn National Gaming and is a franchise of Hilton's DoubleTree chain."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

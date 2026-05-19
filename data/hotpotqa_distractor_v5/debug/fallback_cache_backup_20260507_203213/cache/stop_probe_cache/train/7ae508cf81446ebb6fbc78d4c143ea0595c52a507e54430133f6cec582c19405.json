@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jane Weinstock",
+  "pred_answer": "Jane Weinstock",
+  "normalized_gold": "jane weinstock",
+  "normalized_pred": "jane weinstock",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae537ff5542993aec5ec184",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae537ff5542993aec5ec184::Alia Shawkat::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae537ff5542993aec5ec184::Meat Loaf: In Search of Paradise::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae537ff5542993aec5ec184::The Moment (2013 film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae537ff5542993aec5ec184::Michael Bay filmography::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae537ff5542993aec5ec184::Alia Shawkat",
+        "5ae537ff5542993aec5ec184::The Moment (2013 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae537ff5542993aec5ec184::Alia Shawkat::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae537ff5542993aec5ec184::Meat Loaf: In Search of Paradise::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae537ff5542993aec5ec184::The Moment (2013 film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae537ff5542993aec5ec184::Michael Bay filmography::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae537ff5542993aec5ec184::Michael Bay filmography::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] This included a commercial for the American Red Cross in 1992 which received a Clio Award, and music videos for Donny Osmond, and Meat Loaf.\n[2] The Moment is a 2013 American psychological thriller film directed by Jane Weinstock, written by Gloria Norris and Weinstock, and starring Jennifer Jason Leigh, Martin Henderson, Alia Shawkat, and Meat Loaf.\n[3] Meat Loaf: In Search of Paradise is a 2007 independent documentary film that captures rocker Meat Loaf and his life in rehearsals and on the road during his 2007 World Tour.\n[4] She starred as Maeby Fünke in the Fox/Netflix television series \"Arrested Development\" (2003–2006; 2013–present), and as Gertie Michaels in the 2015 horror-comedy film \"The Final Girls\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

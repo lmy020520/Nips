@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Dayton, Ohio",
+  "pred_answer": "Dayton, Ohio",
+  "normalized_gold": "dayton ohio",
+  "normalized_pred": "dayton ohio",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe61715542993f32c2a0ef",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe61715542993f32c2a0ef::Terry Gabreski::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe61715542993f32c2a0ef::Beavercreek, Ohio::11"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe61715542993f32c2a0ef::Wright-Patterson Air Force Base::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe61715542993f32c2a0ef::Terry Gabreski::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe61715542993f32c2a0ef::Terry Gabreski",
+        "5abe61715542993f32c2a0ef::Wright-Patterson Air Force Base"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe61715542993f32c2a0ef::Terry Gabreski::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe61715542993f32c2a0ef::Beavercreek, Ohio::11",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe61715542993f32c2a0ef::Wright-Patterson Air Force Base::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe61715542993f32c2a0ef::Terry Gabreski::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe61715542993f32c2a0ef::Terry Gabreski::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She was the Vice Commander, Air Force Materiel Command, Wright-Patterson Air Force Base, Ohio, which conducts research, development, test and evaluation, and provides acquisition management and logistics support necessary to keep Air Force weapon systems ready for war.\n[2] Wright-Patterson Air Force Base (WPAFB) (IATA: FFO, ICAO: KFFO, FAA LID: FFO) is a United States Air Force base and census-designated place just east of Dayton, Ohio, in Greene and Montgomery counties.\n[3] General Janet C. Wolfenbarger, former Vice Commander, Air Force Material Command and highest-ranking woman in the United States Air Force (as of 1 January 2010), hails from Beavercreek and is 1976 graduate of Beavercreek High School.\n[4] Terry Lee (Walter) Gabreski (born 1952) was the second woman to hold the rank of Lieutenant General in the United States Air Force (USAF)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

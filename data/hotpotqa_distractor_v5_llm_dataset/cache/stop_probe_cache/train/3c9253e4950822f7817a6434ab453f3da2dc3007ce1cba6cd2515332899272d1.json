@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Zierer",
+  "pred_answer": "Zierer multi-launching steel roller coaster",
+  "normalized_gold": "zierer",
+  "normalized_pred": "zierer multi-launching steel roller coaster",
+  "exact_match": false,
+  "context_exact_match": true,
+  "answer_match_rule": "context_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "Evidence shows that Big Bad Wolf's footers, queue line, and station were re-purposed for Verbolten, and that Verbolten is a Zierer multi-launching steel roller coaster.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "Evidence shows that Big Bad Wolf's footers, queue line, and station were re-purposed for Verbolten, and that Verbolten is a Zierer multi-launching steel roller coaster.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e16ed5542997cc2c4751f",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e16ed5542997cc2c4751f::Big Bad Wolf (roller coaster)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e16ed5542997cc2c4751f::Verbolten::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e16ed5542997cc2c4751f::Drachen Fire::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e16ed5542997cc2c4751f::Big Bad Wolf (roller coaster)",
+        "5a7e16ed5542997cc2c4751f::Verbolten"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e16ed5542997cc2c4751f::Big Bad Wolf (roller coaster)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e16ed5542997cc2c4751f::Verbolten::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e16ed5542997cc2c4751f::Drachen Fire::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e16ed5542997cc2c4751f::Drachen Fire::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Drachen Fire was a steel roller coaster located at Busch Gardens Williamsburg, in Williamsburg, Virginia.\n[2] Verbolten is a Zierer multi-launching steel roller coaster that officially opened on May 18, 2012 at Busch Gardens Williamsburg in Williamsburg, Virginia after a soft opening began on Friday, May 11, 2012.\n[3] The footers, queue line, and station were re-purposed for Verbolten, a roller coaster that was introduced in 2012."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

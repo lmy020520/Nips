@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Yum Jung-ah and Park Hyuk-kwon",
+  "pred_answer": "Yum Jung-ah and Park Hyuk-kwon",
+  "normalized_gold": "yum jung-ah and park hyuk-kwon",
+  "normalized_pred": "yum jung-ah and park hyuk-kwon",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac05e675542992a796decfa",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac05e675542992a796decfa::Countdown (2011 film)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac05e675542992a796decfa::BFI Flipside::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac05e675542992a796decfa::The Mimic (film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac05e675542992a796decfa::Huh Jung::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac05e675542992a796decfa::Hilary Brougher::8"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac05e675542992a796decfa::The Mimic (film)",
+        "5ac05e675542992a796decfa::Huh Jung"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac05e675542992a796decfa::Countdown (2011 film)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac05e675542992a796decfa::BFI Flipside::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac05e675542992a796decfa::The Mimic (film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac05e675542992a796decfa::Huh Jung::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac05e675542992a796decfa::Hilary Brougher::8",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac05e675542992a796decfa::Hilary Brougher::8",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] As of 2015, Brougher describes a feature in development, LILA’S INSIDE with actress Sarita Choudhury attached.\n[2] His second feature - also a horror film, titled \"The Mimic\", stars actress Yum Jung-ah and is scheduled to release in 2017.\n[3] The Mimic is a 2017 South Korean horror-thriller film written and directed by Huh Jung, and starring Yum Jung-ah and Park Hyuk-kwon.\n[4] Each BFI Flipside edition includes a feature film presentation that is complemented by additional film content (sometimes a second feature film by the same director, or a selection of short films which are related to the main feature by subject, era, actor or director)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

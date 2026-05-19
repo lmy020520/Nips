@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Brookhaven",
+  "pred_answer": "Brookhaven",
+  "normalized_gold": "brookhaven",
+  "normalized_pred": "brookhaven",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f36b65542997ba9cb31fc",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f36b65542997ba9cb31fc::Brookhaven, Mississippi::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f36b65542997ba9cb31fc::John Sawyer (American football)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f36b65542997ba9cb31fc::Lincolnton, North Carolina::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f36b65542997ba9cb31fc::Brookhaven, Mississippi",
+        "5a8f36b65542997ba9cb31fc::John Sawyer (American football)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f36b65542997ba9cb31fc::Brookhaven, Mississippi::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f36b65542997ba9cb31fc::John Sawyer (American football)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f36b65542997ba9cb31fc::Lincolnton, North Carolina::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f36b65542997ba9cb31fc::Lincolnton, North Carolina::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Lincolnton is a small city in Lincoln County, North Carolina, United States, within the Charlotte metropolitan area.\n[2] John Wesley Sawyer (born July 26, 1953 in Brookhaven, Mississippi) is a former professional American football tight end in the National Football League for the Houston Oilers, Seattle Seahawks, Washington Redskins, and the Denver Broncos.\n[3] Brookhaven ( ) is a small city in Lincoln County, Mississippi, southwest from the state capital of Jackson."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

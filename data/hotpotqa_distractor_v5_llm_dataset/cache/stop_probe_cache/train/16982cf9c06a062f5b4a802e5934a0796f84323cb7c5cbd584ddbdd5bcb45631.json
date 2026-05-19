@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Phillip Cocu",
+  "pred_answer": "Phillip Cocu",
+  "normalized_gold": "phillip cocu",
+  "normalized_pred": "phillip cocu",
+  "exact_match": true,
+  "context_exact_match": false,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b000955429971feec45e5",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b000955429971feec45e5::Phillip Cocu::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b000955429971feec45e5::2005 KNVB Cup Final::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b000955429971feec45e5::2006 KNVB Cup Final::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b000955429971feec45e5::Phillip Cocu",
+        "5a8b000955429971feec45e5::2005 KNVB Cup Final"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b000955429971feec45e5::Phillip Cocu::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b000955429971feec45e5::2005 KNVB Cup Final::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b000955429971feec45e5::2006 KNVB Cup Final::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b000955429971feec45e5::2006 KNVB Cup Final::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The 2006 KNVB Cup Final was a football match between Ajax and PSV on 7 May 2006 at De Kuip, Rotterdam.\n[2] The 2005 KNVB Cup Final was a football match between Willem II and PSV on 29 May 2005 at De Kuip, Rotterdam.\n[3] Phillip John-William Cocu (] ; born 29 October 1970) is a Dutch professional football manager and former player, currently coaching PSV."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

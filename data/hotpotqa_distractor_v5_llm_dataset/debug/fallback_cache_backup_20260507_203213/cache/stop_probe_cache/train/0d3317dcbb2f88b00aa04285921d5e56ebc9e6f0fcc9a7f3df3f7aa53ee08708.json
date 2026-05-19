@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Matka",
+  "pred_answer": "Matka",
+  "normalized_gold": "matka",
+  "normalized_pred": "matka",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5e4e955429929b08079fc",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5e4e955429929b08079fc::Dharmatma::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5e4e955429929b08079fc::Matka gambling::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5e4e955429929b08079fc::Saraswati veena::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5e4e955429929b08079fc::Dharmatma",
+        "5ae5e4e955429929b08079fc::Matka gambling"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5e4e955429929b08079fc::Dharmatma::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5e4e955429929b08079fc::Matka gambling::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5e4e955429929b08079fc::Saraswati veena::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5e4e955429929b08079fc::Saraswati veena::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] There are several variations of the veena, which in its South Indian form is a member of the lute family.\n[2] Matka\" gambling or satta\" is a form of lottery which originally involved betting on the opening and closing rates of cotton transmitted from the New York Cotton Exchange.\n[3] The title character was based on matka (form of Indian gambling) king Ratan Khatri."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

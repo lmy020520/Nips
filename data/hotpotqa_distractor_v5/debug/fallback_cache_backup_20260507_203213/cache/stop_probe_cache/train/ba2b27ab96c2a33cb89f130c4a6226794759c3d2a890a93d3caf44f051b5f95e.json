@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Amory Lovins",
+  "pred_answer": "Amory Lovins",
+  "normalized_gold": "amory lovins",
+  "normalized_pred": "amory lovins",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6d0fa554299710c8d1f73",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6d0fa554299710c8d1f73::Tariq Ramadan::6"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6d0fa554299710c8d1f73::Time 100::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6d0fa554299710c8d1f73::Negawatt power::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6d0fa554299710c8d1f73::Amory Lovins::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab6d0fa554299710c8d1f73::Seth Berkley::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6d0fa554299710c8d1f73::Negawatt power",
+        "5ab6d0fa554299710c8d1f73::Amory Lovins"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6d0fa554299710c8d1f73::Tariq Ramadan::6",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6d0fa554299710c8d1f73::Time 100::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6d0fa554299710c8d1f73::Negawatt power::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6d0fa554299710c8d1f73::Amory Lovins::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab6d0fa554299710c8d1f73::Seth Berkley::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6d0fa554299710c8d1f73::Seth Berkley::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Berkley has been featured on the cover of Newsweek and recognized by Wired Magazine as among \"The Wired 25\"—a salute to dreamers, inventors, mavericks and leaders—as well as by TIME magazine as one of the \"100 Most Influential People in the World\" in 2009.\n[2] He was named by \"Time\" magazine one of the World's 100 most influential people in 2009.\n[3] The term was coined by the chief scientist of the Rocky Mountain Institute and environmentalist Amory Lovins in 1985, within the article, \"Saving Gigabucks with Negawatts,\" where he argued that utility customers don’t want kilowatt-hours of electricity; they want energy services such as hot showers, cold beer, lit rooms, and spinning shafts, which can come more cheaply if electricity is used more\n[4] Time\" 100 (often written in all-caps as TIME\" 100) is an annual list of the 100 most influential people in the world assembled by the American news magazine \"Time\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "science fiction psychological horror",
+  "pred_answer": "science fiction psychological horror",
+  "normalized_gold": "science fiction psychological horror",
+  "normalized_pred": "science fiction psychological horror",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4cfd85542990ba0bbb154",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4cfd85542990ba0bbb154::Tommy Wirkola::7"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4cfd85542990ba0bbb154::Gore Verbinski::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4cfd85542990ba0bbb154::A Cure for Wellness::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4cfd85542990ba0bbb154::A Cure for Wellness (soundtrack)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4cfd85542990ba0bbb154::Gore Verbinski",
+        "5ae4cfd85542990ba0bbb154::A Cure for Wellness"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4cfd85542990ba0bbb154::Tommy Wirkola::7",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4cfd85542990ba0bbb154::Gore Verbinski::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4cfd85542990ba0bbb154::A Cure for Wellness::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4cfd85542990ba0bbb154::A Cure for Wellness (soundtrack)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4cfd85542990ba0bbb154::A Cure for Wellness (soundtrack)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A Cure for Wellness is a soundtrack album with original music by Benjamin Wallfisch for Gore Verbinski's film of the same name.\n[2] A Cure for Wellness is a 2016 science fiction psychological horror\n[3] His most recent film, \"A Cure for Wellness\", was released in 2017.\n[4] Wirkola's most recent film, \"What Happened to Monday\", a science fiction film starring Noomi Rapace & Willem Dafoe, was released in 2017."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Agent Carter",
+  "pred_answer": "Agent Carter",
+  "normalized_gold": "agent carter",
+  "normalized_pred": "agent carter",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c6d98554299683c1c6304",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c6d98554299683c1c6304::Agent Carter (TV series)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c6d98554299683c1c6304::Stratton (film)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c6d98554299683c1c6304::Dominic Cooper::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7c6d98554299683c1c6304::John Slattery::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c6d98554299683c1c6304::Agent Carter (TV series)",
+        "5a7c6d98554299683c1c6304::Dominic Cooper"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c6d98554299683c1c6304::Agent Carter (TV series)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c6d98554299683c1c6304::Stratton (film)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c6d98554299683c1c6304::Dominic Cooper::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7c6d98554299683c1c6304::John Slattery::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c6d98554299683c1c6304::John Slattery::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He is best known for his role as Roger Sterling in the AMC drama series \"Mad Men\" and for his role as Howard Stark in cameo appearances in the Marvel Cinematic Universe films \"Iron Man 2\", \"Ant-Man\", and \"\".\n[2] \" and as the young Howard Stark in the Marvel Cinematic Universe including \"\" and \"Agent Carter\".\n[3] The series' lead character John Stratton is played by Dominic Cooper, while the rest of the cast includes Gemma Chan, Austin Stowell, Tyler Hoechlin, and Tom Felton.\n[4] Marvel's Agent Carter, or simply Agent Carter, is an American television series created for ABC by Christopher Markus & Stephen McFeely, inspired by the 2011 film \"\", and the 2013 Marvel One-Shot short film of the same name."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

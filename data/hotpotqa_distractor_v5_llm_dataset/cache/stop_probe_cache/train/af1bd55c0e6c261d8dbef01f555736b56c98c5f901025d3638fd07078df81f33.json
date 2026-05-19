@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Austrian",
+  "pred_answer": "Austrian",
+  "normalized_gold": "austrian",
+  "normalized_pred": "austrian",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab8ecf45542991b5579f044",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab8ecf45542991b5579f044::Arnold Büscher::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab8ecf45542991b5579f044::Otto Förschner::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab8ecf45542991b5579f044::Amon Göth::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab8ecf45542991b5579f044::München-Schwabing labor camp::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab8ecf45542991b5579f044::Arnold Büscher",
+        "5ab8ecf45542991b5579f044::Amon Göth"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab8ecf45542991b5579f044::Arnold Büscher::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab8ecf45542991b5579f044::Otto Förschner::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab8ecf45542991b5579f044::Amon Göth::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab8ecf45542991b5579f044::München-Schwabing labor camp::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab8ecf45542991b5579f044::München-Schwabing labor camp::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Unlike most of the later subcamps which were constructed, organized, and managed by the SS Business Administration Main Office (WVHA) and the Dachau camp commandant, this subcamp's construction, administration, and organization was in the hands of Eleonore Baur, also known as Schwester Pia (Sister Pia).\n[2] Amon Leopold Göth (] ; alternative spelling \"Goeth\"; 11 December 1908 – 13 September 1946;    ) was an Austrian SS-\"Hauptsturmführer\" (captain) and the commandant of the Kraków-Płaszów concentration camp in Płaszów in German-occupied Poland for most of the camp's existence during World War II.\n[3] He served as commandant of the Mittelbau-Dora concentration camp and the Kaufering concentration camp in the Dachau camp system.\n[4] At the rank of SS-\"Obersturmführer\", he was the second and last commandant of the Kraków-Płaszów concentration camp, succeeding Amon Göth, from September 1944 until about January 1945."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

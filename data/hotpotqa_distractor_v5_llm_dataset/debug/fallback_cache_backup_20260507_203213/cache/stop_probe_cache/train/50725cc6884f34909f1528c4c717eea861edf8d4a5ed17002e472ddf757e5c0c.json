@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Conrad Ray Burns",
+  "pred_answer": "Conrad Ray Burns",
+  "normalized_gold": "conrad ray burns",
+  "normalized_pred": "conrad ray burns",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a90937f55429933b8a20569",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a90937f55429933b8a20569::Conrad Burns::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a90937f55429933b8a20569::United States Senate elections, 1908 and 1909::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a90937f55429933b8a20569::Conrad Burns::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a90937f55429933b8a20569::Dick Wadhams::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a90937f55429933b8a20569::United States Senate elections, 1910 and 1911::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a90937f55429933b8a20569::Conrad Burns",
+        "5a90937f55429933b8a20569::Dick Wadhams"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a90937f55429933b8a20569::Conrad Burns::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a90937f55429933b8a20569::United States Senate elections, 1908 and 1909::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a90937f55429933b8a20569::Conrad Burns::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a90937f55429933b8a20569::Dick Wadhams::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a90937f55429933b8a20569::United States Senate elections, 1910 and 1911::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a90937f55429933b8a20569::United States Senate elections, 1910 and 1911::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The United States Senate elections of 1910 and 1911, some states elected their Senators directly even before passage of the 17th Amendment in 1913.\n[2] Dick Wadhams (born 1955) is a Republican political consultant, known for his role in guiding John Thune to an upset victory over then United States Senate Minority Leader Tom Daschle.\n[3] Conrad Ray Burns (January 25, 1935 – April 28, 2016) was a United States Senator from Montana and later a lobbyist.\n[4] The United States Senate elections of 1908 and 1909, some states elected their Senators directly even before passage of the 17th Amendment in 1913."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

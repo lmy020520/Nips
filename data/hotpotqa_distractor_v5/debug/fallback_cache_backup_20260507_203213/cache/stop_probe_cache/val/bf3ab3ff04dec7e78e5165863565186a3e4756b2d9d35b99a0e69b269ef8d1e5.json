@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "William Randolph Hearst",
+  "pred_answer": "William Randolph Hearst",
+  "normalized_gold": "william randolph hearst",
+  "normalized_pred": "william randolph hearst",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd004d5542992ac4f38194",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd004d5542992ac4f38194::Bob Bralove::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd004d5542992ac4f38194::Little Nemo (1911 film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd004d5542992ac4f38194::Gertie the Dinosaur::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd004d5542992ac4f38194::Winsor McCay::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abd004d5542992ac4f38194::Little Sammy Sneeze::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd004d5542992ac4f38194::Gertie the Dinosaur",
+        "5abd004d5542992ac4f38194::Winsor McCay"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd004d5542992ac4f38194::Bob Bralove::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd004d5542992ac4f38194::Little Nemo (1911 film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd004d5542992ac4f38194::Gertie the Dinosaur::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd004d5542992ac4f38194::Winsor McCay::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abd004d5542992ac4f38194::Little Sammy Sneeze::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd004d5542992ac4f38194::Little Sammy Sneeze::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It was McCay's first successful comic strip; he followed it with \"Dream of the Rarebit Fiend\" later in 1904, and his best-known strip \"Little Nemo in Slumberland\" in 1905.\n[2] He is best known for the comic strip \"Little Nemo\" (1905–14; 1924–26) and the animated film \"Gertie the Dinosaur\" (1914).\n[3] McCay's employer William Randolph Hearst later curtailed McCay's vaudeville activities, so McCay added a live-action introductory sequence to the film for its theatrical release.\n[4] Little Nemo, also known as Winsor McCay: The Famous Cartoonist of the N.Y. Herald and His Moving Comics, is a 1911 silent animated short film by American cartoonist Winsor McCay."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

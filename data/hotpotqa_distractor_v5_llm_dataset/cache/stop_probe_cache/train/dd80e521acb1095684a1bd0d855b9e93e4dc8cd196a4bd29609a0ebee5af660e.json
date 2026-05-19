@@ -1,0 +1,88 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "singer",
+  "pred_answer": "lead singer",
+  "normalized_gold": "singer",
+  "normalized_pred": "lead singer",
+  "exact_match": false,
+  "context_exact_match": true,
+  "answer_match_rule": "context_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "Evidence shows Jenna Sanz-Agero was the lead singer of Vixen, but for Ronnie Dunn, the evidence only states he is a singer-songwriter, not that he acted as a singer in a band. The question asks for the role both acted in within their bands, and the evidence does not confirm Ronnie Dunn's role in Brooks & Dunn as a singer.",
+  "missing_support_reasons": [
+    "No evidence that Ronnie Dunn was a singer in Brooks & Dunn; only that he is a singer-songwriter and was part of the duo."
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "Evidence shows Jenna Sanz-Agero was the lead singer of Vixen, but for Ronnie Dunn, the evidence only states he is a singer-songwriter, not that he acted as a singer in a band. The question asks for the role both acted in within their bands, and the evidence does not confirm Ronnie Dunn's role in Brooks & Dunn as a singer.",
+    "missing_support_reasons": [
+      "No evidence that Ronnie Dunn was a singer in Brooks & Dunn; only that he is a singer-songwriter and was part of the duo."
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5a85e4d05542994c784ddbb0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85e4d05542994c784ddbb0::Jenna Sanz-Agero::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85e4d05542994c784ddbb0::Kix Brooks::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85e4d05542994c784ddbb0::Ronnie Dunn::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85e4d05542994c784ddbb0::If You See Him/If You See Her::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85e4d05542994c784ddbb0::Jenna Sanz-Agero",
+        "5a85e4d05542994c784ddbb0::Ronnie Dunn"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85e4d05542994c784ddbb0::Jenna Sanz-Agero::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85e4d05542994c784ddbb0::Kix Brooks::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85e4d05542994c784ddbb0::Ronnie Dunn::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85e4d05542994c784ddbb0::If You See Him/If You See Her::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85e4d05542994c784ddbb0::If You See Him/If You See Her::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It served as the title track to each artist's respective 1998 albums (\"If You See Him\" for Reba, and \"If You See Her\" for Brooks & Dunn), both released on June 2 of that year.\n[2] In 2011, Dunn began working as a solo artist following the breakup of Brooks & Dunn.\n[3] Brooks and Ronnie Dunn comprised Brooks & Dunn for 20 years, with both members beginning solo careers.\n[4] Jenna Sanz-Agero is the former lead singer of the female rock group Vixen, and a former president of Media 8."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

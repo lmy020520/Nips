@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Pilosocereus",
+  "pred_answer": "Pilosocereus",
+  "normalized_gold": "pilosocereus",
+  "normalized_pred": "pilosocereus",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae21d195542994d89d5b358",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae21d195542994d89d5b358::Clematis hirsutissima::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae21d195542994d89d5b358::Insect adhesion::23"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae21d195542994d89d5b358::Pilosocereus::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae21d195542994d89d5b358::Sesleria::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae21d195542994d89d5b358::Insect adhesion::18"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae21d195542994d89d5b358::Pilosocereus",
+        "5ae21d195542994d89d5b358::Sesleria"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae21d195542994d89d5b358::Clematis hirsutissima::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae21d195542994d89d5b358::Insect adhesion::23",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae21d195542994d89d5b358::Pilosocereus::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae21d195542994d89d5b358::Sesleria::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae21d195542994d89d5b358::Insect adhesion::18",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae21d195542994d89d5b358::Insect adhesion::18",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Researchers are unsure whether direction-dependence is achieved through changes in contact area or through a change in shear stress.\n[2] Sesleria is a Eurasian and North African genus of perennial plants in the grass family.\n[3] Tree cactus is a common name for \"Pilosocereus\" species.\n[4] While directional-dependence is present in other animals, it has yet to be confirmed in insects with hairy adhesive pads."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

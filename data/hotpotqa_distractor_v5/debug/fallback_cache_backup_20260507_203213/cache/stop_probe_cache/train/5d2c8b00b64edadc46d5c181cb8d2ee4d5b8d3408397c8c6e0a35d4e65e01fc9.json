@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Southeastern United States",
+  "pred_answer": "Southeastern United States",
+  "normalized_gold": "southeastern united states",
+  "normalized_pred": "southeastern united states",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab60bbc554299110f2199c7",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab60bbc554299110f2199c7::Native American mascot laws and regulations::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab60bbc554299110f2199c7::List of Native Americans of the United States::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab60bbc554299110f2199c7::Choctaw::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab60bbc554299110f2199c7::Jim Barnes (writer)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab60bbc554299110f2199c7::Impact of Native American gaming::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab60bbc554299110f2199c7::Choctaw",
+        "5ab60bbc554299110f2199c7::Jim Barnes (writer)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab60bbc554299110f2199c7::Native American mascot laws and regulations::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab60bbc554299110f2199c7::List of Native Americans of the United States::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab60bbc554299110f2199c7::Choctaw::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab60bbc554299110f2199c7::Jim Barnes (writer)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab60bbc554299110f2199c7::Impact of Native American gaming::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab60bbc554299110f2199c7::Impact of Native American gaming::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] In the United States the Indian Gaming Regulatory Act was passed in 1988 in order to secure collaboration between the states and tribes and also in order for the federal government to oversee gaming operations.\n[2] Jim Weaver McKown Barnes (born 1933), of Choctaw and Welsh descent, was born near Summerfield, Oklahoma (in LeFlore County).\n[3] The Choctaw (In the Choctaw language, Chahta) are a Native American people originally occupying what is now the Southeastern United States (modern-day Alabama, Florida, Mississippi, and Louisiana).\n[4] This is a list of notable Native Americans from peoples indigenous to the contemporary United States, including Native Alaskans, Native Hawaiians, and Native Americans in the United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

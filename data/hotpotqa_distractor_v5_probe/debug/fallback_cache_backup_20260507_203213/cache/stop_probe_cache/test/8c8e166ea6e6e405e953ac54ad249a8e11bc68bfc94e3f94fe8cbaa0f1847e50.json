@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Perfume",
+  "pred_answer": "Perfume",
+  "normalized_gold": "perfume",
+  "normalized_pred": "perfume",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a83ef745542996488c2e4f8",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a83ef745542996488c2e4f8::Du riechst so gut::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a83ef745542996488c2e4f8::Perfume (novel)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a83ef745542996488c2e4f8::Till Lindemann::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a83ef745542996488c2e4f8::Du riechst so gut",
+        "5a83ef745542996488c2e4f8::Perfume (novel)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a83ef745542996488c2e4f8::Du riechst so gut::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a83ef745542996488c2e4f8::Perfume (novel)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a83ef745542996488c2e4f8::Till Lindemann::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a83ef745542996488c2e4f8::Till Lindemann::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He is noted for his muscular stature, unique stage performances (including the use of pyrotechnics and a specific move known as \"The Till Hammer\"), and bass voice.\n[2] Perfume: The Story of a Murderer is a 1985 literary historical cross-genre novel (originally published in German as Das Parfum) by German writer Patrick Süskind.\n[3] The title is said to be inspired by Patrick Süskind's \"Perfume\", a favourite novel of Till Lindemann's, the singer of the band."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

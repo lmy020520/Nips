@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Los Angeles",
+  "pred_answer": "Los Angeles",
+  "normalized_gold": "los angeles",
+  "normalized_pred": "los angeles",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac5085455429924173fb56b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac5085455429924173fb56b::Desert Song::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac5085455429924173fb56b::Mirror Ball Tour::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac5085455429924173fb56b::Steel Panther::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac5085455429924173fb56b::Desert Song::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac5085455429924173fb56b::Mirror Ball Tour",
+        "5ac5085455429924173fb56b::Steel Panther"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac5085455429924173fb56b::Desert Song::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac5085455429924173fb56b::Mirror Ball Tour::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac5085455429924173fb56b::Steel Panther::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac5085455429924173fb56b::Desert Song::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac5085455429924173fb56b::Desert Song::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] This song was an outtake from the songwriting sessions that produced 1987's \"Hysteria\".\n[2] Steel Panther is an American comedic glam metal band from Los Angeles, California, mostly known for their profane and humorous lyrics, as well as their exaggerated on-stage personae that parody the stereotypical 1980s \"glam metal\" lifestyle.\n[3] The Mirror Ball Tour was a concert tour by the British hard rock band Def Leppard.\n[4] \"Desert Song\" is a song by British hard rock band Def Leppard from their 1993 rarities and 'B-sides' album \"Retro Active\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

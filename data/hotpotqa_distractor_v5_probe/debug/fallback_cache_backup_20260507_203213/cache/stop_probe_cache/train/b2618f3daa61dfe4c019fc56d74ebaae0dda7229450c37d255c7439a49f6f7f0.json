@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Barney Stinson",
+  "pred_answer": "Barney Stinson",
+  "normalized_gold": "barney stinson",
+  "normalized_pred": "barney stinson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab840c55542990e739ec896",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab840c55542990e739ec896::Neil Patrick Harris::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab840c55542990e739ec896::Batman: Under the Hood::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab840c55542990e739ec896::Batman: Under the Red Hood::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab840c55542990e739ec896::Batman: The Killing Joke::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab840c55542990e739ec896::Neil Patrick Harris",
+        "5ab840c55542990e739ec896::Batman: Under the Red Hood"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab840c55542990e739ec896::Neil Patrick Harris::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab840c55542990e739ec896::Batman: Under the Hood::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab840c55542990e739ec896::Batman: Under the Red Hood::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab840c55542990e739ec896::Batman: The Killing Joke::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab840c55542990e739ec896::Batman: The Killing Joke::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"The Killing Joke\" provides an origin story for the supervillain the Joker, loosely adapted from the 1951 story arc \"The Man Behind the Red Hood!\n[2] Batman: Under the Red Hood is a 2010 American animated superhero direct-to-video film produced by Warner Bros.\n[3] \"Batman: Under the Hood\" (also known as \"Batman: Under the Red Hood\") is a comic book story arc published by DC Comics, written by Judd Winick and primarily illustrated by Doug Mahnke.\n[4] On television, he is known for playing the title character on \"Doogie Howser, M.D.\" (1989–1993), Barney Stinson on \"How I Met Your Mother\" (2005–2014, for which he was nominated for four Emmy Awards), and Count Olaf on \"A Series of Unfortunate Events\" (2017 onward)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

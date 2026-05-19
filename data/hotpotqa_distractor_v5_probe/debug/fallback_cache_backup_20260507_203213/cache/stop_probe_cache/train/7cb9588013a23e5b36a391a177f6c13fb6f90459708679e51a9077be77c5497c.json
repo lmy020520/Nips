@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hermann Graf",
+  "pred_answer": "Hermann Graf",
+  "normalized_gold": "hermann graf",
+  "normalized_pred": "hermann graf",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd087e554299700f9d797e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd087e554299700f9d797e::Hermann Graf::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd087e554299700f9d797e::Rote Jäger::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd087e554299700f9d797e::Werner Schröer::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd087e554299700f9d797e::Hermann Graf",
+        "5abd087e554299700f9d797e::Rote Jäger"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd087e554299700f9d797e::Hermann Graf::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd087e554299700f9d797e::Rote Jäger::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd087e554299700f9d797e::Werner Schröer::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd087e554299700f9d797e::Werner Schröer::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Werner Schröer (12 February 1918 – 10 February 1985) was a German World War II fighter ace who served in the \"Luftwaffe\" from 1937, initially as a member of the ground staff, until the end of World War II in Europe on 8 May 1945, by which time he had reached the highest ranks of combat leadership.\n[2] The team was assembled by Hermann Graf, a fighter ace and commander of German fighter pilots.\n[3] He served on both the Eastern and Western Fronts."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Nokia Theatre",
+  "pred_answer": "Nokia Theatre",
+  "normalized_gold": "nokia theatre",
+  "normalized_pred": "nokia theatre",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adccffc5542994d58a2f6e0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adccffc5542994d58a2f6e0::2010 MTV Video Music Awards::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adccffc5542994d58a2f6e0::After Lately::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adccffc5542994d58a2f6e0::Chelsea Handler::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adccffc5542994d58a2f6e0::Late-night talk show::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adccffc5542994d58a2f6e0::2010 MTV Video Music Awards",
+        "5adccffc5542994d58a2f6e0::Chelsea Handler"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adccffc5542994d58a2f6e0::2010 MTV Video Music Awards::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adccffc5542994d58a2f6e0::After Lately::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adccffc5542994d58a2f6e0::Chelsea Handler::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adccffc5542994d58a2f6e0::Late-night talk show::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adccffc5542994d58a2f6e0::Late-night talk show::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A late-night talk show is a genre of talk show popular in the United States, where the format originated.\n[2] She hosted the late-night talk show \"Chelsea Lately\" on the E! network from 2007 to 2014, and released a documentary series, \"Chelsea Does\", on Netflix in January 2016.\n[3] The series depicts, in mockumentary style, the behind the scenes goings-on at the office of the late-night talk show \"Chelsea Lately\".\n[4] The 2010 MTV Video Music Awards took place on September 12, 2010 at Nokia Theatre in Los Angeles, honoring the best music videos from the previous year."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

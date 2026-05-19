@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "South Kohala",
+  "pred_answer": "South Kohala",
+  "normalized_gold": "south kohala",
+  "normalized_pred": "south kohala",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a866a9e554299211dda2b22",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a866a9e554299211dda2b22::Kona Shuttle::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a866a9e554299211dda2b22::Kona District, Hawaii::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a866a9e554299211dda2b22::Kona International Airport::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a866a9e554299211dda2b22::Kailua, Hawaii County, Hawaii::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a866a9e554299211dda2b22::Kona Shuttle",
+        "5a866a9e554299211dda2b22::Kona International Airport"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a866a9e554299211dda2b22::Kona Shuttle::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a866a9e554299211dda2b22::Kona District, Hawaii::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a866a9e554299211dda2b22::Kona International Airport::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a866a9e554299211dda2b22::Kailua, Hawaii County, Hawaii::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a866a9e554299211dda2b22::Kailua, Hawaii County, Hawaii::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Kailua is a census-designated place (CDP) in Hawaiʻ i County, Hawaii, United States, in the North Kona District of the Island of Hawaiʻ i.\n[2] The airport serves leeward, or Western Hawaiʻ i island, including the town of Kailua-Kona and the resorts of the North Kona and South Kohala districts.\n[3] The term \"Kona\" is sometimes used to refer to its largest town, Kailua-Kona.\n[4] Kona Shuttle is a private all first-class US air charter service that flies from Oakland International Airport in California to Kona International Airport near Kailua-Kona, Hawaii."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

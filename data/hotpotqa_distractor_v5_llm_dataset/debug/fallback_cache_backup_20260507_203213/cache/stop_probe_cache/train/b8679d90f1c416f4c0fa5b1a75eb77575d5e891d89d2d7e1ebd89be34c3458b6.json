@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Euridice",
+  "pred_answer": "Euridice",
+  "normalized_gold": "euridice",
+  "normalized_pred": "euridice",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8e2c2a5542990e94052a85",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8e2c2a5542990e94052a85::Don Quichotte::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8e2c2a5542990e94052a85::Don Quichotte auf der Hochzeit des Comacho::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8e2c2a5542990e94052a85::Euridice (Peri)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8e2c2a5542990e94052a85::L'Orfeo::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8e2c2a5542990e94052a85::Don Quichotte",
+        "5a8e2c2a5542990e94052a85::Euridice (Peri)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8e2c2a5542990e94052a85::Don Quichotte::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8e2c2a5542990e94052a85::Don Quichotte auf der Hochzeit des Comacho::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8e2c2a5542990e94052a85::Euridice (Peri)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8e2c2a5542990e94052a85::L'Orfeo::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8e2c2a5542990e94052a85::L'Orfeo::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] While Jacopo Peri's \"Dafne\" is generally recognised as the first work in the opera genre, and the earliest surviving opera is Peri's \"Euridice\", \"L'Orfeo\" is the earliest that is still regularly performed.\n[2] (Caccini wrote his own \"Euridice\" even as he supplied music to Peri's opera, published this version before Peri's was performed, in 1600, and got it staged two years later.)\n[3] When first performed, it was given the title: \"Don Quichotte auf der Hochzeit des Comacho \"; later it was also known as \"Don Quixote der Löwenritter \" (Don Quixote, the Knight of the Lions).\n[4] It was first performed on 19 February 1910 at the Opéra de Monte-Carlo."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

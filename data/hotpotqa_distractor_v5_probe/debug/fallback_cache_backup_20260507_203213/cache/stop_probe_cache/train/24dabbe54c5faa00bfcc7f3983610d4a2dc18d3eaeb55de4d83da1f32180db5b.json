@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ljubljana",
+  "pred_answer": "Ljubljana",
+  "normalized_gold": "ljubljana",
+  "normalized_pred": "ljubljana",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae6607555429908198fa5b3",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae6607555429908198fa5b3::ND Črnuče::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae6607555429908198fa5b3::Sir Bobby Robson Bridge::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae6607555429908198fa5b3::Branko Oblak::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae6607555429908198fa5b3::ND Črnuče::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae6607555429908198fa5b3::ND Črnuče",
+        "5ae6607555429908198fa5b3::Branko Oblak"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae6607555429908198fa5b3::ND Črnuče::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae6607555429908198fa5b3::Sir Bobby Robson Bridge::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae6607555429908198fa5b3::Branko Oblak::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae6607555429908198fa5b3::ND Črnuče::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae6607555429908198fa5b3::ND Črnuče::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Their golden years came in the mid-1990s, when they were managed by Slovenian football legend Branko Oblak, who came to Črnuče as manager in 1994.\n[2] Branko Oblak (born 27 May 1947 in Ljubljana, PR Slovenia, FPR Yugoslavia) is a Slovenian football coach and former international player.\n[3] The bridge was named after Sir Bobby Robson, the ex–Ipswich Town manager, Newcastle United manager and England national football team manager, who died in 2009.\n[4] Nogometno Društvo Črnuče, commonly referred to as ND Črnuče or simply Črnuče, is a Slovenian football club from the town of Črnuče, founded in 1971."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

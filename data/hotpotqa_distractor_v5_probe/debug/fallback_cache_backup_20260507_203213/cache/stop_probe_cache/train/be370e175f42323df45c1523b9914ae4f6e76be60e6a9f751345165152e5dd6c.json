@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "22",
+  "pred_answer": "22",
+  "normalized_gold": "22",
+  "normalized_pred": "22",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a835ac05542993344746005",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a835ac05542993344746005::Harry Potter in translation::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a835ac05542993344746005::Esegel::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a835ac05542993344746005::Music of Syria::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a835ac05542993344746005::Arab world::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a835ac05542993344746005::Muhammad Yusuf Hashmi::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a835ac05542993344746005::Music of Syria",
+        "5a835ac05542993344746005::Arab world"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a835ac05542993344746005::Harry Potter in translation::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a835ac05542993344746005::Esegel::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a835ac05542993344746005::Music of Syria::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a835ac05542993344746005::Arab world::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a835ac05542993344746005::Muhammad Yusuf Hashmi::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a835ac05542993344746005::Muhammad Yusuf Hashmi::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Khan Bahadur Muhammad Yusuf Syed-Al-Hashmi (1887–1960) was an educator, mentor, and reformer who achieved high distinction in English studies in British India and taught many generations of students and scholars how Western and Oriental languages could be pursued to great educational advantage, skill development and cultural enrichment.\n[2] The Arab world (Arabic: العالم العربي‎ ‎ \"al-ʿālam al-ʿarabī \"; formally: Arab homeland, الوطن العربي \"al-wațan al-ʿarabī \"), also known as the Arab nation (الأمة العربية \"al-ʾummah al-ʿarabīah \") or the Arab states, currently consists of the 22 Arabic-speaking countries of the Arab League.\n[3] Syria was long one of the Arab world's centers for musical innovation in the field of classical Arab music; for example, the city of Aleppo is known for its \"muwashshah\" music, which was specially conceived to accompany Andalusian \"muwashshah\" poetry.\n[4] Numerous records about Esegels in the sources in many languages, in connection with many historical subjects, and across the span of the Eurasian steppes left numerous variations of their name."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Olympiastadion",
+  "pred_answer": "Olympiastadion",
+  "normalized_gold": "olympiastadion",
+  "normalized_pred": "olympiastadion",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7dde5f5542995f4f4022e4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7dde5f5542995f4f4022e4::Olympiastadion (Berlin)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7dde5f5542995f4f4022e4::2016 DFB-Pokal Final::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7dde5f5542995f4f4022e4::2015–16 DFB-Pokal::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7dde5f5542995f4f4022e4::2001 DFB-Pokal Final::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7dde5f5542995f4f4022e4::Olympiastadion (Berlin)",
+        "5a7dde5f5542995f4f4022e4::2015–16 DFB-Pokal"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7dde5f5542995f4f4022e4::Olympiastadion (Berlin)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7dde5f5542995f4f4022e4::2016 DFB-Pokal Final::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7dde5f5542995f4f4022e4::2015–16 DFB-Pokal::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7dde5f5542995f4f4022e4::2001 DFB-Pokal Final::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7dde5f5542995f4f4022e4::2001 DFB-Pokal Final::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was played on 26 May 2001 at the Olympiastadion in Berlin.\n[2] It began on 7 August 2015 with the first of six rounds and ended on 21 May 2016 with the final at the Olympiastadion in Berlin, a nominally neutral venue, which has hosted the final since 1985.\n[3] The 2016 DFB-Pokal Final decided the winner of the 2015–16 DFB-Pokal, the 73rd season of Germany's premier knockout football cup competition.\n[4] Olympiastadion (] ) is a sports stadium in Berlin, Germany."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Faust",
+  "pred_answer": "Faust",
+  "normalized_gold": "faust",
+  "normalized_pred": "faust",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8fc4355542990a98493565",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8fc4355542990a98493565::Mignon::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8fc4355542990a98493565::Doktor Faust::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8fc4355542990a98493565::Faust (opera)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8fc4355542990a98493565::Bridget Parker::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8fc4355542990a98493565::Mignon",
+        "5a8fc4355542990a98493565::Faust (opera)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8fc4355542990a98493565::Mignon::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8fc4355542990a98493565::Doktor Faust::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8fc4355542990a98493565::Faust (opera)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8fc4355542990a98493565::Bridget Parker::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8fc4355542990a98493565::Bridget Parker::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Bridget Louise \"Didge\" Parker is a fictional character from the Australian soap opera \"Neighbours\", played by Eloise Mignon.\n[2] Faust is a grand opera in five acts by Charles Gounod to a French libretto by Jules Barbier and Michel Carré from Carré's play \"Faust et Marguerite\", in turn loosely based on Johann Wolfgang von Goethe's \"Faust, Part One\".\n[3] More recently, in 1982, Antony Beaumont completed the opera using sketches by Busoni which were previously thought to have been lost.\n[4] Mignon is an \"opéra comique\" (or opera in its second version) in three acts by Ambroise Thomas."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

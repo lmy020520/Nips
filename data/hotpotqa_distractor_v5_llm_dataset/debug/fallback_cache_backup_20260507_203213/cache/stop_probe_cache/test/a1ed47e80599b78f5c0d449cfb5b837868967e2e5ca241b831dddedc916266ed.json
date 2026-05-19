@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Tsavo East National Park",
+  "pred_answer": "Tsavo East National Park",
+  "normalized_gold": "tsavo east national park",
+  "normalized_pred": "tsavo east national park",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81d59a55429903bc27b9d6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81d59a55429903bc27b9d6::Tsavo Man-Eaters::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81d59a55429903bc27b9d6::The Man-eaters of Tsavo::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81d59a55429903bc27b9d6::Tsavo lion::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81d59a55429903bc27b9d6::The Ghost and the Darkness::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81d59a55429903bc27b9d6::Tsavo Man-Eaters",
+        "5a81d59a55429903bc27b9d6::Tsavo lion"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81d59a55429903bc27b9d6::Tsavo Man-Eaters::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81d59a55429903bc27b9d6::The Man-eaters of Tsavo::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81d59a55429903bc27b9d6::Tsavo lion::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a81d59a55429903bc27b9d6::The Ghost and the Darkness::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a81d59a55429903bc27b9d6::The Ghost and the Darkness::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The story is a fictionalized account of the Tsavo Man-Eaters, two lions that attacked and killed workers at Tsavo, Kenya, during the building of the Uganda-Mombasa Railway in East Africa in 1898.\n[2] The Tsavo lion (\"Panthera leo melanochaita\") is a lion population in the Tsavo East National Park, Kenya.\n[3] The Man-eaters of Tsavo is a book written by John Henry Patterson in 1907 that recounts his experiences while overseeing the construction of a railroad bridge in what would become Kenya.\n[4] The Tsavo Man-Eaters were a pair of man-eating Tsavo lions responsible for the deaths of a number of construction workers on the Kenya-Uganda Railway from March through December 1898."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

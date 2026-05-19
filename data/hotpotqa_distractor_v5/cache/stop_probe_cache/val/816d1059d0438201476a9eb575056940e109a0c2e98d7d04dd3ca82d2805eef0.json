@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1947",
+  "pred_answer": "1947",
+  "normalized_gold": "1947",
+  "normalized_pred": "1947",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b53b855429971feec46ca",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b53b855429971feec46ca::Christmas tree (aviation)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b53b855429971feec46ca::Aluminum Christmas tree::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b53b855429971feec46ca::Cold War::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8b53b855429971feec46ca::Alert area::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b53b855429971feec46ca::Christmas tree (aviation)",
+        "5a8b53b855429971feec46ca::Cold War"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b53b855429971feec46ca::Christmas tree (aviation)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b53b855429971feec46ca::Aluminum Christmas tree::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b53b855429971feec46ca::Cold War::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8b53b855429971feec46ca::Alert area::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b53b855429971feec46ca::Alert area::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] An Alert Area is a place of alert for military aircraft at United States Air Force bases.\n[2] Historians do not fully agree on the dates, but a common timeframe is the period between 1947, the year the Truman Doctrine (a U.S. foreign policy pledging to aid nations threatened by Soviet expansionism) was announced, and 1991, the year the Soviet Union collapsed.\n[3] An aluminum Christmas tree is a type of artificial Christmas tree that was popular in the United States from 1958 until about the mid-1960s.\n[4] A \"Christmas tree\" was a type of alert area constructed by the United States Air Force for the Strategic Air Command (SAC) during the Cold War."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

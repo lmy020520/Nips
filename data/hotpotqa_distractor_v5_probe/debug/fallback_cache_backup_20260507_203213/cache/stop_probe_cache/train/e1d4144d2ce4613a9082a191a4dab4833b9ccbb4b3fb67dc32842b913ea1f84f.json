@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Art Is... The Permanent Revolution",
+  "pred_answer": "Art Is... The Permanent Revolution",
+  "normalized_gold": "art is the permanent revolution",
+  "normalized_pred": "art is the permanent revolution",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a75e8e3554299109176e5ca",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a75e8e3554299109176e5ca::Punk's Not Dead (2007 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a75e8e3554299109176e5ca::Sigmund Abeles::7"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a75e8e3554299109176e5ca::Art Is... The Permanent Revolution::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a75e8e3554299109176e5ca::Manfred Kirchheimer::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a75e8e3554299109176e5ca::Punk's Not Dead (2007 film)",
+        "5a75e8e3554299109176e5ca::Art Is... The Permanent Revolution"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a75e8e3554299109176e5ca::Punk's Not Dead (2007 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a75e8e3554299109176e5ca::Sigmund Abeles::7",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a75e8e3554299109176e5ca::Art Is... The Permanent Revolution::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a75e8e3554299109176e5ca::Manfred Kirchheimer::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a75e8e3554299109176e5ca::Manfred Kirchheimer::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] His most notable documentaries include: \"Stations of the Elevated\", \"We Were So Beloved\", \"\", and \"Art Is... The Permanent Revolution\".\n[2] Art Is... The Permanent Revolution (2012) is a documentary film by Manfred Kirchheimer that explores how politics and the artists of the past have affected the art and process of four artists presented in documentary.\n[3] Abeles was one of three artists featured in Manfred Kirchheimer's 2012 feature-length independent film \"Art Is... The Permanent Revolution\", on the history of the art of protest in prints.\n[4] Punk's Not Dead is a 2007 documentary film directed by Susan Dynner, an American hardcore punk fan."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

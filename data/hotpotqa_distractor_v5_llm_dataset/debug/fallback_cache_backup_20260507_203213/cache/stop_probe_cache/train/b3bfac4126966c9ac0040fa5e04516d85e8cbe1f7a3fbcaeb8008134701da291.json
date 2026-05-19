@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Young Earth creationism (YEC)",
+  "pred_answer": "Young Earth creationism (YEC)",
+  "normalized_gold": "young earth creationism yec",
+  "normalized_pred": "young earth creationism yec",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab982e7554299131ca42354",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab982e7554299131ca42354::Young Earth creationism::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab982e7554299131ca42354::Progressive creationism::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab982e7554299131ca42354::Andrew A. Snelling::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab982e7554299131ca42354::Geological history of oxygen::10"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab982e7554299131ca42354::Young Earth creationism",
+        "5ab982e7554299131ca42354::Andrew A. Snelling"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab982e7554299131ca42354::Young Earth creationism::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab982e7554299131ca42354::Progressive creationism::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab982e7554299131ca42354::Andrew A. Snelling::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab982e7554299131ca42354::Geological history of oxygen::10",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab982e7554299131ca42354::Geological history of oxygen::10",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Aerobic metabolism is more efficient than anaerobic pathways, and the presence of oxygen undoubtedly created new possibilities for life to explore.\n[2] Andrew A. Snelling is a young-Earth creationist geologist who works for Answers in Genesis.\n[3] Progressive creationism (see for comparison intelligent design) is the religious belief that God created new forms of life gradually over a period of hundreds of millions of years.\n[4] Young Earth creationism (YEC) is a form of creationism, a religious belief which holds that the universe, Earth, and all life on Earth were created by direct acts of God less than 10,000 years ago."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

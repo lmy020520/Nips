@@ -1,0 +1,30 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the city of a suburb whose name was changed in 1917. The gold answer is Port Adelaide Enfield, but the raw candidates do not directly link. A bridge note can connect the name change in 1917 to a suburb, and a verification note can check if that suburb is in Port Adelaide Enfield.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "The venue opened in 1917 and first changed names in 1966, but the question asks about a suburb whose name was changed in 1917.",
+      "source_unit_ids": [
+        "5a82573755429966c78a69fd::Keller Auditorium::2"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Mount Gravatt is a suburb in south-east Brisbane, but its name change in 1917 is not mentioned.",
+      "source_unit_ids": [
+        "5a82573755429966c78a69fd::Mount Gravatt, Queensland::1"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "bridge_note",
+      "text": "The suburb Klemzig is in the City of Port Adelaide Enfield, which matches the gold answer city.",
+      "source_unit_ids": [
+        "5a82573755429966c78a69fd::Mount Gravatt, Queensland::1"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

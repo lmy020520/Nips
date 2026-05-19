@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "$500,000",
+  "pred_answer": "$500,000",
+  "normalized_gold": "$500000",
+  "normalized_pred": "$500000",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8ae44255429970aeb70322",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8ae44255429970aeb70322::Viking: The Ultimate Obstacle Course::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8ae44255429970aeb70322::American Ninja Warrior (season 3)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8ae44255429970aeb70322::K-Swiss::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8ae44255429970aeb70322::Lee England, Jr.::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8ae44255429970aeb70322::American Ninja Warrior (season 3)",
+        "5a8ae44255429970aeb70322::K-Swiss"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8ae44255429970aeb70322::Viking: The Ultimate Obstacle Course::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8ae44255429970aeb70322::American Ninja Warrior (season 3)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8ae44255429970aeb70322::K-Swiss::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8ae44255429970aeb70322::Lee England, Jr.::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8ae44255429970aeb70322::Lee England, Jr.::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Jordan was so impressed with England's abilities that he offered him an endorsement deal with his shoe brand.\n[2] K-Swiss, Inc. is an American athletic shoe brand based in Westlake Village, California and currently owned by Korean firm E-Land World Limited and its creator Kevin Randall.\n[3] After the tryouts, the top 15 competitors competed in Ninja Warrior Boot Camp with the top 10 moving on to Japan for the finals of the competition as a part of Sasuke 27 and a chance at becoming the first American to conquer the course and win a $500,000 endorsement deal with K-Swiss.\n[4] Viking: The Ultimate Obstacle Course (海筋肉王 ～バイキング～ , Kaikinnikuō ~Baikingu~ , literally \"Sea Muscle King VIKING\") , sometimes abbreviated to Viking: TUOC, is a Japanese obstacle course endurance game show using an obstacle course produced by Fuji TV and ."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

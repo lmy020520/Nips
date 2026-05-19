@@ -1,0 +1,85 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Shvetsov ASh-82",
+  "pred_answer": "Shvetsov ASh-82",
+  "normalized_gold": "shvetsov ash-82",
+  "normalized_pred": "shvetsov ash-82",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7329825542992359bc3255",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7329825542992359bc3255::Wright R-1820 Cyclone::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7329825542992359bc3255::Shvetsov ASh-82::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7329825542992359bc3255::derived::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7329825542992359bc3255::Hispano-Suiza HS.404::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7329825542992359bc3255::Wright R-1820 Cyclone",
+        "5a7329825542992359bc3255::Shvetsov ASh-82"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7329825542992359bc3255::Wright R-1820 Cyclone::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7329825542992359bc3255::Shvetsov ASh-82::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7329825542992359bc3255::Hispano-Suiza HS.404::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a7329825542992359bc3255::derived::1",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a7329825542992359bc3255::Hispano-Suiza HS.404::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Diesel engines were used in airships and were tried in aircraft in the late 1920s and 1930s, but never widely used.\n[2] This made it an ideal anti-aircraft weapon for mounting on light vehicles, as well as a fighter aircraft gun, replacing the multiple 7.62 mm (.30 calibre) and .303 inch (7.7 mm) machine guns commonly used in military aircraft of the 1930s.\n[3] The M-62 was the result of development of the M-25, which was a licensed version of the Wright R-1820 Cyclone.\n[4] The Wright R-1820 Cyclone 9 was an American radial engine developed by Curtiss-Wright, widely used on aircraft in the 1930s through 1950s.\n\nNotes:\n[bridge] The Shvetsov ASh-82 was a Soviet radial engine developed from the M-25, which itself was derived from the Wright R-1820."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

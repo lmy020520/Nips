@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Winter's Tale",
+  "pred_answer": "The Winter's Tale",
+  "normalized_gold": "the winters tale",
+  "normalized_pred": "the winters tale",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5f2cd554299546bf82fdc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5f2cd554299546bf82fdc::The Winter's Tale::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5f2cd554299546bf82fdc::Gary Watson::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5f2cd554299546bf82fdc::Jeremy Irons::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae5f2cd554299546bf82fdc::The Lion King::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5f2cd554299546bf82fdc::The Winter's Tale",
+        "5ae5f2cd554299546bf82fdc::Jeremy Irons"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5f2cd554299546bf82fdc::The Winter's Tale::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5f2cd554299546bf82fdc::Gary Watson::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5f2cd554299546bf82fdc::Jeremy Irons::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae5f2cd554299546bf82fdc::The Lion King::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5f2cd554299546bf82fdc::The Lion King::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The story takes place in a kingdom of lions in Africa and was influenced by William Shakespeare's \"Hamlet\".\n[2] After receiving classical training at the Bristol Old Vic Theatre School, Irons began his acting career on stage in 1969 and has since appeared in many West End theatre productions, including \"The Winter's Tale\", \"Macbeth\", \"Much Ado About Nothing\", \"The Taming of the Shrew\", \"Godspell\", \"Richard II\", and \"Embers\".\n[3] In 1974 he played George Vavsor for 5 episodes in The Pallisers which also featured Jeremy Irons.\n[4] The Winter's Tale is a play by William Shakespeare originally published in the First Folio of 1623."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

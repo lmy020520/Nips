@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Techtronic Industries Company Limited",
+  "pred_answer": "Techtronic Industries Company Limited",
+  "normalized_gold": "techtronic industries company limited",
+  "normalized_pred": "techtronic industries company limited",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d18be5542995ed0d165e4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d18be5542995ed0d165e4::Milwaukee Electric Tool Corporation::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d18be5542995ed0d165e4::Hutchison Whampoa::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d18be5542995ed0d165e4::Techtronic Industries::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7d18be5542995ed0d165e4::The Milwaukee Electric Railway and Light Company::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d18be5542995ed0d165e4::Milwaukee Electric Tool Corporation",
+        "5a7d18be5542995ed0d165e4::Techtronic Industries"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d18be5542995ed0d165e4::Milwaukee Electric Tool Corporation::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d18be5542995ed0d165e4::Hutchison Whampoa::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d18be5542995ed0d165e4::Techtronic Industries::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7d18be5542995ed0d165e4::The Milwaukee Electric Railway and Light Company::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d18be5542995ed0d165e4::The Milwaukee Electric Railway and Light Company::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Milwaukee Electric Railway and Light Company, also referred to as the Milwaukee Interurban Lines or the TMER&L is a defunct railroad in Milwaukee, Wisconsin, United States.\n[2] Techtronic Industries Company Limited (), Techtronic or TTI, is an investment holding company based in Hong Kong.\n[3] Hutchison Whampoa Limited (HWL) was an investment holding company based in Hong Kong.\n[4] The Milwaukee Electric Tool Corporation is a brand of Techtronic Industries, along with AEG, Ryobi, Hoover, Dirt Devil and Vax."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

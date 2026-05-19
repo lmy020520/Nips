@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Adrucil",
+  "pred_answer": "Adrucil",
+  "normalized_gold": "adrucil",
+  "normalized_pred": "adrucil",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7cd93755429909bec76847",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7cd93755429909bec76847::Fluorouracil::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7cd93755429909bec76847::Charles Heidelberger::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7cd93755429909bec76847::Ting-Chao Chou::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7cd93755429909bec76847::Fluorouracil",
+        "5a7cd93755429909bec76847::Charles Heidelberger"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7cd93755429909bec76847::Fluorouracil::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7cd93755429909bec76847::Charles Heidelberger::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7cd93755429909bec76847::Ting-Chao Chou::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7cd93755429909bec76847::Ting-Chao Chou::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Ting-Chao Chou (born 1938 in Taiwan, Chinese name: 周廷潮) is a Chinese American theoretical biologist, pharmacologist, cancer researcher and inventor.\n[2] Charles Heidelberger (December 23, 1920 – January 18, 1983) was a cancer researcher who developed and patented an anticancer drug called 5-Fluorouracil that remains widely used against cancers of the stomach, colon and breast.\n[3] Fluorouracil (5-FU), sold under the brand name Adrucil among others, is a medication used to treat cancer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

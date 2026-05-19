@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2,000",
+  "pred_answer": "2,000",
+  "normalized_gold": "2000",
+  "normalized_pred": "2000",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9dd445542994dbf019872",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9dd445542994dbf019872::Unley High School::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9dd445542994dbf019872::Pennsylvania Governor's School for the Sciences::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9dd445542994dbf019872::Hedley Marston::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab9dd445542994dbf019872::Watsonville High School::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9dd445542994dbf019872::Unley High School",
+        "5ab9dd445542994dbf019872::Hedley Marston"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9dd445542994dbf019872::Unley High School::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9dd445542994dbf019872::Pennsylvania Governor's School for the Sciences::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9dd445542994dbf019872::Hedley Marston::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab9dd445542994dbf019872::Watsonville High School::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9dd445542994dbf019872::Watsonville High School::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] However, this has been a problem for many years; too many students skip class and end up either not graduating or having to move to other schools because of their cuts.\n[2] He attended the University of Adelaide but did not complete a degree due to failing Mathematics.\n[3] The Pennsylvania Governor's School for the Sciences (PGSS) is one of the Pennsylvania Governor's Schools of Excellence, a group of five-week summer programs for gifted high school students in the state of Pennsylvania.\n[4] In recent years the number of students enrolled typically ranges from 1,100 to 1,300, but in the early 1960s the school had a peak enrolment of 2,000 students."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

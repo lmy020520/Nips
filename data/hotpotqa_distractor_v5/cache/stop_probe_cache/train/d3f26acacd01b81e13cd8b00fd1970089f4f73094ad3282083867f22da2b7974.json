@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Dennis Christopher George Potter",
+  "pred_answer": "Dennis Christopher George Potter",
+  "normalized_gold": "dennis christopher george potter",
+  "normalized_pred": "dennis christopher george potter",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c99b05542990527d554df",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c99b05542990527d554df::Douglas Coupland::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c99b05542990527d554df::Casanova (1971 TV serial)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c99b05542990527d554df::Dennis Potter::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7c99b05542990527d554df::Worst. Person. Ever.::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c99b05542990527d554df::Douglas Coupland",
+        "5a7c99b05542990527d554df::Dennis Potter"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c99b05542990527d554df::Douglas Coupland::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c99b05542990527d554df::Casanova (1971 TV serial)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c99b05542990527d554df::Dennis Potter::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7c99b05542990527d554df::Worst. Person. Ever.::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c99b05542990527d554df::Worst. Person. Ever.::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In an interview with NPR, Coupland stated that the novel was written as an antidote to an \"epidemic of earnestness\", and that the book was motivated by the question of \"why not just go against a trend, and write something that might actually damage a person's soul, if they read it?\"\n[2] Dennis Christopher George Potter (17 May 1935 – 7 June 1994) was an English television dramatist, screenwriter and journalist.\n[3] It was Dennis Potter's first television serial, having previously written single plays for the BBC's \"The Wednesday Play\" and \"Play for Today\" series.\n[4] Douglas Coupland ( ) {'1': \", '2': \", '3': \", '4': \"} (born December 30, 1961) is a Canadian novelist and artist."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

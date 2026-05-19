@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Pelle Almqvist",
+  "pred_answer": "Pelle Almqvist",
+  "normalized_gold": "pelle almqvist",
+  "normalized_pred": "pelle almqvist",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a75f0bf5542994ccc91866b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a75f0bf5542994ccc91866b::Pelle Almqvist::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a75f0bf5542994ccc91866b::Revolutions – The Very Best of Steve Winwood::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a75f0bf5542994ccc91866b::Steve Winwood::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a75f0bf5542994ccc91866b::Go Too::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a75f0bf5542994ccc91866b::Pelle Almqvist",
+        "5a75f0bf5542994ccc91866b::Steve Winwood"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a75f0bf5542994ccc91866b::Pelle Almqvist::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a75f0bf5542994ccc91866b::Revolutions – The Very Best of Steve Winwood::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a75f0bf5542994ccc91866b::Steve Winwood::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a75f0bf5542994ccc91866b::Go Too::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a75f0bf5542994ccc91866b::Go Too::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] For this album, Jess Roden replaced Steve Winwood (who had left the group).\n[2] Stephen Lawrence \"Steve\" Winwood (born 12 May 1948) is an English musician whose genres include rock, blue-eyed soul, rhythm and blues, blues rock, pop rock, and jazz.\n[3] Revolutions – The Very Best of Steve Winwood is the sixth compilation album by Steve Winwood.\n[4] Per \"Pelle\" Almqvist (born 29 May 1978), also known as Howlin' Pelle Almqvist, is a Swedish singer and songwriter."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Finland",
+  "pred_answer": "Finland",
+  "normalized_gold": "finland",
+  "normalized_pred": "finland",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adfd58b55429906c02daa5c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adfd58b55429906c02daa5c::Finnkino::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adfd58b55429906c02daa5c::Loews Cineplex Entertainment::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adfd58b55429906c02daa5c::Finnkino::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adfd58b55429906c02daa5c::AMC Theatres::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5adfd58b55429906c02daa5c::AMC Dine-In Kabuki 8::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adfd58b55429906c02daa5c::Finnkino",
+        "5adfd58b55429906c02daa5c::AMC Theatres"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adfd58b55429906c02daa5c::Finnkino::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adfd58b55429906c02daa5c::Loews Cineplex Entertainment::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adfd58b55429906c02daa5c::Finnkino::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adfd58b55429906c02daa5c::AMC Theatres::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5adfd58b55429906c02daa5c::AMC Dine-In Kabuki 8::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adfd58b55429906c02daa5c::AMC Dine-In Kabuki 8::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Formerly the AMC Kabuki Cinema 8, it was acquired by Robert Redford's Sundance Cinemas chain in 2006 as part of an anti-trust agreement allowing AMC to acquire Loews.\n[2] AMC Theatres (originally an abbreviation for American Multi-Cinema, often referred to simply as AMC and known in some countries as AMC Cinemas) is an American movie theater chain owned and operated by AMC Entertainment Inc., which is itself owned by AMC Entertainment Holdings, Inc., majority-owned by Chinese conglomerate Dalian Wanda Group.\n[3] Finnkino Oy is a Finnish film distributor and the biggest cinema chain in Finland.\n[4] Loews Theatres, also known as Loews Incorporated (originally Loew's), founded on June 23, 1904 by Marcus Loew, was the oldest theater chain operating in North America until it merged with AMC Theatres on January 26, 2006."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

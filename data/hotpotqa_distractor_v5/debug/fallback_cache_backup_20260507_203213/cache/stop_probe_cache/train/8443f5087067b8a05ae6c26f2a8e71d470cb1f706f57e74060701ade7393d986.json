@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Netherlands and Germany",
+  "pred_answer": "Netherlands and Germany",
+  "normalized_gold": "netherlands and germany",
+  "normalized_pred": "netherlands and germany",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a881ad955429938390d3ede",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a881ad955429938390d3ede::Operation Market Garden::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a881ad955429938390d3ede::Darkest Hour: Europe '44-'45::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a881ad955429938390d3ede::Darkest Hour (album)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a881ad955429938390d3ede::Operation Market Garden",
+        "5a881ad955429938390d3ede::Darkest Hour: Europe '44-'45"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a881ad955429938390d3ede::Operation Market Garden::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a881ad955429938390d3ede::Darkest Hour: Europe '44-'45::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a881ad955429938390d3ede::Darkest Hour (album)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a881ad955429938390d3ede::Darkest Hour (album)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Darkest Hour is the eighth album by American melodic death metal band Darkest Hour.\n[2] Darkest Hour: Europe '44-'45 is a free modification developed by Darklight Games / The Darkest Hour Team for Tripwire Interactive's multiplayer first-person shooter video game \"\", It is based on the Western Front during World War II between 1944 and 1945, depicting the conflict between Allied and German forces.\n[3] Operation Market Garden (17–25 September 1944) was an unsuccessful Allied military operation, fought in the Netherlands and Germany in the Second World War."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

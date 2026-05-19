@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "American",
+  "pred_answer": "American",
+  "normalized_gold": "american",
+  "normalized_pred": "american",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a87b5bd5542996e4f3088d3",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a87b5bd5542996e4f3088d3::Nicholas I of Russia::8"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a87b5bd5542996e4f3088d3::I Want to Be Your Man::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a87b5bd5542996e4f3088d3::Roger Leonard::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a87b5bd5542996e4f3088d3::Sugar Ray Leonard::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a87b5bd5542996e4f3088d3::Nicholas I of Russia::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a87b5bd5542996e4f3088d3::Roger Leonard",
+        "5a87b5bd5542996e4f3088d3::Sugar Ray Leonard"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a87b5bd5542996e4f3088d3::Nicholas I of Russia::8",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a87b5bd5542996e4f3088d3::I Want to Be Your Man::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a87b5bd5542996e4f3088d3::Roger Leonard::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a87b5bd5542996e4f3088d3::Sugar Ray Leonard::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a87b5bd5542996e4f3088d3::Nicholas I of Russia::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a87b5bd5542996e4f3088d3::Nicholas I of Russia::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He is best known as a political conservative whose reign was marked by geographical expansion, repression of dissent, economic stagnation, poor administrative policies, a corrupt bureaucracy, and frequent wars that culminated in Russia's defeat in the Crimean War of 1853–56.\n[2] Ray Charles Leonard (born May 17, 1956), best known as \"Sugar\" Ray Leonard, is an American former professional boxer, motivational speaker, and occasional actor.\n[3] Roger Leonard (born July 21, 1953) was a professional boxer from Palmer Park, Maryland.\n[4] The song was co-written by Roger's brother, Larry Troutman, and produced by Roger, who conceived of the song as a statement on romantic commitment."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Ring",
+  "pred_answer": "The Ring",
+  "normalized_gold": "the ring",
+  "normalized_pred": "the ring",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7299e85542991f9a20c525",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7299e85542991f9a20c525::Gervonta Davis::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7299e85542991f9a20c525::Tyson Fury::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7299e85542991f9a20c525::The Ring (magazine)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7299e85542991f9a20c525::Guillermo Rigondeaux::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7299e85542991f9a20c525::Gervonta Davis",
+        "5a7299e85542991f9a20c525::The Ring (magazine)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7299e85542991f9a20c525::Gervonta Davis::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7299e85542991f9a20c525::Tyson Fury::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7299e85542991f9a20c525::The Ring (magazine)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7299e85542991f9a20c525::Guillermo Rigondeaux::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7299e85542991f9a20c525::Guillermo Rigondeaux::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] As of May 2017, Rigondeaux is ranked as the world's best super bantamweight by \"The Ring\", the Transnational Boxing Rankings Board, and BoxRec; \"The Ring\" also ranks him as the sixth best active boxer, pound for pound.\n[2] The magazine is currently owned by Oscar De La Hoya's Golden Boy Enterprises, which acquired it in 2007.\n[3] In August 2016, Fury was ranked by BoxRec as the world's sixth best active boxer, pound for pound.\n[4] As of June 2017, Davis is ranked as the world's sixth best boxer in the division by the Transnational Boxing Rankings Board and \"The Ring\" magazine, and eighth by BoxRec."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "USA",
+  "pred_answer": "USA",
+  "normalized_gold": "usa",
+  "normalized_pred": "usa",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a1fc55542990783324e6e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a1fc55542990783324e6e::Monson Lake State Park::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a1fc55542990783324e6e::Lake Shetek State Park::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a1fc55542990783324e6e::Dakota War of 1862::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a1fc55542990783324e6e::Big Stone Lake State Park::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a1fc55542990783324e6e::Monson Lake State Park",
+        "5a7a1fc55542990783324e6e::Dakota War of 1862"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a1fc55542990783324e6e::Monson Lake State Park::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a1fc55542990783324e6e::Lake Shetek State Park::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a1fc55542990783324e6e::Dakota War of 1862::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a1fc55542990783324e6e::Big Stone Lake State Park::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a1fc55542990783324e6e::Big Stone Lake State Park::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] South Dakota's Hartford Beach State Park is on the opposite shore of the lake.\n[2] The Dakota War of 1862, also known as the Sioux Uprising, Dakota Uprising, the Sioux Outbreak of 1862, the Dakota Conflict, the U.S.–Dakota War of 1862 or Little Crow's War, was an armed conflict between the United States and several bands of Dakota (also known as the eastern 'Sioux').\n[3] Lake Shetek State Park is a state park of Minnesota, United States, on Lake Shetek, which is the largest lake in southwestern Minnesota and the headwaters of the Des Moines River.\n[4] Monson Lake State Park is a state park of Minnesota, USA, originally established as a memorial to 13 Swedish American pioneers who were killed there in the Dakota War of 1862."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

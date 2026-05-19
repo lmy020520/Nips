@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sergio Pérez",
+  "pred_answer": "Sergio Pérez",
+  "normalized_gold": "sergio pérez",
+  "normalized_pred": "sergio pérez",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6e19b55429954757d33a4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6e19b55429954757d33a4::Force India VJM10::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6e19b55429954757d33a4::Esteban Gutiérrez::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6e19b55429954757d33a4::Sergio Pérez::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6e19b55429954757d33a4::James Rossiter::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6e19b55429954757d33a4::Force India VJM10",
+        "5ab6e19b55429954757d33a4::Sergio Pérez"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6e19b55429954757d33a4::Force India VJM10::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6e19b55429954757d33a4::Esteban Gutiérrez::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6e19b55429954757d33a4::Sergio Pérez::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6e19b55429954757d33a4::James Rossiter::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6e19b55429954757d33a4::James Rossiter::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Previously he was an F1 test driver for the Honda, Super Aguri and Force India Formula One teams.\n[2] Sergio Pérez Mendoza (    ; born 26 January 1990) also known as \"Checo\" Pérez, is a Mexican racing driver, currently driving for Force India.\n[3] Esteban Manuel Gutiérrez Gutiérrez (] ; born 5 August 1991), is a Mexican racing driver.\n[4] The Force India VJM10 is a Formula One racing car designed and constructed by Force India to compete during the 2017 Formula One season."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

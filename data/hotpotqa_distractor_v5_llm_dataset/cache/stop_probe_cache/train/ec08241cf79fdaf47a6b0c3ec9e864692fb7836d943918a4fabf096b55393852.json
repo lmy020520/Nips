@@ -1,0 +1,100 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "1978 to 1981",
+  "pred_answer": "sixth straight season",
+  "normalized_gold": "1978 to 1981",
+  "normalized_pred": "sixth straight season",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "The selected chunks mention 'For the sixth straight season, the team was managed by Bobby Cox' and 'He first led the Atlanta Braves from 1978 to 1981', but the question asks for the years the manager (Bobby Cox) was led by this coach (the manager of the team) for 6 straight seasons. The evidence does not connect the 6 straight seasons to a specific coach or manager being led by another. The gold answer is '1978 to 1981', but the pred answer is 'sixth straight season', which is not a year range. The evidence does not support the pred answer as a valid answer to the question.",
+  "missing_support_reasons": [
+    "The question asks for years, but pred answer is a phrase 'sixth straight season'.",
+    "No evidence shows that the manager was led by a coach for 6 straight seasons; the evidence shows Bobby Cox managed the team for 6 straight seasons, not being led by a coach.",
+    "The bridge hop (manager led by coach) is not supported."
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "The selected chunks mention 'For the sixth straight season, the team was managed by Bobby Cox' and 'He first led the Atlanta Braves from 1978 to 1981', but the question asks for the years the manager (Bobby Cox) was led by this coach (the manager of the team) for 6 straight seasons. The evidence does not connect the 6 straight seasons to a specific coach or manager being led by another. The gold answer is '1978 to 1981', but the pred answer is 'sixth straight season', which is not a year range. The evidence does not support the pred answer as a valid answer to the question.",
+    "missing_support_reasons": [
+      "The question asks for years, but pred answer is a phrase 'sixth straight season'.",
+      "No evidence shows that the manager was led by a coach for 6 straight seasons; the evidence shows Bobby Cox managed the team for 6 straight seasons, not being led by a coach.",
+      "The bridge hop (manager led by coach) is not supported."
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5abfddbb5542997d642958f4",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abfddbb5542997d642958f4::Ferrari F2005::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abfddbb5542997d642958f4::2007 Dallas Cowboys season::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abfddbb5542997d642958f4::Bobby Cox::6"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abfddbb5542997d642958f4::1995 Atlanta Braves season::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abfddbb5542997d642958f4::Dick Biddle::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abfddbb5542997d642958f4::Bobby Cox",
+        "5abfddbb5542997d642958f4::1995 Atlanta Braves season"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abfddbb5542997d642958f4::Ferrari F2005::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abfddbb5542997d642958f4::2007 Dallas Cowboys season::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abfddbb5542997d642958f4::Bobby Cox::6",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abfddbb5542997d642958f4::1995 Atlanta Braves season::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abfddbb5542997d642958f4::Dick Biddle::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abfddbb5542997d642958f4::Dick Biddle::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Biddle is also the first Colgate coach to ever record nine straight seasons with seven or more victories.\n[2] For the sixth straight season, the team was managed by Bobby Cox.\n[3] He holds the all-time record for ejections in Major League Baseball with 158 (plus an additional three post-season ejections), a record previously held by John McGraw.\n[4] This marked the first season for Wade Phillips as head coach."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

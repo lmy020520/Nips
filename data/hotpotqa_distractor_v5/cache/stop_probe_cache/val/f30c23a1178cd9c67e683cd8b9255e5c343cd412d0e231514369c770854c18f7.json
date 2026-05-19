@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Suffolk County",
+  "pred_answer": "Suffolk County",
+  "normalized_gold": "suffolk county",
+  "normalized_pred": "suffolk county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7d3155542993210983f63",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7d3155542993210983f63::Lauren J. Fuchs::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7d3155542993210983f63::J. P. McCaskey High School::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7d3155542993210983f63::Centereach High School::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae7d3155542993210983f63::Claudia E. McCarthy::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7d3155542993210983f63::Lauren J. Fuchs",
+        "5ae7d3155542993210983f63::Centereach High School"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7d3155542993210983f63::Lauren J. Fuchs::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7d3155542993210983f63::J. P. McCaskey High School::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7d3155542993210983f63::Centereach High School::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae7d3155542993210983f63::Claudia E. McCarthy::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7d3155542993210983f63::Claudia E. McCarthy::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Claudia E. McCarthy (born 1949) from Cumberland County, New Jersey is the Millville Senior High School field hockey coach.\n[2] Centereach High School is a public high school in the Middle Country Central School District of Suffolk County, New York on Long Island, teaching a college preparatory curriculum for grades nine through twelve.\n[3] J. P. McCaskey High School is a public high school located in Lancaster, Pennsylvania, United States.\n[4] A former street hockey player on Long Island, she played high school field hockey for the Centereach High School Cougars."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

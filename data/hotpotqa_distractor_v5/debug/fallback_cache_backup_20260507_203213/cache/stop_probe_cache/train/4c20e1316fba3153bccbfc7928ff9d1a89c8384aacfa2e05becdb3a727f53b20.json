@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "writer",
+  "pred_answer": "writer",
+  "normalized_gold": "writer",
+  "normalized_pred": "writer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab87b3b55429919ba4e2305",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab87b3b55429919ba4e2305::Grounding in communication::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab87b3b55429919ba4e2305::Physicians Mutual::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab87b3b55429919ba4e2305::Kay Boyle::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab87b3b55429919ba4e2305::T. E. Lawrence::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab87b3b55429919ba4e2305::Mutual liberty::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab87b3b55429919ba4e2305::Kay Boyle",
+        "5ab87b3b55429919ba4e2305::T. E. Lawrence"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab87b3b55429919ba4e2305::Grounding in communication::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab87b3b55429919ba4e2305::Physicians Mutual::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab87b3b55429919ba4e2305::Kay Boyle::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab87b3b55429919ba4e2305::T. E. Lawrence::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab87b3b55429919ba4e2305::Mutual liberty::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab87b3b55429919ba4e2305::Mutual liberty::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Mill believed that the most proper occasion for mutual liberty was in a community governed by the consent of the governed, i.e., a republic.\n[2] Thomas Edward Lawrence, (16 August 1888 – 19 May 1935) was a British archaeologist, military officer, diplomat, and writer.\n[3] Kay Boyle (February 19, 1902 – December 27, 1992) was an American novelist, short story writer, educator, and political activist.\n[4] Founded as Physicians Mutual Insurance Company in 1902 by Edwin E. Elliott, Physicians Mutual began by selling health insurance to medical professionals."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

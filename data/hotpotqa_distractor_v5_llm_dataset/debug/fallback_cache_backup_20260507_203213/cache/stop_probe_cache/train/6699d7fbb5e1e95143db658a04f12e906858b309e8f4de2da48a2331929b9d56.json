@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Disney Television Animation",
+  "pred_answer": "Disney Television Animation",
+  "normalized_gold": "disney television animation",
+  "normalized_pred": "disney television animation",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe853455429976d4830b52",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe853455429976d4830b52::List of Fruits Basket episodes::6"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe853455429976d4830b52::Angry Birds Stella (TV series)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe853455429976d4830b52::Gravity Falls::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe853455429976d4830b52::Carpet Diem::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abe853455429976d4830b52::List of Fruits Basket episodes::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe853455429976d4830b52::Gravity Falls",
+        "5abe853455429976d4830b52::Carpet Diem"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe853455429976d4830b52::List of Fruits Basket episodes::6",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe853455429976d4830b52::Angry Birds Stella (TV series)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe853455429976d4830b52::Gravity Falls::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe853455429976d4830b52::Carpet Diem::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abe853455429976d4830b52::List of Fruits Basket episodes::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe853455429976d4830b52::List of Fruits Basket episodes::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Based on the twenty-three volume manga series written by Natsuki Takaya, the series tells the story of Tohru Honda, an orphan girl living in a tent so not to trouble anyone who, after meeting Yuki, Kyo, and Shigure Sohma (who later ask her to do their housework in exchange for a room to stay in), learns that thirteen members of the Sohma family are possessed by the animals of the Chinese zodiac an\n[2] \"Carpet Diem\" is the 16th episode of the first season of Gravity Falls.\n[3] Gravity Falls is an American animated television series produced by Disney Television Animation originally for Disney Channel (and then later for Disney XD) from June 15, 2012 to February 15, 2016.\n[4] Angry Birds Stella is a Finnish computer-animated TV series based on the game \"Angry Birds Stella\" that was produced by Rovio Entertainment."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

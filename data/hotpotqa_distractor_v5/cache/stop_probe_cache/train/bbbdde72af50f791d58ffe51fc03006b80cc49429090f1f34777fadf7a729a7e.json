@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sears",
+  "pred_answer": "Sears",
+  "normalized_gold": "sears",
+  "normalized_pred": "sears",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade0ba75542992200553be7",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade0ba75542992200553be7::Gateway Fashion Mall::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade0ba75542992200553be7::Golfsmith::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade0ba75542992200553be7::Gateway Fashion Mall::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade0ba75542992200553be7::Hancock Fabrics::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ade0ba75542992200553be7::Mike Peluso (ice hockey, born 1974)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade0ba75542992200553be7::Gateway Fashion Mall",
+        "5ade0ba75542992200553be7::Hancock Fabrics"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade0ba75542992200553be7::Gateway Fashion Mall::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade0ba75542992200553be7::Golfsmith::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade0ba75542992200553be7::Gateway Fashion Mall::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade0ba75542992200553be7::Hancock Fabrics::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ade0ba75542992200553be7::Mike Peluso (ice hockey, born 1974)::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade0ba75542992200553be7::Mike Peluso (ice hockey, born 1974)::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Peluso was raised in Hibbing, Minnesota and Bismarck, North Dakota .\n[2] Hancock Fabrics was a specialty retailer of crafts and fabrics based in Baldwyn, Mississippi, United States.\n[3] Opened in 1979, the mall has more than 30 stores, with Hancock Fabrics and Sears as anchor stores.\n[4] Golfsmith International Holdings Inc. was an American golf specialty retailer based in Austin, Texas."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

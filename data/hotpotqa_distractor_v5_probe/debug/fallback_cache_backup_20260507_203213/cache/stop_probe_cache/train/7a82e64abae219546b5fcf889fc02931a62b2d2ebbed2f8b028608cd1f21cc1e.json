@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Shin Tae-ra",
+  "pred_answer": "Shin Tae-ra",
+  "normalized_gold": "shin tae-ra",
+  "normalized_pred": "shin tae-ra",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab41123554299753aec5a31",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab41123554299753aec5a31::Kim Young-kwang (actor)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab41123554299753aec5a31::Runway Cop::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab41123554299753aec5a31::Midnight Runners::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab41123554299753aec5a31::Kim Young-kwang (actor)",
+        "5ab41123554299753aec5a31::Runway Cop"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab41123554299753aec5a31::Kim Young-kwang (actor)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab41123554299753aec5a31::Runway Cop::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab41123554299753aec5a31::Midnight Runners::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab41123554299753aec5a31::Midnight Runners::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Young Cop ) is a 2017 South Korean action comedy film directed by Kim Joo-hwan and starring Park Seo-joon and Kang Ha-neul.\n[2] Runway Cop (, literally \"Detective Cha\") is a 2012 South Korean action comedy film, starring Kang Ji-hwan and Sung Yu-ri and directed by Shin Tae-ra.\n[3] In 2008, he was the first Asian model to walk Dior Homme's show."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

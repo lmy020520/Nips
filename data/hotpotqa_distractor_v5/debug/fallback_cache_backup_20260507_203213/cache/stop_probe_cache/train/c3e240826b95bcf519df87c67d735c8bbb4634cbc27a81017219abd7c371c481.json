@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Soviet",
+  "pred_answer": "Soviet",
+  "normalized_gold": "soviet",
+  "normalized_pred": "soviet",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a736b095542991f29ee2dfc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a736b095542991f29ee2dfc::Jean-Loup Chrétien::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a736b095542991f29ee2dfc::Soyuz T-6::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a736b095542991f29ee2dfc::Sigmund Jähn::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a736b095542991f29ee2dfc::Ulf Merbold::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a736b095542991f29ee2dfc::Jean-Loup Chrétien",
+        "5a736b095542991f29ee2dfc::Sigmund Jähn"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a736b095542991f29ee2dfc::Jean-Loup Chrétien::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a736b095542991f29ee2dfc::Soyuz T-6::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a736b095542991f29ee2dfc::Sigmund Jähn::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a736b095542991f29ee2dfc::Ulf Merbold::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a736b095542991f29ee2dfc::Ulf Merbold::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Dr. Ulf Dietrich Merbold (born June 20, 1941) is the first West German citizen and second German native (after Sigmund Jähn) to have flown in space.\n[2] Sigmund Werner Paul Jähn (born 13 February 1937) is a German cosmonaut and pilot, who in 1978 became the first East German (and German native) to fly in space as part of the Soviet Union's Interkosmos programme.\n[3] Along with two Soviet cosmonauts, the crew included a Frenchman, Jean-Loup Chrétien.\n[4] He flew on two Franco-Soviet space missions and a NASA Space Shuttle mission."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

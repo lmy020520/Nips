@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Himalayas",
+  "pred_answer": "Himalayas",
+  "normalized_gold": "himalayas",
+  "normalized_pred": "himalayas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4f0b95542993aec5ec0f9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4f0b95542993aec5ec0f9::Istor-o-Nal::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4f0b95542993aec5ec0f9::Mount Everest reconnaissance from Nepal::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4f0b95542993aec5ec0f9::Mount Everest::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4f0b95542993aec5ec0f9::Tingri (town)::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4f0b95542993aec5ec0f9::Istor-o-Nal",
+        "5ae4f0b95542993aec5ec0f9::Mount Everest"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4f0b95542993aec5ec0f9::Istor-o-Nal::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4f0b95542993aec5ec0f9::Mount Everest reconnaissance from Nepal::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4f0b95542993aec5ec0f9::Mount Everest::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4f0b95542993aec5ec0f9::Tingri (town)::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4f0b95542993aec5ec0f9::Tingri (town)::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is known for its spectacular views of Mount Everest, Mount Lhotse, Mount Makalu, and Cho Oyu, which comprise four of the six highest mountains in the world.\n[2] Mount Everest, known in Nepali as Sagarmāthā and in Tibetan as Chomolungma, is Earth's highest mountain, located in the Mahalangur Himal sub-range of the Himalayas.\n[3] After World War II, with Tibet closing its borders and Nepal becoming considerably more open, Mount Everest reconnaissance from Nepal became possible for the first time culminating in the successful ascent of 1953.\n[4] Istor-o-Nal or इस्तोर-ओ-नल is the third highest mountain in the Hindu Kush, in the Chitral District of the North-West Frontier Province of Pakistan."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

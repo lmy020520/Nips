@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1694",
+  "pred_answer": "1694",
+  "normalized_gold": "1694",
+  "normalized_pred": "1694",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2a41e55429967731025d0",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2a41e55429967731025d0::Brendan Bracken::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2a41e55429967731025d0::Bank of England::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2a41e55429967731025d0::Psychopathography of Adolf Hitler::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2a41e55429967731025d0::Brendan Bracken",
+        "5ac2a41e55429967731025d0::Bank of England"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2a41e55429967731025d0::Brendan Bracken::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2a41e55429967731025d0::Bank of England::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2a41e55429967731025d0::Psychopathography of Adolf Hitler::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2a41e55429967731025d0::Psychopathography of Adolf Hitler::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Psychopathography of Adolf Hitler is an umbrella term for psychiatric (pathographic, psychobiographic) literature that deals with the hypothesis that the German Führer and Reichskanzler Adolf Hitler (1889–1945) suffered from mental illness.\n[2] The Bank was privately owned by stockholders from its foundation in 1694 until it was nationalised in 1946.\n[3] He is best remembered for opposing the Bank of England's co-operation with Adolf Hitler, and for subsequently supporting Winston Churchill's prosecution of World War II against Hitler."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

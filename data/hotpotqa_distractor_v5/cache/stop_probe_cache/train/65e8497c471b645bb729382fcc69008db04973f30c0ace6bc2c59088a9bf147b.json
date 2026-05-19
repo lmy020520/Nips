@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2001",
+  "pred_answer": "2001",
+  "normalized_gold": "2001",
+  "normalized_pred": "2001",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade501b554299728e26c6c0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade501b554299728e26c6c0::A Little Chaos::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade501b554299728e26c6c0::Charlotte Gray (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade501b554299728e26c6c0::Jeremy Brock::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade501b554299728e26c6c0::Casualty (series 1)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade501b554299728e26c6c0::Charlotte Gray (film)",
+        "5ade501b554299728e26c6c0::Jeremy Brock"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade501b554299728e26c6c0::A Little Chaos::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade501b554299728e26c6c0::Charlotte Gray (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade501b554299728e26c6c0::Jeremy Brock::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade501b554299728e26c6c0::Casualty (series 1)::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade501b554299728e26c6c0::Casualty (series 1)::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Brock and Unwin were deeply concerned with what they saw within hospitals and decided to pitch a document in 1985 for the BBC.\n[2] Jeremy Brock MBE (born 1959) is an English writer and director whose works include the screenplays \"Mrs Brown\", \"Driving Lessons\", \"The Last King of Scotland\", \"Charlotte Gray\", and \"The Eagle\".\n[3] Charlotte Gray is a 2001 British–Australian–German film drama directed by Gillian Armstrong.\n[4] The story was conceived by Allison Deegan and she co-wrote the screenplay along with Rickman and Jeremy Brock."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

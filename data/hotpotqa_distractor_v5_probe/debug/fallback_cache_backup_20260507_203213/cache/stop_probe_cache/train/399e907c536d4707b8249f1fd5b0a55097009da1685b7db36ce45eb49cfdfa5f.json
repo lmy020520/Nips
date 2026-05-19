@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "four",
+  "pred_answer": "four",
+  "normalized_gold": "four",
+  "normalized_pred": "four",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2fb5f5542991a06ce9917",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2fb5f5542991a06ce9917::Tamyen people::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2fb5f5542991a06ce9917::Dai Mirdad (Hazara tribe)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2fb5f5542991a06ce9917::Shoshone::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae2fb5f5542991a06ce9917::Sacajawea (novel)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae2fb5f5542991a06ce9917::Hamazkayin::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2fb5f5542991a06ce9917::Shoshone",
+        "5ae2fb5f5542991a06ce9917::Sacajawea (novel)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2fb5f5542991a06ce9917::Tamyen people::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2fb5f5542991a06ce9917::Dai Mirdad (Hazara tribe)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2fb5f5542991a06ce9917::Shoshone::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae2fb5f5542991a06ce9917::Sacajawea (novel)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae2fb5f5542991a06ce9917::Hamazkayin::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2fb5f5542991a06ce9917::Hamazkayin::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Hamazkayin (Armenian: Համազգային ), short for Hamazkayin Armenian Educational and Cultural Society, is a major cultural organization of the Armenian Diaspora, with a presence in every significant Armenian community worldwide.\n[2] Sacajawea is a massive (over 1300 pages) historical fiction novel about the life of Sacajawea, noted Shoshone Indian travel guide of Lewis and Clark.\n[3] The Shoshone or Shoshoni ( or ) are a Native American tribe with four large cultural/linguistic divisions:\n[4] The Dai Mirdad are a tribe of the Hazara people, living largely in Dara-i-Suf District, Samangan Province, Afghanistan."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

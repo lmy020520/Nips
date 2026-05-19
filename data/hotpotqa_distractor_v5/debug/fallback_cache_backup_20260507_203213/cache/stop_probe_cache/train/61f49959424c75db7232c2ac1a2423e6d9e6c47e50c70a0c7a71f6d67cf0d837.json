@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "55,001",
+  "pred_answer": "55,001",
+  "normalized_gold": "55001",
+  "normalized_pred": "55001",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89e05b5542992e4fca841e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89e05b5542992e4fca841e::Coconut Creek, Florida::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89e05b5542992e4fca841e::Flamingo Field::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89e05b5542992e4fca841e::Nico Jamin::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a89e05b5542992e4fca841e::Carpenter Complex::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89e05b5542992e4fca841e::Coconut Creek, Florida",
+        "5a89e05b5542992e4fca841e::Nico Jamin"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89e05b5542992e4fca841e::Coconut Creek, Florida::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89e05b5542992e4fca841e::Flamingo Field::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89e05b5542992e4fca841e::Nico Jamin::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a89e05b5542992e4fca841e::Carpenter Complex::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a89e05b5542992e4fca841e::Carpenter Complex::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is the Florida home of the Philadelphia Phillies baseball operations, spring training site for the Phillies’ minor league players, home to the Gulf Coast League Phillies, and adjacent to Spectrum Field, spring training home of the Philadelphia Phillies and regular season home of the Clearwater Threshers.\n[2] Nicolas \"Nico\" Jamin (born December 5, 1995, in Rouen, France) is a French racing driver from Coconut Creek, Florida, United States.\n[3] Flamingo Field was a ballpark at the corner of 15th Street and Michigan Avenue in Miami Beach, Florida home to Miami Beach minor-league clubs and the spring training home of the New York Giants in 1934 and 1935, the Philadelphia Phillies from 1940 to 1942, and again in 1946, and the Pittsburgh Pirates in 1947.\n[4] It had a population of 55,001 in 2012."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

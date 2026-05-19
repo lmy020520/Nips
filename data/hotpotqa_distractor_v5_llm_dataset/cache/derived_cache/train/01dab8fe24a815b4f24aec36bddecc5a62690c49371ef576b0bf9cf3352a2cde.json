@@ -1,0 +1,23 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for a Dr. Who episode based on a specific short story by Moffat featuring a Weeping Angel. The raw evidence includes a note about the short story and mentions of episodes like 'The Time of Angels' and 'Flesh and Stone' which involve Weeping Angels and are written by Moffat. However, the gold answer is 'Blink', which is not among the raw candidates. A bridge note can connect the short story to 'Blink' if supported by external knowledge, but since we must only use provided source_unit_ids, we cannot directly link. Instead, we can derive a verification note to check if 'Blink' is mentioned elsewhere or a bridge note to connect the short story to the Weeping Angel episodes. Given constraints, we propose notes that use the provided units to highlight connections.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "The short story 'What I Did on My Christmas Holidays' By Sally Sparrow is connected to the Weeping Angel episodes written by Steven Moffat.",
+      "source_unit_ids": [
+        "5a775a685542993735360241::The Time of Angels::1",
+        "5a775a685542993735360241::Flesh and Stone::1"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "The episode 'Blink' is not listed among the provided raw candidates, so additional evidence is needed.",
+      "source_unit_ids": [
+        "5a775a685542993735360241::The Time of Angels::1"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

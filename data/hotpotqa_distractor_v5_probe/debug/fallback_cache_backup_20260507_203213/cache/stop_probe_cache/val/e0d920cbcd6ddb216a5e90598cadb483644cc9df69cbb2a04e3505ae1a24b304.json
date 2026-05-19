@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the Potomac River",
+  "pred_answer": "the Potomac River",
+  "normalized_gold": "the potomac river",
+  "normalized_pred": "the potomac river",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae536ca55429960a22e0263",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae536ca55429960a22e0263::Bartlesville Monthly Magazine::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae536ca55429960a22e0263::PacWest Bancorp::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae536ca55429960a22e0263::Alexandria, Virginia::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae536ca55429960a22e0263::Security Management (magazine)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae536ca55429960a22e0263::Peter Tarlow::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae536ca55429960a22e0263::Alexandria, Virginia",
+        "5ae536ca55429960a22e0263::Security Management (magazine)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae536ca55429960a22e0263::Bartlesville Monthly Magazine::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae536ca55429960a22e0263::PacWest Bancorp::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae536ca55429960a22e0263::Alexandria, Virginia::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae536ca55429960a22e0263::Security Management (magazine)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae536ca55429960a22e0263::Peter Tarlow::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae536ca55429960a22e0263::Peter Tarlow::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He is the author of \"Event Risk Management and Safety,\" which was reviewed by \"Security Management\" magazine in 2003 and 2005.\n[2] Security Management is the monthly magazine of ASIS International (formerly the American Society for Industrial Security).\n[3] Located along the western bank of the Potomac River, Alexandria is approximately 7 mi south of downtown Washington, D.C.\n[4] PacWest Bancorp () is a bank holding company based in Los Angeles, California, with one wholly owned banking subsidiary, Pacific Western Bank."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

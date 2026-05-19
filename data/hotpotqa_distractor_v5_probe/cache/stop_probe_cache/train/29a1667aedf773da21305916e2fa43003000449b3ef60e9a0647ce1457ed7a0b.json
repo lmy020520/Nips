@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1982",
+  "pred_answer": "1982",
+  "normalized_gold": "1982",
+  "normalized_pred": "1982",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8efd1655429918e830d178",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8efd1655429918e830d178::HMS Dreadnought (1875)::6"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8efd1655429918e830d178::Jonah (comics)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8efd1655429918e830d178::Sink the Belgrano!::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8efd1655429918e830d178::ARA General Belgrano::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8efd1655429918e830d178::Ottoman ironclad Aziziye::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8efd1655429918e830d178::Sink the Belgrano!",
+        "5a8efd1655429918e830d178::ARA General Belgrano"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8efd1655429918e830d178::HMS Dreadnought (1875)::6",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8efd1655429918e830d178::Jonah (comics)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8efd1655429918e830d178::Sink the Belgrano!::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8efd1655429918e830d178::ARA General Belgrano::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8efd1655429918e830d178::Ottoman ironclad Aziziye::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8efd1655429918e830d178::Ottoman ironclad Aziziye::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] She spent the 1880s out of service, though she was heavily rebuilt in the early 1890s and converted into a more modern barbette ship.\n[2] ARA General Belgrano was an Argentine Navy light cruiser in service from 1951 until 1982.\n[3] is a 1986 satirical play by English playwright Steven Berkoff about British Prime Minister Margaret Thatcher's decision to torpedo the Argentinian ship General Belgrano, as it was purportedly retreating during the 1982 Falklands War between the United Kingdom and Argentina.\n[4] His name is a direct reference to the long established sailor's superstition (which is in turn based on the Biblical prophet Jonah whose ship nearly sank in a storm)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

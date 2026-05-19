@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "a 6.5×52mm Carcano Model 91/38 infantry rifle",
+  "pred_answer": "a 6.5×52mm Carcano Model 91/38 infantry rifle",
+  "normalized_gold": "a 65×52mm carcano model 91/38 infantry rifle",
+  "normalized_pred": "a 65×52mm carcano model 91/38 infantry rifle",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77a4b75542995d8318123a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77a4b75542995d8318123a::Ruth Paine Home::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77a4b75542995d8318123a::Ruth Paine::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77a4b75542995d8318123a::John F. Kennedy assassination rifle::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77a4b75542995d8318123a::John F. Kennedy assassination rifle::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77a4b75542995d8318123a::Ruth Paine Home",
+        "5a77a4b75542995d8318123a::John F. Kennedy assassination rifle"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77a4b75542995d8318123a::Ruth Paine Home::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77a4b75542995d8318123a::Ruth Paine::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77a4b75542995d8318123a::John F. Kennedy assassination rifle::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77a4b75542995d8318123a::John F. Kennedy assassination rifle::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77a4b75542995d8318123a::John F. Kennedy assassination rifle::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In March 1963, Lee Harvey Oswald, using the alias \"A. Hidell,\" purchased by mail order a 6.5×52mm Carcano Model 91/38 infantry rifle (described by the President's Commission on the Assassination of President Kennedy as a \"Mannlicher–Carcano\" ) rifle with a telescopic sight.\n[2] It is officially accepted that the rifle was fired by Oswald from the Texas School Book Depository in Dallas, Texas, to assassinate United States President John F. Kennedy as his motorcade drove by on November 22, 1963.\n[3] Ruth Hyde Paine (born September 3, 1932) was a friend of Marina Oswald, who was living with her at the time of the JFK assassination.\n[4] The Ruth Paine Home at 2515 W. 5th Street in Irving, Texas, United States, is the location where Lee Harvey Oswald spent the night before assassinating President John F. Kennedy on November 22, 1963."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

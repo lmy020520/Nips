@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Van Johnson",
+  "pred_answer": "Van Johnson",
+  "normalized_gold": "van johnson",
+  "normalized_pred": "van johnson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77879c55429949eeb29ed2",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77879c55429949eeb29ed2::Fred Frink::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77879c55429949eeb29ed2::Jimmy DeHart::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77879c55429949eeb29ed2::The Caine Mutiny (film)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77879c55429949eeb29ed2::Van Johnson::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a77879c55429949eeb29ed2::Jimmy DeHart::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77879c55429949eeb29ed2::The Caine Mutiny (film)",
+        "5a77879c55429949eeb29ed2::Van Johnson"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77879c55429949eeb29ed2::Fred Frink::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77879c55429949eeb29ed2::Jimmy DeHart::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77879c55429949eeb29ed2::The Caine Mutiny (film)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77879c55429949eeb29ed2::Van Johnson::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a77879c55429949eeb29ed2::Jimmy DeHart::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77879c55429949eeb29ed2::Jimmy DeHart::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He attended the University of Pittsburgh, where he played football for the Panthers from 1914 to 1916 and in 1918, where he was hailed as a \"star\".\n[2] Charles Van Dell Johnson ( ; August 25, 1916 – December 12, 2008) was an American film and television actor and dancer who was a major star at Metro-Goldwyn-Mayer during and after World War II.\n[3] A fictional Navy drama set in the Pacific during World War II, it was directed by Edward Dmytryk and produced by Stanley Kramer, and stars Humphrey Bogart, José Ferrer, Van Johnson, and Fred MacMurray.\n[4] James DeHart (August 25, 1893 – March 4, 1935) was an American football player and coach."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

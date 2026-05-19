@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Destiny's Child",
+  "pred_answer": "Destiny's Child",
+  "normalized_gold": "destinys child",
+  "normalized_pred": "destinys child",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c01745542990527d55442",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c01745542990527d55442::Destiny's Child::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c01745542990527d55442::List of songs recorded by Beyoncé::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c01745542990527d55442::Live at Wembley (Beyoncé album)::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7c01745542990527d55442::List of Beyoncé live performances::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c01745542990527d55442::Destiny's Child",
+        "5a7c01745542990527d55442::Live at Wembley (Beyoncé album)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c01745542990527d55442::Destiny's Child::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c01745542990527d55442::List of songs recorded by Beyoncé::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c01745542990527d55442::Live at Wembley (Beyoncé album)::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7c01745542990527d55442::List of Beyoncé live performances::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c01745542990527d55442::List of Beyoncé live performances::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Her solo tour debut (whilst on hiatus with Destiny's Child) began in 2003, with the Dangerously in Love Tour.\n[2] Most of the songs on \"Live at Wembley\" originate from \"Dangerously in Love\", although Beyoncé also performed a medley of past songs by her former group Destiny's Child.\n[3] American singer Beyoncé rose to fame in the late 1990s as the lead singer of the R&B girl group Destiny's Child, one of the world's best-selling girl groups of all time.\n[4] Destiny's Child was launched into mainstream recognition following the 1999 release of their best-selling second album, \"The Writing's on the Wall\", which contained the number-one singles \"Bills, Bills, Bills\" and \"Say My Name\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

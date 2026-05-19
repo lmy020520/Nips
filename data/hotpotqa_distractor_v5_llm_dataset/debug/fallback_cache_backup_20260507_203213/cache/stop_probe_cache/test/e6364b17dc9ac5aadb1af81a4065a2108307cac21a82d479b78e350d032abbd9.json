@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Juventus Football Club",
+  "pred_answer": "Juventus Football Club",
+  "normalized_gold": "juventus football club",
+  "normalized_pred": "juventus football club",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d07a455429907fabef0ae",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d07a455429907fabef0ae::József Viola::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d07a455429907fabef0ae::Juventus F.C.::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d07a455429907fabef0ae::List of Juventus F.C. records and statistics::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d07a455429907fabef0ae::József Viola",
+        "5a7d07a455429907fabef0ae::Juventus F.C."
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d07a455429907fabef0ae::József Viola::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d07a455429907fabef0ae::Juventus F.C.::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d07a455429907fabef0ae::List of Juventus F.C. records and statistics::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d07a455429907fabef0ae::List of Juventus F.C. records and statistics::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Juventus Football Club is an Italian professional association football club based in Turin, Piedmont that competes in Serie A, the top football league in the country.\n[2] Juventus Football Club S.p.A. (from Latin \"iuventūs\", \"youth\"; ] ), colloquially known as Juve (] ), is a professional Italian football club in Turin, Piedmont.\n[3] He is most prominent for his time in Italy and his association with clubs such as Juventus."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

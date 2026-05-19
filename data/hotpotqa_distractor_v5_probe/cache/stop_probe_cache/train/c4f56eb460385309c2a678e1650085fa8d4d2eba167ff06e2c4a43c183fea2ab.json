@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Major Thomas Jones",
+  "pred_answer": "Major Thomas Jones",
+  "normalized_gold": "major thomas jones",
+  "normalized_pred": "major thomas jones",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe06065542991f661060ab",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe06065542991f661060ab::Reynolds Channel::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe06065542991f661060ab::Jones Inlet::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe06065542991f661060ab::Jones Beach Island::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe06065542991f661060ab::Loop Parkway::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe06065542991f661060ab::Jones Inlet",
+        "5abe06065542991f661060ab::Jones Beach Island"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe06065542991f661060ab::Reynolds Channel::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe06065542991f661060ab::Jones Inlet::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe06065542991f661060ab::Jones Beach Island::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe06065542991f661060ab::Loop Parkway::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe06065542991f661060ab::Loop Parkway::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It serves the barrier islands south of Long Island itself, beginning on Long Beach Barrier Island at an intersection with Lido Boulevard in Point Lookout.\n[2] It is named for Major Thomas Jones, who first came to Long Island in 1692, where he proceeded to build the island's first brick house near Massapequa.\n[3] Jones Inlet is located at the westernmost end of the 17 mi long Jones Beach barrier island that runs along Long Island's south shore.\n[4] The channel begins at the East Rockaway Inlet and ends at Point Lookout, where it merges with the Jones Inlet."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fearless",
+  "pred_answer": "Fearless",
+  "normalized_gold": "fearless",
+  "normalized_pred": "fearless",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adea4395542992fa25da7e9",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adea4395542992fa25da7e9::You Belong with Me::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adea4395542992fa25da7e9::Taylor Swift videography::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adea4395542992fa25da7e9::Teardrops on My Guitar::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adea4395542992fa25da7e9::You Belong with Me",
+        "5adea4395542992fa25da7e9::Taylor Swift videography"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adea4395542992fa25da7e9::You Belong with Me::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adea4395542992fa25da7e9::Taylor Swift videography::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adea4395542992fa25da7e9::Teardrops on My Guitar::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adea4395542992fa25da7e9::Teardrops on My Guitar::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The song was later included on the international release of Swift's second studio album, \"Fearless\" (2008), and released as the second pop single from the album in the United Kingdom.\n[2] For the video of \"You Belong with Me\" she won Best Female Video at the 2009 MTV Video Music Awards.\n[3] \"You Belong with Me\" is a song performed by American singer-songwriter Taylor Swift."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

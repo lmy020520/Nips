@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1692",
+  "pred_answer": "1692",
+  "normalized_gold": "1692",
+  "normalized_pred": "1692",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac5630e5542993e66e823d5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac5630e5542993e66e823d5::Prince Leopold of Bavaria (born 1943)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac5630e5542993e66e823d5::Joseph Ferdinand of Bavaria::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac5630e5542993e66e823d5::Maria Antonia of Austria::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac5630e5542993e66e823d5::Prince Joseph Ferdinand of Saxe-Coburg and Gotha::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac5630e5542993e66e823d5::Joseph Ferdinand of Bavaria",
+        "5ac5630e5542993e66e823d5::Maria Antonia of Austria"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac5630e5542993e66e823d5::Prince Leopold of Bavaria (born 1943)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac5630e5542993e66e823d5::Joseph Ferdinand of Bavaria::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac5630e5542993e66e823d5::Maria Antonia of Austria::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac5630e5542993e66e823d5::Prince Joseph Ferdinand of Saxe-Coburg and Gotha::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac5630e5542993e66e823d5::Prince Joseph Ferdinand of Saxe-Coburg and Gotha::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Prince Joseph Ferdinand of Saxe-Coburg and Gotha (full name \"Joseph Ferdinand Maria Michael Gabriel Raphael Gonzaga\"; 21 May 1869 – 13 August 1888), known in Brazil as Dom José Fernando, was a prince of the House of Saxe-Coburg and Gotha-Koháry.\n[2] Maria Antonia of Austria (Maria Antonia Josepha Benedicta Rosalia Petronella; 18 January 1669 – 24 December 1692) was the eldest daughter and only surviving child of Holy Roman Emperor Leopold I and his wife Margaret Theresa of Spain.\n[3] Joseph Ferdinand Leopold of Bavaria (28 October 1692 – 6 February 1699) was the son of Maximilian II Emanuel, Elector of Bavaria (1679–1705, 1714–1726) and his first wife, Maria Antonia of Austria, daughter of Leopold I, Holy Roman Emperor, maternal granddaughter of King Felipe IV of Spain.\n[4] Prince Leopold (Poldi) of Bavaria (German: \"Leopold Rupprecht Ludwig Ferdinand Adalbert Friedrich Maria et omnes sancti Prinz von Bayern\" ) (born 21 June 1943) is a member of the Bavarian royal house of Wittelsbach and a former champion race car driver."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

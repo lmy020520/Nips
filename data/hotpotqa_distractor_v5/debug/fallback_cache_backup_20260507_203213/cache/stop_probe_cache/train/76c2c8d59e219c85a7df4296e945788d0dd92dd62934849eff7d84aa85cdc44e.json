@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Rick Rescorla",
+  "pred_answer": "Rick Rescorla",
+  "normalized_gold": "rick rescorla",
+  "normalized_pred": "rick rescorla",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2bc01554299495565db1c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2bc01554299495565db1c::The Man Who Predicted 9/11::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2bc01554299495565db1c::Clara Leach Adams-Ender::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2bc01554299495565db1c::The Man Who Predicted 9/11::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae2bc01554299495565db1c::Rick Rescorla::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae2bc01554299495565db1c::Gaylord T. Gunhus::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2bc01554299495565db1c::The Man Who Predicted 9/11",
+        "5ae2bc01554299495565db1c::Rick Rescorla"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2bc01554299495565db1c::The Man Who Predicted 9/11::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2bc01554299495565db1c::Clara Leach Adams-Ender::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2bc01554299495565db1c::The Man Who Predicted 9/11::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae2bc01554299495565db1c::Rick Rescorla::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae2bc01554299495565db1c::Gaylord T. Gunhus::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2bc01554299495565db1c::Gaylord T. Gunhus::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Chaplain (Major General) Gaylord Thomas \"G.T.\" Gunhus (May 22, 1940 – May 27, 2016) was an American Army officer who, from 1999 to 2003, served as the 20th Chief of Chaplains of the United States Army.\n[2] Cyril Richard Rescorla (May 27, 1939 – September 11, 2001) was a United States Army officer and private security officer of British origin who served in Northern Rhodesia as a member of the Northern Rhodesia Police (NRP) and as a commissioned officer in the Vietnam War, where he was a second lieutenant in the United States Army.\n[3] The programme is centered on the director of security of Morgan Stanley, Rick Rescorla, who predicted an attack on the World Trade Center and led hundreds out of the South Tower before dying in its collapse.\n[4] Clara Leach Adams-Ender (born July 11, 1939) is a retired US Army officer who was Chief of the United States Army Nurse Corps from September 1987 to August 1991."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

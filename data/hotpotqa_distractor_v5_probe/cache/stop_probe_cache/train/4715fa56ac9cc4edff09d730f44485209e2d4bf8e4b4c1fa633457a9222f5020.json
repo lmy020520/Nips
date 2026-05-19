@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Gordon Wiles",
+  "pred_answer": "Gordon Wiles",
+  "normalized_gold": "gordon wiles",
+  "normalized_pred": "gordon wiles",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c48f155429907fabeef4e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c48f155429907fabeef4e::Irvin Kershner::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c48f155429907fabeef4e::Gordon Wiles::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c48f155429907fabeef4e::Archie Wiles::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c48f155429907fabeef4e::Irvin Kershner",
+        "5a7c48f155429907fabeef4e::Gordon Wiles"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c48f155429907fabeef4e::Irvin Kershner::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c48f155429907fabeef4e::Gordon Wiles::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c48f155429907fabeef4e::Archie Wiles::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c48f155429907fabeef4e::Archie Wiles::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Although born in Barbados, Wiles played his domestic cricket for Trinidad in the Caribbean’s annual Inter-Colonial tournament.\n[2] Gordon Wiles (October 10, 1904 – October 17, 1950) was an American art director and film director.\n[3] Irvin Kershner (born Isadore Kershner; April 29, 1923November 27, 2010) was an American actor and director of film and television."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

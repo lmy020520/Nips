@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Adam Drummond",
+  "pred_answer": "Adam Drummond",
+  "normalized_gold": "adam drummond",
+  "normalized_pred": "adam drummond",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7152165542994082a3e7cb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7152165542994082a3e7cb::Megginch Castle::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7152165542994082a3e7cb::Sir John Gladstone, 1st Baronet::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7152165542994082a3e7cb::Adam Drummond::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7152165542994082a3e7cb::Megginch Castle::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7152165542994082a3e7cb::Megginch Castle",
+        "5a7152165542994082a3e7cb::Adam Drummond"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7152165542994082a3e7cb::Megginch Castle::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7152165542994082a3e7cb::Sir John Gladstone, 1st Baronet::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7152165542994082a3e7cb::Adam Drummond::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7152165542994082a3e7cb::Megginch Castle::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7152165542994082a3e7cb::Megginch Castle::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was the family home of the late Cherry Drummond, 16th Baroness Strange.\n[2] Adam Drummond (31 January 1713 – 17 June 1786), 11th of Lennoch and 4th of Megginch in Perthshire, was a Scottish merchant, banker and Member of Parliament.\n[3] Sir John Gladstone of Fasque, 1st Baronet, FRSE LLD (11 December 1764 – 7 December 1851) was a Scottish merchant, slave-trader, Member of Parliament, and the father of the British Prime Minister William Ewart Gladstone.\n[4] It is now occupied by Lady Strange's daughter Catherine Star Violetta Herdman and her husband."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Héloïse d'Argenteuil",
+  "pred_answer": "Héloïse d'Argenteuil",
+  "normalized_gold": "héloïse dargenteuil",
+  "normalized_pred": "héloïse dargenteuil",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab872b455429934fafe6dbf",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab872b455429934fafe6dbf::Peter of Bruys::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab872b455429934fafe6dbf::Sensitive Compartmented Information::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab872b455429934fafe6dbf::Peter Abelard::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab872b455429934fafe6dbf::Peter Abelard::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab872b455429934fafe6dbf::Peter of Bruys",
+        "5ab872b455429934fafe6dbf::Peter Abelard"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab872b455429934fafe6dbf::Peter of Bruys::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab872b455429934fafe6dbf::Sensitive Compartmented Information::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab872b455429934fafe6dbf::Peter Abelard::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab872b455429934fafe6dbf::Peter Abelard::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab872b455429934fafe6dbf::Peter Abelard::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] His love for, and affair with, Héloïse d'Argenteuil have become legendary.\n[2] Peter Abelard ( ; Latin: \"Petrus Abaelardus\" or \"Abailardus\"; French: \"Pierre Abélard\" , ] ; 1079 – 21 April 1142) was a medieval French scholastic philosopher, theologian and preeminent logician.\n[3] Sensitive compartmented information (SCI) is a type of United States classified information concerning or derived from sensitive intelligence sources, methods, or analytical processes.\n[4] Information concerning Peter of Bruys is derived from two extant sources, the treatise of Peter the Venerable against his followers and from a passage written by Peter Abelard."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

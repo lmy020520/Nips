@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "169",
+  "pred_answer": "169",
+  "normalized_gold": "169",
+  "normalized_pred": "169",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab87fe855429934fafe6e01",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab87fe855429934fafe6e01::Tonga::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab87fe855429934fafe6e01::Viliami Veasi‘i Veikune::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab87fe855429934fafe6e01::Rennell Island::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab87fe855429934fafe6e01::Tonga",
+        "5ab87fe855429934fafe6e01::Viliami Veasi‘i Veikune"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab87fe855429934fafe6e01::Tonga::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab87fe855429934fafe6e01::Viliami Veasi‘i Veikune::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab87fe855429934fafe6e01::Rennell Island::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab87fe855429934fafe6e01::Rennell Island::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Rennell and Bellona Islands are two of the few islands in the Melanesian Solomon Island archipelago classified as a Polynesian outlier (others being Sikaiana, Ontong Java, Tikopia, Anuta, Duff Islands, and some Reef Islands).\n[2] Viliami Veasiʻi Veikune, styled Lord Tuʻihaʻateiho is a Tongan noble, politician, and Member of the Legislative Assembly of Tonga.\n[3] Tonga ( or ; Tongan: ] \"Puleʻanga Fakatuʻi ʻo Tonga\"), officially the Kingdom of Tonga, is a Polynesian sovereign state and archipelago comprising 169 islands, of which 36 are inhabited."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

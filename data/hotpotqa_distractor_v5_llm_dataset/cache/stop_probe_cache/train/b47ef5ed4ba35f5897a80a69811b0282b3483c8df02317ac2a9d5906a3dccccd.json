@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Stephen Colbert",
+  "pred_answer": "Stephen Colbert",
+  "normalized_gold": "stephen colbert",
+  "normalized_pred": "stephen colbert",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5aba94535542994dbf019954",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5aba94535542994dbf019954::Bernie Ward::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5aba94535542994dbf019954::T. J. Jagodowski::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5aba94535542994dbf019954::Stephen Colbert::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5aba94535542994dbf019954::IO Theater::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5aba94535542994dbf019954::Amber Ruffin::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5aba94535542994dbf019954::Stephen Colbert",
+        "5aba94535542994dbf019954::IO Theater"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5aba94535542994dbf019954::Bernie Ward::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5aba94535542994dbf019954::T. J. Jagodowski::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5aba94535542994dbf019954::Stephen Colbert::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5aba94535542994dbf019954::IO Theater::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5aba94535542994dbf019954::Amber Ruffin::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5aba94535542994dbf019954::Amber Ruffin::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] She is also a member of RobotDown, a sketch comedy troupe, and a former performer at Boom Chicago, iO Theater, and The Second City.\n[2] iO, or iO Chicago, (formerly known as \"ImprovOlympic\") is an improv theater and training center in central Chicago, with a branch in Los Angeles called iO West.\n[3] He is best known for hosting the satirical Comedy Central program \"The Colbert Report\" from 2005 to 2014, and hosting the CBS talk program \"The Late Show with Stephen Colbert\" beginning in September 2015.\n[4] He has been a member of The Second City as well as a performer and teacher at iO Theater, formerly known as \"Improv Olympic\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

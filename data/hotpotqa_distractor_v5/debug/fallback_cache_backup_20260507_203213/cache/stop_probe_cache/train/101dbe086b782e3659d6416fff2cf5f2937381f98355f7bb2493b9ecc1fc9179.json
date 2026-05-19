@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2012",
+  "pred_answer": "2012",
+  "normalized_gold": "2012",
+  "normalized_pred": "2012",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a78b577554299148911f957",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a78b577554299148911f957::Love and Theft (Love and Theft album)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a78b577554299148911f957::Love and Theft (duo)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a78b577554299148911f957::If You Ever Get Lonely::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a78b577554299148911f957::Changed (album)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a78b577554299148911f957::Love and Theft (duo)",
+        "5a78b577554299148911f957::If You Ever Get Lonely"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a78b577554299148911f957::Love and Theft (Love and Theft album)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a78b577554299148911f957::Love and Theft (duo)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a78b577554299148911f957::If You Ever Get Lonely::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a78b577554299148911f957::Changed (album)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a78b577554299148911f957::Changed (album)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is their second studio album release after signing with Big Machine Records, and was released on April 3, 2012.\n[2] It was covered by American country music duo Love and Theft on their second studio album, \"Love and Theft\", in 2012 and released as the album's third single in June 2013.\n[3] Love and Theft is an American country music group founded by Stephen Barker Liles, Eric Gunderson, and Brian Bandas, all three of whom alternated as lead singers and acoustic guiarists.\n[4] Love and Theft is the second studio album by Eric Gunderson and Stephen Barker Liles in the American country music duo Love and Theft."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

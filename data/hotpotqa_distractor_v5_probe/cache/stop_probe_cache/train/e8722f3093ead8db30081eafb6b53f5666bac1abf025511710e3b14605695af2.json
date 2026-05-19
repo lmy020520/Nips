@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Jamie Maclaren",
+  "pred_answer": "Jamie Maclaren",
+  "normalized_gold": "jamie maclaren",
+  "normalized_pred": "jamie maclaren",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a75edb85542994ccc918662",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a75edb85542994ccc918662::A-League Young Footballer of the Year::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a75edb85542994ccc918662::Josh McCloughan::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a75edb85542994ccc918662::Jamie Maclaren::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a75edb85542994ccc918662::John Aloisi::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a75edb85542994ccc918662::A-League Young Footballer of the Year",
+        "5a75edb85542994ccc918662::Jamie Maclaren"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a75edb85542994ccc918662::A-League Young Footballer of the Year::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a75edb85542994ccc918662::Josh McCloughan::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a75edb85542994ccc918662::Jamie Maclaren::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a75edb85542994ccc918662::John Aloisi::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a75edb85542994ccc918662::John Aloisi::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] John Aloisi (born 5 February 1976) is a retired Australian football (soccer) player and the manager of A-League club Brisbane Roar !\n[2] Jamie Maclaren (born 29 July 1993) is an Australian professional soccer player who plays as a striker for 2.\n[3] A foundation Brisbane Roar player, Josh returned to the club to coach the Brisbane Roar FC Youth team in the 2015/16 season.\n[4] The current holder is Jamie Maclaren, who won the award for his performances throughout the 2015–16 campaign for Brisbane Roar."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Black Label Society",
+  "pred_answer": "Black Label Society",
+  "normalized_gold": "black label society",
+  "normalized_pred": "black label society",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2a6655542992953946796",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2a6655542992953946796::List of songs recorded by Alice in Chains::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2a6655542992953946796::Nick Catanese::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2a6655542992953946796::My Dying Time::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab2a6655542992953946796::Mike Inez::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab2a6655542992953946796::Nick Catanese::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2a6655542992953946796::Nick Catanese",
+        "5ab2a6655542992953946796::Mike Inez"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2a6655542992953946796::List of songs recorded by Alice in Chains::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2a6655542992953946796::Nick Catanese::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2a6655542992953946796::My Dying Time::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab2a6655542992953946796::Mike Inez::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab2a6655542992953946796::Nick Catanese::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2a6655542992953946796::Nick Catanese::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Nick Catanese (born June 2, 1971) is the former rhythm guitarist for Black Label Society.\n[2] Mike Inez (born May 14, 1966) is an American rock musician best known for his role as the bassist of Alice in Chains since 1993.\n[3] My Dying time is a single by Black Label Society, from their first album since Nick Catanese's departure from the band.\n[4] Phil was eventually replaced by Craig Nunenmacher, and several bassists (Steve Gibb, Mike Inez, Robert Trujillo, and James Lomenzo) replaced JD until he ultimately returned to the band in October 2005."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

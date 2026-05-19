@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Nobel Prize in Physics",
+  "pred_answer": "Nobel Prize in Physics",
+  "normalized_gold": "nobel prize in physics",
+  "normalized_pred": "nobel prize in physics",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab5957f5542992aa134a36c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab5957f5542992aa134a36c::The Pleasure of Finding Things Out::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab5957f5542992aa134a36c::Joe Haldeman::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab5957f5542992aa134a36c::Richard Feynman::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab5957f5542992aa134a36c::Science Society of China::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab5957f5542992aa134a36c::The Pleasure of Finding Things Out",
+        "5ab5957f5542992aa134a36c::Richard Feynman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab5957f5542992aa134a36c::The Pleasure of Finding Things Out::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab5957f5542992aa134a36c::Joe Haldeman::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab5957f5542992aa134a36c::Richard Feynman::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab5957f5542992aa134a36c::Science Society of China::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab5957f5542992aa134a36c::Science Society of China::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 1915 it began publication in China of a major journal, \"Kexue\" (\"Science\"), which was patterned on the journal of the American Association for the Advancement of Science.\n[2] For his contributions to the development of quantum electrodynamics, Feynman, jointly with Julian Schwinger and Shin'ichirō Tomonaga, received the Nobel Prize in Physics in 1965.\n[3] That novel, and other of his works including \"The Hemingway Hoax\" (1991) and \"Forever Peace\" (1997), have won major science fiction awards including the Hugo Award and Nebula Award.\n[4] The Pleasure of Finding Things Out is a collection of short works from American physicist Richard Feynman, including interviews, speeches, lectures, and printed articles."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

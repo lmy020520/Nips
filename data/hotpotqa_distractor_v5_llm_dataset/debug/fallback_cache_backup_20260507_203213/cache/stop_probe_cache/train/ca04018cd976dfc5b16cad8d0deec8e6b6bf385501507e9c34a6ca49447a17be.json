@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ruthless Records",
+  "pred_answer": "Ruthless Records",
+  "normalized_gold": "ruthless records",
+  "normalized_pred": "ruthless records",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84a6eb5542991dd0999d5e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84a6eb5542991dd0999d5e::Straight Outta Compton::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84a6eb5542991dd0999d5e::Represent (Compton's Most Wanted album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84a6eb5542991dd0999d5e::Eazy-E::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84a6eb5542991dd0999d5e::Straight Outta Compton",
+        "5a84a6eb5542991dd0999d5e::Represent (Compton's Most Wanted album)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84a6eb5542991dd0999d5e::Straight Outta Compton::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84a6eb5542991dd0999d5e::Represent (Compton's Most Wanted album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84a6eb5542991dd0999d5e::Eazy-E::6",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84a6eb5542991dd0999d5e::Eazy-E::6",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] In 1988, they released their most controversial album, \"Straight Outta Compton\".\n[2] Represent is the fourth album by Comptons Most Wanted, their first since \"Music to Driveby\" in 1992.\n[3] Straight Outta Compton is the debut studio album by American hip hop group N.W.A, released August 8, 1988 on group member Eazy-E's record label Ruthless Records."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

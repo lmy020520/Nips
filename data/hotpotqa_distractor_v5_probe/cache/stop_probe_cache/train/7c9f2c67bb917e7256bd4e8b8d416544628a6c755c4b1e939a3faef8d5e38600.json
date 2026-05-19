@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2007",
+  "pred_answer": "2007",
+  "normalized_gold": "2007",
+  "normalized_pred": "2007",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe77f855429976d4830b25",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe77f855429976d4830b25::I Can Talk::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe77f855429976d4830b25::Introducing ... Talk Talk::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe77f855429976d4830b25::Two Door Cinema Club::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe77f855429976d4830b25::Michael Tait::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe77f855429976d4830b25::I Can Talk",
+        "5abe77f855429976d4830b25::Two Door Cinema Club"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe77f855429976d4830b25::I Can Talk::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe77f855429976d4830b25::Introducing ... Talk Talk::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe77f855429976d4830b25::Two Door Cinema Club::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe77f855429976d4830b25::Michael Tait::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe77f855429976d4830b25::Michael Tait::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He became lead singer of the Christian pop rock band Newsboys in 2009, and though Peter Furler was the lead vocalist on the album \"In the Hands of God\", Tait provided supporting vocals on the project.\n[2] The band formed in 2007 and is composed of three members: Alex Trimble (vocals, rhythm guitar, beats, synths), Sam Halliday (lead guitar, backing vocals), and Kevin Baird (bass, synths, backing vocals).\n[3] Introducing ... Talk Talk is a compilation album by Talk Talk released in 2003 (one of many \"best of\" albums of the band released by coincidence the same year).\n[4] \"I Can Talk\" is a song by Irish band Two Door Cinema Club from their debut studio album \"Tourist History\" (2010)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

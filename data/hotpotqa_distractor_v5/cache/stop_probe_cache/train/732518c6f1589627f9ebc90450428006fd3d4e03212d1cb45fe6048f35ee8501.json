@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lou Reed",
+  "pred_answer": "Lou Reed",
+  "normalized_gold": "lou reed",
+  "normalized_pred": "lou reed",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab57c30554299488d4d99b0",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab57c30554299488d4d99b0::I Heard Her Call My Name::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab57c30554299488d4d99b0::Lou Reed::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab57c30554299488d4d99b0::I Heard Her Call My Name::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab57c30554299488d4d99b0::I Heard Her Call My Name",
+        "5ab57c30554299488d4d99b0::Lou Reed"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab57c30554299488d4d99b0::I Heard Her Call My Name::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab57c30554299488d4d99b0::Lou Reed::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab57c30554299488d4d99b0::I Heard Her Call My Name::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab57c30554299488d4d99b0::I Heard Her Call My Name::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It is a particularly loud, brash and aggressive song that features a pair of atonal guitar solos performed by Lou Reed and repeated use of piercing feedback.\n[2] Lewis Allan Reed (March 2, 1942 – October 27, 2013) was an American musician, singer and songwriter.\n[3] \"I Heard Her Call My Name\" is a song by American rock band The Velvet Underground."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

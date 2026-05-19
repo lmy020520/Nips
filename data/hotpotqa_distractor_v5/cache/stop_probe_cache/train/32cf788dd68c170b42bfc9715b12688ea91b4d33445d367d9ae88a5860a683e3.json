@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Deepa Mehta",
+  "pred_answer": "Deepa Mehta",
+  "normalized_gold": "deepa mehta",
+  "normalized_pred": "deepa mehta",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7ab0335542992d025e66ee",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7ab0335542992d025e66ee::Tony Kaye (director)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7ab0335542992d025e66ee::Giles Nuttgens::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7ab0335542992d025e66ee::Deepa Mehta::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7ab0335542992d025e66ee::Cooking with Stella::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7ab0335542992d025e66ee::Tony Kaye (director)",
+        "5a7ab0335542992d025e66ee::Deepa Mehta"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7ab0335542992d025e66ee::Tony Kaye (director)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7ab0335542992d025e66ee::Giles Nuttgens::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7ab0335542992d025e66ee::Deepa Mehta::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7ab0335542992d025e66ee::Cooking with Stella::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7ab0335542992d025e66ee::Cooking with Stella::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Cooking with Stella is a 2009 film written by siblings Deepa Mehta and Dilip Mehta.\n[2] Deepa Mehta, {'1': \", '2': \", '3': \", '4': \"} ( born 15 September 1950) is an Indo-Canadian film director and screenwriter, most known for her Elements Trilogy, \"Fire\" (1996), \"Earth\" (1998), and \"Water\" (2005); among which \"Earth\" was sent by India as its official entry for the Academy Award for Best Foreign Language Film, and \"Water\" was Canada's official entry for Academy Award for Best Foreign\n[3] Giles Nuttgens (born 1960), BSC is a British cinematographer, perhaps best known for the 2016 film \"Hell or High Water\", for which he received a 2017 BAFTA nomination.\n[4] Tony Kaye (born 8 July 1952) is a British director of films, music videos, advertisements, and documentaries."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

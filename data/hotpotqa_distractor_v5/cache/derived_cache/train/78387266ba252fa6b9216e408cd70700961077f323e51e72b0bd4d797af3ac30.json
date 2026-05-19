@@ -1,0 +1,31 @@
+{
+  "should_derive": true,
+  "reason": "Need to bridge between the question entities (Tolkien, Powys) and evidence about their published works to compare quantity.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "J. R. R. Tolkien's works are managed by the Tolkien Estate, which holds copyright for most of his works.",
+      "source_unit_ids": [
+        "5a85b99e5542994c784ddb68::Tolkien Estate::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "John Cowper Powys's Autobiography is considered one of his most important works.",
+      "source_unit_ids": [
+        "5a85b99e5542994c784ddb68::John Cowper Powys's Autobiography::0"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "The provided evidence mentions John Cowper Powys, not T. F. Powys, so the question may refer to John Cowper Powys.",
+      "source_unit_ids": [
+        "5a85b99e5542994c784ddb68::John Cowper Powys's Autobiography::0",
+        "5a85b99e5542994c784ddb68::John Cowper Powys::3"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

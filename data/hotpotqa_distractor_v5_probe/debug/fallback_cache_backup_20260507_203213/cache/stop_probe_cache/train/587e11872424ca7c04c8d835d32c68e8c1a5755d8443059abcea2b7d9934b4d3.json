@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Duffy's Tavern",
+  "pred_answer": "Duffy's Tavern",
+  "normalized_gold": "duffys tavern",
+  "normalized_pred": "duffys tavern",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a771e145542993569682cca",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a771e145542993569682cca::Eddie Bracken::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a771e145542993569682cca::The Miracle of Morgan's Creek::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a771e145542993569682cca::Duffy's Tavern (film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a771e145542993569682cca::Freddie Steele::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a771e145542993569682cca::Eddie Bracken",
+        "5a771e145542993569682cca::Duffy's Tavern (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a771e145542993569682cca::Eddie Bracken::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a771e145542993569682cca::The Miracle of Morgan's Creek::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a771e145542993569682cca::Duffy's Tavern (film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a771e145542993569682cca::Freddie Steele::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a771e145542993569682cca::Freddie Steele::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He appeared as an actor in a number of Hollywood films in the 1940s, including Preston Sturges's \"Hail the Conquering Hero\".\n[2] Duffy's Tavern is a 1945 American comedy film directed by Hal Walker and written by Melvin Frank and Norman Panama.\n[3] The Miracle of Morgan's Creek is a 1944 screwball comedy film written and directed by Preston Sturges, starring Eddie Bracken and Betty Hutton, and featuring Diana Lynn, William Demarest and Porter Hall.\n[4] Bracken became a Hollywood comedy legend with lead performances in the films \"Hail the Conquering Hero\" and \"The Miracle of Morgan's Creek\" both in 1944, and both have been preserved by the National Film Registry."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

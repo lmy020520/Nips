@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bethpage Ballpark",
+  "pred_answer": "Bethpage Ballpark",
+  "normalized_gold": "bethpage ballpark",
+  "normalized_pred": "bethpage ballpark",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a909e9b5542995651fb51be",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a909e9b5542995651fb51be::Bethpage Ballpark::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a909e9b5542995651fb51be::The Ballpark at Harbor Yard::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a909e9b5542995651fb51be::Long Island Ducks::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a909e9b5542995651fb51be::List of Anaheim Ducks head coaches::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a909e9b5542995651fb51be::Bethpage Ballpark",
+        "5a909e9b5542995651fb51be::Long Island Ducks"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a909e9b5542995651fb51be::Bethpage Ballpark::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a909e9b5542995651fb51be::The Ballpark at Harbor Yard::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a909e9b5542995651fb51be::Long Island Ducks::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a909e9b5542995651fb51be::List of Anaheim Ducks head coaches::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a909e9b5542995651fb51be::List of Anaheim Ducks head coaches::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Ducks have played their home games at the Honda Center, formerly known as the Anaheim Arena (1993) and the Arrowhead Pond of Anaheim (1993-2006), since their inaugural season.\n[2] Since the 2000 season, the Ducks have played their home games at Bethpage Ballpark - formerly known as EAB Park, Citibank Park, and Suffolk County Sports Park.\n[3] The Ballpark at Harbor Yard is a 5,300-seat baseball park in Bridgeport, Connecticut that hosted its first regular season baseball game on May 21, 1998, as the tenants of the facility, the Bridgeport Bluefish, lost to the Aberdeen Arsenal.\n[4] Its first regular season game took place on May 14, 2000, when the Ducks played host to the Aberdeen Arsenal."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

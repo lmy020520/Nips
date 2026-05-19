@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Army of Darkness",
+  "pred_answer": "Army of Darkness",
+  "normalized_gold": "army of darkness",
+  "normalized_pred": "army of darkness",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7f37c455429930675136b0",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7f37c455429930675136b0::Army of Darkness::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7f37c455429930675136b0::Klaatu (The Day the Earth Stood Still)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7f37c455429930675136b0::Gort (The Day the Earth Stood Still)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7f37c455429930675136b0::Army of Darkness",
+        "5a7f37c455429930675136b0::Klaatu (The Day the Earth Stood Still)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7f37c455429930675136b0::Army of Darkness::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7f37c455429930675136b0::Klaatu (The Day the Earth Stood Still)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7f37c455429930675136b0::Gort (The Day the Earth Stood Still)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7f37c455429930675136b0::Gort (The Day the Earth Stood Still)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Gort is a fictional humanoid robot that appeared first in the 1951 20th Century Fox American science fiction film \"The Day the Earth Stood Still\" and later in its 2008 remake.\n[2] Klaatu is a fictional humanoid alien in the 1951 science fiction film \"The Day the Earth Stood Still\" and its 2008 remake.\n[3] Army of Darkness (also known as Bruce Campbell vs. Army of Darkness and Army of Darkness: The Medieval Dead on its UK theatrical release) is a 1992 American horror comedy film directed and co-written by Sam Raimi, co-produced by Robert Tapert and Bruce Campbell and co-written by Ivan Raimi."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

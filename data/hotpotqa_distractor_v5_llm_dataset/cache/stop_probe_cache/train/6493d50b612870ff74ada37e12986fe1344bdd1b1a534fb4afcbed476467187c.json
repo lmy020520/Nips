@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "five campuses",
+  "pred_answer": "five campuses",
+  "normalized_gold": "five campuses",
+  "normalized_pred": "five campuses",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2ae2e5542992decbdcd6c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2ae2e5542992decbdcd6c::University of KwaZulu-Natal::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2ae2e5542992decbdcd6c::George Mason University::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2ae2e5542992decbdcd6c::David Weisburd::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2ae2e5542992decbdcd6c::University of KwaZulu-Natal",
+        "5ae2ae2e5542992decbdcd6c::George Mason University"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2ae2e5542992decbdcd6c::University of KwaZulu-Natal::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2ae2e5542992decbdcd6c::George Mason University::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2ae2e5542992decbdcd6c::David Weisburd::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2ae2e5542992decbdcd6c::David Weisburd::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] and Walter E. Meyer Professor of Law and Criminal Justice in the Institute of Criminology of the Hebrew University Faculty of Law, At George Mason University Weisburd was founder of the Center for Evidence-Based Crime Policy and is now its executive director.\n[2] George Mason University (Mason) is the largest public research university in the U.S. state of Virginia.\n[3] The University of KwaZulu-Natal or UKZN is a university with five campuses in the province of KwaZulu-Natal in South Africa."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

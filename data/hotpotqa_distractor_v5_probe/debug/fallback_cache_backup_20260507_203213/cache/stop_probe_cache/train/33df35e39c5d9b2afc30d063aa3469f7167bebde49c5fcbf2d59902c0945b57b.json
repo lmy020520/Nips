@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Monster",
+  "pred_answer": "Monster",
+  "normalized_gold": "monster",
+  "normalized_pred": "monster",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74f7b15542993748c89763",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74f7b15542993748c89763::Charlize Theron filmography::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74f7b15542993748c89763::Monster (2003 film)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74f7b15542993748c89763::Charlize Theron filmography::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74f7b15542993748c89763::Charlize Theron filmography",
+        "5a74f7b15542993748c89763::Monster (2003 film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74f7b15542993748c89763::Charlize Theron filmography::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74f7b15542993748c89763::Monster (2003 film)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74f7b15542993748c89763::Charlize Theron filmography::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74f7b15542993748c89763::Charlize Theron filmography::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] For her portrayal of serial killer Aileen Wuornos in the crime drama \"Monster\" (2003), Theron received the Academy Award for Best Actress, the Golden Globe Award for Best Actress in a Motion Picture – Drama, and the Screen Actors Guild Award for Outstanding Performance by a Female Actor in a Leading Role.\n[2] The film is about serial killer Aileen Wuornos, a former prostitute who was executed in Florida in 2002 for killing six men (she was not tried for a seventh murder) in the late 1980s and early 1990s.\n[3] Charlize Theron is a South African-born American actress who made her film debut in an uncredited role as a follower of a cult in the 1995 horror film \"\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

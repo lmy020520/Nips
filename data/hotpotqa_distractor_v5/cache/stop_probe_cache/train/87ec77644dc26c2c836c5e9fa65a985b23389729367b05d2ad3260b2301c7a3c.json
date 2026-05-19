@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "William Randolph Hearst",
+  "pred_answer": "William Randolph Hearst",
+  "normalized_gold": "william randolph hearst",
+  "normalized_pred": "william randolph hearst",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8d259055429941ae14df89",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8d259055429941ae14df89::Mickey Shea::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8d259055429941ae14df89::Adams Museum &amp; House::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8d259055429941ae14df89::George Hearst::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8d259055429941ae14df89::Deadwood (TV series)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8d259055429941ae14df89::Owen Roberts (aviator)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8d259055429941ae14df89::George Hearst",
+        "5a8d259055429941ae14df89::Deadwood (TV series)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8d259055429941ae14df89::Mickey Shea::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8d259055429941ae14df89::Adams Museum &amp; House::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8d259055429941ae14df89::George Hearst::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8d259055429941ae14df89::Deadwood (TV series)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8d259055429941ae14df89::Owen Roberts (aviator)::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8d259055429941ae14df89::Owen Roberts (aviator)::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He was grandson of a wealthy American businessman Marshall Owen Roberts, while his mother Irene Helene Murray was from the family of the dukes of Atholl.\n[2] The series, set in the 1870s in Deadwood, South Dakota, before and after the area's annexation by the Dakota Territory, charts Deadwood's growth from camp to town, incorporating themes ranging from the formation of communities to western capitalism.\n[3] He was a United States Senator and the father of newspaperman William Randolph Hearst.\n[4] In 1920 Deadwood businessman and former mayor W.E. Adams brought the house as a tribute to the Black Hills pioneers and in remembrance of his deceased first wife and two daughters."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

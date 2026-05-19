@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Madras Export Processing Zone",
+  "pred_answer": "Madras Export Processing Zone",
+  "normalized_gold": "madras export processing zone",
+  "normalized_pred": "madras export processing zone",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a76f7e855429972597f1404",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a76f7e855429972597f1404::Special economic zone::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a76f7e855429972597f1404::Downward harmonization::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a76f7e855429972597f1404::Kadaperi::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a76f7e855429972597f1404::Balance of payments::9"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a76f7e855429972597f1404::Special economic zone",
+        "5a76f7e855429972597f1404::Kadaperi"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a76f7e855429972597f1404::Special economic zone::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a76f7e855429972597f1404::Downward harmonization::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a76f7e855429972597f1404::Kadaperi::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a76f7e855429972597f1404::Balance of payments::9",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a76f7e855429972597f1404::Balance of payments::9",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] If a country is grappling with a major balance-of-payment difficulty, it may not be able to expand imports from the outside world.\n[2] With a population of around 2000 people, Kadaperi is close to the Madras Export Processing Zone, which is the first Special Economic Zone in Chennai.\n[3] Downward harmonization is an econo-political term describing the act of adapting the trade laws of a country with an established economy \"downward\" to the trade laws of the country with a developing economy.\n[4] A special economic zone (SEZ) is an area in which business and trade laws are different from rest of the country."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

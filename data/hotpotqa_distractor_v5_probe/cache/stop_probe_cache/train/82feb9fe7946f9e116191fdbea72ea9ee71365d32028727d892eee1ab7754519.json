@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jiangmen",
+  "pred_answer": "Jiangmen",
+  "normalized_gold": "jiangmen",
+  "normalized_pred": "jiangmen",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abf47625542993fe9a41df2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abf47625542993fe9a41df2::Qionghai::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abf47625542993fe9a41df2::List of cities by population density::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abf47625542993fe9a41df2::Jiangmen::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abf47625542993fe9a41df2::Poplar Hills, Kentucky::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abf47625542993fe9a41df2::Qionghai",
+        "5abf47625542993fe9a41df2::Jiangmen"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abf47625542993fe9a41df2::Qionghai::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abf47625542993fe9a41df2::List of cities by population density::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abf47625542993fe9a41df2::Jiangmen::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abf47625542993fe9a41df2::Poplar Hills, Kentucky::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abf47625542993fe9a41df2::Poplar Hills, Kentucky::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It currently has the highest population density for any city in Kentucky, and is the only Kentucky city that is on the highest population densities of American cities list.\n[2] Jiangmen, formerly romanized in Cantonese as Kongmoon, is a prefecture-level city in Guangdong Province in southern China.\n[3] The population, population density and land area for the cities listed are based on the entire city proper, the defined boundary or border of a city or the city limits of the city.\n[4] Within this area is the main city, Qionghai City."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Riot Act",
+  "pred_answer": "Riot Act",
+  "normalized_gold": "riot act",
+  "normalized_pred": "riot act",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7a2e255429952e35ea99e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7a2e255429952e35ea99e::You Are (Pearl Jam song)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7a2e255429952e35ea99e::Riot Act (album)::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7a2e255429952e35ea99e::Kenneth Jones (songwriter)::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7a2e255429952e35ea99e::You Are (Pearl Jam song)",
+        "5ae7a2e255429952e35ea99e::Riot Act (album)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7a2e255429952e35ea99e::You Are (Pearl Jam song)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7a2e255429952e35ea99e::Riot Act (album)::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7a2e255429952e35ea99e::Kenneth Jones (songwriter)::7",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7a2e255429952e35ea99e::Kenneth Jones (songwriter)::7",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] A few have noted the lyrics as being eerily prophetic of the September 11, 2001 terrorist attacks on the United States which took place more than thirty years after the song was written.\n[2] The lyrics deal with mortality and existentialism, with much influence from both the political climate after the September 11, 2001 terrorist attacks and the accidental death of nine fans during Pearl Jam's performance at the 2000 Roskilde Festival.\n[3] \"You Are\" is a song by the rock group Pearl Jam from the band's 2002 album, \"Riot Act\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

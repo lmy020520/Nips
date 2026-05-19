@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Sierra de Guadarrama National Park",
+  "pred_answer": "Sierra de Guadarrama National Park",
+  "normalized_gold": "sierra de guadarrama national park",
+  "normalized_pred": "sierra de guadarrama national park",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "explicit_answer_in_evidence",
+  "support_evidence_summary": "The selected chunk for Guadarrama National Park explicitly states that the Sierra de Guadarrama National Park is located in the Community of Madrid and Castile and León, matching the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "explicit_answer_in_evidence",
+    "support_evidence_summary": "The selected chunk for Guadarrama National Park explicitly states that the Sierra de Guadarrama National Park is located in the Community of Madrid and Castile and León, matching the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a729f065542994cef4bc392",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a729f065542994cef4bc392::Guadarrama National Park::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a729f065542994cef4bc392::Picos de Europa National Park::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a729f065542994cef4bc392::Guadarrama National Park::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a729f065542994cef4bc392::Guadarrama National Park",
+        "5a729f065542994cef4bc392::Picos de Europa National Park"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a729f065542994cef4bc392::Guadarrama National Park::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a729f065542994cef4bc392::Picos de Europa National Park::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a729f065542994cef4bc392::Guadarrama National Park::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a729f065542994cef4bc392::Guadarrama National Park::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Sierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system.\n[2] The Picos de Europa National Park (Spanish: \"Parque Nacional de Picos de Europa\" ) is a National Park in the Picos de Europa mountain range, in northern Spain.\n[3] The Guadarrama mountain range (\"Sistema Central\") contains some ecologically valuable areas, located in the Community of Madrid and Castile and León (provinces of Segovia and Ávila)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

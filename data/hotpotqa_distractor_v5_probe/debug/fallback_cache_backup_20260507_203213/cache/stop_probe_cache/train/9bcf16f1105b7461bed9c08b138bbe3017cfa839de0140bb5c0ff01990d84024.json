@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jack Thompson",
+  "pred_answer": "Jack Thompson",
+  "normalized_gold": "jack thompson",
+  "normalized_pred": "jack thompson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2e639554299295394689a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2e639554299295394689a::A Modest Video Game Proposal::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2e639554299295394689a::A Modest Proposal::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2e639554299295394689a::William Diaper::12"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2e639554299295394689a::A Modest Video Game Proposal",
+        "5ab2e639554299295394689a::A Modest Proposal"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2e639554299295394689a::A Modest Video Game Proposal::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2e639554299295394689a::A Modest Proposal::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2e639554299295394689a::William Diaper::12",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2e639554299295394689a::William Diaper::12",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Tis a poor little short wretch, but will do best in a gown, and we will make Lord Keeper give him a living.In another letter, Swift refers to Diaper's being ill:I was to see a poor poet, one Mr. Diaper, in a nasty garret, very sick.\n[2] A Modest Proposal For preventing the Children of Poor People From being a Burthen to Their Parents or Country, and For making them Beneficial to the Publick, commonly referred to as A Modest Proposal, is a Juvenalian satirical essay written and published anonymously by Jonathan Swift in 1729.\n[3] A Modest Video Game Proposal is the title of an open letter sent by activist/former attorney Jack Thompson to members of the press and to Entertainment Software Association president Doug Lowenstein on October 10, 2005."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

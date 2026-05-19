@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "the Dexter Shoe Company",
+  "pred_answer": "the Dexter Shoe Company",
+  "normalized_gold": "the dexter shoe company",
+  "normalized_pred": "the dexter shoe company",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a75e8bc55429976ec32bc9c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a75e8bc55429976ec32bc9c::Alfond Stadium (University of Maine)::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a75e8bc55429976ec32bc9c::Harold Alfond::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a75e8bc55429976ec32bc9c::Alfond Arena::8"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a75e8bc55429976ec32bc9c::Alfond Stadium (University of Maine)",
+        "5a75e8bc55429976ec32bc9c::Harold Alfond"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a75e8bc55429976ec32bc9c::Alfond Stadium (University of Maine)::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a75e8bc55429976ec32bc9c::Harold Alfond::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a75e8bc55429976ec32bc9c::Alfond Arena::8",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a75e8bc55429976ec32bc9c::Alfond Arena::8",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It is named for Harold Alfond, a longtime Maine booster, whose name also adorns Alfond Stadium, the school's main outdoor stadium.\n[2] Harold Alfond (March 6, 1914 – November 16, 2007) was an American businessman who founded the Dexter Shoe Company and established the first factory outlet store.\n[3] The stadium was rededicated to Harold Alfond, a longtime Maine booster, at Maine's first home night game on September 12, 1998, a 52-28 win over New Hampshire in the Battle for the Brice-Cowell Musket."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

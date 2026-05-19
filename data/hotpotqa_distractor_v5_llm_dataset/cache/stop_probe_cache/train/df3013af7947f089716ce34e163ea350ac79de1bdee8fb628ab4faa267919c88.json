@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New York City",
+  "pred_answer": "New York City",
+  "normalized_gold": "new york city",
+  "normalized_pred": "new york city",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a90478a55429933b8a204cc",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a90478a55429933b8a204cc::David Morgan (psychoanalyst)::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a90478a55429933b8a204cc::Jun Choi::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a90478a55429933b8a204cc::Rudy Giuliani::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a90478a55429933b8a204cc::Scott Howell (political consultant)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a90478a55429933b8a204cc::David Morgan (psychoanalyst)::8"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a90478a55429933b8a204cc::Rudy Giuliani",
+        "5a90478a55429933b8a204cc::Scott Howell (political consultant)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a90478a55429933b8a204cc::David Morgan (psychoanalyst)::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a90478a55429933b8a204cc::Jun Choi::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a90478a55429933b8a204cc::Rudy Giuliani::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a90478a55429933b8a204cc::Scott Howell (political consultant)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a90478a55429933b8a204cc::David Morgan (psychoanalyst)::8",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a90478a55429933b8a204cc::David Morgan (psychoanalyst)::8",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He is chair of the Political Minds Seminars at the British Psychoanalytic Society.\n[2] Herbert Weston Scott Howell III is an American conservative political consultant, whose recent clients include Meg Whitman and Rudy Giuliani.\n[3] Rudolph William Louis Giuliani {'1': \", '2': \", '3': \", '4': \"} ( ; born May 28, 1944) is an American lawyer, businessman, public speaker, former mayor of New York City, and an informal adviser on cybersecurity to the White House.\n[4] He was sworn in on January 1, 2006 as the youngest mayor in Edison history and the first Asian American mayor of a major city in New Jersey."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

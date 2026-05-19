@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Spawn",
+  "pred_answer": "Spawn",
+  "normalized_gold": "spawn",
+  "normalized_pred": "spawn",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a752d6755429916b0164285",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a752d6755429916b0164285::Spawn (comics)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a752d6755429916b0164285::Eldon (toy company)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a752d6755429916b0164285::McFarlane NHL Sports Picks::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a752d6755429916b0164285::Johnny Lightning::9"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a752d6755429916b0164285::Spawn (comics)",
+        "5a752d6755429916b0164285::McFarlane NHL Sports Picks"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a752d6755429916b0164285::Spawn (comics)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a752d6755429916b0164285::Eldon (toy company)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a752d6755429916b0164285::McFarlane NHL Sports Picks::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a752d6755429916b0164285::Johnny Lightning::9",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a752d6755429916b0164285::Johnny Lightning::9",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In early 2016 Round 2 LLC, a toy company owned by Thomas Lowe (who also owned Playing Mantis), revived and reintroduced Johnny Lightning vehicles to the toy market for a second time.\n[2] McFarlane Sports Picks is the name given to the line of sports-related action figures released by McFarlane Toys, a company founded by \"Spawn\" creator Todd McFarlane.\n[3] Eldon Industries, Inc. was a toy company located in Hawthorne, California (the hometown of the Mattel toy company), that also in its heyday operated factories in Canada, England, Japan, and the Netherlands.\n[4] Spawn is a fictional character, an antihero that appears in a monthly comic book of the same name published by Image Comics."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ted's Montana Grill",
+  "pred_answer": "Ted's Montana Grill",
+  "normalized_gold": "teds montana grill",
+  "normalized_pred": "teds montana grill",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8dd73855429917b4a5bccb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8dd73855429917b4a5bccb::Hotel Baxter::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8dd73855429917b4a5bccb::Allerton Hotel for Women::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8dd73855429917b4a5bccb::Ted's Montana Grill::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8dd73855429917b4a5bccb::Hotel Baxter::8"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8dd73855429917b4a5bccb::Hotel Baxter",
+        "5a8dd73855429917b4a5bccb::Ted's Montana Grill"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8dd73855429917b4a5bccb::Hotel Baxter::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8dd73855429917b4a5bccb::Allerton Hotel for Women::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8dd73855429917b4a5bccb::Ted's Montana Grill::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8dd73855429917b4a5bccb::Hotel Baxter::8",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8dd73855429917b4a5bccb::Hotel Baxter::8",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Ted's Montana Grill and the Bacchus Pub are on the ground floor.\n[2] Ted's Montana Grill is an American restaurant chain specializing in bison.\n[3] It originally had stores on its ground floor.\n[4] The Hotel Baxter, popularly called the Baxter or Baxter Hotel, is a seven-story hotel built in 1929 in the Main Street historic district of Bozeman, Montana."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

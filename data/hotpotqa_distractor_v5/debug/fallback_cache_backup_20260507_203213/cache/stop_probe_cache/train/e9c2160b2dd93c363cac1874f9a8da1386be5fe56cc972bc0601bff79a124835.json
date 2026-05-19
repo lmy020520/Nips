@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Troy",
+  "pred_answer": "Troy",
+  "normalized_gold": "troy",
+  "normalized_pred": "troy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae233ef554299495565da3a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae233ef554299495565da3a::Troy, Michigan::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae233ef554299495565da3a::Troy, New York::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae233ef554299495565da3a::Oakland/Troy Airport::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae233ef554299495565da3a::Provo Municipal Airport::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae233ef554299495565da3a::Troy, Michigan",
+        "5ae233ef554299495565da3a::Oakland/Troy Airport"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae233ef554299495565da3a::Troy, Michigan::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae233ef554299495565da3a::Troy, New York::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae233ef554299495565da3a::Oakland/Troy Airport::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae233ef554299495565da3a::Provo Municipal Airport::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae233ef554299495565da3a::Provo Municipal Airport::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Provo Municipal Airport (IATA: PVU, ICAO: KPVU, FAA LID: PVU) is a public airport two miles (3 km) west of Provo, in Utah County, Utah.\n[2] Oakland/Troy Airport (ICAO: KVLL, FAA LID: VLL) is a county owned public use airport located two miles (3 km) east of the central business district of Troy, a city in Oakland County, Michigan, United States.\n[3] At the 2010 census, the population of Troy was 50,129.\n[4] The population was 80,980 at the 2010 census, making it the 11th-largest city in Michigan by population, and the largest city in Oakland County."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

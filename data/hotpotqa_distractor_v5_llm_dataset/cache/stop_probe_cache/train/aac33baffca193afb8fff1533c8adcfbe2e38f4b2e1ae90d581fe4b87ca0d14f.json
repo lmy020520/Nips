@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Gaultheria",
+  "pred_answer": "Gaultheria",
+  "normalized_gold": "gaultheria",
+  "normalized_pred": "gaultheria",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae20c125542997283cd2365",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae20c125542997283cd2365::Gaultheria nummularioides::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae20c125542997283cd2365::Gaultheria::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae20c125542997283cd2365::Basselinia::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae20c125542997283cd2365::Empetrum rubrum::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae20c125542997283cd2365::Gaultheria",
+        "5ae20c125542997283cd2365::Basselinia"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae20c125542997283cd2365::Gaultheria nummularioides::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae20c125542997283cd2365::Gaultheria::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae20c125542997283cd2365::Basselinia::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae20c125542997283cd2365::Empetrum rubrum::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae20c125542997283cd2365::Empetrum rubrum::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Empetrum rubrum, known as red crowberry or diddle-dee (Chilean Spanish: \"Murtilla de Magallanes\"), is a species of plant in the Ericaceae family with a distributional range in Chile from Talca (35°S) to Cape Horn (55°S); in areas of adjacent Argentina; in the Falkland Islands; and in Tristan da Cunha.\n[2] Basselinia is a genus of flowering plant in the Arecaceae family.\n[3] Gaultheria is a genus of about 135 species of shrubs in the family Ericaceae.\n[4] \"Gaultheria nummularioides\" is a species of plant in the family Ericaceae."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

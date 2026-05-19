@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sleeping Beauty Castle",
+  "pred_answer": "Sleeping Beauty Castle",
+  "normalized_gold": "sleeping beauty castle",
+  "normalized_pred": "sleeping beauty castle",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab3bfe85542992ade7c6e73",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab3bfe85542992ade7c6e73::Sleeping Beauty Castle::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab3bfe85542992ade7c6e73::Neuschwanstein Castle::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab3bfe85542992ade7c6e73::Le Château de la Belle au Bois Dormant::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab3bfe85542992ade7c6e73::Ambrose S. Lapham House::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab3bfe85542992ade7c6e73::Sleeping Beauty Castle",
+        "5ab3bfe85542992ade7c6e73::Le Château de la Belle au Bois Dormant"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab3bfe85542992ade7c6e73::Sleeping Beauty Castle::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab3bfe85542992ade7c6e73::Neuschwanstein Castle::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab3bfe85542992ade7c6e73::Le Château de la Belle au Bois Dormant::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab3bfe85542992ade7c6e73::Ambrose S. Lapham House::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab3bfe85542992ade7c6e73::Ambrose S. Lapham House::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Also on the property are the contributing late-19th century wood-framed barn with its historic cupola, doors and horse stalls; a rustic late-19th century gazebo; and four extant historic brick piers along the property line.\n[2] Le Château de la Belle au Bois Dormant (English: The Castle of the Sleeping Beauty ) is the fairy tale castle at the centre of Disneyland Paris and is a continuation of Sleeping Beauty Castle first seen at Disneyland in California.\n[3] Neuschwanstein Castle (German: Schloss Neuschwanstein , ] , English: \"New Swanstone Castle\" ) is a nineteenth-century Romanesque Revival palace on a rugged hill above the village of Hohenschwangau near Füssen in southwest Bavaria, Germany.\n[4] It is based on the late-19th century Neuschwanstein Castle in Bavaria, Germany."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

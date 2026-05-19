@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "114,297",
+  "pred_answer": "114,297",
+  "normalized_gold": "114297",
+  "normalized_pred": "114297",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abb8db75542993f40c73b28",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abb8db75542993f40c73b28::Library of Michigan::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abb8db75542993f40c73b28::South Lyon, Michigan::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abb8db75542993f40c73b28::Lansing, Michigan::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abb8db75542993f40c73b28::Flint, Michigan::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abb8db75542993f40c73b28::Library of Michigan",
+        "5abb8db75542993f40c73b28::Lansing, Michigan"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abb8db75542993f40c73b28::Library of Michigan::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abb8db75542993f40c73b28::South Lyon, Michigan::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abb8db75542993f40c73b28::Lansing, Michigan::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abb8db75542993f40c73b28::Flint, Michigan::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abb8db75542993f40c73b28::Flint, Michigan::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] According to the 2010 census, Flint has a population of 102,434, making it the seventh largest city in Michigan.\n[2] The 2010 Census placed the city's population at 114,297, making it the fifth largest city in Michigan.\n[3] The city is part of the South Lyon-Howell-Brighton Urban Area, which had a population of 106,139 according to the 2000 census.\n[4] The Library of Michigan is a state-run library and historical center located in Lansing, Michigan that was created to provide one perpetual state institution to collect and preserve Michigan publications, conduct reference and research, and support libraries statewide."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

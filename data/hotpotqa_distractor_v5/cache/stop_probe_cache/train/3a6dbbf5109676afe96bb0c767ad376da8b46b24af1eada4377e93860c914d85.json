@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Albert Capellani",
+  "pred_answer": "Albert Capellani",
+  "normalized_gold": "albert capellani",
+  "normalized_pred": "albert capellani",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a3ce85542994f819ef181",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a3ce85542994f819ef181::Alfred Santell::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a3ce85542994f819ef181::Bluebeard's Seven Wives::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a3ce85542994f819ef181::Albert Capellani::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a3ce85542994f819ef181::La Bohème (1916 film)::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a3ce85542994f819ef181::Alfred Santell",
+        "5a7a3ce85542994f819ef181::Albert Capellani"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a3ce85542994f819ef181::Alfred Santell::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a3ce85542994f819ef181::Bluebeard's Seven Wives::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a3ce85542994f819ef181::Albert Capellani::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a3ce85542994f819ef181::La Bohème (1916 film)::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a3ce85542994f819ef181::La Bohème (1916 film)::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Director Albert Capellani's brother, Paul Capellani, who appears in this film, had made his own short version in 1912.\n[2] Albert Capellani (23 August 1874 – 26 September 1931) was a French film director and screenwriter of the silent era.\n[3] It was directed by Alfred Santell and starred Ben Lyon, Lois Wilson and Blanche Sweet.\n[4] Alfred Allen Santell also known as Al Santell (born September 14, 1895 in San Francisco, California) was an American film director and film producer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,22 @@
+{
+  "should_derive": true,
+  "reason": "The state summary has evidence that University of Patras is public, but Manhattan College's status is only hinted as private via a note. The raw candidates include a clear statement that Manhattan College is private, which directly answers the question. A verification note can confirm Manhattan College's private status, and a bridge note can combine both to answer the question.",
+  "derived_candidates": [
+    {
+      "type": "verification_note",
+      "text": "Manhattan College is a private, independent, Roman Catholic, liberal arts college.",
+      "source_unit_ids": [
+        "5a81f7ef55429926c1cdadc9::Manhattan College::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "University of Patras is a public university, while Manhattan College is a private institution.",
+      "source_unit_ids": [
+        "5a81f7ef55429926c1cdadc9::Manhattan College::0"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

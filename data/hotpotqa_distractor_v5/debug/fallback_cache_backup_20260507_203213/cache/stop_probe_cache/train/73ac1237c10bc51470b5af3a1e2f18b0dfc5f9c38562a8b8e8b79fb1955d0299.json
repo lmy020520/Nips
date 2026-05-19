@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Robin Hood",
+  "pred_answer": "Robin Hood",
+  "normalized_gold": "robin hood",
+  "normalized_pred": "robin hood",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc54e65542994650320ccf",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc54e65542994650320ccf::Oz the Great and Powerful::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc54e65542994650320ccf::Robin Hood's Grave::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc54e65542994650320ccf::Robin Hood (1973 film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc54e65542994650320ccf::Robin Hood: Men in Tights::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc54e65542994650320ccf::Oz the Great and Powerful",
+        "5adc54e65542994650320ccf::Robin Hood (1973 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc54e65542994650320ccf::Oz the Great and Powerful::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc54e65542994650320ccf::Robin Hood's Grave::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc54e65542994650320ccf::Robin Hood (1973 film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc54e65542994650320ccf::Robin Hood: Men in Tights::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc54e65542994650320ccf::Robin Hood: Men in Tights::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Robin Hood: Men in Tights is a 1993 American musical adventure comedy film and a parody of the Robin Hood story.\n[2] Robin Hood is a 1973 American animated musical comedy-adventure film produced by Walt Disney Productions which was first released in the United States on November 8, 1973.\n[3] Robin Hood was traditionally supposed to have been bled to death by the prioress of Kirklees (or Kirkley or kirklea or kirkleys) Priory .\n[4] Oz the Great and Powerful is a 2013 American fantasy adventure film directed by Sam Raimi and produced by Joe Roth, from a screenplay written by David Lindsay-Abaire and Mitchell Kapner."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

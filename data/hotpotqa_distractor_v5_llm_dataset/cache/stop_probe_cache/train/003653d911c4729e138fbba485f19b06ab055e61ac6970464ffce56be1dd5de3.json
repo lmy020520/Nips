@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Scott Sidney",
+  "pred_answer": "Scott Sidney",
+  "normalized_gold": "scott sidney",
+  "normalized_pred": "scott sidney",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c785b554299653c1aa085",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c785b554299653c1aa085::John Dahl::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c785b554299653c1aa085::Are You...?::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c785b554299653c1aa085::Scott Sidney::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8c785b554299653c1aa085::Tarzan of the Apes (1918 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c785b554299653c1aa085::John Dahl",
+        "5a8c785b554299653c1aa085::Scott Sidney"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c785b554299653c1aa085::John Dahl::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c785b554299653c1aa085::Are You...?::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c785b554299653c1aa085::Scott Sidney::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8c785b554299653c1aa085::Tarzan of the Apes (1918 film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c785b554299653c1aa085::Tarzan of the Apes (1918 film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Tarzan of the Apes is a 1918 American action/adventure silent film directed by Scott Sidney starring Elmo Lincoln, Enid Markey, George B. French and Gordon Griffith.\n[2] Scott Sidney (1872 – 20 July 1928), born Harry Wilbur Siggins, was an American film director.\n[3] It was directed by John Dahl and written by newly appointed showrunner Scott Buck.\n[4] John Dahl (born 1956) is an American film and television director and writer, best known for his work in the neo-noir genre."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

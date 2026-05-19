@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Peter Francis Straub",
+  "pred_answer": "Peter Francis Straub",
+  "normalized_gold": "peter francis straub",
+  "normalized_pred": "peter francis straub",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74de515542996c70cfae24",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74de515542996c70cfae24::Peter Straub::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74de515542996c70cfae24::Linda Addison (poet)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74de515542996c70cfae24::Peter Straub::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74de515542996c70cfae24::Raymond Queneau::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a74de515542996c70cfae24::In the Night Room::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74de515542996c70cfae24::Peter Straub",
+        "5a74de515542996c70cfae24::Raymond Queneau"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74de515542996c70cfae24::Peter Straub::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74de515542996c70cfae24::Linda Addison (poet)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74de515542996c70cfae24::Peter Straub::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74de515542996c70cfae24::Raymond Queneau::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a74de515542996c70cfae24::In the Night Room::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74de515542996c70cfae24::In the Night Room::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The work was first published in hardback on October 26, 2004 through Random House and it won the 2004 Bram Stoker Award for Novel.\n[2] Raymond Queneau (] ; 21 February 1903 – 25 October 1976) was a French novelist, poet, critic, editor and co-founder and president of Oulipo (\"Ouvroir de littérature potentielle\"), notable for his wit and cynical humour.\n[3] Peter Francis Straub (born March 2, 1943) is an American novelist and poet.\n[4] Addison is the first African-American winner of the Bram Stoker Award, which she won four times."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,28 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the county where the major Interstate Highway that crosses Lake Hodges begins. The state summary indicates I-15 begins in San Diego County, but the top raw candidates do not include I-15. To disambiguate, we need to bridge from the provided candidates to I-15 or confirm that I-15 is the relevant highway.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Interstate 87 is located entirely within New York, not relevant to Lake Hodges in Southern California.",
+      "source_unit_ids": [
+        "5a83a3ee554299123d8c217c::Interstate 87 (New York)::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "Interstate 75 is a major highway in the Great Lakes and Southeastern regions, not in Southern California.",
+      "source_unit_ids": [
+        "5a83a3ee554299123d8c217c::Interstate 75::0"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "The Interstate Highway crossing Lake Hodges is I-15, which begins in San Diego County.",
+      "source_unit_ids": [],
+      "coarse_priority": 3
+    }
+  ]
+}

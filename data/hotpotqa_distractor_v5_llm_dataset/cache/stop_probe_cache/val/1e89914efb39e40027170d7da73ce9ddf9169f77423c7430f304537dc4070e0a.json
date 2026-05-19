@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Spitsbergen",
+  "pred_answer": "Spitsbergen",
+  "normalized_gold": "spitsbergen",
+  "normalized_pred": "spitsbergen",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8eeb1e5542995085b374b7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8eeb1e5542995085b374b7::Krossfjorden::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8eeb1e5542995085b374b7::Spitsbergen::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8eeb1e5542995085b374b7::Gavrilovfjellet::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8eeb1e5542995085b374b7::Svalbard Act::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8eeb1e5542995085b374b7::Spitsbergen",
+        "5a8eeb1e5542995085b374b7::Gavrilovfjellet"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8eeb1e5542995085b374b7::Krossfjorden::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8eeb1e5542995085b374b7::Spitsbergen::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8eeb1e5542995085b374b7::Gavrilovfjellet::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8eeb1e5542995085b374b7::Svalbard Act::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8eeb1e5542995085b374b7::Svalbard Act::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Svalbard Act\" of 17 July 1925 no. 11, normally referred to as the Svalbard Act\" (Norwegian: \"Lov om Svalbard\" or colloquially \"Svalbardloven\" ), is a law of Norway which governs the major aspects of the Svalbard archipelago.\n[2] Gavrilovfjellet is a mountain in Sørkapp Land at Spitsbergen, Svalbard.\n[3] Spitsbergen (formerly known as West Spitsbergen; Norwegian: \"Vest Spitsbergen\" or \"Vestspitsbergen\") is the largest and only permanently populated island of the Svalbard archipelago in northern Norway.\n[4] Krossfjorden (English: Cross Fjord) is a 30 km long fjord on the west coast of Spitsbergen, which is the largest and only permanently populated island of the Svalbard archipelago in Norway."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

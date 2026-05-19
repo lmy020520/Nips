@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Owen Hart",
+  "pred_answer": "Owen Hart",
+  "normalized_gold": "owen hart",
+  "normalized_pred": "owen hart",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7418c25542993e948e87bc",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7418c25542993e948e87bc::Owen Hart::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7418c25542993e948e87bc::Ross Hart::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7418c25542993e948e87bc::Stu Hart::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7418c25542993e948e87bc::Hart wrestling family::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7418c25542993e948e87bc::Smith Hart::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7418c25542993e948e87bc::Owen Hart",
+        "5a7418c25542993e948e87bc::Hart wrestling family"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7418c25542993e948e87bc::Owen Hart::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7418c25542993e948e87bc::Ross Hart::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7418c25542993e948e87bc::Stu Hart::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7418c25542993e948e87bc::Hart wrestling family::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7418c25542993e948e87bc::Smith Hart::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7418c25542993e948e87bc::Smith Hart::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He wrestled for the majority of his career in Canada but also worked briefly in other countries and is best known for his time in Stampede Wrestling and for his appearances for WWE.\n[2] The Hart wrestling family, sometimes known as the Hart dynasty is a mainly Canadian family with a significant history within professional wrestling.\n[3] As the patriarch of the Hart wrestling family, Hart is the ancestor of many wrestlers, most notably being the father of Bret and Owen Hart as well as the grandfather of Natalya Neidhart and David Hart Smith.\n[4] Hart is a member of the Hart wrestling family and the second youngest son of Stu and Helen Hart."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

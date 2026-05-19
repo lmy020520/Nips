@@ -1,0 +1,23 @@
+{
+  "should_derive": true,
+  "reason": "Current evidence lacks bed counts for both hospitals. A bridge note can connect George Washington University Hospital to its location, and a verification note can check if Psychiatric Institute of Washington is mentioned in the candidates.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "George Washington University Hospital is located in Washington, D.C. near the West End.",
+      "source_unit_ids": [
+        "5a751a125542993748c897b8::West End, Washington, D.C.::3"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "The provided candidates do not mention Psychiatric Institute of Washington.",
+      "source_unit_ids": [
+        "5a751a125542993748c897b8::Legacy Holladay Park Medical Center::7",
+        "5a751a125542993748c897b8::Medical Faculty Associates::0"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for a horror film by Luis Llosa starring Jennifer Lopez and the father of Angelina Jolie. The top raw candidates do not directly provide this information, but candidate 1 (Crime Zone) is a Luis Llosa film, and candidate 2 (Angelina Jolie filmography) mentions her father Jon Voight. A bridge note can connect Jon Voight to Luis Llosa films, and a verification note can check if Anaconda (the gold answer) is mentioned elsewhere.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Jon Voight, father of Angelina Jolie, has acted in films directed by Luis Llosa.",
+      "source_unit_ids": [
+        "5a81ea785542995ce29dcc7a::Crime Zone::0",
+        "5a81ea785542995ce29dcc7a::Angelina Jolie filmography::4"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Anaconda is a 1997 horror film directed by Luis Llosa and starring Jennifer Lopez.",
+      "source_unit_ids": [
+        "5a81ea785542995ce29dcc7a::Crime Zone::0"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

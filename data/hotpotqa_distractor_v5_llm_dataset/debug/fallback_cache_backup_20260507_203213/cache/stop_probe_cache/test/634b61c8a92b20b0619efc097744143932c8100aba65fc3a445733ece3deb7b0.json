@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "International Watch Co.",
+  "pred_answer": "International Watch Co.",
+  "normalized_gold": "international watch co",
+  "normalized_pred": "international watch co",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade56ed5542997c77adee04",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade56ed5542997c77adee04::Gérald Genta::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade56ed5542997c77adee04::International Watch Company::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade56ed5542997c77adee04::Ulysse Nardin::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade56ed5542997c77adee04::Gérald Genta",
+        "5ade56ed5542997c77adee04::International Watch Company"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade56ed5542997c77adee04::Gérald Genta::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade56ed5542997c77adee04::International Watch Company::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade56ed5542997c77adee04::Ulysse Nardin::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade56ed5542997c77adee04::Ulysse Nardin::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Ulysse Nardin is a luxury Swiss watch manufacturer founded in 1846 in Le Locle, Switzerland, which has remained in continuous production since.\n[2] International Watch Co., also known as IWC, is a luxury Swiss watch manufacturer located in Schaffhausen, Switzerland, and founded by American watchmaker Florentine Ariosto Jones in 1868.\n[3] Charles Gérald Genta (1931-2011) was a Swiss jewellery designer, noted for his eponymous line of time pieces as well as his design work with other firms, including IWC, Universal Genève, Patek Philippe and Audemars Piguet, among others."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

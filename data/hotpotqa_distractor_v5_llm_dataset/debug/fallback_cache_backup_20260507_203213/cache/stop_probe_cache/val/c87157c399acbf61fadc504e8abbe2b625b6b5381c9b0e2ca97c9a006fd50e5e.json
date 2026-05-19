@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Methodism",
+  "pred_answer": "Methodism",
+  "normalized_gold": "methodism",
+  "normalized_pred": "methodism",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf07a45542995534e8c738",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf07a45542995534e8c738::Methodism::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf07a45542995534e8c738::John Hyatt (clergyman)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf07a45542995534e8c738::George Whitefield::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf07a45542995534e8c738::Whitefield's Tabernacle, Tottenham Court Road::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf07a45542995534e8c738::John Hyatt (clergyman)",
+        "5adf07a45542995534e8c738::George Whitefield"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf07a45542995534e8c738::Methodism::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf07a45542995534e8c738::John Hyatt (clergyman)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf07a45542995534e8c738::George Whitefield::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf07a45542995534e8c738::Whitefield's Tabernacle, Tottenham Court Road::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf07a45542995534e8c738::Whitefield's Tabernacle, Tottenham Court Road::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] John Wesley preached a sermon \"On the death of the Rev Mr George Whitefield\" both here and at Whitefield's Tabernacle, Moorfields, in 1770.\n[2] George Whitefield ( ; 27 December [O.S. 16 December] 1714 30 September 1770), also spelled George Whitfield, was an English Anglican cleric who was one of the founders of Methodism and the evangelical movement.\n[3] He gained a large following and was always in demand for his sermons, which were greatly influenced by those of John Wesley and George Whitefield.\n[4] George Whitefield and John's brother Charles Wesley were also significant leaders in the movement."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

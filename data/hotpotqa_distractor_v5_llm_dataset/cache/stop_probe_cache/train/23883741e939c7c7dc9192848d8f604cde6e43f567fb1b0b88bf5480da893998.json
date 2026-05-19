@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fallen",
+  "pred_answer": "Fallen",
+  "normalized_gold": "fallen",
+  "normalized_pred": "fallen",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abee5af5542993fe9a41d83",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abee5af5542993fe9a41d83::Fallen (Evanescence album)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abee5af5542993fe9a41d83::The R.E.D. Album::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abee5af5542993fe9a41d83::Bring Me to Life::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abee5af5542993fe9a41d83::The Beauty Process: Triple Platinum::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abee5af5542993fe9a41d83::Fallen (Evanescence album)",
+        "5abee5af5542993fe9a41d83::Bring Me to Life"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abee5af5542993fe9a41d83::Fallen (Evanescence album)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abee5af5542993fe9a41d83::The R.E.D. Album::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abee5af5542993fe9a41d83::Bring Me to Life::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abee5af5542993fe9a41d83::The Beauty Process: Triple Platinum::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abee5af5542993fe9a41d83::The Beauty Process: Triple Platinum::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was recorded at Conway Recording Studios in Hollywood and Sound City Studios in Van Nuys, California.\n[2] It also features uncredited guest vocals from Paul McCoy of the band 12 Stones.\n[3] Recording sessions for the album took place from 2009 to 2011, at Ameraycan Recording Studios, Pacifique Recording Studios, which both were located in North Hollywood, California, Encore Recording Studios in Burbank, California and at Paramount Recording Studios in Hollywood, California.\n[4] \"Fallen\" was recorded between August and December 2002 in several locations, including Conway Recording Studios in Hollywood, California."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

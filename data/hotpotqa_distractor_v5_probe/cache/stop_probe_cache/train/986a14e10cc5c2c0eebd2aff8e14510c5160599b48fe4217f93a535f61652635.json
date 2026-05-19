@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Kathryn Apanowicz",
+  "pred_answer": "Kathryn Apanowicz",
+  "normalized_gold": "kathryn apanowicz",
+  "normalized_pred": "kathryn apanowicz",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a72762a5542994cef4bc2b2",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a72762a5542994cef4bc2b2::Kathryn Apanowicz::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a72762a5542994cef4bc2b2::Bugsy Malone::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a72762a5542994cef4bc2b2::Evita (1996 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a72762a5542994cef4bc2b2::Kathryn Apanowicz",
+        "5a72762a5542994cef4bc2b2::Bugsy Malone"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a72762a5542994cef4bc2b2::Kathryn Apanowicz::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a72762a5542994cef4bc2b2::Bugsy Malone::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a72762a5542994cef4bc2b2::Evita (1996 film)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a72762a5542994cef4bc2b2::Evita (1996 film)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Evita is a 1996 American musical drama film based on the 1976 concept album of the same name produced by Tim Rice and Andrew Lloyd Webber, which also inspired a 1978 musical.\n[2] Bugsy Malone is a 1976 British musical gangster comedy film, directed by Alan Parker and featuring only child actors. Set in New York City, the film is loosely based on events in New York and Chicago from the early 1920s to 1931 during Prohibition, specifically the exploits of real-life gangsters like Al Capone and Bugs Moran, as dramatized in cinema.\n[3] Kathryn Apanowicz (born 3 June 1960, Horsforth, West Riding of Yorkshire) is a British actress best known for her 1980s television appearances in the BBC soap operas, \"Angels\", where she played Nurse Rose Butchins, and \"EastEnders\", where she played the caterer Magda Czajkowski."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

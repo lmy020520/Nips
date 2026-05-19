@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Inner Light",
+  "pred_answer": "The Inner Light",
+  "normalized_gold": "the inner light",
+  "normalized_pred": "the inner light",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae497045542995dadf24361",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae497045542995dadf24361::The Inner Light (song)::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae497045542995dadf24361::Beatallica::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae497045542995dadf24361::Juan Mascaró::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae497045542995dadf24361::The Inner Light (song)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae497045542995dadf24361::The Inner Light (song)",
+        "5ae497045542995dadf24361::Juan Mascaró"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae497045542995dadf24361::The Inner Light (song)::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae497045542995dadf24361::Beatallica::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae497045542995dadf24361::Juan Mascaró::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae497045542995dadf24361::The Inner Light (song)::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae497045542995dadf24361::The Inner Light (song)::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The song was the first Harrison composition to be issued on a Beatles single and reflects the band's embrace of Transcendental Meditation, which they were studying in India under Maharishi Mahesh Yogi at the time of the single's release.\n[2] His first work, \"Lamps of Fire\", was a collection of religious and spiritual wisdom from across the world; a selection from the book inspired the Beatles song The Inner Light.\n[3] A Beatallica song is typically a blend of a Beatles song and a Metallica song with a related title (e.g. \"The Thing That Should Not Let It Be\", combining The Beatles' \"Let It Be\" and Metallica's \"The Thing That Should Not Be\" or \"And Justice for All My Loving\" combining Metallica's \"And Justice for All\" and the Beatles' \"All My Loving\"), though sometimes just a Beatles song will be used as a basis\n[4] The lyrics are a rendering of a poem from the Taoist \"Tao Te Ching\", which he set to music on the recommendation of Juan Mascaró, a Sanskrit scholar who had translated the passage in his 1958 book \"Lamps of Fire\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

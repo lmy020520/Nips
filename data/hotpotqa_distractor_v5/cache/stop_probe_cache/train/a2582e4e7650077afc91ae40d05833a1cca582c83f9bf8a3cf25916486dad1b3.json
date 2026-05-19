@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Charlestown, Boston",
+  "pred_answer": "Charlestown, Boston",
+  "normalized_gold": "charlestown boston",
+  "normalized_pred": "charlestown boston",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab915e05542991b5579f0eb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab915e05542991b5579f0eb::Charlestown, Boston::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab915e05542991b5579f0eb::Bunker Hill, Washington::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab915e05542991b5579f0eb::Charlestown State Prison::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab915e05542991b5579f0eb::Community College (MBTA station)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab915e05542991b5579f0eb::Charlestown, Boston",
+        "5ab915e05542991b5579f0eb::Charlestown State Prison"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab915e05542991b5579f0eb::Charlestown, Boston::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab915e05542991b5579f0eb::Bunker Hill, Washington::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab915e05542991b5579f0eb::Charlestown State Prison::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab915e05542991b5579f0eb::Community College (MBTA station)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab915e05542991b5579f0eb::Community College (MBTA station)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Community College station is a rapid transit station on the MBTA Orange Line, located in Charlestown, Massachusetts (a neighborhood of Boston).\n[2] Charlestown State Prison was a correctional facility in Charlestown, Boston, Massachusetts operated by the Massachusetts Department of Correction.\n[3] Bunker Hill is located northwest of the city of Longview, reached by traveling westbound out of the city along Washington State Route 4, also known as Ocean Beach Highway, and turning north onto Bunker Hill Road.\n[4] Charlestown was laid out in 1629 by engineer Thomas Graves, one of its early settlers, in the reign of Charles I of England."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

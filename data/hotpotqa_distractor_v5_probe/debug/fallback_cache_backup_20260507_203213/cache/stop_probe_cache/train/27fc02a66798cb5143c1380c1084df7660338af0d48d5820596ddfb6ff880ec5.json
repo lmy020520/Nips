@@ -1,0 +1,85 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Amsterdam",
+  "pred_answer": "Amsterdam",
+  "normalized_gold": "amsterdam",
+  "normalized_pred": "amsterdam",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac1e76d5542991316484bc7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac1e76d5542991316484bc7::Martinair::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac1e76d5542991316484bc7::Martin Schröder (aviator)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac1e76d5542991316484bc7::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac1e76d5542991316484bc7::Martinair::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac1e76d5542991316484bc7::Martinair",
+        "5ac1e76d5542991316484bc7::Martin Schröder (aviator)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac1e76d5542991316484bc7::Martinair::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac1e76d5542991316484bc7::Martin Schröder (aviator)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac1e76d5542991316484bc7::Martinair::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5ac1e76d5542991316484bc7::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5ac1e76d5542991316484bc7::Martinair::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The airline was founded in 1958 by Martin Schröder.\n[2] Johan Martin Schröder (born 13 May 1931 in Amsterdam) is a Dutch pilot and founder of Martinair, the second Dutch airline (after KLM) and the first Dutch air charter company.\n[3] Martinair, legally \"Martinair Holland N.V.\", is a Dutch cargo airline headquartered and based at Amsterdam Airport Schiphol and a subsidiary of Air France-KLM.\n\nNotes:\n[bridge] The airline was founded in 1958 by Martin Schröder."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

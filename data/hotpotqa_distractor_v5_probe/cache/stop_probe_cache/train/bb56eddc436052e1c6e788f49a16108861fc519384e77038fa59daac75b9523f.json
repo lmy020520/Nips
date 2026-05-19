@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Rio Ferdinand",
+  "pred_answer": "Rio Ferdinand",
+  "normalized_gold": "rio ferdinand",
+  "normalized_pred": "rio ferdinand",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89b7bb55429946c8d6e9ac",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89b7bb55429946c8d6e9ac::Michael Carrick::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89b7bb55429946c8d6e9ac::Rio Ferdinand::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89b7bb55429946c8d6e9ac::Dead Man Running::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a89b7bb55429946c8d6e9ac::Paul Scholes::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89b7bb55429946c8d6e9ac::Rio Ferdinand",
+        "5a89b7bb55429946c8d6e9ac::Dead Man Running"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89b7bb55429946c8d6e9ac::Michael Carrick::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89b7bb55429946c8d6e9ac::Rio Ferdinand::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89b7bb55429946c8d6e9ac::Dead Man Running::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a89b7bb55429946c8d6e9ac::Paul Scholes::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a89b7bb55429946c8d6e9ac::Paul Scholes::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He is the most decorated English footballer of all time, and one of the most successful footballers in history, having won a total of 25 trophies, featuring 11 Premier League titles and two Champions League titles.\n[2] Football players Ashley Cole and Rio Ferdinand served as executive producers.\n[3] He is regarded by many to be one of England's greatest ever players and he is one of the most decorated English footballers of all time.\n[4] He is one of the most decorated English footballers of all time."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

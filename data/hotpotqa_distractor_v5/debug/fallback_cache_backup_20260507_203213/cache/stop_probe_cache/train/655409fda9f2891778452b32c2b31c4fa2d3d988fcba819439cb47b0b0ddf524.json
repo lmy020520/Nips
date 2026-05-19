@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "HBO",
+  "pred_answer": "HBO",
+  "normalized_gold": "hbo",
+  "normalized_pred": "hbo",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adff1c155429925eb1afb60",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adff1c155429925eb1afb60::Sophie Turner::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adff1c155429925eb1afb60::Kyle Newman::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adff1c155429925eb1afb60::Maisie Williams::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adff1c155429925eb1afb60::Sophie Turner",
+        "5adff1c155429925eb1afb60::Kyle Newman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adff1c155429925eb1afb60::Sophie Turner::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adff1c155429925eb1afb60::Kyle Newman::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adff1c155429925eb1afb60::Maisie Williams::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adff1c155429925eb1afb60::Maisie Williams::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] She made her professional acting debut as Arya Stark in the HBO fantasy television series \"Game of Thrones\" in 2011, for which she won the EWwy Award for Best Supporting Actress in a Drama, the Portal Award for Best Supporting Actress – Television and Best Young Actor, and the Saturn Award for Best Performance by a Younger Actor.\n[2] Kyle Newman (born March 16, 1976) is an American filmmaker whose directorial work encompasses a number of feature films including the action-comedy \"Barely Lethal\", starring Oscar nominees Hailee Steinfeld and Samuel L. Jackson alongside Jessica Alba and Sophie Turner, for producer Brett Ratner, released by A24 Films; Fanboys, a Star Wars-themed comedy starring Kristen Bell, produced by Kevin Spac\n[3] Turner made her professional acting debut as Sansa Stark on the HBO fantasy television series \"Game of Thrones\" (2011–present), which brought her international recognition."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

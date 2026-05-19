@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The 2016 United States Senate election",
+  "pred_answer": "The 2016 United States Senate election",
+  "normalized_gold": "the 2016 united states senate election",
+  "normalized_pred": "the 2016 united states senate election",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8bc1565542996e8ac88a0c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8bc1565542996e8ac88a0c::Lula J. Davis::9"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8bc1565542996e8ac88a0c::United States Senate election in Nevada, 1998::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8bc1565542996e8ac88a0c::United States Senate election in Nevada, 2016::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8bc1565542996e8ac88a0c::Bob Beers (Nevada)::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8bc1565542996e8ac88a0c::Rory Reid::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8bc1565542996e8ac88a0c::United States Senate election in Nevada, 2016",
+        "5a8bc1565542996e8ac88a0c::Bob Beers (Nevada)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8bc1565542996e8ac88a0c::Lula J. Davis::9",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8bc1565542996e8ac88a0c::United States Senate election in Nevada, 1998::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8bc1565542996e8ac88a0c::United States Senate election in Nevada, 2016::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8bc1565542996e8ac88a0c::Bob Beers (Nevada)::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8bc1565542996e8ac88a0c::Rory Reid::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8bc1565542996e8ac88a0c::Rory Reid::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He served as elected Chairman of the Clark County Commission in Clark County, Nevada and was the Democratic nominee for Governor of Nevada in the 2010 gubernatorial election.\n[2] He ran unsuccessfully for the Republican nomination for Governor of Nevada in 2006 and in January 2014, he announced that he would run against Democratic Senator Harry Reid in the 2016 U.S. Senate election, but he withdrew from the race in June 2015.\n[3] The 2016 United States Senate election in Nevada was held on November 8, 2016 to elect a member of the United States Senate to represent the State of Nevada, concurrently with the 2016 U.S. presidential election, as well as other elections to the United States Senate in other states and elections to the United States House of Representatives and various state and local elections.\n[4] The 1998 United States Senate election in Nevada was held on November 3, 1998."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

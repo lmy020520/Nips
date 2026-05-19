@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Garry Marshall",
+  "pred_answer": "Garry Marshall",
+  "normalized_gold": "garry marshall",
+  "normalized_pred": "garry marshall",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae343b55542992f92d82277",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae343b55542992f92d82277::7th Heaven (1927 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae343b55542992f92d82277::New Year's Eve (2011 film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae343b55542992f92d82277::Jessica Biel::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae343b55542992f92d82277::Barret Swatek::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae343b55542992f92d82277::New Year's Eve (2011 film)",
+        "5ae343b55542992f92d82277::Jessica Biel"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae343b55542992f92d82277::7th Heaven (1927 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae343b55542992f92d82277::New Year's Eve (2011 film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae343b55542992f92d82277::Jessica Biel::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae343b55542992f92d82277::Barret Swatek::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae343b55542992f92d82277::Barret Swatek::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She played resident bad girl gone good, Cheryl, on the WB series \"7th Heaven\" for three seasons, and played the role of Brittany on the NBC comedy series \"Quarterlife\".\n[2] Biel began her career as a vocalist appearing in musical productions until she was cast as Mary Camden in the family-drama series \"7th Heaven\", for which she achieved recognition.\n[3] New Year's Eve is a 2011 American romantic comedy film directed by Garry Marshall and stars Halle Berry, Jessica Biel, Jon Bon Jovi, Abigail Breslin, Ludacris, Robert De Niro, Josh Duhamel, Zac Efron, Héctor Elizondo, Katherine Heigl, Ashton Kutcher, Seth Meyers, Lea Michele, Sarah Jessica Parker, Michelle Pfeiffer, Til Schweiger, Hilary Swank, Sofía Vergara and Alyssa Milano.\n[4] 7th Heaven (also known as Seventh Heaven) is a 1927 American silent romantic drama directed by Frank Borzage, and starring Janet Gaynor and Charles Farrell."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

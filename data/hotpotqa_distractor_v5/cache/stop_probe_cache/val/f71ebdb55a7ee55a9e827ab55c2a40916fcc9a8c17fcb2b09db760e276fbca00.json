@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Xtra Factor",
+  "pred_answer": "The Xtra Factor",
+  "normalized_gold": "the xtra factor",
+  "normalized_pred": "the xtra factor",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae515a75542993aec5ec131",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae515a75542993aec5ec131::Newswipe with Charlie Brooker::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae515a75542993aec5ec131::Charlie Brooker's Gameswipe::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae515a75542993aec5ec131::Konnie Huq::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae515a75542993aec5ec131::Fifteen Million Merits::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae515a75542993aec5ec131::You Have Been Watching::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae515a75542993aec5ec131::Konnie Huq",
+        "5ae515a75542993aec5ec131::Fifteen Million Merits"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae515a75542993aec5ec131::Newswipe with Charlie Brooker::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae515a75542993aec5ec131::Charlie Brooker's Gameswipe::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae515a75542993aec5ec131::Konnie Huq::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae515a75542993aec5ec131::Fifteen Million Merits::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae515a75542993aec5ec131::You Have Been Watching::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae515a75542993aec5ec131::You Have Been Watching::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] You Have Been Watching is a British comedy panel game presented by Charlie Brooker, produced by Zeppotron for Channel 4 and filmed at BBC Television Centre (pilot and series 2) and Riverside Studios (series 1) in London.\n[2] It was written by series creator and showrunner Charlie Brooker and his wife Kanak Huq and directed by Euros Lyn, and first aired on Channel 4 on 11 December 2011.\n[3] She presented the 2010 series of \"The Xtra Factor\" on ITV2.\n[4] Charlie Brooker's Gameswipe is a special one-off British, video game culture show by Charlie Brooker, aired in September 2009 during the BBC's Technology season."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

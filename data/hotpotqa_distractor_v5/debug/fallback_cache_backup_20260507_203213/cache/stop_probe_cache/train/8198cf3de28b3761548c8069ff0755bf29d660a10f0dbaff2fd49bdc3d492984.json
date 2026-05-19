@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Cities of Love",
+  "pred_answer": "Cities of Love",
+  "normalized_gold": "cities of love",
+  "normalized_pred": "cities of love",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0bf2b554299603e418456",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0bf2b554299603e418456::Tbilisi, I Love You::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0bf2b554299603e418456::Gilles Caussade::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0bf2b554299603e418456::Paris, je t'aime::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0bf2b554299603e418456::Emmanuel Benbihy::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae0bf2b554299603e418456::New York, I Love You::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0bf2b554299603e418456::Paris, je t'aime",
+        "5ae0bf2b554299603e418456::Emmanuel Benbihy"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0bf2b554299603e418456::Tbilisi, I Love You::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0bf2b554299603e418456::Gilles Caussade::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0bf2b554299603e418456::Paris, je t'aime::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0bf2b554299603e418456::Emmanuel Benbihy::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae0bf2b554299603e418456::New York, I Love You::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0bf2b554299603e418456::New York, I Love You::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The film is a sequel of sorts to the 2006 film \"Paris, je t'aime\", which had the same structure, and is the second film in the \"Cities of Love\" franchise, created and produced by Emmanuel Benbihy.\n[2] Emmanuel Benbihy (born 6 November 1969, Paris) is a feature-length film producer who created and launched the \"Cities of Love\" franchise starting with \"Paris, je t'aime\" and more recently \"New York, I Love You\".\n[3] Paris, je t'aime (] ; \"Paris, I love you\") is a 2006 anthology film starring an ensemble cast of actors of various nationalities.\n[4] Caussade worked with Emmanuel Benbihy to create \"Paris, je t'aime\" and served as executive producer for the film."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

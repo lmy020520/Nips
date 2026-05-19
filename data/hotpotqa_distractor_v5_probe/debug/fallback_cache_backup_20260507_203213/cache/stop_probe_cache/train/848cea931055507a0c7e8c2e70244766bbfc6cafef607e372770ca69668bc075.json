@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Edinburgh rock",
+  "pred_answer": "Edinburgh rock",
+  "normalized_gold": "edinburgh rock",
+  "normalized_pred": "edinburgh rock",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74d3d955429974ef308c78",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74d3d955429974ef308c78::Edinburgh rock::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74d3d955429974ef308c78::Marshmallow::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74d3d955429974ef308c78::Edinburgh rock::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74d3d955429974ef308c78::Potassium bitartrate::3"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a74d3d955429974ef308c78::Potassium humate::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74d3d955429974ef308c78::Edinburgh rock",
+        "5a74d3d955429974ef308c78::Potassium bitartrate"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74d3d955429974ef308c78::Edinburgh rock::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74d3d955429974ef308c78::Marshmallow::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74d3d955429974ef308c78::Edinburgh rock::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74d3d955429974ef308c78::Potassium bitartrate::3",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a74d3d955429974ef308c78::Potassium humate::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74d3d955429974ef308c78::Potassium humate::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Heat is used to increase the solubility of humic acids and hence more potassium humate can be extracted.\n[2] It can be used in baking or as a cleaning solution (when mixed with an acidic solution such as lemon juice or white vinegar).\n[3] Edinburgh rock or Edinburgh Castle rock is a traditional Scottish confection, and is quite distinct from conventional rock.\n[4] A marshmallow is a sugar-based confection that, in its modern form, typically consists of sugar, water and gelatin which is whipped to a spongy consistency, molded into small cylindrical pieces, and coated with corn starch."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Indianapolis",
+  "pred_answer": "Indianapolis",
+  "normalized_gold": "indianapolis",
+  "normalized_pred": "indianapolis",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f0a01554299458435d539",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f0a01554299458435d539::Sasha, Benny y Erik::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f0a01554299458435d539::Vampire Weekend::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f0a01554299458435d539::Forevermore (band)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8f0a01554299458435d539::Telos (album)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8f0a01554299458435d539::Vampire Weekend::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f0a01554299458435d539::Forevermore (band)",
+        "5a8f0a01554299458435d539::Telos (album)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f0a01554299458435d539::Sasha, Benny y Erik::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f0a01554299458435d539::Vampire Weekend::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f0a01554299458435d539::Forevermore (band)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8f0a01554299458435d539::Telos (album)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8f0a01554299458435d539::Vampire Weekend::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f0a01554299458435d539::Vampire Weekend::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The band's first album \"Vampire Weekend\" (2008) – which included the singles \"Mansard Roof\", \"A-Punk\", \"Oxford Comma\", \"Cape Cod Kwassa Kwassa\" and \"The Kids Don't Stand a Chance\" – was acclaimed by critics for its world music influences.\n[2] Telos marks the first album from Forevermore.\n[3] Forevermore is an American Christian metal band from Indianapolis, Indiana, formed in 2009.\n[4] Vampire Weekend is an American rock band from New York City, formed in 2006."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

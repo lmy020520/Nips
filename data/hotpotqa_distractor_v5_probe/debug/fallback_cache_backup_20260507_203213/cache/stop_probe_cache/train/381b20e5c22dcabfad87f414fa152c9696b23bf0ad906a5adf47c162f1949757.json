@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sydney",
+  "pred_answer": "Sydney",
+  "normalized_gold": "sydney",
+  "normalized_pred": "sydney",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8da437554299441c6ba027",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8da437554299441c6ba027::El Producto (EP)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8da437554299441c6ba027::Glory (EP)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8da437554299441c6ba027::Iggy Azalea::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8da437554299441c6ba027::Iggy Azalea::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8da437554299441c6ba027::Glory (EP)",
+        "5a8da437554299441c6ba027::Iggy Azalea"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8da437554299441c6ba027::El Producto (EP)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8da437554299441c6ba027::Glory (EP)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8da437554299441c6ba027::Iggy Azalea::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8da437554299441c6ba027::Iggy Azalea::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8da437554299441c6ba027::Iggy Azalea::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Born in Sydney and raised in Mullumbimby, she moved to the United States at the age of 16 to pursue a career in hip hop music, residing in the southern part of the country.\n[2] Amethyst Amelia Kelly, known professionally as Iggy Azalea ( ; born 7 June 1990), is an Australian rapper.\n[3] Glory is the debut extended play (EP) by Australian rapper Iggy Azalea, released as a free digital download on 30 July 2012, by Grand Hustle Records.\n[4] El Producto is the debut extended play (EP) by Australian electronic music group The Avalanches."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Novamex",
+  "pred_answer": "Novamex",
+  "normalized_gold": "novamex",
+  "normalized_pred": "novamex",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81db3d554299676cceb105",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81db3d554299676cceb105::Tamarindo (drink)::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81db3d554299676cceb105::Manzanita Sol::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81db3d554299676cceb105::Jarritos::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81db3d554299676cceb105::Marketing in schools::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81db3d554299676cceb105::Tamarindo (drink)",
+        "5a81db3d554299676cceb105::Jarritos"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81db3d554299676cceb105::Tamarindo (drink)::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81db3d554299676cceb105::Manzanita Sol::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81db3d554299676cceb105::Jarritos::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a81db3d554299676cceb105::Marketing in schools::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a81db3d554299676cceb105::Marketing in schools::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] For example, a school might allow only one brand of soft drink to be sold in vending machines on the campus; in return, the soft drink company would provide compensation to the school (frequently money, but it may provide other compensation as well, such as building new facilities or paying for school supplies).\n[2] Jarritos is a popular brand of soft drink in Mexico, founded in 1950 by Don Francisco \"El Güero\" Hill and now owned by Novamex, a large independent-bottling conglomerate based in Guadalajara, Jalisco, property of the Hill & ac.\n[3] Manzanita Sol is a brand of apple-flavored soft drinks owned by PepsiCo and is predominant in Mexico.\n[4] Tamarindo is also sold as a flavor of soda, the first of which was produced by the company Jarritos."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

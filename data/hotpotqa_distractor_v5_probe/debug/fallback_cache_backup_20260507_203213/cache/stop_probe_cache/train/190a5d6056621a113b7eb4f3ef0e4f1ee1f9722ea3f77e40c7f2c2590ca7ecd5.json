@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Latin",
+  "pred_answer": "Latin",
+  "normalized_gold": "latin",
+  "normalized_pred": "latin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae36f0e5542990afbd1e143",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae36f0e5542990afbd1e143::Portuguese literature::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae36f0e5542990afbd1e143::Os Lusíadas::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae36f0e5542990afbd1e143::Aeneid::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae36f0e5542990afbd1e143::Luís de Camões::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae36f0e5542990afbd1e143::Os Lusíadas",
+        "5ae36f0e5542990afbd1e143::Aeneid"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae36f0e5542990afbd1e143::Portuguese literature::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae36f0e5542990afbd1e143::Os Lusíadas::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae36f0e5542990afbd1e143::Aeneid::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae36f0e5542990afbd1e143::Luís de Camões::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae36f0e5542990afbd1e143::Luís de Camões::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He wrote a considerable amount of lyrical poetry and drama but is best remembered for his epic work \"Os Lusíadas\" (\"The Lusiads\").\n[2] The Aeneid ( ; Latin: \"Aeneis\" ] ) is a Latin epic poem, written by Virgil between 29 and 19 BC, that tells the legendary story of Aeneas, a Trojan who travelled to Italy, where he became the ancestor of the Romans.\n[3] Os Lusíadas (] ), usually translated as The Lusiads, is a Portuguese epic poem by Luís Vaz de Camões (sometimes anglicized as \"Camoëns\").\n[4] The literature of Portugal is distinguished by a wealth and variety of lyric poetry, which has characterized it from the beginning of its language, after the Roman occupation; by its wealth of historical writing documenting Portugal’s rulers, conquests, and expansion; by the then considered Golden Age of the Renaissance period of which it forms part the moral and allegorical Renaissance drama of G"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hans Wilhelm Schlegel",
+  "pred_answer": "Hans Wilhelm Schlegel",
+  "normalized_gold": "hans wilhelm schlegel",
+  "normalized_pred": "hans wilhelm schlegel",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a874f20554299211dda2bd6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a874f20554299211dda2bd6::Frank De Winne::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a874f20554299211dda2bd6::Dirk Frimout::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a874f20554299211dda2bd6::Hans Schlegel::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a874f20554299211dda2bd6::Claude Nicollier::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a874f20554299211dda2bd6::Dirk Frimout",
+        "5a874f20554299211dda2bd6::Hans Schlegel"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a874f20554299211dda2bd6::Frank De Winne::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a874f20554299211dda2bd6::Dirk Frimout::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a874f20554299211dda2bd6::Hans Schlegel::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a874f20554299211dda2bd6::Claude Nicollier::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a874f20554299211dda2bd6::Claude Nicollier::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] During his final spaceflight he participated in a spacewalk, becoming the first European Space Agency astronaut to do so during a Space Shuttle mission (previous ESA astronauts conducted spacewalks aboard \"Mir\", see List of spacewalks and moonwalks 1965–1999).\n[2] Hans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.\n[3] He flew aboard NASA Space Shuttle mision STS-45 as a payload specialist , making him the first Belgian in space .\n[4] ESA astronaut de Winne serves currently as Head of the European Astronaut Centre of the European Space Agency in Cologne/Germany (Köln)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

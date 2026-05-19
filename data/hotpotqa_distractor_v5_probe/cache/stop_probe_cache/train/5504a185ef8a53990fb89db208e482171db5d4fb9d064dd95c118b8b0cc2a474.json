@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Garafian Shepherd",
+  "pred_answer": "Garafian Shepherd",
+  "normalized_gold": "garafian shepherd",
+  "normalized_pred": "garafian shepherd",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf888d5542995534e8c7db",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf888d5542995534e8c7db::Garafian Shepherd::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf888d5542995534e8c7db::Harlequin Pinscher::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf888d5542995534e8c7db::German Pinscher::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf888d5542995534e8c7db::Podenco Canario::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf888d5542995534e8c7db::Garafian Shepherd",
+        "5adf888d5542995534e8c7db::German Pinscher"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf888d5542995534e8c7db::Garafian Shepherd::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf888d5542995534e8c7db::Harlequin Pinscher::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf888d5542995534e8c7db::German Pinscher::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf888d5542995534e8c7db::Podenco Canario::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf888d5542995534e8c7db::Podenco Canario::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Podenco Canario (In English: \"Canary Islands Hound\", \"Canarian Warren Hound\") is a breed of dog originally from the Canary Islands.\n[2] The German Pinscher (original name Deutscher Pinscher, FCI No. 184) is a medium-sized breed of dog, a Pinscher type that originated in Germany.\n[3] The Harlequin Pinscher is a type of Miniature Pinscher, which is a toy-sized dog.\n[4] The Pastor garafiano (English for: Garafian Shepherd) is a breed of dog indigenous native of La Palma, Canary Islands."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Nassau County",
+  "pred_answer": "Nassau County",
+  "normalized_gold": "nassau county",
+  "normalized_pred": "nassau county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a853ecb5542997b5ce3ffd5",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a853ecb5542997b5ce3ffd5::George A. Crawley::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a853ecb5542997b5ce3ffd5::Old Westbury Gardens::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a853ecb5542997b5ce3ffd5::Duluth Works::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a853ecb5542997b5ce3ffd5::George A. Crawley",
+        "5a853ecb5542997b5ce3ffd5::Old Westbury Gardens"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a853ecb5542997b5ce3ffd5::George A. Crawley::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a853ecb5542997b5ce3ffd5::Old Westbury Gardens::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a853ecb5542997b5ce3ffd5::Duluth Works::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a853ecb5542997b5ce3ffd5::Duluth Works::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Unofficially, they were built as part of a \"gentleman's agreement\" between U.S. Steel and the State of Minnesota to not impose hefty iron ore taxes on U.S. Steel in exchange for a fully integrated steel plant within Minnesota, whose mines furnished 80% of the ore to U.S. Steel.\n[2] Old Westbury Gardens is the former estate of John Shaffer Phipps (1874–1958), heir to a U.S. Steel fortune, in Nassau County, New York.\n[3] He is best known for the design of John Shaffer Phipps' (the heir to a U.S. Steel Magnate fortune) home, Westbury House (built 1904–10; additions constructed in 1915–16), at Old Westbury Gardens, in Long Island, New York."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

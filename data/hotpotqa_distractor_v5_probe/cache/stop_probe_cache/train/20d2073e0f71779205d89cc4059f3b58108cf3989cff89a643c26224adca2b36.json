@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Alice in Wonderland",
+  "pred_answer": "Alice in Wonderland",
+  "normalized_gold": "alice in wonderland",
+  "normalized_pred": "alice in wonderland",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8da3105542994ba4e3dcdd",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8da3105542994ba4e3dcdd::Alice in Wonderland (1951 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8da3105542994ba4e3dcdd::Gopher (Winnie-the-Pooh)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8da3105542994ba4e3dcdd::Winnie the Pooh (2011 film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8da3105542994ba4e3dcdd::Winnie the Pooh (song)::8"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8da3105542994ba4e3dcdd::Alice in Wonderland (1951 film)",
+        "5a8da3105542994ba4e3dcdd::Winnie the Pooh (2011 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8da3105542994ba4e3dcdd::Alice in Wonderland (1951 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8da3105542994ba4e3dcdd::Gopher (Winnie-the-Pooh)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8da3105542994ba4e3dcdd::Winnie the Pooh (2011 film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8da3105542994ba4e3dcdd::Winnie the Pooh (song)::8",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8da3105542994ba4e3dcdd::Winnie the Pooh (song)::8",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A music video was released for this version and it was included in \"The Many Adventures of Winnie the Pooh\" DVD.\n[2] Winnie the Pooh is a 2011 American animated buddy musical comedy film produced by Walt Disney Animation Studios and released by Walt Disney Pictures.\n[3] Gopher is a fictional grey anthropomorphic gopher, character who first appeared in the 1966 Disney animated film \"Winnie the Pooh and the Honey Tree\", introducing himself as Samuel J. Gopher.\n[4] Alice in Wonderland is a 1951 American animated musical fantasy-adventure film produced by Walt Disney Productions and based on the \"Alice\" books by Lewis Carroll."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

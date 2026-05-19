@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Diamond Foods",
+  "pred_answer": "Diamond Foods",
+  "normalized_gold": "diamond foods",
+  "normalized_pred": "diamond foods",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a73add955429908901be30f",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a73add955429908901be30f::Steven M. Neil::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a73add955429908901be30f::Diamond Foods::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a73add955429908901be30f::Post Holdings::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a73add955429908901be30f::Steven M. Neil",
+        "5a73add955429908901be30f::Diamond Foods"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a73add955429908901be30f::Steven M. Neil::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a73add955429908901be30f::Diamond Foods::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a73add955429908901be30f::Post Holdings::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a73add955429908901be30f::Post Holdings::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Post Holdings, Inc., headquartered in the Suburban St. Louis community of Brentwood, Missouri, is a consumer packaged goods holding company operating in the center-of-the store, foodservice, food ingredient, private label, refrigerated and active nutrition food categories.\n[2] Diamond Foods is an American packaged food brand originally based in Stockton, California, specializing in marketing nuts, particularly walnuts and almonds.\n[3] Steven M. Neil is a business executive best known for being the CAO, EVP, and CFO at Diamond Foods from March 2008 to 2012."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

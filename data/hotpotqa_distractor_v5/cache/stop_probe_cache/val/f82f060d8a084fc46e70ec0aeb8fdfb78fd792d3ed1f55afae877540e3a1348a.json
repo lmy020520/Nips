@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"Portofino\", \"Zermatt\", and \"Saving Grandma\".",
+  "pred_answer": "\"Portofino\", \"Zermatt\", and \"Saving Grandma\".",
+  "normalized_gold": "portofino zermatt and saving grandma",
+  "normalized_pred": "portofino zermatt and saving grandma",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd431955429924427fcf55",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd431955429924427fcf55::Frank Schaeffer::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd431955429924427fcf55::How Should We Then Live?::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd431955429924427fcf55::Frank Schaeffer::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd431955429924427fcf55::Edith Schaeffer::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abd431955429924427fcf55::Jim Harris (writer)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd431955429924427fcf55::Frank Schaeffer",
+        "5abd431955429924427fcf55::Edith Schaeffer"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd431955429924427fcf55::Frank Schaeffer::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd431955429924427fcf55::How Should We Then Live?::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd431955429924427fcf55::Frank Schaeffer::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd431955429924427fcf55::Edith Schaeffer::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abd431955429924427fcf55::Jim Harris (writer)::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd431955429924427fcf55::Jim Harris (writer)::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He has written three acclaimed novels in the 21st Century, one of which was nominated for a Pen USA award.\n[2] Edith Rachel Merritt Schaeffer (née Seville) (November 3, 1914 – March 30, 2013) was a Christian author and co-founder of L'Abri, a Christian organization which hosts guests.\n[3] He became a Hollywood film director and author, writing several internationally acclaimed novels depicting life in a strict evangelical household including \"Portofino\", \"Zermatt\", and \"Saving Grandma\".\n[4] Schaeffer narrated and appeared throughout the film series, which was produced by his son Frank Schaeffer and directed by John Gonser."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

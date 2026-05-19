@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "George Washington Carver",
+  "pred_answer": "George Washington Carver",
+  "normalized_gold": "george washington carver",
+  "normalized_pred": "george washington carver",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade9a14554299728e26c760",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade9a14554299728e26c760::George Washington Carver::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade9a14554299728e26c760::Diamond, Missouri::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade9a14554299728e26c760::Confederate Gulch and Diamond City::13"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade9a14554299728e26c760::George Washington Carver",
+        "5ade9a14554299728e26c760::Diamond, Missouri"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade9a14554299728e26c760::George Washington Carver::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade9a14554299728e26c760::Diamond, Missouri::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade9a14554299728e26c760::Confederate Gulch and Diamond City::13",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade9a14554299728e26c760::Confederate Gulch and Diamond City::13",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Diamond City, Confederate Gulch and the Montana Bar were spectacular examples of the flash-in-the pan Montana placer gold mining camps, but what a flash.\n[2] Diamond is primarily renowned as the birthplace of George Washington Carver.\n[3] The exact day and year of his birth are unknown; he was born into slavery in Missouri, either in 1861, or January 1864."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Starhill Global REIT",
+  "pred_answer": "Starhill Global REIT",
+  "normalized_gold": "starhill global reit",
+  "normalized_pred": "starhill global reit",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a73f48e5542993a88ae2eba",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a73f48e5542993a88ae2eba::Dazzeland::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a73f48e5542993a88ae2eba::City Cross Arcade::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a73f48e5542993a88ae2eba::Myer Centre, Adelaide::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a73f48e5542993a88ae2eba::Myer Centre, Adelaide::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a73f48e5542993a88ae2eba::Dazzeland",
+        "5a73f48e5542993a88ae2eba::Myer Centre, Adelaide"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a73f48e5542993a88ae2eba::Dazzeland::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a73f48e5542993a88ae2eba::City Cross Arcade::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a73f48e5542993a88ae2eba::Myer Centre, Adelaide::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a73f48e5542993a88ae2eba::Myer Centre, Adelaide::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a73f48e5542993a88ae2eba::Myer Centre, Adelaide::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is owned by  Starhill Global REIT and managed by CBRE.\n[2] The Myer Centre is a five level shopping centre in the heart of the Adelaide CBD situated along the Rundle Mall shopping precinct and North Terrace.\n[3] Australia Post Adelaide Rundle Mall Post Shop is also located on the first floor.\n[4] Dazzeland was a two-storey indoor amusement park occupying the top levels of the REMM Myer Centre in Rundle Mall, a major shopping mall in Adelaide, Australia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

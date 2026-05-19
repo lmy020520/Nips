@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Argentina–England football rivalry",
+  "pred_answer": "Argentina–England football rivalry",
+  "normalized_gold": "argentina–england football rivalry",
+  "normalized_pred": "argentina–england football rivalry",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b579f5542992d025e6813",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b579f5542992d025e6813::Argentina v England (1986 FIFA World Cup)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b579f5542992d025e6813::Argentina–Brazil football rivalry::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b579f5542992d025e6813::Argentina–England football rivalry::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7b579f5542992d025e6813::Czech Republic–Slovakia football rivalry::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b579f5542992d025e6813::Argentina v England (1986 FIFA World Cup)",
+        "5a7b579f5542992d025e6813::Argentina–England football rivalry"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b579f5542992d025e6813::Argentina v England (1986 FIFA World Cup)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b579f5542992d025e6813::Argentina–Brazil football rivalry::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b579f5542992d025e6813::Argentina–England football rivalry::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7b579f5542992d025e6813::Czech Republic–Slovakia football rivalry::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b579f5542992d025e6813::Czech Republic–Slovakia football rivalry::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Czech Republic–Slovakia football rivalry is a highly competitive sports rivalry exists between the national football teams of the two countries, as well as their respective sets of fans.\n[2] The Argentina–England football rivalry is a highly competitive sports rivalry that exists between the national football teams of the two countries, as well as their respective sets of fans.\n[3] The Argentina–Brazil rivalry is a highly competitive sports rivalry that exists between the national football teams of the two countries, as well as their respective sets of fans.\n[4] Argentina v England, played on 22 June 1986, was a football match between Argentina and England in the quarter-finals of the 1986 FIFA World Cup at the Estadio Azteca in Mexico City."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

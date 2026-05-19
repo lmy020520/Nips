@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Adelaide",
+  "pred_answer": "Adelaide",
+  "normalized_gold": "adelaide",
+  "normalized_pred": "adelaide",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adbfffb5542996e685252a1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adbfffb5542996e685252a1::City of Salisbury::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adbfffb5542996e685252a1::City of Onkaparinga::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adbfffb5542996e685252a1::Direk, South Australia::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adbfffb5542996e685252a1::City of Salisbury::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adbfffb5542996e685252a1::City of Salisbury",
+        "5adbfffb5542996e685252a1::Direk, South Australia"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adbfffb5542996e685252a1::City of Salisbury::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adbfffb5542996e685252a1::City of Onkaparinga::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adbfffb5542996e685252a1::Direk, South Australia::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adbfffb5542996e685252a1::City of Salisbury::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adbfffb5542996e685252a1::City of Salisbury::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Geographically, the region is located on the outskirts of Adelaide.\n[2] Direk is a suburb located in the City of Salisbury, Adelaide, South Australia.\n[3] The City of Onkaparinga is a local government area (LGA) located on the southern fringe of Adelaide, South Australia.\n[4] The City of Salisbury is a local government area (LGA) located on the northern fringes of Adelaide, South Australia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

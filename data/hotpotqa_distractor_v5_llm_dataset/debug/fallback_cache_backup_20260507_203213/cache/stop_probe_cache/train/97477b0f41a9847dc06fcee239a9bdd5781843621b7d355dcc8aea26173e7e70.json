@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hal Tucker",
+  "pred_answer": "Hal Tucker",
+  "normalized_gold": "hal tucker",
+  "normalized_pred": "hal tucker",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a892ef055429951533612d7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a892ef055429951533612d7::Cliffhanger (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a892ef055429951533612d7::Driven (2001 film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a892ef055429951533612d7::Michael Rooker::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a892ef055429951533612d7::Born American::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a892ef055429951533612d7::Cliffhanger (film)",
+        "5a892ef055429951533612d7::Michael Rooker"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a892ef055429951533612d7::Cliffhanger (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a892ef055429951533612d7::Driven (2001 film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a892ef055429951533612d7::Michael Rooker::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a892ef055429951533612d7::Born American::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a892ef055429951533612d7::Born American::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Born American (Finnish: \"Jäätävä polte\"; UK title: \"Arctic Heat\") is a 1986 film directed by Renny Harlin.\n[2] Michael Rooker (born April 6, 1955) is an American actor, best known for his breakout role as Henry in \"\" (1986), as well as his roles as Terry Cruger in \"Sea of Love\" (1989), Rowdy Burns in \"Days of Thunder\" (1990), Bill Broussard in \"JFK\" (1991), Hal Tucker in \"Cliffhanger\" (1993), Jared Svenning in \"Mallrats\" (1995), Merle Dixon in \"The Walking Dead\" (2010–2013) and Yondu Udonta in the \"Guardia\n[3] Driven is a 2001 action drama film directed by Renny Harlin and starring Sylvester Stallone, who also wrote and produced.\n[4] Cliffhanger is a 1993 American action adventure film directed by Renny Harlin and starring Sylvester Stallone, John Lithgow, Michael Rooker and Janine Turner."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

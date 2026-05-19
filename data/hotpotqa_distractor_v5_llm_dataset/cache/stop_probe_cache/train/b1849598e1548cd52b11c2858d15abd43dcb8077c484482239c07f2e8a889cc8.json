@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "This film starring Fred Savage, Amy Adams, Steven Pasquale",
+  "pred_answer": "This film starring Fred Savage, Amy Adams, Steven Pasquale",
+  "normalized_gold": "this film starring fred savage amy adams steven pasquale",
+  "normalized_pred": "this film starring fred savage amy adams steven pasquale",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab41f755542991751b4d672",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab41f755542991751b4d672::Assist (basketball)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab41f755542991751b4d672::Assist (ice hockey)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab41f755542991751b4d672::The Last Run (2004 film)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab41f755542991751b4d672::Steven Pasquale::3"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab41f755542991751b4d672::Aliens vs. Predator: Requiem::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab41f755542991751b4d672::The Last Run (2004 film)",
+        "5ab41f755542991751b4d672::Steven Pasquale"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab41f755542991751b4d672::Assist (basketball)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab41f755542991751b4d672::Assist (ice hockey)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab41f755542991751b4d672::The Last Run (2004 film)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab41f755542991751b4d672::Steven Pasquale::3",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab41f755542991751b4d672::Aliens vs. Predator: Requiem::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab41f755542991751b4d672::Aliens vs. Predator: Requiem::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Aliens vs. Predator: Requiem (also abbreviated as AVP: R) is a 2007 American science fiction action horror film directed by the Brothers Strause (Colin and Greg) in their directorial debut, written by Shane Salerno, and starring Steven Pasquale, Reiko Aylesworth, John Ortiz, Johnny Lewis, and Ariel Gade.\n[2] He also starred in the film \"\" (2007).\n[3] This film starring Fred Savage, Amy Adams, Steven Pasquale, Andrea Bogart, Erinn Bartlett, Vyto Ruginis and Robert Romanus in the lead roles.\n[4] The assists will be awarded in the order of play, with the last player to pass the puck to the goal scorer getting the primary assist and the player who passed it to the primary assister getting the secondary assist."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

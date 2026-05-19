@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Roe v. Wade",
+  "pred_answer": "Roe v. Wade",
+  "normalized_gold": "roe v wade",
+  "normalized_pred": "roe v wade",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2fa885542991a06ce9916",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2fa885542991a06ce9916::Roe v. Wade::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2fa885542991a06ce9916::Doe v. Bolton::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2fa885542991a06ce9916::Planned Parenthood v. Casey::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2fa885542991a06ce9916::Roe v. Wade",
+        "5ae2fa885542991a06ce9916::Doe v. Bolton"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2fa885542991a06ce9916::Roe v. Wade::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2fa885542991a06ce9916::Doe v. Bolton::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2fa885542991a06ce9916::Planned Parenthood v. Casey::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2fa885542991a06ce9916::Planned Parenthood v. Casey::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Planned Parenthood v. Casey, 505 U.S. 833 (1992) , was a landmark United States Supreme Court case in which the constitutionality of several Pennsylvania state statutory provisions regarding abortion was challenged.\n[2] The Supreme Court's decision was released on January 22, 1973, the same day as the decision in the better-known case of \"Roe v. Wade\", 410 U.S. 113 (1973) .\n[3] Arguing that these state interests became stronger over the course of a pregnancy, the Court resolved this balancing test by tying state regulation of abortion to the third trimester of pregnancy."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "October 4, 1989",
+  "pred_answer": "October 4, 1989",
+  "normalized_gold": "october 4 1989",
+  "normalized_pred": "october 4 1989",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3f9b85542995dadf2427c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3f9b85542995dadf2427c::Dakota Johnson::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3f9b85542995dadf2427c::Kali Hawk::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3f9b85542995dadf2427c::Fifty Shades Freed (film)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae3f9b85542995dadf2427c::Fifty Shades Freed::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3f9b85542995dadf2427c::Dakota Johnson",
+        "5ae3f9b85542995dadf2427c::Fifty Shades Freed (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3f9b85542995dadf2427c::Dakota Johnson::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3f9b85542995dadf2427c::Kali Hawk::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3f9b85542995dadf2427c::Fifty Shades Freed (film)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae3f9b85542995dadf2427c::Fifty Shades Freed::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3f9b85542995dadf2427c::Fifty Shades Freed::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Fifty Shades Freed is the third and final installment of the erotic romance \"Fifty Shades Trilogy\" by British author E. L. James.\n[2] It is the final film in the \"Fifty Shades\" trilogy, and a sequel to \"Fifty Shades of Grey\" (2015) and \"Fifty Shades Darker\" (2017).\n[3] Kali Hawk (born October 4, 1986) is an American actress, comedian and model.\n[4] Dakota Mayi Johnson (born October 4, 1989) is an American actress and model."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

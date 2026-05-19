@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "King Ernest Augustus",
+  "pred_answer": "King Ernest Augustus",
+  "normalized_gold": "king ernest augustus",
+  "normalized_pred": "king ernest augustus",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3ddfe5542995c82c4ac66",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3ddfe5542995c82c4ac66::George V of Hanover::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3ddfe5542995c82c4ac66::Princess Olga of Hanover::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3ddfe5542995c82c4ac66::Princess Marie of Hanover::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3ddfe5542995c82c4ac66::Duchess Anastasia of Mecklenburg-Schwerin::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3ddfe5542995c82c4ac66::George V of Hanover",
+        "5ac3ddfe5542995c82c4ac66::Princess Marie of Hanover"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3ddfe5542995c82c4ac66::George V of Hanover::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3ddfe5542995c82c4ac66::Princess Olga of Hanover::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3ddfe5542995c82c4ac66::Princess Marie of Hanover::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3ddfe5542995c82c4ac66::Duchess Anastasia of Mecklenburg-Schwerin::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3ddfe5542995c82c4ac66::Duchess Anastasia of Mecklenburg-Schwerin::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Anastasia was the youngest child and youngest daughter of Frederick Francis IV, Grand Duke of Mecklenburg-Schwerin and his wife Princess Alexandra of Hanover and Cumberland.\n[2] Princess Marie of Hanover (German: \"Marie Ernestine Josephine Adolphine Henrietta Theresa Elizabeth Alexandrina Prinzessin von Hannover und Cumberland\" ; 2 December 1849 – 4 June 1904) was the younger daughter of King George V of Hanover and of his wife, Princess Marie of Saxe-Altenburg.\n[3] Princess Olga of Hanover and Cumberland (German: \"Olga Adelaide Louise Marie Alexandrina Agnes Prinzessin von Hannover und Cumberland\" ; 11 July 1884 – 21 September 1958) was the youngest daughter of Ernest Augustus, Crown Prince of Hanover (1845–1923) and Princess Thyra of Denmark (1853–1933), the youngest daughter of Christian IX of Denmark (1818–1906) and Louise of Hesse-Kassel (1817–1898).\n[4] George V (George Frederick Alexander Charles Ernest Augustus; German: \"Georg Friedrich Alexander Karl Ernst August\" ; 27 May 1819 – 12 June 1878) was the last king of Hanover, the only child and successor of King Ernest Augustus."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Twilight Zone Tower of Terror",
+  "pred_answer": "The Twilight Zone Tower of Terror",
+  "normalized_gold": "the twilight zone tower of terror",
+  "normalized_pred": "the twilight zone tower of terror",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a76c4c65542994aec3b7171",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a76c4c65542994aec3b7171::Tower of Terror (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a76c4c65542994aec3b7171::The Twilight Zone Tower of Terror::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a76c4c65542994aec3b7171::Guardians of the Galaxy – Mission: Breakout!::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a76c4c65542994aec3b7171::Tower of Terror (film)",
+        "5a76c4c65542994aec3b7171::The Twilight Zone Tower of Terror"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a76c4c65542994aec3b7171::Tower of Terror (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a76c4c65542994aec3b7171::The Twilight Zone Tower of Terror::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a76c4c65542994aec3b7171::Guardians of the Galaxy – Mission: Breakout!::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a76c4c65542994aec3b7171::Guardians of the Galaxy – Mission: Breakout!::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] is an accelerated drop tower dark ride attraction at Disney California Adventure.\n[2] \"The Twilight Zone\" Tower of Terror, also known as Tower of Terror, is an accelerated drop tower dark ride located at Disney's Hollywood Studios, Tokyo DisneySea, Walt Disney Studios Park, and formerly located at Disney California Adventure Park.\n[3] Tower of Terror is a 1997 made-for-TV supernatural thriller directed by D. J. MacHale."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

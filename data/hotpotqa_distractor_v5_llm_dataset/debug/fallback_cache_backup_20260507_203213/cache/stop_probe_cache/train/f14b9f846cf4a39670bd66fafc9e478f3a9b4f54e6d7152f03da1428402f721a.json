@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Boulder Dam",
+  "pred_answer": "Boulder Dam",
+  "normalized_gold": "boulder dam",
+  "normalized_pred": "boulder dam",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0841255429906c02daad8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0841255429906c02daad8::Gordon Kaufmann::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0841255429906c02daad8::Sakura Kinomoto::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0841255429906c02daad8::Hoover Dam::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0841255429906c02daad8::Strouss::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0841255429906c02daad8::Gordon Kaufmann",
+        "5ae0841255429906c02daad8::Hoover Dam"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0841255429906c02daad8::Gordon Kaufmann::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0841255429906c02daad8::Sakura Kinomoto::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0841255429906c02daad8::Hoover Dam::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0841255429906c02daad8::Strouss::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0841255429906c02daad8::Strouss::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Originally known as Strouss-Hirshberg Co., it was long the leading department store in the greater Youngstown, Ohio and the Mahoning/Shenango Valleys.\n[2] Hoover Dam, originally known as Boulder Dam from 1933 to 1947, when it was officially renamed Hoover Dam by a joint resolution of Congress, is a concrete arch-gravity dam in the Black Canyon of the Colorado River, on the border between the U.S. states of Nevada and Arizona.\n[3] In the English anime adaptation by Nelvana of the series, \"Cardcaptors\", her name is changed to Sakura Avalon, though it was changed back to her original name in the dub of the 2nd film by Bang Zoom!\n[4] Gordon Bernie Kaufmann (19 March 1888 – 1 March 1949) was an English-born American architect mostly known for his work on the Hoover Dam."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

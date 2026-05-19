@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Leonardo DiCaprio",
+  "pred_answer": "Leonardo DiCaprio",
+  "normalized_gold": "leonardo dicaprio",
+  "normalized_pred": "leonardo dicaprio",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae712e45542995703ce8bc8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae712e45542995703ce8bc8::The 11th Hour (2007 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae712e45542995703ce8bc8::Warner Independent Pictures::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae712e45542995703ce8bc8::Leonardo DiCaprio::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae712e45542995703ce8bc8::A Scanner Darkly (film)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae712e45542995703ce8bc8::The 11th Hour (2007 film)",
+        "5ae712e45542995703ce8bc8::Leonardo DiCaprio"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae712e45542995703ce8bc8::The 11th Hour (2007 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae712e45542995703ce8bc8::Warner Independent Pictures::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae712e45542995703ce8bc8::Leonardo DiCaprio::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae712e45542995703ce8bc8::A Scanner Darkly (film)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae712e45542995703ce8bc8::A Scanner Darkly (film)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was distributed by Warner Independent Pictures.\n[2] Leonardo Wilhelm DiCaprio ( ; born November 11, 1974) is an American actor, film producer, and environmental activist.\n[3] Warner Independent Pictures was an American independent film division of an American film studio Warner Bros., itself a division of Time Warner.\n[4] The 11th Hour is a 2007 documentary film, created, produced, co-written and narrated by Leonardo DiCaprio, on the state of the natural environment."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

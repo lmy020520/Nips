@@ -1,0 +1,32 @@
+{
+  "should_derive": true,
+  "reason": "In repair_after_false_stop mode, there is a need to organize evidence for the question 'Vinci and Heroscape are both examples of what?' by bridging related concepts and verifying key details to support answer construction, using the provided raw candidates.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Vinci is described as a board game, which connects it to Heroscape as another example of a board game.",
+      "source_unit_ids": [
+        "5ae0c9f355429906c02dab51::Vinci (board game)::0",
+        "5ae0c9f355429906c02dab51::Heroscape::1"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Heroscape involves playing with miniature figures on a board made from interlocking tiles, confirming it as a board game.",
+      "source_unit_ids": [
+        "5ae0c9f355429906c02dab51::Heroscape::1"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "bridge_note",
+      "text": "The mention of Leonardo da Vinci in other contexts does not directly relate to Vinci as a board game, helping to clarify the focus.",
+      "source_unit_ids": [
+        "5ae0c9f355429906c02dab51::Ploteus::6",
+        "5ae0c9f355429906c02dab51::Blériot 165::2"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

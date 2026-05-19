@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sunday River Ski Resort",
+  "pred_answer": "Sunday River Ski Resort",
+  "normalized_gold": "sunday river ski resort",
+  "normalized_pred": "sunday river ski resort",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7ce9fa554299683c1c63da",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7ce9fa554299683c1c63da::2015 Red Bull Frozen Rush::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7ce9fa554299683c1c63da::2014 Red Bull Frozen Rush::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7ce9fa554299683c1c63da::Sunday River (ski resort)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7ce9fa554299683c1c63da::2015 Red Bull Frozen Rush::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7ce9fa554299683c1c63da::2015 Red Bull Frozen Rush",
+        "5a7ce9fa554299683c1c63da::Sunday River (ski resort)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7ce9fa554299683c1c63da::2015 Red Bull Frozen Rush::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7ce9fa554299683c1c63da::2014 Red Bull Frozen Rush::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7ce9fa554299683c1c63da::Sunday River (ski resort)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7ce9fa554299683c1c63da::2015 Red Bull Frozen Rush::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7ce9fa554299683c1c63da::2015 Red Bull Frozen Rush::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 2015 Red Bull Frozen Rush was the second Frozen Rush event.\n[2] Sunday River is a ski resort located in Newry, Maine, in the United States.\n[3] The event was held on January 9 - 10, 2014 at Sunday River Ski Resort near Newry, Maine.\n[4] The event was held on January 8–9, 2015 at Sunday River Ski Resort near Newry, Maine."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

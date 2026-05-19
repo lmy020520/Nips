@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sketches of Frank Gehry",
+  "pred_answer": "Sketches of Frank Gehry",
+  "normalized_gold": "sketches of frank gehry",
+  "normalized_pred": "sketches of frank gehry",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab841cf5542990e739ec89c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab841cf5542990e739ec89c::Sketches of Frank Gehry::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab841cf5542990e739ec89c::Remembrance Day::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab841cf5542990e739ec89c::The 11th Hour (2007 film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab841cf5542990e739ec89c::The Green Building (Louisville, Kentucky)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab841cf5542990e739ec89c::Sketches of Frank Gehry",
+        "5ab841cf5542990e739ec89c::The 11th Hour (2007 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab841cf5542990e739ec89c::Sketches of Frank Gehry::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab841cf5542990e739ec89c::Remembrance Day::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab841cf5542990e739ec89c::The 11th Hour (2007 film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab841cf5542990e739ec89c::The Green Building (Louisville, Kentucky)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab841cf5542990e739ec89c::The Green Building (Louisville, Kentucky)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Green Building is a building located in the East Market District (NuLu) of Louisville, Kentucky.\n[2] The 11th Hour is a 2007 documentary film, created, produced, co-written and narrated by Leonardo DiCaprio, on the state of the natural environment.\n[3] Hostilities formally ended \"at the 11th hour of the 11th day of the 11th month\", in accordance with the armistice signed by representatives of Germany and the Entente between 5:12 and 5:20 that morning.\n[4] Sketches of Frank Gehry is a 2006 American documentary film directed by Sydney Pollack and produced by Ultan Guilfoyle, about the life and work of the Canadian-American architect Frank Gehry."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

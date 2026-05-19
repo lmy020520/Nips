@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Doobie Brothers",
+  "pred_answer": "The Doobie Brothers",
+  "normalized_gold": "the doobie brothers",
+  "normalized_pred": "the doobie brothers",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2692f5542993be8fa990a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2692f5542993be8fa990a::The Doobie Brothers::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2692f5542993be8fa990a::San Jose Lasers::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2692f5542993be8fa990a::Tiran Porter::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab2692f5542993be8fa990a::Eric Kretz::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2692f5542993be8fa990a::The Doobie Brothers",
+        "5ab2692f5542993be8fa990a::Tiran Porter"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2692f5542993be8fa990a::The Doobie Brothers::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2692f5542993be8fa990a::San Jose Lasers::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2692f5542993be8fa990a::Tiran Porter::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab2692f5542993be8fa990a::Eric Kretz::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2692f5542993be8fa990a::Eric Kretz::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Eric, who was born in San Jose, California, attended and graduated from Willow Glen High School in San Jose in 1984.\n[2] Tiran Porter (born September 26, 1948) is an American bass and guitar player, vocalist and composer, best known as a member of The Doobie Brothers from 1972 to 1980 and 1987 to 1992.\n[3] It was a member of the American Basketball League.\n[4] The Doobie Brothers are an American rock band from San Jose, California."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

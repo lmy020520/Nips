@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "documentary",
+  "pred_answer": "documentary",
+  "normalized_gold": "documentary",
+  "normalized_pred": "documentary",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac4f8b65542996feb3fe9af",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac4f8b65542996feb3fe9af::Extremely high frequency::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac4f8b65542996feb3fe9af::NBA Jam (1993 video game)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac4f8b65542996feb3fe9af::Super High Me::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac4f8b65542996feb3fe9af::Superjews::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac4f8b65542996feb3fe9af::Super High Roller Bowl::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac4f8b65542996feb3fe9af::Super High Me",
+        "5ac4f8b65542996feb3fe9af::Superjews"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac4f8b65542996feb3fe9af::Extremely high frequency::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac4f8b65542996feb3fe9af::NBA Jam (1993 video game)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac4f8b65542996feb3fe9af::Super High Me::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac4f8b65542996feb3fe9af::Superjews::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac4f8b65542996feb3fe9af::Super High Roller Bowl::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac4f8b65542996feb3fe9af::Super High Roller Bowl::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Super High Roller Bowl is an annual high stakes No Limit Hold'em poker tournament that takes place at the Aria Resort and Casino in Las Vegas, Nevada.\n[2] Superjews (Dutch: \"Superjews: De Superjoden van Ajax\" ) is a 2013 documentary film produced and directed by independent Israeli-Dutch filmmaker Nirit Peled.\n[3] Super High Me is a 2008 documentary film about the effects of smoking cannabis for 30 days.\n[4] Midway had previously released such sports games as \"Arch Rivals\" in 1989, \"High Impact\" in 1990, and \"Super High Impact\" in 1991."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

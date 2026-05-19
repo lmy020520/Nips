@@ -1,0 +1,100 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Broughton",
+  "pred_answer": "Broughton",
+  "normalized_gold": "broughton",
+  "normalized_pred": "broughton",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7834155429928e1fe3866",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7834155429928e1fe3866::Surface features of Venus::8"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7834155429928e1fe3866::Transit of Venus, 2004::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7834155429928e1fe3866::Transit of Venus, 1639::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab7834155429928e1fe3866::Transit of Venus, 1639::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab7834155429928e1fe3866::William Crabtree::1"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5ab7834155429928e1fe3866::Jeremiah Horrocks::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7834155429928e1fe3866::Transit of Venus, 1639",
+        "5ab7834155429928e1fe3866::William Crabtree"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7834155429928e1fe3866::Surface features of Venus::8",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7834155429928e1fe3866::Transit of Venus, 2004::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7834155429928e1fe3866::Transit of Venus, 1639::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab7834155429928e1fe3866::Transit of Venus, 1639::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab7834155429928e1fe3866::William Crabtree::1",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5ab7834155429928e1fe3866::Jeremiah Horrocks::1",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7834155429928e1fe3866::Jeremiah Horrocks::1",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] He was the first person to demonstrate that the Moon moved around the Earth in an elliptical orbit; and he was the only person to predict the transit of Venus of 1639, an event which he and his friend William Crabtree were the only two people to observe and record.\n[2] He was one of only two people to observe and record the first predicted transit of Venus in 1639 .\n[3] The pair made their observations independently on 4 December that year (24 November under the Julian calendar then used in England); Horrocks from Carr House, then in the village of Much Hoole, Lancashire, and Crabtree from his home in Broughton, near Manchester.\n[4] The first known observations and recording of a transit of Venus were made in 1639 by the English astronomers Jeremiah Horrocks and his friend and correspondent William Crabtree."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

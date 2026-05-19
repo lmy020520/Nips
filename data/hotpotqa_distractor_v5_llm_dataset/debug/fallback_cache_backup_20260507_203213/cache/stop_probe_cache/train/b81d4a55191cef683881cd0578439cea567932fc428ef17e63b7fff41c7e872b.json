@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Paul Sarbanes",
+  "pred_answer": "Paul Sarbanes",
+  "normalized_gold": "paul sarbanes",
+  "normalized_pred": "paul sarbanes",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d99aa5542997cc2c47460",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d99aa5542997cc2c47460::Kweisi Mfume::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d99aa5542997cc2c47460::United States Senate election in New Jersey, 2006::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d99aa5542997cc2c47460::Paul Sarbanes::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7d99aa5542997cc2c47460::Rick Berg::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d99aa5542997cc2c47460::Kweisi Mfume",
+        "5a7d99aa5542997cc2c47460::Paul Sarbanes"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d99aa5542997cc2c47460::Kweisi Mfume::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d99aa5542997cc2c47460::United States Senate election in New Jersey, 2006::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d99aa5542997cc2c47460::Paul Sarbanes::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7d99aa5542997cc2c47460::Rick Berg::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d99aa5542997cc2c47460::Rick Berg::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] On May 16, 2011, Berg announced his run for the United States Senate seat being vacated by Democratic incumbent Kent Conrad but lost narrowly to Heidi Heitkamp on November 6, 2012.\n[2] A member of the Democratic Party from Maryland he served as a member of the United States House of Representatives from 1971 to 1977 and as a United States Senator from 1977 to 2007.\n[3] Incumbent Democratic U.S. Senator Bob Menendez was elected to represent New Jersey in the United States Senate for a six-year term which ended in January 2013.\n[4] On September 12, 2006, he lost a primary campaign for the United States Senate seat that was being vacated by Maryland U.S. Senator Paul Sarbanes."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,88 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Gerald L. \"Jerry\" Frei",
+  "pred_answer": "Tom Lovat",
+  "normalized_gold": "gerald l jerry frei",
+  "normalized_pred": "tom lovat",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "The evidence shows that Jerry Frei was head coach at Oregon and coached Dan Fouts, and that Dan Fouts was a prolific passer in the 1970s-80s. However, the predicted answer is Tom Lovat, who is not mentioned as Oregon head coach or as coaching Dan Fouts. The evidence does not support Tom Lovat as the correct answer.",
+  "missing_support_reasons": [
+    "No evidence that Tom Lovat was head coach at Oregon or coached Dan Fouts."
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "The evidence shows that Jerry Frei was head coach at Oregon and coached Dan Fouts, and that Dan Fouts was a prolific passer in the 1970s-80s. However, the predicted answer is Tom Lovat, who is not mentioned as Oregon head coach or as coaching Dan Fouts. The evidence does not support Tom Lovat as the correct answer.",
+    "missing_support_reasons": [
+      "No evidence that Tom Lovat was head coach at Oregon or coached Dan Fouts."
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5a832f455542990548d0b1c1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a832f455542990548d0b1c1::Dan Fouts::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a832f455542990548d0b1c1::List of Utah Utes head football coaches::8"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a832f455542990548d0b1c1::Jerry Frei::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a832f455542990548d0b1c1::Jeff Horton::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a832f455542990548d0b1c1::Dan Fouts",
+        "5a832f455542990548d0b1c1::Jerry Frei"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a832f455542990548d0b1c1::Dan Fouts::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a832f455542990548d0b1c1::List of Utah Utes head football coaches::8",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a832f455542990548d0b1c1::Jerry Frei::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a832f455542990548d0b1c1::Jeff Horton::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a832f455542990548d0b1c1::Jeff Horton::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He was the interim head coach at the University of Minnesota, having replaced Tim Brewster, who was fired midway through the Golden Gophers' 2010 season.\n[2] He was the head coach at the University of Oregon for five seasons, 1967 through 1971, compiling a record of 22–29–2.\n[3] Tom Lovat is, in terms of winning percentage, the worst coach the Utes have had with a percentage of .152 during his three seasons as head coach (with the exception of Walter Shoup who only coached one game in 1895.)\n[4] He was one of the most prolific passing quarterbacks during the 1970s and 1980s, but the Chargers were unable to make it to the Super Bowl during his fifteen-year career."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

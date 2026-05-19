@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "dog",
+  "pred_answer": "dog",
+  "normalized_gold": "dog",
+  "normalized_pred": "dog",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abacd16554299660624161c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abacd16554299660624161c::Old German herding dogs::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abacd16554299660624161c::Grand Griffon Vendéen::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abacd16554299660624161c::Old German Shepherd Dog::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abacd16554299660624161c::Briquet Griffon Vendéen::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abacd16554299660624161c::Schutzhund::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abacd16554299660624161c::Old German Shepherd Dog",
+        "5abacd16554299660624161c::Briquet Griffon Vendéen"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abacd16554299660624161c::Old German herding dogs::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abacd16554299660624161c::Grand Griffon Vendéen::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abacd16554299660624161c::Old German Shepherd Dog::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abacd16554299660624161c::Briquet Griffon Vendéen::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abacd16554299660624161c::Schutzhund::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abacd16554299660624161c::Schutzhund::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Schutzhund (German for \"protection dog\") is a dog sport that was developed in Germany in the early 1900s as a breed suitability test for the German Shepherd breed.\n[2] A Briquet Griffon Vendéen is a breed of hunting dog originating in France.\n[3] Old German Shepherd Dog (German: \"Altdeutscher Schäferhund\" ) is a controversial name for the long-haired variation of the German Shepherd Dog (German: \"Langstockhaariger Deutscher Schäferhund\" ), which is not a separate breed recognized by the Fédération Cynologique Internationale.\n[4] A Grand Griffon Vendéen is a breed of hunting dog originating in France."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Christopher Andrew \"Ender\" Carrabba",
+  "pred_answer": "Christopher Andrew \"Ender\" Carrabba",
+  "normalized_gold": "christopher andrew ender carrabba",
+  "normalized_pred": "christopher andrew ender carrabba",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a821e2b5542995ce29dccb3",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a821e2b5542995ce29dccb3::Keisuke Kuwata::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a821e2b5542995ce29dccb3::Further Seems Forever::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a821e2b5542995ce29dccb3::Chris Carrabba::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a821e2b5542995ce29dccb3::Don't Wait (Dashboard Confessional song)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a821e2b5542995ce29dccb3::Keisuke Kuwata",
+        "5a821e2b5542995ce29dccb3::Chris Carrabba"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a821e2b5542995ce29dccb3::Keisuke Kuwata::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a821e2b5542995ce29dccb3::Further Seems Forever::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a821e2b5542995ce29dccb3::Chris Carrabba::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a821e2b5542995ce29dccb3::Don't Wait (Dashboard Confessional song)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a821e2b5542995ce29dccb3::Don't Wait (Dashboard Confessional song)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The song was written by the lead singer of Dashboard Confessional, Chris Carrabba.\n[2] Christopher Andrew \"Ender\" Carrabba (born April 10, 1975) is the lead singer and guitarist of the band Dashboard Confessional, lead singer of the band Further Seems Forever, and is the vocalist for the folk band Twin Forks.\n[3] Original singer Chris Carrabba recorded \"The Moon Is Down\" (2001) with the group before leaving to start Dashboard Confessional.\n[4] Keisuke Kuwata (桑田 佳祐 , Kuwata Keisuke , born February 26, 1956) is a Japanese multi-instrumentalist, singer-songwriter, and frontman for the Southern All Stars, as well of his own solo band, the Kuwata band."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

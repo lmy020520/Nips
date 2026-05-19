@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "brown malt",
+  "pred_answer": "brown malt",
+  "normalized_gold": "brown malt",
+  "normalized_pred": "brown malt",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8dbb20554299441c6ba068",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8dbb20554299441c6ba068::Obadiah Poundage::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8dbb20554299441c6ba068::Umqombothi::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8dbb20554299441c6ba068::Porter (beer)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8dbb20554299441c6ba068::Obadiah Poundage::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8dbb20554299441c6ba068::Obadiah Poundage",
+        "5a8dbb20554299441c6ba068::Porter (beer)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8dbb20554299441c6ba068::Obadiah Poundage::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8dbb20554299441c6ba068::Umqombothi::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8dbb20554299441c6ba068::Porter (beer)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8dbb20554299441c6ba068::Obadiah Poundage::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8dbb20554299441c6ba068::Obadiah Poundage::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Obadiah Poundage was the pen-name of a London brewer of the 18th century who published a letter in the \"London Chronicle\" on November 4, 1760 arguing for a rise in the price of beer.\n[2] Porter is a dark style of beer developed in London from well-hopped beers made from brown malt.\n[3] Umqombothi (] ), from the Xhosa and Zulu language, is a beer made from maize (corn), maize malt, sorghum malt, yeast and water.\n[4] The letter was reprinted in various journals, including the \"Gentleman's Magazine\" and \"The Gazetteer\", and has since been used by beer historians for the basis of information about porter."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

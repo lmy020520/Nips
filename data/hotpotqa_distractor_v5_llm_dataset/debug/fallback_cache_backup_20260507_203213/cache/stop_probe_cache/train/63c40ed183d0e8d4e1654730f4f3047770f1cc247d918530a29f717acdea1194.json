@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "René Baumann",
+  "pred_answer": "René Baumann",
+  "normalized_gold": "rené baumann",
+  "normalized_pred": "rené baumann",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a75e15355429976ec32bc69",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a75e15355429976ec32bc69::Switzerland in the Eurovision Song Contest 2007::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a75e15355429976ec32bc69::Serbia in the Eurovision Song Contest 2015::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a75e15355429976ec32bc69::DJ BoBo::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a75e15355429976ec32bc69::Bulgaria in the Junior Eurovision Song Contest::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a75e15355429976ec32bc69::Switzerland in the Eurovision Song Contest 2007",
+        "5a75e15355429976ec32bc69::DJ BoBo"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a75e15355429976ec32bc69::Switzerland in the Eurovision Song Contest 2007::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a75e15355429976ec32bc69::Serbia in the Eurovision Song Contest 2015::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a75e15355429976ec32bc69::DJ BoBo::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a75e15355429976ec32bc69::Bulgaria in the Junior Eurovision Song Contest::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a75e15355429976ec32bc69::Bulgaria in the Junior Eurovision Song Contest::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The first representative to participate for the nation at the 2007 contest was Bon-Bon with the song \"Bonbolandiya\", which finished in seventh place out of seventeen participating entries, achieving a score of eighty-six points.\n[2] René Baumann (born 5 January 1968), better known as DJ BoBo, is a Swiss singer-songwriter, dancer and music producer.\n[3] Serbian broadcaster Radio Television of Serbia (RTS) selected Vladimir Graić, the composer of the Eurovision Song Contest 2007 winning song \"Molitva\", to compose three candidate songs as potential Serbian entries for the 2015 contest in Vienna, Austria.\n[4] Switzerland selected their entry for the Eurovision Song Contest 2007 on February 21, 2007, making the decision to have DJ BoBo represent the country, from a total of over sixty entries."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

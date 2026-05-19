@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Camelot Theme Park",
+  "pred_answer": "Camelot Theme Park",
+  "normalized_gold": "camelot theme park",
+  "normalized_pred": "camelot theme park",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf73385542992d7e9f9372",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf73385542992d7e9f9372::Zierer::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf73385542992d7e9f9372::Knightmare (Camelot)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf73385542992d7e9f9372::Camelot Theme Park::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf73385542992d7e9f9372::Tokyo DisneySea::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf73385542992d7e9f9372::Zierer",
+        "5adf73385542992d7e9f9372::Camelot Theme Park"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf73385542992d7e9f9372::Zierer::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf73385542992d7e9f9372::Knightmare (Camelot)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf73385542992d7e9f9372::Camelot Theme Park::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf73385542992d7e9f9372::Tokyo DisneySea::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf73385542992d7e9f9372::Tokyo DisneySea::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Owned by The Oriental Land Company, which licenses Disney characters and themes from The Walt Disney Company, Tokyo DisneySea attracted an estimated 11 million visitors in 2016, making it the sixth-most-visited theme park in the world.\n[2] Camelot Theme Park is an abandoned resort and theme park located in the English county of Lancashire.\n[3] Knightmare is a Schwarzkopf/Zierer custom roller coaster that is SBNO (standing but not operating) at the now defunct Camelot Theme Park in Chorley, Lancashire, United Kingdom.\n[4] The company also has partnered with Schwarzkopf to build \"Lisebergbanan\" at Liseberg and \"Knightmare\" at Camelot Theme Park."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "comedian",
+  "pred_answer": "comedian",
+  "normalized_gold": "comedian",
+  "normalized_pred": "comedian",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8a52325542995153361362",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8a52325542995153361362::John de Lancie::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8a52325542995153361362::James Cameron filmography::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8a52325542995153361362::Legend (TV series)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8a52325542995153361362::Westworld (TV series)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8a52325542995153361362::John de Lancie",
+        "5a8a52325542995153361362::Legend (TV series)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8a52325542995153361362::John de Lancie::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8a52325542995153361362::James Cameron filmography::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8a52325542995153361362::Legend (TV series)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8a52325542995153361362::Westworld (TV series)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8a52325542995153361362::Westworld (TV series)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Westworld is an American science fiction western thriller television series created by Jonathan Nolan and Lisa Joy for HBO.\n[2] Legend is a science fiction Western television show that ran on UPN from April 18, 1995 until August 22, 1995, with one final re-airing of the pilot on July 3, 1996.\n[3] James Cameron is a Canadian director, screenwriter, and producer who has had an extensive career in film and television.\n[4] Jonathan de Lancie (born March 20, 1948) is an American stand-up comedian, actor, director, producer, writer, singer, musician, and voice artist, best known for his role as Q in \"\" (1987–94), \"\" (1993–99), and \"\" (1995–2001) and the voice of in \"\" (2010–present)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

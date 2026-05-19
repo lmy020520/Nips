@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Wicked Witch of the West",
+  "pred_answer": "Wicked Witch of the West",
+  "normalized_gold": "wicked witch of the west",
+  "normalized_pred": "wicked witch of the west",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a730add5542991f29ee2cfa",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a730add5542991f29ee2cfa::I'm Not that Girl::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a730add5542991f29ee2cfa::Defying Gravity (song)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a730add5542991f29ee2cfa::Wicked Witch of the West::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a730add5542991f29ee2cfa::Gregory Maguire::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a730add5542991f29ee2cfa::I'm Not that Girl",
+        "5a730add5542991f29ee2cfa::Wicked Witch of the West"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a730add5542991f29ee2cfa::I'm Not that Girl::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a730add5542991f29ee2cfa::Defying Gravity (song)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a730add5542991f29ee2cfa::Wicked Witch of the West::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a730add5542991f29ee2cfa::Gregory Maguire::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a730add5542991f29ee2cfa::Gregory Maguire::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Many of Maguire's adult novels are inspired by classic children's stories; \"Wicked\" transforms the Wicked Witch of the West from L. Frank Baum's \"The Wonderful Wizard of Oz\" and its 1939 film adaptation into the misunderstood green-skinned Elphaba Thropp.\n[2] The Wicked Witch of the West is a fictional character created by L. Frank Baum as the most significant antagonist in his classic children's novel \"The Wonderful Wizard of Oz\" (1900).\n[3] It is mostly a solo sung by the main character of the show, Elphaba (the Wicked Witch of the West), with two small duets at the beginning and in the middle of the song between Elphaba and her friend Glinda, and a chorus part in the end in which the citizens of Oz sing.\n[4] \"I'm Not that Girl\" is a song from the musical \"Wicked\", based on the novel \"\" by Gregory Maguire, composed by Stephen Schwartz, originally recorded by Idina Menzel (original song) and Kristin Chenoweth (reprise) on November 10, 2003, and released on December 16, 2003."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Love in the Moonlight",
+  "pred_answer": "Love in the Moonlight",
+  "normalized_gold": "love in the moonlight",
+  "normalized_pred": "love in the moonlight",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7ae67554299540e5a563e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7ae67554299540e5a563e::Grudge: The Revolt of Gumiho::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7ae67554299540e5a563e::Kim Yoo-jung::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7ae67554299540e5a563e::Kim Woo-bin::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7ae67554299540e5a563e::Grudge: The Revolt of Gumiho",
+        "5ae7ae67554299540e5a563e::Kim Yoo-jung"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7ae67554299540e5a563e::Grudge: The Revolt of Gumiho::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7ae67554299540e5a563e::Kim Yoo-jung::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7ae67554299540e5a563e::Kim Woo-bin::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7ae67554299540e5a563e::Kim Woo-bin::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] In 2016, he took on his first leading role on television in \"Uncontrollably Fond\".\n[2] She hosted music show \"Inkigayo\" from November 2014 to April 2016 and took on her first adult leading role in KBS2's historical drama \"Love in the Moonlight\" (2016).\n[3] Grudge: The Revolt of Gumiho (; lit."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

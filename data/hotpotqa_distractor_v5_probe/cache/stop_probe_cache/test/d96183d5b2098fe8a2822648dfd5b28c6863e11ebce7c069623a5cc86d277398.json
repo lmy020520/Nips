@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "8-track",
+  "pred_answer": "8-track",
+  "normalized_gold": "8-track",
+  "normalized_pred": "8-track",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e283655429965cec5eaab",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e283655429965cec5eaab::Learjet::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e283655429965cec5eaab::Bill Lear::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e283655429965cec5eaab::Bill Lear::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e283655429965cec5eaab::Learjet",
+        "5a7e283655429965cec5eaab::Bill Lear"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e283655429965cec5eaab::Learjet::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e283655429965cec5eaab::Bill Lear::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e283655429965cec5eaab::Bill Lear::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e283655429965cec5eaab::Bill Lear::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He also invented the battery eliminator for the B battery, and developed the 8-track cartridge, an audio tape system.\n[2] He is best known for founding the Lear Jet Corporation, a manufacturer of business jets.\n[3] Learjet is a Canadian owned, American manufacturer of business jets for civilian and military use based in Wichita, Kansas."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

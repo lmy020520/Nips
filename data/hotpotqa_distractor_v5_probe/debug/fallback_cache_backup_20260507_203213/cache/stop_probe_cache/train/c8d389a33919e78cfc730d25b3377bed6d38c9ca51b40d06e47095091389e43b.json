@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "22",
+  "pred_answer": "22",
+  "normalized_gold": "22",
+  "normalized_pred": "22",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd370955429924427fcf49",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd370955429924427fcf49::President's Choice Financial::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd370955429924427fcf49::Loblaw Companies::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd370955429924427fcf49::Food For Less::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd370955429924427fcf49::President's Choice Financial",
+        "5abd370955429924427fcf49::Loblaw Companies"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd370955429924427fcf49::President's Choice Financial::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd370955429924427fcf49::Loblaw Companies::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd370955429924427fcf49::Food For Less::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd370955429924427fcf49::Food For Less::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The \"No Frills\" stores then became Food For Less stores with a more upmarket appearance (edging closer to that of Woolworths) and also launched a new logo at the same time.\n[2] Loblaw Companies Limited is a Canadian food retailer that encompasses 1,000 corporate and franchise supermarkets that operates under 22 regional and market segment banners.\n[3] President’s Choice Financial (French: \"Services financiers le Choix du Président\" ), commonly shortened to PC Financial, is the financial service division of the Canadian supermarket chain Loblaw Companies."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

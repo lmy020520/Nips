@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Edward VII",
+  "pred_answer": "Edward VII",
+  "normalized_gold": "edward vii",
+  "normalized_pred": "edward vii",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf2a475542993a75d26401",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf2a475542993a75d26401::Victoria Rooms, Bristol::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf2a475542993a75d26401::Bristol, Maine::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf2a475542993a75d26401::Edward VII::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf2a475542993a75d26401::Ashurbanipal (sculpture)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf2a475542993a75d26401::Victoria Rooms, Bristol",
+        "5adf2a475542993a75d26401::Edward VII"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf2a475542993a75d26401::Victoria Rooms, Bristol::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf2a475542993a75d26401::Bristol, Maine::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf2a475542993a75d26401::Edward VII::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf2a475542993a75d26401::Ashurbanipal (sculpture)::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf2a475542993a75d26401::Ashurbanipal (sculpture)::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 15 ft statue depicting the Assyrian king of the same name was commissioned by the Assyrian Foundation for the Arts and presented to the City of San Francisco in 1988 as a gift from the Assyrian people.\n[2] Edward VII (Albert Edward; 9 November 1841 – 6 May 1910) was King of the United Kingdom and the British Dominions and Emperor of India from 22 January 1901 until his death in 1910.\n[3] A fishing and resort area, Bristol includes the villages of New Harbor, Pemaquid, Round Pond, Bristol Mills and Chamberlain.\n[4] A bronze statue of Edward VII, was erected in 1912 at the front of the Victoria Rooms, together with a curved pool and several fountains with sculptures in the Art Nouveau style."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

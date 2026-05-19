@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Nowhere Boy",
+  "pred_answer": "Nowhere Boy",
+  "normalized_gold": "nowhere boy",
+  "normalized_pred": "nowhere boy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a760d095542994ccc91869f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a760d095542994ccc91869f::Thomas Brodie-Sangster::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a760d095542994ccc91869f::Give My Regards to Broad Street (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a760d095542994ccc91869f::Nowhere Boy::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a760d095542994ccc91869f::The Dirty Picture::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a760d095542994ccc91869f::Thomas Brodie-Sangster",
+        "5a760d095542994ccc91869f::Nowhere Boy"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a760d095542994ccc91869f::Thomas Brodie-Sangster::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a760d095542994ccc91869f::Give My Regards to Broad Street (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a760d095542994ccc91869f::Nowhere Boy::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a760d095542994ccc91869f::The Dirty Picture::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a760d095542994ccc91869f::The Dirty Picture::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Dirty Picture is a 2011 Indian biographical musical drama film inspired by the life of Silk Smitha, a South Indian actress noted for her erotic roles.\n[2] Nowhere Boy is a 2009 British biographical musical drama film about John Lennon's adolescence, his relationships with his aunt Mimi Smith and his mother Julia Lennon, the creation of his first band, the Quarrymen, and its evolution into the Beatles.\n[3] Give My Regards to Broad Street is a 1984 British musical drama film directed by Peter Webb, which starred Paul McCartney, Bryan Brown and Ringo Starr.\n[4] Thomas Brodie-Sangster (born 16 May 1990), also credited as Thomas Sangster, is an English actor and musician, known for his roles as Jojen Reed in \"Game of Thrones\", his voice as Ferb Fletcher in \"Phineas and Ferb\", as John Tracy in the ITV series \"Thunderbirds Are Go\", as well as his roles as Sam in Richard Curtis' \"Love Actually\" and Newt in the \"Maze Runner\" film series."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

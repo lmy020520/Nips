@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "September 7, 1900",
+  "pred_answer": "September 7, 1900",
+  "normalized_gold": "september 7 1900",
+  "normalized_pred": "september 7 1900",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adfc1bd55429906c02daa2c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adfc1bd55429906c02daa2c::The Revenge of Al Capone::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adfc1bd55429906c02daa2c::Lexington Hotel::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adfc1bd55429906c02daa2c::Giuseppe Zangara::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adfc1bd55429906c02daa2c::Giuseppe Zangara::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adfc1bd55429906c02daa2c::The Revenge of Al Capone",
+        "5adfc1bd55429906c02daa2c::Giuseppe Zangara"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adfc1bd55429906c02daa2c::The Revenge of Al Capone::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adfc1bd55429906c02daa2c::Lexington Hotel::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adfc1bd55429906c02daa2c::Giuseppe Zangara::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adfc1bd55429906c02daa2c::Giuseppe Zangara::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adfc1bd55429906c02daa2c::Giuseppe Zangara::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Giuseppe \"Joe\" Zangara (September 7, 1900 – March 20, 1933) was the assassin of Anton Cermak, the Mayor of Chicago.\n[2] Zangara was an Italian American anarchist who shot Cermak and four others in Miami, Florida, on February 15, 1933, during a night speech by United States President–elect Franklin D. Roosevelt.\n[3] The hotel is notable for being Al Capone's primary residence from July 1928 until his arrest in 1931.\n[4] The Revenge of Al Capone (also known as \"Capone\") is a 1989 American television film about Al Capone starring Keith Carradine as Michael Rourke."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,510 @@
+{
+  "build_meta": {
+    "run_id": "20260421_120911_hotpotqa_v2",
+    "source": "analyze_derived_counterfactual_v2.py"
+  },
+  "overall_summary": {
+    "event_count": 10,
+    "role_counts": {
+      "bridge_contextualization": 2,
+      "abstractive_verification": 5,
+      "answer_facing_verification": 1,
+      "bridge_scaffold_for_progress": 1,
+      "bridge_scaffold_for_new_raw": 1
+    },
+    "events_where_note_mentions_gold_but_sources_do_not": 2,
+    "events_where_final_k_t_still_has_gold_without_derived": 4,
+    "events_where_next_raw_not_yet_visible": 2
+  },
+  "historical_failure_to_success_summary": {
+    "event_count": 4,
+    "role_counts": {
+      "abstractive_verification": 2,
+      "answer_facing_verification": 1,
+      "bridge_scaffold_for_progress": 1
+    },
+    "events_where_note_mentions_gold_but_sources_do_not": 1,
+    "events_where_final_k_t_still_has_gold_without_derived": 3,
+    "events_where_next_raw_not_yet_visible": 1
+  },
+  "all_records": [
+    {
+      "qid": "5a7a98de55429941d65f26e4",
+      "split": "train",
+      "question": "Who was born first Saul Metzstein or Edmund Goulding ?",
+      "gold_answer": "Edmund Goulding",
+      "t": 2,
+      "terminal_t": 4,
+      "position_bucket": "middle_late",
+      "positive_unit_id": "5a7a98de55429941d65f26e4::derived::4",
+      "note_type": "bridge_note",
+      "note_text": "Edmund Goulding was active as an actor in the early 1920s, as seen in the 1922 film 'Three Live Ghosts'.",
+      "source_unit_ids": [
+        "5a7a98de55429941d65f26e4::Edmund Goulding::1"
+      ],
+      "source_texts": [
+        "As an actor early in his career he was one of the 'Ghosts' in the 1922 British made Paramount silent \"Three Live Ghosts\" alongside Norman Kerry and Cyril Chadwick."
+      ],
+      "derive_goal": "bridge_query_entity_to_answer_candidate",
+      "next_is_raw": true,
+      "next_raw_positive_id": "5a7a98de55429941d65f26e4::Dinosaurs on a Spaceship::2",
+      "next_raw_positive_in_current_c_t": true,
+      "next_delta_covered_targets": 0,
+      "note_mentions_gold": true,
+      "source_mentions_gold": false,
+      "final_k_t_has_gold": true,
+      "final_k_t_without_derived_has_gold": false,
+      "novel_tokens_vs_sources": [
+        "1920s",
+        "active",
+        "edmund",
+        "film",
+        "goulding",
+        "seen"
+      ],
+      "counterfactual_role": "bridge_contextualization"
+    },
+    {
+      "qid": "5a7bbe76554299042af8f7d3",
+      "split": "val",
+      "question": "Did Manny Coto, a Cuban American writer or Lina Wertmüller, an Italian screenwriter get nominated for an Academy Award for Directing \"Seven Beauties\"?",
+      "gold_answer": "Lina Wertmüller",
+      "t": 3,
+      "terminal_t": 5,
+      "position_bucket": "middle_late",
+      "positive_unit_id": "5a7bbe76554299042af8f7d3::derived::9",
+      "note_type": "verification_note",
+      "note_text": "The film 'Seven Beauties' is an Italian language film from 1975, but no direct nomination details are provided in the current raw evidence.",
+      "source_unit_ids": [
+        "5a7bbe76554299042af8f7d3::Swept Away (1974 film)::0"
+      ],
+      "source_texts": [
+        "Swept Away (Italian: \"Travolti da un insolito destino nell'azzurro mare d'agosto\" The full English title is \"Swept Away... by an Unusual Destiny in the Blue Sea of August\") is a 1974 Italian adventure comedy-drama film written and directed by Lina Wertmüller and starring Giancarlo Giannini and Mariangela Melato."
+      ],
+      "derive_goal": "generic_bridge_or_verification",
+      "next_is_raw": false,
+      "next_raw_positive_id": null,
+      "next_raw_positive_in_current_c_t": false,
+      "next_delta_covered_targets": 0,
+      "note_mentions_gold": false,
+      "source_mentions_gold": true,
+      "final_k_t_has_gold": true,
+      "final_k_t_without_derived_has_gold": true,
+      "novel_tokens_vs_sources": [
+        "1975",
+        "beauties",
+        "language",
+        "nomination",
+        "seven"
+      ],
+      "counterfactual_role": "abstractive_verification"
+    },
+    {
+      "qid": "5a7bbe76554299042af8f7d3",
+      "split": "val",
+      "question": "Did Manny Coto, a Cuban American writer or Lina Wertmüller, an Italian screenwriter get nominated for an Academy Award for Directing \"Seven Beauties\"?",
+      "gold_answer": "Lina Wertmüller",
+      "t": 4,
+      "terminal_t": 5,
+      "position_bucket": "middle_late",
+      "positive_unit_id": "5a7bbe76554299042af8f7d3::derived::10",
+      "note_type": "verification_note",
+      "note_text": "The film 'Seven Beauties' is an Italian language film from 1975, but no direct nomination details are provided in the current raw evidence.",
+      "source_unit_ids": [
+        "5a7bbe76554299042af8f7d3::Swept Away (1974 film)::0"
+      ],
+      "source_texts": [
+        "Swept Away (Italian: \"Travolti da un insolito destino nell'azzurro mare d'agosto\" The full English title is \"Swept Away... by an Unusual Destiny in the Blue Sea of August\") is a 1974 Italian adventure comedy-drama film written and directed by Lina Wertmüller and starring Giancarlo Giannini and Mariangela Melato."
+      ],
+      "derive_goal": "generic_bridge_or_verification",
+      "next_is_raw": false,
+      "next_raw_positive_id": null,
+      "next_raw_positive_in_current_c_t": false,
+      "next_delta_covered_targets": null,
+      "note_mentions_gold": false,
+      "source_mentions_gold": true,
+      "final_k_t_has_gold": true,
+      "final_k_t_without_derived_has_gold": true,
+      "novel_tokens_vs_sources": [
+        "1975",
+        "beauties",
+        "language",
+        "nomination",
+        "seven"
+      ],
+      "counterfactual_role": "abstractive_verification"
+    },
+    {
+      "qid": "5a8b42be55429949d91db515",
+      "split": "test",
+      "question": "What profession does John Lanchester and Alan Dean Foster have in common?",
+      "gold_answer": "novelist",
+      "t": 2,
+      "terminal_t": 4,
+      "position_bucket": "middle_late",
+      "positive_unit_id": "5a8b42be55429949d91db515::derived::5",
+      "note_type": "verification_note",
+      "note_text": "Alan Dean Foster is an American writer of fantasy and science fiction, indicating he is a novelist.",
+      "source_unit_ids": [
+        "5a8b42be55429949d91db515::Alan Dean Foster::0"
+      ],
+      "source_texts": [
+        "Alan Dean Foster (born November 18, 1946) is an American writer of fantasy and science fiction, a prolific creator of and contributor to book series as well as the author of more than 20 standalone novels."
+      ],
+      "derive_goal": "bridge_query_entity_to_answer_candidate",
+      "next_is_raw": true,
+      "next_raw_positive_id": "5a8b42be55429949d91db515::Orphan Star::2",
+      "next_raw_positive_in_current_c_t": false,
+      "next_delta_covered_targets": 0,
+      "note_mentions_gold": true,
+      "source_mentions_gold": false,
+      "final_k_t_has_gold": true,
+      "final_k_t_without_derived_has_gold": false,
+      "novel_tokens_vs_sources": [
+        "indicating",
+        "novelist"
+      ],
+      "counterfactual_role": "answer_facing_verification"
+    },
+    {
+      "qid": "5ab678f455429954757d32d3",
+      "split": "test",
+      "question": "What river runs near the tidal island of Eilean Tioram?",
+      "gold_answer": "River Shiel",
+      "t": 0,
+      "terminal_t": 4,
+      "position_bucket": "early",
+      "positive_unit_id": "5ab678f455429954757d32d3::derived::0",
+      "note_type": "bridge_note",
+      "note_text": "Castle Island is described as a small tidal island in the Firth of Clyde, which may help contextualize tidal island geography in Scotland.",
+      "source_unit_ids": [
+        "5ab678f455429954757d32d3::Castle Island, Scotland::0"
+      ],
+      "source_texts": [
+        "Castle Island (Scottish Gaelic: \"Eilean a' Chaisteil\" ) or Allimturrail is a small tidal island, lying off the east coast of Little Cumbrae, and to the west of Trail Island, in the Firth of Clyde."
+      ],
+      "derive_goal": "target_type_disambiguation",
+      "next_is_raw": true,
+      "next_raw_positive_id": "5ab678f455429954757d32d3::Loch Shiel::0",
+      "next_raw_positive_in_current_c_t": true,
+      "next_delta_covered_targets": 1,
+      "note_mentions_gold": false,
+      "source_mentions_gold": false,
+      "final_k_t_has_gold": true,
+      "final_k_t_without_derived_has_gold": true,
+      "novel_tokens_vs_sources": [
+        "contextualize",
+        "described",
+        "geography",
+        "scotland"
+      ],
+      "counterfactual_role": "bridge_scaffold_for_progress"
+    },
+    {
+      "qid": "5ab7d346554299366779400b",
+      "split": "train",
+      "question": "What state does Jim Garland and Harlan County War have in common?",
+      "gold_answer": "Kentucky",
+      "t": 1,
+      "terminal_t": 3,
+      "position_bucket": "middle_late",
+      "positive_unit_id": "5ab7d346554299366779400b::derived::0",
+      "note_type": "bridge_note",
+      "note_text": "Harry Simms was sent to Harlan County, Kentucky during the Harlan County War, linking the war to Kentucky.",
+      "source_unit_ids": [
+        "5ab7d346554299366779400b::Harry Simms (labor leader)::1"
+      ],
+      "source_texts": [
+        "He was sent by the National Miners Union to Harlan County, Kentucky during the Harlan County War to organize the mine workers there."
+      ],
+      "derive_goal": "bridge_query_entity_to_answer_candidate",
+      "next_is_raw": true,
+      "next_raw_positive_id": "5ab7d346554299366779400b::Battle of Evarts::0",
+      "next_raw_positive_in_current_c_t": false,
+      "next_delta_covered_targets": 0,
+      "note_mentions_gold": true,
+      "source_mentions_gold": true,
+      "final_k_t_has_gold": true,
+      "final_k_t_without_derived_has_gold": true,
+      "novel_tokens_vs_sources": [
+        "harry",
+        "linking",
+        "simms"
+      ],
+      "counterfactual_role": "bridge_scaffold_for_new_raw"
+    },
+    {
+      "qid": "5ab922ce554299753720f729",
+      "split": "val",
+      "question": "Jerry Stubbs wrestled as Mr. Olympia in what former professional wrestler, promoter, and WWE Hall of Fame Inductee’s wrestling area?",
+      "gold_answer": "Bill Watts",
+      "t": 2,
+      "terminal_t": 6,
+      "position_bucket": "middle_late",
+      "positive_unit_id": "5ab922ce554299753720f729::derived::0",
+      "note_type": "bridge_note",
+      "note_text": "The WWE Hall of Fame includes inductees from various wrestling organizations, such as WCW and NWA.",
+      "source_unit_ids": [
+        "5ab922ce554299753720f729::WCW Hall of Fame::8"
+      ],
+      "source_texts": [
+        "In 2004, World Wrestling Entertainment (WWE), the WWF's successor, reinstated the WWE Hall of Fame, which included inductees that were alumni of WWE, NWA, JCP, and WCW."
+      ],
+      "derive_goal": "generic_bridge_or_verification",
+      "next_is_raw": true,
+      "next_raw_positive_id": "5ab922ce554299753720f729::Billy Sandow::4",
+      "next_raw_positive_in_current_c_t": true,
+      "next_delta_covered_targets": 0,
+      "note_mentions_gold": false,
+      "source_mentions_gold": false,
+      "final_k_t_has_gold": true,
+      "final_k_t_without_derived_has_gold": false,
+      "novel_tokens_vs_sources": [
+        "includes",
+        "organizations",
+        "such",
+        "various"
+      ],
+      "counterfactual_role": "bridge_contextualization"
+    },
+    {
+      "qid": "5ab922ce554299753720f729",
+      "split": "val",
+      "question": "Jerry Stubbs wrestled as Mr. Olympia in what former professional wrestler, promoter, and WWE Hall of Fame Inductee’s wrestling area?",
+      "gold_answer": "Bill Watts",
+      "t": 4,
+      "terminal_t": 6,
+      "position_bucket": "middle_late",
+      "positive_unit_id": "5ab922ce554299753720f729::derived::7",
+      "note_type": "verification_note",
+      "note_text": "Carlos Colón Sr. was inducted into the WWE Hall of Fame in 2014, indicating his recognition in professional wrestling.",
+      "source_unit_ids": [
+        "5ab922ce554299753720f729::Carlos Colón Sr.::3"
+      ],
+      "source_texts": [
+        "In 2014, he was inducted into the WWE Hall of Fame and the following year into the Wrestling Observer Newsletter Hall of Fame."
+      ],
+      "derive_goal": "generic_bridge_or_verification",
+      "next_is_raw": false,
+      "next_raw_positive_id": null,
+      "next_raw_positive_in_current_c_t": false,
+      "next_delta_covered_targets": 0,
+      "note_mentions_gold": false,
+      "source_mentions_gold": false,
+      "final_k_t_has_gold": true,
+      "final_k_t_without_derived_has_gold": false,
+      "novel_tokens_vs_sources": [
+        "carlos",
+        "col",
+        "indicating",
+        "professional",
+        "recognition"
+      ],
+      "counterfactual_role": "abstractive_verification"
+    },
+    {
+      "qid": "5ab922ce554299753720f729",
+      "split": "val",
+      "question": "Jerry Stubbs wrestled as Mr. Olympia in what former professional wrestler, promoter, and WWE Hall of Fame Inductee’s wrestling area?",
+      "gold_answer": "Bill Watts",
+      "t": 5,
+      "terminal_t": 6,
+      "position_bucket": "middle_late",
+      "positive_unit_id": "5ab922ce554299753720f729::derived::10",
+      "note_type": "verification_note",
+      "note_text": "Carlos Colón Sr. was inducted into the WWE Hall of Fame in 2014.",
+      "source_unit_ids": [
+        "5ab922ce554299753720f729::Carlos Colón Sr.::3"
+      ],
+      "source_texts": [
+        "In 2014, he was inducted into the WWE Hall of Fame and the following year into the Wrestling Observer Newsletter Hall of Fame."
+      ],
+      "derive_goal": "generic_bridge_or_verification",
+      "next_is_raw": false,
+      "next_raw_positive_id": null,
+      "next_raw_positive_in_current_c_t": false,
+      "next_delta_covered_targets": null,
+      "note_mentions_gold": false,
+      "source_mentions_gold": false,
+      "final_k_t_has_gold": true,
+      "final_k_t_without_derived_has_gold": false,
+      "novel_tokens_vs_sources": [
+        "carlos",
+        "col"
+      ],
+      "counterfactual_role": "abstractive_verification"
+    },
+    {
+      "qid": "5adce4d35542992c1e3a2473",
+      "split": "val",
+      "question": "Are Smyrnium and Nymania both types of plant?",
+      "gold_answer": "yes",
+      "t": 3,
+      "terminal_t": 4,
+      "position_bucket": "middle_late",
+      "positive_unit_id": "5adce4d35542992c1e3a2473::derived::1",
+      "note_type": "verification_note",
+      "note_text": "Nymania capensis is described as a plant with fruit, indicating it is a type of plant.",
+      "source_unit_ids": [
+        "5adce4d35542992c1e3a2473::Nymania::0"
+      ],
+      "source_texts": [
+        "Nymania capensis is known in English as \"Chinese Lantern\" because of the shape of its bright, colourful fruit, and in Afrikaans as \"klapper\" (meaning \"firecracker\" because children sometimes pop the capsules for fun)."
+      ],
+      "derive_goal": "generic_bridge_or_verification",
+      "next_is_raw": false,
+      "next_raw_positive_id": null,
+      "next_raw_positive_in_current_c_t": false,
+      "next_delta_covered_targets": null,
+      "note_mentions_gold": false,
+      "source_mentions_gold": false,
+      "final_k_t_has_gold": false,
+      "final_k_t_without_derived_has_gold": false,
+      "novel_tokens_vs_sources": [
+        "described",
+        "indicating",
+        "plant",
+        "type"
+      ],
+      "counterfactual_role": "abstractive_verification"
+    }
+  ],
+  "historical_failure_to_success_records": [
+    {
+      "qid": "5a7bbe76554299042af8f7d3",
+      "split": "val",
+      "question": "Did Manny Coto, a Cuban American writer or Lina Wertmüller, an Italian screenwriter get nominated for an Academy Award for Directing \"Seven Beauties\"?",
+      "gold_answer": "Lina Wertmüller",
+      "t": 3,
+      "terminal_t": 5,
+      "position_bucket": "middle_late",
+      "positive_unit_id": "5a7bbe76554299042af8f7d3::derived::9",
+      "note_type": "verification_note",
+      "note_text": "The film 'Seven Beauties' is an Italian language film from 1975, but no direct nomination details are provided in the current raw evidence.",
+      "source_unit_ids": [
+        "5a7bbe76554299042af8f7d3::Swept Away (1974 film)::0"
+      ],
+      "source_texts": [
+        "Swept Away (Italian: \"Travolti da un insolito destino nell'azzurro mare d'agosto\" The full English title is \"Swept Away... by an Unusual Destiny in the Blue Sea of August\") is a 1974 Italian adventure comedy-drama film written and directed by Lina Wertmüller and starring Giancarlo Giannini and Mariangela Melato."
+      ],
+      "derive_goal": "generic_bridge_or_verification",
+      "next_is_raw": false,
+      "next_raw_positive_id": null,
+      "next_raw_positive_in_current_c_t": false,
+      "next_delta_covered_targets": 0,
+      "note_mentions_gold": false,
+      "source_mentions_gold": true,
+      "final_k_t_has_gold": true,
+      "final_k_t_without_derived_has_gold": true,
+      "novel_tokens_vs_sources": [
+        "1975",
+        "beauties",
+        "language",
+        "nomination",
+        "seven"
+      ],
+      "counterfactual_role": "abstractive_verification"
+    },
+    {
+      "qid": "5a7bbe76554299042af8f7d3",
+      "split": "val",
+      "question": "Did Manny Coto, a Cuban American writer or Lina Wertmüller, an Italian screenwriter get nominated for an Academy Award for Directing \"Seven Beauties\"?",
+      "gold_answer": "Lina Wertmüller",
+      "t": 4,
+      "terminal_t": 5,
+      "position_bucket": "middle_late",
+      "positive_unit_id": "5a7bbe76554299042af8f7d3::derived::10",
+      "note_type": "verification_note",
+      "note_text": "The film 'Seven Beauties' is an Italian language film from 1975, but no direct nomination details are provided in the current raw evidence.",
+      "source_unit_ids": [
+        "5a7bbe76554299042af8f7d3::Swept Away (1974 film)::0"
+      ],
+      "source_texts": [
+        "Swept Away (Italian: \"Travolti da un insolito destino nell'azzurro mare d'agosto\" The full English title is \"Swept Away... by an Unusual Destiny in the Blue Sea of August\") is a 1974 Italian adventure comedy-drama film written and directed by Lina Wertmüller and starring Giancarlo Giannini and Mariangela Melato."
+      ],
+      "derive_goal": "generic_bridge_or_verification",
+      "next_is_raw": false,
+      "next_raw_positive_id": null,
+      "next_raw_positive_in_current_c_t": false,
+      "next_delta_covered_targets": null,
+      "note_mentions_gold": false,
+      "source_mentions_gold": true,
+      "final_k_t_has_gold": true,
+      "final_k_t_without_derived_has_gold": true,
+      "novel_tokens_vs_sources": [
+        "1975",
+        "beauties",
+        "language",
+        "nomination",
+        "seven"
+      ],
+      "counterfactual_role": "abstractive_verification"
+    },
+    {
+      "qid": "5a8b42be55429949d91db515",
+      "split": "test",
+      "question": "What profession does John Lanchester and Alan Dean Foster have in common?",
+      "gold_answer": "novelist",
+      "t": 2,
+      "terminal_t": 4,
+      "position_bucket": "middle_late",
+      "positive_unit_id": "5a8b42be55429949d91db515::derived::5",
+      "note_type": "verification_note",
+      "note_text": "Alan Dean Foster is an American writer of fantasy and science fiction, indicating he is a novelist.",
+      "source_unit_ids": [
+        "5a8b42be55429949d91db515::Alan Dean Foster::0"
+      ],
+      "source_texts": [
+        "Alan Dean Foster (born November 18, 1946) is an American writer of fantasy and science fiction, a prolific creator of and contributor to book series as well as the author of more than 20 standalone novels."
+      ],
+      "derive_goal": "bridge_query_entity_to_answer_candidate",
+      "next_is_raw": true,
+      "next_raw_positive_id": "5a8b42be55429949d91db515::Orphan Star::2",
+      "next_raw_positive_in_current_c_t": false,
+      "next_delta_covered_targets": 0,
+      "note_mentions_gold": true,
+      "source_mentions_gold": false,
+      "final_k_t_has_gold": true,
+      "final_k_t_without_derived_has_gold": false,
+      "novel_tokens_vs_sources": [
+        "indicating",
+        "novelist"
+      ],
+      "counterfactual_role": "answer_facing_verification"
+    },
+    {
+      "qid": "5ab678f455429954757d32d3",
+      "split": "test",
+      "question": "What river runs near the tidal island of Eilean Tioram?",
+      "gold_answer": "River Shiel",
+      "t": 0,
+      "terminal_t": 4,
+      "position_bucket": "early",
+      "positive_unit_id": "5ab678f455429954757d32d3::derived::0",
+      "note_type": "bridge_note",
+      "note_text": "Castle Island is described as a small tidal island in the Firth of Clyde, which may help contextualize tidal island geography in Scotland.",
+      "source_unit_ids": [
+        "5ab678f455429954757d32d3::Castle Island, Scotland::0"
+      ],
+      "source_texts": [
+        "Castle Island (Scottish Gaelic: \"Eilean a' Chaisteil\" ) or Allimturrail is a small tidal island, lying off the east coast of Little Cumbrae, and to the west of Trail Island, in the Firth of Clyde."
+      ],
+      "derive_goal": "target_type_disambiguation",
+      "next_is_raw": true,
+      "next_raw_positive_id": "5ab678f455429954757d32d3::Loch Shiel::0",
+      "next_raw_positive_in_current_c_t": true,
+      "next_delta_covered_targets": 1,
+      "note_mentions_gold": false,
+      "source_mentions_gold": false,
+      "final_k_t_has_gold": true,
+      "final_k_t_without_derived_has_gold": true,
+      "novel_tokens_vs_sources": [
+        "contextualize",
+        "described",
+        "geography",
+        "scotland"
+      ],
+      "counterfactual_role": "bridge_scaffold_for_progress"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "NEW College",
+  "pred_answer": "NEW College",
+  "normalized_gold": "new college",
+  "normalized_pred": "new college",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7ec44d5542994959419a78",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7ec44d5542994959419a78::I Want It::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7ec44d5542994959419a78::I Don't Want to Be Your Friend::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7ec44d5542994959419a78::Chanelle Hayes::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7ec44d5542994959419a78::Zenji flava::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7ec44d5542994959419a78::I Want It",
+        "5a7ec44d5542994959419a78::Chanelle Hayes"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7ec44d5542994959419a78::I Want It::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7ec44d5542994959419a78::I Don't Want to Be Your Friend::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7ec44d5542994959419a78::Chanelle Hayes::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7ec44d5542994959419a78::Zenji flava::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7ec44d5542994959419a78::Zenji flava::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Zenji Flava is a common nickname for Zanzibari hip hop, a genre that began to develop in the 1990s.\n[2] She was a student at NEW College, Pontefract, Wakefield, West Yorkshire, studying Spanish, music and English before becoming well known by appearing on the Channel 4 reality show \"Big Brother\" in 2007 when she was 19 years old.\n[3] The song was meant to be the second commercial single released in the U.S. from that album, but after the second radio single \"A Night to Remember\" failed to chart highly, the label scrapped the idea.\n[4] I Want It is the debut single released by Chanelle Hayes."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

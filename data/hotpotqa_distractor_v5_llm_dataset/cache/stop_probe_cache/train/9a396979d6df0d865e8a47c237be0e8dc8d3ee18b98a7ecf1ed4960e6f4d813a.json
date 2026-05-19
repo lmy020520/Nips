@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Shelter Insurance",
+  "pred_answer": "Shelter Insurance",
+  "normalized_gold": "shelter insurance",
+  "normalized_pred": "shelter insurance",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf4b4d5542993a75d264a7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf4b4d5542993a75d264a7::Columbia, Missouri::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf4b4d5542993a75d264a7::Shelter Insurance::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf4b4d5542993a75d264a7::Surplus note::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf4b4d5542993a75d264a7::Columbia, Missouri",
+        "5adf4b4d5542993a75d264a7::Shelter Insurance"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf4b4d5542993a75d264a7::Columbia, Missouri::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf4b4d5542993a75d264a7::Shelter Insurance::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf4b4d5542993a75d264a7::Surplus note::7",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf4b4d5542993a75d264a7::Surplus note::7",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] While surplus note holders have last claim on the assets of the operating insurance company, it is important to realize that this claim is at the operating company level, which is still ahead of holding company obligations.\n[2] Shelter Insurance Company is a mutual insurance company which focuses on Auto, Property, Business, and Life Insurance.\n[3] Founded in 1821, it is home to the University of Missouri and is the principal city of the Columbia Metropolitan Area."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

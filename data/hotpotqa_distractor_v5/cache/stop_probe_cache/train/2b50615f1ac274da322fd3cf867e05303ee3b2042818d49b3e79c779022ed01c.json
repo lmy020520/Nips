@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fabiana Udenio",
+  "pred_answer": "Fabiana Udenio",
+  "normalized_gold": "fabiana udenio",
+  "normalized_pred": "fabiana udenio",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abfaa665542990832d3a18d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abfaa665542990832d3a18d::Hardbodies 2::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abfaa665542990832d3a18d::Hardbodies::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abfaa665542990832d3a18d::Fabiana Udenio::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abfaa665542990832d3a18d::Monica Vitti::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abfaa665542990832d3a18d::Hardbodies 2",
+        "5abfaa665542990832d3a18d::Fabiana Udenio"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abfaa665542990832d3a18d::Hardbodies 2::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abfaa665542990832d3a18d::Hardbodies::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abfaa665542990832d3a18d::Fabiana Udenio::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abfaa665542990832d3a18d::Monica Vitti::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abfaa665542990832d3a18d::Monica Vitti::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Monica Vitti (born 3 November 1931 ) is an Italian actress best known for her starring roles in films directed by Michelangelo Antonioni during the early 1960s.\n[2] Fabiana Udenio (born December 21, 1964) is an Italian actress born in Argentina.\n[3] It was followed by a 1986 sequel entitled \"Hardbodies 2\".\n[4] Hardbodies 2 is a 1986 adult comedy movie sequel to the 1984 film \"Hardbodies\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

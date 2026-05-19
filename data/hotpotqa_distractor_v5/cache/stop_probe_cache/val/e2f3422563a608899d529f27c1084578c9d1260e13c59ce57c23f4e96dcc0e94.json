@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "8,913",
+  "pred_answer": "8,913",
+  "normalized_gold": "8913",
+  "normalized_pred": "8913",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd5f2d55429924427fcfc3",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd5f2d55429924427fcfc3::List of San Francisco Giants seasons::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd5f2d55429924427fcfc3::East Rutherford, New Jersey::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd5f2d55429924427fcfc3::2015 New York Giants season::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd5f2d55429924427fcfc3::1973 NFL season::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd5f2d55429924427fcfc3::East Rutherford, New Jersey",
+        "5abd5f2d55429924427fcfc3::2015 New York Giants season"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd5f2d55429924427fcfc3::List of San Francisco Giants seasons::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd5f2d55429924427fcfc3::East Rutherford, New Jersey::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd5f2d55429924427fcfc3::2015 New York Giants season::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd5f2d55429924427fcfc3::1973 NFL season::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd5f2d55429924427fcfc3::1973 NFL season::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] After playing their first two home games at Yankee Stadium, the New York Giants played the rest of their home games at the Yale Bowl.\n[2] The New York Giants season was the franchise's 91st season in the National Football League and their sixth season playing their home games at MetLife Stadium in East Rutherford, New Jersey.\n[3] As of the 2010 United States Census, the borough's population was 8,913, reflecting an increase of 197 (+2.3%) from the 8,716 counted in the 2000 Census, which had in turn increased by 814 (+10.3%) from the 7,902 counted in the 1990 Census.\n[4] The Giants played 75 seasons in New York City, New York, as the New York Gothams and New York Giants, spending the majority of their seasons at the Polo Grounds in Upper Manhattan."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Richard Manuel",
+  "pred_answer": "Richard Manuel",
+  "normalized_gold": "richard manuel",
+  "normalized_pred": "richard manuel",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7202d5542992aa3b8c79e",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7202d5542992aa3b8c79e::The Shape I'm In (The Band song)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7202d5542992aa3b8c79e::Ross Lake National Recreation Area::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7202d5542992aa3b8c79e::The Shape I'm In (The Band song)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab7202d5542992aa3b8c79e::Richard Manuel::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab7202d5542992aa3b8c79e::LaFontaine-Baldwin Symposium::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7202d5542992aa3b8c79e::The Shape I'm In (The Band song)",
+        "5ab7202d5542992aa3b8c79e::Richard Manuel"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7202d5542992aa3b8c79e::The Shape I'm In (The Band song)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7202d5542992aa3b8c79e::Ross Lake National Recreation Area::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7202d5542992aa3b8c79e::The Shape I'm In (The Band song)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab7202d5542992aa3b8c79e::Richard Manuel::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab7202d5542992aa3b8c79e::LaFontaine-Baldwin Symposium::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7202d5542992aa3b8c79e::LaFontaine-Baldwin Symposium::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Founded in 2000, the Symposium's purpose is to stimulate debate about the historical antecedents and future shape of the Canadian democracy.\n[2] He was a member of the original band from 1967 to 1976 and the re-formed band from 1983 until his death.\n[3] It was written by Robbie Robertson, who did little to disguise the fact that the song's sense of dread and dissolution was about Richard Manuel, the song's principal singer.\n[4] The Shape of the National Recreation area, was designed to prevent the proposed High ross dam from flooding the national park."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

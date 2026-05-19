@@ -1,0 +1,31 @@
+{
+  "should_derive": true,
+  "reason": "Need to bridge the two entities to find common profession. Both are described as 'singer' in the evidence.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Kim Sung-kyu is a South Korean singer.",
+      "source_unit_ids": [
+        "5a7a6f5b5542990783324f4a::Kim Sung-kyu::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "Charlie Wilson is a singer.",
+      "source_unit_ids": [
+        "5a7a6f5b5542990783324f4a::Just Charlie::0"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "Both Kim Sung-kyu and Charlie Wilson are singers.",
+      "source_unit_ids": [
+        "5a7a6f5b5542990783324f4a::Kim Sung-kyu::0",
+        "5a7a6f5b5542990783324f4a::Just Charlie::0"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

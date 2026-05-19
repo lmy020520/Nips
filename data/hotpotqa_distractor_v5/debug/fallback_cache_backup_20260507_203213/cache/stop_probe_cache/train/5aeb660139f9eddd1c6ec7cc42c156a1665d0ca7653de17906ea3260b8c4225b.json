@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the motorcycle category",
+  "pred_answer": "the motorcycle category",
+  "normalized_gold": "the motorcycle category",
+  "normalized_pred": "the motorcycle category",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae124625542997b2ef7d0fe",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae124625542997b2ef7d0fe::KTM::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae124625542997b2ef7d0fe::2014 Dakar Rally::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae124625542997b2ef7d0fe::2014 Dakar Rally::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae124625542997b2ef7d0fe::KTM",
+        "5ae124625542997b2ef7d0fe::2014 Dakar Rally"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae124625542997b2ef7d0fe::KTM::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae124625542997b2ef7d0fe::2014 Dakar Rally::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae124625542997b2ef7d0fe::2014 Dakar Rally::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae124625542997b2ef7d0fe::2014 Dakar Rally::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Marc Coma won his fourth title in the motorcycle category riding a KTM; Ignacio Casale took his maiden title in the quad category on a Yamaha; Nani Roma clinched victory in the car category for the first time, ten years after his sole motorcycle title, driving a Mini; and Andrey Karginov took his first truck category title for Kamaz.\n[2] The 2014 Dakar Rally was the 36th running of the event and the sixth successive year that the event was held in South America.\n[3] KTM AG (the former KTM Sportmotorcycle AG) is an Austrian motorcycle and sports car manufacturer owned by KTM Industries AG and Bajaj Auto."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

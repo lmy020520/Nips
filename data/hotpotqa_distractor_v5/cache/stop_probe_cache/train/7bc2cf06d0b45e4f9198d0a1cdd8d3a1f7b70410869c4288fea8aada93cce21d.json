@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1972",
+  "pred_answer": "1972",
+  "normalized_gold": "1972",
+  "normalized_pred": "1972",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae73dc85542997b22f6a629",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae73dc85542997b22f6a629::Emmanuel Izonritei::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae73dc85542997b22f6a629::José Ortega (boxer)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae73dc85542997b22f6a629::David Tua::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae73dc85542997b22f6a629::Emmanuel Izonritei::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae73dc85542997b22f6a629::José Ortega (boxer)",
+        "5ae73dc85542997b22f6a629::David Tua"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae73dc85542997b22f6a629::Emmanuel Izonritei::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae73dc85542997b22f6a629::José Ortega (boxer)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae73dc85542997b22f6a629::David Tua::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae73dc85542997b22f6a629::Emmanuel Izonritei::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae73dc85542997b22f6a629::Emmanuel Izonritei::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] His brother David won a silver model in boxing in the 1992 Summer Olympics.\n[2] David Tua (born Mafaufau Tavita Lio Mafaufau Sanerivi Talimatasi; 21 November 1972) is a Samoan-New Zealander former professional boxer who competed from 1992 to 2013.\n[3] At the 1992 Summer Olympics in Barcelona, Spain he was eliminated in the second round of the heavyweight division (– 91 kg) by New Zealand's David Tua.\n[4] He was an athlete in the 2004 Summer Olympics for Nigeria, where he lost in the round of 16 (Heavyweight (91 kg) division) to Naser Al Shami of Syria, who eventually won the bronze."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

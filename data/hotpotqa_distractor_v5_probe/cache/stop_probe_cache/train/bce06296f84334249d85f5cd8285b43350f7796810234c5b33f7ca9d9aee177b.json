@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lord Voldemort",
+  "pred_answer": "Lord Voldemort",
+  "normalized_gold": "lord voldemort",
+  "normalized_pred": "lord voldemort",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae6618455429908198fa5b5",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae6618455429908198fa5b5::Lego Harry Potter: Years 5–7::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae6618455429908198fa5b5::Harry Potter and the Half-Blood Prince::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae6618455429908198fa5b5::Harry Potter and the Deathly Hallows::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae6618455429908198fa5b5::Half-Blood Prince (disambiguation)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae6618455429908198fa5b5::Tom Felton::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae6618455429908198fa5b5::Harry Potter and the Half-Blood Prince",
+        "5ae6618455429908198fa5b5::Half-Blood Prince (disambiguation)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae6618455429908198fa5b5::Lego Harry Potter: Years 5–7::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae6618455429908198fa5b5::Harry Potter and the Half-Blood Prince::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae6618455429908198fa5b5::Harry Potter and the Deathly Hallows::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae6618455429908198fa5b5::Half-Blood Prince (disambiguation)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae6618455429908198fa5b5::Tom Felton::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae6618455429908198fa5b5::Tom Felton::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] His performances in \"Harry Potter and the Half-Blood Prince\" and \"Harry Potter and the Deathly Hallows – Part 1\" won him two consecutive MTV Movie Awards for Best Villain in 2010 and 2011.\n[2] Half-Blood Prince generally refers to the novel \"Harry Potter and the Half-Blood Prince\" by J. K. Rowling.\n[3] The novel chronicles the events directly following \"Harry Potter and the Half-Blood Prince\" (2005), and the final confrontation between the wizards Harry Potter and Lord Voldemort, as well as revealing the previously concealed back story of several main characters.\n[4] Harry Potter and the Half-Blood Prince is the sixth and penultimate novel in the \"Harry Potter\" series, written by British author J. K. Rowling."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

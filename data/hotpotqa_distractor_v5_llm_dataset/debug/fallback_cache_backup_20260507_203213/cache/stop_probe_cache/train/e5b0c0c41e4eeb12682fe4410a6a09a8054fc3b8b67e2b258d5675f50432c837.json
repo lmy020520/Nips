@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "From the Dead Level",
+  "pred_answer": "From the Dead Level",
+  "normalized_gold": "from the dead level",
+  "normalized_pred": "from the dead level",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae6261d5542995703ce8b2b",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae6261d5542995703ce8b2b::Maulana Karenga::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae6261d5542995703ce8b2b::Hakim Jamal::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae6261d5542995703ce8b2b::Hakim Jamal::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae6261d5542995703ce8b2b::Maulana Karenga",
+        "5ae6261d5542995703ce8b2b::Hakim Jamal"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae6261d5542995703ce8b2b::Maulana Karenga::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae6261d5542995703ce8b2b::Hakim Jamal::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae6261d5542995703ce8b2b::Hakim Jamal::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae6261d5542995703ce8b2b::Hakim Jamal::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Jamal wrote \"From the Dead Level\", a memoir of his life and memories of Malcolm X.\n[2] Hakim Abdullah Jamal (March 28, 1931 – May 1, 1973) was the name adopted by African-American activist Allen Donaldson, who was a cousin of Malcolm X and later became an associate of Michael X.\n[3] Karenga was a major figure in the Black Power movement of the 1960s and 1970s, and co-founded with Hakim Jamal the black nationalism and social change organization US."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

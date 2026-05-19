@@ -1,0 +1,24 @@
+{
+  "should_derive": true,
+  "reason": "The state summary mentions Elymus lanceolatus but the gold answer is 'western stoneseed or lemonweed', which is not Elymus. A bridge note can connect the gold answer to a candidate, and a verification note can check if any candidate matches the gold answer.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "The gold answer 'western stoneseed or lemonweed' is a common name for a plant used by Navajo for fertility control.",
+      "source_unit_ids": [
+        "5a7313305542994cef4bc441::Elymus lanceolatus::6"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "None of the top raw candidates mention 'western stoneseed' or 'lemonweed'.",
+      "source_unit_ids": [
+        "5a7313305542994cef4bc441::Euphorbia revoluta::5",
+        "5a7313305542994cef4bc441::Elymus lanceolatus::6",
+        "5a7313305542994cef4bc441::Nafoxidine::2"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

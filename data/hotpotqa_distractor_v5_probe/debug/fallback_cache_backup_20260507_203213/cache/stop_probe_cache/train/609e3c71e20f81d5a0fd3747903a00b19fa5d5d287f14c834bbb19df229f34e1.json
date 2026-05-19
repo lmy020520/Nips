@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Cambridge University",
+  "pred_answer": "Cambridge University",
+  "normalized_gold": "cambridge university",
+  "normalized_pred": "cambridge university",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade1d5355429975fa854e61",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade1d5355429975fa854e61::C. S. Lewis::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade1d5355429975fa854e61::Susan Pevensie::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade1d5355429975fa854e61::C. S. Lewis::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade1d5355429975fa854e61::Lantern Waste::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ade1d5355429975fa854e61::Lucy Pevensie::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade1d5355429975fa854e61::C. S. Lewis",
+        "5ade1d5355429975fa854e61::Lantern Waste"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade1d5355429975fa854e61::C. S. Lewis::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade1d5355429975fa854e61::Susan Pevensie::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade1d5355429975fa854e61::C. S. Lewis::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade1d5355429975fa854e61::Lantern Waste::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ade1d5355429975fa854e61::Lucy Pevensie::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade1d5355429975fa854e61::Lucy Pevensie::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Lucy Pevensie is a fictional character in C. S. Lewis's \"The Chronicles of Narnia\" series.\n[2] It is a wood and is notable as the place where Lucy Pevensie and Mr. Tumnus meet, which is the first scene of Narnia described in the books.\n[3] He held academic positions at both Oxford University (Magdalen College, 1925–1954) and Cambridge University (Magdalene College, 1954–1963).\n[4] Susan Pevensie is a fictional character in C. S. Lewis's \"The Chronicles of Narnia\" series."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

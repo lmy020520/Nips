@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1909 to 1954",
+  "pred_answer": "1909 to 1954",
+  "normalized_gold": "1909 to 1954",
+  "normalized_pred": "1909 to 1954",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac168165542994ab5c67d12",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac168165542994ab5c67d12::Hudson Motor Car Company::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac168165542994ab5c67d12::Hudson Commodore::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac168165542994ab5c67d12::Hudson Wasp::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac168165542994ab5c67d12::Hudson Motor Car Company",
+        "5ac168165542994ab5c67d12::Hudson Commodore"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac168165542994ab5c67d12::Hudson Motor Car Company::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac168165542994ab5c67d12::Hudson Commodore::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac168165542994ab5c67d12::Hudson Wasp::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac168165542994ab5c67d12::Hudson Wasp::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Hudson Wasp is an automobile that was built and marketed by the Hudson Motor Car Company of Detroit, Michigan, from the 1952 through the 1956 model years.\n[2] The Hudson Commodore is an automobile which was produced by the Hudson Motor Car Company of Detroit, Michigan between 1941 and 1952.\n[3] The Hudson Motor Car Company made Hudson and other brand automobiles in Detroit, Michigan, from 1909 to 1954."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

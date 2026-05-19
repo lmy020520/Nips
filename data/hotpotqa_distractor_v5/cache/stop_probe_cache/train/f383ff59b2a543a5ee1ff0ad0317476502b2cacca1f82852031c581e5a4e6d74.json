@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Alex Garland",
+  "pred_answer": "Alex Garland",
+  "normalized_gold": "alex garland",
+  "normalized_pred": "alex garland",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae6a7295542996d980e7c6f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae6a7295542996d980e7c6f::Never Let Me Go (novel)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae6a7295542996d980e7c6f::Charlie Jane Anders::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae6a7295542996d980e7c6f::Never Let Me Go (2010 film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae6a7295542996d980e7c6f::Never Let Me Go (2010 film)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae6a7295542996d980e7c6f::Never Let Me Go (novel)",
+        "5ae6a7295542996d980e7c6f::Never Let Me Go (2010 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae6a7295542996d980e7c6f::Never Let Me Go (novel)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae6a7295542996d980e7c6f::Charlie Jane Anders::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae6a7295542996d980e7c6f::Never Let Me Go (2010 film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae6a7295542996d980e7c6f::Never Let Me Go (2010 film)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae6a7295542996d980e7c6f::Never Let Me Go (2010 film)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The film was directed by Mark Romanek from a screenplay by Alex Garland.\n[2] Never Let Me Go is a 2010 British dystopian romantic drama film based on Kazuo Ishiguro's 2005 novel of the same name.\n[3] Her 2016 novel \"All the Birds in the Sky\" was listed No. 5 on \"Time\" magazine's \"Top 10 Novels\" of 2016, won the 2017 Nebula Award for Best Novel, the 2017 Crawford Award, and the 2017 Locus Award for Best Fantasy Novel; it was also a finalist for the 2017 Hugo Award for Best Novel.\n[4] Time\" magazine named it the best novel of 2005 and included the novel in its \"TIME 100 Best English-language Novels from 1923 to 2005\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

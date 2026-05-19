@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "sports",
+  "pred_answer": "sports",
+  "normalized_gold": "sports",
+  "normalized_pred": "sports",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae08a4e554299603e418423",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae08a4e554299603e418423::Turbocharged petrol engines::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae08a4e554299603e418423::Porsche 919 Hybrid::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae08a4e554299603e418423::Hispano Aleman::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae08a4e554299603e418423::Porsche 944::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae08a4e554299603e418423::Porsche 919 Hybrid::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae08a4e554299603e418423::Hispano Aleman",
+        "5ae08a4e554299603e418423::Porsche 944"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae08a4e554299603e418423::Turbocharged petrol engines::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae08a4e554299603e418423::Porsche 919 Hybrid::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae08a4e554299603e418423::Hispano Aleman::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae08a4e554299603e418423::Porsche 944::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae08a4e554299603e418423::Porsche 919 Hybrid::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae08a4e554299603e418423::Porsche 919 Hybrid::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Porsche 919 Hybrid is a sports-prototype racing car constructed by the German car manufacturer Porsche for use in the Le Mans Prototype 1-Hybrid (LMP1-H) category of the FIA World Endurance Championship for factory-supported hybrid-powered cars.\n[2] The Porsche 944 is a sports car built by Porsche from 1982 to 1991.\n[3] The company built four sports car replicas: Mallorca (Lotus Seven), Castilla (Lotus Europa), Vizcaya (Porsche 944) and BMW 328.\n[4] It is the first sports-prototype built by Porsche since the RS Spyder, the first sports-prototype built by Porsche to compete in a top category of sportscar racing since the Porsche 911 GT1-98 and Porsche LMP1-98 and the first sports-prototype to be raced by Porsche as a racing team since the Porsche 911 GT1-98 and Porsche LMP1-98."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

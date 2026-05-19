@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"Organizer of Victory\"",
+  "pred_answer": "\"Organizer of Victory\"",
+  "normalized_gold": "organizer of victory",
+  "normalized_pred": "organizer of victory",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8cd90455429941ae14df10",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8cd90455429941ae14df10::Borda–Carnot equation::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8cd90455429941ae14df10::Cape Borda::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8cd90455429941ae14df10::Lazare Carnot::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8cd90455429941ae14df10::Lazare Carnot::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8cd90455429941ae14df10::Borda–Carnot equation",
+        "5a8cd90455429941ae14df10::Lazare Carnot"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8cd90455429941ae14df10::Borda–Carnot equation::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8cd90455429941ae14df10::Cape Borda::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8cd90455429941ae14df10::Lazare Carnot::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8cd90455429941ae14df10::Lazare Carnot::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8cd90455429941ae14df10::Lazare Carnot::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He was known as the \"Organizer of Victory\" in the French Revolutionary Wars.\n[2] Lazare Nicolas Marguerite, Count Carnot (13 May 1753 – 2 August 1823) was a French politician, engineer, freemason and mathematician.\n[3] It was named after Jean-Charles de Borda (1733–1799), the French mathematician, physicist, naturalist and sailor, by the Baudin expedition to Australia during January 1803.\n[4] The equation is named after Jean-Charles de Borda (1733–1799) and Lazare Carnot (1753–1823)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Werner Faymann",
+  "pred_answer": "Werner Faymann",
+  "normalized_gold": "werner faymann",
+  "normalized_pred": "werner faymann",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a71978e5542994082a3e88a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a71978e5542994082a3e88a::Hans Jörg Schelling::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a71978e5542994082a3e88a::Werner Faymann::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a71978e5542994082a3e88a::Federal Ministry of Finance (Austria)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a71978e5542994082a3e88a::Hans Jörg Schelling",
+        "5a71978e5542994082a3e88a::Werner Faymann"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a71978e5542994082a3e88a::Hans Jörg Schelling::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a71978e5542994082a3e88a::Werner Faymann::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a71978e5542994082a3e88a::Federal Ministry of Finance (Austria)::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a71978e5542994082a3e88a::Federal Ministry of Finance (Austria)::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The current Federal Minister of Finance is Hans Jörg Schelling (ÖVP).\n[2] Werner Faymann (] ; born 4 May 1960) is a former Austrian politician who was Chancellor of Austria and chairman of the Social Democratic Party of Austria (SPÖ) from 2008 to 2016.\n[3] Hans Jörg Schelling (born 27 December 1953 in Hohenems , Vorarlberg as Johann Georg Schelling) is an Austrian entrepreneur, Austrian People's Party politician and since 1 September 2014 the Federal Minister of Finance of Austria in the governments of chancellors Werner Faymann and Christian Kern."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bugs Bunny",
+  "pred_answer": "Bugs Bunny",
+  "normalized_gold": "bugs bunny",
+  "normalized_pred": "bugs bunny",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a764a5d55429976ec32bd86",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a764a5d55429976ec32bd86::Bugs Bunny::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a764a5d55429976ec32bd86::Transylvania 6-5000 (1963 film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a764a5d55429976ec32bd86::Daffy Duck and the Dinosaur::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a764a5d55429976ec32bd86::Bugs Bunny",
+        "5a764a5d55429976ec32bd86::Transylvania 6-5000 (1963 film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a764a5d55429976ec32bd86::Bugs Bunny::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a764a5d55429976ec32bd86::Transylvania 6-5000 (1963 film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a764a5d55429976ec32bd86::Daffy Duck and the Dinosaur::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a764a5d55429976ec32bd86::Daffy Duck and the Dinosaur::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Daffy Duck and the Dinosaur is a 1939 \"Merrie Melodies\" animated cartoon short directed by Chuck Jones and produced by Leon Schlesinger Productions for Warner Bros.\n[2] Transylvania 6-5000 (1963) is a \"Merrie Melodies\" animated short directed by Chuck Jones and starring Bugs Bunny.\n[3] Bugs Bunny is an animated cartoon character; created in 1940 by Leon Schlesinger Productions (later Warner Bros."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

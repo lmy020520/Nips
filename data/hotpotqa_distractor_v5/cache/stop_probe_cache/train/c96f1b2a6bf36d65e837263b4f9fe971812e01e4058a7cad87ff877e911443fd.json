@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "hail damage and losing thrust on both engines",
+  "pred_answer": "hail damage and losing thrust on both engines",
+  "normalized_gold": "hail damage and losing thrust on both engines",
+  "normalized_pred": "hail damage and losing thrust on both engines",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8cd881554299441c6b9f21",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8cd881554299441c6b9f21::Annette Snell::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8cd881554299441c6b9f21::Southern by the Grace of God::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8cd881554299441c6b9f21::Southern Airways Flight 242::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8cd881554299441c6b9f21::PMTair Flight 241::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8cd881554299441c6b9f21::Annette Snell",
+        "5a8cd881554299441c6b9f21::Southern Airways Flight 242"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8cd881554299441c6b9f21::Annette Snell::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8cd881554299441c6b9f21::Southern by the Grace of God::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8cd881554299441c6b9f21::Southern Airways Flight 242::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8cd881554299441c6b9f21::PMTair Flight 241::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8cd881554299441c6b9f21::PMTair Flight 241::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The crash was the second deadliest plane crash in Cambodia's history and the worst plane crash in Kampot Province.\n[2] Southern Airways Flight 242 was a DC-9-31 jet, registered N1335U, that executed a forced landing on a highway in New Hope, Paulding County, Georgia, United States after suffering hail damage and losing thrust on both engines in a severe thunderstorm on April 4, 1977.\n[3] The plane crash killed frontman Ronnie Van Zant, guitarist Steve Gaines, backing vocalist Cassie Gaines and road manager Dean Kilpatrick.\n[4] Annette Snell (March 22, 1945 – April 4, 1977) was an American rhythm and blues singer who recorded in the 1960s and 1970s."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

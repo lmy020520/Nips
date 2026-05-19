@@ -1,0 +1,91 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "1865",
+  "pred_answer": "1871",
+  "normalized_gold": "1865",
+  "normalized_pred": "1871",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "The evidence supports that 'Jabberwocky' was included in the 1871 sequel 'Through the Looking-Glass', and that 'Alice's Adventures in Wonderland' was published in 1865. However, the question asks for the year the fantasy novel (which is 'Alice's Adventures in Wonderland') was written, and the gold answer is 1865, but the pred answer is 1871. The evidence does not support that the fantasy novel was written in 1871; it supports 1865 for the novel and 1871 for the sequel containing the poem.",
+  "missing_support_reasons": [
+    "The evidence does not support that the fantasy novel 'Alice's Adventures in Wonderland' was written in 1871; it explicitly states it was written in 1865.",
+    "The pred answer 1871 is incorrect based on the evidence, which only supports 1871 as the publication year of the sequel containing the poem, not the original novel."
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "The evidence supports that 'Jabberwocky' was included in the 1871 sequel 'Through the Looking-Glass', and that 'Alice's Adventures in Wonderland' was published in 1865. However, the question asks for the year the fantasy novel (which is 'Alice's Adventures in Wonderland') was written, and the gold answer is 1865, but the pred answer is 1871. The evidence does not support that the fantasy novel was written in 1871; it supports 1865 for the novel and 1871 for the sequel containing the poem.",
+    "missing_support_reasons": [
+      "The evidence does not support that the fantasy novel 'Alice's Adventures in Wonderland' was written in 1871; it explicitly states it was written in 1865.",
+      "The pred answer 1871 is incorrect based on the evidence, which only supports 1871 as the publication year of the sequel containing the poem, not the original novel."
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5ae690fd55429908198fa624",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae690fd55429908198fa624::Jabberwocky::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae690fd55429908198fa624::Angelfall::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae690fd55429908198fa624::Jabberwocky::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae690fd55429908198fa624::Alice's Adventures in Wonderland::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae690fd55429908198fa624::Jabberwocky::1",
+        "5ae690fd55429908198fa624::Jabberwocky",
+        "5ae690fd55429908198fa624::Alice's Adventures in Wonderland"
+      ],
+      "k_br": 2.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae690fd55429908198fa624::Jabberwocky::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae690fd55429908198fa624::Angelfall::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae690fd55429908198fa624::Jabberwocky::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae690fd55429908198fa624::Alice's Adventures in Wonderland::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae690fd55429908198fa624::Alice's Adventures in Wonderland::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Alice's Adventures in Wonderland (commonly shortened to Alice in Wonderland) is an 1865 fantasy novel written by English mathematician Charles Lutwidge Dodgson\n[2] \"Jabberwocky\" is a nonsense poem written by Lewis Carroll about the killing of a creature named \"the Jabberwock\".\n[3] Angelfall is a post-apocalyptic fantasy novel written by Korean-American author Susan Ee.\n[4] It was included in his 1871 novel \"Through the Looking-Glass, and What Alice Found There\", the sequel to \"Alice's Adventures in Wonderland\"."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

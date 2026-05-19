@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Albert Sissons",
+  "pred_answer": "Albert Sissons",
+  "normalized_gold": "albert sissons",
+  "normalized_pred": "albert sissons",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a825626554299676cceb274",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a825626554299676cceb274::Yorkshire Amateur A.F.C.::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a825626554299676cceb274::Leeds United F.C.::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a825626554299676cceb274::Albert Sissons::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a825626554299676cceb274::West Yorkshire Urban Area::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a825626554299676cceb274::Leeds United F.C.",
+        "5a825626554299676cceb274::Albert Sissons"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a825626554299676cceb274::Yorkshire Amateur A.F.C.::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a825626554299676cceb274::Leeds United F.C.::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a825626554299676cceb274::Albert Sissons::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a825626554299676cceb274::West Yorkshire Urban Area::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a825626554299676cceb274::West Yorkshire Urban Area::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The West Yorkshire Urban Area is a term used by the Office for National Statistics (ONS) to refer to a conurbation in West Yorkshire, England, based on the cities of Leeds, Bradford and Wakefield, and the large towns of Huddersfield and Halifax.\n[2] Albert Sissons was an English footballer who played for Doncaster Rovers and Leeds United.\n[3] Leeds United Football Club is a professional association football club in Leeds, West Yorkshire, England.\n[4] Yorkshire Amateur Association Football Club are a football club based in Leeds, West Yorkshire, England."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

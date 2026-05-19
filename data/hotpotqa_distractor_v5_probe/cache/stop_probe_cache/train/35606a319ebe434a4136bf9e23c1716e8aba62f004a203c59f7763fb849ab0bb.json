@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Marion",
+  "pred_answer": "Marion",
+  "normalized_gold": "marion",
+  "normalized_pred": "marion",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7f14dd554299306751361e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7f14dd554299306751361e::Keith Drury::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7f14dd554299306751361e::The Village of WestClay::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7f14dd554299306751361e::Indiana Wesleyan University::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7f14dd554299306751361e::Marlene Griggs-Knope::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7f14dd554299306751361e::Keith Drury",
+        "5a7f14dd554299306751361e::Indiana Wesleyan University"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7f14dd554299306751361e::Keith Drury::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7f14dd554299306751361e::The Village of WestClay::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7f14dd554299306751361e::Indiana Wesleyan University::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7f14dd554299306751361e::Marlene Griggs-Knope::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7f14dd554299306751361e::Marlene Griggs-Knope::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She is the mother of the show's protagonist, Leslie Knope, and an important political figure in the school system at the fictional Indiana town of Pawnee, where Leslie also works as a government official.\n[2] Indiana Wesleyan University (commonly referred to as IWU) is a private, evangelical Christian, liberal arts university headquartered in Marion, Indiana, that is affiliated with the Wesleyan Church denomination.\n[3] With strict architectural standards the Village replicates a small Indiana town at the turn of the century.\n[4] Keith Drury (born 1945) is an Associate Professor of Religion at Indiana Wesleyan University."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

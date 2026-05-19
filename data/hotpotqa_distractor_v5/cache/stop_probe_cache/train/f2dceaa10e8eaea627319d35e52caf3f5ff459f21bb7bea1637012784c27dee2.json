@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Colorado's 6th congressional district",
+  "pred_answer": "6th",
+  "normalized_gold": "colorados 6th congressional district",
+  "normalized_pred": "6th",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7cbe845542990527d5551d",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7cbe845542990527d5551d::Morgan Carroll::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7cbe845542990527d5551d::Mike Coffman::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7cbe845542990527d5551d::E. J. Pipkin::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7cbe845542990527d5551d::Morgan Carroll",
+        "5a7cbe845542990527d5551d::Mike Coffman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7cbe845542990527d5551d::Morgan Carroll::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7cbe845542990527d5551d::Mike Coffman::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7cbe845542990527d5551d::E. J. Pipkin::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7cbe845542990527d5551d::E. J. Pipkin::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] In 2004, he unsuccessfully ran for the U.S. Senate against Barbara Mikulski.\n[2] Michael Howard Coffman (born March 19, 1955) is the U.S. Representative for Colorado 's 6 congressional district , serving since 2009.\n[3] Carroll stepped down as minority leader in July 2015 to unsuccessfully run against incumbent Republican Mike Coffman for Colorado's 6th congressional district in the U.S. House of Representatives."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

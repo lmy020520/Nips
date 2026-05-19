@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "March 21, 2005",
+  "pred_answer": "March 21, 2005",
+  "normalized_gold": "march 21 2005",
+  "normalized_pred": "march 21 2005",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae61c4a5542992ae0d16225",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae61c4a5542992ae0d16225::Jeff Weise::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae61c4a5542992ae0d16225::Red Lake shootings::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae61c4a5542992ae0d16225::Seung-Hui Cho::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae61c4a5542992ae0d16225::Jeff Weise",
+        "5ae61c4a5542992ae0d16225::Red Lake shootings"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae61c4a5542992ae0d16225::Jeff Weise::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae61c4a5542992ae0d16225::Red Lake shootings::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae61c4a5542992ae0d16225::Seung-Hui Cho::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae61c4a5542992ae0d16225::Seung-Hui Cho::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He was a senior-level undergraduate student at the university.\n[2] The Red Lake shootings were a series of spree killings that occurred on March 21, 2005 in two places on the Red Lake Indian Reservation in Red Lake, Minnesota, United States.\n[3] Jeffrey James Weise (August 8, 1988 – March 21, 2005) was an American teenage mass murderer and spree killer, who was a student at Red Lake Senior High School in Red Lake, Minnesota, located on the reservation of the Ojibwe people."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

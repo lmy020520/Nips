@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Floor Jansen",
+  "pred_answer": "Floor Jansen",
+  "normalized_gold": "floor jansen",
+  "normalized_pred": "floor jansen",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c896d554299653c1aa0b2",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c896d554299653c1aa0b2::Music lesson::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c896d554299653c1aa0b2::Born Again (Warrant album)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c896d554299653c1aa0b2::Floor Jansen::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8c896d554299653c1aa0b2::Jaime St. James::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8c896d554299653c1aa0b2::Showtime, Storytime::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c896d554299653c1aa0b2::Floor Jansen",
+        "5a8c896d554299653c1aa0b2::Jaime St. James"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c896d554299653c1aa0b2::Music lesson::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c896d554299653c1aa0b2::Born Again (Warrant album)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c896d554299653c1aa0b2::Floor Jansen::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8c896d554299653c1aa0b2::Jaime St. James::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8c896d554299653c1aa0b2::Showtime, Storytime::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c896d554299653c1aa0b2::Showtime, Storytime::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] \"Showtime, Storytime\" is the first Nightwish production to feature Floor Jansen on vocals.\n[2] Jaime St. James is the lead vocalist and primary songwriter of the glam metal band Black 'N Blue.\n[3] Floor Jansen (] ; born 21 February 1981 in Goirle) is a Dutch singer, songwriter, and vocal coach.\n[4] The album features ex-Black N' Blue vocalist Jaime St. James who replaced Jani Lane in 2004."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

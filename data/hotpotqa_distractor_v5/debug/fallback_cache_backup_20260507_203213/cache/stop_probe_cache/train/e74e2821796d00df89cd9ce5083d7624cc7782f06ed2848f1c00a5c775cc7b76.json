@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Governor",
+  "pred_answer": "Governor",
+  "normalized_gold": "governor",
+  "normalized_pred": "governor",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81f668554299676cceb19e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81f668554299676cceb19e::Bourke's parrot::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81f668554299676cceb19e::Lord High Treasurer::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81f668554299676cceb19e::Richard Bourke::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81f668554299676cceb19e::Bourke's parrot::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81f668554299676cceb19e::Bourke's parrot",
+        "5a81f668554299676cceb19e::Richard Bourke"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81f668554299676cceb19e::Bourke's parrot::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81f668554299676cceb19e::Lord High Treasurer::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81f668554299676cceb19e::Richard Bourke::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a81f668554299676cceb19e::Bourke's parrot::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a81f668554299676cceb19e::Bourke's parrot::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is named after General Sir Richard Bourke, Governor of New South Wales from 1831 to 1837.\n[2] General Sir Richard Bourke, KCB (4 May 1777 – 12 August 1855) was an Irish-born British Army officer who served as Governor of New South Wales from 1831 to 1837.\n[3] The post of Lord High Treasurer or Lord Treasurer was an English government position and has been a British government position since the Acts of Union of 1707.\n[4] The Bourke's parrot (\"Neopsephotus bourkii\", formerly known as \"Neophema bourkii\"), also known as the blue-vented parrot, sundown parrot, pink-bellied parrot, Bourke's parakeet, Bourke or \"Bourkie\", is a small parrot originating in Australia and the only species in its genus Neopsephotus."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Numb",
+  "pred_answer": "Numb",
+  "normalized_gold": "numb",
+  "normalized_pred": "numb",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac242215542992f1f2b3828",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac242215542992f1f2b3828::The Monster (song)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac242215542992f1f2b3828::Numb (Rihanna song)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac242215542992f1f2b3828::X (Chris Brown song)::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac242215542992f1f2b3828::The Monster (song)",
+        "5ac242215542992f1f2b3828::Numb (Rihanna song)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac242215542992f1f2b3828::The Monster (song)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac242215542992f1f2b3828::Numb (Rihanna song)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac242215542992f1f2b3828::X (Chris Brown song)::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac242215542992f1f2b3828::X (Chris Brown song)::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Following the release of \"X\", as a result of the strong digital downloads, the song charted on multiple charts worldwide; it peaked at number 98 on the US \"Billboard\" Hot 100, number 26 on the US Hot R&B/Hip-Hop Songs chart, number 63 on the French Singles Chart, number 12 on the UK Singles R&B Chart, number 81 on the UK Singles Chart and number 75 on the Australian Singles Chart.\n[2] Following the album's release, \"Numb\" charted on multiple charts worldwide including in Canada, the United Kingdom and the United States.\n[3] \"The Monster\" was released on October 29, 2013, as the fourth single from the album."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

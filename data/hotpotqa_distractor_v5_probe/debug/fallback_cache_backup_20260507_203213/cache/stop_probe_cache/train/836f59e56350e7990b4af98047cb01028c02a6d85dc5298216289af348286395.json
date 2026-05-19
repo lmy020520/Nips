@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Second Sino-Japanese War",
+  "pred_answer": "Second Sino-Japanese War",
+  "normalized_gold": "second sino-japanese war",
+  "normalized_pred": "second sino-japanese war",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84c2b95542997b5ce3ff5a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84c2b95542997b5ce3ff5a::Nanking Massacre::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84c2b95542997b5ce3ff5a::The Good Man of Nanking::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84c2b95542997b5ce3ff5a::Battle of Manila (1945)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84c2b95542997b5ce3ff5a::Nanking Massacre",
+        "5a84c2b95542997b5ce3ff5a::The Good Man of Nanking"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84c2b95542997b5ce3ff5a::Nanking Massacre::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84c2b95542997b5ce3ff5a::The Good Man of Nanking::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84c2b95542997b5ce3ff5a::Battle of Manila (1945)::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84c2b95542997b5ce3ff5a::Battle of Manila (1945)::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Japanese forces committed mass murder against Filipino civilians during the battle.\n[2] The Good Man of Nanking: The Diaries of John Rabe is a collection of the personal journals of John Rabe, a German businessman who lived in Nanjing at the time of the Nanking Massacre in 1937–1938.\n[3] The Nanking Massacre was an episode of mass murder and mass rape committed by Japanese troops against the residents of Nanjing (\"Nanking\"), then the capital of the Republic of China, during the Second Sino-Japanese War."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

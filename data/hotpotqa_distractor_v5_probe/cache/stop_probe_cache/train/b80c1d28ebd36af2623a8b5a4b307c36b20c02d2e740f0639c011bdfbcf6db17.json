@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New England Patriots",
+  "pred_answer": "New England Patriots",
+  "normalized_gold": "new england patriots",
+  "normalized_pred": "new england patriots",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b5c625542997f31a41ceb",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b5c625542997f31a41ceb::Mobile BayBears::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b5c625542997f31a41ceb::New Zealand national schoolboy rugby union team::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b5c625542997f31a41ceb::Murder of Odin Lloyd::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8b5c625542997f31a41ceb::Aaron Hernandez::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8b5c625542997f31a41ceb::2003 New Orleans Saints season::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b5c625542997f31a41ceb::Murder of Odin Lloyd",
+        "5a8b5c625542997f31a41ceb::Aaron Hernandez"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b5c625542997f31a41ceb::Mobile BayBears::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b5c625542997f31a41ceb::New Zealand national schoolboy rugby union team::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b5c625542997f31a41ceb::Murder of Odin Lloyd::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8b5c625542997f31a41ceb::Aaron Hernandez::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8b5c625542997f31a41ceb::2003 New Orleans Saints season::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b5c625542997f31a41ceb::2003 New Orleans Saints season::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] In a scene evoking memories of The Play, Aaron Brooks passed to Donté Stallworth for 42 yards, Stallworth lateraled to Michael Lewis for 7 yards, Lewis lateraled to Deuce McAllister for 5 yards, and McAllister lateraled to Jerome Pathon for 21 yards and a touchdown.\n[2] A productive player during his three seasons with the New England Patriots, his career came to an abrupt end after his arrest for the murder of Odin Lloyd.\n[3] His death made international headlines when Aaron Hernandez, at the time a tight end for the New England Patriots of the National Football League, was investigated as a suspect in the case.\n[4] Many of the players have gone on to play for international teams including many who have played for the New Zealand national team."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

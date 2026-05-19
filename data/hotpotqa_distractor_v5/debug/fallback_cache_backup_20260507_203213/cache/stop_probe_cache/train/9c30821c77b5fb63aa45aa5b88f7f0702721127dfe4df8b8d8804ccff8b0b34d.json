@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Oregon Department of Human Services",
+  "pred_answer": "Oregon Department of Human Services",
+  "normalized_gold": "oregon department of human services",
+  "normalized_pred": "oregon department of human services",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e87bf55429949594199f4",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e87bf55429949594199f4::View-Master factory supply well::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e87bf55429949594199f4::Agency for Toxic Substances and Disease Registry::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e87bf55429949594199f4::View-Master factory supply well::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e87bf55429949594199f4::View-Master factory supply well",
+        "5a7e87bf55429949594199f4::Agency for Toxic Substances and Disease Registry"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e87bf55429949594199f4::View-Master factory supply well::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e87bf55429949594199f4::Agency for Toxic Substances and Disease Registry::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e87bf55429949594199f4::View-Master factory supply well::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e87bf55429949594199f4::View-Master factory supply well::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The View-Master factory supply well in Beaverton, Oregon, was evaluated for public health effects by the Oregon Department of Human Services (ODHS) under a cooperative agreement with the Agency for Toxic Substances and Disease Registry (ATSDR).\n[2] The agency focuses on minimizing human health risks associated with exposure to hazardous substances.\n[3] Workers there were potentially exposed to the industrial solvent trichloroethylene (TCE), classified by the International Agency for Research on Cancer (IARC) as a probable human carcinogen."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

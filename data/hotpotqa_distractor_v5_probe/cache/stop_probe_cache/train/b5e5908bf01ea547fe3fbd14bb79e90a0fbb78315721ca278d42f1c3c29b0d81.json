@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Savile Row",
+  "pred_answer": "Savile Row",
+  "normalized_gold": "savile row",
+  "normalized_pred": "savile row",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89951b5542993b751ca951",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89951b5542993b751ca951::Apple Corps::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89951b5542993b751ca951::Savile Row::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89951b5542993b751ca951::Apple Records::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89951b5542993b751ca951::Apple Corps",
+        "5a89951b5542993b751ca951::Savile Row"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89951b5542993b751ca951::Apple Corps::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89951b5542993b751ca951::Savile Row::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89951b5542993b751ca951::Apple Records::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a89951b5542993b751ca951::Apple Records::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Apple Records is a record label founded by the Beatles in 1968, as a division of Apple Corps Ltd.\n[2] Known principally for its traditional bespoke tailoring for men, the street has had a varied history that has included accommodating the headquarters of the Royal Geographical Society at 1 Savile Row, where significant British explorations to Africa and the South Pole were planned; and more recently, the Apple office of the Beatles at 3 Savile Row, where the band's final live performance was held\n[3] Apple Corps Ltd (informally known as Apple) is a multi-armed multimedia corporation founded in London in January 1968 by the members of the Beatles to replace their earlier company (Beatles Ltd) and to form a conglomerate."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

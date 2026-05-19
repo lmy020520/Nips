@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Guangdong Southern Tigers",
+  "pred_answer": "Guangdong Southern Tigers",
+  "normalized_gold": "guangdong southern tigers",
+  "normalized_pred": "guangdong southern tigers",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc6e5c5542994650320cef",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc6e5c5542994650320cef::Carlos Boozer::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc6e5c5542994650320cef::2002–03 Cleveland Cavaliers season::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc6e5c5542994650320cef::2014–15 Cleveland Cavaliers season::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc6e5c5542994650320cef::Carlos Boozer",
+        "5adc6e5c5542994650320cef::2002–03 Cleveland Cavaliers season"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc6e5c5542994650320cef::Carlos Boozer::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc6e5c5542994650320cef::2002–03 Cleveland Cavaliers season::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc6e5c5542994650320cef::2014–15 Cleveland Cavaliers season::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc6e5c5542994650320cef::2014–15 Cleveland Cavaliers season::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The 2014–15 Cleveland Cavaliers season was the 45th season of the franchise in the National Basketball Association (NBA).\n[2] The 2002–03 NBA season was the 33rd season of the National Basketball Association in Cleveland, Ohio.\n[3] Carlos Austin Boozer Jr. (born November 20, 1981) is an American professional basketball player who last played for the Guangdong Southern Tigers of the Chinese Basketball Association (CBA)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

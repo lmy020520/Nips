@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Brendon Small",
+  "pred_answer": "Brendon Small",
+  "normalized_gold": "brendon small",
+  "normalized_pred": "brendon small",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab8f5dc55429919ba4e2381",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab8f5dc55429919ba4e2381::Brendon Small's Galaktikon II: Become the Storm::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab8f5dc55429919ba4e2381::Paul Day (musician)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab8f5dc55429919ba4e2381::Brendon Small::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab8f5dc55429919ba4e2381::Brendon Small's Galaktikon::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab8f5dc55429919ba4e2381::Paul Day (musician)",
+        "5ab8f5dc55429919ba4e2381::Brendon Small"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab8f5dc55429919ba4e2381::Brendon Small's Galaktikon II: Become the Storm::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab8f5dc55429919ba4e2381::Paul Day (musician)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab8f5dc55429919ba4e2381::Brendon Small::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab8f5dc55429919ba4e2381::Brendon Small's Galaktikon::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab8f5dc55429919ba4e2381::Brendon Small's Galaktikon::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Brendon Small's Galaktikon is the solo album debut by Brendon Small, known for his work on the animated television shows \"Metalocalypse\" and \"Home Movies\", and as creator of virtual death metal band, Dethklok.\n[2] Brendon Small (born February 15, 1975) is an American voice actor, stand-up comedian, producer, writer, animator and musician.\n[3] Paul Mario Day (born 19 April 1956, Whitechapel, East London) is a British singer who is well-known as the original lead vocalist of Iron Maiden from 1975 to 1976.\n[4] Since Brendon Small no longer holds the rights to the Dethklok name, Gene Hoglan has suggested that this album would serve as a \"new Dethklok album\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

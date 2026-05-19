@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "January 20, 1942",
+  "pred_answer": "January 20, 1942",
+  "normalized_gold": "january 20 1942",
+  "normalized_pred": "january 20 1942",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae6910855429908198fa625",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae6910855429908198fa625::Wannsee House and the Holocaust::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae6910855429908198fa625::Reinhard Heydrich::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae6910855429908198fa625::Wannsee Conference::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae6910855429908198fa625::Wannsee House and the Holocaust",
+        "5ae6910855429908198fa625::Reinhard Heydrich"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae6910855429908198fa625::Wannsee House and the Holocaust::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae6910855429908198fa625::Reinhard Heydrich::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae6910855429908198fa625::Wannsee Conference::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae6910855429908198fa625::Wannsee Conference::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Wannsee Conference (German: \"Wannseekonferenz\" ) was a meeting of senior government officials of Nazi Germany and \"Schutzstaffel\" (SS) leaders, held in the Berlin suburb of Wannsee on 20 January 1942.\n[2] Reinhard Tristan Eugen Heydrich (] ) (7 March 1904 – 4 June 1942) was a high-ranking German Nazi official during World War II, and a main architect of the Holocaust.\n[3] Wannsee House and the Holocaust by Steven Lehrer tells the story of the elegant suburban Berlin villa where the Wannsee Conference took place on January 20, 1942."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

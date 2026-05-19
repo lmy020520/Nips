@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Adelaide",
+  "pred_answer": "Adelaide",
+  "normalized_gold": "adelaide",
+  "normalized_pred": "adelaide",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abcc885554299658360048e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abcc885554299658360048e::Electoral district of Bragg::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abcc885554299658360048e::Kensington Park, South Australia::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abcc885554299658360048e::Colombo Central Electoral District::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abcc885554299658360048e::Electoral district of Bragg",
+        "5abcc885554299658360048e::Kensington Park, South Australia"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abcc885554299658360048e::Electoral district of Bragg::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abcc885554299658360048e::Kensington Park, South Australia::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abcc885554299658360048e::Colombo Central Electoral District::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abcc885554299658360048e::Colombo Central Electoral District::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The district was named after the city of Colombo in Colombo District, Western Province.\n[2] Kensington Park is a suburb of Adelaide in the City of Burnside in South Australia.\n[3] Bragg is an electoral district of the House of Assembly in the Australian state of South Australia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

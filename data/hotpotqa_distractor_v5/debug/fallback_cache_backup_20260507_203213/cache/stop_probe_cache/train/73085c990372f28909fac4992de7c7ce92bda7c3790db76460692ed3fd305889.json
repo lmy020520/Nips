@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Merced County",
+  "pred_answer": "Merced County",
+  "normalized_gold": "merced county",
+  "normalized_pred": "merced county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7ebed5542994a481bbe2a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7ebed5542994a481bbe2a::Raymond Chiao::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7ebed5542994a481bbe2a::University of California, Merced::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7ebed5542994a481bbe2a::David Gross::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7ebed5542994a481bbe2a::Raymond Chiao",
+        "5ae7ebed5542994a481bbe2a::University of California, Merced"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7ebed5542994a481bbe2a::Raymond Chiao::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7ebed5542994a481bbe2a::University of California, Merced::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7ebed5542994a481bbe2a::David Gross::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7ebed5542994a481bbe2a::David Gross::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He is also a faculty member in the UC Santa Barbara Physics Department and is currently affiliated with the Institute for Quantum Studies at Chapman University in California.\n[2] It is located in the San Joaquin Valley in unincorporated Merced County, California, near Merced just north of Fresno, California.\n[3] He is currently an emeritus faculty member at the University of California, Merced physics department, where he is conducting research on gravitational radiation."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

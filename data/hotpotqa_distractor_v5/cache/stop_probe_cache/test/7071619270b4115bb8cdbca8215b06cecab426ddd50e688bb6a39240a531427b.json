@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1988",
+  "pred_answer": "1988",
+  "normalized_gold": "1988",
+  "normalized_pred": "1988",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab40e1c5542996a3a969f00",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab40e1c5542996a3a969f00::Short Circuit (1986 film)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab40e1c5542996a3a969f00::Penny Racers (1998 video game)::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab40e1c5542996a3a969f00::Lawrence Turman::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab40e1c5542996a3a969f00::Where's Herb?::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab40e1c5542996a3a969f00::Short Circuit (1986 film)",
+        "5ab40e1c5542996a3a969f00::Lawrence Turman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab40e1c5542996a3a969f00::Short Circuit (1986 film)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab40e1c5542996a3a969f00::Penny Racers (1998 video game)::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab40e1c5542996a3a969f00::Lawrence Turman::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab40e1c5542996a3a969f00::Where's Herb?::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab40e1c5542996a3a969f00::Where's Herb?::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The television commercials featured a fictional character named Herb, who was described as never having eaten a Burger King burger in his life.\n[2] Lawrence Turman (born November 28, 1926 in Los Angeles) is a film producer who currently serves as the director of The Peter Stark Producing Program at the University of Southern California.\n[3] The game had a Nintendo 64 sequel released only in Japan, \"\".\n[4] A sequel, \"Short Circuit 2\", was released in 1988."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Loud",
+  "pred_answer": "Loud",
+  "normalized_gold": "loud",
+  "normalized_pred": "loud",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a919455429941d65f26b5",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a919455429941d65f26b5::List of R5 concert tours::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a919455429941d65f26b5::Talk That Talk::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a919455429941d65f26b5::Roc Me Out::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a919455429941d65f26b5::S&amp;M (song)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7a919455429941d65f26b5::Loud Tour::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a919455429941d65f26b5::Roc Me Out",
+        "5a7a919455429941d65f26b5::S&amp;M (song)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a919455429941d65f26b5::List of R5 concert tours::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a919455429941d65f26b5::Talk That Talk::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a919455429941d65f26b5::Roc Me Out::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a919455429941d65f26b5::S&amp;M (song)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7a919455429941d65f26b5::Loud Tour::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a919455429941d65f26b5::Loud Tour::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Performing in over twenty countries in the Americas and Europe, the tour was launched in support of Rihanna's fifth studio album \"Loud\" (2010) but eventually supported her following album \"Talk that Talk\" as it was released during the tour, in November 2011.\n[2] \"S&M\" is a song by Barbadian singer Rihanna from her fifth studio album, \"Loud\" (2010).\n[3] \"Roc Me Out\" is a song recorded by Barbadian recording artist Rihanna for her sixth studio album \"Talk That Talk\" (2011).\n[4] Talk That Talk is the sixth studio album by Barbadian singer Rihanna, released on November 18, 2011, by Def Jam Recordings and SRP Records."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

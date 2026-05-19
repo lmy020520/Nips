@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"No Line on the Horizon\"",
+  "pred_answer": "\"No Line on the Horizon\"",
+  "normalized_gold": "no line on the horizon",
+  "normalized_pred": "no line on the horizon",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a889ae95542997e5c09a62c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a889ae95542997e5c09a62c::War Tour::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a889ae95542997e5c09a62c::Electrical Storm (song)::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a889ae95542997e5c09a62c::U2 360° Tour::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a889ae95542997e5c09a62c::Live from the Point Depot::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a889ae95542997e5c09a62c::Electrical Storm (song)",
+        "5a889ae95542997e5c09a62c::U2 360° Tour"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a889ae95542997e5c09a62c::War Tour::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a889ae95542997e5c09a62c::Electrical Storm (song)::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a889ae95542997e5c09a62c::U2 360° Tour::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a889ae95542997e5c09a62c::Live from the Point Depot::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a889ae95542997e5c09a62c::Live from the Point Depot::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The show was recorded during U2's Lovetown Tour on New Year's Eve 1989 at the Point Depot in Dublin.\n[2] Launched in support of the group's 2009 album \"No Line on the Horizon\", the tour visited stadiums from 2009 through 2011.\n[3] U2 did not play the song live until 2 July 2009, when they performed it on the second concert of their U2 360° Tour in Barcelona.\n[4] The War Tour was a concert tour by the Irish rock band U2, which took place in 1982 and 1983 in support of the group's third album \"War\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

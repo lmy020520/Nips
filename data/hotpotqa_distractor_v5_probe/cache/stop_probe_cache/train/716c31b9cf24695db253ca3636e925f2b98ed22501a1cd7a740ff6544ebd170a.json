@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "June 12, 1994",
+  "pred_answer": "June 12, 1994",
+  "normalized_gold": "june 12 1994",
+  "normalized_pred": "june 12 1994",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e7a685542997cc2c4754c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e7a685542997cc2c4754c::My Brother the Serial Killer::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e7a685542997cc2c4754c::O. J. Simpson murder case::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e7a685542997cc2c4754c::Glen Edward Rogers::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e7a685542997cc2c4754c::My Brother the Serial Killer",
+        "5a7e7a685542997cc2c4754c::O. J. Simpson murder case"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e7a685542997cc2c4754c::My Brother the Serial Killer::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e7a685542997cc2c4754c::O. J. Simpson murder case::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e7a685542997cc2c4754c::Glen Edward Rogers::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e7a685542997cc2c4754c::Glen Edward Rogers::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He was convicted of two murders and is a suspect in numerous others throughout the United States, including being mentioned, and considered by investigators in Los Angeles County, as a possible alternative suspect to O.J. Simpson in the murders of Nicole Brown Simpson and Ronald Goldman, although as of 2017 nothing has developed regarding these allegations.\n[2] The O. J. Simpson murder case (officially titled People of the State of California v. Orenthal James Simpson) was a criminal trial held at the Los Angeles County Superior Court in which former National Football League (NFL) player, broadcaster, and actor Orenthal James \"O. J.\" Simpson was tried on two counts of murder for the June 12, 1994, deaths of his ex-wife Nicole Brown Simpson and restaurant\n[3] \"My Brother the Serial Killer\" received widespread media attention for Clay's claims that his brother was responsible for the 1994 murders of Nicole Brown Simpson and Ronald Lyle Goldman."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

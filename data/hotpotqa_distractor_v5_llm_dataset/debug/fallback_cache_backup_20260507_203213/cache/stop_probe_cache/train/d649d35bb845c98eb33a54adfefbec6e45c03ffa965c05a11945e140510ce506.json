@@ -1,0 +1,100 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Venice",
+  "pred_answer": "Venice",
+  "normalized_gold": "venice",
+  "normalized_pred": "venice",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a90b6f25542990a984936c3",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a90b6f25542990a984936c3::Griselda (A. Scarlatti)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a90b6f25542990a984936c3::Striberg::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a90b6f25542990a984936c3::Antonio Vivaldi::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a90b6f25542990a984936c3::Antonio Vivaldi::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a90b6f25542990a984936c3::Griselda (Vivaldi)::0"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5a90b6f25542990a984936c3::Joseph Parry's Cottage::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a90b6f25542990a984936c3::Antonio Vivaldi",
+        "5a90b6f25542990a984936c3::Griselda (Vivaldi)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a90b6f25542990a984936c3::Griselda (A. Scarlatti)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a90b6f25542990a984936c3::Striberg::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a90b6f25542990a984936c3::Antonio Vivaldi::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a90b6f25542990a984936c3::Antonio Vivaldi::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a90b6f25542990a984936c3::Griselda (Vivaldi)::0",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5a90b6f25542990a984936c3::Joseph Parry's Cottage::1",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a90b6f25542990a984936c3::Joseph Parry's Cottage::1",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] Built in the early 19th century for ironworkers, the cottage is best known as the birthplace of the famous Welsh composer Joseph Parry (1841–1903).\n[2] Griselda (] ) is a dramma per musica in three acts that was composed by Antonio Vivaldi.\n[3] Born in Venice, he is recognized as one of the greatest Baroque composers, and his influence during his lifetime was widespread across Europe.\n[4] He composed many instrumental concertos, for the violin and a variety of other instruments, as well as sacred choral works and more than forty operas. His best-known work is a series of violin concertos known as \"The Four Seasons\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

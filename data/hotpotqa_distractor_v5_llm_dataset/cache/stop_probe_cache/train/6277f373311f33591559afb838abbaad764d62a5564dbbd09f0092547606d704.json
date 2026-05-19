@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Austro-Prussian War",
+  "pred_answer": "The Austro-Prussian War",
+  "normalized_gold": "the austro-prussian war",
+  "normalized_pred": "the austro-prussian war",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4ccbe55429960a22e01ec",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4ccbe55429960a22e01ec::Battle of Hühnerwasser::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4ccbe55429960a22e01ec::North German Confederation Treaty::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4ccbe55429960a22e01ec::Austro-Prussian War::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4ccbe55429960a22e01ec::London Conference of 1867::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4ccbe55429960a22e01ec::Battle of Hühnerwasser",
+        "5ae4ccbe55429960a22e01ec::Austro-Prussian War"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4ccbe55429960a22e01ec::Battle of Hühnerwasser::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4ccbe55429960a22e01ec::North German Confederation Treaty::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4ccbe55429960a22e01ec::Austro-Prussian War::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4ccbe55429960a22e01ec::London Conference of 1867::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4ccbe55429960a22e01ec::London Conference of 1867::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The conference of the six Great Powers (which for the first time included Italy) which met at London in May, 1867, to settle the political order of northern Europe after the disruption of the German Confederation in 1866 is known as the London Conference of 1867.\n[2] The Austro-Prussian War or Seven Weeks' War (also known as the Unification War, Prussian–German War, German Civil War, War of 1866, Brothers War, or Fraternal War, and in Germany as the German War) was a war fought in 1866 between the German Confederation under the leadership of the Austrian Empire and its German allies on one side and the Kingdom of Prussia with its German allies on the other, th\n[3] The North German Confederation Treaty (in German \"Augustbündnis\", or Alliance of August) (also called the North German Federation Treaty and the Treaty of 18 August 1866) was the treaty between the Kingdom of Prussia and other northern and central German states that initially created the North German Confederation, which was the forerunner to the German Empire.\n[4] The Battle of Hühnerwasser was the first battle of the Austro-Prussian War."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

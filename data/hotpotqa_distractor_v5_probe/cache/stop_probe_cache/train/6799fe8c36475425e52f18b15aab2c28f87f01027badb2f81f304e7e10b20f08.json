@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Caesars Entertainment Corporation",
+  "pred_answer": "Caesars Entertainment Corporation",
+  "normalized_gold": "caesars entertainment corporation",
+  "normalized_pred": "caesars entertainment corporation",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a727b805542991f9a20c48b",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a727b805542991f9a20c48b::Rio All Suite Hotel and Casino::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a727b805542991f9a20c48b::2017 World Series of Poker::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a727b805542991f9a20c48b::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a727b805542991f9a20c48b::2017 World Series of Poker results::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a727b805542991f9a20c48b::Tristan Wade::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a727b805542991f9a20c48b::Rio All Suite Hotel and Casino",
+        "5a727b805542991f9a20c48b::2017 World Series of Poker results"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a727b805542991f9a20c48b::Rio All Suite Hotel and Casino::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a727b805542991f9a20c48b::2017 World Series of Poker::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a727b805542991f9a20c48b::2017 World Series of Poker results::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a727b805542991f9a20c48b::Tristan Wade::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a727b805542991f9a20c48b::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a727b805542991f9a20c48b::Tristan Wade::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He won his first World Series of Poker bracelet at the 2011 World Series of Poker Europe.\n[2] Below are the results of the 2017 World Series of Poker, held from May 31-July 22 at the Rio All Suite Hotel and Casino in Las Vegas, Nevada.\n[3] The 2017 World Series of Poker was the 48th annual World Series of Poker (WSOP).\n[4] It is the host casino for the World Series of Poker.\n\nNotes:\n[bridge] The World Series of Poker is hosted at a casino owned by Caesars Entertainment Corporation."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

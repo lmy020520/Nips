@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Louis Malle",
+  "pred_answer": "Louis Malle",
+  "normalized_gold": "louis malle",
+  "normalized_pred": "louis malle",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e7dcc5542991319bc94bf",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e7dcc5542991319bc94bf::Human Resources (film)::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e7dcc5542991319bc94bf::9 Month Stretch::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e7dcc5542991319bc94bf::13th César Awards::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7e7dcc5542991319bc94bf::Au revoir les enfants::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7e7dcc5542991319bc94bf::5th César Awards::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e7dcc5542991319bc94bf::13th César Awards",
+        "5a7e7dcc5542991319bc94bf::Au revoir les enfants"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e7dcc5542991319bc94bf::Human Resources (film)::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e7dcc5542991319bc94bf::9 Month Stretch::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e7dcc5542991319bc94bf::13th César Awards::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7e7dcc5542991319bc94bf::Au revoir les enfants::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7e7dcc5542991319bc94bf::5th César Awards::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e7dcc5542991319bc94bf::5th César Awards::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Tess\" won the award for Best Film.\n[2] Au revoir les enfants (] , meaning \"Goodbye, Children\") is an autobiographical 1987 film written, produced and directed by Louis Malle.\n[3] Au revoir les enfants\" won the award for Best Film.\n[4] It was nominated for six categories at the 39th César Awards including Best Film and Best Director and Best Actor for Dupontel, winning Best Actress for its co-star Sandrine Kiberlain and Best Original Screenplay."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

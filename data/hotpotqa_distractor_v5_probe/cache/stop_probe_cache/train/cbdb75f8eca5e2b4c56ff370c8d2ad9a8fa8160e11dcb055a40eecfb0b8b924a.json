@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "CZ12",
+  "pred_answer": "CZ12",
+  "normalized_gold": "cz12",
+  "normalized_pred": "cz12",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc46285542996583600433",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc46285542996583600433::CZ12::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc46285542996583600433::Rob-B-Hood::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc46285542996583600433::Zhang Lanxin::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abc46285542996583600433::Laura Weissbecker::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc46285542996583600433::CZ12",
+        "5abc46285542996583600433::Zhang Lanxin"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc46285542996583600433::CZ12::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc46285542996583600433::Rob-B-Hood::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc46285542996583600433::Zhang Lanxin::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abc46285542996583600433::Laura Weissbecker::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc46285542996583600433::Laura Weissbecker::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Weissbecker was handpicked by Jackie Chan for one of the leading roles in the film \"Chinese Zodiac 12\", starring and directed by Jackie Chan.\n[2] She is noted for her roles as Bonnie in the film \"CZ12\".\n[3] Rob-B-Hood (, also known as Robin-B-Hood, literally: Baby Project) is a 2006 Hong Kong action comedy film written, produced and directed by Benny Chan, and starring Jackie Chan, Louis Koo, Yuen Biao and Michael Hui.\n[4] CZ12 (), also known as Chinese Zodiac, is a 2012 Hong-Kong-Chinese action comedy film co-produced, written, directed by, and starring Jackie Chan."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

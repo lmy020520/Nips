@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Asti and Alba",
+  "pred_answer": "Asti and Alba",
+  "normalized_gold": "asti and alba",
+  "normalized_pred": "asti and alba",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abbd9c75542992ccd8e7fbc",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abbd9c75542992ccd8e7fbc::Asti wine::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abbd9c75542992ccd8e7fbc::Grignolino::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abbd9c75542992ccd8e7fbc::Freisa::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abbd9c75542992ccd8e7fbc::Asti wine",
+        "5abbd9c75542992ccd8e7fbc::Grignolino"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abbd9c75542992ccd8e7fbc::Asti wine::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abbd9c75542992ccd8e7fbc::Grignolino::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abbd9c75542992ccd8e7fbc::Freisa::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abbd9c75542992ccd8e7fbc::Freisa::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Freisa is a red Italian wine grape variety grown in the Piedmont region of north-west Italy, primarily in Monferrato and in the Langhe, but also further north in the provinces of Turin and Biella.\n[2] Grignolino has two \"Denominazione di origine controllata\" (DOCs) that produce wine from it - Asti and Monferrato Casale.\n[3] Asti (also known as Asti Spumante) is a sparkling white Italian wine that is produced throughout southeastern Piedmont but is particularly focused around the towns of Asti and Alba."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

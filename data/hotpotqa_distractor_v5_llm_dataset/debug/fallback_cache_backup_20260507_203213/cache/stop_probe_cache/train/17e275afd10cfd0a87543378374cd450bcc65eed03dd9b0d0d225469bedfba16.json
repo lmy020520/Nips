@@ -1,0 +1,85 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Kim So-eun",
+  "pred_answer": "Kim So-eun",
+  "normalized_gold": "kim so-eun",
+  "normalized_pred": "kim so-eun",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77bb6b5542995d83181288",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77bb6b5542995d83181288::Kim So-eun::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77bb6b5542995d83181288::Boys Over Flowers Season 2::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77bb6b5542995d83181288::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77bb6b5542995d83181288::Mourning Grave::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77bb6b5542995d83181288::Kim So-eun",
+        "5a77bb6b5542995d83181288::Mourning Grave"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77bb6b5542995d83181288::Kim So-eun::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77bb6b5542995d83181288::Boys Over Flowers Season 2::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77bb6b5542995d83181288::Mourning Grave::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a77bb6b5542995d83181288::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a77bb6b5542995d83181288::Mourning Grave::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She has since starred in \"A Good Day for the Wind to Blow\", \"A Thousand Kisses\", \"Liar Game\" and \"Scholar Who Walks the Night\".\n[2] \"Girl Ghost Story\") is a 2014 South Korean mystery horror film starring Kang Ha-neul and Kim So-eun.\n[3] Boys Over Flowers Season 2, known in Japan as Hana Nochi Hare ~HanaDan Next Season~ (Japanese: 花のち晴れ〜花男 Next Season〜 , \"Sunshine After Flowers — Flower Boys Next Season\") , is a Japanese manga series written and illustrated by Yoko Kamio.\n[4] She rose to fame in 2009 with a supporting role in the popular television drama \"Boys Over Flowers\", and at the same year she starred in drama \"He Who Can't Marry\" and \"Empress Cheonchu\".\n\nNotes:\n[verification] Kim So-eun has since starred in \"A Good Day for the Wind to Blow\", \"A Thousand Kisses\", \"Liar Game\" and \"Scholar Who Walks the Night\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

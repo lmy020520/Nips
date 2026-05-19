@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Cristina Fernández de Kirchner",
+  "pred_answer": "Cristina Fernández de Kirchner",
+  "normalized_gold": "cristina fernández de kirchner",
+  "normalized_pred": "cristina fernández de kirchner",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8489705542990548d0b2c5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8489705542990548d0b2c5::Death and state funeral of Néstor Kirchner::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8489705542990548d0b2c5::Martin Báez::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8489705542990548d0b2c5::Argentine general election, 2011::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8489705542990548d0b2c5::Front for Victory::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8489705542990548d0b2c5::Death and state funeral of Néstor Kirchner",
+        "5a8489705542990548d0b2c5::Argentine general election, 2011"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8489705542990548d0b2c5::Death and state funeral of Néstor Kirchner::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8489705542990548d0b2c5::Martin Báez::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8489705542990548d0b2c5::Argentine general election, 2011::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8489705542990548d0b2c5::Front for Victory::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8489705542990548d0b2c5::Front for Victory::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Both the former President Néstor Kirchner (2003-2007) and the former President Cristina Fernández de Kirchner (2007–2015) belong to this party, located on the center-left of the mainstream Argentine political spectrum.\n[2] Incumbent president Cristina Fernández de Kirchner secured a second term in office after the Front for Victory won just over half of the seats in the National Congress.\n[3] The younger Báez, who is a director of Austral Construcciones, a construction firm founded by his father, is, like the elder Báez, a central figure in the corruption scandal known variously as “Lázarogate” and “The Route of the K Money,” the letter K being a reference to the ties enjoyed by Báez and other suspects to the presidencies of the late Néstor Kirchner and his wife, the incumbent, Cristin\n[4] Argentina’s former President and 1st Secretary General of the Union of South American Nations, Néstor Kirchner, died of heart failure on the morning of 27 October 2010 at the Jose Formenti hospital in El Calafate, Santa Cruz Province at the age of 60."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

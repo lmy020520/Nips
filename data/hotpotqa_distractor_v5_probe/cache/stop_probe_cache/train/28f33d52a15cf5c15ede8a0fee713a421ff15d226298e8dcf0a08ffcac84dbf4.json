@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Great Grimsby",
+  "pred_answer": "Great Grimsby",
+  "normalized_gold": "great grimsby",
+  "normalized_pred": "great grimsby",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a811b8b554299260e20a242",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a811b8b554299260e20a242::Richard Barber (MP)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a811b8b554299260e20a242::Great Grimsby (UK Parliament constituency)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a811b8b554299260e20a242::West Marsh::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a811b8b554299260e20a242::Richard Barber (MP)",
+        "5a811b8b554299260e20a242::Great Grimsby (UK Parliament constituency)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a811b8b554299260e20a242::Richard Barber (MP)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a811b8b554299260e20a242::Great Grimsby (UK Parliament constituency)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a811b8b554299260e20a242::West Marsh::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a811b8b554299260e20a242::West Marsh::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] West Marsh is an area located in the northern part of Grimsby, North East Lincolnshire, England, and is close to Grimsby town centre.\n[2] Great Grimsby is a constituency in North East Lincolnshire represented in the House of Commons of the Parliament of the United Kingdom since May 2015 by Melanie Onn of the Labour Party.\n[3] Richard Barber was the member of Parliament for Great Grimsby in 1388 and mayor of that town."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

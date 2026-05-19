@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Abbey Road",
+  "pred_answer": "Abbey Road",
+  "normalized_gold": "abbey road",
+  "normalized_pred": "abbey road",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab614e9554299488d4d9a9d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab614e9554299488d4d9a9d::Wil Malone::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab614e9554299488d4d9a9d::Tommy (London Symphony Orchestra album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab614e9554299488d4d9a9d::You Never Give Me Your Money::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab614e9554299488d4d9a9d::Introducing... The Beatles::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab614e9554299488d4d9a9d::Wil Malone",
+        "5ab614e9554299488d4d9a9d::You Never Give Me Your Money"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab614e9554299488d4d9a9d::Wil Malone::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab614e9554299488d4d9a9d::Tommy (London Symphony Orchestra album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab614e9554299488d4d9a9d::You Never Give Me Your Money::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab614e9554299488d4d9a9d::Introducing... The Beatles::7",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab614e9554299488d4d9a9d::Introducing... The Beatles::7",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] On 24 July 2014 the album was certified gold and platinum by the RIAA.\n[2] \"You Never Give Me Your Money\" is a song by the Beatles, appearing on their 1969 album \"Abbey Road\".\n[3] Tommy is a 1972 album by the London Symphony Orchestra conducted by David Measham, of arrangements by Wil Malone.\n[4] In 1976, Malone and Lou Reizner covered a Beatles song, \"You Never Give Me Your Money\", for the musical documentary \"All This and World War II\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Carl Palmer",
+  "pred_answer": "Carl Palmer",
+  "normalized_gold": "carl palmer",
+  "normalized_pred": "carl palmer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79e47a5542996c55b2dc91",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79e47a5542996c55b2dc91::Mark Brzezicki::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79e47a5542996c55b2dc91::Carl Palmer::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79e47a5542996c55b2dc91::Atomic Rooster::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a79e47a5542996c55b2dc91::Qango (band)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a79e47a5542996c55b2dc91::The Crazy World of Arthur Brown (album)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79e47a5542996c55b2dc91::Carl Palmer",
+        "5a79e47a5542996c55b2dc91::Qango (band)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79e47a5542996c55b2dc91::Mark Brzezicki::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79e47a5542996c55b2dc91::Carl Palmer::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79e47a5542996c55b2dc91::Atomic Rooster::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a79e47a5542996c55b2dc91::Qango (band)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a79e47a5542996c55b2dc91::The Crazy World of Arthur Brown (album)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a79e47a5542996c55b2dc91::The Crazy World of Arthur Brown (album)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Crazy World of Arthur Brown is the eponymous debut studio album by the English psychedelic rock band the Crazy World of Arthur Brown, released in June 1968.\n[2] Qango were a short-lived progressive rock band, a spin-off from Asia.\n[3] Atomic Rooster are an English rock band, originally formed by members of The Crazy World of Arthur Brown, organist Vincent Crane and drummer Carl Palmer.\n[4] In addition, Palmer is a veteran of a number of famous English bands, including the Crazy World of Arthur Brown, Atomic Rooster, Emerson, Lake & Palmer, and Asia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

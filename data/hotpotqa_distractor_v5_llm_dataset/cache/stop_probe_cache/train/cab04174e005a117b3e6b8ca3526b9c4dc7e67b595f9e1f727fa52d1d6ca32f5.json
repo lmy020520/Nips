@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Demoscene",
+  "pred_answer": "Demoscene",
+  "normalized_gold": "demoscene",
+  "normalized_pred": "demoscene",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4cd765542996836b02d2f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4cd765542996836b02d2f::Mark Knight (sound designer)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4cd765542996836b02d2f::MOD (file format)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4cd765542996836b02d2f::Demoscene::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4cd765542996836b02d2f::Computer art::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4cd765542996836b02d2f::Mark Knight (sound designer)",
+        "5ae4cd765542996836b02d2f::Demoscene"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4cd765542996836b02d2f::Mark Knight (sound designer)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4cd765542996836b02d2f::MOD (file format)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4cd765542996836b02d2f::Demoscene::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4cd765542996836b02d2f::Computer art::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4cd765542996836b02d2f::Computer art::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Computer art is by its nature evolutionary since changes in technology and software directly affect what is possible.\n[2] The demoscene is an international computer art subculture that specializes in producing demos: small, self-contained computer programs that produce audio-visual presentations.\n[3] MOD is a computer file format used primarily to represent music, and was the first module file format.\n[4] He started out writing chiptune and module file music in the Amiga Demoscene, and began his games industry career as a composer in 1992 ."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

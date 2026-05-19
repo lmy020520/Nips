@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New Zealand",
+  "pred_answer": "New Zealand",
+  "normalized_gold": "new zealand",
+  "normalized_pred": "new zealand",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab3218c55429976abd1bc68",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab3218c55429976abd1bc68::Sam Neill::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab3218c55429976abd1bc68::Iron Road::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab3218c55429976abd1bc68::Nicole Kidman filmography::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab3218c55429976abd1bc68::Sam Neill",
+        "5ab3218c55429976abd1bc68::Iron Road"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab3218c55429976abd1bc68::Sam Neill::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab3218c55429976abd1bc68::Iron Road::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab3218c55429976abd1bc68::Nicole Kidman filmography::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab3218c55429976abd1bc68::Nicole Kidman filmography::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Four years later, she starred in the television miniseries \"Vietnam\", for which she received the Best Performance by an Actress in a Mini Series award from the Australian Film Institute.\n[2] Iron Road is a 2009 Canada/China television miniseries written by Barry Pearson and Raymond Storey and directed by David Wu.\n[3] Nigel John Dermot Neill {'1': \", '2': \", '3': \", '4': \"} (born 14 September 1947), known professionally as Sam Neill, is a New Zealand actor who first achieved leading roles in films such as \"\" and \"Dead Calm\" and on television in \"Reilly, Ace of Spies\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

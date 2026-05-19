@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sophy",
+  "pred_answer": "Sophy",
+  "normalized_gold": "sophy",
+  "normalized_pred": "sophy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac4f7e955429924173fb523",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac4f7e955429924173fb523::Daniel Clifford (chef)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac4f7e955429924173fb523::Jane Fearnley-Whittingstall::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac4f7e955429924173fb523::Hugh Fearnley-Whittingstall::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac4f7e955429924173fb523::Geof Manthorne::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac4f7e955429924173fb523::Jane Fearnley-Whittingstall",
+        "5ac4f7e955429924173fb523::Hugh Fearnley-Whittingstall"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac4f7e955429924173fb523::Daniel Clifford (chef)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac4f7e955429924173fb523::Jane Fearnley-Whittingstall::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac4f7e955429924173fb523::Hugh Fearnley-Whittingstall::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac4f7e955429924173fb523::Geof Manthorne::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac4f7e955429924173fb523::Geof Manthorne::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Geoffrey Manthorne (born April 25, 1974), more commonly known as Geof, is an American chef known for his skill in cake building, as well as decorating.\n[2] Hugh Christopher Edmund Fearnley-Whittingstall (born 14 January 1965) is an English celebrity chef, television personality, journalist, food writer and campaigner on food and environmental issues, known for his back-to-basics philosophy.\n[3] She has also written for \"The Daily Telegraph\", \"Daily Mail\", \"The Oldie\", \"Woman's Weekly\", \"The Garden\", \"The English Garden\" and \"Gardens Illustrated\".\n[4] Daniel Clifford is an English chef who is best known for his work at the two Michelin star restaurant Midsummer House."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

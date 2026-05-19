@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2010",
+  "pred_answer": "2010",
+  "normalized_gold": "2010",
+  "normalized_pred": "2010",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abbdc06554299642a094b63",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abbdc06554299642a094b63::Red 2 (film)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abbdc06554299642a094b63::Red (2010 film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abbdc06554299642a094b63::Brian Cox filmography::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abbdc06554299642a094b63::El Muerto (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abbdc06554299642a094b63::Red (2010 film)",
+        "5abbdc06554299642a094b63::Brian Cox filmography"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abbdc06554299642a094b63::Red 2 (film)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abbdc06554299642a094b63::Red (2010 film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abbdc06554299642a094b63::Brian Cox filmography::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abbdc06554299642a094b63::El Muerto (film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abbdc06554299642a094b63::El Muerto (film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] El Muerto (alternatively, The Dead One, El Muerto: The Dead One, The Dead One: El Muerto, The Dead One: An American Legend) is a live-action independent film adaptation of the comic book series, \"\" created by Javier Hernandez.\n[2] The following is the filmography for actor Brian Cox.\n[3] Red is a 2010 American action comedy film inspired by the limited comic book series of the same name created by Warren Ellis and Cully Hamner and published by the DC Comics imprint Homage.\n[4] It was inspired by the limited comic book series of the same name, created by Warren Ellis and Cully Hamner, and published by the DC Comics imprint Homage."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

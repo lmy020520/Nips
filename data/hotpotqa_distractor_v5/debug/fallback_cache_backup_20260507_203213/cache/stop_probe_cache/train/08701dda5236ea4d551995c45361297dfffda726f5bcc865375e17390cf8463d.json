@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Matt Groening",
+  "pred_answer": "Matt Groening",
+  "normalized_gold": "matt groening",
+  "normalized_pred": "matt groening",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe48c05542993f32c2a0da",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe48c05542993f32c2a0da::Monty Burns' Fleeing Circus::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe48c05542993f32c2a0da::List of The Simpsons video games::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe48c05542993f32c2a0da::The Simpsons::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe48c05542993f32c2a0da::American Dad!::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe48c05542993f32c2a0da::Monty Burns' Fleeing Circus",
+        "5abe48c05542993f32c2a0da::The Simpsons"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe48c05542993f32c2a0da::Monty Burns' Fleeing Circus::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe48c05542993f32c2a0da::List of The Simpsons video games::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe48c05542993f32c2a0da::The Simpsons::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe48c05542993f32c2a0da::American Dad!::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe48c05542993f32c2a0da::American Dad!::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] is an American adult animated sitcom created by Seth MacFarlane, Mike Barker, and Matt Weitzman for the Fox Broadcasting Company.\n[2] The Simpsons is an American animated sitcom, aimed at adolescents and adults, created by Matt Groening for the Fox Broadcasting Company.\n[3] \"The Simpsons\" is an American animated television sitcom created by Matt Groening for the Fox Broadcasting Company.\n[4] \"Monty Burns' Fleeing Circus\" is the season premiere of the twenty-eighth season of the animated television series \"The Simpsons\", and the 597th episode of the series overall."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

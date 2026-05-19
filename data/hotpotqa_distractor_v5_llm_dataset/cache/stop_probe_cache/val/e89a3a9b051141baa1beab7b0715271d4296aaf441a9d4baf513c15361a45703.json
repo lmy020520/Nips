@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "May 18, 2017",
+  "pred_answer": "May 18, 2017",
+  "normalized_gold": "may 18 2017",
+  "normalized_pred": "may 18 2017",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab593665542992aa134a363",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab593665542992aa134a363::Red Voodoo::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab593665542992aa134a363::Because We Can (concert tour)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab593665542992aa134a363::Weekend Warrior World Tour::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab593665542992aa134a363::Love and War (Brad Paisley album)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab593665542992aa134a363::Weekend Warrior World Tour::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab593665542992aa134a363::Weekend Warrior World Tour",
+        "5ab593665542992aa134a363::Love and War (Brad Paisley album)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab593665542992aa134a363::Red Voodoo::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab593665542992aa134a363::Because We Can (concert tour)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab593665542992aa134a363::Weekend Warrior World Tour::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab593665542992aa134a363::Love and War (Brad Paisley album)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab593665542992aa134a363::Weekend Warrior World Tour::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab593665542992aa134a363::Weekend Warrior World Tour::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It began on May 18, 2017, in Saratoga Springs, New York and will finish on September 25, 2017, in Maryland Heights, Missouri.\n[2] It was released on April 21, 2017, through Arista Nashville.\n[3] The Weekend Warrior World Tour is the fifteenth and current headlining concert tour by American country music singer Brad Paisley and is in support of his eleventh studio album \"Love and War\" (2017).\n[4] The tour was in support of the band's twelfth studio album \"What About Now\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

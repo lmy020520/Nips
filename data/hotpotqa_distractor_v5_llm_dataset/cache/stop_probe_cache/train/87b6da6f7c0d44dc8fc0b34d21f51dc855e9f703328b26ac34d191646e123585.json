@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Commitments",
+  "pred_answer": "The Commitments",
+  "normalized_gold": "the commitments",
+  "normalized_pred": "the commitments",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abf25b45542997ec76fd3da",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abf25b45542997ec76fd3da::The Commitments (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abf25b45542997ec76fd3da::List of accolades received by Evita (1996 film)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abf25b45542997ec76fd3da::Lynda Myles (British producer)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abf25b45542997ec76fd3da::Angeline Ball::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abf25b45542997ec76fd3da::The Commitments (film)",
+        "5abf25b45542997ec76fd3da::Lynda Myles (British producer)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abf25b45542997ec76fd3da::The Commitments (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abf25b45542997ec76fd3da::List of accolades received by Evita (1996 film)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abf25b45542997ec76fd3da::Lynda Myles (British producer)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abf25b45542997ec76fd3da::Angeline Ball::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abf25b45542997ec76fd3da::Angeline Ball::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Her breakthrough role came in 1991 when she starred as backing singer Imelda Quirke in Alan Parker's \"The Commitments\".\n[2] She is most well known for her work as the director of the Edinburgh International Film Festival and for producing film adaptions of Irish writer Roddy Doyle's The Barrytown Trilogy: 1991's \"The Commitments,\" 1993's \"The Snapper,\" and 1996's \"The Van.\"\n[3] Directed by Alan Parker and written by Parker and Oliver Stone, the film starred Madonna, Antonio Banderas, and Jonathan Pryce in the leading roles of Eva, Ché and Juan Perón respectively.\n[4] The Commitments is a 1991 Irish-British-American musical comedy-drama film based on the 1987 novel of the same name by Roddy Doyle."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

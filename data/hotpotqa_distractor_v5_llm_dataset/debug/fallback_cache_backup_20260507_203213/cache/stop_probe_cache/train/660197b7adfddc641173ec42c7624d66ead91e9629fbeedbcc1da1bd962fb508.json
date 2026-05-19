@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lapageria",
+  "pred_answer": "Lapageria",
+  "normalized_gold": "lapageria",
+  "normalized_pred": "lapageria",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a82a46a55429954d2e2eb91",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a82a46a55429954d2e2eb91::Lapageria::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a82a46a55429954d2e2eb91::Satureja::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a82a46a55429954d2e2eb91::Chambaili::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a82a46a55429954d2e2eb91::Lapageria",
+        "5a82a46a55429954d2e2eb91::Satureja"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a82a46a55429954d2e2eb91::Lapageria::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a82a46a55429954d2e2eb91::Satureja::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a82a46a55429954d2e2eb91::Chambaili::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a82a46a55429954d2e2eb91::Chambaili::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Since the flower 'Chambaili' (lily flower) is the national flower of Pakistan, the film-makers' intentions were to encourage patriotism and nationalism in Pakistan and they obviously picked this name for a reason.\n[2] Satureja is a genus of aromatic plants of the family Lamiaceae, related to rosemary and thyme.\n[3] \"Lapageria rosea\" is the national flower of Chile."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Richard Stilgoe",
+  "pred_answer": "Richard Stilgoe",
+  "normalized_gold": "richard stilgoe",
+  "normalized_pred": "richard stilgoe",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae76f2e5542991e8301cca2",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae76f2e5542991e8301cca2::Richard Stilgoe::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae76f2e5542991e8301cca2::Starlight Express::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae76f2e5542991e8301cca2::Roller disco::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae76f2e5542991e8301cca2::Richard Stilgoe",
+        "5ae76f2e5542991e8301cca2::Starlight Express"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae76f2e5542991e8301cca2::Richard Stilgoe::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae76f2e5542991e8301cca2::Starlight Express::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae76f2e5542991e8301cca2::Roller disco::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae76f2e5542991e8301cca2::Roller disco::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The music played is modern and easily danceable, historically disco but in modern times including almost any form of dance, pop or rock music.\n[2] Starlight Express is a rock musical by Andrew Lloyd Webber (music), Richard Stilgoe (lyrics), with later revisions by Don Black, David Yazbek, Alistair Lloyd Webber and Nick Coler.\n[3] Sir Richard Henry Simpson Stilgoe {'1': \", '2': \", '3': \", '4': \"} (born 28 March 1943) is a British songwriter, lyricist and musician, best known for his humorous songs and frequent television appearances."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

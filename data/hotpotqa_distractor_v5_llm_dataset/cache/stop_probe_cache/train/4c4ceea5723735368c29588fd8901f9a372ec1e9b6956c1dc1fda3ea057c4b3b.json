@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Great Snow of 1717",
+  "pred_answer": "The Great Snow of 1717",
+  "normalized_gold": "the great snow of 1717",
+  "normalized_pred": "the great snow of 1717",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adbd7e755429944faac237d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adbd7e755429944faac237d::Great Blizzard of 1888::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adbd7e755429944faac237d::Great Blizzard of 1978::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adbd7e755429944faac237d::The Great Snow of 1717::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adbd7e755429944faac237d::The Great Snow of 1717::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adbd7e755429944faac237d::Great Blizzard of 1888",
+        "5adbd7e755429944faac237d::The Great Snow of 1717"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adbd7e755429944faac237d::Great Blizzard of 1888::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adbd7e755429944faac237d::Great Blizzard of 1978::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adbd7e755429944faac237d::The Great Snow of 1717::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adbd7e755429944faac237d::The Great Snow of 1717::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adbd7e755429944faac237d::The Great Snow of 1717::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Great Snow of 1717 was a series of snowstorms between February 27 and March 7, 1717 (Gregorian calendar) that blanketed the colony of New York and the New England colonies with five or more feet (1.5 or more meters) of snow, and much higher drifts.\n[2] The Great Snow is considered one of the benchmark storms in New England, often compared to the Great Blizzard of 1888 in severity.\n[3] The Great Blizzard of 1978, also known as the White Hurricane, was a historic winter storm that struck the Ohio Valley and Great Lakes regions from Wednesday, January 25 through Friday, January 27, 1978.\n[4] The storm, referred to as the Great White Hurricane, paralyzed the East Coast from the Chesapeake Bay to Maine, as well as the Atlantic provinces of Canada."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

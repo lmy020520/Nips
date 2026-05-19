@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Chow Tai Fook Enterprises",
+  "pred_answer": "Chow Tai Fook Enterprises",
+  "normalized_gold": "chow tai fook enterprises",
+  "normalized_pred": "chow tai fook enterprises",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac309355542996773102696",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac309355542996773102696::Kingway Brewery::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac309355542996773102696::Alinta Energy::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac309355542996773102696::Reeves Plains Power Station::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac309355542996773102696::Tongbai Pumped Storage Power Station::10"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac309355542996773102696::Alinta Energy",
+        "5ac309355542996773102696::Reeves Plains Power Station"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac309355542996773102696::Kingway Brewery::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac309355542996773102696::Alinta Energy::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac309355542996773102696::Reeves Plains Power Station::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac309355542996773102696::Tongbai Pumped Storage Power Station::10",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac309355542996773102696::Tongbai Pumped Storage Power Station::10",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The power station is operated by Shenergy Company.\n[2] Reeves Plains Power Station is a proposal from Alinta Energy to build a gas-fired power station at Reeves Plains between Gawler and Mallala in South Australia.\n[3] Alinta Energy is an Australian generation, electricity and gas retailing private company that is owned by Hong Kong-based Chow Tai Fook Enterprises.\n[4] It is a subsidiary of government-owned Guangdong Holdings Group, the biggest Hong Kong-based enterprise owned by the Guangdong provincial government."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Alfred Matthew \"Weird Al\" Yankovic",
+  "pred_answer": "Alfred Matthew \"Weird Al\" Yankovic",
+  "normalized_gold": "alfred matthew weird al yankovic",
+  "normalized_pred": "alfred matthew weird al yankovic",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab8e2c05542991b5579f025",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab8e2c05542991b5579f025::&quot;Weird Al&quot; Yankovic::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab8e2c05542991b5579f025::Eric Schwartz (songwriter)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab8e2c05542991b5579f025::&quot;Weird Al&quot; Yankovic::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab8e2c05542991b5579f025::Dr. Demento 20th Anniversary Collection::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab8e2c05542991b5579f025::Vatrogasci::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab8e2c05542991b5579f025::&quot;Weird Al&quot; Yankovic",
+        "5ab8e2c05542991b5579f025::Dr. Demento 20th Anniversary Collection"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab8e2c05542991b5579f025::&quot;Weird Al&quot; Yankovic::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab8e2c05542991b5579f025::Eric Schwartz (songwriter)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab8e2c05542991b5579f025::&quot;Weird Al&quot; Yankovic::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab8e2c05542991b5579f025::Dr. Demento 20th Anniversary Collection::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab8e2c05542991b5579f025::Vatrogasci::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab8e2c05542991b5579f025::Vatrogasci::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Band is known in particular for humorous songs and their often parody specific songs of contemporary musical acts.\n[2] Dr. Demento 20th Anniversary Collection is a release by radio disc jockey Dr. Demento to celebrate 20 years since the beginning of his radio career and novelty song show.\n[3] Alfred Matthew \"Weird Al\" Yankovic ( ; born October 23, 1959) is an American singer, songwriter, parodist, record producer, satirist, actor, voice actor, music video director, film producer, and author.\n[4] Eric Schwartz (Eric \"Red\" Schwartz) is an American folk singer/songwriter and musical satirist known for his often humorous, sexually explicit lyrics, as in the songs \"Clinton Got A Blowjob\" and \"Who Da Bitch Now\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

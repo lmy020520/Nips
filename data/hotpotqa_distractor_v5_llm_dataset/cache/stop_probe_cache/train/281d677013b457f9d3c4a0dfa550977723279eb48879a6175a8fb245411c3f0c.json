@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Jason Statham",
+  "pred_answer": "Jason Statham",
+  "normalized_gold": "jason statham",
+  "normalized_pred": "jason statham",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77364d5542994aec3b7229",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77364d5542994aec3b7229::Oakhurst Productions::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77364d5542994aec3b7229::Mark Wahlberg::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77364d5542994aec3b7229::Jason Statham::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77364d5542994aec3b7229::The Italian Job (2003 film)::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a77364d5542994aec3b7229::F. Gary Gray::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77364d5542994aec3b7229::Jason Statham",
+        "5a77364d5542994aec3b7229::The Italian Job (2003 film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77364d5542994aec3b7229::Oakhurst Productions::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77364d5542994aec3b7229::Mark Wahlberg::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77364d5542994aec3b7229::Jason Statham::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77364d5542994aec3b7229::The Italian Job (2003 film)::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a77364d5542994aec3b7229::F. Gary Gray::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77364d5542994aec3b7229::F. Gary Gray::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Felix Gary Gray (born July 17, 1969), known professionally as F. Gary Gray, is an American film director, film producer, music video director and actor.\n[2] It is an American remake of the 1969 British film of the same name, and is about a team of thieves who plan to steal gold from a former associate who double-crossed them.\n[3] Jason Statham ( born 26 July 1967) is an English actor, and a former model and competitive diver.\n[4] In the 2000s, he starred in the biographical disaster drama \"The Perfect Storm\", the science fiction film \"Planet of the Apes\", the heist film \"The Italian Job\", and the Martin Scorsese-directed neo-noir crime drama \"The Departed\", for which he received an Academy Award nomination for Best Supporting Actor."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

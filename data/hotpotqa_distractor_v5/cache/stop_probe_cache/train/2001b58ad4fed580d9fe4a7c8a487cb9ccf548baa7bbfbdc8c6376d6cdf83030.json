@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Marvel Studios, LLC",
+  "pred_answer": "Marvel Studios, LLC",
+  "normalized_gold": "marvel studios llc",
+  "normalized_pred": "marvel studios llc",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae52fd755429908b632655a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae52fd755429908b632655a::Marvel Studios::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae52fd755429908b632655a::Disney Movies Anywhere::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae52fd755429908b632655a::The Walt Disney Company::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae52fd755429908b632655a::Marvel Studios",
+        "5ae52fd755429908b632655a::Disney Movies Anywhere"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae52fd755429908b632655a::Marvel Studios::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae52fd755429908b632655a::Disney Movies Anywhere::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae52fd755429908b632655a::The Walt Disney Company::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae52fd755429908b632655a::The Walt Disney Company::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Walt Disney Company, commonly known as Disney, is an American diversified multinational mass media and entertainment conglomerate, headquartered at the Walt Disney Studios in Burbank, California.\n[2] Disney Movies Anywhere is a digital film locker for Disney, Pixar, Marvel, and \"Star Wars\"-branded films in the United States.\n[3] Marvel Studios, LLC (originally known as Marvel Films from 1993 to 1996) is an American motion picture studio based at The Walt Disney Studios in Burbank, California and is a subsidiary of Walt Disney Studios, itself a wholly owned division of The Walt Disney Company, with film producer Kevin Feige serving as president."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

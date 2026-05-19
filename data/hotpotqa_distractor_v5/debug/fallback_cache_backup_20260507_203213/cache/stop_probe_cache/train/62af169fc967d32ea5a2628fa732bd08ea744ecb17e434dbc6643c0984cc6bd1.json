@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sam Kelly",
+  "pred_answer": "Sam Kelly",
+  "normalized_gold": "sam kelly",
+  "normalized_pred": "sam kelly",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adbdddd5542996e68525267",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adbdddd5542996e68525267::We'll Think of Something::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adbdddd5542996e68525267::Neil Affleck::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adbdddd5542996e68525267::Sam Kelly::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adbdddd5542996e68525267::The Chris Farley Show::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adbdddd5542996e68525267::We'll Think of Something",
+        "5adbdddd5542996e68525267::Sam Kelly"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adbdddd5542996e68525267::We'll Think of Something::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adbdddd5542996e68525267::Neil Affleck::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adbdddd5542996e68525267::Sam Kelly::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adbdddd5542996e68525267::The Chris Farley Show::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adbdddd5542996e68525267::The Chris Farley Show::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The skit accentuated Farley's shyness for comic effect.\n[2] Roger Michael Kelly (19 December 1943 – 14 June 2014), known by the stage name Sam Kelly, was an English actor who appeared in film, television, radio and theatre.\n[3] He has worked as an animator on \"The Simpsons\" and \"Family Guy\", and as an actor appeared in a leading role in the 1981 film \"My Bloody Valentine\".\n[4] We'll Think of Something is a British sitcom that aired on ITV in 1986."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

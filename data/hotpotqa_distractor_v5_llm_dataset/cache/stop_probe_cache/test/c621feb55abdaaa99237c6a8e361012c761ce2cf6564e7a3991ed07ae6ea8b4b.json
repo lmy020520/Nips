@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Can't Stop",
+  "pred_answer": "Can't Stop",
+  "normalized_gold": "cant stop",
+  "normalized_pred": "cant stop",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74ab6055429916b01641b9",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74ab6055429916b01641b9::Can't Stop (board game)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74ab6055429916b01641b9::Attack! (board game)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74ab6055429916b01641b9::Alhambra (board game)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74ab6055429916b01641b9::Can't Stop (board game)",
+        "5a74ab6055429916b01641b9::Attack! (board game)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74ab6055429916b01641b9::Can't Stop (board game)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74ab6055429916b01641b9::Attack! (board game)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74ab6055429916b01641b9::Alhambra (board game)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74ab6055429916b01641b9::Alhambra (board game)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It was originally published in Germany by Queen Games in a language-interdependent version; an English-specific version was released in North America by the now-defunct Überplay.\n[2] is a board game created by Glenn Drover and published by Eagle Games in 2003.\n[3] Can't Stop is a board game designed by Sid Sackson originally published by Parker Brothers in 1980, and was long out of print in the United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

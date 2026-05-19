@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Afghanistan",
+  "pred_answer": "Afghanistan",
+  "normalized_gold": "afghanistan",
+  "normalized_pred": "afghanistan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a9062a155429916514e749f",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a9062a155429916514e749f::Afghan Hound::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a9062a155429916514e749f::Viscount Grant::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a9062a155429916514e749f::Afghan Hound::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a9062a155429916514e749f::Afghan Hound",
+        "5a9062a155429916514e749f::Viscount Grant"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a9062a155429916514e749f::Afghan Hound::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a9062a155429916514e749f::Viscount Grant::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a9062a155429916514e749f::Afghan Hound::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a9062a155429916514e749f::Afghan Hound::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The breed was selectively bred for its unique features in the cold mountains of Afghanistan.\n[2] Viscount Grant, also known as Gable was an Afghan Hound who was the winner of the title of Best In Show at the Crufts dog show in 1987.\n[3] The Afghan Hound is a hound that is distinguished by its thick, fine, silky coat and its tail with a ring curl at the end."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

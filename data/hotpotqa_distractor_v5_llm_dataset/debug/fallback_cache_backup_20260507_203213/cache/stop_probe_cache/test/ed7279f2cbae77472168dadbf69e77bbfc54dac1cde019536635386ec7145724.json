@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"The Heirs\" (2013)",
+  "pred_answer": "\"The Heirs\" (2013)",
+  "normalized_gold": "the heirs 2013",
+  "normalized_pred": "the heirs 2013",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae206c45542994d89d5b311",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae206c45542994d89d5b311::Kim Ji-won (actress)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae206c45542994d89d5b311::Descendants of the Sun::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae206c45542994d89d5b311::What's Up (TV series)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae206c45542994d89d5b311::Fight for My Way::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae206c45542994d89d5b311::Kim Ji-won (actress)",
+        "5ae206c45542994d89d5b311::What's Up (TV series)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae206c45542994d89d5b311::Kim Ji-won (actress)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae206c45542994d89d5b311::Descendants of the Sun::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae206c45542994d89d5b311::What's Up (TV series)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae206c45542994d89d5b311::Fight for My Way::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae206c45542994d89d5b311::Fight for My Way::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Third-Rate My Way\") is a South Korean television series starring Park Seo-joon and Kim Ji-won, with Ahn Jae-hong and Song Ha-yoon.\n[2] What's Up () is a 2011 South Korean television series starring Lim Ju-hwan, Daesung, Lim Ju-eun, Oh Man-seok, Jang Hee-jin, Lee Soo-hyuk, Kim Ji-won and Jo Jung-suk.\n[3] Descendants of the Sun () is a 2016 South Korean television series starring Song Joong-ki, Song Hye-kyo, Jin Goo, and Kim Ji-won.\n[4] She gained attention through her roles in television series \"The Heirs\" (2013), \"Descendants of the Sun\" (2016) and \"Fight for My Way\" (2017)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

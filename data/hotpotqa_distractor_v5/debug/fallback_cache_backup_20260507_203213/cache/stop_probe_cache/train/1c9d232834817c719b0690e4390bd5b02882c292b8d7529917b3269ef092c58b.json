@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Steve Lawrence",
+  "pred_answer": "Steve Lawrence",
+  "normalized_gold": "steve lawrence",
+  "normalized_pred": "steve lawrence",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf3e965542995ec70e8fa0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf3e965542995ec70e8fa0::Go Away Little Girl::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf3e965542995ec70e8fa0::Mark Wynter::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf3e965542995ec70e8fa0::Steve Lawrence::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf3e965542995ec70e8fa0::Go Away Little Girl::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf3e965542995ec70e8fa0::Go Away Little Girl",
+        "5adf3e965542995ec70e8fa0::Steve Lawrence"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf3e965542995ec70e8fa0::Go Away Little Girl::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf3e965542995ec70e8fa0::Mark Wynter::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf3e965542995ec70e8fa0::Steve Lawrence::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf3e965542995ec70e8fa0::Go Away Little Girl::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf3e965542995ec70e8fa0::Go Away Little Girl::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Go Away Little Girl\" is a popular song written by Gerry Goffin and Carole King.\n[2] Steven Lawrence (born July 8, 1935) is an American singer and actor, best known as a member of a duo with his wife Eydie Gormé, billed as \"Steve and Eydie.\"\n[3] Mark Wynter (born Terence Sidney Lewis; 29 January 1943) is an English actor and former singer, who had four Top 20 singles in the 1960s, including \"Venus in Blue Jeans\" and \"Go Away Little Girl\".\n[4] The song is notable for making the American Top 20 three times: for Steve Lawrence in 1962 (US number 1), for The Happenings in 1966 (US number 12), and for Donny Osmond in 1971 (US number 1)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

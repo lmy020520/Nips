@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1969",
+  "pred_answer": "1969",
+  "normalized_gold": "1969",
+  "normalized_pred": "1969",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade39495542992fa25da703",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade39495542992fa25da703::Rudolph and Frosty's Christmas in July::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade39495542992fa25da703::Frosty the Snowman (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade39495542992fa25da703::Frosty's Winter Wonderland::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade39495542992fa25da703::Rudolph and Frosty's Christmas in July",
+        "5ade39495542992fa25da703::Frosty the Snowman (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade39495542992fa25da703::Rudolph and Frosty's Christmas in July::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade39495542992fa25da703::Frosty the Snowman (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade39495542992fa25da703::Frosty's Winter Wonderland::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade39495542992fa25da703::Frosty's Winter Wonderland::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Frosty's Winter Wonderland is a 1976 animated Christmas television special and a sequel to the 1969 special \"Frosty the Snowman\", produced by Rankin/Bass Productions.\n[2] Frosty the Snowman is a 1969 animated Christmas television special based on the song \"Frosty the Snowman\".\n[3] Rudolph and Frosty's Christmas in July (commonly known by its on-screen title as Rudolph and Frosty: Christmas in July, or simply Rudolph and Frosty) is an American crossover Christmas television special produced by Rankin/Bass, featuring characters from the company's holiday specials including \"Rudolph the Red-Nosed Reindeer\" and \"Frosty the Snowman\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

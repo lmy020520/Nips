@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Dingwall",
+  "pred_answer": "Dingwall",
+  "normalized_gold": "dingwall",
+  "normalized_pred": "dingwall",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7369d5542991e8301cbe2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7369d5542991e8301cbe2::Inchdrewer Castle::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7369d5542991e8301cbe2::Brahan Castle::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7369d5542991e8301cbe2::Siege of Brahan::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae7369d5542991e8301cbe2::Battle of Guiling::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7369d5542991e8301cbe2::Brahan Castle",
+        "5ae7369d5542991e8301cbe2::Siege of Brahan"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7369d5542991e8301cbe2::Inchdrewer Castle::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7369d5542991e8301cbe2::Brahan Castle::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7369d5542991e8301cbe2::Siege of Brahan::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae7369d5542991e8301cbe2::Battle of Guiling::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7369d5542991e8301cbe2::Battle of Guiling::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 354 BC, an army from Wèi was laying siege to Handan, the capital of the State of Zhao.\n[2] Highlanders loyal to the British-Hanoverian government of George I of Great Britain laid siege to Brahan Castle, seat of William Mackenzie, 5th Earl of Seaforth, who was a staunch Jacobite, loyal to the House of Stuart.\n[3] Brahan Castle was situated 3.5 mi south-west of Dingwall, in Easter Ross, Scotland.\n[4] Situated on a slight rise 3.5 mi southwest of Banff, it looks across to Banff Bay."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

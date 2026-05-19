@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "American",
+  "pred_answer": "American",
+  "normalized_gold": "american",
+  "normalized_pred": "american",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6a6e2554299710c8d1f25",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6a6e2554299710c8d1f25::Achabal Gardens::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6a6e2554299710c8d1f25::Camden Children's Garden::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6a6e2554299710c8d1f25::Marie Menken::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6a6e2554299710c8d1f25::Glimpse of the Garden::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab6a6e2554299710c8d1f25::Camden Children's Garden::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6a6e2554299710c8d1f25::Marie Menken",
+        "5ab6a6e2554299710c8d1f25::Glimpse of the Garden"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6a6e2554299710c8d1f25::Achabal Gardens::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6a6e2554299710c8d1f25::Camden Children's Garden::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6a6e2554299710c8d1f25::Marie Menken::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6a6e2554299710c8d1f25::Glimpse of the Garden::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab6a6e2554299710c8d1f25::Camden Children's Garden::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6a6e2554299710c8d1f25::Camden Children's Garden::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] This 4.5 acre garden features a variety of themed educational exhibits for children for creative and imaginative play, such as the Dinosaur Garden, a Giant Picnic Garden, Storybook Gardens, Red Oak Run and Tree House, Cityscapes Garden and more!\n[2] Glimpse of the Garden (1957) is a five-minute short experimental film made by Marie Menken, showing film clips of a garden, with birds chirping for the soundtrack.\n[3] Marie Menken (born Marie Menkevicius, May 25, 1909 – December 29, 1970), was an American experimental filmmaker, painter, and socialite.\n[4] This venue was created in 1999 and is designed for children and families."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

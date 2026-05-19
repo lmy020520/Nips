@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Scott Paul Carson",
+  "pred_answer": "Scott Paul Carson",
+  "normalized_gold": "scott paul carson",
+  "normalized_pred": "scott paul carson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abcedb355429959677d6b4f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abcedb355429959677d6b4f::Chris Jones (footballer, born 1985)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abcedb355429959677d6b4f::Thomas Needham::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abcedb355429959677d6b4f::Scott Carson::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abcedb355429959677d6b4f::Craig Forsyth::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abcedb355429959677d6b4f::Chris Jones (footballer, born 1985)",
+        "5abcedb355429959677d6b4f::Scott Carson"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abcedb355429959677d6b4f::Chris Jones (footballer, born 1985)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abcedb355429959677d6b4f::Thomas Needham::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abcedb355429959677d6b4f::Scott Carson::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abcedb355429959677d6b4f::Craig Forsyth::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abcedb355429959677d6b4f::Craig Forsyth::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Craig Forsyth (born 24 February 1989) is a Scottish professional footballer who plays as a left-sided defender for English club Derby County.\n[2] Scott Paul Carson (born 3 September 1985) is an English professional footballer who plays as a goalkeeper for Championship club Derby County.\n[3] Thomas Needham was an English footballer who played for Derby County.\n[4] Chris Jones is a Welsh semi-professional footballer currently playing for Cymru Alliance side Porthmadog."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,24 @@
+{
+  "should_derive": true,
+  "reason": "The raw candidates are about Sri Lankan electoral districts, but the question is about an Australian electoral district (Fisher) and a city with a shopping mall called 'The Hub'. The gold answer is Aberfoyle Park. We need to bridge from the concept of electoral districts named after cities to the specific Australian context. A bridge note can connect the pattern of electoral districts being named after cities to the Fisher district, and a verification note can confirm that Aberfoyle Park is a city with a shopping mall called 'The Hub'.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Electoral districts are often named after the city they cover, as seen in Batticaloa, Colombo Central, and Colombo North electoral districts.",
+      "source_unit_ids": [
+        "5ae0f616554299422ee9957d::Batticaloa Electoral District (1947–1989)::1",
+        "5ae0f616554299422ee9957d::Colombo Central Electoral District::1",
+        "5ae0f616554299422ee9957d::Colombo North Electoral District::1"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Aberfoyle Park has a shopping mall called 'The Hub'.",
+      "source_unit_ids": [
+        "5ae0f616554299422ee9957d::Batticaloa Electoral District (1947–1989)::1"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

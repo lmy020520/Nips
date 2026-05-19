@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "a commercial",
+  "pred_answer": "a commercial",
+  "normalized_gold": "a commercial",
+  "normalized_pred": "a commercial",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab92625554299753720f751",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab92625554299753720f751::Ryohei Otani::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab92625554299753720f751::Dunkin' Donuts::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab92625554299753720f751::Ryohei Otani::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab92625554299753720f751::Ryohei Otani",
+        "5ab92625554299753720f751::Dunkin' Donuts"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab92625554299753720f751::Ryohei Otani::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab92625554299753720f751::Dunkin' Donuts::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab92625554299753720f751::Ryohei Otani::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab92625554299753720f751::Ryohei Otani::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He began his modeling career in Japan, then entered Korean entertainment by being featured in a commercial for Dunkin' Donuts in 2003, followed by Hyundai Motors, Olympus and SK Telecom.\n[2] Dunkin' Donuts is an American global donut company and coffeehouse based in Canton, Massachusetts, in Greater Boston.\n[3] Ryohei Otani (大谷 亮平 , Ōtani Ryōhei , born October 1, 1980) is a Japanese actor and model."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Clouds of Sils Maria",
+  "pred_answer": "Clouds of Sils Maria",
+  "normalized_gold": "clouds of sils maria",
+  "normalized_pred": "clouds of sils maria",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5addfbc95542997dc79070ff",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5addfbc95542997dc79070ff::Gilles Tschudi::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5addfbc95542997dc79070ff::Wash West::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5addfbc95542997dc79070ff::Clouds of Sils Maria::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5addfbc95542997dc79070ff::The Twilight Saga: Breaking Dawn – Part 2::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5addfbc95542997dc79070ff::Gilles Tschudi",
+        "5addfbc95542997dc79070ff::Clouds of Sils Maria"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5addfbc95542997dc79070ff::Gilles Tschudi::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5addfbc95542997dc79070ff::Wash West::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5addfbc95542997dc79070ff::Clouds of Sils Maria::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5addfbc95542997dc79070ff::The Twilight Saga: Breaking Dawn – Part 2::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5addfbc95542997dc79070ff::The Twilight Saga: Breaking Dawn – Part 2::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The second part of a two-part film forms the fifth and final installment in \"The Twilight Saga\" film series, and is the conclusion of the 2011 film \"\".\n[2] Clouds of Sils Maria (known simply as Sils Maria in some territories) is a 2014 drama film written and directed by Olivier Assayas, and starring Juliette Binoche, Kristen Stewart, and Chloë Grace Moretz.\n[3] The duo's next film \"Still Alice\", based on Lisa Genova's NYT bestselling book, starred Julianne Moore, Kristen Stewart, and Alec Baldwin.\n[4] Gilles Tschudi is a Swiss actor."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

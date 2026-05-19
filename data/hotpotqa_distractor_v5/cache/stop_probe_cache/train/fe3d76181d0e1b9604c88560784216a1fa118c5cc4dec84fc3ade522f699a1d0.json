@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Nikolai Vasilyevich Ogarkov",
+  "pred_answer": "Nikolai Vasilyevich Ogarkov",
+  "normalized_gold": "nikolai vasilyevich ogarkov",
+  "normalized_pred": "nikolai vasilyevich ogarkov",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a82170555429926c1cdae3b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a82170555429926c1cdae3b::Korean Air Lines Flight 007::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a82170555429926c1cdae3b::John T. Hughes (intelligence officer)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a82170555429926c1cdae3b::Nikolai Ogarkov::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a82170555429926c1cdae3b::Nikolai Ogarkov::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a82170555429926c1cdae3b::Korean Air Lines Flight 007",
+        "5a82170555429926c1cdae3b::Nikolai Ogarkov"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a82170555429926c1cdae3b::Korean Air Lines Flight 007::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a82170555429926c1cdae3b::John T. Hughes (intelligence officer)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a82170555429926c1cdae3b::Nikolai Ogarkov::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a82170555429926c1cdae3b::Nikolai Ogarkov::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a82170555429926c1cdae3b::Nikolai Ogarkov::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Nikolai Vasilyevich Ogarkov (Russian: Николай Васильевич Огарков ; 30 October 1917 in the village of Molokovo, Tver Governorate – 23 January 1994) was a prominent Soviet military personality.\n[2] He became widely known in the West when he became the Soviet military's spokesman following the shootdown of Korean Air Lines Flight 007 near Moneron Island in September 1983.\n[3] John T. Hughes (1928-1992) was an intelligence officer of the U.S. Defense Intelligence Agency, specializing in Soviet military capabilities and best known for his nationally televised briefing on the removal of Soviet missiles in Cuba, during the Cuban Missile Crisis.\n[4] On September 1, 1983, the South Korean airliner serving the flight was shot down by a Soviet Su-15 interceptor."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

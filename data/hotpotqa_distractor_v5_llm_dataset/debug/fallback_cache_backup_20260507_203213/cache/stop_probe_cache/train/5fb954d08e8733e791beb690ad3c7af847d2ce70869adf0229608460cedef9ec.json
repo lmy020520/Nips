@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Abraham Grace Merritt",
+  "pred_answer": "Abraham Grace Merritt",
+  "normalized_gold": "abraham grace merritt",
+  "normalized_pred": "abraham grace merritt",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8076a55542995d8a8ddf73",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8076a55542995d8a8ddf73::The Black Wheel::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8076a55542995d8a8ddf73::Whee-lo::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8076a55542995d8a8ddf73::A. Merritt::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8076a55542995d8a8ddf73::The Sorcerer's Ship::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8076a55542995d8a8ddf73::The Black Wheel",
+        "5a8076a55542995d8a8ddf73::A. Merritt"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8076a55542995d8a8ddf73::The Black Wheel::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8076a55542995d8a8ddf73::Whee-lo::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8076a55542995d8a8ddf73::A. Merritt::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8076a55542995d8a8ddf73::The Sorcerer's Ship::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8076a55542995d8a8ddf73::The Sorcerer's Ship::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Sorcerer's Ship is a fantasy novel by Hannes Bok.\n[2] Abraham Grace Merritt (January 20, 1884 – August 21, 1943) – known by his byline, A. Merritt – was an American Sunday magazine editor and a writer of fantastic fiction.\n[3] The Whee-lo or Magnet Space Wheel, is a toy that propels a plastic wheel along both sides of a metal track with magnets built into the wheel.\n[4] The Black Wheel is a fantasy novel written by A. Merritt and Hannes Bok."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

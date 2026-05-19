@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "León Vargas",
+  "pred_answer": "León Vargas",
+  "normalized_gold": "león vargas",
+  "normalized_pred": "león vargas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7f2d975542994959419aad",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7f2d975542994959419aad::Jorge Blanco (musician)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7f2d975542994959419aad::Violetta (telenovela)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7f2d975542994959419aad::Tita Merello::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7f2d975542994959419aad::Jorge Blanco (musician)",
+        "5a7f2d975542994959419aad::Violetta (telenovela)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7f2d975542994959419aad::Jorge Blanco (musician)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7f2d975542994959419aad::Violetta (telenovela)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7f2d975542994959419aad::Tita Merello::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7f2d975542994959419aad::Tita Merello::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Tita Merello (born Laura Ana Merello; 11 October 1904 in Buenos Aires, Argentina – 24 December 2002 in Buenos Aires, Argentina) was a prominent Argentine film actress, tango dancer and singer of the Golden Age of Argentine Cinema (1940–1960).\n[2] Violetta is an Argentine telenovela filmed in Buenos Aires, Argentina and developed by Disney Channel Latin America and Europe, Middle East and Africa (EMEA) and production company Pol-ka, debuted in its country of origin, Latin America and Italy on May 14, 2012.\n[3] Jorge Blanco Güereña (born December 19, 1991) is a Mexican recording artist, dancer, songwriter, and actor, best known for portraying León Vargas on the Disney Channel television series \"Violetta\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

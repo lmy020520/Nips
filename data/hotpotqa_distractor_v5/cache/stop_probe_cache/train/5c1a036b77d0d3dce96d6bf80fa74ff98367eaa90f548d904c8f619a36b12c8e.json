@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Andy Rooney",
+  "pred_answer": "Andy Rooney",
+  "normalized_gold": "andy rooney",
+  "normalized_pred": "andy rooney",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85c1145542997175ce2013",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85c1145542997175ce2013::The Great American Dream Machine::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85c1145542997175ce2013::Andy Rooney::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85c1145542997175ce2013::Charles Lewis (journalist)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85c1145542997175ce2013::The Great American Dream Machine",
+        "5a85c1145542997175ce2013::Andy Rooney"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85c1145542997175ce2013::The Great American Dream Machine::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85c1145542997175ce2013::Andy Rooney::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85c1145542997175ce2013::Charles Lewis (journalist)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85c1145542997175ce2013::Charles Lewis (journalist)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He was an investigative producer for ABC News and the CBS news program \"60 Minutes\".\n[2] Andrew Aitken \"Andy\" Rooney (January 14, 1919 – November 4, 2011) was an American radio and television writer who was best known for his weekly broadcast \"A Few Minutes with Andy Rooney\", a part of the CBS News program \"60 Minutes\" from 1978 to 2011.\n[3] The Great American Dream Machine was a weekly satirical variety television series, produced in New York City by WNET and broadcast on PBS from 1971 to 1972."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

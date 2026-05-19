@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Denver",
+  "pred_answer": "Denver",
+  "normalized_gold": "denver",
+  "normalized_pred": "denver",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae743ea5542997b22f6a65e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae743ea5542997b22f6a65e::Fedor Tyutin::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae743ea5542997b22f6a65e::Kansas City Blues (ice hockey)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae743ea5542997b22f6a65e::Colorado Avalanche::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae743ea5542997b22f6a65e::Boston Bruins::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae743ea5542997b22f6a65e::Fedor Tyutin",
+        "5ae743ea5542997b22f6a65e::Colorado Avalanche"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae743ea5542997b22f6a65e::Fedor Tyutin::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae743ea5542997b22f6a65e::Kansas City Blues (ice hockey)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae743ea5542997b22f6a65e::Colorado Avalanche::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae743ea5542997b22f6a65e::Boston Bruins::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae743ea5542997b22f6a65e::Boston Bruins::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Boston Bruins are a professional ice hockey team based in Boston, Massachusetts.\n[2] The Colorado Avalanche are a professional ice hockey team based in Denver, Colorado.\n[3] The Kansas City Blues were a minor-league hockey team based in Kansas City, Missouri that played in the Central Hockey League from 1967 to 1972, and again in the 1976-77 season, mainly as an affiliate of the in-state St. Louis Blues of the National Hockey League.\n[4] Fedor Anatolievich Tyutin (Russian: Фёдор Анатольевич Тютин , \"Fjodor Tjutin\"; born 19 July 1983) is a Russian professional ice hockey defenceman currently an unrestricted free agent who most recently played for the Colorado Avalanche of the National Hockey League (NHL)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

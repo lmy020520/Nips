@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Universal Pictures",
+  "pred_answer": "Universal Pictures",
+  "normalized_gold": "universal pictures",
+  "normalized_pred": "universal pictures",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b1b0b554299042af8f6d1",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b1b0b554299042af8f6d1::Kyle Balda::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b1b0b554299042af8f6d1::Despicable Me::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b1b0b554299042af8f6d1::Minions (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b1b0b554299042af8f6d1::Kyle Balda",
+        "5a7b1b0b554299042af8f6d1::Despicable Me"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b1b0b554299042af8f6d1::Kyle Balda::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b1b0b554299042af8f6d1::Despicable Me::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b1b0b554299042af8f6d1::Minions (film)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b1b0b554299042af8f6d1::Minions (film)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Minions is a 2015 American computer-animated comedy film, serving as a spin-off/prequel to the \"Despicable Me\" franchise.\n[2] Despicable Me is a 2010 American 3D computer-animated comedy film from Universal Pictures and Illumination Entertainment that was released on July 9, 2010, in the United States.\n[3] Kyle Balda is an American animator and film director, best known for co-directing the animated films \"The Lorax\" (2012), with Chris Renaud, and \"Minions\" (2015), with Pierre Coffin."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

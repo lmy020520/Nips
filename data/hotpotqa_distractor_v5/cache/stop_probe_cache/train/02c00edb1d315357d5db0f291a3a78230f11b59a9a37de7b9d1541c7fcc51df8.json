@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "A New Kind of Science",
+  "pred_answer": "A New Kind of Science",
+  "normalized_gold": "a new kind of science",
+  "normalized_pred": "a new kind of science",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1397e5542997b2ef7d13e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1397e5542997b2ef7d13e::Wolfram's 2-state 3-symbol Turing machine::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1397e5542997b2ef7d13e::Singularity Summit::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1397e5542997b2ef7d13e::Stephen Wolfram::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae1397e5542997b2ef7d13e::A New Kind of Science::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1397e5542997b2ef7d13e::Wolfram's 2-state 3-symbol Turing machine",
+        "5ae1397e5542997b2ef7d13e::Stephen Wolfram"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1397e5542997b2ef7d13e::Wolfram's 2-state 3-symbol Turing machine::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1397e5542997b2ef7d13e::Singularity Summit::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1397e5542997b2ef7d13e::Stephen Wolfram::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae1397e5542997b2ef7d13e::A New Kind of Science::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1397e5542997b2ef7d13e::A New Kind of Science::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A New Kind of Science is a best-selling, controversial book by Stephen Wolfram, published by his own company in 2002.\n[2] He is the author of the book \"A New Kind of Science.\"\n[3] The Singularity Summit is the annual conference of the Machine Intelligence Research Institute.\n[4] In his book \"A New Kind of Science\", Stephen Wolfram described a universal 2-state 5-color Turing machine, and conjectured that a particular 2-state 3-symbol Turing machine (hereinafter (2,3) Turing machine) might be universal as well."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "We Bare Bears",
+  "pred_answer": "We Bare Bears",
+  "normalized_gold": "we bare bears",
+  "normalized_pred": "we bare bears",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a770d8555429937353601b8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a770d8555429937353601b8::The Cartoonstitute::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a770d8555429937353601b8::Rob Sorcher::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a770d8555429937353601b8::We Bare Bears::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a770d8555429937353601b8::Run of the House::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a770d8555429937353601b8::Rob Sorcher",
+        "5a770d8555429937353601b8::We Bare Bears"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a770d8555429937353601b8::The Cartoonstitute::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a770d8555429937353601b8::Rob Sorcher::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a770d8555429937353601b8::We Bare Bears::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a770d8555429937353601b8::Run of the House::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a770d8555429937353601b8::Run of the House::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Run of the House is a sitcom on The WB, that aired between September 2003 and May 2004.\n[2] We Bare Bears is an American animated sitcom created by Daniel Chong for Cartoon Network.\n[3] He is a producer for \"We Bare Bears\", Emmy and Peabody-winning \"Adventure Time\", \"Clarence\", \"Regular Show\", \"Steven Universe\", \"Over the Garden Wall\", \"The PowerPuff Girls\" and \"Ben 10\".\n[4] The Cartoonstitute was a planned Cartoon Network project created by Cartoon Network's executive Rob Sorcher that would have been a showcase for animated shorts created without the interference of network executives and focus testing."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "MGM Resorts International",
+  "pred_answer": "MGM Resorts International",
+  "normalized_gold": "mgm resorts international",
+  "normalized_pred": "mgm resorts international",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abea9db5542990832d3a081",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abea9db5542990832d3a081::Mandalay Resort Group::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abea9db5542990832d3a081::Welk Resort Group::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abea9db5542990832d3a081::Grand Victoria Casino Elgin::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abea9db5542990832d3a081::Circus Circus Las Vegas::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abea9db5542990832d3a081::Mandalay Bay Tram::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abea9db5542990832d3a081::Mandalay Resort Group",
+        "5abea9db5542990832d3a081::Circus Circus Las Vegas"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abea9db5542990832d3a081::Mandalay Resort Group::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abea9db5542990832d3a081::Welk Resort Group::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abea9db5542990832d3a081::Grand Victoria Casino Elgin::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abea9db5542990832d3a081::Circus Circus Las Vegas::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abea9db5542990832d3a081::Mandalay Bay Tram::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abea9db5542990832d3a081::Mandalay Bay Tram::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The line carries passengers from the major Tropicana – Las Vegas Boulevard intersection, via the Excalibur Hotel and Casino and Luxor Hotel to the Mandalay Bay Resort and Casino at the southern end.\n[2] Circus Circus Las Vegas is a hotel, 123928 sqft casino, and RV park located on the Las Vegas Strip in Winchester, Nevada.\n[3] It is 50% owned and operated by RBG, LLP, a subsidiary of Hyatt, and 50% by a subsidiary of MGM Resorts International, which acquired Mandalay Resort Group, the former 50% partner company, in April 2005.\n[4] Welk Resort Group is a corporation based in San Marcos, California that is a developer and operator of luxury resorts and timeshares in the United States and Mexico."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

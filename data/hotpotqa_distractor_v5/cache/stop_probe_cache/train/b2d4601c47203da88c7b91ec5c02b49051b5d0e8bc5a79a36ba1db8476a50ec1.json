@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "doubles",
+  "pred_answer": "doubles",
+  "normalized_gold": "doubles",
+  "normalized_pred": "doubles",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a729c935542991f29ee2cce",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a729c935542991f29ee2cce::Mark Knowles::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a729c935542991f29ee2cce::2013 SAP Open – Doubles::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a729c935542991f29ee2cce::Andy Ram::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a729c935542991f29ee2cce::Bartolomé Salvá Vidal::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a729c935542991f29ee2cce::Mark Knowles",
+        "5a729c935542991f29ee2cce::Andy Ram"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a729c935542991f29ee2cce::Mark Knowles::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a729c935542991f29ee2cce::2013 SAP Open – Doubles::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a729c935542991f29ee2cce::Andy Ram::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a729c935542991f29ee2cce::Bartolomé Salvá Vidal::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a729c935542991f29ee2cce::Bartolomé Salvá Vidal::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 2007 at the Open Seat Open in Barcelona, Spain, Salvá and Nadal made it to the final (on red clay, the surface that Nadal excels on), defeating Jonathan Erlich and Andy Ram (both ranked 13) and Mark Knowles and Daniel Nestor (both ranked fifth) in straight sets on both occasions.\n[2] Andy Ram (Hebrew: אנדי רם‎ ‎ ; born April 10, 1980) is a retired Israeli professional tennis player.\n[3] Mark Knowles and Xavier Malisse were the defending champions but Knowles did not participate this year because of his retirement from professional tennis in September 2012.\n[4] Mark Knowles (born 4 September 1971) is a former tennis player from the Bahamas, specialising in doubles tennis."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

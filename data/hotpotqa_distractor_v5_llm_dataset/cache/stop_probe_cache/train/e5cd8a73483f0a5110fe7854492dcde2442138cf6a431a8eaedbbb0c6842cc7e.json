@@ -1,0 +1,101 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "16 September 1936",
+  "pred_answer": "16 September 1936",
+  "normalized_gold": "16 september 1936",
+  "normalized_pred": "16 september 1936",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a714c025542994082a3e793",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a714c025542994082a3e793::Kahan Commission::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a714c025542994082a3e793::Ronald Moon::8"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a714c025542994082a3e793::Soraya Diase Coffelt::4"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a714c025542994082a3e793::derived::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a714c025542994082a3e793::Aharon Barak::0"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5a714c025542994082a3e793::Fidelma Macken::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a714c025542994082a3e793::Kahan Commission",
+        "5a714c025542994082a3e793::Aharon Barak"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a714c025542994082a3e793::Kahan Commission::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a714c025542994082a3e793::Ronald Moon::8",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a714c025542994082a3e793::Soraya Diase Coffelt::4",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a714c025542994082a3e793::Aharon Barak::0",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5a714c025542994082a3e793::Fidelma Macken::0",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a714c025542994082a3e793::derived::2",
+          "added_step": 3
+        }
+      ],
+      "last_added_unit_id": "5a714c025542994082a3e793::Fidelma Macken::0",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] Ronald T. Y. Moon (born September 4, 1940) was the Chief Justice of the Hawaii State Supreme Court in Honolulu, Hawaii.\n[2] Fidelma O'Kelly Macken (born 1942) is a retired judge of the Supreme Court of Ireland.\n[3] Aharon Barak (Hebrew: אהרן ברק‎ , born Aharon Brick, 16 September 1936) is a Professor of Law at the Interdisciplinary Center in Herzliya and a lecturer in law at the Hebrew University of Jerusalem, the Yale Law School, Central European University, Georgetown University Law Center, and the University of Toronto Faculty of Law.\n[4] Her Master’s thesis, advocating the establishment of a supreme court, was used as a guideline by Virgin Islands lawmakers to create the Supreme Court of the Virgin Islands in 2004.\n\nNotes:\n[bridge] The Kahan Commission included a Supreme Court judge born on 16 September 1936."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

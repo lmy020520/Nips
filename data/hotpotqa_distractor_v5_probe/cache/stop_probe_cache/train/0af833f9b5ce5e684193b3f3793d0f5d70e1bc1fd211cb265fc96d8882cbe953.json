@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "torpedo-bomber",
+  "pred_answer": "torpedo-bomber",
+  "normalized_gold": "torpedo-bomber",
+  "normalized_pred": "torpedo-bomber",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abb0ed95542996cc5e49f84",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abb0ed95542996cc5e49f84::Aircraft carrier::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abb0ed95542996cc5e49f84::List of aircraft carriers::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abb0ed95542996cc5e49f84::Nakajima B3N::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abb0ed95542996cc5e49f84::List of aircraft carriers in service::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abb0ed95542996cc5e49f84::Aircraft carrier",
+        "5abb0ed95542996cc5e49f84::Nakajima B3N"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abb0ed95542996cc5e49f84::Aircraft carrier::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abb0ed95542996cc5e49f84::List of aircraft carriers::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abb0ed95542996cc5e49f84::Nakajima B3N::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abb0ed95542996cc5e49f84::List of aircraft carriers in service::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abb0ed95542996cc5e49f84::List of aircraft carriers in service::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] An aircraft carrier is a warship with a full-length flight deck, hangar and facilities for arming, deploying, and recovering aircraft.\n[2] The Nakajima B3N was a prototype Japanese carrier-based torpedo-bomber aircraft of the 1930s.\n[3] An aircraft carrier is a warship with a full-length flight deck and facilities for carrying, arming, deploying, and recovering aircraft, that serves as a seagoing airbase.\n[4] An aircraft carrier is a warship that serves as a seagoing airbase, equipped with a full-length flight deck and facilities for carrying, arming, deploying, and recovering aircraft."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

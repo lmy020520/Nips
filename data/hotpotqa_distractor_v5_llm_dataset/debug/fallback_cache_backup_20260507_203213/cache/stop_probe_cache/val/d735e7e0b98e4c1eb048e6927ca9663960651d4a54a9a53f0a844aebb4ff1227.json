@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "13,742",
+  "pred_answer": "13,742",
+  "normalized_gold": "13742",
+  "normalized_pred": "13742",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae403965542995dadf242d4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae403965542995dadf242d4::Ireland-Gardiner Farm::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae403965542995dadf242d4::Prairie Farm, Wisconsin::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae403965542995dadf242d4::Greenlawn, New York::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae403965542995dadf242d4::Jericho, New York::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae403965542995dadf242d4::Ireland-Gardiner Farm",
+        "5ae403965542995dadf242d4::Greenlawn, New York"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae403965542995dadf242d4::Ireland-Gardiner Farm::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae403965542995dadf242d4::Prairie Farm, Wisconsin::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae403965542995dadf242d4::Greenlawn, New York::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae403965542995dadf242d4::Jericho, New York::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae403965542995dadf242d4::Jericho, New York::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] As of the United States 2010 Census, the CDP population was 13,567.\n[2] Located on Long Island in the Town of Huntington, the population was 13,742 at the 2010 census.\n[3] The population was 473 at the 2010 census.\n[4] Ireland-Gardiner Farm is a historic home and farm complex located at Greenlawn in Suffolk County, New York."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

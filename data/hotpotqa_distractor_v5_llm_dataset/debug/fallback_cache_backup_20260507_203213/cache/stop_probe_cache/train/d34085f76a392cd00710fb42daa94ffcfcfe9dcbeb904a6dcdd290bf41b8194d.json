@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1936 to 1938",
+  "pred_answer": "1936 to 1938",
+  "normalized_gold": "1936 to 1938",
+  "normalized_pred": "1936 to 1938",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adfe4f755429925eb1afb08",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adfe4f755429925eb1afb08::Great Purge::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adfe4f755429925eb1afb08::Yakov Ganetsky::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adfe4f755429925eb1afb08::History of the Communist Party USA::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adfe4f755429925eb1afb08::Great Purge",
+        "5adfe4f755429925eb1afb08::Yakov Ganetsky"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adfe4f755429925eb1afb08::Great Purge::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adfe4f755429925eb1afb08::Yakov Ganetsky::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adfe4f755429925eb1afb08::History of the Communist Party USA::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adfe4f755429925eb1afb08::History of the Communist Party USA::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Communist Party greatly suffered under the ensuing period of McCarthyism, in which the US government openly carried out mass repression against Communists and simultaneously ran a nationalist propaganda campaign fueling the Cold War against the Soviet Union which would dominate US foreign policy for the rest of the century.\n[2] He was executed during the Great Purge and was rehabilitated posthumously.\n[3] The Great Purge or the Great Terror (Russian: Большо́й терро́р ) was a campaign of political repression in the Soviet Union which occurred from 1936 to 1938."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

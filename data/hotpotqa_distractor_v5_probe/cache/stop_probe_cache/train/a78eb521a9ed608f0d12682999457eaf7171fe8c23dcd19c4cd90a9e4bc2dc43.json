@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Seed of Chucky",
+  "pred_answer": "Seed of Chucky",
+  "normalized_gold": "seed of chucky",
+  "normalized_pred": "seed of chucky",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c4f2a55429935c91b5154",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c4f2a55429935c91b5154::Seed of Chucky::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c4f2a55429935c91b5154::Tony Gardner (designer)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c4f2a55429935c91b5154::Seed of Chucky::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c4f2a55429935c91b5154::Seed of Chucky",
+        "5a7c4f2a55429935c91b5154::Tony Gardner (designer)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c4f2a55429935c91b5154::Seed of Chucky::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c4f2a55429935c91b5154::Tony Gardner (designer)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c4f2a55429935c91b5154::Seed of Chucky::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c4f2a55429935c91b5154::Seed of Chucky::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Seed of Chucky is a 2004 American supernatural comedy slasher film, the fifth installment of the \"Child's Play\" series, and sequel to 1998's \"Bride of Chucky\".\n[2] Tony Gardner (born in September 25, 1965, Cleveland, Ohio) is an American makeup and special effects designer.\n[3] The film was written and directed by Don Mancini, who created the series and has written all of the films."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

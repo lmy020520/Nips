@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Liev Schreiber",
+  "pred_answer": "Liev Schreiber",
+  "normalized_gold": "liev schreiber",
+  "normalized_pred": "liev schreiber",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77a95d5542992a6e59df64",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77a95d5542992a6e59df64::Vampire in Brooklyn::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77a95d5542992a6e59df64::Scream 2::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77a95d5542992a6e59df64::Liev Schreiber::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77a95d5542992a6e59df64::Scream 2::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a77a95d5542992a6e59df64::Heather Langenkamp::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77a95d5542992a6e59df64::Liev Schreiber",
+        "5a77a95d5542992a6e59df64::Scream 2"
+      ],
+      "k_br": 2.0,
+      "k_dis": 0.0,
+      "k_sup": 0.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77a95d5542992a6e59df64::Vampire in Brooklyn::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77a95d5542992a6e59df64::Scream 2::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77a95d5542992a6e59df64::Liev Schreiber::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77a95d5542992a6e59df64::Scream 2::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a77a95d5542992a6e59df64::Heather Langenkamp::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77a95d5542992a6e59df64::Heather Langenkamp::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] She is best known for her role as Nancy Thompson in \"A Nightmare on Elm Street\" (1984) and the sequel \"\" (1987), as well as in cult films such as two of Wes Craven's films: \"Shocker\" (1989) and \"Wes Craven's New Nightmare\" (1994).\n[2] It stars David Arquette, Neve Campbell, Courteney Cox, Sarah Michelle Gellar, Jamie Kennedy, Laurie Metcalf, Jerry O'Connell, Jada Pinkett and Liev Schreiber.\n[3] Isaac Liev Schreiber ( ; born October 4, 1967), better known as Liev Schreiber, is an American actor, director, screenwriter, and producer.\n[4] Scream 2 is a 1997 American slasher film directed by Wes Craven and written by Kevin Williamson."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Central University of India",
+  "pred_answer": "Central University of India",
+  "normalized_gold": "central university of india",
+  "normalized_pred": "central university of india",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c2bb4554299240d9c20ac",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c2bb4554299240d9c20ac::AMU Literary Festival::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c2bb4554299240d9c20ac::Mani Shankar Aiyar::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c2bb4554299240d9c20ac::Janardhana Poojary::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c2bb4554299240d9c20ac::AMU Literary Festival",
+        "5a8c2bb4554299240d9c20ac::Mani Shankar Aiyar"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c2bb4554299240d9c20ac::AMU Literary Festival::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c2bb4554299240d9c20ac::Mani Shankar Aiyar::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c2bb4554299240d9c20ac::Janardhana Poojary::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c2bb4554299240d9c20ac::Janardhana Poojary::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Indira Gandhi he had been appointed as Union Minister of State for Finance in 1982 and he continued to be Union Minister of State for Finance during the tenure of Rajiv Gandhi until 1987.\n[2] He has served as the Union Minister of Panchayati Raj until he lost his seat in the 2009 election.\n[3] AMU Literary Festival is an annual celebration of all the things from the vast world of literature by the Central University of India, Aligarh Muslim University."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

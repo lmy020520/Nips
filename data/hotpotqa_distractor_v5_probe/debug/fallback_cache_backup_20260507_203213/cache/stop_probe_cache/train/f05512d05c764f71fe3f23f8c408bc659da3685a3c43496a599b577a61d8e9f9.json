@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "DeForest Training School",
+  "pred_answer": "DeForest Training School",
+  "normalized_gold": "deforest training school",
+  "normalized_pred": "deforest training school",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae601925542996de7b71ae7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae601925542996de7b71ae7::DeVry University::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae601925542996de7b71ae7::DeVry Advantage Academy (Texas)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae601925542996de7b71ae7::DeVry Advantage Academy::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae601925542996de7b71ae7::Carter Career Center::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae601925542996de7b71ae7::DeVry University",
+        "5ae601925542996de7b71ae7::DeVry Advantage Academy"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae601925542996de7b71ae7::DeVry University::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae601925542996de7b71ae7::DeVry Advantage Academy (Texas)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae601925542996de7b71ae7::DeVry Advantage Academy::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae601925542996de7b71ae7::Carter Career Center::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae601925542996de7b71ae7::Carter Career Center::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] After the closure of Carter, the building housed the DeVry Advantage Academy.\n[2] DeVry Advantage Academy can refer to DeVry University-affiliated high schools in three cities:\n[3] DeVry Advantage Academy and CLC at H.P. Carter was a high school in the Fifth Ward of Houston, Texas, operated in conjunction with DeVry University.\n[4] The school was founded in 1931 as DeForest Training School, and officially became DeVry University in 2002."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

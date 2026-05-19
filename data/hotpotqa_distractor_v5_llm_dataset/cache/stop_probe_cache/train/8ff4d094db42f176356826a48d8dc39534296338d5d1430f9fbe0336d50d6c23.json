@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Garry Marshall",
+  "pred_answer": "Garry Marshall",
+  "normalized_gold": "garry marshall",
+  "normalized_pred": "garry marshall",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab66d5d55429954757d32ad",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab66d5d55429954757d32ad::Show Me Your Soul::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab66d5d55429954757d32ad::Total Recall (2012 film)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab66d5d55429954757d32ad::Pretty Woman::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab66d5d55429954757d32ad::Show Me Your Soul::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab66d5d55429954757d32ad::Show Me Your Soul",
+        "5ab66d5d55429954757d32ad::Pretty Woman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab66d5d55429954757d32ad::Show Me Your Soul::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab66d5d55429954757d32ad::Total Recall (2012 film)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab66d5d55429954757d32ad::Pretty Woman::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab66d5d55429954757d32ad::Show Me Your Soul::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab66d5d55429954757d32ad::Show Me Your Soul::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Show Me Your Soul\" is a song by the funk rock band Red Hot Chili Peppers that was recorded in 1990 and produced by John Norwood Fisher of Fishbone and features Billy Preston on keyboard.\n[2] Pretty Woman is a 1990 American romantic comedy film directed by Garry Marshall from a screenplay by J. F. Lawton.\n[3] The screenplay by Kurt Wimmer and Mark Bomback was based on the 1990 film of the same name, which was inspired by the 1966 short story \"We Can Remember It for You Wholesale\" by Philip K. Dick.\n[4] \"Show Me Your Soul\" was recorded for the soundtrack of the film \"Pretty Woman\", and was shortly after released as the B-side to \"Taste the Pain\" in the US and UK."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

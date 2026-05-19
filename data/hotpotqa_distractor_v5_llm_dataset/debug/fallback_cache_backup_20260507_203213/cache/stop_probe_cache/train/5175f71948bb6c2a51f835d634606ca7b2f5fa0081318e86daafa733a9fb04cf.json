@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hardenbergia",
+  "pred_answer": "Hardenbergia",
+  "normalized_gold": "hardenbergia",
+  "normalized_pred": "hardenbergia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adfd80455429906c02daa66",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adfd80455429906c02daa66::State of Origin::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adfd80455429906c02daa66::Irish Australians::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adfd80455429906c02daa66::Hardenbergia::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adfd80455429906c02daa66::Loropetalum::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5adfd80455429906c02daa66::Hardenbergia violacea::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adfd80455429906c02daa66::Hardenbergia",
+        "5adfd80455429906c02daa66::Loropetalum"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adfd80455429906c02daa66::State of Origin::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adfd80455429906c02daa66::Irish Australians::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adfd80455429906c02daa66::Hardenbergia::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adfd80455429906c02daa66::Loropetalum::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5adfd80455429906c02daa66::Hardenbergia violacea::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adfd80455429906c02daa66::Hardenbergia violacea::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] \"H. monophylla\" is a species of flowering plant in the pea family Fabaceae, native to Australia from Queensland to Tasmania.\n[2] Loropetalum is a genus of three species of shrubs or small trees in the witch-hazel family, Hamamelidaceae, native to China, Japan, and south-eastern Asia.\n[3] Hardenbergia is a small genus of leguminous vines from Australia.\n[4] Irish Australians (Irish: \"Gael-Astrálaigh\" ) are an ethnic group of Australian citizens of Irish descent, which include immigrants from and descendants whose ancestry originates from the island of Ireland."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

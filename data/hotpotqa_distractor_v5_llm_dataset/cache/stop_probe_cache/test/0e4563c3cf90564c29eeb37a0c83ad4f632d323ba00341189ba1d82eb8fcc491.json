@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "9",
+  "pred_answer": "9",
+  "normalized_gold": "9",
+  "normalized_pred": "9",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c827e55429907fabeefa7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c827e55429907fabeefa7::2011 Tennessee Tech Golden Eagles football team::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c827e55429907fabeefa7::2012 Tennessee Tech Golden Eagles football team::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c827e55429907fabeefa7::Ohio Valley Conference::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7c827e55429907fabeefa7::Steve Payne (basketball)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c827e55429907fabeefa7::2011 Tennessee Tech Golden Eagles football team",
+        "5a7c827e55429907fabeefa7::Ohio Valley Conference"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c827e55429907fabeefa7::2011 Tennessee Tech Golden Eagles football team::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c827e55429907fabeefa7::2012 Tennessee Tech Golden Eagles football team::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c827e55429907fabeefa7::Ohio Valley Conference::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7c827e55429907fabeefa7::Steve Payne (basketball)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c827e55429907fabeefa7::Steve Payne (basketball)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Tennessee Tech Golden Eagles are members of the Ohio Valley Conference (OVC) and compete in the NCAA's Division I.\n[2] The OVC has 12 members, 9 of which compete in football in the conference.\n[3] The 2012 Tennessee Tech Golden Eagles football team represented Tennessee Technological University in the 2012 NCAA Division I FCS football season.\n[4] The 2011 Tennessee Tech Golden Eagles football team represented Tennessee Technological University in the 2011 NCAA Division I FCS football season."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

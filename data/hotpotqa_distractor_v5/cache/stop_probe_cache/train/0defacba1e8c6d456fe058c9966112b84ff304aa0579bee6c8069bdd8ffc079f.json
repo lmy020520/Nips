@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Swiss Family Robinson",
+  "pred_answer": "Swiss Family Robinson",
+  "normalized_gold": "swiss family robinson",
+  "normalized_pred": "swiss family robinson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a733a805542992359bc329c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a733a805542992359bc329c::Swiss Family Robinson (1960 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a733a805542992359bc329c::The Mysterious Island::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a733a805542992359bc329c::Tonka (film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a733a805542992359bc329c::The Swiss Family Robinson (1975 TV series)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a733a805542992359bc329c::Swiss Family Robinson (1960 film)",
+        "5a733a805542992359bc329c::Tonka (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a733a805542992359bc329c::Swiss Family Robinson (1960 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a733a805542992359bc329c::The Mysterious Island::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a733a805542992359bc329c::Tonka (film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a733a805542992359bc329c::The Swiss Family Robinson (1975 TV series)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a733a805542992359bc329c::The Swiss Family Robinson (1975 TV series)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Swiss Family Robinson is an American action and adventure series that was broadcast during the 1975–76 TV season.\n[2] Tonka is a 1958 Walt Disney Western adventure film about the US cavalry horse that survived the Battle of the Little Big Horn.\n[3] An early draft of the novel, initially rejected by Verne's publisher and wholly reconceived before publication, was titled \"Shipwrecked Family: Marooned With Uncle Robinson,\" seen as indicating the influence on the novel of \"Robinson Crusoe\" and \"The Swiss Family Robinson\".\n[4] Swiss Family Robinson is a 1960 American Adventure film starring John Mills, Dorothy McGuire, James MacArthur, Janet Munro, Tommy Kirk and Kevin Corcoran in a tale of a shipwrecked family building an island home, loosely based on the 1812 novel \"Der Schweizerische Robinson\" (literally, \"The Swiss Robinson\") by Johann David Wyss."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

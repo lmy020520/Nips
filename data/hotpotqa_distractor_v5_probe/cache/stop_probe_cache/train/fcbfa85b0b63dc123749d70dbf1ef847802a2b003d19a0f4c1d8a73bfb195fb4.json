@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Scott Pembroke",
+  "pred_answer": "Scott Pembroke",
+  "normalized_gold": "scott pembroke",
+  "normalized_pred": "scott pembroke",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a887755429941d65f268a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a887755429941d65f268a::Scott Pembroke::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a887755429941d65f268a::Les risques du métier::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a887755429941d65f268a::André Cayatte::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a887755429941d65f268a::Stormy Waters (film)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a887755429941d65f268a::Scott Pembroke",
+        "5a7a887755429941d65f268a::André Cayatte"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a887755429941d65f268a::Scott Pembroke::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a887755429941d65f268a::Les risques du métier::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a887755429941d65f268a::André Cayatte::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a887755429941d65f268a::Stormy Waters (film)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a887755429941d65f268a::Stormy Waters (film)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The screenplay was written by Jacques Prévert (scenario and dialogue) and André Cayatte (adaptation), based on the novel by Roger Vercel.\n[2] André Cayatte (3 February 1909, Carcassonne – 6 February 1989, Paris) was a French filmmaker and lawyer, who became known for his films centering on themes of crime, justice, and moral responsibility.\n[3] Les risques du métier (\"Risky Business\") is a 1967 French film directed by André Cayatte.\n[4] Scott Pembroke (September 13, 1889 – February 21, 1951) was an American director, actor and screenwriter."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

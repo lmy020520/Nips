@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "\"Royals\"",
+  "pred_answer": "Royals",
+  "normalized_gold": "royals",
+  "normalized_pred": "royals",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e88ff55429949594199f7",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e88ff55429949594199f7::Yellow Flicker Beat::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e88ff55429949594199f7::Don't Take the Money::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e88ff55429949594199f7::Mother Mother (song)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7e88ff55429949594199f7::Royals (song)::3"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7e88ff55429949594199f7::Bravado (song)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e88ff55429949594199f7::Mother Mother (song)",
+        "5a7e88ff55429949594199f7::Royals (song)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e88ff55429949594199f7::Yellow Flicker Beat::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e88ff55429949594199f7::Don't Take the Money::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e88ff55429949594199f7::Mother Mother (song)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7e88ff55429949594199f7::Royals (song)::3",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7e88ff55429949594199f7::Bravado (song)::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e88ff55429949594199f7::Bravado (song)::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The song was written by Lorde and Joel Little and was produced by the latter.\n[2] Written by Lorde and Joel Little and produced by the latter, the song lyrically disapproves of the luxurious lifestyle of contemporary artists.\n[3] It was the last song by a female solo artist to top this chart until \"Royals\" by Lorde in August 2013, by which time the chart had been renamed \"Billboard\" Alternative Songs.\n[4] \"Don't Take the Money\" appeared in the top ten of the \"Billboard\" Alternative Songs chart, and also reached the top 20 of the Hot Rock Songs chart."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

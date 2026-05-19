@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Mary Tyler Moore Show",
+  "pred_answer": "The Mary Tyler Moore Show",
+  "normalized_gold": "the mary tyler moore show",
+  "normalized_pred": "the mary tyler moore show",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d08da554299683c1c6412",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d08da554299683c1c6412::Georgia Engel::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d08da554299683c1c6412::Last Day in Florida::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d08da554299683c1c6412::Christmas Wishes (The Office)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d08da554299683c1c6412::Georgia Engel",
+        "5a7d08da554299683c1c6412::Last Day in Florida"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d08da554299683c1c6412::Georgia Engel::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d08da554299683c1c6412::Last Day in Florida::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d08da554299683c1c6412::Christmas Wishes (The Office)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d08da554299683c1c6412::Christmas Wishes (The Office)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] \"Christmas Wishes\" is the tenth episode of the eighth season of the American comedy television series \"The Office\", and the show's 162nd episode overall.\n[2] \"Last Day in Florida\" is the eighteenth episode of the eighth season of the American comedy television series \"The Office\" and the show's 170th episode overall.\n[3] Georgia Bright Engel (born July 28, 1948) is an American actress who is best known for her role as Georgette Franklin Baxter on \"The Mary Tyler Moore Show\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

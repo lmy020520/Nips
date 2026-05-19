@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Seretse Khama",
+  "pred_answer": "Seretse Khama",
+  "normalized_gold": "seretse khama",
+  "normalized_pred": "seretse khama",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74639a55429929fddd8404",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74639a55429929fddd8404::Naomi Jacobson::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74639a55429929fddd8404::Politics of Botswana::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74639a55429929fddd8404::First Lady of Botswana::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74639a55429929fddd8404::Seretse Khama::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a74639a55429929fddd8404::Parliament of Botswana::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74639a55429929fddd8404::Naomi Jacobson",
+        "5a74639a55429929fddd8404::Seretse Khama"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74639a55429929fddd8404::Naomi Jacobson::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74639a55429929fddd8404::Politics of Botswana::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74639a55429929fddd8404::First Lady of Botswana::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74639a55429929fddd8404::Seretse Khama::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a74639a55429929fddd8404::Parliament of Botswana::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74639a55429929fddd8404::Parliament of Botswana::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The current President of Botswana is Ian Khama, who assumed the Presidency on 1 April 2008 and won a full five-year term in the postceding Botswana General elections, which were held on 16 October 2009 and returned his Botswana Democratic Party with a majority of 35 (total of 45) seats in the 61 seat Parliament.\n[2] Sir Seretse Goitsebeng Maphiri Khama, GCB, KBE (1 July 1921 – 13 July 1980) was the first President of Botswana, in office from 1966 to 1980.\n[3] Botswana's inaugural First Lady was Lady Ruth Williams Khama, the English-born wife of the country's inaugural President, Seretse Khama.\n[4] Politics of Botswana takes place in a framework of a parliamentary representative democratic republic, whereby the President of Botswana is both head of state and head of government, and of a multi-party system."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

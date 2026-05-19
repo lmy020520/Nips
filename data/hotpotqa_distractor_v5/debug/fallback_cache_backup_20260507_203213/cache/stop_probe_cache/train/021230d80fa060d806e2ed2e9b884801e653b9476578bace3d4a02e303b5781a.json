@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Johann Friedrich Struensee",
+  "pred_answer": "Johann Friedrich Struensee",
+  "normalized_gold": "johann friedrich struensee",
+  "normalized_pred": "johann friedrich struensee",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8628c05542994775f60714",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8628c05542994775f60714::Schack Carl Rantzau::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8628c05542994775f60714::Werner Daehn::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8628c05542994775f60714::Johann Friedrich Struensee::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8628c05542994775f60714::Bernd Pansold::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8628c05542994775f60714::Schack Carl Rantzau",
+        "5a8628c05542994775f60714::Johann Friedrich Struensee"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8628c05542994775f60714::Schack Carl Rantzau::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8628c05542994775f60714::Werner Daehn::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8628c05542994775f60714::Johann Friedrich Struensee::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8628c05542994775f60714::Bernd Pansold::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8628c05542994775f60714::Bernd Pansold::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Bernd Pansold (born 3 April 1942 in Zwickau) is a German doctor and practitioner of sports medicine.\n[2] Johann Friedrich Struensee (5 August 1737 – 28 April 1772) was a German doctor.\n[3] Werner Daehn (born 14 October 1967) is a German actor with an international reputation, who has worked with Vin Diesel and Samuel L. Jackson in \"XXX\", with Jason Priestley in \"Colditz\" an ITV1 2005 miniseries, with Bill Pullman in \"Revelations\" and with Steven Seagal in \"Shadow Man\".\n[4] Schack Carl, \"rigsgreve\" (von) Rantzau or Carl Schack Rantzau-Ascheberg (11 March 1717, Ascheberg estate, Holstein – 21 January 1789, Menerbes, France) was a Holstein-born Danish officer and statesman."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

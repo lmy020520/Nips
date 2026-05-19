@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Guadalupe Island",
+  "pred_answer": "Guadalupe Island",
+  "normalized_gold": "guadalupe island",
+  "normalized_pred": "guadalupe island",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7ec99455429934daa2fc68",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7ec99455429934daa2fc68::Niebla disrupta::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7ec99455429934daa2fc68::Guadalupe Island::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7ec99455429934daa2fc68::Surtsey::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7ec99455429934daa2fc68::Niebla disrupta",
+        "5a7ec99455429934daa2fc68::Guadalupe Island"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7ec99455429934daa2fc68::Niebla disrupta::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7ec99455429934daa2fc68::Guadalupe Island::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7ec99455429934daa2fc68::Surtsey::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7ec99455429934daa2fc68::Surtsey::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Surtsey (\"Surtr's island\" in Icelandic, pronounced /ˈsʏr̥tsei/ ) is a volcanic island located in the Vestmannaeyjar archipelago off the southern coast of Iceland.\n[2] Guadalupe Island or Isla Guadalupe is a volcanic island located 241 km off the west coast of Mexico's Baja California Peninsula and some 400 km southwest of the city of Ensenada in the state of Baja California, in the Pacific Ocean.\n[3] Niebla disrupta is a fruticosa lichen that grows on rocks along the foggy Pacific Coast of California, from Marin County to San Luis Obispo County, in the Channel Islands, and on Guadalupe Island in Baja California."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

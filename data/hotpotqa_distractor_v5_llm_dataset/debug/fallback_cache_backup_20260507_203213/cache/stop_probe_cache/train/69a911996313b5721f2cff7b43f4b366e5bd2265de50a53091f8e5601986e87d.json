@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1886",
+  "pred_answer": "1886",
+  "normalized_gold": "1886",
+  "normalized_pred": "1886",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3bee55542992f92d82367",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3bee55542992f92d82367::Tanox::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3bee55542992f92d82367::Innerstate::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3bee55542992f92d82367::Johnson &amp; Johnson::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae3bee55542992f92d82367::Zeo, Inc.::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3bee55542992f92d82367::Innerstate",
+        "5ae3bee55542992f92d82367::Johnson &amp; Johnson"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3bee55542992f92d82367::Tanox::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3bee55542992f92d82367::Innerstate::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3bee55542992f92d82367::Johnson &amp; Johnson::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae3bee55542992f92d82367::Zeo, Inc.::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3bee55542992f92d82367::Zeo, Inc.::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The state of sleep was detected by a headband, essentially comprising three long-lasting electrodes made of electrically conductive fabric and a wireless unit, that transmitted data to a Zeo bedside clock unit or Apple iPhone which displayed data and sounded the wake alarm.\n[2] Johnson & Johnson is an American multinational medical devices, pharmaceutical and consumer packaged goods manufacturing company founded in 1886.\n[3] Remicade (Infliximab) is a medication used to treat autoimmune diseases made by Centocor, a unit of Johnson & Johnson.\n[4] The company was founded by two biomedical research scientists, Nancy T. Chang and Tse Wen Chang in March 1986 with $250,000, which was a large part of their family savings at that time."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

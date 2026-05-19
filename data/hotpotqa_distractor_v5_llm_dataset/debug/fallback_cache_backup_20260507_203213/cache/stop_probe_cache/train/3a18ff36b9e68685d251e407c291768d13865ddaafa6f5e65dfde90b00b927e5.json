@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "game",
+  "pred_answer": "game",
+  "normalized_gold": "game",
+  "normalized_pred": "game",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a813d84554299260e20a278",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a813d84554299260e20a278::Online ticket brokering::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a813d84554299260e20a278::Chaturanga::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a813d84554299260e20a278::Ticket to Ride (board game)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a813d84554299260e20a278::JunaCon::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a813d84554299260e20a278::Chaturanga",
+        "5a813d84554299260e20a278::Ticket to Ride (board game)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a813d84554299260e20a278::Online ticket brokering::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a813d84554299260e20a278::Chaturanga::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a813d84554299260e20a278::Ticket to Ride (board game)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a813d84554299260e20a278::JunaCon::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a813d84554299260e20a278::JunaCon::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The convention also hosts the annual \"Ticket to Ride\" Finnish championship, the winner of which is eligible for the \"Ticket to Ride\" official world championship in Paris, France later in the year.\n[2] Ticket to Ride is a railway-themed German-style board game designed by Alan R. Moon, Illustrated by Julien Delval and Cyrille Daujean, published in 2004 by Days of Wonder.\n[3] Chaturanga (Sanskrit: चतुरङ्ग ; \"caturaṅga \"), or catur for short, is an ancient Indian strategy game which is commonly theorized to be the common ancestor of the board games: chess, shogi, sittuyin, makruk, xiangqi and janggi.\n[4] Generally, the majority of trading on ticket brokering websites concerns itself with tickets to live entertainment events whereby the primary officially licensed seller's supply has been exhausted and the event has been declared \"sold-out\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

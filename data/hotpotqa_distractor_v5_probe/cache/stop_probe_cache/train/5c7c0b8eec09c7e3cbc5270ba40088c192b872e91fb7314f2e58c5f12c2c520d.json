@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Brittany Snow",
+  "pred_answer": "Brittany Snow",
+  "normalized_gold": "brittany snow",
+  "normalized_pred": "brittany snow",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae75ba95542991bbc9761f6",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae75ba95542991bbc9761f6::Another Earth::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae75ba95542991bbc9761f6::The Long Home::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae75ba95542991bbc9761f6::Would You Rather (film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae75ba95542991bbc9761f6::Robin Lord Taylor::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae75ba95542991bbc9761f6::The Balloonman::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae75ba95542991bbc9761f6::Would You Rather (film)",
+        "5ae75ba95542991bbc9761f6::Robin Lord Taylor"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae75ba95542991bbc9761f6::Another Earth::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae75ba95542991bbc9761f6::The Long Home::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae75ba95542991bbc9761f6::Would You Rather (film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae75ba95542991bbc9761f6::Robin Lord Taylor::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae75ba95542991bbc9761f6::The Balloonman::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae75ba95542991bbc9761f6::The Balloonman::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Meanwhile, Oswald Cobblepot (Robin Lord Taylor) returns to Gotham and gets a new job close to an influential figure in the underworld.\n[2] Robin Lord Taylor (born June 4, 1978) is an American film and television actor and director, known for \"Accepted\" (2006), \"Another Earth\" (2011) and \"Would You Rather\" (2012).\n[3] Would You Rather is a 2012 American psychological horror-thriller film starring Brittany Snow and Jeffrey Combs.\n[4] It also stars Josh Hutcherson, Tim Blake Nelson, Courtney Love, Timothy Hutton, Giancarlo Esposito, Ashton Kutcher, Josh Hartnett, Zoe Levin, Analeigh Tipton, Scott Haze, and Robin Lord Taylor."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

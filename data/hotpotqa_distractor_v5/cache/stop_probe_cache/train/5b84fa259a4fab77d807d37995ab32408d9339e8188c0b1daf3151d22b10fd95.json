@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Peter Murphy",
+  "pred_answer": "Peter Murphy",
+  "normalized_gold": "peter murphy",
+  "normalized_pred": "peter murphy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab55fe25542992aa134a2e8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab55fe25542992aa134a2e8::Dust to Dust (Pete Nice and DJ Richie Rich album)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab55fe25542992aa134a2e8::Peter Murphy (musician)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab55fe25542992aa134a2e8::Dust (Peter Murphy album)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab55fe25542992aa134a2e8::Dust (Peter Murphy album)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab55fe25542992aa134a2e8::Peter Murphy (musician)",
+        "5ab55fe25542992aa134a2e8::Dust (Peter Murphy album)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab55fe25542992aa134a2e8::Dust to Dust (Pete Nice and DJ Richie Rich album)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab55fe25542992aa134a2e8::Peter Murphy (musician)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab55fe25542992aa134a2e8::Dust (Peter Murphy album)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab55fe25542992aa134a2e8::Dust (Peter Murphy album)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab55fe25542992aa134a2e8::Dust (Peter Murphy album)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Dust is the sixth solo studio album by English musician Peter Murphy.\n[2] It was released on 23 April 2002 through Metropolis Records.\n[3] He was the vocalist of the Goth rock group Bauhaus and later went on to release a number of solo albums, such as \"Deep\", \"Holy Smoke\", and \"Love Hysteria\".\n[4] \"Dust to Dust\" found limited success, peaking at #171 on the \"Billboard\" 200, #50 on the Top R&B/Hip-Hop Albums and #3 on the Top Heatseekers."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

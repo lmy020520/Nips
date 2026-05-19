@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Brad Nessler",
+  "pred_answer": "Brad Nessler",
+  "normalized_gold": "brad nessler",
+  "normalized_pred": "brad nessler",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a774d025542993569682d43",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a774d025542993569682d43::2003 NBA Finals::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a774d025542993569682d43::1999 NBA Finals::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a774d025542993569682d43::Brad Nessler::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a774d025542993569682d43::1976 ABA All-Star Game::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a774d025542993569682d43::2003 NBA Finals",
+        "5a774d025542993569682d43::Brad Nessler"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a774d025542993569682d43::2003 NBA Finals::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a774d025542993569682d43::1999 NBA Finals::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a774d025542993569682d43::Brad Nessler::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a774d025542993569682d43::1976 ABA All-Star Game::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a774d025542993569682d43::1976 ABA All-Star Game::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] (The Nuggets went on to finish the regular season in first place at 60-24 (.714), but after beating the Kentucky Colonels 4 games to 3 in the ABA Semifinals the Nuggets lost in the 1976 ABA Finals to the New York Nets, 4 games to 2.)\n[2] Bradley \"Brad\" Nessler (born June 3, 1956) is an American sportscaster, who currently calls college football and college basketball games for CBS.\n[3] The Spurs defeated the Knicks 4 games to 1 to win the championship.\n[4] The Spurs defeated the Nets to win the series 4 games to 2."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

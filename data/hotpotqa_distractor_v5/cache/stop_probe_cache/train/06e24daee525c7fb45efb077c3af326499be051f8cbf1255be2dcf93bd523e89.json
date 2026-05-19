@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Barclays Center",
+  "pred_answer": "Barclays Center",
+  "normalized_gold": "barclays center",
+  "normalized_pred": "barclays center",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a87ba9b5542996e4f3088f5",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a87ba9b5542996e4f3088f5::2015–16 FIU Panthers men's basketball team::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a87ba9b5542996e4f3088f5::2015–16 Florida Gators women's basketball team::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a87ba9b5542996e4f3088f5::2015–16 New York Islanders season::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a87ba9b5542996e4f3088f5::2015–16 Florida Panthers season::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a87ba9b5542996e4f3088f5::List of Florida Panthers head coaches::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a87ba9b5542996e4f3088f5::2015–16 New York Islanders season",
+        "5a87ba9b5542996e4f3088f5::2015–16 Florida Panthers season"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a87ba9b5542996e4f3088f5::2015–16 FIU Panthers men's basketball team::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a87ba9b5542996e4f3088f5::2015–16 Florida Gators women's basketball team::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a87ba9b5542996e4f3088f5::2015–16 New York Islanders season::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a87ba9b5542996e4f3088f5::2015–16 Florida Panthers season::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a87ba9b5542996e4f3088f5::List of Florida Panthers head coaches::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a87ba9b5542996e4f3088f5::List of Florida Panthers head coaches::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Panthers have played their home games at the BB&T Center, which was first named the Broward County Civic Arena, since 1998.\n[2] The 2015–16 Florida Panthers season was the 23rd season for the National Hockey League franchise that was established on June 14, 1993.\n[3] This season was the team's first at Barclays Center in Brooklyn, one of the five boroughs of New York City, which it shares with the Brooklyn Nets of the National Basketball Association (NBA).\n[4] The 2015–16 Florida Gators women's basketball team represented the University of Florida in the sport of basketball during the 2015–16 women's college basketball season."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

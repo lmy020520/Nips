@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Paul Simon",
+  "pred_answer": "Simon",
+  "normalized_gold": "paul simon",
+  "normalized_pred": "simon",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "Evidence shows Paul Simon was half of the duo Simon & Garfunkel, who wrote 'The Sound of Silence', and his musical career spanned seven decades.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "Evidence shows Paul Simon was half of the duo Simon & Garfunkel, who wrote 'The Sound of Silence', and his musical career spanned seven decades.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a733c8e5542994cef4bc4ed",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a733c8e5542994cef4bc4ed::Sounds of Silence::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a733c8e5542994cef4bc4ed::Paul Simon::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a733c8e5542994cef4bc4ed::Charlie Tagawa::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a733c8e5542994cef4bc4ed::Sounds of Silence",
+        "5a733c8e5542994cef4bc4ed::Paul Simon"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a733c8e5542994cef4bc4ed::Sounds of Silence::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a733c8e5542994cef4bc4ed::Paul Simon::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a733c8e5542994cef4bc4ed::Charlie Tagawa::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a733c8e5542994cef4bc4ed::Charlie Tagawa::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] His musical career has spanned seven decades and as a critically acclaimed performer he was regarded as one of the best contemporary banjo players and arguably one of the all-time best.\n[2] Simon's musical career has spanned seven decades, with his fame and commercial success beginning as half of the duo Simon & Garfunkel, which was formed in 1964 with Art Garfunkel.\n[3] The album's title is a slight modification of the title of the duo's first major hit, \"The Sound of Silence\", which originally was released as \"The Sounds of Silence\"."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

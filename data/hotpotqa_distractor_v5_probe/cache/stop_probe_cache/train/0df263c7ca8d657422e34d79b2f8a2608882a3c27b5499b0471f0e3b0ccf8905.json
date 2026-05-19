@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "9,984",
+  "pred_answer": "9,984",
+  "normalized_gold": "9984",
+  "normalized_pred": "9984",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7b1cd5542992aa3b8c849",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7b1cd5542992aa3b8c849::Kickapoo Township, Peoria County, Illinois::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7b1cd5542992aa3b8c849::Southeast Kansas::8"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7b1cd5542992aa3b8c849::Brown County, Kansas::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab7b1cd5542992aa3b8c849::Kickapoo Site 7, Kansas::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab7b1cd5542992aa3b8c849::Kickapoo Site 1, Kansas::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7b1cd5542992aa3b8c849::Brown County, Kansas",
+        "5ab7b1cd5542992aa3b8c849::Kickapoo Site 7, Kansas"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7b1cd5542992aa3b8c849::Kickapoo Township, Peoria County, Illinois::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7b1cd5542992aa3b8c849::Southeast Kansas::8",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7b1cd5542992aa3b8c849::Brown County, Kansas::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab7b1cd5542992aa3b8c849::Kickapoo Site 7, Kansas::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab7b1cd5542992aa3b8c849::Kickapoo Site 1, Kansas::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7b1cd5542992aa3b8c849::Kickapoo Site 1, Kansas::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Kickapoo Site 1 is a census-designated place (CDP) on the Kickapoo Reservation in Brown County, Kansas, United States.\n[2] Kickapoo Site 7 is a census-designated place (CDP) on the Kickapoo Reservation in Brown County, Kansas, United States.\n[3] As of the 2010 census, the county population was 9,984.\n[4] Southeast Kansas is located in the tallgrass prairie ecosystem of North America."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

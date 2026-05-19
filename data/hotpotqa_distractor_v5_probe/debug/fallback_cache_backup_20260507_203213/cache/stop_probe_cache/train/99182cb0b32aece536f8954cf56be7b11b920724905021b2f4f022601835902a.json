@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "14 May 1997",
+  "pred_answer": "14 May 1997",
+  "normalized_gold": "14 may 1997",
+  "normalized_pred": "14 may 1997",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84a9425542991dd0999d66",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84a9425542991dd0999d66::United Continental Holdings::6"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84a9425542991dd0999d66::Pan American World Airways::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84a9425542991dd0999d66::Star Alliance::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a84a9425542991dd0999d66::History of Kingfisher Airlines::11"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84a9425542991dd0999d66::United Continental Holdings",
+        "5a84a9425542991dd0999d66::Star Alliance"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84a9425542991dd0999d66::United Continental Holdings::6",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84a9425542991dd0999d66::Pan American World Airways::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84a9425542991dd0999d66::Star Alliance::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a84a9425542991dd0999d66::History of Kingfisher Airlines::11",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84a9425542991dd0999d66::History of Kingfisher Airlines::11",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] On 7 June 2010 Kingfisher became a member elect of the Oneworld airline alliance when it signed a formal membership agreement.\n[2] Star Alliance is one of the world's largest global airline alliances. Founded on 14 May 1997, its current CEO is Jeffrey Goh and its headquarters is located in Frankfurt am Main, Germany.\n[3] It was also a founding member of the International Air Transport Association (IATA), the global airline industry association.\n[4] Once completely combined, United became the world's largest airline, as measured by revenue passenger miles. United is a founding member of the Star Alliance."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

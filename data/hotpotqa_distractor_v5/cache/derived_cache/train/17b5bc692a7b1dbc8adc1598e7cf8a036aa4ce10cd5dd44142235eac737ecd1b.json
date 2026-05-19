@@ -1,0 +1,20 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for a beetle named after the youngest person to receive six Academy Award nominations. The state summary mentions 'Agra katewinsletae' named after Kate Winslet, but the question's condition is about six nominations. Kate Winslet has six nominations? Actually, she has 7 nominations. The raw candidates show Damien Chazelle as youngest Best Director winner, but not six nominations. Need to bridge to find who has six nominations and is youngest. Alexandre Desplat has 8 nominations, not six. Nick Meyer not relevant. So we need to derive notes to clarify the condition.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Damien Chazelle is the youngest person to win the Oscar for Best Director, but the question asks for youngest to receive six Academy Award nominations.",
+      "source_unit_ids": [
+        "5a778f815542995d831811ce::Damien Chazelle::4"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Kate Winslet has received seven Academy Award nominations, not six, so she does not match the condition of six nominations.",
+      "source_unit_ids": [],
+      "coarse_priority": 2
+    }
+  ]
+}

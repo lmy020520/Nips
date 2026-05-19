@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Nicky Chinn and Mike Chapman",
+  "pred_answer": "Nicky Chinn and Mike Chapman",
+  "normalized_gold": "nicky chinn and mike chapman",
+  "normalized_pred": "nicky chinn and mike chapman",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae81073554299540e5a572d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae81073554299540e5a572d::Desolation Boulevard::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae81073554299540e5a572d::Ain't No Woman (Like the One I've Got)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae81073554299540e5a572d::The Ballroom Blitz::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae81073554299540e5a572d::Miss O'Dell::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae81073554299540e5a572d::Desolation Boulevard",
+        "5ae81073554299540e5a572d::The Ballroom Blitz"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae81073554299540e5a572d::Desolation Boulevard::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae81073554299540e5a572d::Ain't No Woman (Like the One I've Got)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae81073554299540e5a572d::The Ballroom Blitz::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae81073554299540e5a572d::Miss O'Dell::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae81073554299540e5a572d::Miss O'Dell::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Miss O'Dell\" is a song by English musician George Harrison, released as the B-side of his 1973 hit single \"Give Me Love (Give Me Peace on Earth)\".\n[2] \"The Ballroom Blitz\" (often called \"\"Ballroom Blitz\"\") is a song by the British rock band The Sweet, written and produced by Nicky Chinn and Mike Chapman.\n[3] \"Ain't No Woman (Like the One I've Got)\" is a 1973 hit single written by Dennis Lambert and Brian Potter, released as a single by the Four Tops on the ABC/Dunhill record label, from the album \"Keeper of the Castle\".\n[4] Desolation Boulevard is the third album by Sweet originally released in the United Kingdom in November 1974."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

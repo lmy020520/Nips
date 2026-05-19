@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "RAND Corporation",
+  "pred_answer": "RAND Corporation",
+  "normalized_gold": "rand corporation",
+  "normalized_pred": "rand corporation",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5646255429960a22e02e1",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5646255429960a22e02e1::Leonard Boudin::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5646255429960a22e02e1::Daniel Ellsberg::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5646255429960a22e02e1::Barry McCaffrey::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5646255429960a22e02e1::Leonard Boudin",
+        "5ae5646255429960a22e02e1::Daniel Ellsberg"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5646255429960a22e02e1::Leonard Boudin::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5646255429960a22e02e1::Daniel Ellsberg::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5646255429960a22e02e1::Barry McCaffrey::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5646255429960a22e02e1::Barry McCaffrey::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Barry Richard McCaffrey (born November 17, 1942) is a former United States Army General and current news commentator and business consultant.\n[2] Daniel Ellsberg (born April 7, 1931) is an American activist and former United States military analyst who, while employed by the RAND Corporation, precipitated a national political controversy in 1971 when he released the Pentagon Papers, a top-secret Pentagon study of U.S. government decision-making in relation to the Vietnam War, to \"The New York Times\" and other newspapers.\n[3] Leonard B. Boudin (July 20, 1912 – November 24, 1989) was an American civil liberties attorney and left-wing activist who represented Daniel Ellsberg of Pentagon Papers fame and Dr. Benjamin Spock, the author of \"Baby and Child Care\", who advocated draft resistance during the Vietnam War."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

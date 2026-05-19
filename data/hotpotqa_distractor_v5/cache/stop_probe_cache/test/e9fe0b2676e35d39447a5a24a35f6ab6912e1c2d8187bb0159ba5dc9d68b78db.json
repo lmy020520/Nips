@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Katy Perry",
+  "pred_answer": "Katy Perry",
+  "normalized_gold": "katy perry",
+  "normalized_pred": "katy perry",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd56355542993062266c58",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd56355542993062266c58::Katy Perry::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd56355542993062266c58::Hummingbird Heartbeat::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd56355542993062266c58::Stacy Barthe::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd56355542993062266c58::Greatest Hits &amp; More (Elena Paparizou album)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd56355542993062266c58::Katy Perry",
+        "5abd56355542993062266c58::Stacy Barthe"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd56355542993062266c58::Katy Perry::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd56355542993062266c58::Hummingbird Heartbeat::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd56355542993062266c58::Stacy Barthe::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd56355542993062266c58::Greatest Hits &amp; More (Elena Paparizou album)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd56355542993062266c58::Greatest Hits &amp; More (Elena Paparizou album)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Greatest Hits & More is the first compilation album by Greek-Swedish recording artist Helena Paparizou, released in Greece and Cyprus by Sony Music Greece/RCA on 23 May 2011, although it became available through some retailers as early as 20 May.\n[2] Soon after, Barthe would land her first placement, \"Blur\", on Britney Spears \"Circus\" album.\n[3] \"Hummingbird Heartbeat\" is a song recorded by American singer Katy Perry for her third studio album, \"Teenage Dream\" (2010).\n[4] After singing in church during her childhood, she pursued a career in gospel music as a teenager."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

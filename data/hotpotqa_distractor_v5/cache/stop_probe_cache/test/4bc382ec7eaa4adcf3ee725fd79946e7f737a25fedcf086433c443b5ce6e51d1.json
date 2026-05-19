@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Northrop P-61 Black Widow",
+  "pred_answer": "The Northrop P-61 Black Widow",
+  "normalized_gold": "the northrop p-61 black widow",
+  "normalized_pred": "the northrop p-61 black widow",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8492ab5542992a431d1a5b",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8492ab5542992a431d1a5b::Northrop F-15 Reporter::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8492ab5542992a431d1a5b::Northrop P-61 Black Widow::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8492ab5542992a431d1a5b::Curtiss-Wright XF-87 Blackhawk::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8492ab5542992a431d1a5b::Northrop F-15 Reporter",
+        "5a8492ab5542992a431d1a5b::Northrop P-61 Black Widow"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8492ab5542992a431d1a5b::Northrop F-15 Reporter::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8492ab5542992a431d1a5b::Northrop P-61 Black Widow::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8492ab5542992a431d1a5b::Curtiss-Wright XF-87 Blackhawk::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8492ab5542992a431d1a5b::Curtiss-Wright XF-87 Blackhawk::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Designed as a replacement for the World War II–era propeller-driven P-61 Black Widow night/interceptor aircraft, the XF-87 lost in government procurement competition to the Northrop F-89 Scorpion.\n[2] The Northrop P-61 Black Widow, named for the American spider, was the first operational U.S. warplane designed as a night fighter, and the first aircraft designed to use radar.\n[3] Based on the Northrop P-61 Black Widow night fighter, it was the last piston-powered photo-reconnaissance aircraft designed and produced for the United States Air Force."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

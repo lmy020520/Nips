@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fiat 1800, Lancia Flaminia, Saab 93, Borgward Isabella, Goliath/Hansa 1100, Auto Union 1000, Ford Taunus",
+  "pred_answer": "Fiat 1800, Lancia Flaminia, Saab 93, Borgward Isabella, Goliath/Hansa 1100, Auto Union 1000, Ford Taunus",
+  "normalized_gold": "fiat 1800 lancia flaminia saab 93 borgward isabella goliath/hansa 1100 auto union 1000 ford taunus",
+  "normalized_pred": "fiat 1800 lancia flaminia saab 93 borgward isabella goliath/hansa 1100 auto union 1000 ford taunus",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a83181d5542990548d0b176",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a83181d5542990548d0b176::Trabant::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a83181d5542990548d0b176::Trabant 601::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a83181d5542990548d0b176::Saxomat::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a83181d5542990548d0b176::FC Erzgebirge Aue::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a83181d5542990548d0b176::Trabant",
+        "5a83181d5542990548d0b176::Saxomat"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a83181d5542990548d0b176::Trabant::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a83181d5542990548d0b176::Trabant 601::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a83181d5542990548d0b176::Saxomat::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a83181d5542990548d0b176::FC Erzgebirge Aue::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a83181d5542990548d0b176::FC Erzgebirge Aue::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The former East German side was a founder member of the 3.\n[2] Saxomat was a type of automatic clutch available as an option on Fiat 1800, Lancia Flaminia, Saab 93, Borgward Isabella, Goliath/Hansa 1100, Auto Union 1000, Ford Taunus, Trabant, other than some models from BMW, Opel, Steyr-Puch, NSU, Glas, Wartburg and Volkswagen.\n[3] The Trabant 601 (or Trabant P601 series) was a Trabant model produced by VEB Sachsenring in Zwickau, Sachsen.\n[4] The Trabant ( ; ] ) is an automobile produced from 1957 to 1990 by former East German auto maker VEB Sachsenring Automobilwerke Zwickau in Zwickau, Saxony."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

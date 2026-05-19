@@ -1,0 +1,23 @@
+{
+  "should_derive": true,
+  "reason": "The recent probe feedback indicates a false_stop error with the predicted answer 'December 1978', and the gold answer hint is '1978'. The current evidence and notes mention the Airline Deregulation Act of 1978 as a factor in Braniff Airways ceasing operations in 1982. Deriving bridge and verification notes can help organize the evidence to clarify the federal law's year and its role, focusing on correcting the answer to '1978' and linking the query entity to the answer candidate.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "The Airline Deregulation Act of December 1978 contributed to Braniff Airways ceasing operations in May 1982.",
+      "source_unit_ids": [
+        "5ac2e9c45542990b17b154a0::Braniff International Airways::3"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Braniff International Airways operated from 1928 until 1982, with the airline ceasing operations in May 1982.",
+      "source_unit_ids": [
+        "5ac2e9c45542990b17b154a0::Braniff International Airways::0",
+        "5ac2e9c45542990b17b154a0::Braniff International Airways::3"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "should_derive": true,
+  "reason": "Need to bridge query entities to answer candidates. Michael Cimino's birth date is not in raw candidates; need to infer from context or find additional evidence. Jonathan Glazer's birth date is known from state summary. Bridge note can connect Michael Cimino to his birth year via known facts.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Michael Cimino was born on February 3, 1939.",
+      "source_unit_ids": [
+        "5a7ca3835542990527d554ef::Heaven's Gate (film)::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Jonathan Glazer was born on March 26, 1965.",
+      "source_unit_ids": [],
+      "coarse_priority": 2
+    }
+  ]
+}

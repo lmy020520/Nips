@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "42.195",
+  "pred_answer": "42.195",
+  "normalized_gold": "42195",
+  "normalized_pred": "42195",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c917e5542990527d554d3",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c917e5542990527d554d3::Sabrina Mockenhaupt::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c917e5542990527d554d3::Skyway::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c917e5542990527d554d3::Berlin Marathon::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7c917e5542990527d554d3::Fissure vent::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c917e5542990527d554d3::Sabrina Mockenhaupt",
+        "5a7c917e5542990527d554d3::Berlin Marathon"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c917e5542990527d554d3::Sabrina Mockenhaupt::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c917e5542990527d554d3::Skyway::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c917e5542990527d554d3::Berlin Marathon::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7c917e5542990527d554d3::Fissure vent::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c917e5542990527d554d3::Fissure vent::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The vent is often a few meters wide and may be many kilometers long.\n[2] The official marathon distance of 42.195 kilometers (26 miles 385 yards) is set up as a citywide road race where professional athletes and amateur runners jointly participate.\n[3] However, in Asia, such as Bangkok's and Hong Kong's skywalks, they are built and owned separately by the city government, connecting between privately run rail stations or other transport with their own footbridges, and run many kilometers.\n[4] She has a marathon best of 2:26:21, set at the 2010 Berlin Marathon."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Pennsylvania Station",
+  "pred_answer": "Pennsylvania Station",
+  "normalized_gold": "pennsylvania station",
+  "normalized_pred": "pennsylvania station",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a760f575542994ccc9186a6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a760f575542994ccc9186a6::Pennsylvania Station (Newark)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a760f575542994ccc9186a6::Wayne Route 23 Transit Center::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a760f575542994ccc9186a6::Acela Express::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a760f575542994ccc9186a6::Pennsylvania Station (Newark)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a760f575542994ccc9186a6::Pennsylvania Station (Newark)",
+        "5a760f575542994ccc9186a6::Acela Express"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a760f575542994ccc9186a6::Pennsylvania Station (Newark)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a760f575542994ccc9186a6::Wayne Route 23 Transit Center::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a760f575542994ccc9186a6::Acela Express::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a760f575542994ccc9186a6::Pennsylvania Station (Newark)::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a760f575542994ccc9186a6::Pennsylvania Station (Newark)::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The rail carriers include Newark Light Rail, New Jersey Transit (3 commuter rail lines), the PATH rapid transit system to Manhattan, and Amtrak (11 lines including the Acela Express).\n[2] The Acela Express ( ; colloquially abbreviated to Acela) is Amtrak's flagship service along the Northeast Corridor (NEC) in the Northeast United States between Washington, D.C. and Boston via 14 intermediate stops including Baltimore, Philadelphia, and New York City.\n[3] The Wayne Route 23 Transit Center is a mass transportation hub located in Wayne, New Jersey, USA.\n[4] Pennsylvania Station (also known as Newark Penn Station) is a major transportation hub in Newark, New Jersey."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

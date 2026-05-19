@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Newbery Honor",
+  "pred_answer": "Newbery Honor",
+  "normalized_gold": "newbery honor",
+  "normalized_pred": "newbery honor",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79656b5542994bb945700b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79656b5542994bb945700b::Harry Kitten and Tucker Mouse::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79656b5542994bb945700b::Seth Brady Tucker::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79656b5542994bb945700b::The Cricket in Times Square::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a79656b5542994bb945700b::The Cricket in Times Square::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79656b5542994bb945700b::Harry Kitten and Tucker Mouse",
+        "5a79656b5542994bb945700b::The Cricket in Times Square"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79656b5542994bb945700b::Harry Kitten and Tucker Mouse::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79656b5542994bb945700b::Seth Brady Tucker::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79656b5542994bb945700b::The Cricket in Times Square::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a79656b5542994bb945700b::The Cricket in Times Square::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a79656b5542994bb945700b::The Cricket in Times Square::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It won the Newbery Honor in 1961.\n[2] The Cricket in Times Square is a 1960 children's book by George Selden and illustrated by Garth Williams.\n[3] His second book won the Gival Press Poetry Award (\"We Deserve the Gods We Ask For\", 2014) and went on to win the Eric Hoffer Book Award in 2015.\n[4] Harry Kitten and Tucker Mouse is a children's book written by George Selden and illustrated by Garth Williams."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

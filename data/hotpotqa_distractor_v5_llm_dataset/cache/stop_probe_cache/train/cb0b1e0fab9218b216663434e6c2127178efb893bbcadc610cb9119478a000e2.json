@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "United States",
+  "pred_answer": "United States",
+  "normalized_gold": "united states",
+  "normalized_pred": "united states",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4afbe5542995dadf243b0",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4afbe5542995dadf243b0::Josiah Bartlett House::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4afbe5542995dadf243b0::Kingston, New Hampshire::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4afbe5542995dadf243b0::List of Governors of New Hampshire::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4afbe5542995dadf243b0::Josiah Bartlett House",
+        "5ae4afbe5542995dadf243b0::Kingston, New Hampshire"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4afbe5542995dadf243b0::Josiah Bartlett House::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4afbe5542995dadf243b0::Kingston, New Hampshire::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4afbe5542995dadf243b0::List of Governors of New Hampshire::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4afbe5542995dadf243b0::List of Governors of New Hampshire::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] This is a list of Governors of New Hampshire, in the United States.\n[2] Kingston is a town in Rockingham County, New Hampshire, United States.\n[3] The Josiah Bartlett House is a house in Kingston, New Hampshire."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "California",
+  "pred_answer": "California",
+  "normalized_gold": "california",
+  "normalized_pred": "california",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab5c86b5542997d4ad1f1dc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab5c86b5542997d4ad1f1dc::Peter Piper Pizza::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab5c86b5542997d4ad1f1dc::Menlo Park station::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab5c86b5542997d4ad1f1dc::Round Table Pizza::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab5c86b5542997d4ad1f1dc::Civil War Roundtable::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab5c86b5542997d4ad1f1dc::Peter Piper Pizza",
+        "5ab5c86b5542997d4ad1f1dc::Round Table Pizza"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab5c86b5542997d4ad1f1dc::Peter Piper Pizza::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab5c86b5542997d4ad1f1dc::Menlo Park station::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab5c86b5542997d4ad1f1dc::Round Table Pizza::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab5c86b5542997d4ad1f1dc::Civil War Roundtable::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab5c86b5542997d4ad1f1dc::Civil War Roundtable::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The oldest such group in the United States is The Civil War Round Table of Chicago, which was founded in 1941 and is based in Chicago, Illinois.\n[2] Round Table Pizza is a large chain of pizza parlors in the western United States.\n[3] It is also within walking distance of the oldest Round Table Pizza.\n[4] Peter Piper Pizza is an Arizona-based pizza chain with locations in Arizona, California, New Mexico, Texas, Oklahoma, Nevada, and Mexico, and formerly in Colorado, Utah, and Michigan."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

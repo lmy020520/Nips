@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Chicago Cocktail",
+  "pred_answer": "Chicago Cocktail",
+  "normalized_gold": "chicago cocktail",
+  "normalized_pred": "chicago cocktail",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1a5c75542997f29b3c0df",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1a5c75542997f29b3c0df::Chicago Cocktail::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1a5c75542997f29b3c0df::Sweet Melissa::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1a5c75542997f29b3c0df::Gin and tonic::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae1a5c75542997f29b3c0df::Piscola::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1a5c75542997f29b3c0df::Chicago Cocktail",
+        "5ae1a5c75542997f29b3c0df::Gin and tonic"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1a5c75542997f29b3c0df::Chicago Cocktail::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1a5c75542997f29b3c0df::Sweet Melissa::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1a5c75542997f29b3c0df::Gin and tonic::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae1a5c75542997f29b3c0df::Piscola::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1a5c75542997f29b3c0df::Piscola::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Piscola or Combinado Nacional (national mix) is a highball cocktail, made of pisco and most commonly a cola drink, that is popular in Chile.\n[2] A gin and tonic is a highball cocktail made with gin and tonic water poured over ice.\n[3] A Sweet Melissa is a gin-based cocktail that was named by its creator, Daniel Bouie, after his wife Melissa Chabran Bouie.\n[4] The Chicago Cocktail is a brandy-based mixed drink probably named for the city of Chicago, Illinois."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

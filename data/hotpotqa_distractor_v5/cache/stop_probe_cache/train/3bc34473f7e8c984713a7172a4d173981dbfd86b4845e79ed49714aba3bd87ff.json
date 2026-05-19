@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1895",
+  "pred_answer": "1895",
+  "normalized_gold": "1895",
+  "normalized_pred": "1895",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae6399855429908198fa51b",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae6399855429908198fa51b::Augustus Saint-Gaudens::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae6399855429908198fa51b::Cornish Art Colony::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae6399855429908198fa51b::Saint-Gaudens National Historic Site::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae6399855429908198fa51b::Augustus Saint-Gaudens",
+        "5ae6399855429908198fa51b::Cornish Art Colony"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae6399855429908198fa51b::Augustus Saint-Gaudens::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae6399855429908198fa51b::Cornish Art Colony::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae6399855429908198fa51b::Saint-Gaudens National Historic Site::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae6399855429908198fa51b::Saint-Gaudens National Historic Site::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] This was his summer residence from 1885 to 1897, his permanent home from 1900 until his death in 1907, and the center of the Cornish Art Colony.\n[2] The Cornish Art Colony (or Cornish Artists’ Colony, or Cornish Colony) was a popular art colony centered in Cornish, New Hampshire from about 1895 through the years of World War I.\n[3] Augustus Saint-Gaudens ( ; March 1, 1848 – August 3, 1907) was an American sculptor of the Beaux-Arts generation who most embodied the ideals of the \"American Renaissance\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

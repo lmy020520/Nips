@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hotel\" (1965), \"Airport\" (1968), \"Wheels\" (1971)",
+  "pred_answer": "Hotel\" (1965), \"Airport\" (1968), \"Wheels\" (1971)",
+  "normalized_gold": "hotel 1965 airport 1968 wheels 1971",
+  "normalized_pred": "hotel 1965 airport 1968 wheels 1971",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79e3925542994bb9457130",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79e3925542994bb9457130::Arthur Hailey::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79e3925542994bb9457130::The Departure (album)::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79e3925542994bb9457130::Arthur Hailey::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a79e3925542994bb9457130::Donna Tartt::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a79e3925542994bb9457130::Simone Elkeles::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79e3925542994bb9457130::Arthur Hailey",
+        "5a79e3925542994bb9457130::Donna Tartt"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79e3925542994bb9457130::Arthur Hailey::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79e3925542994bb9457130::The Departure (album)::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79e3925542994bb9457130::Arthur Hailey::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a79e3925542994bb9457130::Donna Tartt::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a79e3925542994bb9457130::Simone Elkeles::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a79e3925542994bb9457130::Simone Elkeles::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Simone Elkeles (born April 24, 1970), is an American author known for the teen romance Perfect Chemistry Trilogy and How To Ruin Trilogy.\n[2] Donna Tartt (born December 23, 1963) is an American writer, the author of the novels \"The Secret History\" (1992), \"The Little Friend\" (2002), and \"The Goldfinch\" (2013).\n[3] His meticulously-researched books, which include such best sellers as \"Hotel\" (1965), \"Airport\" (1968), \"Wheels\" (1971), \"The Moneychangers\" (1975), and \"Overload\" (1979), have sold 170 million copies in 38 languages.\n[4] Two more tracks from \"The Departure,\" \"Coming Down\" and \"I Don't Wanna Think About That,\" also went on to become Amazon Best Sellers."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

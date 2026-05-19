@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Clydesdales",
+  "pred_answer": "Clydesdales",
+  "normalized_gold": "clydesdales",
+  "normalized_pred": "clydesdales",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a72bc1e5542994cef4bc3e8",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a72bc1e5542994cef4bc3e8::Budweiser Clydesdales::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a72bc1e5542994cef4bc3e8::Clydesdale horse::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a72bc1e5542994cef4bc3e8::Horse Grenadier Guards::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a72bc1e5542994cef4bc3e8::Budweiser Clydesdales",
+        "5a72bc1e5542994cef4bc3e8::Clydesdale horse"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a72bc1e5542994cef4bc3e8::Budweiser Clydesdales::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a72bc1e5542994cef4bc3e8::Clydesdale horse::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a72bc1e5542994cef4bc3e8::Horse Grenadier Guards::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a72bc1e5542994cef4bc3e8::Horse Grenadier Guards::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Horse Grenadier Guards, usually referred to \"Horse Grenadiers\" were a series of cavalry troops in the British Household Cavalry between 1687 and 1788, who used grenades and other explosives in battle.\n[2] The Budweiser Clydesdales are some of the most famous Clydesdales, and other members of the breed are used as drum horses by the British Household Cavalry.\n[3] The Budweiser Clydesdales are a group of Clydesdale horses used for promotions and commercials by the Anheuser-Busch Brewing Company."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

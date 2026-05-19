@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "M.I.A.",
+  "pred_answer": "M.I.A.",
+  "normalized_gold": "mia",
+  "normalized_pred": "mia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab59d95554299488d4d99fc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab59d95554299488d4d99fc::M.I.A. (rapper)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab59d95554299488d4d99fc::Never Be Your Woman::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab59d95554299488d4d99fc::Kali Arulpragasam::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab59d95554299488d4d99fc::Kidrobot::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab59d95554299488d4d99fc::M.I.A. (rapper)",
+        "5ab59d95554299488d4d99fc::Kali Arulpragasam"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab59d95554299488d4d99fc::M.I.A. (rapper)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab59d95554299488d4d99fc::Never Be Your Woman::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab59d95554299488d4d99fc::Kali Arulpragasam::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab59d95554299488d4d99fc::Kidrobot::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab59d95554299488d4d99fc::Kidrobot::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Kidrobot is a producer and retailer of designer toys, vinyl art toys and collectibles founded in 2002 by Paul Budnitz, specializing in artist-created toys and imports from Japan, Hong Kong, and Europe.\n[2] Kali Arulpragasam is a jewelry designer and artist based in London, UK.\n[3] \"Never Be Your Woman\" is a song recorded by British record producer Naughty Boy, featuring lead vocals from British rapper Wiley and British singer and songwriter Emeli Sandé.\n[4] Mathangi \"Maya\" Arulpragasam (born 18 July 1975), better known by her stage name M.I.A., is a British rapper, singer-songwriter, record producer, and activist."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

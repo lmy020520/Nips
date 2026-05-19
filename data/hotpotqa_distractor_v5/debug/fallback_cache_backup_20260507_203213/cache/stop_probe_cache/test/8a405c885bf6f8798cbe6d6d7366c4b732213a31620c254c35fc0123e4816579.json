@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Kansas City",
+  "pred_answer": "Kansas City",
+  "normalized_gold": "kansas city",
+  "normalized_pred": "kansas city",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2f6b8554299677310265f",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2f6b8554299677310265f::Henry W. Bloch School of Management::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2f6b8554299677310265f::American Tax Funding::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2f6b8554299677310265f::Nicholas Peroff::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2f6b8554299677310265f::H&amp;R Block::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac2f6b8554299677310265f::Henry W. Bloch School of Management::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2f6b8554299677310265f::Henry W. Bloch School of Management",
+        "5ac2f6b8554299677310265f::H&amp;R Block"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2f6b8554299677310265f::Henry W. Bloch School of Management::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2f6b8554299677310265f::American Tax Funding::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2f6b8554299677310265f::Nicholas Peroff::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2f6b8554299677310265f::H&amp;R Block::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac2f6b8554299677310265f::Henry W. Bloch School of Management::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2f6b8554299677310265f::Henry W. Bloch School of Management::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Henry W. Bloch School of Management (formerly known as Henry W. Bloch School of Business and Public Administration) is an AACSB accredited business school founded in 1952 at the University of Missouri-Kansas City in Kansas City, Missouri.\n[2] H&R Block is an American tax preparation company in North America, Australia, and India.\n[3] Nicholas C. Peroff (born May 19, 1944) is an American political scientist, public administrator and professor in Native American studies and Complexity Theory at the Henry W. Bloch School of Management at the University of Missouri-Kansas City, he formerly held teaching positions in Taiwan, South Korea and South Africa.\n[4] American Tax Funding (ATF) is a private company based in Jupiter, Florida that engages in the purchasing and servicing of delinquent municipal real estate tax lien sales."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

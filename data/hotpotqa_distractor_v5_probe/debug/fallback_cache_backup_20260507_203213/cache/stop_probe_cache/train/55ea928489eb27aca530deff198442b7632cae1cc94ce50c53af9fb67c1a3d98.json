@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "United States National Guard",
+  "pred_answer": "United States National Guard",
+  "normalized_gold": "united states national guard",
+  "normalized_pred": "united states national guard",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac078c25542996f0d89cbeb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac078c25542996f0d89cbeb::Ohio Army National Guard::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac078c25542996f0d89cbeb::Montana Army National Guard::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac078c25542996f0d89cbeb::Montana National Guard::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac078c25542996f0d89cbeb::Illinois Army National Guard::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac078c25542996f0d89cbeb::Montana Army National Guard",
+        "5ac078c25542996f0d89cbeb::Montana National Guard"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac078c25542996f0d89cbeb::Ohio Army National Guard::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac078c25542996f0d89cbeb::Montana Army National Guard::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac078c25542996f0d89cbeb::Montana National Guard::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac078c25542996f0d89cbeb::Illinois Army National Guard::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac078c25542996f0d89cbeb::Illinois Army National Guard::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Illinois Army National Guard is a component of the United States Army and the United States National Guard.\n[2] The Montana National Guard consists of the Montana Army National Guard, and the Montana Air National Guard.\n[3] The Montana Army National Guard is a component of the United States Army and the United States National Guard.\n[4] The Ohio Army National Guard is a part of the Ohio National Guard and the Army National Guard of the United States Army."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

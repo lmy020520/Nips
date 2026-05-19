@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Harrington",
+  "pred_answer": "Harrington",
+  "normalized_gold": "harrington",
+  "normalized_pred": "harrington",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8e5007554299068b959e85",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8e5007554299068b959e85::Harrington, Maine::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8e5007554299068b959e85::Gallison Memorial Library::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8e5007554299068b959e85::Kent Free Library::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8e5007554299068b959e85::Harrington, Maine",
+        "5a8e5007554299068b959e85::Gallison Memorial Library"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8e5007554299068b959e85::Harrington, Maine::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8e5007554299068b959e85::Gallison Memorial Library::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8e5007554299068b959e85::Kent Free Library::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8e5007554299068b959e85::Kent Free Library::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Kent Free Library is a public Carnegie library located in Kent, Ohio, United States.\n[2] Gallison Memorial Library is the public library of Harrington, Maine.\n[3] Harrington is a town in Washington County, Maine, United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

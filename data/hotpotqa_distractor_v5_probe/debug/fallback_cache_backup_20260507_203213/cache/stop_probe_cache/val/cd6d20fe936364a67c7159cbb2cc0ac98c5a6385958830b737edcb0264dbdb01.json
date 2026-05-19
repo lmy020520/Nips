@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Old Speckled Hen",
+  "pred_answer": "Old Speckled Hen",
+  "normalized_gold": "old speckled hen",
+  "normalized_pred": "old speckled hen",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade1a7555429975fa854e49",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade1a7555429975fa854e49::Old Speckled Hen::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade1a7555429975fa854e49::Morland Brewery::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade1a7555429975fa854e49::MG Cars::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade1a7555429975fa854e49::Old Speckled Hen",
+        "5ade1a7555429975fa854e49::Morland Brewery"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade1a7555429975fa854e49::Old Speckled Hen::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade1a7555429975fa854e49::Morland Brewery::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade1a7555429975fa854e49::MG Cars::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade1a7555429975fa854e49::MG Cars::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] MG, the initials of Morris Garages, is an English automotive marque registered by the now defunct MG Car Company Limited, a British sports car manufacturer begun in the 1920s as a sales promotion sideline within W R Morris's Oxford city retail sales and service business by the business's manager, Cecil Kimber.\n[2] Morland was a British brewery which was bought by Greene King in 2000.\n[3] Old Speckled Hen was first brewed in 1979 in Abingdon, Oxfordshire, to commemorate the 50th anniversary of the MG car factory there on the 30th November 1979."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Do You Want to Know a Secret?",
+  "pred_answer": "Do You Want to Know a Secret?",
+  "normalized_gold": "do you want to know a secret",
+  "normalized_pred": "do you want to know a secret",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7da37c5542990b8f5039e2",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7da37c5542990b8f5039e2::Thank You Girl::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7da37c5542990b8f5039e2::Everybody Is a Star::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7da37c5542990b8f5039e2::Thank You Girl::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7da37c5542990b8f5039e2::Do You Want to Know a Secret::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7da37c5542990b8f5039e2::We Invented the Remix::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7da37c5542990b8f5039e2::Thank You Girl",
+        "5a7da37c5542990b8f5039e2::Do You Want to Know a Secret"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7da37c5542990b8f5039e2::Thank You Girl::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7da37c5542990b8f5039e2::Everybody Is a Star::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7da37c5542990b8f5039e2::Thank You Girl::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7da37c5542990b8f5039e2::Do You Want to Know a Secret::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7da37c5542990b8f5039e2::We Invented the Remix::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7da37c5542990b8f5039e2::We Invented the Remix::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The album featured the hit singles \"I Need a Girl (Part 1)\", which reached number 2 in the U.S., and \"I Need a Girl (Part 2)\", which reached number 4, a rare occurrence of both parts of the same song both becoming big hits.\n[2] In the United States, it was the first top ten song to feature Harrison as a lead singer, reaching No. 2 on the Billboard chart in 1964 as a single released by Vee-Jay, VJ 587.\n[3] As the B-side of the single \"Do You Want to Know a Secret\", it hit No. 35 on the \"Billboard\" Hot 100 in the spring of 1964.\n[4] The song, released as the b-side to the band's 1970 single \"Thank You (Falettinme Be Mice Elf Agin)\", reached number one on the \"Billboard\" Hot 100 in February 1970 at a time when chart position for both sides of the single were measured equally and not independently."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

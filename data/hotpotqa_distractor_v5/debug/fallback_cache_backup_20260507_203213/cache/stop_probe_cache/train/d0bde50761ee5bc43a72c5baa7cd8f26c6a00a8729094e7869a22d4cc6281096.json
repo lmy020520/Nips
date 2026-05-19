@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"Lo, How a Rose E'er Blooming\"",
+  "pred_answer": "\"Lo, How a Rose E'er Blooming\"",
+  "normalized_gold": "lo how a rose eer blooming",
+  "normalized_pred": "lo how a rose eer blooming",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2cfcb554299545a2cfa9d",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2cfcb554299545a2cfa9d::Jan Jan::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2cfcb554299545a2cfa9d::Jeppe: The Cruel Comedy::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2cfcb554299545a2cfa9d::Es ist ein Ros entsprungen::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab2cfcb554299545a2cfa9d::Jan Sandström (composer)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab2cfcb554299545a2cfa9d::Motorbike Odyssey::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2cfcb554299545a2cfa9d::Es ist ein Ros entsprungen",
+        "5ab2cfcb554299545a2cfa9d::Jan Sandström (composer)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2cfcb554299545a2cfa9d::Jan Jan::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2cfcb554299545a2cfa9d::Jeppe: The Cruel Comedy::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2cfcb554299545a2cfa9d::Es ist ein Ros entsprungen::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab2cfcb554299545a2cfa9d::Jan Sandström (composer)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab2cfcb554299545a2cfa9d::Motorbike Odyssey::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2cfcb554299545a2cfa9d::Motorbike Odyssey::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The concerto for solo tenor trombone and large orchestra, written in 1989, is sometimes called Motorbike Concerto.\n[2] His compositions include the so-called \"Motorbike Concerto\" for trombone and orchestra and his choral setting of \"Es ist ein Ros entsprungen\".\n[3] Es ist ein Ros entsprungen (lit., \"A rose has sprung up\"), most commonly translated in English as \"Lo, How a Rose E'er Blooming\", and sometimes appearing as \"A Spotless Rose\", is a Christmas carol and Marian Hymn of German origin, of varying length and translation, that has its roots in an unknown author prior to the 17th century.\n[4] Fellbom translated his libretto into English and directed the first English language production at the Indiana University Bloomington School of Music in February 2003, where Sandström is on the faculty."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

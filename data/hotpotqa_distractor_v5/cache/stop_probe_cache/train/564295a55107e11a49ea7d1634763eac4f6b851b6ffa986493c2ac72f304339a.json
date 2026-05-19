@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "SUNY",
+  "pred_answer": "SUNY",
+  "normalized_gold": "suny",
+  "normalized_pred": "suny",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2fbcb554299166977416f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2fbcb554299166977416f::PSTV (SUNY Plattsburgh)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2fbcb554299166977416f::Plattsburgh State Art Museum::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2fbcb554299166977416f::Plattsburgh (city), New York::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab2fbcb554299166977416f::WCFE-TV::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2fbcb554299166977416f::PSTV (SUNY Plattsburgh)",
+        "5ab2fbcb554299166977416f::Plattsburgh (city), New York"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2fbcb554299166977416f::PSTV (SUNY Plattsburgh)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2fbcb554299166977416f::Plattsburgh State Art Museum::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2fbcb554299166977416f::Plattsburgh (city), New York::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab2fbcb554299166977416f::WCFE-TV::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2fbcb554299166977416f::WCFE-TV::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] WCFE-TV is a Public Broadcasting Service (PBS) member television station licensed to Plattsburgh, New York, United States.\n[2] Plattsburgh is a city in and the seat of Clinton County, New York, United States.\n[3] The Plattsburgh State Art Museum is part of The State University of New York at Plattsburgh in Plattsburgh, New York.\n[4] Plattsburgh State Television, known as PSTV, is a Student television station on the campus of SUNY Plattsburgh in Plattsburgh, New York."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "special correspondent",
+  "pred_answer": "special correspondent",
+  "normalized_gold": "special correspondent",
+  "normalized_pred": "special correspondent",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8afeac55429971feec45d9",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8afeac55429971feec45d9::Tom Degnan::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8afeac55429971feec45d9::Amira Masood::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8afeac55429971feec45d9::Chelsea Clinton::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8afeac55429971feec45d9::Eaglevale Partners::3"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8afeac55429971feec45d9::Tom Degnan::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8afeac55429971feec45d9::Chelsea Clinton",
+        "5a8afeac55429971feec45d9::Eaglevale Partners"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8afeac55429971feec45d9::Tom Degnan::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8afeac55429971feec45d9::Amira Masood::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8afeac55429971feec45d9::Chelsea Clinton::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8afeac55429971feec45d9::Eaglevale Partners::3",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8afeac55429971feec45d9::Tom Degnan::6",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8afeac55429971feec45d9::Tom Degnan::6",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] In 2013 he played the role of Chris Van Helsing in the made-for-TV movie \"Gothica\" and played the role of Matt in the 2014 made-for-TV movie \"Tin Man\".\n[2] The firm was managing $330 million at the time, and new investors were expected to invest a minimum of $2 million.\n[3] She was a special correspondent for NBC News from 2011 to 2014 and now works with the Clinton Foundation and Clinton Global Initiative.\n[4] The girlfriend, and later wife, of Syed Masood (Marc Elliott), Amira first appeared on screen in the episode broadcast on 7 May 2009."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

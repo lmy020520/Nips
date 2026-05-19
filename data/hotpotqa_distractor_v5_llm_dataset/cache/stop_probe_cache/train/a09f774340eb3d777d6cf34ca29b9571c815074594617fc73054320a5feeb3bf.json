@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Curiosity Company",
+  "pred_answer": "The Curiosity Company",
+  "normalized_gold": "the curiosity company",
+  "normalized_pred": "the curiosity company",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0a37455429945ae9593dc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0a37455429945ae9593dc::The Curiosity Company::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0a37455429945ae9593dc::List of The Simpsons video games::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0a37455429945ae9593dc::Olive, the Other Reindeer::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0a37455429945ae9593dc::Los Angeles Reader::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0a37455429945ae9593dc::The Curiosity Company",
+        "5ae0a37455429945ae9593dc::Olive, the Other Reindeer"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0a37455429945ae9593dc::The Curiosity Company::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0a37455429945ae9593dc::List of The Simpsons video games::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0a37455429945ae9593dc::Olive, the Other Reindeer::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0a37455429945ae9593dc::Los Angeles Reader::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0a37455429945ae9593dc::Los Angeles Reader::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is famous for being the first newspaper to publish Matt Groening's cartoon strip, Life in Hell on April 25, 1980.\n[2] The feature was produced by Matt Groening's The Curiosity Company (best known for \"Futurama\"), and animated by DNA Productions.\n[3] \"The Simpsons\" is an American animated television sitcom created by Matt Groening for the Fox Broadcasting Company.\n[4] The company logo depicts the letter \"C\" being formed by a surfboard reflection against various ocean waves, alongside distorted water sounds."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

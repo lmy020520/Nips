@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ministry of European Integration",
+  "pred_answer": "Ministry of European Integration",
+  "normalized_gold": "ministry of european integration",
+  "normalized_pred": "ministry of european integration",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3aa3655429939154138a2",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3aa3655429939154138a2::Klara Buda::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3aa3655429939154138a2::Association to Unite the Democracies::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3aa3655429939154138a2::Ministry of European Integration (Albania)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3aa3655429939154138a2::Accession of Albania to the European Union::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac3aa3655429939154138a2::Association to Unite the Democracies::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3aa3655429939154138a2::Ministry of European Integration (Albania)",
+        "5ac3aa3655429939154138a2::Accession of Albania to the European Union"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3aa3655429939154138a2::Klara Buda::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3aa3655429939154138a2::Association to Unite the Democracies::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3aa3655429939154138a2::Ministry of European Integration (Albania)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3aa3655429939154138a2::Accession of Albania to the European Union::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac3aa3655429939154138a2::Association to Unite the Democracies::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3aa3655429939154138a2::Association to Unite the Democracies::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Association to Unite the Democracies (AUD), is an organization seeking closer cooperation and integration among the world's democratic states.\n[2] The Republic of Albania is an official candidate for accession to the European Union since June 2014.\n[3] The Ministry of European Integration () was a department of the Cabinet of Albania, responsible for integration of the Albania into the European Union.\n[4] It is currently the sponsor of the Mayme and Herb Frank Scholarship Program funded by the Frank Educational Trust, offering financial assistance for graduate research on international integration and global federalism."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

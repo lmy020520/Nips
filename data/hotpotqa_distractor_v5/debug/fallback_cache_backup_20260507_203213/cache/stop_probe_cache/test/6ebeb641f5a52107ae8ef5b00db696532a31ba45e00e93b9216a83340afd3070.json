@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bury, Greater Manchester, England",
+  "pred_answer": "Bury, Greater Manchester, England",
+  "normalized_gold": "bury greater manchester england",
+  "normalized_pred": "bury greater manchester england",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adff34555429942ec259baa",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adff34555429942ec259baa::Bobby Noble (footballer, born 1949)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adff34555429942ec259baa::Aldeburgh Lifeboat Station::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adff34555429942ec259baa::Bury F.C.::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adff34555429942ec259baa::Romani people official football team::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adff34555429942ec259baa::Bobby Noble (footballer, born 1949)",
+        "5adff34555429942ec259baa::Bury F.C."
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adff34555429942ec259baa::Bobby Noble (footballer, born 1949)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adff34555429942ec259baa::Aldeburgh Lifeboat Station::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adff34555429942ec259baa::Bury F.C.::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adff34555429942ec259baa::Romani people official football team::7",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adff34555429942ec259baa::Romani people official football team::7",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The football club is working in collaboration with the international activist Dijana Pavlovic, a Romani actress with a Serbian passport living in Milan.\n[2] Bury Football Club is a professional association football club based in Bury, Greater Manchester, England.\n[3] the lifeboat station evolved from the Suffolk Shipwreck Association station in 1851 which was originally in Sizewell and there has been a lifeboat here since that date.\n[4] Robert \"Bobby\" Noble (25 May 1949 – May 2005), born in Gosforth, Newcastle upon Tyne, was an English professional footballer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

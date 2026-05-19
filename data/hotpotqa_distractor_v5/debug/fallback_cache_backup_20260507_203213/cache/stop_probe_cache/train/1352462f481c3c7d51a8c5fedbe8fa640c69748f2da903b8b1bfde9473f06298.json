@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "John Spencer, 1st Earl Spencer",
+  "pred_answer": "John Spencer, 1st Earl Spencer",
+  "normalized_gold": "john spencer 1st earl spencer",
+  "normalized_pred": "john spencer 1st earl spencer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a834c7a55429966c78a6b76",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a834c7a55429966c78a6b76::Earl Spencer (peerage)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a834c7a55429966c78a6b76::Robert Spencer, 4th Earl of Sunderland::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a834c7a55429966c78a6b76::John Spencer, 1st Earl Spencer::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a834c7a55429966c78a6b76::Henrietta Ponsonby, Countess of Bessborough::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a834c7a55429966c78a6b76::Earl Spencer (peerage)",
+        "5a834c7a55429966c78a6b76::John Spencer, 1st Earl Spencer"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a834c7a55429966c78a6b76::Earl Spencer (peerage)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a834c7a55429966c78a6b76::Robert Spencer, 4th Earl of Sunderland::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a834c7a55429966c78a6b76::John Spencer, 1st Earl Spencer::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a834c7a55429966c78a6b76::Henrietta Ponsonby, Countess of Bessborough::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a834c7a55429966c78a6b76::Henrietta Ponsonby, Countess of Bessborough::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Her father, John Spencer, 1st Earl Spencer, was a great-grandson of John Churchill, 1st Duke of Marlborough.\n[2] John Spencer, 1st Earl Spencer (19 December 1734 – 31 October 1783) was a British peer and politician.\n[3] Robert Spencer, 4th Earl of Sunderland (24 October 1701 – 15 September 1729) was a British peer from the Spencer family, the son of the Whig politician, Charles Spencer, 3rd Earl of Sunderland.\n[4] He was a member of the prominent Spencer family and a great-grandson of the 1st Duke of Marlborough."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

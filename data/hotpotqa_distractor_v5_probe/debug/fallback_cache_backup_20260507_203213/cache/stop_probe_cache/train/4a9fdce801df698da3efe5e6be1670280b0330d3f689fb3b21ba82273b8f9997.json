@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "South Sandwich Islands",
+  "pred_answer": "South Sandwich Islands",
+  "normalized_gold": "south sandwich islands",
+  "normalized_pred": "south sandwich islands",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab3284655429976abd1bc70",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab3284655429976abd1bc70::Helmet Steel Airborne Troop::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab3284655429976abd1bc70::RAC helmet::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab3284655429976abd1bc70::Falklands War::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab3284655429976abd1bc70::Helmet Steel Airborne Troop::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab3284655429976abd1bc70::Helmet Steel Airborne Troop",
+        "5ab3284655429976abd1bc70::Falklands War"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab3284655429976abd1bc70::Helmet Steel Airborne Troop::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab3284655429976abd1bc70::RAC helmet::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab3284655429976abd1bc70::Falklands War::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab3284655429976abd1bc70::Helmet Steel Airborne Troop::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab3284655429976abd1bc70::Helmet Steel Airborne Troop::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Helmet Steel Airborne Troop is a paratrooper helmet of British origin worn by Paratroopers and Airborne forces.\n[2] The Falklands War (Spanish: \"Guerra de las Malvinas\" ), also known as the Falklands Conflict, Falklands Crisis, South Atlantic Conflict, and the \"Guerra del Atlántico Sur\" (Spanish for \"South Atlantic War\"), was a ten-week war between Argentina and the United Kingdom over two British overseas territories in the South Atlantic: the Falkland Islands, and South Georgia and the South Sandwich Islands.\n[3] It was introduced in WW2 and was issued to commonwealth countries in the post-1945 era up to the Falklands War.\n[4] It was introduced in Second World War and was issued to Commonwealth countries in the post-1945 era up to the Falklands War."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

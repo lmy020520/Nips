@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "lake",
+  "pred_answer": "lake",
+  "normalized_gold": "lake",
+  "normalized_pred": "lake",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a83113655429966c78a6b20",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a83113655429966c78a6b20::Lake Tritriva::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a83113655429966c78a6b20::Test No. 6::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a83113655429966c78a6b20::Lop Nur::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a83113655429966c78a6b20::Hami–Lop Nur Railway::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a83113655429966c78a6b20::Lake Tritriva",
+        "5a83113655429966c78a6b20::Lop Nur"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a83113655429966c78a6b20::Lake Tritriva::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a83113655429966c78a6b20::Test No. 6::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a83113655429966c78a6b20::Lop Nur::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a83113655429966c78a6b20::Hami–Lop Nur Railway::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a83113655429966c78a6b20::Hami–Lop Nur Railway::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Hami–Lop Nur Railway or Haluo Railway (), is a railway in the eastern part of the Xinjiang Uyghur Autonomous Region of China between Hami and Lop Nur.\n[2] Lop Nur or Lop Nor (from a Mongolian name meaning \"Lop Lake\") is a former salt lake in China, now largely dried-up, located between the Taklamakan and Kumtag deserts in the southeastern portion of Xinjiang Uygur Autonomous Region in the People's Republic of China.\n[3] The device was detonated at Lop Nur Test Base, or often dubbed as Lop Nur Nuclear Weapon Test Base, in Malan, Xinjiang, on 17 June 1967.\n[4] Lake Tritriva is a volcanic lake in southwest-central Madagascar, in the region of Vàkinankàratra, located near the village of Belazao."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

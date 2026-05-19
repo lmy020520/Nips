@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Corey \"Big Hoss\" Harrison",
+  "pred_answer": "Corey \"Big Hoss\" Harrison",
+  "normalized_gold": "corey big hoss harrison",
+  "normalized_pred": "corey big hoss harrison",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a710baf5542994082a3e50c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a710baf5542994082a3e50c::List of Pawn Stars episodes::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a710baf5542994082a3e50c::Cowtown Guitars::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a710baf5542994082a3e50c::Corey Harrison::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a710baf5542994082a3e50c::Pawn Stars::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a710baf5542994082a3e50c::Rick Harrison::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a710baf5542994082a3e50c::Corey Harrison",
+        "5a710baf5542994082a3e50c::Pawn Stars"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a710baf5542994082a3e50c::List of Pawn Stars episodes::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a710baf5542994082a3e50c::Cowtown Guitars::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a710baf5542994082a3e50c::Corey Harrison::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a710baf5542994082a3e50c::Pawn Stars::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a710baf5542994082a3e50c::Rick Harrison::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a710baf5542994082a3e50c::Rick Harrison::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Richard Kevin \"Rick the Spotter\" Harrison (born March 22, 1965) is an American, Las Vegas-based businessman and reality television personality, best known as the co-owner of the World Famous Gold & Silver Pawn Shop, as featured on the History series \"Pawn Stars\".\n[2] The series is filmed in Las Vegas, Nevada, where it chronicles the daily activities at the World Famous Gold & Silver Pawn Shop, a 24-hour family business opened in 1989 and operated by patriarch Richard \"Old Man\" Harrison, his son Rick Harrison, Rick's son Corey \"Big Hoss\" Harrison, and Corey's childhood friend, Austin \"Chumlee\" Russell.\n[3] Richard Corey \"Big Hoss\" Harrison (born April 27, 1983) is an American businessman and reality television personality, known as a cast member of the History TV series \"Pawn Stars\", which documents his work at the World Famous Gold & Silver Pawn Shop in Las Vegas, which he co-owns with his father, Rick Harrison, and grandfather, Richard Benjamin Harrison.\n[4] Owner Jesse Amoroso has appeared several times as the vintage guitar expert on the History Channel's hit reality television series Pawn Stars."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

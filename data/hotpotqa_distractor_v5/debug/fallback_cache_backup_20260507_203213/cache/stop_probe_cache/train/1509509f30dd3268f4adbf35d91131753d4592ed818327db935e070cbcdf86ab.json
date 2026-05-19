@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Guelphs and Ghibellines",
+  "pred_answer": "The Guelphs and Ghibellines",
+  "normalized_gold": "the guelphs and ghibellines",
+  "normalized_pred": "the guelphs and ghibellines",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b4363554299042af8f735",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b4363554299042af8f735::Guelphs and Ghibellines::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b4363554299042af8f735::Concordat of Worms::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b4363554299042af8f735::Alberico da Romano::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7b4363554299042af8f735::Antipope Clement III::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b4363554299042af8f735::Guelphs and Ghibellines",
+        "5a7b4363554299042af8f735::Alberico da Romano"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b4363554299042af8f735::Guelphs and Ghibellines::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b4363554299042af8f735::Concordat of Worms::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b4363554299042af8f735::Alberico da Romano::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7b4363554299042af8f735::Antipope Clement III::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b4363554299042af8f735::Antipope Clement III::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Gregory was felt by many to have gone too far when he excommunicated the Holy Roman Emperor Henry IV and supported a rival claimant as emperor, and in 1080 the pro-imperial Synod of Brixen pronounced that Gregory was deposed and replaced as pope by Guibert.\n[2] Alberico da Romano (1196 – 26 August 1260), called Alberico II, was an Italian condottiero, troubadour, and an alternatingly Guelph and Ghibelline statesman.\n[3] The Concordat of Worms (Latin: \"Concordatum Wormatiense\" ), sometimes called the Pactum Calixtinum by papal historians, was an agreement between Pope Calixtus II and Holy Roman Emperor Henry V on September 23, 1122, near the city of Worms.\n[4] The Guelphs and Ghibellines ( ; , also , ; Italian: \"guelfi e ghibellini\" ] ) were factions supporting the Pope and the Holy Roman Emperor, respectively, in the Italian city-states of central and northern Italy."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

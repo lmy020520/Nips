@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1977",
+  "pred_answer": "1977",
+  "normalized_gold": "1977",
+  "normalized_pred": "1977",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b2c6055429931da12ca14",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b2c6055429931da12ca14::Ken Barlow::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b2c6055429931da12ca14::John Black (Days of Our Lives)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b2c6055429931da12ca14::Justin Hartley::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7b2c6055429931da12ca14::Fox Crane::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7b2c6055429931da12ca14::Victoria Newman::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b2c6055429931da12ca14::Justin Hartley",
+        "5a7b2c6055429931da12ca14::Fox Crane"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b2c6055429931da12ca14::Ken Barlow::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b2c6055429931da12ca14::John Black (Days of Our Lives)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b2c6055429931da12ca14::Justin Hartley::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7b2c6055429931da12ca14::Fox Crane::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7b2c6055429931da12ca14::Victoria Newman::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b2c6055429931da12ca14::Victoria Newman::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Victoria Newman is a fictional character from \"The Young and the Restless\", an American soap opera on the CBS network.\n[2] Fox Crane is a fictional character on the NBC/DirecTV soap opera \"Passions\" and was portrayed by Justin Hartley from December 17, 2002—February 10, 2006, and Mark Cameron Wystrach from February 14, 2006—September 7, 2007.\n[3] Justin Scott Hartley (born January 29, 1977) is an American actor.\n[4] John Black is a fictional character from \"Days of Our Lives\", an American soap opera on the NBC network."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

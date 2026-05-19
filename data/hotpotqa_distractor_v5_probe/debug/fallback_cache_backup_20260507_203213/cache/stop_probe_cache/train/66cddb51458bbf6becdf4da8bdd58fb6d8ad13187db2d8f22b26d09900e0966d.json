@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Central Africa",
+  "pred_answer": "Central Africa",
+  "normalized_gold": "central africa",
+  "normalized_pred": "central africa",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a88ef38554299206df2b3c0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a88ef38554299206df2b3c0::Anglo-Portuguese Treaty of 1891::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a88ef38554299206df2b3c0::Orchestre Stukas::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a88ef38554299206df2b3c0::Zaire::4"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a88ef38554299206df2b3c0::Orchestre Symphonique Kimbanguiste::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a88ef38554299206df2b3c0::Orchestre Stukas",
+        "5a88ef38554299206df2b3c0::Zaire"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a88ef38554299206df2b3c0::Anglo-Portuguese Treaty of 1891::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a88ef38554299206df2b3c0::Orchestre Stukas::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a88ef38554299206df2b3c0::Zaire::4",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a88ef38554299206df2b3c0::Orchestre Symphonique Kimbanguiste::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a88ef38554299206df2b3c0::Orchestre Symphonique Kimbanguiste::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Orchestre Symphonique Kimbanguiste (OSK), or Kimbanguist Symphony Orchestra, is a Congolese orchestra based in Kinshasa, Democratic Republic of the Congo.\n[2] The period is sometimes referred to as the Second Congolese Republic.\n[3] The Orchestre Stukas (also referred to as the Stukas Boys, the Stukas or the Stukas of Zaire) was a congolese soukous band of the 1970s.\n[4] This treaty brought to an end over 20 years of increasing disagreement over conflicting territorial claims in the eastern part of Central Africa, where Portugal has long-standing claims based on prior discovery and exploration but where British citizens set up missions and embryonic trading concerns in the Shire Highlands in what is now Malawi from the 1860s."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

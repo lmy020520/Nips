@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Columbus, Ohio",
+  "pred_answer": "Columbus, Ohio",
+  "normalized_gold": "columbus ohio",
+  "normalized_pred": "columbus ohio",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81ba3455429903bc27b9b5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81ba3455429903bc27b9b5::While You Loved Me::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81ba3455429903bc27b9b5::Think (About It)::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81ba3455429903bc27b9b5::Rascal Flatts::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81ba3455429903bc27b9b5::I Loved Her First (song)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81ba3455429903bc27b9b5::While You Loved Me",
+        "5a81ba3455429903bc27b9b5::Rascal Flatts"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81ba3455429903bc27b9b5::While You Loved Me::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81ba3455429903bc27b9b5::Think (About It)::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81ba3455429903bc27b9b5::Rascal Flatts::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a81ba3455429903bc27b9b5::I Loved Her First (song)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a81ba3455429903bc27b9b5::I Loved Her First (song)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"I Loved Her First\" is a debut song recorded by American country music band Heartland.\n[2] Rascal Flatts is an American country music trio formed in Columbus, Ohio in 1999.\n[3] In the closing lyrics, Collins sings lines from Think, which shows that this song was one of the few adaptations of the 5 Royales song that Brown loved to do.\n[4] \"While You Loved Me\" is a song written by Kim Williams, Danny Wells and Marty Dodson, and recorded by American country music group Rascal Flatts."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

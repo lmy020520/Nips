@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Astronomy and Astrophysics Decadal Survey",
+  "pred_answer": "Astronomy and Astrophysics Decadal Survey",
+  "normalized_gold": "astronomy and astrophysics decadal survey",
+  "normalized_pred": "astronomy and astrophysics decadal survey",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abb05f25542996cc5e49f4e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abb05f25542996cc5e49f4e::Wide Field Infrared Survey Telescope::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abb05f25542996cc5e49f4e::VISTA (telescope)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abb05f25542996cc5e49f4e::Astronomy and Astrophysics Decadal Survey::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abb05f25542996cc5e49f4e::David Spergel::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abb05f25542996cc5e49f4e::Wide Field Infrared Survey Telescope",
+        "5abb05f25542996cc5e49f4e::Astronomy and Astrophysics Decadal Survey"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abb05f25542996cc5e49f4e::Wide Field Infrared Survey Telescope::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abb05f25542996cc5e49f4e::VISTA (telescope)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abb05f25542996cc5e49f4e::Astronomy and Astrophysics Decadal Survey::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abb05f25542996cc5e49f4e::David Spergel::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abb05f25542996cc5e49f4e::David Spergel::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Spergel is playing a leading role in developing the WFIRST(Wide Field Infrared Space Telescope), a multibillion-dollar space mission planned for launch in the mid-2020s.\n[2] The Astronomy and Astrophysics Decadal Survey is a review of astronomy and astrophysics literature produced approximately every ten years by the National Research Council of the National Academy of Sciences in the United States.\n[3] The VISTA (Visible and Infrared Survey Telescope for Astronomy) is a wide-field reflecting telescope with a 4.1 metre mirror, located at the Paranal Observatory in Chile.\n[4] The Wide Field Infrared Survey Telescope (WFIRST) is a future infrared space observatory that was recommended in 2010 by United States National Research Council Decadal Survey committee as the top priority for the next decade of astronomy."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

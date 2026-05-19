@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "singer",
+  "pred_answer": "singer",
+  "normalized_gold": "singer",
+  "normalized_pred": "singer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5aba38f4554299232ef4a282",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5aba38f4554299232ef4a282::Stuart Murdoch (musician)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5aba38f4554299232ef4a282::Difford &amp; Tilbrook (album)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5aba38f4554299232ef4a282::Glenn Tilbrook::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5aba38f4554299232ef4a282::The Incomplete Glenn Tilbrook::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5aba38f4554299232ef4a282::Stuart Murdoch (musician)",
+        "5aba38f4554299232ef4a282::Glenn Tilbrook"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5aba38f4554299232ef4a282::Stuart Murdoch (musician)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5aba38f4554299232ef4a282::Difford &amp; Tilbrook (album)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5aba38f4554299232ef4a282::Glenn Tilbrook::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5aba38f4554299232ef4a282::The Incomplete Glenn Tilbrook::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5aba38f4554299232ef4a282::The Incomplete Glenn Tilbrook::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Incomplete Glenn Tilbrook (2001) was the first solo release by lead singer of Squeeze Glenn Tilbrook.\n[2] Glenn Martin Tilbrook (born 31 August 1957) is the lead singer and guitarist of the English band Squeeze, a band formed in the mid-1970s who broke through in the new wave era at the decade's end.\n[3] Chris Difford and Glenn Tilbrook were the main songwriters in the new wave band Squeeze until their 1982 breakup.\n[4] Stuart Lee Murdoch (born 25 August 1968) is a Scottish musician, writer and filmmaker, and the lead singer and songwriter for the indie pop band Belle and Sebastian."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

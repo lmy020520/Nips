@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"Flurb\"",
+  "pred_answer": "\"Flurb\"",
+  "normalized_gold": "flurb",
+  "normalized_pred": "flurb",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab56a9e554299494045efba",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab56a9e554299494045efba::Rudy Rucker::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab56a9e554299494045efba::Flurb::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab56a9e554299494045efba::The Fourth Dimension (book)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab56a9e554299494045efba::The Other Side of Here::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab56a9e554299494045efba::Rudy Rucker",
+        "5ab56a9e554299494045efba::The Fourth Dimension (book)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab56a9e554299494045efba::Rudy Rucker::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab56a9e554299494045efba::Flurb::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab56a9e554299494045efba::The Fourth Dimension (book)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab56a9e554299494045efba::The Other Side of Here::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab56a9e554299494045efba::The Other Side of Here::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Other Side of Here is an early science fiction novel by Murray Leinster, first published as a five-part \"Astounding Stories\" serial in 1936, under the title \"The Incredible Invasion\".\n[2] The Fourth Dimension is a non-fiction work written by Rudy Rucker, the Silicon Valley professor of mathematics and computer science, and was published in 1984 by Houghton Mifflin.\n[3] Flurb was an American science fiction webzine, edited by author Rudy Rucker and launched in August 2006.\n[4] The author of both fiction and non-fiction, he is best known for the novels in the Ware Tetralogy, the first two of which (\"Software\" and \"Wetware\") both won Philip K. Dick Awards. Until its closure in 2014 he edited the science fiction webzine \"Flurb\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

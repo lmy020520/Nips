@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "University of Leipzig",
+  "pred_answer": "University of Leipzig",
+  "normalized_gold": "university of leipzig",
+  "normalized_pred": "university of leipzig",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8afc0f55429971feec45c5",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8afc0f55429971feec45c5::Robert Sutherland::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8afc0f55429971feec45c5::Suffolk University Law School::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8afc0f55429971feec45c5::Concertos for Four Violins (Telemann)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8afc0f55429971feec45c5::Georg Philipp Telemann::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8afc0f55429971feec45c5::Patrick Henry Nelson II::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8afc0f55429971feec45c5::Concertos for Four Violins (Telemann)",
+        "5a8afc0f55429971feec45c5::Georg Philipp Telemann"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8afc0f55429971feec45c5::Robert Sutherland::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8afc0f55429971feec45c5::Suffolk University Law School::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8afc0f55429971feec45c5::Concertos for Four Violins (Telemann)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8afc0f55429971feec45c5::Georg Philipp Telemann::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8afc0f55429971feec45c5::Patrick Henry Nelson II::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8afc0f55429971feec45c5::Patrick Henry Nelson II::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] After attending The University of the South Nelson went to study law with Judge Joseph B. Kershaw in Camden, S.C. in 1875.\n[2] After studying in Magdeburg, Zellerfeld, and Hildesheim, Telemann entered the University of Leipzig to study law, but eventually settled on a career in music.\n[3] Georg Philipp Telemann's Concertos for Four Violins (TWV 40:201–204; original title: \"Concertos à 4 Violini Concertati\") is a set of four concertos for four violins without continuo.\n[4] Suffolk University Law School was founded in 1906 by Gleason Archer, Sr. to provide a legal education for those who traditionally lacked the opportunity to study law because of socio-economic or racial discrimination."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "director",
+  "pred_answer": "director",
+  "normalized_gold": "director",
+  "normalized_pred": "director",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a80e55a55429938b614223c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a80e55a55429938b614223c::Angela Murray Gibson::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a80e55a55429938b614223c::Jean-Jacques Beineix::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a80e55a55429938b614223c::Cinéma du look::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a80e55a55429938b614223c::Angela Murray Gibson",
+        "5a80e55a55429938b614223c::Jean-Jacques Beineix"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a80e55a55429938b614223c::Angela Murray Gibson::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a80e55a55429938b614223c::Jean-Jacques Beineix::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a80e55a55429938b614223c::Cinéma du look::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a80e55a55429938b614223c::Cinéma du look::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Cinéma du look (] ) was a French film movement of the 1980s, analysed, for the first time, by French critic Raphaël Bassan in \"La Revue du Cinéma\" issue n° 448, May 1989, in which he classified Luc Besson, Jean-Jacques Beineix and Leos Carax as directors of \"le look\".\n[2] Jean-Jacques Beineix (] ; born 8 October 1946) is a French film director and generally seen as the best example of what came to be called the \"cinéma du look\".\n[3] Angela Murray Gibson (June 29, 1878 – October 22, 1953) was a writer, director, actress, and the first newsreel camerawoman."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

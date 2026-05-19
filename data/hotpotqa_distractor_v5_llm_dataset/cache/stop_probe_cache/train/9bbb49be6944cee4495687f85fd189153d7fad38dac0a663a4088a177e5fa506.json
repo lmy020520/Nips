@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Tokyo",
+  "pred_answer": "Tokyo",
+  "normalized_gold": "tokyo",
+  "normalized_pred": "tokyo",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2e4655542991a06ce98f1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2e4655542991a06ce98f1::Japan Economic Foundation::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2e4655542991a06ce98f1::Nippon Animation::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2e4655542991a06ce98f1::Ginza::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae2e4655542991a06ce98f1::Atelier (TV series)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2e4655542991a06ce98f1::Japan Economic Foundation",
+        "5ae2e4655542991a06ce98f1::Ginza"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2e4655542991a06ce98f1::Japan Economic Foundation::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2e4655542991a06ce98f1::Nippon Animation::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2e4655542991a06ce98f1::Ginza::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae2e4655542991a06ce98f1::Atelier (TV series)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2e4655542991a06ce98f1::Atelier (TV series)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is a coming of age drama set in a small high-class lingerie design house called Emotion, which is based in Tokyo's Ginza district.\n[2] Ginza (銀座 ) is a district of Chūō, Tokyo, located south of Yaesu and Kyōbashi, west of Tsukiji, east of Yūrakuchō and Uchisaiwaichō, and north of Shinbashi.\n[3] The company is headquartered in Tokyo, with chief offices in the Ginza district of Chūō and production facilities in Tama City.\n[4] The Japan Economic Foundation (JEF, 国際経済交流財団 \"Kokusai Keizai Kōryū Zaidan\") is an organization which describes itself as promoting economic and technological exchanges between Japan and other countries."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

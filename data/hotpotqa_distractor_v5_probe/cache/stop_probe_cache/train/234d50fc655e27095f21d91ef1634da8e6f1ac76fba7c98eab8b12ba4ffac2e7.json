@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Enrico Cocozza",
+  "pred_answer": "Enrico Cocozza",
+  "normalized_gold": "enrico cocozza",
+  "normalized_pred": "enrico cocozza",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8663485542996432c571c3",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8663485542996432c571c3::Enrico Cocozza::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8663485542996432c571c3::Silent film::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8663485542996432c571c3::Enrico Cocozza::4"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8663485542996432c571c3::Robert F. Hill::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8663485542996432c571c3::Robert F. Kennedy Journalism Award::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8663485542996432c571c3::Enrico Cocozza",
+        "5a8663485542996432c571c3::Robert F. Hill"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8663485542996432c571c3::Enrico Cocozza::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8663485542996432c571c3::Silent film::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8663485542996432c571c3::Enrico Cocozza::4",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8663485542996432c571c3::Robert F. Hill::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8663485542996432c571c3::Robert F. Kennedy Journalism Award::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8663485542996432c571c3::Robert F. Kennedy Journalism Award::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Robert F. Kennedy Awards for Excellence in Journalism is a journalism award named after Robert F. Kennedy and awarded by the Robert F. Kennedy Center for Justice and Human Rights.\n[2] Robert F. Hill (April 14, 1886 – March 18, 1966) was a Canadian film director, screenwriter, and actor during the silent film era.\n[3] In 2001 he was the subject of the Channel 4 documentary \"Artery: the Story of Enrico Cocozza\".\n[4] The silent film era lasted from 1895 to 1936."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

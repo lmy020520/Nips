@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Chelsea Lately",
+  "pred_answer": "Chelsea Lately",
+  "normalized_gold": "chelsea lately",
+  "normalized_pred": "chelsea lately",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abce3ed55429959677d6b16",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abce3ed55429959677d6b16::The Late Late Show with Craig Ferguson::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abce3ed55429959677d6b16::Talkshow with Spike Feresten::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abce3ed55429959677d6b16::Chelsea Handler::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abce3ed55429959677d6b16::Fun Size::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abce3ed55429959677d6b16::Fun Size Comics::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abce3ed55429959677d6b16::Chelsea Handler",
+        "5abce3ed55429959677d6b16::Fun Size"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abce3ed55429959677d6b16::The Late Late Show with Craig Ferguson::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abce3ed55429959677d6b16::Talkshow with Spike Feresten::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abce3ed55429959677d6b16::Chelsea Handler::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abce3ed55429959677d6b16::Fun Size::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abce3ed55429959677d6b16::Fun Size Comics::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abce3ed55429959677d6b16::Fun Size Comics::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The \"Fun Size Beano\" and \"Fun Size Dandy\" were small-format, full-colour children's comics, originally published four times monthly by DC Thomson and Co. Ltd between 1997 and 2010.\n[2] Fun Size (known as Half Pint in some countries) is a 2012 American teen black comedy film written by Max Werner and directed by Josh Schwartz.\n[3] She hosted the late-night talk show \"Chelsea Lately\" on the E! network from 2007 to 2014, and released a documentary series, \"Chelsea Does\", on Netflix in January 2016.\n[4] Talkshow with Spike Feresten is an American late-night talk show television program on Fox starring Spike Feresten that aired from September 16, 2006 to May 16, 2009."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

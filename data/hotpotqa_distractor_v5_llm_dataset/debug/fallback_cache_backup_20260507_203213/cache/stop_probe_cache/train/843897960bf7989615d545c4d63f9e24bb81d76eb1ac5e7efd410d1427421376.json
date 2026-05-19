@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Skimo",
+  "pred_answer": "Skimo",
+  "normalized_gold": "skimo",
+  "normalized_pred": "skimo",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b866d5542997c3ec971f3",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b866d5542997c3ec971f3::Skimo::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b866d5542997c3ec971f3::Isa TKM::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b866d5542997c3ec971f3::Reinaldo Zavarce::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b866d5542997c3ec971f3::Skimo",
+        "5a7b866d5542997c3ec971f3::Isa TKM"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b866d5542997c3ec971f3::Skimo::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b866d5542997c3ec971f3::Isa TKM::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b866d5542997c3ec971f3::Reinaldo Zavarce::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b866d5542997c3ec971f3::Reinaldo Zavarce::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] His film credits include the popular romantic comedy “Dia Naranja,” but he is perhaps best known for his starring role as Alex in the hit Nickelodeon Latin America /Sony Pictures Television teen drama series \"Isa TKM\".\n[2] Isa TKM (Isa Te Quiero Mucho) is an original telenovela-like teen program from Nickelodeon Latin America in co-production with Sony Pictures Television, Made in Venezuela being the second from three Latin American Nickelodeon programs (The first one was Skimo from Mexico and the third one being \"La maga y el camino dorado\", made in Argentina).\n[3] It is produced by Nickelodeon Latin America and Macias Group International."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

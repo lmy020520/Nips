@@ -1,0 +1,30 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for a person who played for a football club based in Leeds, West Yorkshire. The state summary mentions two clubs: Yorkshire Amateur and Leeds United. The top raw candidates provide geographic context but no player names. A bridge note can connect the clubs to the location, and a verification note can confirm the clubs' bases.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Yorkshire Amateur Association Football Club is based in Leeds, West Yorkshire, England.",
+      "source_unit_ids": [
+        "5a825626554299676cceb274::West Yorkshire Urban Area::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "Leeds United Football Club is a professional club based in Leeds, West Yorkshire, England.",
+      "source_unit_ids": [
+        "5a825626554299676cceb274::Leeds City Region::0"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "The West Yorkshire Urban Area includes Leeds, confirming the location of the clubs.",
+      "source_unit_ids": [
+        "5a825626554299676cceb274::West Yorkshire Urban Area::0"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

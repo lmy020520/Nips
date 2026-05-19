@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Rotterdam, Netherlands",
+  "pred_answer": "Rotterdam, Netherlands",
+  "normalized_gold": "rotterdam netherlands",
+  "normalized_pred": "rotterdam netherlands",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe479455429976d4830ad8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe479455429976d4830ad8::Des Bremner::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe479455429976d4830ad8::List of Aston Villa F.C. managers::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe479455429976d4830ad8::1982 European Cup Final::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe479455429976d4830ad8::1982 Intercontinental Cup::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe479455429976d4830ad8::Des Bremner",
+        "5abe479455429976d4830ad8::1982 European Cup Final"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe479455429976d4830ad8::Des Bremner::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe479455429976d4830ad8::List of Aston Villa F.C. managers::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe479455429976d4830ad8::1982 European Cup Final::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe479455429976d4830ad8::1982 Intercontinental Cup::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe479455429976d4830ad8::1982 Intercontinental Cup::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 1982 Intercontinental Cup was a football match played on 12 December 1982 between Peñarol, winners of the 1982 Copa Libertadores, and Aston Villa, winners of the 1981–82 European Cup.\n[2] English champions Aston Villa defeated West German league winners Bayern Munich 1–0 at De Kuip in Rotterdam, Netherlands to win the European Cup for the first, and so far, only time, and continue the streak of English teams winning the competition, being the sixth consecutive victory by an English side.\n[3] This chronological list of managers of Aston Villa Football Club comprises all those who have held the position of secretary or manager of the first team of Aston Villa since the formation of the club in 1874.\n[4] He made more than 600 league appearances for clubs in both Scotland and England, was a member of Aston Villa's European Cup-winning team of 1982, and was capped for the Scotland national team."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

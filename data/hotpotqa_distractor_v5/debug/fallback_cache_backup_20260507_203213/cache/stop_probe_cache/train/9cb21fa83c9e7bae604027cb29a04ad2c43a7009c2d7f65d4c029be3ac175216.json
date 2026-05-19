@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jenna Bush Hager",
+  "pred_answer": "Jenna Bush Hager",
+  "normalized_gold": "jenna bush hager",
+  "normalized_pred": "jenna bush hager",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7719505542993569682cba",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7719505542993569682cba::Jenna Bush Hager::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7719505542993569682cba::Steven Eisenberg::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7719505542993569682cba::Presidency of Benigno Aquino III::9"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7719505542993569682cba::Jenna Bush Hager",
+        "5a7719505542993569682cba::Steven Eisenberg"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7719505542993569682cba::Jenna Bush Hager::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7719505542993569682cba::Steven Eisenberg::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7719505542993569682cba::Presidency of Benigno Aquino III::9",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7719505542993569682cba::Presidency of Benigno Aquino III::9",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Aquino is the second president to be a child of a former president, his mother was former President Corazon Aquino; the first president to be a child of a former president was President Gloria Macapagal-Arroyo, who is the daughter of former President Diosdado Macapagal.\n[2] His songwriting was featured on NBC's \"The Today Show\" with Jenna Bush Hager as well as on HLN with Michaela Pereira.\n[3] She is the younger of the fraternal twin daughters of the 43rd U.S. President George W. Bush and former First Lady Laura Bush, and a granddaughter of the 41st U.S. President George H. W. Bush and former First Lady Barbara Bush."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

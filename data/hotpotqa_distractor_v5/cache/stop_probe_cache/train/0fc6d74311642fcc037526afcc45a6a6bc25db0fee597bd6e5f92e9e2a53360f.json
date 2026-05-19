@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Wong Fei-hung",
+  "pred_answer": "Wong Fei-hung",
+  "normalized_gold": "wong fei-hung",
+  "normalized_pred": "wong fei-hung",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab5cbe0554299637185c619",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab5cbe0554299637185c619::Last Hero in China::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab5cbe0554299637185c619::Christian Slater::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab5cbe0554299637185c619::Vincent Zhao::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab5cbe0554299637185c619::True Legend::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab5cbe0554299637185c619::Last Hero in China::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab5cbe0554299637185c619::Vincent Zhao",
+        "5ab5cbe0554299637185c619::True Legend"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab5cbe0554299637185c619::Last Hero in China::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab5cbe0554299637185c619::Christian Slater::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab5cbe0554299637185c619::Vincent Zhao::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab5cbe0554299637185c619::True Legend::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab5cbe0554299637185c619::Last Hero in China::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab5cbe0554299637185c619::Last Hero in China::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The film starred Jet Li as Chinese folk hero Wong Fei-hung and the action choreography was done by Yuen Woo-ping.\n[2] True Legend is a 2010 Chinese martial arts film directed by Yuen Woo-ping, starring Vincent Zhao, Zhou Xun, Jay Chou, Michelle Yeoh, Andy On, David Carradine, Guo Xiaodong, Feng Xiaogang, Cung Le, Gordon Liu, Bryan Leung and Jacky Heung.\n[3] Zhao is best known for playing the Chinese folk hero Wong Fei-hung in the \"Once Upon a Time in China\" film and television series.\n[4] He made his film debut with a leading role in the 1985 film \"The Legend of Billie Jean\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

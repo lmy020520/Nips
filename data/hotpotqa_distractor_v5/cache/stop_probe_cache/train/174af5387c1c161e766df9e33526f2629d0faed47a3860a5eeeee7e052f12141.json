@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the Neris River",
+  "pred_answer": "the Neris River",
+  "normalized_gold": "the neris river",
+  "normalized_pred": "the neris river",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8ef82a5542997ba9cb3158",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8ef82a5542997ba9cb3158::Battle of Vilnius (1655)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8ef82a5542997ba9cb3158::Vilnius Castle Complex::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8ef82a5542997ba9cb3158::Kalnai Park::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8ef82a5542997ba9cb3158::Battle of Vilnius (1655)",
+        "5a8ef82a5542997ba9cb3158::Vilnius Castle Complex"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8ef82a5542997ba9cb3158::Battle of Vilnius (1655)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8ef82a5542997ba9cb3158::Vilnius Castle Complex::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8ef82a5542997ba9cb3158::Kalnai Park::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8ef82a5542997ba9cb3158::Kalnai Park::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Kalnai Park (Lithuanian: \"Kalnų parkas\" , literally: \"Park of Hills\") is a 24.5 ha park between the left bank of the Neris River and right bank of the Vilnia River in Vilnius, Lithuania.\n[2] The Vilnius Castle Complex (Lithuanian: \"Vilniaus pilių kompleksas\" or \"Vilniaus pilys\" ) is a group of cultural, and historic structures on the left bank of the Neris River, near its confluence with the Vilnia River, in Vilnius, Lithuania.\n[3] It was the first time that a foreign power managed to capture the Vilnius Castle Complex."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

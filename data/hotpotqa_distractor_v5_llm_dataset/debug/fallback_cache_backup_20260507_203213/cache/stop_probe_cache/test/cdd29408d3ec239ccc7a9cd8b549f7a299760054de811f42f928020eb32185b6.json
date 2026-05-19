@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Detroit, Michigan",
+  "pred_answer": "Detroit, Michigan",
+  "normalized_gold": "detroit michigan",
+  "normalized_pred": "detroit michigan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84de5f5542991dd0999e07",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84de5f5542991dd0999e07::Jackson mayoral election, 2017::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84de5f5542991dd0999e07::Chokwe Lumumba::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84de5f5542991dd0999e07::Chokwe Lumumba::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84de5f5542991dd0999e07::Jackson mayoral election, 2017",
+        "5a84de5f5542991dd0999e07::Chokwe Lumumba"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84de5f5542991dd0999e07::Jackson mayoral election, 2017::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84de5f5542991dd0999e07::Chokwe Lumumba::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84de5f5542991dd0999e07::Chokwe Lumumba::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84de5f5542991dd0999e07::Chokwe Lumumba::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He was born in Detroit, Michigan, as Edwin Finley Taliaferro, and was raised there, attending local schools.\n[2] In 2013, after serving on the City Council, he was elected as Mayor of Jackson, Mississippi.\n[3] Chokwe Antar Lumumba, son of late former mayor Chokwe Lumumba was elected mayor in a landslide in the general election after defeating eight other candidates, including incumbent mayor Tony Yarber in the primary."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

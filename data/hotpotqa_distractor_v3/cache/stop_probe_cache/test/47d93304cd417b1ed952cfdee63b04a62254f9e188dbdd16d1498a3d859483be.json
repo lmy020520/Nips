@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "EPA",
+  "pred_answer": "Environmental Protection Agency",
+  "normalized_gold": "epa",
+  "normalized_pred": "environmental protection agency",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": true,
+  "support_rule": "explicit_answer_in_evidence",
+  "support_evidence_summary": "The selected chunks explicitly state that Michael J. Hunter replaced Scott Pruitt as Attorney General of Oklahoma, and that Scott Pruitt was confirmed as the Administrator of the Environmental Protection Agency (EPA). The pred_answer 'Environmental Protection Agency' matches the gold answer 'EPA' as they refer to the same agency.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "explicit_answer_in_evidence",
+    "support_evidence_summary": "The selected chunks explicitly state that Michael J. Hunter replaced Scott Pruitt as Attorney General of Oklahoma, and that Scott Pruitt was confirmed as the Administrator of the Environmental Protection Agency (EPA). The pred_answer 'Environmental Protection Agency' matches the gold answer 'EPA' as they refer to the same agency.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac44629554299194317395d",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac44629554299194317395d::Michael J. Hunter::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac44629554299194317395d::Catherine McCabe::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac44629554299194317395d::Scott Pruitt::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac44629554299194317395d::Michael J. Hunter::4",
+        "5ac44629554299194317395d::Scott Pruitt"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac44629554299194317395d::Michael J. Hunter::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac44629554299194317395d::Catherine McCabe::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac44629554299194317395d::Scott Pruitt::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac44629554299194317395d::Scott Pruitt::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Nominated for the position by President Donald Trump, Pruitt was confirmed by the United States Senate to lead the EPA on February 17, 2017.\n[2] Catherine McCabe is a public administrator and environmental lawyer who served as Acting Administrator of the Environmental Protection Agency from January to Fe\n[3] On February 20, 2017, Hunter was appointed Attorney General of Oklahoma, replacing Scott Pruitt who was confirmed as the Administrator of the Environmental Prot"
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

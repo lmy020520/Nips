@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1980",
+  "pred_answer": "1980",
+  "normalized_gold": "1980",
+  "normalized_pred": "1980",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae261465542994d89d5b400",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae261465542994d89d5b400::Remixes 81–04::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae261465542994d89d5b400::The Singles 86–98::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae261465542994d89d5b400::Depeche Mode::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae261465542994d89d5b400::Remixes 2: 81–11::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae261465542994d89d5b400::Remixes 81–04",
+        "5ae261465542994d89d5b400::Depeche Mode"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae261465542994d89d5b400::Remixes 81–04::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae261465542994d89d5b400::The Singles 86–98::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae261465542994d89d5b400::Depeche Mode::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae261465542994d89d5b400::Remixes 2: 81–11::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae261465542994d89d5b400::Remixes 2: 81–11::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Remixes 2: 81–11 is a remix compilation album by English electronic music band Depeche Mode, released on 6 June 2011 by Mute Records.\n[2] Depeche Mode are an English electronic band that formed in Basildon, Essex in 1980.\n[3] It serves as a follow-up to the band's previous compilation, \"The Singles 81→85\", which was also reissued in the same year.\n[4] Remixes 81–04 is an album by English electronic music band Depeche Mode, released on 25 October 2004."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

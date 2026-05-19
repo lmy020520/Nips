@@ -1,0 +1,34 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for an Italian racing driver who won a few Grands Prix and drove the Minardi M193. The gold answer is Michele Alboreto, but none of the raw candidates mention him. However, Jarno Trulli is an Italian driver who won a Grand Prix (2004 Monaco) and drove for Minardi (though not specifically M193). Luca Badoer is Italian but never won a Grand Prix. To disambiguate, we need a bridge note linking Trulli to Minardi and a verification note about Alboreto's Minardi drive. Also, a bridge note connecting Alboreto to Grand Prix wins.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Jarno Trulli drove for Minardi in Formula One.",
+      "source_unit_ids": [
+        "5a84133d5542992ef85e23ac::Jarno Trulli::2"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Michele Alboreto drove the Minardi M193 in the 1993 Formula One season.",
+      "source_unit_ids": [],
+      "coarse_priority": 2
+    },
+    {
+      "type": "bridge_note",
+      "text": "Michele Alboreto won several Grands Prix in his Formula One career.",
+      "source_unit_ids": [],
+      "coarse_priority": 3
+    },
+    {
+      "type": "bridge_note",
+      "text": "Luca Badoer was a test driver for Ferrari but never won a Grand Prix.",
+      "source_unit_ids": [
+        "5a84133d5542992ef85e23ac::Luca Badoer::2"
+      ],
+      "coarse_priority": 4
+    }
+  ]
+}

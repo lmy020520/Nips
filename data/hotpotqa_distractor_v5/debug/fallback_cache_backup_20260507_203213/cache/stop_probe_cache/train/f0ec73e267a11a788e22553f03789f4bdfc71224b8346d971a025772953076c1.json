@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "nitrogen or carbon dioxide pressure",
+  "pred_answer": "nitrogen or carbon dioxide pressure",
+  "normalized_gold": "nitrogen or carbon dioxide pressure",
+  "normalized_pred": "nitrogen or carbon dioxide pressure",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae6b14a5542992ae0d1638d",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae6b14a5542992ae0d1638d::Bragdy Nant::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae6b14a5542992ae0d1638d::Cask ale::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae6b14a5542992ae0d1638d::Damage mechanics::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae6b14a5542992ae0d1638d::Bragdy Nant",
+        "5ae6b14a5542992ae0d1638d::Cask ale"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae6b14a5542992ae0d1638d::Bragdy Nant::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae6b14a5542992ae0d1638d::Cask ale::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae6b14a5542992ae0d1638d::Damage mechanics::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae6b14a5542992ae0d1638d::Damage mechanics::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Damage mechanics is concerned with the representation, or modeling, of damage of materials that is suitable for making engineering predictions about the initiation, propagation, and fracture of materials without resorting to a microscopic description that would be too complex for practical engineering analysis.\n[2] Cask ale or cask-conditioned beer is unfiltered and unpasteurised beer which is conditioned (including secondary fermentation) and served from a cask without additional nitrogen or carbon dioxide pressure.\n[3] Bragdy Nant is an ale brewery near the town of Llanrwst, North Wales."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

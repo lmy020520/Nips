@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "L. Ron Hubbard",
+  "pred_answer": "L. Ron Hubbard",
+  "normalized_gold": "l ron hubbard",
+  "normalized_pred": "l ron hubbard",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c6271554299240d9c2144",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c6271554299240d9c2144::Cynicism (contemporary)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c6271554299240d9c2144::Scientology::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c6271554299240d9c2144::Disconnection::5"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8c6271554299240d9c2144::Magical thinking::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c6271554299240d9c2144::Scientology",
+        "5a8c6271554299240d9c2144::Disconnection"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c6271554299240d9c2144::Cynicism (contemporary)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c6271554299240d9c2144::Scientology::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c6271554299240d9c2144::Disconnection::5",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8c6271554299240d9c2144::Magical thinking::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c6271554299240d9c2144::Magical thinking::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In psychology, the entities between which a causal relation has to be posited are more strictly delineated; here it denotes the belief that one's thoughts by themselves can bring about effects in the world or that thinking something corresponds with doing it.\n[2] In the United States, the Church has tried to argue in court that disconnection is a constitutionally protected religious practice.\n[3] Scientology is a body of religious beliefs and practices developed in 1954 by American author L. Ron Hubbard (1911–86).\n[4] Such miscategorization may occur as the result of either inexperience or a belief system in which the innate goodness of man is considered an important tenet or even an irrefutable fact."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

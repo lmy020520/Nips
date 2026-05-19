@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1983",
+  "pred_answer": "1983",
+  "normalized_gold": "1983",
+  "normalized_pred": "1983",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add62a35542992200553ae0",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add62a35542992200553ae0::The Trouble with Physics::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add62a35542992200553ae0::Albatross (film)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add62a35542992200553ae0::Diane Warren::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5add62a35542992200553ae0::Inescapable (song)::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5add62a35542992200553ae0::Rise (instrumental)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add62a35542992200553ae0::Diane Warren",
+        "5add62a35542992200553ae0::Inescapable (song)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add62a35542992200553ae0::The Trouble with Physics::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add62a35542992200553ae0::Albatross (film)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add62a35542992200553ae0::Diane Warren::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5add62a35542992200553ae0::Inescapable (song)::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5add62a35542992200553ae0::Rise (instrumental)::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add62a35542992200553ae0::Rise (instrumental)::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It reached number one on the U.S. \"Billboard\" Hot 100 in October of that year and remained in the top position for two weeks.\n[2] \"Inescapable\" was sent to Australian contemporary hit radio on 4 July 2011, and was released for digital download on 15 July 2011 as the first single from the deluxe edition of Mauboy's second studio album \"Get 'Em Girls\".\n[3] She rose to prominence in 1983, and has since written songs for and with multiple music artists, as well as for several films.\n[4] The premise revolves around a teenage aspiring writer entering the lives of a dysfunctional family living in the south coast of England. \""
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

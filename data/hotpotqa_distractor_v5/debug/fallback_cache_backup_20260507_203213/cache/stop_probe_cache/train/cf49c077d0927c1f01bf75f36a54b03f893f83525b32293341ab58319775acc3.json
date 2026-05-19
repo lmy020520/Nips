@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1954",
+  "pred_answer": "1954",
+  "normalized_gold": "1954",
+  "normalized_pred": "1954",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85fada5542996432c57157",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85fada5542996432c57157::Jonathan B. Postel Service Award::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85fada5542996432c57157::James Matheson (composer)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85fada5542996432c57157::Charles Ives::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85fada5542996432c57157::HMS Curlew (1812)::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85fada5542996432c57157::James Matheson (composer)",
+        "5a85fada5542996432c57157::Charles Ives"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85fada5542996432c57157::Jonathan B. Postel Service Award::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85fada5542996432c57157::James Matheson (composer)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85fada5542996432c57157::Charles Ives::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85fada5542996432c57157::HMS Curlew (1812)::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85fada5542996432c57157::HMS Curlew (1812)::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She then had a 13 or so year career as an opium runner for James Matheson, one of the founders of the firm Jardine Matheson.\n[2] Charles Edward Ives ( ; October 20, 1874May 19, 1954) was an American modernist composer.\n[3] In December 2011, he received the Charles Ives Living from the American Academy of Arts and Letters, an award providing him with $100,000 for two years (2012-2014).\n[4] The award has been presented every year since 1999 by the Internet Society to \"honor a person who has made outstanding contributions in service to the data communications community.\""
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

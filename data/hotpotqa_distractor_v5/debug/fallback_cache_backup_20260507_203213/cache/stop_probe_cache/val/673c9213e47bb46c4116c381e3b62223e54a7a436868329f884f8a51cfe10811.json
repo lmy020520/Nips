@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Pixar Animation Studios",
+  "pred_answer": "Pixar Animation Studios",
+  "normalized_gold": "pixar animation studios",
+  "normalized_pred": "pixar animation studios",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae532d355429908b632656d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae532d355429908b632656d::Sibling Rivalry (Family Guy)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae532d355429908b632656d::Wallace Shawn::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae532d355429908b632656d::Toy Story (franchise)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae532d355429908b632656d::Toy Story That Time Forgot::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae532d355429908b632656d::Wallace Shawn",
+        "5ae532d355429908b632656d::Toy Story (franchise)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae532d355429908b632656d::Sibling Rivalry (Family Guy)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae532d355429908b632656d::Wallace Shawn::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae532d355429908b632656d::Toy Story (franchise)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae532d355429908b632656d::Toy Story That Time Forgot::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae532d355429908b632656d::Toy Story That Time Forgot::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Toy Story That Time Forgot is a Christmas-themed 22-minute television special that aired on ABC on Tuesday, December 2, 2014.\n[2] Toy Story is a computer animated film series and Disney media franchise that began with the original 1995 film, \"Toy Story\", produced by Pixar Animation Studios and released by Walt Disney Pictures.\n[3] His film roles have included those of Wally Shawn in the Louis Malle-directed comedy-drama \"My Dinner with Andre\" (1981), Vizzini in \"The Princess Bride\" (1987), Ezra in \"The Haunted Mansion\", providing the voice of Rex in the \"Toy Story\" franchise, providing the voice of Gilbert Huph in \"The Incredibles\" (2004), and providing the voice of Calico in \"\" (2010).\n[4] The episode follows Stewie as he battles with his half-brother, Bertram (voiced by Wallace Shawn), who is born to two lesbians after Peter donates sperm."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

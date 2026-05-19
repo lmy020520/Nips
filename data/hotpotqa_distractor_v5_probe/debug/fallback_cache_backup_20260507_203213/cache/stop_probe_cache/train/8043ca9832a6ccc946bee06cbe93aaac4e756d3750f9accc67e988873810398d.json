@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ted Cain",
+  "pred_answer": "Ted Cain",
+  "normalized_gold": "ted cain",
+  "normalized_pred": "ted cain",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74176e5542993a88ae2f04",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74176e5542993a88ae2f04::Ted Cain::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74176e5542993a88ae2f04::Jay Cutler (American football)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74176e5542993a88ae2f04::1998 VMI Keydets football team::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74176e5542993a88ae2f04::Ted Cain",
+        "5a74176e5542993a88ae2f04::Jay Cutler (American football)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74176e5542993a88ae2f04::Ted Cain::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74176e5542993a88ae2f04::Jay Cutler (American football)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74176e5542993a88ae2f04::1998 VMI Keydets football team::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74176e5542993a88ae2f04::1998 VMI Keydets football team::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It was the Keydets' 108th year of football and second season under head coach Ted Cain, who was replaced by interim head coach Donny White after a 1–9 start.\n[2] Jay Christopher Cutler (born April 29, 1983) is an American football quarterback for the Miami Dolphins of the National Football League (NFL).\n[3] Ted Cain (born c. 1952) is a former American football coach who coached in the college football ranks for over 30 years."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

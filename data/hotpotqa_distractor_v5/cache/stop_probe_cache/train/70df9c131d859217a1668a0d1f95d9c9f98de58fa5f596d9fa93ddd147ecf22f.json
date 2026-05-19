@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "The Curtiss P-40 Warhawk",
+  "pred_answer": "Curtiss P-40 Warhawk",
+  "normalized_gold": "the curtiss p-40 warhawk",
+  "normalized_pred": "curtiss p-40 warhawk",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7127095542994082a3e5df",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7127095542994082a3e5df::Curtiss P-40 Warhawk::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7127095542994082a3e5df::Sopwith Salamander::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7127095542994082a3e5df::Don R. Berlin::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7127095542994082a3e5df::Junkers CL.I::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7127095542994082a3e5df::Curtiss P-40 Warhawk",
+        "5a7127095542994082a3e5df::Don R. Berlin"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7127095542994082a3e5df::Curtiss P-40 Warhawk::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7127095542994082a3e5df::Sopwith Salamander::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7127095542994082a3e5df::Don R. Berlin::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7127095542994082a3e5df::Junkers CL.I::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7127095542994082a3e5df::Junkers CL.I::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Like the other Junkers designs of the period, the aircraft featured a metal framework that was skinned with corrugated duralumin sheets.\n[2] Among the many designs with which he is associated, are the Curtiss P-36 Hawk, Curtiss P-40 Warhawk and Fisher P-75 Eagle.\n[3] The Sopwith TF.2 Salamander was a British ground-attack aircraft of the First World War designed by the Sopwith Aviation Company which first flew in April 1918.\n[4] The Curtiss P-40 Warhawk is an American single-engined, single-seat, all-metal fighter and ground-attack aircraft that first flew in 1938."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "5,945",
+  "pred_answer": "5,945",
+  "normalized_gold": "5945",
+  "normalized_pred": "5945",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adcd9e55542994d58a2f700",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adcd9e55542994d58a2f700::Brookhaven Rail Terminal::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adcd9e55542994d58a2f700::Yaphank, New York::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adcd9e55542994d58a2f700::Hams Hall::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adcd9e55542994d58a2f700::Brookhaven Rail Terminal",
+        "5adcd9e55542994d58a2f700::Yaphank, New York"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adcd9e55542994d58a2f700::Brookhaven Rail Terminal::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adcd9e55542994d58a2f700::Yaphank, New York::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adcd9e55542994d58a2f700::Hams Hall::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adcd9e55542994d58a2f700::Hams Hall::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] An intermodal rail terminal Hams Hall Rail Freight Terminal also operates at the site.\n[2] The population was 5,945 at the time of the 2010 census.\n[3] The Brookhaven Rail Terminal (BRT) is a truck-train trans-load facility in Yaphank, New York on Long Island."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

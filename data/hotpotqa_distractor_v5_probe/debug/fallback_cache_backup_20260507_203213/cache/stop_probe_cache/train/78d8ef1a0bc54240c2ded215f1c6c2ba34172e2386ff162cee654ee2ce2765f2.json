@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the Katanga conflict",
+  "pred_answer": "the Katanga conflict",
+  "normalized_gold": "the katanga conflict",
+  "normalized_pred": "the katanga conflict",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a83234555429954d2e2ec2f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a83234555429954d2e2ec2f::Albert Verbrugghe::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a83234555429954d2e2ec2f::2010 Kingston unrest::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a83234555429954d2e2ec2f::Siege of Jadotville::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a83234555429954d2e2ec2f::Iraqi Kurdish Civil War::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a83234555429954d2e2ec2f::Albert Verbrugghe",
+        "5a83234555429954d2e2ec2f::Siege of Jadotville"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a83234555429954d2e2ec2f::Albert Verbrugghe::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a83234555429954d2e2ec2f::2010 Kingston unrest::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a83234555429954d2e2ec2f::Siege of Jadotville::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a83234555429954d2e2ec2f::Iraqi Kurdish Civil War::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a83234555429954d2e2ec2f::Iraqi Kurdish Civil War::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Iraqi Kurdish Civil War was a military conflict that took place between rival Kurdish factions in Iraqi Kurdistan during the mid-1990s, most notably between the Patriotic Union of Kurdistan and the Kurdistan Democratic Party.\n[2] The Siege of Jadotville took place in September 1961, during the United Nations intervention in the Katanga conflict in Congo-Léopoldville, in Central Africa.\n[3] The 2010 Kingston unrest, dubbed locally as the Tivoli Incursion, was an armed conflict between the Shower Posse drug cartel and Jamaica's military and police forces in Kingston, the capital of Jamaica.\n[4] Albert Verbrugghe was a cement factory worker from Belgium whose wife Madeleine, and a female passenger, Aline Van Den Eyke, were shot and killed while driving to Jadotville in their Volkswagen by Indian UN troops during the Siege of Jadotville on Jan 3, 1963."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "male Confucian scholars called \"seonbi\"",
+  "pred_answer": "male Confucian scholars called \"seonbi\"",
+  "normalized_gold": "male confucian scholars called seonbi",
+  "normalized_pred": "male confucian scholars called seonbi",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a88fb625542993b751ca8df",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a88fb625542993b751ca8df::Ayam (cap)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a88fb625542993b751ca8df::Greco-Roman hairstyle::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a88fb625542993b751ca8df::Dopo (clothing)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a88fb625542993b751ca8df::Goryeo::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a88fb625542993b751ca8df::Ayam (cap)::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a88fb625542993b751ca8df::Dopo (clothing)",
+        "5a88fb625542993b751ca8df::Goryeo"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a88fb625542993b751ca8df::Ayam (cap)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a88fb625542993b751ca8df::Greco-Roman hairstyle::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a88fb625542993b751ca8df::Dopo (clothing)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a88fb625542993b751ca8df::Goryeo::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a88fb625542993b751ca8df::Ayam (cap)::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a88fb625542993b751ca8df::Ayam (cap)::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Especially in the western part of Korea, \"kisaeng\" (female Korean entertainers) commonly wore an \"ayam\", and they were also worn as a simple formal headgear.\n[2] Goryeo (고려 ; 高麗 ; ] ; 918–1392), also spelled as Koryŏ, was a Korean kingdom established in 918 by King Taejo.\n[3] The dopo is a variety of \"po\", or overcoat in hanbok, which was mostly worn by male Confucian scholars called \"seonbi\" during the Goryeo and Joseon period.\n[4] At a later time the Spartans abandoned this ancient custom, and wore their hair short, and hence some writers erroneously attribute this practice to an earlier period."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

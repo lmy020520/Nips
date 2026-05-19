@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Germantown",
+  "pred_answer": "Germantown",
+  "normalized_gold": "germantown",
+  "normalized_pred": "germantown",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7dd3135542990b8f503acc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7dd3135542990b8f503acc::Germantown, Maryland::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7dd3135542990b8f503acc::Clarksburg, Maryland::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7dd3135542990b8f503acc::Interstate 270 (Maryland)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7dd3135542990b8f503acc::Maryland Route 119::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7dd3135542990b8f503acc::Germantown, Maryland",
+        "5a7dd3135542990b8f503acc::Interstate 270 (Maryland)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7dd3135542990b8f503acc::Germantown, Maryland::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7dd3135542990b8f503acc::Clarksburg, Maryland::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7dd3135542990b8f503acc::Interstate 270 (Maryland)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7dd3135542990b8f503acc::Maryland Route 119::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7dd3135542990b8f503acc::Maryland Route 119::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Great Seneca Highway was planned by Montgomery County in the late 1960s as a local relief route for traffic on parallel Interstate 270 (I-270) between the three communities.\n[2] Interstate 270 (abbreviated I-270) is a 34.70 mi auxiliary Interstate Highway in the U.S. state of Maryland that travels between I-495 (the Capital Beltway) just north of Bethesda, Montgomery County and I-70 in the city of Frederick in Frederick County.\n[3] Clarksburg is a census-designated place and an unincorporated area in northern Montgomery County, Maryland, United States, located along the Interstate 270 technology corridor about 4 miles north of Germantown, Maryland.\n[4] Germantown is an urbanized census-designated place in Montgomery County, Maryland."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

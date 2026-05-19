@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The National Priorities List",
+  "pred_answer": "The National Priorities List",
+  "normalized_gold": "the national priorities list",
+  "normalized_pred": "the national priorities list",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1cb81554299234fd042fe",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1cb81554299234fd042fe::Griffiss Air Force Base::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1cb81554299234fd042fe::National Priorities List::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1cb81554299234fd042fe::Bowers Landfill::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1cb81554299234fd042fe::Griffiss Air Force Base",
+        "5ae1cb81554299234fd042fe::National Priorities List"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1cb81554299234fd042fe::Griffiss Air Force Base::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1cb81554299234fd042fe::National Priorities List::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1cb81554299234fd042fe::Bowers Landfill::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1cb81554299234fd042fe::Bowers Landfill::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Analysis of surface water undertaken by the United States Environmental Protection Agency in 1980 revealed the presence of contaminants and in 1983 the site was added to the National Priorities List (NPL) of hazardous waste sites eligible for long-term remedial action (cleanup) financed under the federal Superfund program.\n[2] The National Priorities List (NPL) is the list of hazardous waste sites in the United States eligible for long-term remedial action (cleanup) financed under the federal Superfund program.\n[3] Griffiss Air Force Base is a former United States Air Force installation, located in Rome, New York, about 15 miles (24 km) northwest of Utica in central New York state."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

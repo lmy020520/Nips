@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2003",
+  "pred_answer": "2003",
+  "normalized_gold": "2003",
+  "normalized_pred": "2003",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc1a90554299700f9d77da",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc1a90554299700f9d77da::2008 IIHF World Championship rosters::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc1a90554299700f9d77da::2008 IIHF World Championship Final::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc1a90554299700f9d77da::Brent Burns::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abc1a90554299700f9d77da::2008 IIHF World Championship rosters::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc1a90554299700f9d77da::2008 IIHF World Championship rosters",
+        "5abc1a90554299700f9d77da::Brent Burns"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc1a90554299700f9d77da::2008 IIHF World Championship rosters::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc1a90554299700f9d77da::2008 IIHF World Championship Final::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc1a90554299700f9d77da::Brent Burns::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abc1a90554299700f9d77da::2008 IIHF World Championship rosters::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc1a90554299700f9d77da::2008 IIHF World Championship rosters::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In honour of the International Ice Hockey Federation's (IIHF) 100th anniversary, the World Championship was hosted in Canada for the first time.\n[2] He was converted into a defenceman upon turning professional, after being drafted as a right wing forward (20th overall) at the 2003 NHL Entry Draft by the Minnesota Wild.\n[3] The 2008 IIHF World Championship Final was an ice hockey match that took place on 18 May 2008 at the Colisée Pepsi in Quebec City, Canada, to determine the winner of the 2008 IIHF World Championship.\n[4] Held in Quebec City and Halifax, Canada, the 2008 IIHF World Championship was the 72nd edition of the tournament."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

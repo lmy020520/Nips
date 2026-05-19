@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Turkey",
+  "pred_answer": "Turkey",
+  "normalized_gold": "turkey",
+  "normalized_pred": "turkey",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc50cd5542996e685252ff",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc50cd5542996e685252ff::Çırağan Palace::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc50cd5542996e685252ff::Bakhchisaray Palace::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc50cd5542996e685252ff::Veliefendi Race Course::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc50cd5542996e685252ff::Sabirli (horse)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc50cd5542996e685252ff::Çırağan Palace",
+        "5adc50cd5542996e685252ff::Veliefendi Race Course"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc50cd5542996e685252ff::Çırağan Palace::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc50cd5542996e685252ff::Bakhchisaray Palace::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc50cd5542996e685252ff::Veliefendi Race Course::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc50cd5542996e685252ff::Sabirli (horse)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc50cd5542996e685252ff::Sabirli (horse)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In the following season he defeated an international field to win Turkey's most valuable race, the Topkapi Trophy at Veliefendi Race Course in Istanbul.\n[2] Veliefendi Race Course (Turkish: \"Veliefendi Hipodromu\" ) is a horse racing track located at Veliefendi neighborhood in Zeytinburnu district of Istanbul, Turkey.\n[3] It is one of the best known Muslim palaces found in Europe, alongside Topkapı Palace, Dolmabahçe Palace, Yıldız Palace, Aynalıkavak Palace, Edirne Palace, Çırağan Palace in Turkey and the Alhambra in Spain.\n[4] Çırağan Palace (Turkish: \"Çırağan Sarayı\" ), a former Ottoman palace, is now a five-star hotel in the Kempinski Hotels chain."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

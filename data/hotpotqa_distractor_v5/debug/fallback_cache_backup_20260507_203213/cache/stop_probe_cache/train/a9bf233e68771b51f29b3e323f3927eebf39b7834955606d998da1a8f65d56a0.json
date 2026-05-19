@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Loud House",
+  "pred_answer": "The Loud House",
+  "normalized_gold": "the loud house",
+  "normalized_pred": "the loud house",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae246045542996483e64957",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae246045542996483e64957::Catherine Taber::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae246045542996483e64957::The Loud House::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae246045542996483e64957::List of The Loud House episodes::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae246045542996483e64957::Catherine Taber",
+        "5ae246045542996483e64957::The Loud House"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae246045542996483e64957::Catherine Taber::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae246045542996483e64957::The Loud House::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae246045542996483e64957::List of The Loud House episodes::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae246045542996483e64957::List of The Loud House episodes::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] \"The Loud House\" is an animated American comedy television series created by Chris Savino that premiered on Nickelodeon on May 2, 2016.\n[2] The Loud House is an American animated television series created by animator and comic illustrator Chris Savino for Nickelodeon.\n[3] Catherine Anne \"Cat\" Taber (born December 30, 1979) is an American actress who has appeared in films, television and video games."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

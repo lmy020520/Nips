@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Kentucky",
+  "pred_answer": "Kentucky",
+  "normalized_gold": "kentucky",
+  "normalized_pred": "kentucky",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7d346554299366779400b",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7d346554299366779400b::Harlan County War::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7d346554299366779400b::Jim Garland::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7d346554299366779400b::Battle of Evarts::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7d346554299366779400b::Harlan County War",
+        "5ab7d346554299366779400b::Jim Garland"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7d346554299366779400b::Harlan County War::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7d346554299366779400b::Jim Garland::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7d346554299366779400b::Battle of Evarts::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7d346554299366779400b::Battle of Evarts::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] In February 1931 The Harlan County Coal Co. cut wages for its employees.\n[2] Jim Garland (April 8, 1905 – September 6, 1978) was a songwriter from the coal mining country of eastern Kentucky, where he was involved with the communist-led National Miners Union (NMU) during the violent labor conflicts of the early 1930s called the Harlan County War.\n[3] The Harlan County War, or Bloody Harlan, was a series of coal mining-related skirmishes, executions, bombings, and strikes (both attempted and realized) that took place in Harlan County, Kentucky, during the 1930s."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

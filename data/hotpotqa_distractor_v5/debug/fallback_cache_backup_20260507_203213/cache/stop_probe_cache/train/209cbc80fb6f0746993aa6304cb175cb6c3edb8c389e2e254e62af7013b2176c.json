@@ -1,0 +1,85 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Coos County",
+  "pred_answer": "Coos County",
+  "normalized_gold": "coos county",
+  "normalized_pred": "coos county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7cb7655429928e1fe38ff",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7cb7655429928e1fe38ff::Gorham, New Hampshire::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7cb7655429928e1fe38ff::WEVC::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7cb7655429928e1fe38ff::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab7cb7655429928e1fe38ff::Gorham, New Hampshire::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7cb7655429928e1fe38ff::Gorham, New Hampshire",
+        "5ab7cb7655429928e1fe38ff::WEVC"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7cb7655429928e1fe38ff::Gorham, New Hampshire::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7cb7655429928e1fe38ff::WEVC::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7cb7655429928e1fe38ff::Gorham, New Hampshire::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5ab7cb7655429928e1fe38ff::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5ab7cb7655429928e1fe38ff::Gorham, New Hampshire::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Gorham is located in the White Mountains, and parts of the White Mountain National Forest are in the south and northwest.\n[2] WEVC (107.1 FM) is a radio station licensed to Gorham, New Hampshire.\n[3] Gorham is a town in Coos County, New Hampshire, United States.\n\nNotes:\n[bridge] Gorham is located in the White Mountains, and parts of the White Mountain National Forest are in the south and northwest."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Kal Ho Naa Ho",
+  "pred_answer": "Kal Ho Naa Ho",
+  "normalized_gold": "kal ho naa ho",
+  "normalized_pred": "kal ho naa ho",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac43d575542997ea680ca39",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac43d575542997ea680ca39::Ravi Khote::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac43d575542997ea680ca39::Punarjani::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac43d575542997ea680ca39::Kal Ho Naa Ho::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac43d575542997ea680ca39::Khilona (1970 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac43d575542997ea680ca39::Ravi Khote",
+        "5ac43d575542997ea680ca39::Kal Ho Naa Ho"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac43d575542997ea680ca39::Ravi Khote::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac43d575542997ea680ca39::Punarjani::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac43d575542997ea680ca39::Kal Ho Naa Ho::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac43d575542997ea680ca39::Khilona (1970 film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac43d575542997ea680ca39::Khilona (1970 film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Khilona (English: Toy ) is a 1970 Indian drama film, produced by L.V. Prasad on Prasad Productions Pvt.Ltd.\n[2] Kal Ho Naa Ho (English: \"Tomorrow May Never Come\"), abbreviated as KHNH, is a 2003 Indian romantic drama, directed by debutant director Nikkhil Advani.\n[3] Punarjani (English: \"Reincarnation\" ) is a 2003 Indian Malayalam drama film, directed by Major Ravi and Rajesh Amanakara, starring Pranav Mohanlal in the lead role.\n[4] Ravi \"Rags\" Khote is a playback singer for films in India, he is known for his raps between stanzas."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

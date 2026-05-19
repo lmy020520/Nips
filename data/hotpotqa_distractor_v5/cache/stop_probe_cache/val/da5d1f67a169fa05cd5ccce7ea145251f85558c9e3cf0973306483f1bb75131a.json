@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "15 Penn Plaza",
+  "pred_answer": "15 Penn Plaza",
+  "normalized_gold": "15 penn plaza",
+  "normalized_pred": "15 penn plaza",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab87b6655429934fafe6df5",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab87b6655429934fafe6df5::1166 Avenue of the Americas::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab87b6655429934fafe6df5::15 Penn Plaza::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab87b6655429934fafe6df5::Hotel Pennsylvania::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab87b6655429934fafe6df5::1166 Avenue of the Americas",
+        "5ab87b6655429934fafe6df5::15 Penn Plaza"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab87b6655429934fafe6df5::1166 Avenue of the Americas::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab87b6655429934fafe6df5::15 Penn Plaza::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab87b6655429934fafe6df5::Hotel Pennsylvania::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab87b6655429934fafe6df5::Hotel Pennsylvania::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Hotel Pennsylvania is a hotel located at 401 Seventh Avenue (15 Penn Plaza) in Manhattan, across the street from Pennsylvania Station and Madison Square Garden in New York City.\n[2] Despite only having 68 floors, it would be just 10 m shorter than the Empire State Building, which has 102 floors.\n[3] 1166 Avenue of the Americas (also known as the International Paper Building) is a 600 ft tall Class A office building located at 1166 Sixth Avenue in Midtown Manhattan, New York City."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

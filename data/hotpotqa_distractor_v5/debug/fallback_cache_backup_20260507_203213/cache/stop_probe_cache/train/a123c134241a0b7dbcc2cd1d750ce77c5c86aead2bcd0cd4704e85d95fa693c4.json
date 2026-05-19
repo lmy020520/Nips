@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "eight",
+  "pred_answer": "eight",
+  "normalized_gold": "eight",
+  "normalized_pred": "eight",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae682bc5542996d980e7bbc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae682bc5542996d980e7bbc::Roland Deschain::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae682bc5542996d980e7bbc::The Dark Tower V: Wolves of the Calla::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae682bc5542996d980e7bbc::The Dark Tower (series)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae682bc5542996d980e7bbc::The Dark Tower II: The Drawing of the Three::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae682bc5542996d980e7bbc::Roland Deschain",
+        "5ae682bc5542996d980e7bbc::The Dark Tower (series)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae682bc5542996d980e7bbc::Roland Deschain::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae682bc5542996d980e7bbc::The Dark Tower V: Wolves of the Calla::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae682bc5542996d980e7bbc::The Dark Tower (series)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae682bc5542996d980e7bbc::The Dark Tower II: The Drawing of the Three::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae682bc5542996d980e7bbc::The Dark Tower II: The Drawing of the Three::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Drawing of the Three is a fantasy novel by American writer Stephen King, the second book in \"The Dark Tower\" series, published by Grant in 1987.\n[2] The Dark Tower is a series of eight books written by American author Stephen King that incorporates themes from multiple genres, including dark fantasy, science fantasy, horror, and Western.\n[3] Wolves of the Calla is the fifth novel in Stephen King's \"The Dark Tower\" series.\n[4] Roland Deschain of Gilead is a fictional character and the protagonist of Stephen King's \"The Dark Tower\" series."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

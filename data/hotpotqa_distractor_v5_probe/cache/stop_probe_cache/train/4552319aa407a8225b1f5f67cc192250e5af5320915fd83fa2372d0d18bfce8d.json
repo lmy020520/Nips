@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sainsbury's",
+  "pred_answer": "Sainsbury's",
+  "normalized_gold": "sainsburys",
+  "normalized_pred": "sainsburys",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae77e2a5542997b22f6a79a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae77e2a5542997b22f6a79a::Cockney Wanker::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae77e2a5542997b22f6a79a::New Orleans Silversmiths::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae77e2a5542997b22f6a79a::Argos (retailer)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae77e2a5542997b22f6a79a::Cockney Wanker::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae77e2a5542997b22f6a79a::Cockney Wanker",
+        "5ae77e2a5542997b22f6a79a::Argos (retailer)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae77e2a5542997b22f6a79a::Cockney Wanker::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae77e2a5542997b22f6a79a::New Orleans Silversmiths::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae77e2a5542997b22f6a79a::Argos (retailer)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae77e2a5542997b22f6a79a::Cockney Wanker::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae77e2a5542997b22f6a79a::Cockney Wanker::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He wears cheap gold jewellery or Argos bling and 'Laahndan' gangster dark glasses, and is often seen smoking a cigar.\n[2] Argos is a British catalogue retailer operating in the United Kingdom and Ireland, and a subsidiary of Sainsbury's.\n[3] New Orleans Silversmiths is a jewelry and silverware retailer that specializes in both contemporary and antique gold jewelry, as well as antique holloware.\n[4] Cockney Wanker is a character created by Graham Dury and Simon Thorpe in \"Viz\" based on a stereotyped male Cockney."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

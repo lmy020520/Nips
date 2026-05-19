@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Best Supporting Actress",
+  "pred_answer": "Best Supporting Actress",
+  "normalized_gold": "best supporting actress",
+  "normalized_pred": "best supporting actress",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a80241a554299485f598574",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a80241a554299485f598574::Amy Madigan::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a80241a554299485f598574::Cousin Cousine::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a80241a554299485f598574::Uncle Buck::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a80241a554299485f598574::Splash (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a80241a554299485f598574::Amy Madigan",
+        "5a80241a554299485f598574::Uncle Buck"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a80241a554299485f598574::Amy Madigan::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a80241a554299485f598574::Cousin Cousine::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a80241a554299485f598574::Uncle Buck::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a80241a554299485f598574::Splash (film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a80241a554299485f598574::Splash (film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Splash is a 1984 American fantasy romantic comedy film directed by Ron Howard, written by Lowell Ganz and Babaloo Mandel, and starring Tom Hanks, Daryl Hannah, John Candy, and Eugene Levy.\n[2] Uncle Buck is a 1989 American comedy film directed by John Hughes and starring John Candy and Amy Madigan, with Jean Louisa Kelly, Gaby Hoffmann, Macaulay Culkin, Jay Underwood, and Laurie Metcalf in supporting roles.\n[3] \"Cousin Cousine\" received an Academy Award nomination for Best Foreign Language Film, a César Award nomination for Best Film, a Golden Globe nomination for Best Foreign Film, and the National Board of Review Award for Top Foreign Film.\n[4] She was nominated for the Academy Award for Best Supporting Actress for the 1985 film \"Twice in a Lifetime\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

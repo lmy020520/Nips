@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2008",
+  "pred_answer": "2008",
+  "normalized_gold": "2008",
+  "normalized_pred": "2008",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab8bf405542991b5579eff3",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab8bf405542991b5579eff3::Indochinese tiger::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab8bf405542991b5579eff3::Indian vulture::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab8bf405542991b5579eff3::Iriomote cat::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab8bf405542991b5579eff3::Yoshinori Imaizumi::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab8bf405542991b5579eff3::South China tiger::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab8bf405542991b5579eff3::Iriomote cat",
+        "5ab8bf405542991b5579eff3::Yoshinori Imaizumi"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab8bf405542991b5579eff3::Indochinese tiger::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab8bf405542991b5579eff3::Indian vulture::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab8bf405542991b5579eff3::Iriomote cat::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab8bf405542991b5579eff3::Yoshinori Imaizumi::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab8bf405542991b5579eff3::South China tiger::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab8bf405542991b5579eff3::South China tiger::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It has been listed as Critically Endangered on the IUCN Red List since 1996, and is possibly extinct in the wild since no wild individual has been recorded since the early 1970s.\n[2] He is known for describing the Iriomote cat in 1967.\n[3] It has been listed as critically endangered on the IUCN Red List since 2008, as the only population comprises fewer than 250 adult individuals and is considered declining.\n[4] It has been listed as Critically Endangered on the IUCN Red List since 2002, as the population severely declined."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

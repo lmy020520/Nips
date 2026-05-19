@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Michael Cimino",
+  "pred_answer": "Michael Cimino",
+  "normalized_gold": "michael cimino",
+  "normalized_pred": "michael cimino",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7ca3835542990527d554ef",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7ca3835542990527d554ef::Sexy Beast::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7ca3835542990527d554ef::Jonathan Glazer::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7ca3835542990527d554ef::Michael Cimino::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7ca3835542990527d554ef::Joseph Cotten::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7ca3835542990527d554ef::Jonathan Glazer",
+        "5a7ca3835542990527d554ef::Michael Cimino"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7ca3835542990527d554ef::Sexy Beast::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7ca3835542990527d554ef::Jonathan Glazer::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7ca3835542990527d554ef::Michael Cimino::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7ca3835542990527d554ef::Joseph Cotten::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7ca3835542990527d554ef::Joseph Cotten::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Joseph Cheshire Cotten, Jr. (May 15, 1905 – February 6, 1994) was an American film, stage, radio and television actor.\n[2] Michael Cimino ( ; February 3, 1939 – July 2, 2016) was an American film director, screenwriter, producer and author.\n[3] Jonathan Glazer (born 26 March 1965) is an English filmmaker, whose directing work includes feature films, music videos and advertisements.\n[4] Sexy Beast is a 2000 British crime film and the directorial debut of Jonathan Glazer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

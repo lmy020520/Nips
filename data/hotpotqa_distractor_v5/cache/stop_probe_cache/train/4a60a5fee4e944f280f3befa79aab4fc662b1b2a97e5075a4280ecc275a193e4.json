@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Breakfast Club",
+  "pred_answer": "The Breakfast Club",
+  "normalized_gold": "the breakfast club",
+  "normalized_pred": "the breakfast club",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4a56055429970de88d9f0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4a56055429970de88d9f0::The Breakfast Club::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4a56055429970de88d9f0::Daniel Romer::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4a56055429970de88d9f0::Judd Nelson::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4a56055429970de88d9f0::The Diary of a Teenage Girl::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4a56055429970de88d9f0::The Breakfast Club",
+        "5ae4a56055429970de88d9f0::Judd Nelson"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4a56055429970de88d9f0::The Breakfast Club::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4a56055429970de88d9f0::Daniel Romer::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4a56055429970de88d9f0::Judd Nelson::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4a56055429970de88d9f0::The Diary of a Teenage Girl::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4a56055429970de88d9f0::The Diary of a Teenage Girl::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Diary of a Teenage Girl is a 2015 American coming-of-age comedy-drama film written and directed by Marielle Heller, based on the graphic novel \"\" by Phoebe Gloeckner.\n[2] Judd Asher Nelson (born November 28, 1959) is an American actor who played John Bender in \"The Breakfast Club\", Alec Newbary in \"St. Elmo's Fire\", Hot Rod and Rodimus Prime in \"\" and \"\", Joe Hunt in Billionaire Boys Club, Nick Peretti in \"New Jack City\", Billy Beretti in \"Empire\", and Jack Richmond in \"Suddenly Susan\".\n[3] As Trumbull in Supah Ninjas Romer pays homage to the rebellious character John Bender, made famous by Judd Nelson in The Breakfast Club.\n[4] The Breakfast Club is a 1985 American coming-of-age comedy-drama film written, produced, and directed by John Hughes, starring Emilio Estevez, Paul Gleason, Anthony Michael Hall, Judd Nelson, Molly Ringwald and Ally Sheedy."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "No Exit",
+  "pred_answer": "No Exit",
+  "normalized_gold": "no exit",
+  "normalized_pred": "no exit",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a76b39c554299373536016e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a76b39c554299373536016e::Hamid Samandarian::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a76b39c554299373536016e::Mohammad Aghebati::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a76b39c554299373536016e::No Exit::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a76b39c554299373536016e::Hamid Samandarian::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a76b39c554299373536016e::Hamid Samandarian",
+        "5a76b39c554299373536016e::No Exit"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a76b39c554299373536016e::Hamid Samandarian::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a76b39c554299373536016e::Mohammad Aghebati::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a76b39c554299373536016e::No Exit::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a76b39c554299373536016e::Hamid Samandarian::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a76b39c554299373536016e::Hamid Samandarian::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He staged numerous dramas during his lifetime, including No Exit by Jean-Paul Sartre, Ghosts by Henrik Ibsen, The Glass Menagerie by Tennessee Williams and Marriage of Mr. Mississippi by Friedrich Durrenmatt.\n[2] No Exit (French: \"Huis Clos\" , ] ) is a 1944 existentialist French play by Jean-Paul Sartre.\n[3] He has staged numerous dramas during his career, including \"Oedipus the King\" by Sophocles, AKA \"Jocasta; God’s Dead Words\", \"Hamlet, The Prince of Grief\" by William Shakespeare, and \"Kiss You and Tears\" by Vaclav Havel.\n[4] Hamid Samandarian Persian: حمید سمندریان‎ ‎ ; May 6, 1931 – July 12, 2012) was an Iranian film and theater director and translator."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

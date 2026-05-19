@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Saul Bellow",
+  "pred_answer": "Saul Bellow",
+  "normalized_gold": "saul bellow",
+  "normalized_pred": "saul bellow",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7ba0db554299294a54aa37",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7ba0db554299294a54aa37::Zachary Leader::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7ba0db554299294a54aa37::Saul Bellow::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7ba0db554299294a54aa37::Siegfried Sassoon::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7ba0db554299294a54aa37::Suicide in the Trenches::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7ba0db554299294a54aa37::Saul Bellow",
+        "5a7ba0db554299294a54aa37::Siegfried Sassoon"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7ba0db554299294a54aa37::Zachary Leader::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7ba0db554299294a54aa37::Saul Bellow::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7ba0db554299294a54aa37::Siegfried Sassoon::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7ba0db554299294a54aa37::Suicide in the Trenches::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7ba0db554299294a54aa37::Suicide in the Trenches::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Sassoon was a brave and gallant upper-class officer who eventually opposed the war, but he never lost his admiration for the common soldiers who had to fight it.\n[2] Sassoon became a focal point for dissent within the armed forces when he made a lone protest against the continuation of the war in his \"Soldier's Declaration\" of 1917, culminating in his admission to a military psychiatric hospital; this resulted in his forming a friendship with Wilfred Owen, who was greatly influenced by him.\n[3] Saul Bellow (born Solomon Bellows; 10 June 1915 – 5 April 2005) was a Canadian-American writer.\n[4] The first volume of his two-volume biography of Saul Bellow, \"The Life of Saul Bellow: To Fame and Fortune, 1915-1964\", was published in May 2015 by Alfred Knopf in the US and Jonathan Cape in the UK."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

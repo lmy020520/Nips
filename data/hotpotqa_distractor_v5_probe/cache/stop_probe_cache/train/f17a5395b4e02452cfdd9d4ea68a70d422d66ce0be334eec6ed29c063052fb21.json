@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Great Movie Ride",
+  "pred_answer": "The Great Movie Ride",
+  "normalized_gold": "the great movie ride",
+  "normalized_pred": "the great movie ride",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8ae6b055429950cd6afbcd",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8ae6b055429950cd6afbcd::Sallah::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8ae6b055429950cd6afbcd::Indiana Jones::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8ae6b055429950cd6afbcd::Sallah::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8ae6b055429950cd6afbcd::Indiana Jones Adventure::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8ae6b055429950cd6afbcd::Indiana Jones and the Emperor's Tomb::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8ae6b055429950cd6afbcd::Sallah",
+        "5a8ae6b055429950cd6afbcd::Indiana Jones Adventure"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8ae6b055429950cd6afbcd::Sallah::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8ae6b055429950cd6afbcd::Indiana Jones::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8ae6b055429950cd6afbcd::Sallah::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8ae6b055429950cd6afbcd::Indiana Jones Adventure::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8ae6b055429950cd6afbcd::Indiana Jones and the Emperor's Tomb::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8ae6b055429950cd6afbcd::Indiana Jones and the Emperor's Tomb::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The game is an adventure of fictional archeologist Indiana Jones.\n[2] The Indiana Jones Adventure is an enhanced motion vehicle dark ride attraction at Disneyland and Tokyo DisneySea, based on the \"Indiana Jones\" film series.\n[3] He also appears in various comics and novels, and is featured in the Disney theme park attractions, the Indiana Jones Adventure and The Great Movie Ride.\n[4] Jones is also featured in several Disney theme parks, including the Indiana Jones Adventure, Indiana Jones et le Temple du Péril, and \"Epic Stunt Spectacular!"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

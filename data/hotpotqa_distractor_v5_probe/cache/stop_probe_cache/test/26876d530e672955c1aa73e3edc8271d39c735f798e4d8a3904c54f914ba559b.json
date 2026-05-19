@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Chloë Alexandra Adele Emily Agnew",
+  "pred_answer": "Chloë Alexandra Adele Emily Agnew",
+  "normalized_gold": "chloë alexandra adele emily agnew",
+  "normalized_pred": "chloë alexandra adele emily agnew",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a722fae55429971e9dc9343",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a722fae55429971e9dc9343::Adele King::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a722fae55429971e9dc9343::Maxi (singer)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a722fae55429971e9dc9343::Chloë Agnew::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a722fae55429971e9dc9343::Richie Kavanagh::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a722fae55429971e9dc9343::Adele King",
+        "5a722fae55429971e9dc9343::Chloë Agnew"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a722fae55429971e9dc9343::Adele King::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a722fae55429971e9dc9343::Maxi (singer)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a722fae55429971e9dc9343::Chloë Agnew::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a722fae55429971e9dc9343::Richie Kavanagh::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a722fae55429971e9dc9343::Richie Kavanagh::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Richie Kavanagh (born 19 March 1949) is an Irish entertainer who writes and performs his own songs.\n[2] Chloë Alexandra Adele Emily Agnew (born 9 June 1989 in Dublin, Ireland) is an Irish singer and songwriter who is an original former member of the Celtic music group Celtic Woman, as well as its youngest member.\n[3] She came to fame in Ireland as part of the popular girl group, Maxi, Dick and Twink, in the late 1960s.\n[4] Adèle King (born Adèle Condron-King, 4 April 1951) is an Irish entertainer better known as Twink from her time as a member of a group called Maxi, Dick and Twink which was a girl band in Ireland in the late 1960s and 1970s."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

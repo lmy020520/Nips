@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Office",
+  "pred_answer": "The Office",
+  "normalized_gold": "the office",
+  "normalized_pred": "the office",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac48aa75542997ea680ca7e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac48aa75542997ea680ca7e::Knat Scatt Private Eye::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac48aa75542997ea680ca7e::Steve Carell::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac48aa75542997ea680ca7e::Chauncey Leopardi::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac48aa75542997ea680ca7e::Knat Scatt Private Eye",
+        "5ac48aa75542997ea680ca7e::Steve Carell"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac48aa75542997ea680ca7e::Knat Scatt Private Eye::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac48aa75542997ea680ca7e::Steve Carell::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac48aa75542997ea680ca7e::Chauncey Leopardi::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac48aa75542997ea680ca7e::Chauncey Leopardi::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Chauncey Leopardi (born 1982) is an American former actor known for playing Michael \"Squints\" Palledorous in the 1993 movie \"The Sandlot\".\n[2] Carell is best known for playing Michael Scott on the American version of \"The Office\" (2005–2011), on which he also worked as an occasional writer, producer, and director.\n[3] Knat Scatt Private Eye is a two-act, 1930s-style film noir musical, which played for an extended run at The Theater Building in Chicago in 1986, featuring a young Steve Carell."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

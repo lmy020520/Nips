@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Doc Hudson",
+  "pred_answer": "Doc Hudson",
+  "normalized_gold": "doc hudson",
+  "normalized_pred": "doc hudson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adea38b55429975fa854f25",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adea38b55429975fa854f25::Doc Hudson::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adea38b55429975fa854f25::Paul Newman::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adea38b55429975fa854f25::Cars (film)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adea38b55429975fa854f25::Doc Hudson",
+        "5adea38b55429975fa854f25::Paul Newman"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adea38b55429975fa854f25::Doc Hudson::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adea38b55429975fa854f25::Paul Newman::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adea38b55429975fa854f25::Cars (film)::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adea38b55429975fa854f25::Cars (film)::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Set in a world populated entirely by anthropomorphic cars and other vehicles, the film stars the voices of Owen Wilson, Paul Newman (in his final acting role), Bonnie Hunt, Larry the Cable Guy, Tony Shalhoub, Cheech Marin, Michael Wallis, George Carlin, Paul Dooley, Jenifer Lewis, Guido Quaroni, Michael Keaton, Katherine Helmond and John Ratzenberger.\n[2] Paul Leonard Newman (January 26, 1925 – September 26, 2008) was an American actor, film director, producer, race car driver, IndyCar owner, entrepreneur, activist, and philanthropist.\n[3] Doc Hudson (\"Dr. Hudson\" or simply \"Doc\") was an animated, anthropomorphic retired race car who appears in the 2006 Pixar film \"Cars\" as a medical doctor and a local judge."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

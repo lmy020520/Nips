@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Guanajuato",
+  "pred_answer": "Guanajuato",
+  "normalized_gold": "guanajuato",
+  "normalized_pred": "guanajuato",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a736bd855429901807db041",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a736bd855429901807db041::Belmond Casa de Sierra Nevada::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a736bd855429901807db041::Sierra Nevada National Park (Spain)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a736bd855429901807db041::San Miguel de Allende::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a736bd855429901807db041::Sierra Nevada de Lagunas Bravas::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a736bd855429901807db041::Belmond Casa de Sierra Nevada",
+        "5a736bd855429901807db041::San Miguel de Allende"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a736bd855429901807db041::Belmond Casa de Sierra Nevada::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a736bd855429901807db041::Sierra Nevada National Park (Spain)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a736bd855429901807db041::San Miguel de Allende::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a736bd855429901807db041::Sierra Nevada de Lagunas Bravas::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a736bd855429901807db041::Sierra Nevada de Lagunas Bravas::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Sierra Nevada, also known as Sierra Nevada de Lagunas Bravas, is a major ignimbrite-lava dome complex which lies in both Chile and Argentina in one of the most remote parts of the Central Andes.\n[2] San Miguel de Allende (] ) is a city and municipality located in the far eastern part of the state of Guanajuato in central Mexico.\n[3] The Parque Nacional de Sierra Nevada (known as the Sierra Nevada National Park in English) is a national park located in the provinces of Granada, Almería, and Málaga in Andalusia, Spain.\n[4] Belmond Casa de Sierra Nevada is a hotel in the UNESCO World Heritage Site town of San Miguel de Allende in Central Mexico, 167 miles from Mexico City."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

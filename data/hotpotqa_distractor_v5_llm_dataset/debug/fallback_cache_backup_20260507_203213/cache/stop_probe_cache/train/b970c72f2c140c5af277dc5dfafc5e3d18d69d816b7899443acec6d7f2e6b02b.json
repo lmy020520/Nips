@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New York Yankees",
+  "pred_answer": "New York Yankees",
+  "normalized_gold": "new york yankees",
+  "normalized_pred": "new york yankees",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8323bf55429954d2e2ec31",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8323bf55429954d2e2ec31::50 home run club::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8323bf55429954d2e2ec31::José Bautista::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8323bf55429954d2e2ec31::Aaron Judge::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8323bf55429954d2e2ec31::50 home run club::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8323bf55429954d2e2ec31::50 home run club",
+        "5a8323bf55429954d2e2ec31::Aaron Judge"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8323bf55429954d2e2ec31::50 home run club::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8323bf55429954d2e2ec31::José Bautista::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8323bf55429954d2e2ec31::Aaron Judge::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8323bf55429954d2e2ec31::50 home run club::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8323bf55429954d2e2ec31::50 home run club::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The most recent player to reach the milestone is Aaron Judge, achieving the feat during the 2017 season.\n[2] Aaron James Judge (born April 26, 1992) is an American professional baseball outfielder for the New York Yankees of Major League Baseball (MLB).\n[3] In 2010, Bautista became the 26th member of the 50 home run club while leading the major leagues in home runs for the first of two consecutive seasons, and, from 2010–15, has hit more home runs than any player in the major leagues.\n[4] In Major League Baseball (MLB), the 50 home run club is the group of batters who have hit 50 or more home runs in a single season."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,22 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the writer of the 2014 RoboCop remake, but the provided evidence only mentions the director. The raw candidates include information about other RoboCop films and the director, but none directly state the writer. A bridge note can connect the director to the film's writer via the film's Wikipedia page, which is not in the candidates but can be inferred from the director's page. However, since we must only use provided source_unit_ids, we can create a verification note to check if the director's page mentions the writer, or a bridge note to link the director to the film. But the director's page (unit_id 3) does not mention the writer. The best approach is to note that the writer is missing and propose a bridge note to search for the film's page. Since we cannot invent, we can only note the gap.",
+  "derived_candidates": [
+    {
+      "type": "verification_note",
+      "text": "The director's page does not mention the writer of the 2014 RoboCop.",
+      "source_unit_ids": [
+        "5a7e71355542991319bc94b7::José Padilha::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "The 2014 RoboCop film is directed by José Padilha, but the writer is not listed in the provided evidence.",
+      "source_unit_ids": [
+        "5a7e71355542991319bc94b7::José Padilha::0"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

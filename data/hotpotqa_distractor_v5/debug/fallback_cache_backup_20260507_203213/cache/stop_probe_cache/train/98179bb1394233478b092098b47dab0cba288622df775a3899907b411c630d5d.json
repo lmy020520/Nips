@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "France, the United States, and the United Kingdom",
+  "pred_answer": "France, the United States, and the United Kingdom",
+  "normalized_gold": "france the united states and the united kingdom",
+  "normalized_pred": "france the united states and the united kingdom",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5673b55429960a22e02ee",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5673b55429960a22e02ee::Jaume Collet-Serra::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5673b55429960a22e02ee::Absolute Deception::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5673b55429960a22e02ee::Non-Stop (film)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae5673b55429960a22e02ee::Heaven (2002 film)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5673b55429960a22e02ee::Jaume Collet-Serra",
+        "5ae5673b55429960a22e02ee::Non-Stop (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5673b55429960a22e02ee::Jaume Collet-Serra::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5673b55429960a22e02ee::Absolute Deception::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5673b55429960a22e02ee::Non-Stop (film)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae5673b55429960a22e02ee::Heaven (2002 film)::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5673b55429960a22e02ee::Heaven (2002 film)::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The film is an international co-production among producers based in Germany, France, the United States, and the United Kingdom.\n[2] An international co-production among France, the United States, and the United Kingdom, it was the first film from Silver Pictures since \"Weird Science\", and its first film to be distributed by Universal Pictures since the end of Universal's deal with Warner Bros..\n[3] Absolute Deception (also known as Deception) is a 2013 Australian/Canadian international co-production action thriller film directed by Brian Trenchard-Smith, and starring Cuba Gooding Jr. and Emmanuelle Vaugier.\n[4] Jaume Collet-Serra (] ; born 23 March 1974) is a Spanish film director and producer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "a comédie en vaudeville",
+  "pred_answer": "a comédie en vaudeville",
+  "normalized_gold": "a comédie en vaudeville",
+  "normalized_pred": "a comédie en vaudeville",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7839e5542997ec272767e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7839e5542997ec272767e::Jacques Necker::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7839e5542997ec272767e::Joseph Aude::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7839e5542997ec272767e::Charles Gravier, comte de Vergennes::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7839e5542997ec272767e::Jacques Necker",
+        "5ae7839e5542997ec272767e::Joseph Aude"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7839e5542997ec272767e::Jacques Necker::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7839e5542997ec272767e::Joseph Aude::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7839e5542997ec272767e::Charles Gravier, comte de Vergennes::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7839e5542997ec272767e::Charles Gravier, comte de Vergennes::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Charles Gravier, Count of Vergennes (29 December 1719 – 13 February 1787) was a French statesman and diplomat.\n[2] Joseph Aude (10 December 1755 – 5 October 1841) was a familiar of Necker and Buffon whose biography he wrote as well as a comédie en vaudeville about his marriage, presented at the \"Société littéraire et scientifique d'Apt\".\n[3] Jacques Necker (] ; 30 September 1732 – 9 April 1804) was a Swiss banker who became a French statesman and finance minister for Louis XVI."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

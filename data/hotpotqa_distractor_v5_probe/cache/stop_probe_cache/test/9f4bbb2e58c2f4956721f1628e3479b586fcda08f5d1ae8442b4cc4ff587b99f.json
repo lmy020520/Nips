@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Matt Groening",
+  "pred_answer": "Matt Groening",
+  "normalized_gold": "matt groening",
+  "normalized_pred": "matt groening",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8bd49d5542997f31a41dd7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8bd49d5542997f31a41dd7::Ian Boothby::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8bd49d5542997f31a41dd7::Matt Groening::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8bd49d5542997f31a41dd7::Ross Richie::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8bd49d5542997f31a41dd7::Ian Boothby",
+        "5a8bd49d5542997f31a41dd7::Matt Groening"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8bd49d5542997f31a41dd7::Ian Boothby::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8bd49d5542997f31a41dd7::Matt Groening::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8bd49d5542997f31a41dd7::Ross Richie::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8bd49d5542997f31a41dd7::Ross Richie::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Ross Richie (born May 22, 1970) is an American comic book publisher and the founder of Boom!\n[2] Matthew Abraham \"Matt\" Groening ( ; born February 15, 1954) is an American cartoonist, writer, producer, animator, and voice actor.\n[3] Ian Boothby is a multiple Shuster Award, Harvey Award and Eisner Award nominee and an Eisner Award–winning comic book creator best known for his work as the lead writer on \"Simpsons Comics\" and \"Futurama Comics\" for Matt Groening's Bongo Comics."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

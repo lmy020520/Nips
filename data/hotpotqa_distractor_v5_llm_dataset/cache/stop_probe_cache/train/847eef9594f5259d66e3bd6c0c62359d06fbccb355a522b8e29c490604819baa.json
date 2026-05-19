@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Three Rivers District",
+  "pred_answer": "Three Rivers District Council",
+  "normalized_gold": "three rivers district",
+  "normalized_pred": "three rivers district council",
+  "exact_match": false,
+  "context_exact_match": true,
+  "answer_match_rule": "context_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "Evidence shows Leavesden is a district council ward in Three Rivers District, and Three Rivers District Council is a local government in southern England.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "Evidence shows Leavesden is a district council ward in Three Rivers District, and Three Rivers District Council is a local government in southern England.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a712d7d5542994082a3e62d",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a712d7d5542994082a3e62d::Wallingford Rural District::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a712d7d5542994082a3e62d::Aberdare Urban District Council::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a712d7d5542994082a3e62d::Leavesden, Hertfordshire::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a712d7d5542994082a3e62d::Three Rivers District::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a712d7d5542994082a3e62d::Wallingford Rural District::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a712d7d5542994082a3e62d::Leavesden, Hertfordshire",
+        "5a712d7d5542994082a3e62d::Three Rivers District"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a712d7d5542994082a3e62d::Wallingford Rural District::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a712d7d5542994082a3e62d::Aberdare Urban District Council::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a712d7d5542994082a3e62d::Leavesden, Hertfordshire::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a712d7d5542994082a3e62d::Three Rivers District::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a712d7d5542994082a3e62d::Wallingford Rural District::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a712d7d5542994082a3e62d::Wallingford Rural District::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Wallingford Rural District Council provided many local government functions for the area around the town of Wallingford including Didcot, but not for the borough of Wallingford, which was covered by Wallingford Borough Council.\n[2] Three Rivers District Council is a local government based in Rickmansworth, Hertfordshire, in southern England.\n[3] Leavesden is part of Abbots Langley civil parish and is also the name of a district council ward in Three Rivers District.\n[4] There were five wards, namely Aberaman (also known as No. 5 Ward), Blaengwawr (also known as No. 4 Ward), Gadlys (also known as No. 2 Ward), Llwydcoed (also known as No. 1 Ward), and the Town Ward (also known as No. 3 Ward)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

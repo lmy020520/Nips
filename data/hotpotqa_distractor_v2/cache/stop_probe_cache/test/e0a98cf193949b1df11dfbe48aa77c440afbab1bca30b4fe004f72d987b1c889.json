@@ -1,0 +1,83 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "River Shiel",
+  "pred_answer": "Loch Moidart",
+  "normalized_gold": "river shiel",
+  "normalized_pred": "loch moidart",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "The evidence confirms Eilean Tioram is in Loch Moidart and River Shiel drains into Loch Moidart near Castle Tioram, but it does not explicitly state that River Shiel runs near Eilean Tioram, nor does it provide a direct connection between the river and the island beyond their shared proximity to Loch Moidart.",
+  "missing_support_reasons": [
+    "The evidence does not explicitly state that River Shiel runs near Eilean Tioram; it only mentions River Shiel drains into Loch Moidart near Castle Tioram, and Eilean Tioram is in Loch Moidart, but this indirect link is insufficient for direct support.",
+    "The pred_answer 'Loch Moidart' is not the gold answer 'River Shiel', and the evidence does not support Loch Moidart as the river running near Eilean Tioram, as Loch Moidart is a loch, not a river."
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "The evidence confirms Eilean Tioram is in Loch Moidart and River Shiel drains into Loch Moidart near Castle Tioram, but it does not explicitly state that River Shiel runs near Eilean Tioram, nor does it provide a direct connection between the river and the island beyond their shared proximity to Loch Moidart.",
+    "missing_support_reasons": [
+      "The evidence does not explicitly state that River Shiel runs near Eilean Tioram; it only mentions River Shiel drains into Loch Moidart near Castle Tioram, and Eilean Tioram is in Loch Moidart, but this indirect link is insufficient for direct support.",
+      "The pred_answer 'Loch Moidart' is not the gold answer 'River Shiel', and the evidence does not support Loch Moidart as the river running near Eilean Tioram, as Loch Moidart is a loch, not a river."
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5ab678f455429954757d32d3",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab678f455429954757d32d3::Castle Tioram::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab678f455429954757d32d3::Loch Shiel::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab678f455429954757d32d3::Castle Tioram::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab678f455429954757d32d3::Castle Tioram::0",
+        "5ab678f455429954757d32d3::Loch Shiel::1",
+        "5ab678f455429954757d32d3::Castle Tioram"
+      ],
+      "k_br": 2.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab678f455429954757d32d3::Castle Tioram::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab678f455429954757d32d3::Loch Shiel::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab678f455429954757d32d3::Castle Tioram::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab678f455429954757d32d3::Castle Tioram::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It is located west of Acharacle, approximately 80 km from Fort William.\n[2] Its nature changes considerably along its length, being deep and enclosed by mountains in the north east and shallow surrounded by bog and rough pasture in the\n[3] Castle Tioram ( ) (Scottish Gaelic: \"Caisteal Tioram\" , meaning \"dry castle\") is a ruined castle that sits on the tidal island Eilean Tioram in Loch Moidart, Lo"
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

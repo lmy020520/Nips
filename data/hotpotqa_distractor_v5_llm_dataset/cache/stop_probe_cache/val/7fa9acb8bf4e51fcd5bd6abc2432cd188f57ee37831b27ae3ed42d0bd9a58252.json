@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Munich Agreement",
+  "pred_answer": "Munich Agreement",
+  "normalized_gold": "munich agreement",
+  "normalized_pred": "munich agreement",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac5367a5542996feb3fea30",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac5367a5542996feb3fea30::Munich Agreement::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac5367a5542996feb3fea30::Belgian annexation plans after World War II::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac5367a5542996feb3fea30::Duff Cooper::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac5367a5542996feb3fea30::Viscount Norwich::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac5367a5542996feb3fea30::Munich Agreement",
+        "5ac5367a5542996feb3fea30::Duff Cooper"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac5367a5542996feb3fea30::Munich Agreement::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac5367a5542996feb3fea30::Belgian annexation plans after World War II::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac5367a5542996feb3fea30::Duff Cooper::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac5367a5542996feb3fea30::Viscount Norwich::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac5367a5542996feb3fea30::Viscount Norwich::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was created in 1952 for the Conservative politician, author and former Ambassador to France, Sir Duff Cooper.\n[2] He denounced the Munich agreement of 1938 as meaningless, cowardly, and unworkable, as he resigned from the cabinet.\n[3] After the defeat of Nazi Germany in World War II in 1945, Belgium planned to annex parts of the territory along the Belgian–German border.\n[4] The Munich Agreement was a settlement permitting Nazi Germany's annexation of portions of Czechoslovakia along the country's borders mainly inhabited by German speakers, for which a new territorial designation \"Sudetenland\" was coined."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

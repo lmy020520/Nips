@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Venice",
+  "pred_answer": "Venice",
+  "normalized_gold": "venice",
+  "normalized_pred": "venice",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab473b15542991779162c9b",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab473b15542991779162c9b::Lu Verne City Jail::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab473b15542991779162c9b::Freeport City Hall::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab473b15542991779162c9b::Fabio Berardi (engraver)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab473b15542991779162c9b::Venice::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab473b15542991779162c9b::Fire Station No. 2 (Waterloo, Iowa)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab473b15542991779162c9b::Fabio Berardi (engraver)",
+        "5ab473b15542991779162c9b::Venice"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab473b15542991779162c9b::Lu Verne City Jail::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab473b15542991779162c9b::Freeport City Hall::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab473b15542991779162c9b::Fabio Berardi (engraver)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab473b15542991779162c9b::Venice::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab473b15542991779162c9b::Fire Station No. 2 (Waterloo, Iowa)::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab473b15542991779162c9b::Fire Station No. 2 (Waterloo, Iowa)::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Built in 1907, this is the only early fire station left in the city.\n[2] Venice ( ; Italian: \"Venezia\" , ] ; Venetian: \"Venesia\" , ] ) is a city in northeastern Italy and the capital of the Veneto region.\n[3] He went to Venice when young, and trained under Joseph Wagner.\n[4] The city hall was built in 1899 to replace the previous city hall, which the city built in 1868 and had outgrown."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

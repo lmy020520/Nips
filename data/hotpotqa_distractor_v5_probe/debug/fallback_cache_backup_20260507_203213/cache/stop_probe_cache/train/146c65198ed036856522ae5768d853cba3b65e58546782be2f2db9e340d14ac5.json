@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Benedict Arnold",
+  "pred_answer": "Benedict Arnold",
+  "normalized_gold": "benedict arnold",
+  "normalized_pred": "benedict arnold",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adbc57b5542996e68525228",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adbc57b5542996e68525228::André (play)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adbc57b5542996e68525228::Benedict Arnold::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adbc57b5542996e68525228::Benedict Arnold: A Question of Honor::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adbc57b5542996e68525228::André (play)",
+        "5adbc57b5542996e68525228::Benedict Arnold"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adbc57b5542996e68525228::André (play)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adbc57b5542996e68525228::Benedict Arnold::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adbc57b5542996e68525228::Benedict Arnold: A Question of Honor::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adbc57b5542996e68525228::Benedict Arnold: A Question of Honor::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It portrays the career of Benedict Arnold in the American Revolutionary War and his dramatic switch in 1780 from fighting for American Independence to being a Loyalist trying to preserve British rule in America.\n[2] Benedict Arnold (January 14, 1741 [O.S. January 3, 1740] June 14, 1801) was a general during the American Revolutionary War, who fought for the American Continental Army, and later defected to the British Army.\n[3] André; a Tragedy in Five Acts is a play by William Dunlap, first produced at the Park Theatre in New York City on March 30, 1798, by the Old American Company, published in that same year together with a collection of historic documents relating to the case of the title character, Major John André, the British officer who was hanged as a spy on October 2, 1780, for his role in the treason of Benedi"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

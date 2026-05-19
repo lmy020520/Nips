@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Ahmad ibn Muhammad al-Nahawandi",
+  "pred_answer": "Ahmad ibn Muhammad al-Nahawandi",
+  "normalized_gold": "ahmad ibn muhammad al-nahawandi",
+  "normalized_pred": "ahmad ibn muhammad al-nahawandi",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b4eca5542995eb53be907",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b4eca5542995eb53be907::Muhammad Iqbal::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b4eca5542995eb53be907::Javid Nama::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b4eca5542995eb53be907::Ahmad Nahavandi::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7b4eca5542995eb53be907::Allahabad Address::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b4eca5542995eb53be907::Muhammad Iqbal",
+        "5a7b4eca5542995eb53be907::Ahmad Nahavandi"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b4eca5542995eb53be907::Muhammad Iqbal::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b4eca5542995eb53be907::Javid Nama::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b4eca5542995eb53be907::Ahmad Nahavandi::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7b4eca5542995eb53be907::Allahabad Address::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b4eca5542995eb53be907::Allahabad Address::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In this address Iqbal outlined a vision of an independent state for Muslim-majority provinces in northwestern India, thus becoming the first politician to articulate what would become known as the \"Two-nation theory\"—that Muslims are a distinct nation and thus deserve political independence from other regions and communities of India.\n[2] Ahmad ibn Muhammad al-Nahawandi was a Persian astronomer of the 8th and 9th centuries.\n[3] The Javid Nama (Persian: جاوید نامہ‎ ‎ ), or Book of Eternity, is a Persian book of poetry written by Allama Muhammad Iqbal and published in 1932.\n[4] Allama Iqbal ( ) (November 9, 1877 – April 21, 1938), widely known as Muhammad Iqbal, was a poet, philosopher, and politician, as well as an academic, barrister and scholar in British India who is widely regarded as having inspired the Pakistan Movement."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

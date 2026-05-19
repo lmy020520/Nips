@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Neal Street Productions",
+  "pred_answer": "Neal Street Productions",
+  "normalized_gold": "neal street productions",
+  "normalized_pred": "neal street productions",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab72db355429928e1fe3834",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab72db355429928e1fe3834::Kate Lamb::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab72db355429928e1fe3834::Angela Down::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab72db355429928e1fe3834::Call the Midwife::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab72db355429928e1fe3834::Call the Midwife::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab72db355429928e1fe3834::Kate Lamb",
+        "5ab72db355429928e1fe3834::Call the Midwife"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab72db355429928e1fe3834::Kate Lamb::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab72db355429928e1fe3834::Angela Down::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab72db355429928e1fe3834::Call the Midwife::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab72db355429928e1fe3834::Call the Midwife::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab72db355429928e1fe3834::Call the Midwife::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The series is produced by Neal Street Productions, a production company founded and owned by the film director and producer Sam Mendes, \"Call the Midwife\" executive producer Pippa Harris, and Caro Newling.\n[2] Call the Midwife is a BBC period drama series about a group of nurse midwives working in the East End of London in the late 1950s and early 1960s.\n[3] She is known for her role in the BBC drama series \"Take Three Girls\" portraying Cockney art student Avril for the first season before being replaced in the second.\n[4] Kate Lamb (born 18 January 1988) is a Welsh actress best known for playing nurse Delia Busby in the BBC drama series \"Call the Midwife\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Posh",
+  "pred_answer": "Posh",
+  "normalized_gold": "posh",
+  "normalized_pred": "posh",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc6fde55429959677d6ab7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc6fde55429959677d6ab7::The Riot Club::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc6fde55429959677d6ab7::Jake Roberts (editor)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc6fde55429959677d6ab7::Stephen E. Rivkin::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc6fde55429959677d6ab7::The Riot Club",
+        "5abc6fde55429959677d6ab7::Jake Roberts (editor)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc6fde55429959677d6ab7::The Riot Club::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc6fde55429959677d6ab7::Jake Roberts (editor)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc6fde55429959677d6ab7::Stephen E. Rivkin::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc6fde55429959677d6ab7::Stephen E. Rivkin::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Stephen Elliott Rivkin is an American film editor best known for his editing work on the \"Pirates of the Caribbean\" film series as well as his work with director James Cameron as an editor on \"Avatar\", for which he was nominated for an Academy Award.\n[2] Jake Roberts is an English film editor.\n[3] The Riot Club is a 2014 British drama film directed by Lone Scherfig and written by Laura Wade, based on Wade's 2010 play \"Posh\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Marked",
+  "pred_answer": "Marked",
+  "normalized_gold": "marked",
+  "normalized_pred": "marked",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae09b1755429906c02daae3",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae09b1755429906c02daae3::11/22/63::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae09b1755429906c02daae3::House of Night::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae09b1755429906c02daae3::Marked (novel)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae09b1755429906c02daae3::Fancy Nancy::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae09b1755429906c02daae3::House of Night",
+        "5ae09b1755429906c02daae3::Marked (novel)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae09b1755429906c02daae3::11/22/63::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae09b1755429906c02daae3::House of Night::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae09b1755429906c02daae3::Marked (novel)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae09b1755429906c02daae3::Fancy Nancy::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae09b1755429906c02daae3::Fancy Nancy::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Books in the \"Fancy Nancy\" series have now spent 330 weeks on the New York Times Best Seller list, and in the fall of 2012, \"Fancy Nancy the Musical\" was produced by Vital Theatre Company in New York City.\n[2] Marked is the first novel of the \"House of Night\" fantasy series written by P.C. Cast and Kristin Cast.\n[3] Books in the series have been on the \"New York Times\" Best Seller list for 63 weeks and have sold over seven million copies in North America, and more than ten million books worldwide, in 39 countries.\n[4] It stayed on The New York Times Best Seller list for 16 weeks."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

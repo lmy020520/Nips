@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "NBA All-Rookie Team",
+  "pred_answer": "NBA All-Rookie Team",
+  "normalized_gold": "nba all-rookie team",
+  "normalized_pred": "nba all-rookie team",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8126ef55429938b61422d4",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8126ef55429938b61422d4::Dick Van Arsdale::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8126ef55429938b61422d4::NBA All-Rookie Team::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8126ef55429938b61422d4::NBA All-Defensive Team::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8126ef55429938b61422d4::Dick Van Arsdale",
+        "5a8126ef55429938b61422d4::NBA All-Rookie Team"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8126ef55429938b61422d4::Dick Van Arsdale::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8126ef55429938b61422d4::NBA All-Rookie Team::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8126ef55429938b61422d4::NBA All-Defensive Team::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8126ef55429938b61422d4::NBA All-Defensive Team::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The NBA All-Defensive Team is an annual National Basketball Association (NBA) honor given since the 1968–69 NBA season to the best defensive players during the regular season.\n[2] The NBA All-Rookie Team is an annual National Basketball Association (NBA) honor given since the 1962–63 NBA season to the top rookies during the regular season.\n[3] Richard Albert Van Arsdale (born February 22, 1943) is an American former professional basketball player and coach, and a current National Basketball Association (NBA) executive."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

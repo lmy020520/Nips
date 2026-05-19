@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mario Bava",
+  "pred_answer": "Mario Bava",
+  "normalized_gold": "mario bava",
+  "normalized_pred": "mario bava",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc6fdd5542996583600450",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc6fdd5542996583600450::Black Sunday (1960 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc6fdd5542996583600450::Lamberto Bava::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc6fdd5542996583600450::Val Guest::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abc6fdd5542996583600450::Mario Bava::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abc6fdd5542996583600450::Yesterday's Enemy::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc6fdd5542996583600450::Val Guest",
+        "5abc6fdd5542996583600450::Mario Bava"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc6fdd5542996583600450::Black Sunday (1960 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc6fdd5542996583600450::Lamberto Bava::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc6fdd5542996583600450::Val Guest::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abc6fdd5542996583600450::Mario Bava::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abc6fdd5542996583600450::Yesterday's Enemy::6",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc6fdd5542996583600450::Yesterday's Enemy::6",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Director Val Guest later said that \"Yesterday's Enemy\" was one of his films of which he was the most proud.\n[2] Mario Bava (31 July 1914 – 27 April 1980) was an Italian director, screenwriter, special effects artist, and cinematographer from the \"golden age\" of Italian horror films.\n[3] Beginning as a writer (and later director) of comedy films, he is best known for his work for Hammer, for whom he directed 14 films, and science fiction films.\n[4] Born in Rome, Bava began working as an assistant director for his director father Mario Bava."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

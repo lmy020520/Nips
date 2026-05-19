@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the Clique or the First Call Gang",
+  "pred_answer": "the Clique or the First Call Gang",
+  "normalized_gold": "the clique or the first call gang",
+  "normalized_pred": "the clique or the first call gang",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f06fc554299458435d523",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f06fc554299458435d523::The Wrecking Crew (music)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f06fc554299458435d523::Wall of Sound::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f06fc554299458435d523::The Wrecking Crew (2008 film)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8f06fc554299458435d523::Eve of Destruction (song)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f06fc554299458435d523::The Wrecking Crew (music)",
+        "5a8f06fc554299458435d523::The Wrecking Crew (2008 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f06fc554299458435d523::The Wrecking Crew (music)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f06fc554299458435d523::Wall of Sound::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f06fc554299458435d523::The Wrecking Crew (2008 film)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8f06fc554299458435d523::Eve of Destruction (song)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f06fc554299458435d523::Eve of Destruction (song)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The accompanying musicians were top-tier LA session players: P. F. Sloan on guitar, Hal Blaine (of Phil Spector's \"Wrecking Crew\") on drums, and Larry Knechtel on bass.\n[2] It covers the story of the Los Angeles-based group of session musicians known as the Wrecking Crew, famed for having played on numerous hit recordings throughout the 1960s.\n[3] The Wall of Sound (also called the Spector Sound) is a music production formula developed by American record producer Phil Spector at Gold Star Studios in the 1960s, with assistance from engineer Larry Levine, and the session musician conglomerate known as \"the Wrecking Crew\".\n[4] The Wrecking Crew (sometimes called the Clique or the First Call Gang, occasionally credited as the Phil Spector Wall of Sound Orchestra) was a loose-knit circle of Los Angeles' top studio session musicians whose services were constantly in demand during their heyday in the 1960s and early 1970s."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

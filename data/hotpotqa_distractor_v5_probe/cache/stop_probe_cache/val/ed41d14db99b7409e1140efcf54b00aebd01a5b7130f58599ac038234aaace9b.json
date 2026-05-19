@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Codiaeum",
+  "pred_answer": "Codiaeum",
+  "normalized_gold": "codiaeum",
+  "normalized_pred": "codiaeum",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8ff0ca55429916514e73ec",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8ff0ca55429916514e73ec::Erodium moschatum::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8ff0ca55429916514e73ec::Halimodendron::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8ff0ca55429916514e73ec::Codiaeum::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8ff0ca55429916514e73ec::Petrophile::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8ff0ca55429916514e73ec::Holarctic::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8ff0ca55429916514e73ec::Codiaeum",
+        "5a8ff0ca55429916514e73ec::Petrophile"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8ff0ca55429916514e73ec::Erodium moschatum::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8ff0ca55429916514e73ec::Halimodendron::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8ff0ca55429916514e73ec::Codiaeum::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8ff0ca55429916514e73ec::Petrophile::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8ff0ca55429916514e73ec::Holarctic::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8ff0ca55429916514e73ec::Holarctic::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Many ecosystems, and the animal and plant communities that depend on them, are found across multiple continents in large portions of this realm.\n[2] Petrophile is a genus of evergreen shrubs, in the family Proteaceae.\n[3] Codiaeum is a genus of plants under the family Euphorbiaceae first described as a genus in 1824.\n[4] It is native to Russia and southern Asia, but it can be found on other continents where it is an introduced species, and one that is often a noxious weed."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

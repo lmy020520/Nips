@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Turner Broadcasting",
+  "pred_answer": "Turner Broadcasting",
+  "normalized_gold": "turner broadcasting",
+  "normalized_pred": "turner broadcasting",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae08cb955429924de1b7100",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae08cb955429924de1b7100::Cartoon Network Too::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae08cb955429924de1b7100::Bakor Patel::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae08cb955429924de1b7100::Animal Stories::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae08cb955429924de1b7100::Shen Shixi::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae08cb955429924de1b7100::Cartoon Network Too",
+        "5ae08cb955429924de1b7100::Animal Stories"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae08cb955429924de1b7100::Cartoon Network Too::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae08cb955429924de1b7100::Bakor Patel::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae08cb955429924de1b7100::Animal Stories::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae08cb955429924de1b7100::Shen Shixi::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae08cb955429924de1b7100::Shen Shixi::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He is best known for his animal stories, and is known as the \"King of Animal Stories\".\n[2] Animal Stories is a British pre-school animated television series.\n[3] Bakor Patel is children's literature character created by Hariprasad Vyas for funny animal stories published by \"Gandiv\", a children's biweekly in Gujarati language published by Gandiv Sahitya Mandir, Surat, Gujarat, India.\n[4] Cartoon Network Too was a British TV network created by Turner Broadcasting."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

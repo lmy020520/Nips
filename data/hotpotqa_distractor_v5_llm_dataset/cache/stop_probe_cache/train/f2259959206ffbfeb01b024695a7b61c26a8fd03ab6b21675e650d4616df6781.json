@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Washington Redskins",
+  "pred_answer": "Washington Redskins",
+  "normalized_gold": "washington redskins",
+  "normalized_pred": "washington redskins",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab1fc82554299340b525456",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab1fc82554299340b525456::Dale Hamer::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab1fc82554299340b525456::2016 Carolina Panthers season::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab1fc82554299340b525456::Super Bowl XVII::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab1fc82554299340b525456::2010 Green Bay Packers season::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab1fc82554299340b525456::Dale Hamer",
+        "5ab1fc82554299340b525456::Super Bowl XVII"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab1fc82554299340b525456::Dale Hamer::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab1fc82554299340b525456::2016 Carolina Panthers season::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab1fc82554299340b525456::Super Bowl XVII::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab1fc82554299340b525456::2010 Green Bay Packers season::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab1fc82554299340b525456::2010 Green Bay Packers season::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 2010 Green Bay Packers season was the 91st season in the National Football League for the Packers and the 92nd season for the team overall.\n[2] Super Bowl XVII was an American football game between the American Football Conference (AFC) champion Miami Dolphins and the National Football Conference (NFC) champion Washington Redskins to decide the National Football League (NFL) champion for the 1982 season.\n[3] This was also the first team to have at least 15 wins and finish last in their division the following season.\n[4] During his 23 seasons in the NFL, Hamer was assigned to officiate in two Super Bowls, as a head linesman in Super Bowl XVII and in Super Bowl XXII."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Andrew Lloyd Webber",
+  "pred_answer": "Andrew Lloyd Webber",
+  "normalized_gold": "andrew lloyd webber",
+  "normalized_pred": "andrew lloyd webber",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add72ef5542992200553b23",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add72ef5542992200553b23::Morag McLaren::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add72ef5542992200553b23::Kaka Hathrasi::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add72ef5542992200553b23::The Phantom of the Opera (1986 musical)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5add72ef5542992200553b23::The Hunger (band)::9"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add72ef5542992200553b23::Morag McLaren",
+        "5add72ef5542992200553b23::The Phantom of the Opera (1986 musical)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add72ef5542992200553b23::Morag McLaren::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add72ef5542992200553b23::Kaka Hathrasi::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add72ef5542992200553b23::The Phantom of the Opera (1986 musical)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5add72ef5542992200553b23::The Hunger (band)::9",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add72ef5542992200553b23::The Hunger (band)::9",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] They played concerts in Texas as a foursome for two years.\n[2] The Phantom of the Opera is a musical with music by Andrew Lloyd Webber and lyrics by Charles Hart and Richard Stilgoe.\n[3] He chose \"Kaka\", as he played the character in a play which made him popular, and \"Hathrasi\" after the name of his hometown Hathras.\n[4] She has performed in musicals from concerts and one woman shows to opera, in which she originally trained at The Royal Northern College of Music, performing in Buxton Festival and with Opera North while still a student."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

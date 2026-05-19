@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Parish",
+  "pred_answer": "Parish",
+  "normalized_gold": "parish",
+  "normalized_pred": "parish",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b82be55429949d91db5bb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b82be55429949d91db5bb::Colégio Diocesano de São José 5::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b82be55429949d91db5bb::Portas do Cerco::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b82be55429949d91db5bb::Nossa Senhora de Fátima, Macau::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8b82be55429949d91db5bb::São Lázaro::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b82be55429949d91db5bb::Colégio Diocesano de São José 5",
+        "5a8b82be55429949d91db5bb::Nossa Senhora de Fátima, Macau"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b82be55429949d91db5bb::Colégio Diocesano de São José 5::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b82be55429949d91db5bb::Portas do Cerco::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b82be55429949d91db5bb::Nossa Senhora de Fátima, Macau::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8b82be55429949d91db5bb::São Lázaro::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b82be55429949d91db5bb::São Lázaro::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is surrounded by Freguesia de Nossa Senhora de Fátima, Freguesia de Santo António, and Freguesia da Sé.\n[2] Freguesia de Nossa Senhora de Fátima is the northernmost and largest freguesia (parish) in Macau Peninsula, Macau.\n[3] The Portas do Cerco is an area in Nossa Senhora de Fátima, Macau, China.\n[4] Colégio Diocesano de São José 5 (CDSJ5; ) is a Roman Catholic preschool through secondary school in Nossa Senhora de Fátima (Our Lady of Fatima Parish), Macau."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Boris Badenov",
+  "pred_answer": "Boris Badenov",
+  "normalized_gold": "boris badenov",
+  "normalized_pred": "boris badenov",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e08f45542997cc2c474ff",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e08f45542997cc2c474ff::Paul Frees::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e08f45542997cc2c474ff::Mister Magoo::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e08f45542997cc2c474ff::Rocky &amp; Bullwinkle (2014 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e08f45542997cc2c474ff::Paul Frees",
+        "5a7e08f45542997cc2c474ff::Mister Magoo"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e08f45542997cc2c474ff::Paul Frees::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e08f45542997cc2c474ff::Mister Magoo::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e08f45542997cc2c474ff::Rocky &amp; Bullwinkle (2014 film)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e08f45542997cc2c474ff::Rocky &amp; Bullwinkle (2014 film)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Rocky & Bullwinkle is a 2014 American computer-animated direct-to-video short film based on the 1960s animated television series \"The Rocky and Bullwinkle Show\".\n[2] Mister Magoo is an American animated television series which was produced from November 7, 1960, to February 2, 1962.\n[3] Solomon Hersh Frees (June 22, 1920 – November 2, 1986), better known as Paul Frees, was an American actor, voice actor, impressionist, comedian and screenwriter known for his work on MGM, Walter Lantz, and Walt Disney theatrical cartoons during the Golden Age of Animation and for providing the voice of Boris Badenov in \"The Rocky and Bullwinkle Show\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Father of the Blues",
+  "pred_answer": "Father of the Blues",
+  "normalized_gold": "father of the blues",
+  "normalized_pred": "father of the blues",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab815f35542991d32223839",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab815f35542991d32223839::Aunt Hagar's Blues::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab815f35542991d32223839::Losalini Tamanitoakula::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab815f35542991d32223839::W. C. Handy::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab815f35542991d32223839::All Aunt Hagar's Children::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab815f35542991d32223839::Aunt Hagar's Blues",
+        "5ab815f35542991d32223839::W. C. Handy"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab815f35542991d32223839::Aunt Hagar's Blues::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab815f35542991d32223839::Losalini Tamanitoakula::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab815f35542991d32223839::W. C. Handy::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab815f35542991d32223839::All Aunt Hagar's Children::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab815f35542991d32223839::All Aunt Hagar's Children::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] All Aunt Hagar's Children (2006) is a collection of short stories by African-American author Edward P. Jones; it was his first book after winning the 2004 Pulitzer Prize for \"The Known World\".\n[2] William Christopher Handy (November 16, 1873 – March 28, 1958) was an African American composer and musician, known as the \"Father of the Blues\".\n[3] Losalini Tamanitoakula (born November 16, 1984) is someone who is so full of spirit and life.\n[4] Aunt Hagar's Blues, variously known as Aunt Hagar's Children or Aunt Hagar's Children's Blues, is a 1920 blues song which has since become a jazz standard."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

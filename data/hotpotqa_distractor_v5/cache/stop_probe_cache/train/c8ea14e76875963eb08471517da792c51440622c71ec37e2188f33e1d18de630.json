@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lafayette, California",
+  "pred_answer": "Lafayette, California",
+  "normalized_gold": "lafayette california",
+  "normalized_pred": "lafayette california",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2df97554299218029db8a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2df97554299218029db8a::Alma Mater (Dartmouth College)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2df97554299218029db8a::Nicole Daedone::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2df97554299218029db8a::Lafayette Morehouse::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2df97554299218029db8a::University of Amsterdam::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2df97554299218029db8a::Nicole Daedone",
+        "5ac2df97554299218029db8a::Lafayette Morehouse"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2df97554299218029db8a::Alma Mater (Dartmouth College)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2df97554299218029db8a::Nicole Daedone::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2df97554299218029db8a::Lafayette Morehouse::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2df97554299218029db8a::University of Amsterdam::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2df97554299218029db8a::University of Amsterdam::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The University of Amsterdam (abbreviated as UvA, Dutch: \"Universiteit van Amsterdam\" ) is a public university located in Amsterdam, Netherlands.\n[2] Lafayette Morehouse, previously known as More University, is an intentional community, or commune, established in 1968 in Lafayette, California.\n[3] Nicole Daedone is the founder and CEO of OneTaste, the author of \"Slow Sex: the art and craft of the female orgasm\", and a TEDx speaker.\n[4] The \"Alma Mater\" is the official school song of Dartmouth College, an Ivy League university located in Hanover, New Hampshire, United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

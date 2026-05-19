@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fountains of Rome",
+  "pred_answer": "Fountains of Rome",
+  "normalized_gold": "fountains of rome",
+  "normalized_pred": "fountains of rome",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1ddbd5542997283cd22ac",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1ddbd5542997283cd22ac::Xin Huguang::7"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1ddbd5542997283cd22ac::Lucrezia (opera)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1ddbd5542997283cd22ac::Ottorino Respighi::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae1ddbd5542997283cd22ac::Elsa Respighi::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae1ddbd5542997283cd22ac::Xin Huguang::12"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1ddbd5542997283cd22ac::Ottorino Respighi",
+        "5ae1ddbd5542997283cd22ac::Elsa Respighi"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1ddbd5542997283cd22ac::Xin Huguang::7",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1ddbd5542997283cd22ac::Lucrezia (opera)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1ddbd5542997283cd22ac::Ottorino Respighi::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae1ddbd5542997283cd22ac::Elsa Respighi::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae1ddbd5542997283cd22ac::Xin Huguang::12",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1ddbd5542997283cd22ac::Xin Huguang::12",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] She had three sons, the third of which, San Bao, was also a composer.\n[2] She was the wife and former pupil of Ottorino Respighi.\n[3] Ottorino Respighi (] ; 9 July 187918 April 1936) was an Italian violinist, composer and musicologist, best known for his three orchestral tone poems \"Fountains of Rome\" (1916), \"Pines of Rome\" (1924), and \"Roman Festivals\" (1928).\n[4] Respighi died before finishing the work, which was therefore completed by the wife of the composer, Elsa Respighi, and by one of his pupils, Ennio Porrino."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

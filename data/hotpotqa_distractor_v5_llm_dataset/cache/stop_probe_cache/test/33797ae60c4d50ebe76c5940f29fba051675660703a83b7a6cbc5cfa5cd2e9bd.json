@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Adelaide Botanic Garden, Hutt Street, and Victoria Park",
+  "pred_answer": "Adelaide Botanic Garden, Hutt Street, and Victoria Park",
+  "normalized_gold": "adelaide botanic garden hutt street and victoria park",
+  "normalized_pred": "adelaide botanic garden hutt street and victoria park",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3a928554299391541389f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3a928554299391541389f::People's Choice Classic::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3a928554299391541389f::Marsfield, New South Wales::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3a928554299391541389f::Rymill Park::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3a928554299391541389f::Killing of Harambe::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3a928554299391541389f::People's Choice Classic",
+        "5ac3a928554299391541389f::Rymill Park"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3a928554299391541389f::People's Choice Classic::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3a928554299391541389f::Marsfield, New South Wales::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3a928554299391541389f::Rymill Park::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3a928554299391541389f::Killing of Harambe::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3a928554299391541389f::Killing of Harambe::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A number of primatologists and conservationists wrote later that the zoo had no other choice under the circumstances, and that it highlighted the danger of zoo animals in close proximity to humans and the need for better standards of care.\n[2] It is in close proximity to the Adelaide Botanic Garden, Hutt Street, and Victoria Park.\n[3] Due to its close proximity to Macquarie University, the Macquarie Park Business Park, Macquarie University Hospital, Macquarie University railway station and Macquarie Shopping Centre, it is a growing suburb.\n[4] The People's Choice Classic, nicknamed the Down Under Classic, is a criterium around Rymill Park in Adelaide, South Australia, Australia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

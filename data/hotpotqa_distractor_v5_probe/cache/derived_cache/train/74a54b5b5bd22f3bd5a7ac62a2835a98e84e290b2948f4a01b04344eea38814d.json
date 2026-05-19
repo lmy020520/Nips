@@ -1,0 +1,40 @@
+{
+  "should_derive": true,
+  "reason": "The current evidence lacks explicit lifespan dates for both individuals. The raw candidates contain phrases like 'longer life' and 'original' which may help bridge to lifespan information, but they are from unrelated documents. A bridge note can connect these terms to the question's entities, and a verification note can check if any candidate provides relevant dates.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "The phrase 'longer life' in the context of thermoplastic elastomers is unrelated to human lifespans.",
+      "source_unit_ids": [
+        "5a7a5db755429941d65f25de::Thermoplastic elastomer::3"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "The term 'original' in the Africa Fighting Malaria document refers to the organization's original focus, not to the individuals in question.",
+      "source_unit_ids": [
+        "5a7a5db755429941d65f25de::Africa Fighting Malaria::2"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "bridge_note",
+      "text": "The phrase 'longer life' in the Wincenty of Kielcza document refers to a biography of Saint Stanislaus, not to Hampar Kelikian or Arthur T. Gregorian.",
+      "source_unit_ids": [
+        "5a7a5db755429941d65f25de::Wincenty of Kielcza::3"
+      ],
+      "coarse_priority": 3
+    },
+    {
+      "type": "verification_note",
+      "text": "None of the provided raw candidates contain lifespan dates for Hampar Kelikian or Arthur T. Gregorian.",
+      "source_unit_ids": [
+        "5a7a5db755429941d65f25de::Thermoplastic elastomer::3",
+        "5a7a5db755429941d65f25de::Africa Fighting Malaria::2",
+        "5a7a5db755429941d65f25de::Wincenty of Kielcza::3"
+      ],
+      "coarse_priority": 4
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Waterloo Road",
+  "pred_answer": "Waterloo Road",
+  "normalized_gold": "waterloo road",
+  "normalized_pred": "waterloo road",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a87d7655542994775f607ff",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a87d7655542994775f607ff::Ethan Hardy::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a87d7655542994775f607ff::Caleb Knight::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a87d7655542994775f607ff::Chelsee Healey::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a87d7655542994775f607ff::Jac Naylor::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a87d7655542994775f607ff::Ethan Hardy",
+        "5a87d7655542994775f607ff::Chelsee Healey"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a87d7655542994775f607ff::Ethan Hardy::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a87d7655542994775f607ff::Caleb Knight::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a87d7655542994775f607ff::Chelsee Healey::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a87d7655542994775f607ff::Jac Naylor::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a87d7655542994775f607ff::Jac Naylor::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Jacqueline \"Jac\" Naylor MBBS MS FRCS (Eng) FRCSTh is a fictional character from the BBC medical drama \"Holby City\", portrayed by actress Rosie Marcel.\n[2] She is best known for playing Janeece Bryant in the BBC school drama series \"Waterloo Road\" from 2006 to 2012 and as Honey Wright in the BBC medical drama series \"Casualty\" from 2014 until 2015 and as Goldie McQueen in the Channel 4 soap opera \"Hollyoaks\" from 2016.\n[3] Caleb \"Cal\" Knight is a fictional character from the BBC medical drama \"Casualty\", played by actor Richard Winsor.\n[4] Ethan Hardy is a fictional character from the BBC medical drama \"Casualty\", played by actor George Rainsford."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

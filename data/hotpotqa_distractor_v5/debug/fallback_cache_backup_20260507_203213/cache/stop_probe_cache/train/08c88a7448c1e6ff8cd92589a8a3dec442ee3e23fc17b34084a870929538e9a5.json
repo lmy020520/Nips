@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Michele Alboreto",
+  "pred_answer": "Michele Alboreto",
+  "normalized_gold": "michele alboreto",
+  "normalized_pred": "michele alboreto",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84133d5542992ef85e23ac",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84133d5542992ef85e23ac::Minardi M193::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84133d5542992ef85e23ac::Trulli GP::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84133d5542992ef85e23ac::Michele Alboreto::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a84133d5542992ef85e23ac::Antonio Giovinazzi::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84133d5542992ef85e23ac::Minardi M193",
+        "5a84133d5542992ef85e23ac::Michele Alboreto"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84133d5542992ef85e23ac::Minardi M193::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84133d5542992ef85e23ac::Trulli GP::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84133d5542992ef85e23ac::Michele Alboreto::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a84133d5542992ef85e23ac::Antonio Giovinazzi::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84133d5542992ef85e23ac::Antonio Giovinazzi::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Antonio Giovinazzi (born 14 December 1993) is an Italian racing driver.\n[2] Michele Alboreto (23 December 1956 – 25 April 2001) was an Italian racing driver.\n[3] Trulli GP (officially Trulli Formula E Team) was a Swiss motor racing team founded by former Formula One driver and Monaco Grand Prix winner Jarno Trulli to compete in the inaugural FIA Formula E Championship for electric cars.\n[4] Drivers of the car included Christian Fittipaldi (who flipped his car when he collided with team mate Pierluigi Martini at the finish of the Italian Grand Prix), Martini and former Ferrari driver and 5 time grand prix winner Michele Alboreto."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

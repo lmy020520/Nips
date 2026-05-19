@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "yes",
+  "pred_answer": "yes",
+  "normalized_gold": "yes",
+  "normalized_pred": "yes",
+  "exact_match": true,
+  "context_exact_match": false,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "yes_no_both_entities_supported",
+  "support_evidence_summary": "Evidence shows Aglaia belongs to Mahogany family and Valeriana belongs to Caprifoliaceae family.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "yes_no_both_entities_supported",
+    "support_evidence_summary": "Evidence shows Aglaia belongs to Mahogany family and Valeriana belongs to Caprifoliaceae family.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a858b9c5542994c784ddb23",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a858b9c5542994c784ddb23::Aglaia::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a858b9c5542994c784ddb23::Valeriana celtica::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a858b9c5542994c784ddb23::Valeriana::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a858b9c5542994c784ddb23::Valeriana asterothrix::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a858b9c5542994c784ddb23::Aglaia",
+        "5a858b9c5542994c784ddb23::Valeriana"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a858b9c5542994c784ddb23::Aglaia::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a858b9c5542994c784ddb23::Valeriana celtica::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a858b9c5542994c784ddb23::Valeriana::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a858b9c5542994c784ddb23::Valeriana asterothrix::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a858b9c5542994c784ddb23::Valeriana asterothrix::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Valeriana asterothrix is a species of plant in the Caprifoliaceae family.\n[2] Valeriana is a genus of flowering plants in the family Caprifoliaceae, members of which may by commonly known as valerians.\n[3] Valeriana celtica is a species of plant in the Caprifoliaceae family.\n[4] Aglaia is a genus of more than 390 species belonging to the Mahogany family (Meliaceae)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Boots UK",
+  "pred_answer": "Boots UK",
+  "normalized_gold": "boots uk",
+  "normalized_pred": "boots uk",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab29e07554299194fa9346a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab29e07554299194fa9346a::Boots UK::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab29e07554299194fa9346a::Harry Smith (microbiologist)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab29e07554299194fa9346a::Worarat Suwannarat::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab29e07554299194fa9346a::Boots UK",
+        "5ab29e07554299194fa9346a::Harry Smith (microbiologist)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab29e07554299194fa9346a::Boots UK::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab29e07554299194fa9346a::Harry Smith (microbiologist)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab29e07554299194fa9346a::Worarat Suwannarat::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab29e07554299194fa9346a::Worarat Suwannarat::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] She graduated from Chulalongkorn University, Thailand and from the University of Cambridge, United Kingdom, with a Master of Philosophy.\n[2] He was born in Northampton, the son of bookmaker Harry Smith, was educated at Northampton Grammar School and earned a degree in pharmacy at University College Nottingham in 1942.\n[3] Boots UK (formerly Boots the Chemists Ltd.), trading as Boots, is a pharmacy chain in the United Kingdom, Ireland, Norway, Thailand and other territories."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

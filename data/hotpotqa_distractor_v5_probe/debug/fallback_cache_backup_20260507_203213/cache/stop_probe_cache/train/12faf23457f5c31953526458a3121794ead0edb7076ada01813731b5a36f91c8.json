@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Scotland",
+  "pred_answer": "Scotland",
+  "normalized_gold": "scotland",
+  "normalized_pred": "scotland",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77b6f35542997042120afb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77b6f35542997042120afb::Alyson Dixon::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77b6f35542997042120afb::Adriana Pirtea::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77b6f35542997042120afb::England at the 2014 Commonwealth Games::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77b6f35542997042120afb::Andries Pretorius (rugby player)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77b6f35542997042120afb::Alyson Dixon",
+        "5a77b6f35542997042120afb::England at the 2014 Commonwealth Games"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77b6f35542997042120afb::Alyson Dixon::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77b6f35542997042120afb::Adriana Pirtea::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77b6f35542997042120afb::England at the 2014 Commonwealth Games::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77b6f35542997042120afb::Andries Pretorius (rugby player)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77b6f35542997042120afb::Andries Pretorius (rugby player)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He never made his competitive debut for Worcester due to suffering a calf injury in pre-season.\n[2] England competed at the 2014 Commonwealth Games in Glasgow, Scotland.\n[3] The 2007 Chicago Marathon was the slowest women's Chicago finish since 1992 due to the heat.\n[4] She competed for England at the 2014 Commonwealth Games, but did not finish due to a calf injury."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

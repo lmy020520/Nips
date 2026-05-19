@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Andrew Johnson",
+  "pred_answer": "Andrew Johnson",
+  "normalized_gold": "andrew johnson",
+  "normalized_pred": "andrew johnson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77e5d15542995d83181325",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77e5d15542995d83181325::Hiester Clymer::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77e5d15542995d83181325::1865 State of the Union Address::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77e5d15542995d83181325::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77e5d15542995d83181325::Andrew Johnson::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a77e5d15542995d83181325::1866 State of the Union Address::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77e5d15542995d83181325::1865 State of the Union Address",
+        "5a77e5d15542995d83181325::Andrew Johnson"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77e5d15542995d83181325::Hiester Clymer::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77e5d15542995d83181325::1865 State of the Union Address::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77e5d15542995d83181325::Andrew Johnson::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a77e5d15542995d83181325::1866 State of the Union Address::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a77e5d15542995d83181325::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a77e5d15542995d83181325::1866 State of the Union Address::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It finds some solace in the consideration that he lived to enjoy the highest proof of its confidence by entering on the renewed term of the Chief Magistracy to which he had been elected; that he brought the civil war substantially to a close; that his loss was deplored in all parts of the Union, and that foreign nations have rendered justice to his memory.\"\n[2] The 1866 State of the Union Address was given by the United States' 17th President, Andrew Johnson, on Monday, December 3, 1866.\n[3] Johnson became president as he was vice president at the time of the assassination of Abraham Lincoln.\n[4] The American Civil War had ended, and now it was time for the Reconstruction era to begin.\n\nNotes:\n[bridge] Andrew Johnson became president after the assassination of Abraham Lincoln."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

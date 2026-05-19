@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "John Lennon",
+  "pred_answer": "John Lennon",
+  "normalized_gold": "john lennon",
+  "normalized_pred": "john lennon",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8531265542997b5ce3ffba",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8531265542997b5ce3ffba::I Surrender (To the Spirit of the Night)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8531265542997b5ce3ffba::True Devotion::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8531265542997b5ce3ffba::Yoko Ono::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8531265542997b5ce3ffba::Death of Samantha (song)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8531265542997b5ce3ffba::MacAlpine::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8531265542997b5ce3ffba::Yoko Ono",
+        "5a8531265542997b5ce3ffba::Death of Samantha (song)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8531265542997b5ce3ffba::I Surrender (To the Spirit of the Night)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8531265542997b5ce3ffba::True Devotion::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8531265542997b5ce3ffba::Yoko Ono::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8531265542997b5ce3ffba::Death of Samantha (song)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8531265542997b5ce3ffba::MacAlpine::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8531265542997b5ce3ffba::MacAlpine::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It was built by wealthy Baltimore attorney, James Mackubin, for his second wife, Gabriella Peter, a great-great-granddaughter of Martha Washington.\n[2] \"Death of Samantha\" is a song written by Yoko Ono and first released on her 1973 album \"Approximately Infinite Universe\".\n[3] She is noted for being the second wife and widow of singer-songwriter John Lennon of the Beatles.\n[4] The song was released as the fourth single from Samantha’s second album, \"Samantha Fox\", in 1987."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

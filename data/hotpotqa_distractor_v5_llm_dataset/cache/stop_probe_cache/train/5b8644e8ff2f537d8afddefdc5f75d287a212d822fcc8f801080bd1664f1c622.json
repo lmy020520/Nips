@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"The King and I\", \"West Side Story\", and \"My Fair Lady\"",
+  "pred_answer": "\"The King and I\", \"West Side Story\", and \"My Fair Lady\"",
+  "normalized_gold": "the king and i west side story and my fair lady",
+  "normalized_pred": "the king and i west side story and my fair lady",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf75145542995534e8c7b8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf75145542995534e8c7b8::Hello, Young Lovers (song)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf75145542995534e8c7b8::Dick Around::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf75145542995534e8c7b8::Marni Nixon::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf75145542995534e8c7b8::My Cherie Amour (album)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf75145542995534e8c7b8::Hello, Young Lovers (song)",
+        "5adf75145542995534e8c7b8::Marni Nixon"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf75145542995534e8c7b8::Hello, Young Lovers (song)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf75145542995534e8c7b8::Dick Around::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf75145542995534e8c7b8::Marni Nixon::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf75145542995534e8c7b8::My Cherie Amour (album)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf75145542995534e8c7b8::My Cherie Amour (album)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The album yielded a couple of major hits, including the title track and \"Yester-Me, Yester-You, Yesterday\", as well as Wonder's takes on the 1967 hit \"Light My Fire\" by The Doors and \"Hello, Young Lovers\" from \"The King and I\".\n[2] She was best known for dubbing the singing voices of the leading actresses in films, including \"The King and I\", \"West Side Story\", and \"My Fair Lady\".\n[3] It was the second single from \"Hello Young Lovers\", the twentieth album by the group.\n[4] \"Hello, Young Lovers\" is a show tune from the 1951 Rodgers and Hammerstein musical, \"The King and I.\""
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

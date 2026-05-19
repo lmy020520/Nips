@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Victrola",
+  "pred_answer": "Victrola",
+  "normalized_gold": "victrola",
+  "normalized_pred": "victrola",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7fa1c75542994857a7678f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7fa1c75542994857a7678f::The Saints Are Coming::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7fa1c75542994857a7678f::The Knack::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7fa1c75542994857a7678f::Victrola (song)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7fa1c75542994857a7678f::You Keep Me Hangin' On::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7fa1c75542994857a7678f::The Knack",
+        "5a7fa1c75542994857a7678f::Victrola (song)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7fa1c75542994857a7678f::The Saints Are Coming::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7fa1c75542994857a7678f::The Knack::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7fa1c75542994857a7678f::Victrola (song)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7fa1c75542994857a7678f::You Keep Me Hangin' On::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7fa1c75542994857a7678f::You Keep Me Hangin' On::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The rock band Vanilla Fudge covered the song a year later and had a top ten hit with their version.\n[2] \"Victrola\" is a single by the band Veruca Salt.\n[3] The Knack was an American rock band based in Los Angeles that rose to fame with their first single, \"My Sharona\", an international number-one hit in 1979.\n[4] The song became an international number 1 hit when it was covered in 2006 by U2 and Green Day."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

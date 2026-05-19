@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "National League",
+  "pred_answer": "National League (NL) champion team",
+  "normalized_gold": "national league",
+  "normalized_pred": "national league nl champion team",
+  "exact_match": false,
+  "context_exact_match": true,
+  "answer_match_rule": "context_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "Evidence shows Wells won the World Series with the Yankees in 1932, and the World Series is contested between the AL champion and NL champion. Thus, the opponent was the NL champion.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "Evidence shows Wells won the World Series with the Yankees in 1932, and the World Series is contested between the AL champion and NL champion. Thus, the opponent was the NL champion.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81172855429938b61422b7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81172855429938b61422b7::Ed Wells (baseball)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81172855429938b61422b7::World Series::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81172855429938b61422b7::2004 American League Championship Series::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81172855429938b61422b7::Ed Wells (baseball)",
+        "5a81172855429938b61422b7::World Series"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81172855429938b61422b7::Ed Wells (baseball)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81172855429938b61422b7::World Series::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81172855429938b61422b7::2004 American League Championship Series::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a81172855429938b61422b7::2004 American League Championship Series::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The 2004 American League Championship Series was the Major League Baseball playoff series to decide the American League champion for the 2004 season.\n[2] The World Series is the annual championship series of Major League Baseball (MLB) in North America, contested since 1903 between the American League (AL) champion team and the National League (NL) champion team.\n[3] Wells appeared in 291 major league games with a 68–69 record and won a World Series championship with the Yankees in 1932."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

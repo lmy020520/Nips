@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mikhail Kuzmin",
+  "pred_answer": "Mikhail Kuzmin",
+  "normalized_gold": "mikhail kuzmin",
+  "normalized_pred": "mikhail kuzmin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0b97855429924de1b7150",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0b97855429924de1b7150::Yury Yurkun::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0b97855429924de1b7150::Mikhail Kuzmin::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0b97855429924de1b7150::Metarealism::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0b97855429924de1b7150::Yury Yurkun",
+        "5ae0b97855429924de1b7150::Mikhail Kuzmin"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0b97855429924de1b7150::Yury Yurkun::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0b97855429924de1b7150::Mikhail Kuzmin::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0b97855429924de1b7150::Metarealism::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0b97855429924de1b7150::Metarealism::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Metarealism is a direction in Russian poetry and art that was born in the 1970s to the 1980s.\n[2] Mikhail Alekseevich Kuzmin (Russian: Михаи́л Алексе́евич Кузми́н ) (October 18 [O.S. October 6] 1872 – March 1, 1936) was a Russian poet, musician and novelist, a prominent contributor to the Silver Age of Russian Poetry.\n[3] Yury Yurkun (September 17, 1895 - September 20, 1938) was a Russian writer and painter, lover of poet Mikhail Kuzmin."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

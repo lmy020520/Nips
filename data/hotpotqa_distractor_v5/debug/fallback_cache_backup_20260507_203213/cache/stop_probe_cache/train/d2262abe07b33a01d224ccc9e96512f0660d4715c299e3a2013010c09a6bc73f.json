@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Queen of the Hurricanes",
+  "pred_answer": "Queen of the Hurricanes",
+  "normalized_gold": "queen of the hurricanes",
+  "normalized_pred": "queen of the hurricanes",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae6559655429908198fa598",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae6559655429908198fa598::Elsie MacGill::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae6559655429908198fa598::Francisca Fernández-Hall::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae6559655429908198fa598::Rosies of the North::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae6559655429908198fa598::What Engineers Know and How They Know It::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae6559655429908198fa598::Elsie MacGill",
+        "5ae6559655429908198fa598::Rosies of the North"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae6559655429908198fa598::Elsie MacGill::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae6559655429908198fa598::Francisca Fernández-Hall::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae6559655429908198fa598::Rosies of the North::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae6559655429908198fa598::What Engineers Know and How They Know It::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae6559655429908198fa598::What Engineers Know and How They Know It::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] What Engineers Know and How they Know It: Analytical Studies from Aeronautical History (The Johns Hopkins University Press, 1990) (ISBN  ) is a historical reflection on engineering practice in US aeronautics from 1908 to 1953 written by an accomplished practitioner and instructor.\n[2] It also is the story of female engineer Elsie MacGill, who became known as the \"Queen of the Hurricanes\".\n[3] She was the first woman to graduate from the Universidad de San Carlos de Guatemala, the first woman in all of Central America to earn an engineering degree, the first woman to be accepted and to attend the Instituto Militar de Engenharia of Brazil, and the first female ambassador for Guatemala.\n[4] Elizabeth Muriel Gregory \"Elsie\" MacGill, OC (March 27, 1905 – November 4, 1980), known as the \"Queen of the Hurricanes\", was the world's first woman to earn an aeronautical engineering degree and was the first woman in Canada to receive a bachelor's degree in electrical engineering."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

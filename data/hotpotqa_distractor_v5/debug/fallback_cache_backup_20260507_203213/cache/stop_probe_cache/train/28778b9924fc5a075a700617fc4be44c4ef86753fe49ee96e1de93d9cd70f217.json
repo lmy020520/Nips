@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "film director",
+  "pred_answer": "film director",
+  "normalized_gold": "film director",
+  "normalized_pred": "film director",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6ab68554299710c8d1f37",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6ab68554299710c8d1f37::George Roy Hill::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6ab68554299710c8d1f37::A Little Romance::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6ab68554299710c8d1f37::George Roy Hill::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6ab68554299710c8d1f37::Yasuzo Masumura::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab6ab68554299710c8d1f37::Ayako Wakao::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6ab68554299710c8d1f37::George Roy Hill",
+        "5ab6ab68554299710c8d1f37::Yasuzo Masumura"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6ab68554299710c8d1f37::George Roy Hill::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6ab68554299710c8d1f37::A Little Romance::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6ab68554299710c8d1f37::George Roy Hill::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6ab68554299710c8d1f37::Yasuzo Masumura::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab6ab68554299710c8d1f37::Ayako Wakao::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6ab68554299710c8d1f37::Ayako Wakao::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Contracted to Daiei Studios in 1951 as part of the fifth \"New Face\" group, she often appeared in the films of director Yasuzo Masumura.\n[2] Yasuzo Masumura (増村 保造 , Masumura Yasuzō , August 25, 1924 – November 23, 1986) was a Japanese film director.\n[3] George Roy Hill (December 20, 1921 – December 27, 2002) was an American film director.\n[4] The screenplay was written by Allan Burns and George Roy Hill, based on the novel \"E=mc Mon Amour\" by Patrick Cauvin."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

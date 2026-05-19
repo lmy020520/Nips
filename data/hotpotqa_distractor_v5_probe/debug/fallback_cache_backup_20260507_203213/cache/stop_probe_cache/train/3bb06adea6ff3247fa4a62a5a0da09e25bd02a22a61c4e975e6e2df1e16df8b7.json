@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sally Vanessa Beauman",
+  "pred_answer": "Sally Vanessa Beauman",
+  "normalized_gold": "sally vanessa beauman",
+  "normalized_pred": "sally vanessa beauman",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add4ce05542990dbb2f7e1b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add4ce05542990dbb2f7e1b::John Rewald::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add4ce05542990dbb2f7e1b::Gilbert Harding::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add4ce05542990dbb2f7e1b::Sally Beauman::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5add4ce05542990dbb2f7e1b::Sally Brampton::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add4ce05542990dbb2f7e1b::John Rewald",
+        "5add4ce05542990dbb2f7e1b::Sally Beauman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add4ce05542990dbb2f7e1b::John Rewald::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add4ce05542990dbb2f7e1b::Gilbert Harding::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add4ce05542990dbb2f7e1b::Sally Beauman::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5add4ce05542990dbb2f7e1b::Sally Brampton::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add4ce05542990dbb2f7e1b::Sally Brampton::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Sally Jane Brampton (15 July 1955 – 10 May 2016) was an English journalist, writer, and magazine editor.\n[2] Sally Vanessa Beauman (née Kinsey-Miles, 25 July 1944 – 7 July 2016) was an English journalist and writer, author of eight widely translated and best-selling novels.\n[3] Gilbert Charles Harding (5 June 1907 – 16 November 1960) was an English journalist and radio and television personality.\n[4] John Rewald (May 12, 1912 – February 2, 1994) was an American academic, author and art historian."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

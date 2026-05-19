@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The American Hairless Terrier",
+  "pred_answer": "The American Hairless Terrier",
+  "normalized_gold": "the american hairless terrier",
+  "normalized_pred": "the american hairless terrier",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a75f7db5542994ccc918670",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a75f7db5542994ccc918670::Saint-Usuge Spaniel::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a75f7db5542994ccc918670::American Russell Terrier Club::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a75f7db5542994ccc918670::American Hairless Terrier::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a75f7db5542994ccc918670::English Springer Spaniel::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a75f7db5542994ccc918670::Saint-Usuge Spaniel",
+        "5a75f7db5542994ccc918670::American Hairless Terrier"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a75f7db5542994ccc918670::Saint-Usuge Spaniel::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a75f7db5542994ccc918670::American Russell Terrier Club::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a75f7db5542994ccc918670::American Hairless Terrier::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a75f7db5542994ccc918670::English Springer Spaniel::7",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a75f7db5542994ccc918670::English Springer Spaniel::7",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 1902, The Kennel Club recognized the English Springer Spaniel as a distinct breed.\n[2] The American Hairless Terrier is a rare breed of dog that was derived as a variant of Rat Terrier.\n[3] The purpose of the early founders was to establish a registry for the perpetuation and development of the Russell Terrier as a pure strain of working Jack Russell Terrier keeping their blood and type pure within the registry to works towards Kennel Club recognition as an official breed in the US.\n[4] The Saint-Usuge Spaniel (or Épagneul de Saint-Usuge) is a breed of Spaniel originating in the Bresse region of France."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

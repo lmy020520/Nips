@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Australia",
+  "pred_answer": "Australia",
+  "normalized_gold": "australia",
+  "normalized_pred": "australia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adff69955429925eb1afba6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adff69955429925eb1afba6::Higgins Armory Museum::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adff69955429925eb1afba6::Holtermann collection::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adff69955429925eb1afba6::Hill End, New South Wales::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adff69955429925eb1afba6::Hill End, New South Wales::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adff69955429925eb1afba6::Holtermann collection",
+        "5adff69955429925eb1afba6::Hill End, New South Wales"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adff69955429925eb1afba6::Higgins Armory Museum::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adff69955429925eb1afba6::Holtermann collection::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adff69955429925eb1afba6::Hill End, New South Wales::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adff69955429925eb1afba6::Hill End, New South Wales::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adff69955429925eb1afba6::Hill End, New South Wales::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Hill End is a former gold mining town in New South Wales, Australia.\n[2] The town is located in the Bathurst Regional Council local Government area.\n[3] The Holtermann Collection is the name given to a collection of about 3,500 glass-plate negatives which mainly depicts life in the New South Wales goldfields towns of Hill End, Gulgong, Home Rule and Canadian Lead.\n[4] It was \"the only museum in the country devoted solely to arms and armor\" and had the second largest arms and armor collection in the country from its founding in 1931 until 2004, behind the Metropolitan Museum of Art in New York City."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

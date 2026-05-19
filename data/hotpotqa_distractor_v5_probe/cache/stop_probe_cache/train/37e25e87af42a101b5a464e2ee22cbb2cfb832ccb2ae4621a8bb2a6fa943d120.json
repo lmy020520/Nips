@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "His case is currently on appeal to the Supreme Court of California.",
+  "pred_answer": "His case is currently on appeal to the Supreme Court of California.",
+  "normalized_gold": "his case is currently on appeal to the supreme court of california",
+  "normalized_pred": "his case is currently on appeal to the supreme court of california",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae6a8fb5542995703ce8b83",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae6a8fb5542995703ce8b83::Murder of Laci Peterson::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae6a8fb5542995703ce8b83::Mandate (criminal law)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae6a8fb5542995703ce8b83::Scott Peterson::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae6a8fb5542995703ce8b83::Scott Peterson::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae6a8fb5542995703ce8b83::Murder of Laci Peterson",
+        "5ae6a8fb5542995703ce8b83::Scott Peterson"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae6a8fb5542995703ce8b83::Murder of Laci Peterson::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae6a8fb5542995703ce8b83::Mandate (criminal law)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae6a8fb5542995703ce8b83::Scott Peterson::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae6a8fb5542995703ce8b83::Scott Peterson::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae6a8fb5542995703ce8b83::Scott Peterson::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] His case is currently on appeal to the Supreme Court of California.\n[2] Scott Lee Peterson (born October 24, 1972) is an American former fertilizer salesman awaiting execution on death row in San Quentin State Prison, convicted of the first degree murder of his pregnant wife, Laci Peterson, and the second degree murder of their unborn son, Connor, in Modesto, California in 2002.\n[3] A criminal court may impose a \"mandate\" as part of a legal process on a person accused of a crime consisting of an obligation to engage in certain conditions or activities in exchange for suspension or reduction in penalty; such as, conditions of probation, conditional discharges, or other conditional sentences.\n[4] Laci Denise Peterson (née Rocha; May 4, 1975 December 24, 2002) was an American woman who was the subject of a highly publicized murder case after she disappeared while eight months pregnant with her first child."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

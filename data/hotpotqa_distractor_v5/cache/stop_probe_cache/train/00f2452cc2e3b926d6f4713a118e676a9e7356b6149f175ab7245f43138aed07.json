@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Stroh Brewery Company",
+  "pred_answer": "Stroh Brewery Company",
+  "normalized_gold": "stroh brewery company",
+  "normalized_pred": "stroh brewery company",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81c7535542990a1d231ea7",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81c7535542990a1d231ea7::Stroh Brewery Company::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81c7535542990a1d231ea7::P. Ballantine and Sons Brewing Company::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81c7535542990a1d231ea7::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81c7535542990a1d231ea7::Pabst Brewing Company::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a81c7535542990a1d231ea7::Falstaff Brewing Corporation::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81c7535542990a1d231ea7::Stroh Brewery Company",
+        "5a81c7535542990a1d231ea7::Pabst Brewing Company"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81c7535542990a1d231ea7::Stroh Brewery Company::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81c7535542990a1d231ea7::P. Ballantine and Sons Brewing Company::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81c7535542990a1d231ea7::Pabst Brewing Company::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a81c7535542990a1d231ea7::Falstaff Brewing Corporation::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a81c7535542990a1d231ea7::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a81c7535542990a1d231ea7::Falstaff Brewing Corporation::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Stroh Brewery Company was a beer brewery located in Detroit, Michigan.\n[2] The rights to the brand are currently owned by Pabst Brewing Company.\n[3] The Pabst Brewing Company ( ) is an American company that dates its origins to a brewing company founded in 1844 by Jacob Best and was, by 1889, named after Frederick Pabst.\n[4] The brand is currently owned and operated by Pabst Brewing Company.\n\nNotes:\n[bridge] The Stroh Brewery Company was located in Detroit, Michigan, and its brand is currently owned by Pabst Brewing Company."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Frisco, Texas",
+  "pred_answer": "Frisco, Texas",
+  "normalized_gold": "frisco texas",
+  "normalized_pred": "frisco texas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a749ce255429979e28829be",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a749ce255429979e28829be::2016 FC Dallas season::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a749ce255429979e28829be::Toyota Stadium (Texas)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a749ce255429979e28829be::Toyota Stadium (Texas)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a749ce255429979e28829be::2016 FC Dallas season",
+        "5a749ce255429979e28829be::Toyota Stadium (Texas)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a749ce255429979e28829be::2016 FC Dallas season::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a749ce255429979e28829be::Toyota Stadium (Texas)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a749ce255429979e28829be::Toyota Stadium (Texas)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a749ce255429979e28829be::Toyota Stadium (Texas)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Toyota Stadium is a soccer-specific stadium with a 18,000-seat capacity, built and owned by the city of Frisco, Texas.\n[2] Its primary tenants are Major League Soccer (MLS) team FC Dallas, which relocated from the Cotton Bowl in central Dallas, and Frisco Independent School District high school football games.\n[3] The club played its home games at Toyota Stadium for the 12th straight year."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

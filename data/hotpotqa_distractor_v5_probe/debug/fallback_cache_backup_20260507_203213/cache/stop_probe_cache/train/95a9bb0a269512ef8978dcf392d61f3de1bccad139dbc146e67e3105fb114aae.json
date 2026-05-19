@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Betty Ting Pei",
+  "pred_answer": "Betty Ting Pei",
+  "normalized_gold": "betty ting pei",
+  "normalized_pred": "betty ting pei",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81cfaa55429926c1cdad88",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81cfaa55429926c1cdad88::Frank Sibbles::7"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81cfaa55429926c1cdad88::Brigitte Lin::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81cfaa55429926c1cdad88::Betty Ting::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81cfaa55429926c1cdad88::Bruce Lee and I::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a81cfaa55429926c1cdad88::Enter the Dragon::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81cfaa55429926c1cdad88::Betty Ting",
+        "5a81cfaa55429926c1cdad88::Bruce Lee and I"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81cfaa55429926c1cdad88::Frank Sibbles::7",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81cfaa55429926c1cdad88::Brigitte Lin::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81cfaa55429926c1cdad88::Betty Ting::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a81cfaa55429926c1cdad88::Bruce Lee and I::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a81cfaa55429926c1cdad88::Enter the Dragon::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a81cfaa55429926c1cdad88::Enter the Dragon::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] This was Bruce Lee's final film appearance before his death on 20 July 1973 at age 32.\n[2] The film is based on Bruce Lee's last days leading up to his death in Pei's apartment at Hong Kong on 20 July 1973.\n[3] Betty Ting Pei (; born 19 February 1947) is a Taiwanese actress who was active in 1970s.\n[4] She was a popular actress, regarded as an icon of Chinese cinema, who acted in both Taiwanese and Hong Kong films."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

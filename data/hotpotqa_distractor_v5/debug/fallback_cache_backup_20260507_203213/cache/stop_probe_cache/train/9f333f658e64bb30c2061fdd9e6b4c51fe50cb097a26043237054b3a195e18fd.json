@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "4 km",
+  "pred_answer": "4 km",
+  "normalized_gold": "4 km",
+  "normalized_pred": "4 km",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab444c35542991779162c48",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab444c35542991779162c48::New York City Center::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab444c35542991779162c48::City Center at White Plains::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab444c35542991779162c48::Geneva Airport::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab444c35542991779162c48::PrivatAir::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab444c35542991779162c48::Halizones::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab444c35542991779162c48::Geneva Airport",
+        "5ab444c35542991779162c48::PrivatAir"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab444c35542991779162c48::New York City Center::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab444c35542991779162c48::City Center at White Plains::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab444c35542991779162c48::Geneva Airport::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab444c35542991779162c48::PrivatAir::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab444c35542991779162c48::Halizones::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab444c35542991779162c48::Halizones::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] According to Homer, the Halizones came from \"Alybe far away, where is the birth-place of silver...\" Strabo (in his \"Geography\") speculates that \"Alybe far away\" may originally have read as \"Chalybe far away\", and he suggests that the Halizones may have been Chalybes, as well as Khaldi.\n[2] It operates scheduled services for other airlines as well as charter flights for corporations and VIPs.\n[3] It is located 4 km northwest of the city centre.\n[4] The City Center has also become a known spot where members of the New York Knicks hang out during their time off since their practice facility is in Greenburgh, New York, which is just 14 minutes away."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

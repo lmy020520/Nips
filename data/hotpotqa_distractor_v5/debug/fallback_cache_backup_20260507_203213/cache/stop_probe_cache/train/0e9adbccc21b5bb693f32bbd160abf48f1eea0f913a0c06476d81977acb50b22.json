@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Tablas de Daimiel National Park",
+  "pred_answer": "Tablas de Daimiel National Park",
+  "normalized_gold": "tablas de daimiel national park",
+  "normalized_pred": "tablas de daimiel national park",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77047c5542993569682ca3",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77047c5542993569682ca3::Atlantic Islands of Galicia National Park::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77047c5542993569682ca3::Tablas de Daimiel National Park::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77047c5542993569682ca3::Sálvora::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77047c5542993569682ca3::Atlantic Islands of Galicia National Park",
+        "5a77047c5542993569682ca3::Tablas de Daimiel National Park"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77047c5542993569682ca3::Atlantic Islands of Galicia National Park::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77047c5542993569682ca3::Tablas de Daimiel National Park::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77047c5542993569682ca3::Sálvora::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77047c5542993569682ca3::Sálvora::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It belongs to the municipality of Santa Uxía de Ribeira and is integrated in the Atlantic Islands of Galicia National Park.\n[2] Tablas de Daimiel National Park (\"Parque Nacional de las Tablas de Daimiel\") is a wetland on the La Mancha plain, a mainly arid area in the province of Ciudad Real.\n[3] The Atlantic Islands of Galicia National Park (Galician: \"Parque Nacional das Illas Atlánticas de Galicia\" , Spanish: \"Parque Nacional de las Islas Atlánticas de Galicia\" ) is the only national park located in the autonomous community of Galicia, Spain."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

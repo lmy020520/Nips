@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Netflix",
+  "pred_answer": "Netflix",
+  "normalized_gold": "netflix",
+  "normalized_pred": "netflix",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3b3f15542992f92d82348",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3b3f15542992f92d82348::The Social Network::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3b3f15542992f92d82348::List of Primetime Emmy Awards received by Netflix::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3b3f15542992f92d82348::Happy Anderson::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae3b3f15542992f92d82348::Mindhunter (TV series)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae3b3f15542992f92d82348::JoJoHead::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3b3f15542992f92d82348::Happy Anderson",
+        "5ae3b3f15542992f92d82348::Mindhunter (TV series)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3b3f15542992f92d82348::The Social Network::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3b3f15542992f92d82348::List of Primetime Emmy Awards received by Netflix::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3b3f15542992f92d82348::Happy Anderson::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae3b3f15542992f92d82348::Mindhunter (TV series)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae3b3f15542992f92d82348::JoJoHead::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3b3f15542992f92d82348::JoJoHead::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] JoJoHead is a 2016 American comedy web series written and created by Johanna Stein, which debuted on October 14, 2016, on The CW's online streaming platform, CW Seed.\n[2] Mindhunter is an American drama web television series slated to debut on October 13, 2017, on Netflix.\n[3] Happy Anderson (born November 19, 1976 in High Falls, New York) is an American actor who has worked in film, television, on and off Broadway.\n[4] Netflix is an American on-demand internet streaming media provider."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

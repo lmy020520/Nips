@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Kansas",
+  "pred_answer": "Kansas",
+  "normalized_gold": "kansas",
+  "normalized_pred": "kansas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abcff3a5542992ac4f3818c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abcff3a5542992ac4f3818c::Darlington Agency::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abcff3a5542992ac4f3818c::Hart-Montague Trail State Park::7"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abcff3a5542992ac4f3818c::Chisholm Trail::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abcff3a5542992ac4f3818c::John Homer Seger::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abcff3a5542992ac4f3818c::Darlington Agency",
+        "5abcff3a5542992ac4f3818c::Chisholm Trail"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abcff3a5542992ac4f3818c::Darlington Agency::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abcff3a5542992ac4f3818c::Hart-Montague Trail State Park::7",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abcff3a5542992ac4f3818c::Chisholm Trail::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abcff3a5542992ac4f3818c::John Homer Seger::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abcff3a5542992ac4f3818c::John Homer Seger::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 1872, Seger took a position as a mason and carpenter for a new school at the Darlington Agency on the Cheyenne-Arapaho Indian Reservation in what was then the Indian Territory.\n[2] The Chisholm Trail was a trail used in the post-Civil War era to drive cattle overland, from ranches in Texas to Kansas railheads.\n[3] There is a bicycle rental shop on Thompson St in Montague in the south, a repair shop right off the trail in Mears as well as another rental shop on Silver Lake Rd in Mears several miles away from the northern section of the trail.\n[4] The agency gained a post office and an Indian school run by John Homer Seger, and it became a stop on the Chisholm Trail."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1869",
+  "pred_answer": "1869",
+  "normalized_gold": "1869",
+  "normalized_pred": "1869",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc9b6a5542990d50227cbe",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc9b6a5542990d50227cbe::Sainsbury's::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc9b6a5542990d50227cbe::Sainsbury family::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc9b6a5542990d50227cbe::Mary Ann Sainsbury::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc9b6a5542990d50227cbe::Edmund and Mary Ann Walworth Booth House::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc9b6a5542990d50227cbe::Sainsbury's",
+        "5adc9b6a5542990d50227cbe::Mary Ann Sainsbury"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc9b6a5542990d50227cbe::Sainsbury's::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc9b6a5542990d50227cbe::Sainsbury family::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc9b6a5542990d50227cbe::Mary Ann Sainsbury::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc9b6a5542990d50227cbe::Edmund and Mary Ann Walworth Booth House::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc9b6a5542990d50227cbe::Edmund and Mary Ann Walworth Booth House::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] His wife Mary Ann was born in Connecticut and she was also four when she contracted meningitis, but lost all of her hearing at that time.\n[2] Mary Ann Sainsbury (\"née\" Staples; 30 June 1849 - 9 June 1927) was the wife of John James Sainsbury, the founder of the Sainsbury's supermarket chain.\n[3] The Sainsbury family (also Lord Sainsbury and family and incorrectly the Sainsbury's family) founded Sainsbury's, the UK's second-largest supermarket chain.\n[4] Founded in 1869, by John James Sainsbury with a shop in Drury Lane, London, the company became the largest grocery retailer in 1922, was an early adopter of self-service retailing in the United Kingdom, and had its heyday during the 1980s."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

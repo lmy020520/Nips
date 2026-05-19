@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Webb County,",
+  "pred_answer": "Webb County,",
+  "normalized_gold": "webb county",
+  "normalized_pred": "webb county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2a33a554299657fa28ff9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2a33a554299657fa28ff9::Jovita Idár::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2a33a554299657fa28ff9::Ridgefield Township, New Jersey::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2a33a554299657fa28ff9::Laredo, Texas::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2a33a554299657fa28ff9::Michael F. Nozzolio::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2a33a554299657fa28ff9::Jovita Idár",
+        "5ac2a33a554299657fa28ff9::Laredo, Texas"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2a33a554299657fa28ff9::Jovita Idár::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2a33a554299657fa28ff9::Ridgefield Township, New Jersey::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2a33a554299657fa28ff9::Laredo, Texas::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2a33a554299657fa28ff9::Michael F. Nozzolio::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2a33a554299657fa28ff9::Michael F. Nozzolio::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 54th district includes parts of the city of Auburn, New York, Geneva, New York, and part or all of the following counties, Wayne County, Ontario County, Cayuga County, Tompkins County, Seneca County, and Monroe County.\n[2] Laredo ( ; ] ) is the county seat of Webb County, Texas, United States, located on the north bank of the Rio Grande in South Texas, across from Nuevo Laredo, Tamaulipas, Mexico.\n[3] As described in the 1882 book, \"History of Bergen and Passaic counties, New Jersey,\" \"Ridgefield is the first township in Bergen County which the traveler enters in passing up the Palisades.\n[4] Jovita Idár (September 7, 1885 – June 15, 1946) was an American journalist, political activist and civil rights worker, born in Laredo, Texas in 1885."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

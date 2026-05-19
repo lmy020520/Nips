@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Arthur T. Gregorian",
+  "pred_answer": "Arthur T. Gregorian",
+  "normalized_gold": "arthur t gregorian",
+  "normalized_pred": "arthur t gregorian",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a5db755429941d65f25de",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a5db755429941d65f25de::Hampar Kelikian::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a5db755429941d65f25de::Arthur T. Gregorian::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a5db755429941d65f25de::Thermoplastic elastomer::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a5db755429941d65f25de::Hampar Kelikian",
+        "5a7a5db755429941d65f25de::Arthur T. Gregorian"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a5db755429941d65f25de::Hampar Kelikian::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a5db755429941d65f25de::Arthur T. Gregorian::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a5db755429941d65f25de::Thermoplastic elastomer::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a5db755429941d65f25de::Thermoplastic elastomer::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The benefit of using thermoplastic elastomers is the ability to stretch to moderate elongations and return to its near original shape creating a longer life and better physical range than other materials.\n[2] Arthur T. Gregorian, (1909 – January 14, 2003), was a Greater Boston oriental rug dealer and author of books on oriental rugs, and considered to be the world's leading collector of rare, inscribed Armenian rugs.\n[3] Hampar Kelikian (January 17, 1899 – July 24, 1983) was a maverick orthopedic surgeon, who significantly extended the surgical field."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

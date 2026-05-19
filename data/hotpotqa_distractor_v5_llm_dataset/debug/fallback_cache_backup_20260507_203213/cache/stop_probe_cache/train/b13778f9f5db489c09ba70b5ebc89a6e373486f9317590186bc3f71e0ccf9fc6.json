@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "50",
+  "pred_answer": "50",
+  "normalized_gold": "50",
+  "normalized_pred": "50",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a82529855429940e5e1a84a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a82529855429940e5e1a84a::Catherine Grandison, Countess of Salisbury::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a82529855429940e5e1a84a::John de Montagu, 1st Baron Montagu::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a82529855429940e5e1a84a::Edward III of England::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a82529855429940e5e1a84a::History of Lacock::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a82529855429940e5e1a84a::Catherine Grandison, Countess of Salisbury",
+        "5a82529855429940e5e1a84a::Edward III of England"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a82529855429940e5e1a84a::Catherine Grandison, Countess of Salisbury::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a82529855429940e5e1a84a::John de Montagu, 1st Baron Montagu::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a82529855429940e5e1a84a::Edward III of England::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a82529855429940e5e1a84a::History of Lacock::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a82529855429940e5e1a84a::History of Lacock::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The village's main attraction Lacock Abbey was founded on the manorial lands by Ela, Countess of Salisbury and established in 1232; in the reign of King Henry III.\n[2] His long reign of 50 years was the second longest in medieval England and saw vital developments in legislation and government—in particular the evolution of the English parliament—as well as the ravages of the Black Death.\n[3] He was the son of William Montagu, 1st Earl of Salisbury by his wife Catherine Grandison, and younger brother of William de Montacute, 2nd Earl of Salisbury (1328–1397).\n[4] Catherine Grandison, Countess of Salisbury (c. 1304 – 23 November 1349) was an English noblewoman, remembered for her relationship with King Edward III of England and possibly the woman in whose honour the Order of the Garter was originated."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

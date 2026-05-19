@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Howard the Duck",
+  "pred_answer": "Howard the Duck",
+  "normalized_gold": "howard the duck",
+  "normalized_pred": "howard the duck",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8e1df055429917b4a5bd26",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8e1df055429917b4a5bd26::Time Travelers (1976 film)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8e1df055429917b4a5bd26::Howard the Duck (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8e1df055429917b4a5bd26::Jordan Prentice::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8e1df055429917b4a5bd26::Time Travelers (1976 film)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8e1df055429917b4a5bd26::Howard the Duck (film)",
+        "5a8e1df055429917b4a5bd26::Jordan Prentice"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8e1df055429917b4a5bd26::Time Travelers (1976 film)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8e1df055429917b4a5bd26::Howard the Duck (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8e1df055429917b4a5bd26::Jordan Prentice::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8e1df055429917b4a5bd26::Time Travelers (1976 film)::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8e1df055429917b4a5bd26::Time Travelers (1976 film)::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The film was originally produced by Irwin Allen to be a remake of the 1960s series \"The Time Tunnel\" which ran only one season.\n[2] He was also one of the actors to play \"Howard the Duck\".\n[3] Howard the Duck (titled Howard: A New Breed of Hero in the UK) is a 1986 American science-fiction comedy film directed by Willard Huyck and starring Chip Zien, Lea Thompson, Jeffrey Jones, and Tim Robbins.\n[4] The teleplay was written by Jackson Gillis from a story by Charles Willard Byrd."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

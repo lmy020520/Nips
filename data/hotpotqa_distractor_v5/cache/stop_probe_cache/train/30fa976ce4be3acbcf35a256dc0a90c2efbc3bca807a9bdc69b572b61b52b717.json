@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "The F Word",
+  "pred_answer": "The F Word",
+  "normalized_gold": "the f word",
+  "normalized_pred": "the f word",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a736d7b55429901807db04b",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a736d7b55429901807db04b::Zoe Kazan::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a736d7b55429901807db04b::List of Amy Adams performances::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a736d7b55429901807db04b::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a736d7b55429901807db04b::The F Word (2013 film)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a736d7b55429901807db04b::Zoe Kazan::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a736d7b55429901807db04b::Zoe Kazan",
+        "5a736d7b55429901807db04b::The F Word (2013 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a736d7b55429901807db04b::Zoe Kazan::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a736d7b55429901807db04b::List of Amy Adams performances::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a736d7b55429901807db04b::The F Word (2013 film)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a736d7b55429901807db04b::Zoe Kazan::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a736d7b55429901807db04b::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a736d7b55429901807db04b::Zoe Kazan::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] is a 2013 Canadian romantic comedy film directed by Michael Dowse and written by Elan Mastai, based on TJ Dawe and Michael Rinaldi's play \"Toothpaste and Cigars\".\n[2] In 2014, she starred in the film \"What If\" and the HBO mini-series \"Olive Kitteridge\", for which she received an Emmy nomination.\n[3] Zoe Swicord Kazan (born September 9, 1983) is an American actress and playwright.\n[4] In 2007, she starred in the Disney romantic comedy \"Enchanted\", for which she won the Saturn Award for Best Actress, and was nominated for her first Golden Globe Award for Best Actress (Comedy or Musical).\n\nNotes:\n[bridge] Zoe Kazan starred in the 2013 Canadian romantic comedy film The F Word."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

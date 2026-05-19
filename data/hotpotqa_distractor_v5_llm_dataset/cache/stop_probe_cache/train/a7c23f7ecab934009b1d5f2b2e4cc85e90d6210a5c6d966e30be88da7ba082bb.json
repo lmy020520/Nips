@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "E. E. Cummings",
+  "pred_answer": "E. E. Cummings",
+  "normalized_gold": "e e cummings",
+  "normalized_pred": "e e cummings",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d45f55542990b8f503973",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d45f55542990b8f503973::E. E. Cummings::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d45f55542990b8f503973::Place Called Estherville::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d45f55542990b8f503973::Duell, Sloan and Pearce::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7d45f55542990b8f503973::The Techniques of Democracy::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d45f55542990b8f503973::E. E. Cummings",
+        "5a7d45f55542990b8f503973::Duell, Sloan and Pearce"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d45f55542990b8f503973::E. E. Cummings::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d45f55542990b8f503973::Place Called Estherville::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d45f55542990b8f503973::Duell, Sloan and Pearce::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7d45f55542990b8f503973::The Techniques of Democracy::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d45f55542990b8f503973::The Techniques of Democracy::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was published in 1942 by New York City publishers Duell, Sloan and Pearce.\n[2] It published works by many prominent authors, including Archibald MacLeish, John O'Hara, Erskine Caldwell (including his American Folkways series) Anaïs Nin, Conrad Aiken, Wallace Stegner, E. E. Cummings, Howard Fast, Benjamin Spock and Joseph Jay Deiss.\n[3] The book was first published in 1949 by Duell, Sloan & Pearce and later published in paperback by Signet Books.\n[4] He wrote approximately 2,900 poems; two autobiographical novels; four plays and several essays."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

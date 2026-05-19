@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sari Feldman",
+  "pred_answer": "Sari Feldman",
+  "normalized_gold": "sari feldman",
+  "normalized_pred": "sari feldman",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7ef66554299540e5a56ba",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7ef66554299540e5a56ba::Courtney Young (librarian)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7ef66554299540e5a56ba::Walter Lewis Brown::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7ef66554299540e5a56ba::Sari Feldman::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae7ef66554299540e5a56ba::Joseph Henry Reason::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7ef66554299540e5a56ba::Courtney Young (librarian)",
+        "5ae7ef66554299540e5a56ba::Sari Feldman"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7ef66554299540e5a56ba::Courtney Young (librarian)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7ef66554299540e5a56ba::Walter Lewis Brown::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7ef66554299540e5a56ba::Sari Feldman::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae7ef66554299540e5a56ba::Joseph Henry Reason::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7ef66554299540e5a56ba::Joseph Henry Reason::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He was the first African-American to serve as president of the Association of College and Research Libraries (ACRL) and to be nominated for president of the American Library Association (ALA).\n[2] Sari Feldman (born in South Fallsburg, N.Y) is an American librarian.\n[3] Brown served as President of the American Library Association from 1916 to 1917.\n[4] Courtney Young is an American librarian and scholar, who served as the President of the American Library Association for the 2014–2015 year."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

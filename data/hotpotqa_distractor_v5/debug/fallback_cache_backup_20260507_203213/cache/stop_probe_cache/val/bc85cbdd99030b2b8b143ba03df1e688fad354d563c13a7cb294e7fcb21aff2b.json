@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The London Connection",
+  "pred_answer": "The London Connection",
+  "normalized_gold": "the london connection",
+  "normalized_pred": "the london connection",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3fc0d5542992f92d823a9",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3fc0d5542992f92d823a9::The London Connection::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3fc0d5542992f92d823a9::The Light in the Forest (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3fc0d5542992f92d823a9::Minah Bird::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3fc0d5542992f92d823a9::The London Connection",
+        "5ae3fc0d5542992f92d823a9::The Light in the Forest (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3fc0d5542992f92d823a9::The London Connection::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3fc0d5542992f92d823a9::The Light in the Forest (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3fc0d5542992f92d823a9::Minah Bird::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3fc0d5542992f92d823a9::Minah Bird::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] After appearing in such films as \"Up Pompeii\" (1971), \"Four Dimensions of Greta\" (1972), \"The Love Box\" (1972), \"Layout for 5 Models\" (1972), \"Percy's Progress\" (1974), \"Vampira\" (1974), \"Alfie Darling\" (1976), \"The Stud\" (1978), \"The London Connection\" (1979) and \"A Nightingale Sang in Berkeley Square\" (1979), she vanished from public view from the late 1970s and was found dead in her London coun\n[2] The Light in the Forest is a 1958 film based on a novel of the same name first published in 1953 by U.S. author Conrad Richter.\n[3] It stars Jeffrey Byron and Larry Cedar."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

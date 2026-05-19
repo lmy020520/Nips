@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Drexciya",
+  "pred_answer": "Drexciya",
+  "normalized_gold": "drexciya",
+  "normalized_pred": "drexciya",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2663a554299449642c891",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2663a554299449642c891::Gerald Donald::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2663a554299449642c891::Dopplereffekt::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2663a554299449642c891::Drexciya::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab2663a554299449642c891::Ammunition (Krewella EP)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2663a554299449642c891::Gerald Donald",
+        "5ab2663a554299449642c891::Drexciya"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2663a554299449642c891::Gerald Donald::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2663a554299449642c891::Dopplereffekt::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2663a554299449642c891::Drexciya::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab2663a554299449642c891::Ammunition (Krewella EP)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2663a554299449642c891::Ammunition (Krewella EP)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Ammunition is the third extended play by American electronic music duo Krewella.\n[2] Drexciya was an American electronic music duo from Detroit, Michigan, consisting of James Stinson (1969 - 2002) and Gerald Donald.\n[3] Dopplereffekt is an electronic music act from Detroit which has been active since 1995, and whose main member is Gerald Donald.\n[4] With James Stinson he formed the afrofuturist techno duo Drexciya, and he is the main member of Dopplereffekt."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

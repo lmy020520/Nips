@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "A. E. Housman",
+  "pred_answer": "A. E. Housman",
+  "normalized_gold": "a e housman",
+  "normalized_pred": "a e housman",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a78fc2155429974737f7935",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a78fc2155429974737f7935::When I Was One-and-Twenty::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a78fc2155429974737f7935::A. E. Housman::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a78fc2155429974737f7935::Jaroslav Seifert::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a78fc2155429974737f7935::Paul Heyse::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a78fc2155429974737f7935::A. E. Housman",
+        "5a78fc2155429974737f7935::Jaroslav Seifert"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a78fc2155429974737f7935::When I Was One-and-Twenty::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a78fc2155429974737f7935::A. E. Housman::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a78fc2155429974737f7935::Jaroslav Seifert::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a78fc2155429974737f7935::Paul Heyse::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a78fc2155429974737f7935::Paul Heyse::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He was awarded the Nobel Prize for Literature in 1910 \"as a tribute to the consummate artistry, permeated with idealism, which he has demonstrated during his long productive career as a lyric poet, dramatist, novelist and writer of world-renowned short stories.\"\n[2] Jaroslav Seifert (] ; 23 September 1901 – 10 January 1986) was a Nobel Prize–winning Czechoslovak writer, poet and journalist.\n[3] Alfred Edward Housman ( ; 26 March 1859 – 30 April 1936), usually known as A. E. Housman, was an English classical scholar and poet, best known to the general public for his cycle of poems \"A Shropshire Lad\".\n[4] When I Was One-and-Twenty, or Poem XIII, is the informal name of an untitled poem by A. E. Housman, published in \"A Shropshire Lad\" in 1896."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

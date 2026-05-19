@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Betty Everett",
+  "pred_answer": "Betty Everett",
+  "normalized_gold": "betty everett",
+  "normalized_pred": "betty everett",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b13c555429949d91db4a6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b13c555429949d91db4a6::The Shoop Shoop Song (It's in His Kiss)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b13c555429949d91db4a6::You're No Good::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b13c555429949d91db4a6::Betty Everett::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8b13c555429949d91db4a6::Kate Taylor (album)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b13c555429949d91db4a6::You're No Good",
+        "5a8b13c555429949d91db4a6::Betty Everett"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b13c555429949d91db4a6::The Shoop Shoop Song (It's in His Kiss)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b13c555429949d91db4a6::You're No Good::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b13c555429949d91db4a6::Betty Everett::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8b13c555429949d91db4a6::Kate Taylor (album)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b13c555429949d91db4a6::Kate Taylor (album)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The album included Taylor's sole chart single: her version of \"It's in His Kiss (The Shoop Shoop Song)\", recorded in August 1977 to peak at number 49 that autumn; the \"Kate Taylor\" album also introduced the singer's remakes of \"A Fool in Love\", \"It's Growin'\" and \"Stubborn Kind of Woman\" (originally \"Stubborn Kind of Fellow\"); the track \"It's Growin'\" was issued as a single in July 1978.\n[2] Betty Everett (November 23, 1939 – August 19, 2001) was an American soul singer and pianist, best known for her biggest hit single, the million-selling \"The Shoop Shoop Song (It's in His Kiss)\".\n[3] \"You're No Good\" is a song written by Clint Ballard, Jr., first performed by Dee Dee Warwick for Jubilee Records in 1963 with production by Jerry Leiber and Mike Stoller.\n[4] \"The Shoop Shoop Song (It's in His Kiss)\" is a song written and composed by Rudy Clark."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

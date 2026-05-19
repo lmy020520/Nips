@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "PPG Paints Arena",
+  "pred_answer": "PPG Paints Arena",
+  "normalized_gold": "ppg paints arena",
+  "normalized_pred": "ppg paints arena",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8037815542996402f6a482",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8037815542996402f6a482::Žalgiris Arena::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8037815542996402f6a482::Arena Stožice::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8037815542996402f6a482::PPG Paints Arena::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8037815542996402f6a482::Pennsylvania Route 380::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8037815542996402f6a482::U.S. Route 380::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8037815542996402f6a482::PPG Paints Arena",
+        "5a8037815542996402f6a482::Pennsylvania Route 380"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8037815542996402f6a482::Žalgiris Arena::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8037815542996402f6a482::Arena Stožice::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8037815542996402f6a482::PPG Paints Arena::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8037815542996402f6a482::Pennsylvania Route 380::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8037815542996402f6a482::U.S. Route 380::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8037815542996402f6a482::U.S. Route 380::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Its western terminus is at San Antonio, New Mexico, south of Socorro at an intersection with Interstate 25.\n[2] The western terminus of the route is at Interstate 579 in downtown Pittsburgh near PPG Paints Arena.\n[3] PPG Paints Arena is a multi-purpose indoor arena in Pittsburgh, Pennsylvania that serves as home to the Pittsburgh Penguins of the National Hockey League (NHL), and was the home of the Pittsburgh Power of the Arena Football League (AFL) from 2011 to 2014.\n[4] The Stožice Arena (Slovene: \"Arena Stožice\" ) is a multi-purpose indoor arena located in Ljubljana, Slovenia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

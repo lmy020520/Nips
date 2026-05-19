@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "rare Danish breed of cattle",
+  "pred_answer": "rare Danish breed of cattle",
+  "normalized_gold": "rare danish breed of cattle",
+  "normalized_pred": "rare danish breed of cattle",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b60855542992d025e6836",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b60855542992d025e6836::Piebald::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b60855542992d025e6836::Jutland cattle::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b60855542992d025e6836::Shorthorn::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b60855542992d025e6836::Piebald",
+        "5a7b60855542992d025e6836::Jutland cattle"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b60855542992d025e6836::Piebald::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b60855542992d025e6836::Jutland cattle::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b60855542992d025e6836::Shorthorn::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b60855542992d025e6836::Shorthorn::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The breed was developed as dual-purpose, suitable for both dairy and beef production; however, certain blood lines within the breed always emphasised one quality or the other.\n[2] Jutland cattle are a rare Danish breed of cattle used in both dairy and beef production.\n[3] A piebald or pied animal is one that has a pattern of pigmented spots on an unpigmented (white) background of hair, feathers or scales."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

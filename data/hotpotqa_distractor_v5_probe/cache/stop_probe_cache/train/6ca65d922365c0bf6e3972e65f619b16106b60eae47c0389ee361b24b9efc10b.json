@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Whitewater Canal",
+  "pred_answer": "Whitewater Canal",
+  "normalized_gold": "whitewater canal",
+  "normalized_pred": "whitewater canal",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab3b64955429969a97a818d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab3b64955429969a97a818d::Lock No. 1, North New River Canal::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab3b64955429969a97a818d::Enlarged Double Lock No. 23, Old Erie Canal::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab3b64955429969a97a818d::Whitewater Canal::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab3b64955429969a97a818d::Pennsylvania Canal (Susquehanna Division)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab3b64955429969a97a818d::Lock No. 1, North New River Canal",
+        "5ab3b64955429969a97a818d::Whitewater Canal"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab3b64955429969a97a818d::Lock No. 1, North New River Canal::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab3b64955429969a97a818d::Enlarged Double Lock No. 23, Old Erie Canal::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab3b64955429969a97a818d::Whitewater Canal::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab3b64955429969a97a818d::Pennsylvania Canal (Susquehanna Division)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab3b64955429969a97a818d::Pennsylvania Canal (Susquehanna Division)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Meeting the West Branch Canal and the North Branch Canal at Northumberland, it formed a link between the public and private canals upriver and the main east–west Pennsylvania Canal route known as the Main Line of Public Works which was devised to connect Philadelphia to Pittsburgh, southern New York, northern Pennsylvania and Lake Erie using most of the far reaches of the Susquehanna's tributaries\n[2] The Whitewater Canal, which was built between 1836 and 1847, spanned a distance of seventy-six miles and stretched from Lawrenceburg, Indiana on the Ohio River to Hagerstown, Indiana.\n[3] Enlarged Double Lock No. 23, Old Erie Canal is a historic Erie canal lock located at Rotterdam in Schenectady County, New York.\n[4] Lock No. 1, North New River Canal (also known as Sewall Lock or Davie-Sewall Lock or Lock #4, North New River Canal) which opened in 1912 is a historic lock located between Davie and Plantation, Florida, United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

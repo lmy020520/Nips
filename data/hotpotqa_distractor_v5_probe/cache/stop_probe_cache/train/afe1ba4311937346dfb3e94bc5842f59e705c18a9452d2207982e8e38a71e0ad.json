@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Seatuck National Wildlife Refuge",
+  "pred_answer": "Seatuck National Wildlife Refuge",
+  "normalized_gold": "seatuck national wildlife refuge",
+  "normalized_pred": "seatuck national wildlife refuge",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1821155429901ffe4aedc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1821155429901ffe4aedc::Wertheim National Wildlife Refuge::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1821155429901ffe4aedc::Seatuck National Wildlife Refuge::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1821155429901ffe4aedc::Islip (hamlet), New York::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae1821155429901ffe4aedc::Nomans Land Island National Wildlife Refuge::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1821155429901ffe4aedc::Seatuck National Wildlife Refuge",
+        "5ae1821155429901ffe4aedc::Islip (hamlet), New York"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1821155429901ffe4aedc::Wertheim National Wildlife Refuge::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1821155429901ffe4aedc::Seatuck National Wildlife Refuge::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1821155429901ffe4aedc::Islip (hamlet), New York::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae1821155429901ffe4aedc::Nomans Land Island National Wildlife Refuge::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1821155429901ffe4aedc::Nomans Land Island National Wildlife Refuge::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Nomans Land Island Wildlife Refuge is a United States National Wildlife Refuge located on Nomans Land, a 640 acre island off the coast of Martha's Vineyard in Massachusetts.\n[2] Islip ( is a hamlet and census-designated place (CDP) that lies within the much larger Town of Islip in Suffolk County, New York.\n[3] Seatuck National Wildlife Refuge is located in the hamlet of Islip, New York, on the south shore of Long Island.\n[4] The Wertheim National Wildlife Refuge is located on the south shore of Long Island and is one of the undeveloped estuary systems on Long Island."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

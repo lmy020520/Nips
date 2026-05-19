@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Standing Rock Indian Reservation",
+  "pred_answer": "Standing Rock Indian Reservation",
+  "normalized_gold": "standing rock indian reservation",
+  "normalized_pred": "standing rock indian reservation",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8bb4345542996e8ac889ea",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8bb4345542996e8ac889ea::James McLaughlin (Indian agent)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8bb4345542996e8ac889ea::Black Hawk (artist)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8bb4345542996e8ac889ea::Sitting Bull::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8bb4345542996e8ac889ea::One Bull::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8bb4345542996e8ac889ea::James McLaughlin (Indian agent)",
+        "5a8bb4345542996e8ac889ea::Sitting Bull"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8bb4345542996e8ac889ea::James McLaughlin (Indian agent)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8bb4345542996e8ac889ea::Black Hawk (artist)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8bb4345542996e8ac889ea::Sitting Bull::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8bb4345542996e8ac889ea::One Bull::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8bb4345542996e8ac889ea::One Bull::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Henry Oscar One Bull (Lakota: \"Tȟatȟáŋka Waŋžíla\" in Standard Lakota Orthography) (circa 1853-1947) was a Lakota Sioux man best known for being the nephew and adopted son of the holy man, Sitting Bull.\n[2] He was killed by Indian agency police on the Standing Rock Indian Reservation during an attempt to arrest him, at a time when authorities feared that he would join the Ghost Dance movement.\n[3] He is most known for a series of 76 drawings that were later bound into a ledger book that depicts scenes of Lakota life and rituals.\n[4] James McLaughlin (1842–1923) was a Canadian-American United States Indian agent and inspector, best known for having ordered the arrest of Sitting Bull in December 1890, which resulted in the chief's death."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

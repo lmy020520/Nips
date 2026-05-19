@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Alan Moore and David Lloyd",
+  "pred_answer": "Alan Moore and David Lloyd",
+  "normalized_gold": "alan moore and david lloyd",
+  "normalized_pred": "alan moore and david lloyd",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f868f55429918e830d24f",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f868f55429918e830d24f::Evey Hammond::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f868f55429918e830d24f::V (comics)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f868f55429918e830d24f::Faith (Buffy the Vampire Slayer)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f868f55429918e830d24f::Evey Hammond",
+        "5a8f868f55429918e830d24f::V (comics)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f868f55429918e830d24f::Evey Hammond::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f868f55429918e830d24f::V (comics)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f868f55429918e830d24f::Faith (Buffy the Vampire Slayer)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f868f55429918e830d24f::Faith (Buffy the Vampire Slayer)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Faith is a fictional character created by Joss Whedon for the television series \"Buffy the Vampire Slayer\".\n[2] V is the title character of the comic book series \"V for Vendetta\", created by Alan Moore and David Lloyd.\n[3] She becomes involved in V's life when he rescues her from a gang of London's secret police."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Nina Byers",
+  "pred_answer": "Nina Byers",
+  "normalized_gold": "nina byers",
+  "normalized_pred": "nina byers",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a03445542996a35c17078",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a03445542996a35c17078::Chen-Ning Yang::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a03445542996a35c17078::Semifluxon::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a03445542996a35c17078::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a03445542996a35c17078::Byers-Yang theorem::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7a03445542996a35c17078::Flux pinning::9"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a03445542996a35c17078::Chen-Ning Yang",
+        "5a7a03445542996a35c17078::Byers-Yang theorem"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a03445542996a35c17078::Chen-Ning Yang::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a03445542996a35c17078::Semifluxon::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a03445542996a35c17078::Byers-Yang theorem::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7a03445542996a35c17078::Flux pinning::9",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a7a03445542996a35c17078::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a7a03445542996a35c17078::Flux pinning::9",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] In quantum mechanics, the Byers-Yang theorem states that all physical properties of a doubly connected system (an annulus) enclosing a magnetic flux formula_1 through the opening are periodic in the flux with period formula_2 (the magnetic flux quantum).\n[2] This phenomenon is closely related to the Meissner effect, though with one crucial difference — the Meissner effect shields the superconductor from all magnetic fields causing repulsion, unlike the pinned state of the superconductor disk which pins flux, and the superconductor in place.\n[3] In superconductivity, a semifluxon is a half integer vortex of supercurrent carrying the magnetic flux equal to the half of the magnetic flux quantum Φ .\n[4] He and Tsung-dao Lee received the 1957 Nobel Prize in Physics for their work on parity nonconservation of weak interaction.\n\nNotes:\n[bridge] The Byers-Yang theorem, which concerns magnetic flux quantization, was co-authored by Chen Ning Yang and Nina Byers."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

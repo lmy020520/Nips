@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bakelite",
+  "pred_answer": "Bakelite",
+  "normalized_gold": "bakelite",
+  "normalized_pred": "bakelite",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7507d5542997b22f6a6bb",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7507d5542997b22f6a6bb::Micarta::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7507d5542997b22f6a6bb::New Tivoli Theatre, Sydney::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7507d5542997b22f6a6bb::Tivoli Theatre (Wimborne Minster)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae7507d5542997b22f6a6bb::Bakelite::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae7507d5542997b22f6a6bb::Micarta::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7507d5542997b22f6a6bb::Tivoli Theatre (Wimborne Minster)",
+        "5ae7507d5542997b22f6a6bb::Bakelite"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7507d5542997b22f6a6bb::Micarta::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7507d5542997b22f6a6bb::New Tivoli Theatre, Sydney::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7507d5542997b22f6a6bb::Tivoli Theatre (Wimborne Minster)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae7507d5542997b22f6a6bb::Bakelite::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae7507d5542997b22f6a6bb::Micarta::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7507d5542997b22f6a6bb::Micarta::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It was originally used in electrical and decorative applications.\n[2] It was developed by the Belgian-American chemist Leo Baekeland in Yonkers, New York, in 1907.\n[3] It features a wide variety of Art Deco features, including original chrome and Bakelite door handles.\n[4] The New Tivoli Theatre, Sydney, previously known as the Adelphi Theatre and the Grand Opera House, was a theatre and music hall at 329, Castlereagh Street, Sydney, Australia, which was long at the heart of the Tivoli circuit."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

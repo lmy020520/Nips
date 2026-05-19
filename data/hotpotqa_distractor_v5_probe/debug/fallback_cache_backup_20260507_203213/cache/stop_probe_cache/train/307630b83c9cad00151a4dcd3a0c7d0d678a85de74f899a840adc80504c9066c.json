@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Catacombs of Rome",
+  "pred_answer": "Catacombs of Rome",
+  "normalized_gold": "catacombs of rome",
+  "normalized_pred": "catacombs of rome",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89cb54554299669944a5a5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89cb54554299669944a5a5::Pomponius Grekeinos::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89cb54554299669944a5a5::United States National Cemetery System::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89cb54554299669944a5a5::Catacombs of Rome::4"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a89cb54554299669944a5a5::Way On Cemetery::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89cb54554299669944a5a5::Pomponius Grekeinos",
+        "5a89cb54554299669944a5a5::Catacombs of Rome"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89cb54554299669944a5a5::Pomponius Grekeinos::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89cb54554299669944a5a5::United States National Cemetery System::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89cb54554299669944a5a5::Catacombs of Rome::4",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a89cb54554299669944a5a5::Way On Cemetery::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a89cb54554299669944a5a5::Way On Cemetery::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Way On Cemetery is a burial place in Panama City for the country's Chinese community, many of whose ancestors immigrated during the construction of the Panama Railroad in the mid-nineteenth century.\n[2] From about the 2nd century AD, inhumation (burial of unburnt remains) became more fashionable, in graves or sarcophagi, often elaborately carved, for those who could afford them.\n[3] The authority to create military burial places came during the American Civil War, in an act passed by the U.S. Congress on July 17, 1862.\n[4] Pomponius Grekeinos was a Christian of the early 3rd century who is commemorated by an inscription in the Catacombs of Rome."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

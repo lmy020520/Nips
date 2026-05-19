@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Seaford",
+  "pred_answer": "Seaford",
+  "normalized_gold": "seaford",
+  "normalized_pred": "seaford",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab3d6055542992ade7c6ecb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab3d6055542992ade7c6ecb::Seaford, South Australia::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab3d6055542992ade7c6ecb::Moana, South Australia::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab3d6055542992ade7c6ecb::Seaford railway station, Adelaide::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab3d6055542992ade7c6ecb::Goodwood railway station::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab3d6055542992ade7c6ecb::Seaford, South Australia",
+        "5ab3d6055542992ade7c6ecb::Seaford railway station, Adelaide"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab3d6055542992ade7c6ecb::Seaford, South Australia::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab3d6055542992ade7c6ecb::Moana, South Australia::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab3d6055542992ade7c6ecb::Seaford railway station, Adelaide::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab3d6055542992ade7c6ecb::Goodwood railway station::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab3d6055542992ade7c6ecb::Goodwood railway station::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The station services the Adelaide inner-southern suburb of Goodwood, and is 5.0 km from Adelaide station.\n[2] Situated in the southern Adelaide suburb of Seaford, it is 35.9 kilometres from Adelaide station.\n[3] It lies within the City of Onkaparinga local government area, and neighbours the suburbs Seaford, Maslin Beach, Seaford Rise and Port Noarlunga\n[4] Seaford railway station is the southern terminus of the Seaford railway line from Adelaide railway station."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

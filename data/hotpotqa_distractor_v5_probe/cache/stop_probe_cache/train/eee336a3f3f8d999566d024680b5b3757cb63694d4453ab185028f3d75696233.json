@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "computer-animated epic musical drama",
+  "pred_answer": "computer-animated epic musical drama",
+  "normalized_gold": "computer-animated epic musical drama",
+  "normalized_pred": "computer-animated epic musical drama",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7301ae5542994cef4bc41c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7301ae5542994cef4bc41c::A Far Off Place::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7301ae5542994cef4bc41c::Filet crochet::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7301ae5542994cef4bc41c::The Lion King (2019 film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7301ae5542994cef4bc41c::The Lion King: Simba's Mighty Adventure::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7301ae5542994cef4bc41c::A Far Off Place",
+        "5a7301ae5542994cef4bc41c::The Lion King (2019 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7301ae5542994cef4bc41c::A Far Off Place::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7301ae5542994cef4bc41c::Filet crochet::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7301ae5542994cef4bc41c::The Lion King (2019 film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7301ae5542994cef4bc41c::The Lion King: Simba's Mighty Adventure::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7301ae5542994cef4bc41c::The Lion King: Simba's Mighty Adventure::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Lion King: Simba′s Mighty Adventure is an adventure platformer video game based on Walt Disney Pictures′ animated film \"The Lion King\".\n[2] The Lion King is an upcoming American computer-animated epic musical drama film, directed and co-produced by Jon Favreau, produced by Walt Disney Pictures, and written by Jeff Nathanson.\n[3] Chain stitches use less yarn than double crochet stitches, which results in a visual difference in appearance between the two kinds of stitch.\n[4] A Far Off Place is a 1993 American adventure drama film based on Laurens van der Post's works \"A Far-Off Place\" (1974) and its prequel \"A Story Like the Wind\" (1972)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

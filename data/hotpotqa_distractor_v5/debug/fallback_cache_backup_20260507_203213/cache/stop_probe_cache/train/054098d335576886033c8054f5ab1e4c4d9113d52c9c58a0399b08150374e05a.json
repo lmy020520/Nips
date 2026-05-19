@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New York",
+  "pred_answer": "New York",
+  "normalized_gold": "new york",
+  "normalized_pred": "new york",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab71d5c5542993667793f40",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab71d5c5542993667793f40::Joseph Force Crater::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab71d5c5542993667793f40::1916 Republican National Convention::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab71d5c5542993667793f40::Tammany Hall::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab71d5c5542993667793f40::Joseph Force Crater::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab71d5c5542993667793f40::Joseph Force Crater",
+        "5ab71d5c5542993667793f40::Tammany Hall"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab71d5c5542993667793f40::Joseph Force Crater::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab71d5c5542993667793f40::1916 Republican National Convention::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab71d5c5542993667793f40::Tammany Hall::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab71d5c5542993667793f40::Joseph Force Crater::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab71d5c5542993667793f40::Joseph Force Crater::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Joseph Force Crater (January 5, 1889 – disappeared August 6, 1930, declared legally dead June 6, 1939) was a New York State Supreme Court Justice who vanished amid political scandal.\n[2] Tammany Hall, also known as the Society of St. Tammany, the Sons of St. Tammany, or the Columbian Order, was a New York City political organization founded in 1786 and incorporated on May 12, 1789, as the Tammany Society.\n[3] They turned to Supreme Court Justice Charles Evans Hughes, who had served on the court since 1910 and thus had the advantage of not having publicly spoken about political issues in six years.\n[4] His disappearance fueled public disquiet about New York City corruption and was a factor in the downfall of the Tammany Hall political machine."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

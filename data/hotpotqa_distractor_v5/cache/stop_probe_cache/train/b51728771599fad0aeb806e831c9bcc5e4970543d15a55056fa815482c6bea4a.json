@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Colin Michael Foale",
+  "pred_answer": "Colin Michael Foale",
+  "normalized_gold": "colin michael foale",
+  "normalized_pred": "colin michael foale",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a731dff5542991f9a20c611",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a731dff5542991f9a20c611::Michael Foale::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a731dff5542991f9a20c611::STS-63::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a731dff5542991f9a20c611::Roberto Vittori::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a731dff5542991f9a20c611::37022 Robertovittori::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a731dff5542991f9a20c611::Michael Foale",
+        "5a731dff5542991f9a20c611::Roberto Vittori"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a731dff5542991f9a20c611::Michael Foale::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a731dff5542991f9a20c611::STS-63::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a731dff5542991f9a20c611::Roberto Vittori::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a731dff5542991f9a20c611::37022 Robertovittori::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a731dff5542991f9a20c611::37022 Robertovittori::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is named after Roberto Vittori, an Italian astronaut who flew on multiple missions to the International Space Station.\n[2] Roberto Vittori (born 15 October 1964 in Viterbo) is an Italian air force officer and an ESA astronaut.\n[3] A night launch and the 20th mission for \"Discovery\", it marked the first time a Space Shuttle mission had a female pilot, Eileen Collins, the first EVAs for both a UK born astronaut Michael Foale and a US astronaut of African heritage Bernard A. Harris, Jr. and it also carried out the successful deployment and retrieval of the Spartan-204 platform, along with the scheduled rendezvous and flyaround\n[4] Colin Michael Foale, CBE (born 6 January 1957) is a British-American astrophysicist and former NASA astronaut."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

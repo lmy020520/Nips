@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ngangkiparri",
+  "pred_answer": "Ngangkiparri",
+  "normalized_gold": "ngangkiparri",
+  "normalized_pred": "ngangkiparri",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b96cf554299042af8f789",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b96cf554299042af8f789::Mount Torrens, South Australia::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b96cf554299042af8f789::Mikawomma Reserve::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b96cf554299042af8f789::Onkaparinga River::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7b96cf554299042af8f789::Sedan Cambrai Football Club::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b96cf554299042af8f789::Mount Torrens, South Australia",
+        "5a7b96cf554299042af8f789::Onkaparinga River"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b96cf554299042af8f789::Mount Torrens, South Australia::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b96cf554299042af8f789::Mikawomma Reserve::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b96cf554299042af8f789::Onkaparinga River::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7b96cf554299042af8f789::Sedan Cambrai Football Club::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b96cf554299042af8f789::Sedan Cambrai Football Club::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Sedan Cambrai Football Club are an Australian rules football club based in the Murraylands region of South Australia that were initially formed in 1922 as Cambrai Sedan, a merger between the Sedan Football Club and the Cambrai Football Club.\n[2] The Onkaparinga River, known as Ngangkiparri in the Kaurna language, is a river located in the Southern Adelaide region in the Australian state of South Australia.\n[3] The Mikawomma Reserve is found in the suburb of Woodville Gardens on the corner of Liberty Grove & Ridley Grove in South Australia, Australia.\n[4] Mount Torrens is a town in the eastern Adelaide Hills region of South Australia, 46 kilometres east-north-east of the state capital, Adelaide and 8 km east of Lobethal along the Onkaparinga River."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

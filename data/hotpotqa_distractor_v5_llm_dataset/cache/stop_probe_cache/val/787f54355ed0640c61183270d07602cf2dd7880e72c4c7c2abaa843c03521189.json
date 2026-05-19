@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ghost Hunters International",
+  "pred_answer": "Ghost Hunters International",
+  "normalized_gold": "ghost hunters international",
+  "normalized_pred": "ghost hunters international",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd039f554299700f9d795d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd039f554299700f9d795d::Ghost Hunters International::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd039f554299700f9d795d::Make It or Break It::8"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd039f554299700f9d795d::Alpesh Patel::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd039f554299700f9d795d::List of RIS Delitti Imperfetti episodes::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd039f554299700f9d795d::Ghost Hunters International",
+        "5abd039f554299700f9d795d::Alpesh Patel"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd039f554299700f9d795d::Ghost Hunters International::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd039f554299700f9d795d::Make It or Break It::8",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd039f554299700f9d795d::Alpesh Patel::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd039f554299700f9d795d::List of RIS Delitti Imperfetti episodes::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd039f554299700f9d795d::List of RIS Delitti Imperfetti episodes::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The following is a list of episodes of the Italian television series \"RIS Delitti Imperfetti\".\n[2] Patel produces and directs episodes of the reality TV show \"Ghost Hunters International\" and also serves as an editor for the franchise's flagship program, \"Ghost Hunters\".\n[3] It was announced on April 26, 2012, that the series had ended and the third season would be the final season.\n[4] The series premiered on January 9, 2008 and ended on April 4, 2012."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

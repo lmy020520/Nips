@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fight Club",
+  "pred_answer": "Fight Club",
+  "normalized_gold": "fight club",
+  "normalized_pred": "fight club",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab483325542990594ba9c41",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab483325542990594ba9c41::Fight Club::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab483325542990594ba9c41::Fight Club (video game)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab483325542990594ba9c41::David Lee Smith::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab483325542990594ba9c41::Invisible Monsters::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab483325542990594ba9c41::Fight Club",
+        "5ab483325542990594ba9c41::David Lee Smith"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab483325542990594ba9c41::Fight Club::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab483325542990594ba9c41::Fight Club (video game)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab483325542990594ba9c41::David Lee Smith::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab483325542990594ba9c41::Invisible Monsters::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab483325542990594ba9c41::Invisible Monsters::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Invisible Monsters is a novel by Chuck Palahniuk, published in 1999.\n[2] David Lee Smith (born September 8, 1963) is an American actor, known for his role as John Oldman, the protagonist of the 2007 science fiction film, \"The Man from Earth\"; he co-starred with John Billingsley and Tony Todd.\n[3] Fight Club is a fighting video game based on the film \"Fight Club\", which was based on the novel of the same name by Chuck Palahniuk.\n[4] Fight Club is a 1999 American film based on the 1996 novel of the same name by Chuck Palahniuk."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

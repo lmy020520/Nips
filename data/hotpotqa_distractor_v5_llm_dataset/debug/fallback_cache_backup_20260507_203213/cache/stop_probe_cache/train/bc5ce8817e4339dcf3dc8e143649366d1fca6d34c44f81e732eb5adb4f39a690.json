@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Alphonso",
+  "pred_answer": "Alphonso",
+  "normalized_gold": "alphonso",
+  "normalized_pred": "alphonso",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abba2c1554299642a094ae7",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abba2c1554299642a094ae7::King Anxi of Wei::7"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abba2c1554299642a094ae7::Ptolemy XIV of Egypt::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abba2c1554299642a094ae7::Roger Hillary::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abba2c1554299642a094ae7::Edward II of England::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abba2c1554299642a094ae7::Vologash::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abba2c1554299642a094ae7::Roger Hillary",
+        "5abba2c1554299642a094ae7::Edward II of England"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abba2c1554299642a094ae7::King Anxi of Wei::7",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abba2c1554299642a094ae7::Ptolemy XIV of Egypt::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abba2c1554299642a094ae7::Roger Hillary::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abba2c1554299642a094ae7::Edward II of England::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abba2c1554299642a094ae7::Vologash::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abba2c1554299642a094ae7::Vologash::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He was the son of Naṣru who reigned from about AD 128 to 140.\n[2] The fourth son of Edward I, Edward became the heir to the throne following the death of his older brother Alphonso.\n[3] Sir Roger Hillary (died 1356) was an English justice.\n[4] Following the death of his older brother Ptolemy XIII of Egypt on January 13, 47 BC, he was proclaimed Pharaoh and co-ruler by their older sister and remaining Pharaoh, Cleopatra VII of Egypt."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

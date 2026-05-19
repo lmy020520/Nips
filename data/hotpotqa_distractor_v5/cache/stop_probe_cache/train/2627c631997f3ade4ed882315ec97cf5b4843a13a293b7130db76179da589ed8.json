@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "8 August 1953",
+  "pred_answer": "8 August 1953",
+  "normalized_gold": "8 august 1953",
+  "normalized_pred": "8 august 1953",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5b80e55429960a22e031b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5b80e55429960a22e031b::1992 Hungarian Grand Prix::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5b80e55429960a22e031b::Luca Badoer::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5b80e55429960a22e031b::Nigel Mansell::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae5b80e55429960a22e031b::1992 Italian Grand Prix::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5b80e55429960a22e031b::1992 Hungarian Grand Prix",
+        "5ae5b80e55429960a22e031b::Nigel Mansell"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5b80e55429960a22e031b::1992 Hungarian Grand Prix::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5b80e55429960a22e031b::Luca Badoer::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5b80e55429960a22e031b::Nigel Mansell::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae5b80e55429960a22e031b::1992 Italian Grand Prix::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5b80e55429960a22e031b::1992 Italian Grand Prix::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 53-lap race was won by McLaren driver Ayrton Senna after he started from second position.\n[2] Nigel Ernest James Mansell, {'1': \", '2': \", '3': \", '4': \"} ( ; born 8 August 1953) is a British former racing driver who won both the Formula One World Championship (1992) and the CART Indy Car World Series (1993).\n[3] In addition to his racing duties, Badoer was one of the active test and reserve drivers for Ferrari from 1998 to 2010 and in 2009 stood in for Ferrari's regular race driver Felipe Massa at the European Grand Prix and the Belgian Grand Prix after the Brazilian was injured during qualifying for the Hungarian Grand Prix and his original replacement, Michael Schumacher, pulled out due to injury.\n[4] Nigel Mansell clinched the Drivers' Championship by finishing the race in second position, behind McLaren's Ayrton Senna."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

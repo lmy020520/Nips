@@ -1,0 +1,85 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Peter O'Toole",
+  "pred_answer": "Peter O'Toole",
+  "normalized_gold": "peter otoole",
+  "normalized_pred": "peter otoole",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8500c85542997175ce1f57",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8500c85542997175ce1f57::Cristiada (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8500c85542997175ce1f57::Chittagong (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8500c85542997175ce1f57::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8500c85542997175ce1f57::Peter O'Toole::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8500c85542997175ce1f57::Cristiada (film)",
+        "5a8500c85542997175ce1f57::Peter O'Toole"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8500c85542997175ce1f57::Cristiada (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8500c85542997175ce1f57::Chittagong (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8500c85542997175ce1f57::Peter O'Toole::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a8500c85542997175ce1f57::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a8500c85542997175ce1f57::Peter O'Toole::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He attended the Royal Academy of Dramatic Art and began working in the theatre, gaining recognition as a Shakespearean actor at the Bristol Old Vic and with the before making his film debut in 1959.\n[2] Chittagong is a 2012 Indian historical war drama film directed by Bedabrata Pain.\n[3] For Greater Glory (also known as Cristiada) is a 2012 epic historical war drama film directed by Dean Wright and written by Michael Love, based on the events of the Cristero War.\n\nNotes:\n[verification] Peter O'Toole attended the Royal Academy of Dramatic Art and began working in the theatre, gaining recognition as a Shakespearean actor at the Bristol Old Vic a"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Holy Cross Hospital",
+  "pred_answer": "Holy Cross Hospital",
+  "normalized_gold": "holy cross hospital",
+  "normalized_pred": "holy cross hospital",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe50bc55429976d4830ae5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe50bc55429976d4830ae5::Silver Spring, Maryland::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe50bc55429976d4830ae5::Fatima Memorial Hospital::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe50bc55429976d4830ae5::Holy Cross Hospital (Silver Spring)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe50bc55429976d4830ae5::Al-Yarmouk Teaching Hospital::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe50bc55429976d4830ae5::Silver Spring, Maryland",
+        "5abe50bc55429976d4830ae5::Holy Cross Hospital (Silver Spring)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe50bc55429976d4830ae5::Silver Spring, Maryland::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe50bc55429976d4830ae5::Fatima Memorial Hospital::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe50bc55429976d4830ae5::Holy Cross Hospital (Silver Spring)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe50bc55429976d4830ae5::Al-Yarmouk Teaching Hospital::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe50bc55429976d4830ae5::Al-Yarmouk Teaching Hospital::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Al-Yarmouk Teaching Hospital is one of the Iraqi hospitals. Located in Baghdad, Al-Karkh, Al-Yarmouk city, besides Al-Mustansiriya medical college (and is considered the teaching hospital for its students).\n[2] Holy Cross Hospital is a 501(c)(3) not-for-profit teaching hospital with revenue of $515 million located in Silver Spring, Maryland.\n[3] Fatima Memorial Hospital, established in 1977, is a not-for-profit teaching hospital located in Shadman, Lahore, Punjab, Pakistan.\n[4] It had a population of 76,716 according to 2013 estimates by the United States Census Bureau, making it the fourth most populous place in Maryland, after Baltimore, Columbia, and Germantown."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

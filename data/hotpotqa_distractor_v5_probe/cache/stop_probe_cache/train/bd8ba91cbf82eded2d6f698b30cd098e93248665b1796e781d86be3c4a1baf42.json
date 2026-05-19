@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Santa Fe Municipal Airport",
+  "pred_answer": "Santa Fe Municipal Airport",
+  "normalized_gold": "santa fe municipal airport",
+  "normalized_pred": "santa fe municipal airport",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84953a5542997b5ce3fed8",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84953a5542997b5ce3fed8::Santa Fe Municipal Airport::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84953a5542997b5ce3fed8::Waterloo Regional Airport::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84953a5542997b5ce3fed8::Tecnológico de Monterrey, Campus Santa Fe::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84953a5542997b5ce3fed8::Santa Fe Municipal Airport",
+        "5a84953a5542997b5ce3fed8::Waterloo Regional Airport"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84953a5542997b5ce3fed8::Santa Fe Municipal Airport::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84953a5542997b5ce3fed8::Waterloo Regional Airport::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84953a5542997b5ce3fed8::Tecnológico de Monterrey, Campus Santa Fe::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84953a5542997b5ce3fed8::Tecnológico de Monterrey, Campus Santa Fe::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Monterrey Institute of Technology and Higher Education, Santa Fe Campus (in Spanish: \"Instituto Tecnológico y de Estudios Superiores de Monterrey, Campus Santa Fe\" ) commonly shortened as Tecnológico de Monterrey, Campus Santa Fe, ITESM Campus Santa Fe or Tec Santa Fe, is a campus of the Monterrey Institute of Technology and Higher Education private university system in Santa Fe, Mexico City,\n[2] Waterloo Regional Airport (IATA: ALO, ICAO: KALO, FAA LID: ALO) , also known as Livingston Betsworth Field, is a city owned public use airport located four miles (6 km) northwest of the central business district of Waterloo, a city in Black Hawk County, Iowa, United States.\n[3] Santa Fe Municipal Airport (IATA: SAF, ICAO: KSAF, FAA LID: SAF) is ten miles southwest of Santa Fe, in Santa Fe County, New Mexico."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jeff Bridges, Kiefer Sutherland, Nancy Travis and Sandra Bullock",
+  "pred_answer": "Jeff Bridges, Kiefer Sutherland, Nancy Travis and Sandra Bullock",
+  "normalized_gold": "jeff bridges kiefer sutherland nancy travis and sandra bullock",
+  "normalized_pred": "jeff bridges kiefer sutherland nancy travis and sandra bullock",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adcbc3a554299438c868e16",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adcbc3a554299438c868e16::Caitlin Stasey::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adcbc3a554299438c868e16::Abraham Whistler::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adcbc3a554299438c868e16::The Vanishing (1993 film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adcbc3a554299438c868e16::The Golden Egg::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5adcbc3a554299438c868e16::Clint de Ganon::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adcbc3a554299438c868e16::The Vanishing (1993 film)",
+        "5adcbc3a554299438c868e16::The Golden Egg"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adcbc3a554299438c868e16::Caitlin Stasey::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adcbc3a554299438c868e16::Abraham Whistler::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adcbc3a554299438c868e16::The Vanishing (1993 film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adcbc3a554299438c868e16::The Golden Egg::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5adcbc3a554299438c868e16::Clint de Ganon::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adcbc3a554299438c868e16::Clint de Ganon::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He was also the drummer for the movie adaption of Hairspray.\n[2] The Golden Egg (Dutch: Het Gouden Ei), published as The Vanishing in English-speaking countries, is a psychological thriller novella written by Dutch author Tim Krabbé, first published in 1984.\n[3] The Vanishing is a 1993 American psychological thriller starring Jeff Bridges, Kiefer Sutherland, Nancy Travis and Sandra Bullock.\n[4] His first appearance in a comic can be found in the comic book movie adaption of the Blade II movie, but his face is also seen on 2 covers of the Max imprint Blade comic from Marvel."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

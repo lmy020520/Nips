@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Austrian",
+  "pred_answer": "Austrian",
+  "normalized_gold": "austrian",
+  "normalized_pred": "austrian",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8a49d955429930ff3c0d72",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8a49d955429930ff3c0d72::Primal therapy::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8a49d955429930ff3c0d72::Theme-centered interaction::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8a49d955429930ff3c0d72::Reichian therapy::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8a49d955429930ff3c0d72::Wilhelm Reich::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8a49d955429930ff3c0d72::Theme-centered interaction::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8a49d955429930ff3c0d72::Reichian therapy",
+        "5a8a49d955429930ff3c0d72::Wilhelm Reich"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8a49d955429930ff3c0d72::Primal therapy::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8a49d955429930ff3c0d72::Theme-centered interaction::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8a49d955429930ff3c0d72::Reichian therapy::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8a49d955429930ff3c0d72::Wilhelm Reich::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8a49d955429930ff3c0d72::Theme-centered interaction::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8a49d955429930ff3c0d72::Theme-centered interaction::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] TCI arose from the theoretical background of psychoanalysis, of group therapy and of humanistic psychology; it takes experiences from Gestalt therapy and from group dynamics into account.\n[2] Wilhelm Reich (24 March 1897 – 3 November 1957) was an Austrian psychoanalyst, a member of the second generation of analysts after Sigmund Freud.\n[3] Reichian therapy can refer to several schools of thought and therapeutic techniques whose common touchstone is their origins in the work of psychoanalyst Wilhelm Reich (1897–1957).\n[4] Since the nineteen fifties, TCI has been developed in the United States by the psychoanalyst and psychologist Ruth Cohn, by the therapists Norman Liberman, Isaac Zieman and by other representatives of humanistic psychology."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

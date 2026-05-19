@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jean Acker",
+  "pred_answer": "Jean Acker",
+  "normalized_gold": "jean acker",
+  "normalized_pred": "jean acker",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae083b75542993d6555eb85",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae083b75542993d6555eb85::Wilson Wood (actor)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae083b75542993d6555eb85::Roger Marquardt::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae083b75542993d6555eb85::Jean Acker::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae083b75542993d6555eb85::The Ladder of Lies::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae083b75542993d6555eb85::Roger Marquardt::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae083b75542993d6555eb85::Jean Acker",
+        "5ae083b75542993d6555eb85::The Ladder of Lies"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae083b75542993d6555eb85::Wilson Wood (actor)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae083b75542993d6555eb85::Roger Marquardt::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae083b75542993d6555eb85::Jean Acker::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae083b75542993d6555eb85::The Ladder of Lies::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae083b75542993d6555eb85::Roger Marquardt::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae083b75542993d6555eb85::Roger Marquardt::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Roger Marquardt (October 23, 1936 – May 16, 2012) was an American lobbyist and politician who served as a Republican member of the Illinois House of Representatives.\n[2] The Ladder of Lies is a lost 1920 American drama silent film directed by Tom Forman and written by Edith M. Kennedy and Harold Vickers.\n[3] Jean Acker (October 23, 1893 – August 16, 1978) was an American film actress with a career dating from the silent film era through the 1950s.\n[4] Marquardt was born October 23, 1936 in Lombard, Illinois."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

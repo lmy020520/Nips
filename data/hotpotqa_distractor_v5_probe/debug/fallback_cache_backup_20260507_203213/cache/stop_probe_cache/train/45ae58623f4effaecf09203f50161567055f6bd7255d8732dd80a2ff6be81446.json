@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "13 seasons.",
+  "pred_answer": "13 seasons.",
+  "normalized_gold": "13 seasons",
+  "normalized_pred": "13 seasons",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc9a4155429959677d6ac5",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc9a4155429959677d6ac5::2012 St. Louis Rams season::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc9a4155429959677d6ac5::Scott Linehan::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc9a4155429959677d6ac5::Scott Linehan::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abc9a4155429959677d6ac5::2006 St. Louis Rams season::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abc9a4155429959677d6ac5::Bob Saunders::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc9a4155429959677d6ac5::Scott Linehan",
+        "5abc9a4155429959677d6ac5::2006 St. Louis Rams season"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc9a4155429959677d6ac5::2012 St. Louis Rams season::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc9a4155429959677d6ac5::Scott Linehan::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc9a4155429959677d6ac5::Scott Linehan::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abc9a4155429959677d6ac5::2006 St. Louis Rams season::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abc9a4155429959677d6ac5::Bob Saunders::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc9a4155429959677d6ac5::Bob Saunders::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Saunders previously served as an Offensive Assistant for the NFL's top ranked offense under Dick Vermiel with the Kansas City Chiefs, for Hall of Fame coach Joe Gibb's at the Washington Redskins and with the St. Louis Rams.\n[2] The 2006 St. Louis Rams season was the team's 69th year with the National Football League and the 12th season in St. Louis.\n[3] Prior to becoming an NFL coach in 2002, Linehan was a college assistant coach for 13 seasons.\n[4] He was previously the head coach of the St. Louis Rams and the offensive coordinator for the Miami Dolphins, Minnesota Vikings, and Detroit Lions."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

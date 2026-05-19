@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "45 Broad Street",
+  "pred_answer": "45 Broad Street",
+  "normalized_gold": "45 broad street",
+  "normalized_pred": "45 broad street",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77543e55429966f1a36d0d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77543e55429966f1a36d0d::520 Park Avenue::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77543e55429966f1a36d0d::Packer Park, Philadelphia::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77543e55429966f1a36d0d::45 Broad Street::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77543e55429966f1a36d0d::Hunting Park station::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77543e55429966f1a36d0d::520 Park Avenue",
+        "5a77543e55429966f1a36d0d::45 Broad Street"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77543e55429966f1a36d0d::520 Park Avenue::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77543e55429966f1a36d0d::Packer Park, Philadelphia::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77543e55429966f1a36d0d::45 Broad Street::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77543e55429966f1a36d0d::Hunting Park station::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77543e55429966f1a36d0d::Hunting Park station::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Served by the Broad Street Line, it is located at 4200 North Broad Street at Hunting Park Avenue in the Hunting Park section of North Philadelphia, Pennsylvania.\n[2] 45 Broad Street is a skyscraper under construction in the Financial District of Manhattan.\n[3] The approximate boundaries are Packer Avenue to the north, Hartranft Street to the south including FDR Park farther south, Broad Street to the east known as the Southern Parkway and I-76 to the far west.\n[4] 520 Park Avenue is an American skyscraper under construction on East 60th Street west of Park Avenue in Manhattan, New York City."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

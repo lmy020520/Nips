@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1984",
+  "pred_answer": "1984",
+  "normalized_gold": "1984",
+  "normalized_pred": "1984",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8ecdfa55429917b4a5bdc4",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8ecdfa55429917b4a5bdc4::Veryan::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8ecdfa55429917b4a5bdc4::John Betjeman::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8ecdfa55429917b4a5bdc4::Conference of European Rabbis::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8ecdfa55429917b4a5bdc4::Veryan",
+        "5a8ecdfa55429917b4a5bdc4::John Betjeman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8ecdfa55429917b4a5bdc4::Veryan::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8ecdfa55429917b4a5bdc4::John Betjeman::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8ecdfa55429917b4a5bdc4::Conference of European Rabbis::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8ecdfa55429917b4a5bdc4::Conference of European Rabbis::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Executive Director of the CER since inception was Rabbi Maurice (Moshe) Rose, succeeded in the year 2001 by Rabbi Aba Dunner, who passed away in 2011.\n[2] Sir John Betjeman, CBE ( ; 28 August 190619 May 1984) was an English poet, writer, and broadcaster who described himself in \"Who's Who\" as a \"poet and hack\".\n[3] The village has been described as one of Cornwall's loveliest inland villages and as ′a mild tropic garden′ by John Betjeman."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

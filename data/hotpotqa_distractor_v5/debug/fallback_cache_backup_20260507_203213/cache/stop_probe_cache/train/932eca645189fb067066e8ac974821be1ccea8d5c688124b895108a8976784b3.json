@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "108th",
+  "pred_answer": "108th",
+  "normalized_gold": "108th",
+  "normalized_pred": "108th",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a88a49a5542997e5c09a66e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a88a49a5542997e5c09a66e::The Lorax (film)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a88a49a5542997e5c09a66e::Va Va Voom::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a88a49a5542997e5c09a66e::Kool Kojak::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a88a49a5542997e5c09a66e::Happy Birthday to You!::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a88a49a5542997e5c09a66e::The Lorax (film)",
+        "5a88a49a5542997e5c09a66e::Kool Kojak"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a88a49a5542997e5c09a66e::The Lorax (film)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a88a49a5542997e5c09a66e::Va Va Voom::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a88a49a5542997e5c09a66e::Kool Kojak::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a88a49a5542997e5c09a66e::Happy Birthday to You!::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a88a49a5542997e5c09a66e::Happy Birthday to You!::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The celebration includes fantastical and colorful gifts, foods and a whirl of activities all arranged by the Birthday Bird for the reader's birthday.\n[2] Kool Kojak was a featured producer on the Simon Cowell TV program X Factor and has appeared as himself on the Nickelodeon show \"Victorious\".\n[3] The song was written by Minaj, Lukasz Gottwald, Allan Grigg, Max Martin, and Henry Walter, and it was produced by Dr. Luke, Kool Kojak, and Cirkut.\n[4] The film was released by Universal Pictures on March 2, 2012, on the 108th birthday of Dr. Seuss."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

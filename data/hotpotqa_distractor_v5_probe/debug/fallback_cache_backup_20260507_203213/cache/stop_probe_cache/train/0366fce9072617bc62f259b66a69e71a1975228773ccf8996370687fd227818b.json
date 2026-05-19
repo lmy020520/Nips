@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Boeing KC-135 Stratotanker",
+  "pred_answer": "Boeing KC-135 Stratotanker",
+  "normalized_gold": "boeing kc-135 stratotanker",
+  "normalized_pred": "boeing kc-135 stratotanker",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8053885542996402f6a4cc",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8053885542996402f6a4cc::Operation Frequent Wind::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8053885542996402f6a4cc::Effects of war::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8053885542996402f6a4cc::Boeing KC-135 Stratotanker::4"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8053885542996402f6a4cc::1965 USAF KC-135 Wichita crash::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8053885542996402f6a4cc::Agent Blue::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8053885542996402f6a4cc::Boeing KC-135 Stratotanker",
+        "5a8053885542996402f6a4cc::1965 USAF KC-135 Wichita crash"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8053885542996402f6a4cc::Operation Frequent Wind::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8053885542996402f6a4cc::Effects of war::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8053885542996402f6a4cc::Boeing KC-135 Stratotanker::4",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8053885542996402f6a4cc::1965 USAF KC-135 Wichita crash::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8053885542996402f6a4cc::Agent Blue::7",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8053885542996402f6a4cc::Agent Blue::7",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The purpose of Agent Blue was narrow-leaf plants and trees (grass, rice, bamboo, banana, etc.) \"Operation Ranch Hand\", was military code for spraying of herbicides from U.S. Air Force aircraft in Southeast Asia from 1962 through 1971.\n[2] On 16 January 1965, a U.S. Air Force Boeing KC-135 Stratotanker crashed in the central United States, in a suburban neighborhood in Wichita, Kansas, near McConnell Air Force Base.\n[3] The KC-135 was initially tasked with refueling strategic bombers, but was used extensively in the Vietnam War and later conflicts such as Operation Desert Storm to extend the range and endurance of US tactical fighters and bombers.\n[4] Soldiers experience war differently than civilians, although either suffer in times of war, and women and children suffer unspeakable atrocities in particular."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "123928 sqft",
+  "pred_answer": "123928 sqft",
+  "normalized_gold": "123928 sqft",
+  "normalized_pred": "123928 sqft",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a9050b755429916514e7471",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a9050b755429916514e7471::Las Vegas Festival Grounds::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a9050b755429916514e7471::Circus Circus Las Vegas::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a9050b755429916514e7471::Rock in Rio USA::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a9050b755429916514e7471::Las Vegas Festival Grounds",
+        "5a9050b755429916514e7471::Circus Circus Las Vegas"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a9050b755429916514e7471::Las Vegas Festival Grounds::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a9050b755429916514e7471::Circus Circus Las Vegas::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a9050b755429916514e7471::Rock in Rio USA::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a9050b755429916514e7471::Rock in Rio USA::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] A spin-off of Rio de Janeiro's \"Rock in Rio\" festival, it was first held on May 8 and 9, 2015 at the Las Vegas Festival Grounds—a purpose-built venue on the Las Vegas Strip developed in cooperation with the festival's organizers.\n[2] Circus Circus Las Vegas is a hotel, 123928 sqft casino, and RV park located on the Las Vegas Strip in Winchester, Nevada.\n[3] Las Vegas Festival Grounds (formerly MGM Resorts Festival Grounds) is a 33 acre open-air venue located on the Las Vegas Strip, north of the MGM-owned Circus Circus Hotel and Casino in Winchester, Nevada."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

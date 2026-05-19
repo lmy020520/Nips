@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "United States Supreme Court",
+  "pred_answer": "United States Supreme Court",
+  "normalized_gold": "united states supreme court",
+  "normalized_pred": "united states supreme court",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8e8dab5542990e94052b4e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8e8dab5542990e94052b4e::Farmers Mutual Reinsurance Company Building::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8e8dab5542990e94052b4e::Grutter v. Bollinger::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8e8dab5542990e94052b4e::Korematsu v. United States::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8e8dab5542990e94052b4e::Ex parte Endo::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8e8dab5542990e94052b4e::Grutter v. Bollinger",
+        "5a8e8dab5542990e94052b4e::Korematsu v. United States"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8e8dab5542990e94052b4e::Farmers Mutual Reinsurance Company Building::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8e8dab5542990e94052b4e::Grutter v. Bollinger::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8e8dab5542990e94052b4e::Korematsu v. United States::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8e8dab5542990e94052b4e::Ex parte Endo::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8e8dab5542990e94052b4e::Ex parte Endo::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Ex parte Endo, or Ex parte Mitsuye Endo, 323 U.S. 283 (1944), was a United States Supreme Court ex parte decision handed down on December 18, 1944, in which the Justices unanimously ruled that the U.S. government could not continue to detain a citizen who was \"concededly loyal\" to the United States.\n[2] Korematsu v. United States, 323 U.S. 214 (1944), was a landmark United States Supreme Court case concerning the constitutionality of Executive Order 9066, which ordered Japanese Americans into internment camps during World War II regardless of citizenship.\n[3] Grutter v. Bollinger, 539 U.S. 306 (2003), was a landmark case in which the United States Supreme Court upheld the affirmative action admissions policy of the University of Michigan Law School.\n[4] \"The Iowa Farmers Mutual Reinsurance Association was the first statewide organization of its kind in the United States.\""
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

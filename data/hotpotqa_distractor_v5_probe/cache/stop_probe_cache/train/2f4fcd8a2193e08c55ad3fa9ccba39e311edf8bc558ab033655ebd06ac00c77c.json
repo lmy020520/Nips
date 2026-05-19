@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the eastern United States",
+  "pred_answer": "the eastern United States",
+  "normalized_gold": "the eastern united states",
+  "normalized_pred": "the eastern united states",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae068255542993d6555eb50",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae068255542993d6555eb50::Blue Ridge Mountains::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae068255542993d6555eb50::Wind Gap, Pennsylvania::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae068255542993d6555eb50::Jarman Gap::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae068255542993d6555eb50::Rapid Run (Buffalo Creek)::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae068255542993d6555eb50::Blue Ridge Mountains",
+        "5ae068255542993d6555eb50::Jarman Gap"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae068255542993d6555eb50::Blue Ridge Mountains::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae068255542993d6555eb50::Wind Gap, Pennsylvania::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae068255542993d6555eb50::Jarman Gap::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae068255542993d6555eb50::Rapid Run (Buffalo Creek)::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae068255542993d6555eb50::Rapid Run (Buffalo Creek)::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Rapid Run is a freestone mountain stream in the ridge and valley physiographic province.\n[2] Jarman Gap (also Jarman's Gap or Jarmans Gap) is a wind gap in the Blue Ridge Mountains in the counties of Albemarle and Augusta, Virginia.\n[3] Wind Gap is located in the Lehigh Valley region of the state.\n[4] The mountain range is located in the eastern United States, starting at its southernmost portion in Georgia, then ending northward in Pennsylvania."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

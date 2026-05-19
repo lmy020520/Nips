@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Will Rogers",
+  "pred_answer": "Will Rogers",
+  "normalized_gold": "will rogers",
+  "normalized_pred": "will rogers",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adeb42055429939a52fe965",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adeb42055429939a52fe965::Bryan Sterling::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adeb42055429939a52fe965::Will Rogers' USA::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adeb42055429939a52fe965::James Whitmore::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adeb42055429939a52fe965::Bryan Sterling::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adeb42055429939a52fe965::Bryan Sterling",
+        "5adeb42055429939a52fe965::James Whitmore"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adeb42055429939a52fe965::Bryan Sterling::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adeb42055429939a52fe965::Will Rogers' USA::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adeb42055429939a52fe965::James Whitmore::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adeb42055429939a52fe965::Bryan Sterling::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adeb42055429939a52fe965::Bryan Sterling::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He scripted and co-produced \"Will Rogers' USA,\" a one-man Broadway play about Rogers starring actor James Whitmore, created a daily syndicated newspaper column that featured timely quotations from Rogers' writings, and authored several definitive biographies of Rogers' life including a detailed examination of his death in the Point Barrow, Alaska, crash of an airplane piloted by famed aviator Wile\n[2] James Allen Whitmore Jr. (October 1, 1921 – February 6, 2009) was an American film, theatre, and television actor.\n[3] Will Rogers' USA is a one-man play about humorist Will Rogers that James Whitmore appeared in for more than 30 years.\n[4] Bryan Sterling (January 27, 1922 – March 13, 2008) was an authority on the life and work of American political commentator, humorist, and entertainer Will Rogers."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

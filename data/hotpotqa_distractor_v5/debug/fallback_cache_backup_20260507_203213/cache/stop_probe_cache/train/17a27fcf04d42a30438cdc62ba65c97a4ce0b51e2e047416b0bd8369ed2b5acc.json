@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Tsim Sha Tsui, Hong Kong",
+  "pred_answer": "Tsim Sha Tsui, Hong Kong",
+  "normalized_gold": "tsim sha tsui hong kong",
+  "normalized_pred": "tsim sha tsui hong kong",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf1bf75542993344016bd9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf1bf75542993344016bd9::Canton Road Station::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf1bf75542993344016bd9::Kowloon Southern Link::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf1bf75542993344016bd9::Harbour City (Hong Kong)::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf1bf75542993344016bd9::Harbour City (Hong Kong)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf1bf75542993344016bd9::Canton Road Station",
+        "5adf1bf75542993344016bd9::Harbour City (Hong Kong)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf1bf75542993344016bd9::Canton Road Station::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf1bf75542993344016bd9::Kowloon Southern Link::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf1bf75542993344016bd9::Harbour City (Hong Kong)::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf1bf75542993344016bd9::Harbour City (Hong Kong)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf1bf75542993344016bd9::Harbour City (Hong Kong)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Harbour City is a large shopping mall in Tsim Sha Tsui, Hong Kong.\n[2] The complex is located along the west side of Canton Road, stretching from the Star Ferry Pier in the south to China Hong Kong City in the north.\n[3] It is located adjacent to the Canton Road Government Offices, close to Kowloon Station of Tung Chung Line and Airport Express.\n[4] Chinese: 廣東道站) was a planned railway station on the Kowloon Southern Link of West Rail Line between East Tsim Sha Tsui Station and Austin Station, beneath the shopping mall, Harbour City in Tsim Sha Tsui, by replacing the existing underground car park."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

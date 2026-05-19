@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "goalkeeper",
+  "pred_answer": "goalkeeper",
+  "normalized_gold": "goalkeeper",
+  "normalized_pred": "goalkeeper",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81caec5542990a1d231ec0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81caec5542990a1d231ec0::Vince Bartram::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81caec5542990a1d231ec0::Bruce Deans::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81caec5542990a1d231ec0::David Seaman::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81caec5542990a1d231ec0::Vince Bartram::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81caec5542990a1d231ec0::Vince Bartram",
+        "5a81caec5542990a1d231ec0::David Seaman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81caec5542990a1d231ec0::Vince Bartram::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81caec5542990a1d231ec0::Bruce Deans::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81caec5542990a1d231ec0::David Seaman::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a81caec5542990a1d231ec0::Vince Bartram::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a81caec5542990a1d231ec0::Vince Bartram::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Vincent Lee \"Vince\" Bartram (born 7 August 1968) is an English former professional footballer, who played as a goalkeeper.\n[2] David Andrew Seaman, MBE (born 19 September 1963) is a retired England international football goalkeeper who played for Arsenal, Queens Park Rangers and Birmingham City, among others, during a career lasting from 1981 to 2004.\n[3] His first selection came during an end of seasons tour of Japan.\n[4] As a player, he notably played in the Premier League for Arsenal, where he was understudy to David Seaman throughout the majority of his time at Highbury."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "128-story",
+  "pred_answer": "128-story",
+  "normalized_gold": "128-story",
+  "normalized_pred": "128-story",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4c2695542995dadf243eb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4c2695542995dadf243eb::Shanghai Tower::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4c2695542995dadf243eb::Tradewinds Square::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4c2695542995dadf243eb::KVLY-TV mast::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4c2695542995dadf243eb::Kline Iron and Steel::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4c2695542995dadf243eb::Shanghai Tower",
+        "5ae4c2695542995dadf243eb::KVLY-TV mast"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4c2695542995dadf243eb::Shanghai Tower::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4c2695542995dadf243eb::Tradewinds Square::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4c2695542995dadf243eb::KVLY-TV mast::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4c2695542995dadf243eb::Kline Iron and Steel::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4c2695542995dadf243eb::Kline Iron and Steel::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] This includes the world's tallest completed man-made structure, the KVLY-TV mast, surpassed only by the recently completed Burj Khalifa.\n[2] It remains the fourth-tallest structure in the world (since the construction of the Tokyo Skytree and the Shanghai Tower), the tallest structure in the western hemisphere, and the tallest radio mast in the world.\n[3] It will be the tallest building in Malaysia and the fourth tallest building in the world in 2024.\n[4] The Shanghai Tower () is a 632 m , 128-story megatall skyscraper in Lujiazui, Pudong, Shanghai."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

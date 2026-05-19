@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Scott Pembroke",
+  "pred_answer": "Scott Pembroke",
+  "normalized_gold": "scott pembroke",
+  "normalized_pred": "scott pembroke",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8026cd5542992e7d278df9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8026cd5542992e7d278df9::André Berthomieu::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8026cd5542992e7d278df9::Line Noro::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8026cd5542992e7d278df9::Scott Pembroke::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8026cd5542992e7d278df9::RAF Pembroke Dock::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8026cd5542992e7d278df9::André Berthomieu",
+        "5a8026cd5542992e7d278df9::Scott Pembroke"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8026cd5542992e7d278df9::André Berthomieu::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8026cd5542992e7d278df9::Line Noro::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8026cd5542992e7d278df9::Scott Pembroke::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8026cd5542992e7d278df9::RAF Pembroke Dock::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8026cd5542992e7d278df9::RAF Pembroke Dock::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Royal Air Force Pembroke Dock or more simply RAF Pembroke Dock was a Royal Air Force Seaplane and Flying Boat station located at Pembroke Dock, Pembrokeshire, Wales.\n[2] Scott Pembroke (September 13, 1889 – February 21, 1951) was an American director, actor and screenwriter.\n[3] She was married to the film director  André Berthomieu.\n[4] André Berthomieu (16 February 1903 – 10 April 1960) was a French screenwriter and film director."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

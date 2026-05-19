@@ -1,0 +1,100 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Caspian Sea",
+  "pred_answer": "Caspian Sea",
+  "normalized_gold": "caspian sea",
+  "normalized_pred": "caspian sea",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b5b6755429950cd6afccd",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b5b6755429950cd6afccd::List of cities in Azerbaijan::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b5b6755429950cd6afccd::List of companies of Azerbaijan::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b5b6755429950cd6afccd::Geography of Azerbaijan::6"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8b5b6755429950cd6afccd::Azerbaijan::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8b5b6755429950cd6afccd::Gurban Pirimov::0"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5a8b5b6755429950cd6afccd::Geography of Azerbaijan::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b5b6755429950cd6afccd::Azerbaijan",
+        "5a8b5b6755429950cd6afccd::Gurban Pirimov"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b5b6755429950cd6afccd::List of cities in Azerbaijan::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b5b6755429950cd6afccd::List of companies of Azerbaijan::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b5b6755429950cd6afccd::Geography of Azerbaijan::6",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8b5b6755429950cd6afccd::Azerbaijan::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8b5b6755429950cd6afccd::Gurban Pirimov::0",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5a8b5b6755429950cd6afccd::Geography of Azerbaijan::0",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b5b6755429950cd6afccd::Geography of Azerbaijan::0",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] Azerbaijan is situated in the Caucasus region of Eurasia.\n[2] Gurban Bakhshali oglu Primov (Azerbaijani: \"Qurban Primov\" ) (4 October 1880 in Abdal Gulabli near Shusha, Karabakh, Azerbaijan – 29 August 1965 in Baku, Azerbaijan) was an Azerbaijani folk musician and tar-player.\n[3] Azerbaijan ( ; Azerbaijani: \"Azərbaycan\" , officially the Republic of Azerbaijan (Azerbaijani: \"Azərbaycan Respublikası\" )), is a country in the South Caucasus region, situated at the crossroads of Southwest Asia and Southeastern Europe.\n[4] Located in the region of the southern Caucasus Mountains, Azerbaijan borders the Caspian Sea to the east, Georgia and Russia to the north, Iran to the south, and Armenia to the southwest and west."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

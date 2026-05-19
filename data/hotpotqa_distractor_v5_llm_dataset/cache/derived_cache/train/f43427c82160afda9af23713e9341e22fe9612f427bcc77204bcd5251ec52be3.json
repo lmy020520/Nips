@@ -1,0 +1,30 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the birth date of the former CEO of an Indian multinational IT services company that is a subsidiary of HCL Enterprise. The raw evidence identifies HCL Technologies as such a company, but does not mention its former CEO or his birth date. A bridge note is needed to connect HCL Technologies to its former CEO, and a verification note to confirm the CEO's birth date.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "HCL Technologies is a subsidiary of HCL Enterprise.",
+      "source_unit_ids": [
+        "5a7cb77355429907fabef00e::HCL Technologies::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "The former chief executive of HCL Technologies is Shiv Nadar.",
+      "source_unit_ids": [
+        "5a7cb77355429907fabef00e::Shiv Nadar::2"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "Shiv Nadar was born on January 8, 1965.",
+      "source_unit_ids": [
+        "5a7cb77355429907fabef00e::Shiv Nadar::2"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

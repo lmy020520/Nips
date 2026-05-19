@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Miffy and Friends",
+  "pred_answer": "Miffy and Friends",
+  "normalized_gold": "miffy and friends",
+  "normalized_pred": "miffy and friends",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5299f5542992663a4f128",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5299f5542992663a4f128::Miffy's Adventures Big and Small::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5299f5542992663a4f128::Miffy and Friends::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5299f5542992663a4f128::Angelina Ballerina: The Next Steps::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5299f5542992663a4f128::Miffy's Adventures Big and Small",
+        "5ae5299f5542992663a4f128::Miffy and Friends"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5299f5542992663a4f128::Miffy's Adventures Big and Small::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5299f5542992663a4f128::Miffy and Friends::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5299f5542992663a4f128::Angelina Ballerina: The Next Steps::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5299f5542992663a4f128::Angelina Ballerina: The Next Steps::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Angelina Ballerina: The Next Steps is a British musical CGI animated television series that premiered on September 5, 2009, on PBS Kids in the United States.\n[2] Miffy and Friends is a Dutch-American stop-motion animated television series, based on the \"Miffy\" book series by Dutch artist Dick Bruna.\n[3] Miffy's Adventures Big and Small (Dutch: \"Nijntjes avonturen groot en klein\" ) is a Dutch-British CGI-animated television series, based on the \"Miffy\" book series by Dutch artist Dick Bruna."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

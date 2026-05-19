@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1970",
+  "pred_answer": "1970",
+  "normalized_gold": "1970",
+  "normalized_pred": "1970",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8d71a6554299441c6b9fe1",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8d71a6554299441c6b9fe1::2004–05 FC Barcelona season::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8d71a6554299441c6b9fe1::Luis Enrique (footballer)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8d71a6554299441c6b9fe1::List of FC Barcelona records and statistics::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8d71a6554299441c6b9fe1::2004–05 FC Barcelona season",
+        "5a8d71a6554299441c6b9fe1::Luis Enrique (footballer)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8d71a6554299441c6b9fe1::2004–05 FC Barcelona season::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8d71a6554299441c6b9fe1::Luis Enrique (footballer)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8d71a6554299441c6b9fe1::List of FC Barcelona records and statistics::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8d71a6554299441c6b9fe1::List of FC Barcelona records and statistics::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Futbol Club Barcelona (] ), also known as Barcelona and familiarly as Barça, is a professional football club, based in Barcelona, Catalonia, Spain.\n[2] Luis Enrique Martínez García (] ; born 8 May 1970), known as Luis Enrique, is a Spanish former professional footballer, and a current manager.\n[3] The 2004-05 season saw Fútbol Club Barcelona end their six-year wait for the La Liga title, having not won the league or, indeed, any trophy since the 1998–99 season and thus La Liga trophy returned in Barcelona's trophy room."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Elizabeth Ashley",
+  "pred_answer": "Elizabeth Ashley",
+  "normalized_gold": "elizabeth ashley",
+  "normalized_pred": "elizabeth ashley",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5addee595542997dc79070bf",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5addee595542997dc79070bf::Elizabeth Ashley::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5addee595542997dc79070bf::Matthew Schechter::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5addee595542997dc79070bf::Take Her, She's Mine::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5addee595542997dc79070bf::Rebecca Luker::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5addee595542997dc79070bf::Elizabeth Ashley",
+        "5addee595542997dc79070bf::Take Her, She's Mine"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5addee595542997dc79070bf::Elizabeth Ashley::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5addee595542997dc79070bf::Matthew Schechter::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5addee595542997dc79070bf::Take Her, She's Mine::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5addee595542997dc79070bf::Rebecca Luker::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5addee595542997dc79070bf::Rebecca Luker::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She has been nominated for three Tony Awards and two Drama Desk Awards, and she is featured on opera star Plácido Domingo's recording, \"The Broadway I Love\" (1991).\n[2] The character of Mollie, played by Elizabeth Ashley on Broadway and in the film by Sandra Dee, was based on the then 22-year-old Nora Ephron.\n[3] The production was nominated for three Tony Awards and became one of Roundabout Theatre Company's greatest successes.\n[4] She has been nominated for three Tony Awards, winning once in 1962 for \"Take Her, She's Mine\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

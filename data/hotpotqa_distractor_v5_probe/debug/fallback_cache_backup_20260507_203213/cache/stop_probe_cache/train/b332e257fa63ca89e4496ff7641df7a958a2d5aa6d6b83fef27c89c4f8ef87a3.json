@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Australian Outback and in New York City",
+  "pred_answer": "Australian Outback and in New York City",
+  "normalized_gold": "australian outback and in new york city",
+  "normalized_pred": "australian outback and in new york city",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a845dd85542996488c2e530",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a845dd85542996488c2e530::The Outsiders (Australian TV series)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a845dd85542996488c2e530::John Meillon::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a845dd85542996488c2e530::Crocodile Dundee::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a845dd85542996488c2e530::The Outsiders (Australian TV series)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a845dd85542996488c2e530::John Meillon",
+        "5a845dd85542996488c2e530::Crocodile Dundee"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a845dd85542996488c2e530::The Outsiders (Australian TV series)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a845dd85542996488c2e530::John Meillon::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a845dd85542996488c2e530::Crocodile Dundee::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a845dd85542996488c2e530::The Outsiders (Australian TV series)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a845dd85542996488c2e530::The Outsiders (Australian TV series)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Outsiders was the name of an Australian-German co-production which was made in Australia in 1976.\n[2] Crocodile Dundee (stylized as \"Crocodile\" Dundee in the U.S.) is a 1986 Australian-American comedy film set in the Australian Outback and in New York City.\n[3] John Meillon, {'1': \", '2': \", '3': \", '4': \"} ( ; 1 May 1934 – 10 August 1989) was an Australian character actor, known for many straight as well as comedy roles, he became most widely known internationally however as Walter Reilly in the films \"Crocodile Dundee\" and \"Crocodile Dundee II\".\n[4] It also featured other prominent Australian actors including John Jarratt of \"Wolf Creek\" fame, Wendy Hughes, Leonard Teale, Ray Barrett, Peter Cummins of \"Sunday Too Far Away\", John Meillon of \"\"Crocodile\" Dundee\" fame, Megan Williams of \"The Sullivans\" fame, John Ewart (truckie voice over in \"Change of Image\" and Frank Kennedy in \"Charlie Cole Esq.\"), Judy Morris, Vincent Ball of \"A Town Like Al"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

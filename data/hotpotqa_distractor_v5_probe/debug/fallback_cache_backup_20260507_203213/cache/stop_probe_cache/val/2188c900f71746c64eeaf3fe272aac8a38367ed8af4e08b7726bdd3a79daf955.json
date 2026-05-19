@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Get Him to the Greek",
+  "pred_answer": "Get Him to the Greek",
+  "normalized_gold": "get him to the greek",
+  "normalized_pred": "get him to the greek",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab951eb55429970cfb8ea57",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab951eb55429970cfb8ea57::Rose Byrne::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab951eb55429970cfb8ea57::Wild Target::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab951eb55429970cfb8ea57::Get Him to the Greek::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab951eb55429970cfb8ea57::Rose Byrne::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab951eb55429970cfb8ea57::Rose Byrne",
+        "5ab951eb55429970cfb8ea57::Get Him to the Greek"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab951eb55429970cfb8ea57::Rose Byrne::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab951eb55429970cfb8ea57::Wild Target::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab951eb55429970cfb8ea57::Get Him to the Greek::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab951eb55429970cfb8ea57::Rose Byrne::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab951eb55429970cfb8ea57::Rose Byrne::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Byrne has also starred in the films \"Troy\", \"28 Weeks Later\", \"Knowing\", \"Insidious\", \"\", \"\", as well as the comedies \"Get Him to the Greek\", \"Bridesmaids\", \"Neighbors\", \"\", and \"Spy.\"\n[2] Get Him to the Greek is a 2010 American black comedy film written, produced and directed by Nicholas Stoller and starring Russell Brand and Jonah Hill.\n[3] Wild Target is a 2010 black comedy film, directed by Jonathan Lynn.\n[4] Mary Rose Byrne (born 24 July 1979) is an Australian actress."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

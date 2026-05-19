@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "flowers",
+  "pred_answer": "flowers",
+  "normalized_gold": "flowers",
+  "normalized_pred": "flowers",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae23088554299492dc91bd1",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae23088554299492dc91bd1::Pseudocydonia::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae23088554299492dc91bd1::Solenostemon::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae23088554299492dc91bd1::Pseudocydonia::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae23088554299492dc91bd1::Pseudocydonia",
+        "5ae23088554299492dc91bd1::Solenostemon"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae23088554299492dc91bd1::Pseudocydonia::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae23088554299492dc91bd1::Solenostemon::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae23088554299492dc91bd1::Pseudocydonia::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae23088554299492dc91bd1::Pseudocydonia::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It is closely related to the east Asian genus \"Chaenomeles\", and is sometimes placed in \"Chaenomeles\" as \"C. sinensis\", but notable differences are the lack of thorns, and that the flowers are produced singly, not in clusters.\n[2] Solenostemon, commonly known as \"Coleus\" is a genus of flowering plants in the family Lamiaceae.\n[3] Pseudocydonia sinensis, the Chinese quince, is a deciduous or semi-evergreen tree in the family Rosaceae, native to eastern Asia in China, and the sole species in the genus Pseudocydonia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

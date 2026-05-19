@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1983",
+  "pred_answer": "1983",
+  "normalized_gold": "1983",
+  "normalized_pred": "1983",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5aded1015542995ec70e8f28",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5aded1015542995ec70e8f28::Please Don't Eat the Babies::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5aded1015542995ec70e8f28::The Harvest (2013 film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5aded1015542995ec70e8f28::Bruce Geller::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5aded1015542995ec70e8f28::Do Not Disturb (2013 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5aded1015542995ec70e8f28::Please Don't Eat the Babies",
+        "5aded1015542995ec70e8f28::Bruce Geller"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5aded1015542995ec70e8f28::Please Don't Eat the Babies::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5aded1015542995ec70e8f28::The Harvest (2013 film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5aded1015542995ec70e8f28::Bruce Geller::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5aded1015542995ec70e8f28::Do Not Disturb (2013 film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5aded1015542995ec70e8f28::Do Not Disturb (2013 film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Do Not Disturb (originally New Terminal Hotel) is an American horror thriller film written and directed by BC Furtney.\n[2] Bruce Bernard Geller (October 13, 1930 – May 21, 1978) was an American lyricist, screenwriter, director, and television producer.\n[3] The Harvest (released as Can't Come Out to Play in the UK) is a 2013 American horror thriller film released by IFC Films that was directed by John McNaughton.\n[4] Don't Eat the Babies (also known as Island Fury) is a 1983 American horror and thriller film directed by Bruce Geller."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

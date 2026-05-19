@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Australia",
+  "pred_answer": "Australia",
+  "normalized_gold": "australia",
+  "normalized_pred": "australia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab8987255429919ba4e232c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab8987255429919ba4e232c::Corokia::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab8987255429919ba4e232c::List of endemic birds of New Zealand::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab8987255429919ba4e232c::Lechenaultia::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab8987255429919ba4e232c::Lady Bird Johnson Wildflower Center::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab8987255429919ba4e232c::Corokia",
+        "5ab8987255429919ba4e232c::Lechenaultia"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab8987255429919ba4e232c::Corokia::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab8987255429919ba4e232c::List of endemic birds of New Zealand::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab8987255429919ba4e232c::Lechenaultia::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab8987255429919ba4e232c::Lady Bird Johnson Wildflower Center::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab8987255429919ba4e232c::Lady Bird Johnson Wildflower Center::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The center is a self-supporting research unit of The University of Texas at Austin devoted entirely to native plants, with more than 700 species native to central Texas, and the environmental benefits of native-plant landscaping.\n[2] Lechenaultia is a genus of plants in the Goodeniaceae family.\n[3] Endemic species differ from native or indigenous species in that native or indigenous species have generally and historically, migrated to a region or country and become established over a long period of time, whereas endemic species, have only ever inhabited the region or country where they were first discovered.\n[4] Corokia is a genus in the Argophyllaceae family comprising about ten species native to New Zealand and one native to Australia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

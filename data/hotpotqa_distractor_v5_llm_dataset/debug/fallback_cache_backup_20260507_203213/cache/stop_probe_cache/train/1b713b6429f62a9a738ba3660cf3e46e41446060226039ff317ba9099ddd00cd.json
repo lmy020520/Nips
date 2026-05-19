@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "August 27, 1952",
+  "pred_answer": "August 27, 1952",
+  "normalized_gold": "august 27 1952",
+  "normalized_pred": "august 27 1952",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8db528554299068b959dcf",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8db528554299068b959dcf::Paul Manafort::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8db528554299068b959dcf::Jack Posobiec::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8db528554299068b959dcf::Roger Stone::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8db528554299068b959dcf::Mary Matalin::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8db528554299068b959dcf::Jack Posobiec",
+        "5a8db528554299068b959dcf::Roger Stone"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8db528554299068b959dcf::Paul Manafort::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8db528554299068b959dcf::Jack Posobiec::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8db528554299068b959dcf::Roger Stone::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8db528554299068b959dcf::Mary Matalin::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8db528554299068b959dcf::Mary Matalin::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Mary Joe Matalin (born August 19, 1953) is an American political consultant well known for her work with the Republican Party.\n[2] Roger Jason Stone Jr. (born August 27, 1952) is an American political consultant, lobbyist, and strategist, noted for his use of opposition research usually for candidates of the Republican Party.\n[3] He was granted press access to the White House in April 2017, and his tweets have been promoted by former Trump campaign manager Roger Stone.\n[4] Paul John Manafort Jr. (born April 1, 1949) is an American lawyer, lobbyist and political consultant."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

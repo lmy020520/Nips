@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Patricia Arquette",
+  "pred_answer": "Patricia Arquette",
+  "normalized_gold": "patricia arquette",
+  "normalized_pred": "patricia arquette",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b6d885542997f31a41d25",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b6d885542997f31a41d25::Final Curtain (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b6d885542997f31a41d25::Beyond Rangoon::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b6d885542997f31a41d25::Patricia Arquette::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8b6d885542997f31a41d25::Ed Wood (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b6d885542997f31a41d25::Beyond Rangoon",
+        "5a8b6d885542997f31a41d25::Patricia Arquette"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b6d885542997f31a41d25::Final Curtain (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b6d885542997f31a41d25::Beyond Rangoon::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b6d885542997f31a41d25::Patricia Arquette::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8b6d885542997f31a41d25::Ed Wood (film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b6d885542997f31a41d25::Ed Wood (film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Ed Wood is a 1994 American biographical period comedy-drama film directed and produced by Tim Burton, and starring Johnny Depp as cult filmmaker Ed Wood.\n[2] Her notable films include Tony Scott's \"True Romance\" (1993), Tim Burton's \"Ed Wood\" (1994), David O. Russell's \"Flirting with Disaster\" (1996), David Lynch's \"Lost Highway\" (1997), Stephen Frears's \"The Hi-Lo Country\" (1998), Martin Scorsese's \"Bringing Out the Dead\" (1999), and Andrew Davis's \"Holes\" (2003).\n[3] Beyond Rangoon is a 1995 drama film directed by John Boorman about Laura Bowman (played by Patricia Arquette), an American tourist who vacations in Burma (Myanmar) in 1988, the year in which the 8888 Uprising takes place.\n[4] Final Curtain was a television pilot written and directed by Ed Wood in 1957."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

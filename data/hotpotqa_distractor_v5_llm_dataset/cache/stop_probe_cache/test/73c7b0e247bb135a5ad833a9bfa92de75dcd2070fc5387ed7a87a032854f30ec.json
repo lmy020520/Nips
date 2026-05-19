@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "water resistance",
+  "pred_answer": "water resistance",
+  "normalized_gold": "water resistance",
+  "normalized_pred": "water resistance",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe92de5542993f32c2a16b",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe92de5542993f32c2a16b::G-Shock::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe92de5542993f32c2a16b::Electrical safety testing::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe92de5542993f32c2a16b::G-Shock::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe92de5542993f32c2a16b::Water Resistant mark::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abe92de5542993f32c2a16b::Hydrostatic test::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe92de5542993f32c2a16b::G-Shock",
+        "5abe92de5542993f32c2a16b::Water Resistant mark"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe92de5542993f32c2a16b::G-Shock::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe92de5542993f32c2a16b::Electrical safety testing::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe92de5542993f32c2a16b::G-Shock::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe92de5542993f32c2a16b::Water Resistant mark::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abe92de5542993f32c2a16b::Hydrostatic test::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe92de5542993f32c2a16b::Hydrostatic test::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Strength is usually tested by measuring permanent deformation of the container.\n[2] It is usually accompanied by an indication of the static test pressure that a sample of newly manufactured watches were exposed to in a leakage test.\n[3] They are designed primarily for sports, military and outdoors-oriented activities; nearly all G-Shocks are digital or a combination of analog or digital and have a stopwatch feature, countdown timer, backlight and water resistance.\n[4] To conform to such standards, the product must pass safety tests such as the high voltage test (also called as Dielectric voltage-withstand test or high potential test), Insulation Resistance Test, Ground (Earth) Bond & Ground Continuity Test & Leakage Current Test (also called as Line Leakage Test, Earth Leakage Current Test, Enclosure Leakage Current Test or Patient Leakage Current Test)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

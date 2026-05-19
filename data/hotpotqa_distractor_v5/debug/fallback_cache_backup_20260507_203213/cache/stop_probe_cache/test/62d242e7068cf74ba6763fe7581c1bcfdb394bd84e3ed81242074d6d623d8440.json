@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Terry the Tomboy",
+  "pred_answer": "Terry the Tomboy",
+  "normalized_gold": "terry the tomboy",
+  "normalized_pred": "terry the tomboy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2a288554299657fa28ff5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2a288554299657fa28ff5::American Wrestler: The Wizard::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2a288554299657fa28ff5::Angelina Jolie filmography::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2a288554299657fa28ff5::Lia Marie Johnson::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2a288554299657fa28ff5::Dustin Hoffman filmography::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2a288554299657fa28ff5::American Wrestler: The Wizard",
+        "5ac2a288554299657fa28ff5::Lia Marie Johnson"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2a288554299657fa28ff5::American Wrestler: The Wizard::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2a288554299657fa28ff5::Angelina Jolie filmography::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2a288554299657fa28ff5::Lia Marie Johnson::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2a288554299657fa28ff5::Dustin Hoffman filmography::7",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2a288554299657fa28ff5::Dustin Hoffman filmography::7",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 1969, he starred alongside Jon Voight in the Academy Award for Best Picture winner \"Midnight Cowboy\", which Hoffman was nominated for the Academy Award for Best Actor a second time.\n[2] She is known for her starring role in the Nickelodeon movie \"Terry the Tomboy\" and for recurring roles in AwesomenessTV's Side Effects TV Series and My Music.\n[3] Angelina Jolie is an American actress and filmmaker.\n[4] American Wrestler: The Wizard is a 2016 sports biographical film set in the world of competitive high school wrestling, and starring William Fichtner, Jon Voight, Ali Afshar, Gabriel Basso, Kevin G. Schmidt, Lia Marie Johnson and George Kosturos."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

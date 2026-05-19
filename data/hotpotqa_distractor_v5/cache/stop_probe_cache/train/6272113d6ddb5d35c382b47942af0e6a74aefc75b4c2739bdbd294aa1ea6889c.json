@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1981",
+  "pred_answer": "1981",
+  "normalized_gold": "1981",
+  "normalized_pred": "1981",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae60df355429929b0807aba",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae60df355429929b0807aba::The Innocent Age::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae60df355429929b0807aba::Run for the Roses (song)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae60df355429929b0807aba::Urban Cowboy::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae60df355429929b0807aba::The Innocent Age::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae60df355429929b0807aba::The Innocent Age",
+        "5ae60df355429929b0807aba::Urban Cowboy"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae60df355429929b0807aba::The Innocent Age::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae60df355429929b0807aba::Run for the Roses (song)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae60df355429929b0807aba::Urban Cowboy::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae60df355429929b0807aba::The Innocent Age::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae60df355429929b0807aba::The Innocent Age::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Innocent Age is the seventh album by American singer-songwriter Dan Fogelberg, released in 1981 (see 1981 in music).\n[2] Urban Cowboy is a 1980 American romantic drama film about the love-hate relationship between Buford Uan \"Bud\" Davis (John Travolta) and Sissy (Debra Winger).\n[3] \"Run for the Roses\" is a song on the album \"The Innocent Age\", written and recorded by singer/songwriter Dan Fogelberg in 1981.\n[4] The album also includes his song \"Times Like These\" from the 1980 \"Urban Cowboy\" soundtrack."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

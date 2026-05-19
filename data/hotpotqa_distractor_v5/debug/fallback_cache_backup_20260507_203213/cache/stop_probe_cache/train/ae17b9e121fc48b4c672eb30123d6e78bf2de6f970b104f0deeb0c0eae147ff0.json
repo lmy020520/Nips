@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Commonwealth Aircraft Corporation",
+  "pred_answer": "Commonwealth Aircraft Corporation",
+  "normalized_gold": "commonwealth aircraft corporation",
+  "normalized_pred": "commonwealth aircraft corporation",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab508a95542996a3a96a000",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab508a95542996a3a96a000::CAC Woomera::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab508a95542996a3a96a000::Commonwealth Aircraft Corporation::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab508a95542996a3a96a000::No. 1 Basic Flying Training School RAAF::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab508a95542996a3a96a000::CAC Woomera",
+        "5ab508a95542996a3a96a000::Commonwealth Aircraft Corporation"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab508a95542996a3a96a000::CAC Woomera::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab508a95542996a3a96a000::Commonwealth Aircraft Corporation::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab508a95542996a3a96a000::No. 1 Basic Flying Training School RAAF::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab508a95542996a3a96a000::No. 1 Basic Flying Training School RAAF::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] No. 1 BFTS moved to RAAF Base Point Cook, Victoria, in May 1958, by which time it was exclusively flying CAC Winjeels. Its training program expanded in the mid-1960s owing to Australia's commitments in the Vietnam War.\n[2] The CAC was established in 1936, to provide Australia with the capability to produce military aircraft and engines.\n[3] The CAC Woomera, also known as the CAC CA-4 and CAC CA-11, was an Australian bomber aircraft, which was designed and manufactured by the Commonwealth Aircraft Corporation during World War II."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

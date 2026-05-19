@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Uric acid",
+  "pred_answer": "uric acid",
+  "normalized_gold": "uric acid",
+  "normalized_pred": "uric acid",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e41c85542991319bc9453",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e41c85542991319bc9453::Crystal arthropathy::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e41c85542991319bc9453::Uric acid::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e41c85542991319bc9453::Tophus::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e41c85542991319bc9453::Crystal arthropathy",
+        "5a7e41c85542991319bc9453::Uric acid"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e41c85542991319bc9453::Crystal arthropathy::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e41c85542991319bc9453::Uric acid::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e41c85542991319bc9453::Tophus::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e41c85542991319bc9453::Tophus::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] A tophus (Latin: \"stone\", plural tophi) is a deposit of uric acid crystals, in the form of monosodium urate crystals, in people with longstanding hyperuricemia (high levels of uric acid in the blood).\n[2] Uric acid is a heterocyclic compound of carbon, nitrogen, oxygen, and hydrogen with the formula CHNO.\n[3] Crystal arthropathy is a class of joint disorder (called \"arthropathy\") that is characterized by accumulation of tiny crystals in one or more joints. Polarizing microscopy and application of other crystallographic techniques have improved identification of different microcrystals including monosodium urate, calcium pyrophosphate dihydrate, calcium hydroxyapatite, and calcium oxalate."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

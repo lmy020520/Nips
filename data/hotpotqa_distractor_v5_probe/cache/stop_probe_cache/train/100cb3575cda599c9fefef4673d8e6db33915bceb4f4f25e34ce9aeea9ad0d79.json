@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Marceline the Vampire Queen",
+  "pred_answer": "Marceline the Vampire Queen",
+  "normalized_gold": "marceline the vampire queen",
+  "normalized_pred": "marceline the vampire queen",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abbda2a55429931dba145a5",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abbda2a55429931dba145a5::Princess Bubblegum::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abbda2a55429931dba145a5::Marceline the Vampire Queen::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abbda2a55429931dba145a5::Olivia Olson::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abbda2a55429931dba145a5::Red Nose Day Actually::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abbda2a55429931dba145a5::List of songs recorded by Kelly Clarkson::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abbda2a55429931dba145a5::Olivia Olson",
+        "5abbda2a55429931dba145a5::Red Nose Day Actually"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abbda2a55429931dba145a5::Princess Bubblegum::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abbda2a55429931dba145a5::Marceline the Vampire Queen::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abbda2a55429931dba145a5::Olivia Olson::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abbda2a55429931dba145a5::Red Nose Day Actually::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abbda2a55429931dba145a5::List of songs recorded by Kelly Clarkson::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abbda2a55429931dba145a5::List of songs recorded by Kelly Clarkson::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] \"Miss Independent\" was followed by \"Low\" and \"The Trouble With Love Is\", which was featured as a single from the soundtrack of the film \"Love Actually\".\n[2] Red Nose Day Actually is a 2017 British romantic comedy television short film, acting as both a sequel to the 2003 feature film \"Love Actually\", and a part of the fund-raising event Red Nose Day 2017.\n[3] She also played the character of Joanna in the 2003 film \"Love Actually\" and its 2017 short sequel \"Red Nose Day Actually\".\n[4] Marceline the Vampire Queen is a character in the American animated television series \"Adventure Time\" created by Pendleton Ward."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

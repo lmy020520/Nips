@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Paytm",
+  "pred_answer": "Paytm",
+  "normalized_gold": "paytm",
+  "normalized_pred": "paytm",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8323b95542990548d0b181",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8323b95542990548d0b181::Paytm::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8323b95542990548d0b181::ShopBack::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8323b95542990548d0b181::Electronic Payment Services::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8323b95542990548d0b181::Paytm",
+        "5a8323b95542990548d0b181::ShopBack"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8323b95542990548d0b181::Paytm::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8323b95542990548d0b181::ShopBack::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8323b95542990548d0b181::Electronic Payment Services::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8323b95542990548d0b181::Electronic Payment Services::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Electronic Payment Services (Chinese: 易辦事), commonly known as EPS, is an electronic payment system in Hong Kong, Macau, and with limited acceptance in Shenzhen; since it began operations in 1985.\n[2] It is currently affiliated with over 300 merchants from all over the world, including online retail giants Taobao, Zalora, Lazada_Group, Rakuten, Groupon, EBay, Paytm, ShopClues, Jabong.com & Flipkart.\n[3] Paytm is an Indian electronic payment and e-commerce brand based out of Delhi NCR, India."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

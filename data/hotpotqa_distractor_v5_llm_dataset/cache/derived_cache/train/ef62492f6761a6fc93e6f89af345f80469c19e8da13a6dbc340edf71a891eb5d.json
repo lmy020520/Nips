@@ -1,0 +1,30 @@
+{
+  "should_derive": true,
+  "reason": "Need to bridge from 'American-born Mexican professional baseball infielder' to the birth year. Candidates include Esteban Quiroz (born 1992) and Ramiro Peña (born 1985), but gold answer is 1982. A bridge note can connect the query entity to Jorge Cantú (born 1982) which is not in top candidates but is in state summary. However, we must use only provided candidates. So we can create a verification note to check if any candidate matches 'American-born Mexican' and birth year 1982. None do, so we need to note that and possibly bridge to the correct entity from state summary.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Esteban Quiroz is a Mexican professional baseball infielder born in 1992, not 1982.",
+      "source_unit_ids": [
+        "5a7d12c3554299452d57bad1::Esteban Quiroz::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "Ramiro Peña is a Mexican professional baseball infielder born in 1985, not 1982.",
+      "source_unit_ids": [
+        "5a7d12c3554299452d57bad1::Ramiro Peña::0"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "The state summary mentions Jorge Luís Cantú Guzmán, an American-born Mexican professional baseball infielder born January 30, 1982.",
+      "source_unit_ids": [
+        "5a7d12c3554299452d57bad1::Esteban Quiroz::0"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

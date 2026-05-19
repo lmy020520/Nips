@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "United States Air Force",
+  "pred_answer": "United States Air Force",
+  "normalized_gold": "united states air force",
+  "normalized_pred": "united states air force",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab45b155542991751b4d751",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab45b155542991751b4d751::Missile Warning Center::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab45b155542991751b4d751::Quasi-Zenith Satellite System::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab45b155542991751b4d751::Global Positioning System::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab45b155542991751b4d751::Tselina (satellite)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab45b155542991751b4d751::Quasi-Zenith Satellite System",
+        "5ab45b155542991751b4d751::Global Positioning System"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab45b155542991751b4d751::Missile Warning Center::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab45b155542991751b4d751::Quasi-Zenith Satellite System::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab45b155542991751b4d751::Global Positioning System::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab45b155542991751b4d751::Tselina (satellite)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab45b155542991751b4d751::Tselina (satellite)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Целина\") is a Russian, formerly Soviet, military space-based radio surveillance system.\n[2] The Global Positioning System (GPS), originally Navstar GPS, is a space-based radionavigation system owned by the United States government and operated by the United States Air Force.\n[3] The Quasi-Zenith Satellite System (QZSS) is a three-satellite regional time transfer system in development and the satellite-based augmentation system for the Global Positioning System that would be receivable within Japan.\n[4] The USSTRATCOM Missile Warning Center (MWC) is a Cheyenne Mountain nuclear bunker facility which networks data from missile warning sensor systems including the \"space-based infrared system\" and the terrestrial radars of the Solid State Phased Array Radar System."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

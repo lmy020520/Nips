@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New South Wales",
+  "pred_answer": "New South Wales",
+  "normalized_gold": "new south wales",
+  "normalized_pred": "new south wales",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7ee90554299540e5a56b2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7ee90554299540e5a56b2::David Leyonhjelm::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7ee90554299540e5a56b2::Hideo Hiraoka::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7ee90554299540e5a56b2::Liberal Democratic Party (Australia)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae7ee90554299540e5a56b2::Yasuhiro Oe::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7ee90554299540e5a56b2::David Leyonhjelm",
+        "5ae7ee90554299540e5a56b2::Liberal Democratic Party (Australia)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7ee90554299540e5a56b2::David Leyonhjelm::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7ee90554299540e5a56b2::Hideo Hiraoka::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7ee90554299540e5a56b2::Liberal Democratic Party (Australia)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae7ee90554299540e5a56b2::Yasuhiro Oe::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7ee90554299540e5a56b2::Yasuhiro Oe::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He left the party six months later, and is currently a member of the Liberal Democratic Party.\n[2] The Liberal Democratic Party (LDP or Liberal Democrats) is an Australian political party founded in Canberra in 2001.\n[3] Following a large-scale upturn by the Liberal Democratic Party, Hiraoka lost his seat by 588 votes, remaining in the Lower House through a process known as proportional representation.\n[4] David Ean Leyonhjelm ( \"lion-helm\"; born 1 April 1952) is an Australian politician who is a Senator for New South Wales, representing the Liberal Democratic Party."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

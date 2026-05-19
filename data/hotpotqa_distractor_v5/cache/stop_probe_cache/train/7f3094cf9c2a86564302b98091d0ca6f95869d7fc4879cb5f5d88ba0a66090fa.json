@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Königsberg",
+  "pred_answer": "Königsberg",
+  "normalized_gold": "königsberg",
+  "normalized_pred": "königsberg",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac52bbd5542994611c8b3df",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac52bbd5542994611c8b3df::Jan Mikulicz-Radecki::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac52bbd5542994611c8b3df::Kaliningrad Zoo::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac52bbd5542994611c8b3df::Königsberg::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac52bbd5542994611c8b3df::Nesterov::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac52bbd5542994611c8b3df::Jan Mikulicz-Radecki",
+        "5ac52bbd5542994611c8b3df::Königsberg"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac52bbd5542994611c8b3df::Jan Mikulicz-Radecki::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac52bbd5542994611c8b3df::Kaliningrad Zoo::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac52bbd5542994611c8b3df::Königsberg::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac52bbd5542994611c8b3df::Nesterov::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac52bbd5542994611c8b3df::Nesterov::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Nesterov (Russian: Не́стеров ), until 1938 known by its German name Stallupönen (Lithuanian: \"Stalupėnai\" ; Polish: \"Stołupiany\" ) and in 1938-1946 as Ebenrode, is a town and the administrative center of Nesterovsky District in Kaliningrad Oblast, Russia, located 140 km east of Kaliningrad, the administrative center of the oblast, near the Russian-Lithuanian border on the railway connecting Kalini\n[2] Königsberg is the historical name for the present-day city of Kaliningrad, Russia.\n[3] The Kaliningrad Zoo was founded in 1896 as the Königsberger Tiergarten in the German town of Königsberg, which in 1945 became part of Russia and was renamed Kaliningrad.\n[4] Jan Mikulicz-Radecki (German: \"Johann Freiherr von Mikulicz-Radecki\" ) was a Polish-Austrian surgeon."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

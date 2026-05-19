@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Villa Paletti",
+  "pred_answer": "Villa Paletti",
+  "normalized_gold": "villa paletti",
+  "normalized_pred": "villa paletti",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a771f0555429937353601dc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a771f0555429937353601dc::Villa Paletti::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a771f0555429937353601dc::Manila (board game)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a771f0555429937353601dc::Xiangqi::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a771f0555429937353601dc::Game of skill::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a771f0555429937353601dc::Villa Paletti",
+        "5a771f0555429937353601dc::Xiangqi"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a771f0555429937353601dc::Villa Paletti::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a771f0555429937353601dc::Manila (board game)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a771f0555429937353601dc::Xiangqi::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a771f0555429937353601dc::Game of skill::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a771f0555429937353601dc::Game of skill::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A game of skill is a game where the outcome is determined mainly by mental or physical skill, rather than by chance.\n[2] It is one of the most popular board games in China, and is in the same family as Western (or international) chess, chaturanga, shogi, Indian chess and janggi.\n[3] Manila is a German-style board game designed by Franz-Benno Delonge and published in 2005 by Zoch Verlag and Rio Grande Games.\n[4] Villa Paletti is a board game of physical skill designed by Bill Payne and published in 2001 by Zoch Verlag."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

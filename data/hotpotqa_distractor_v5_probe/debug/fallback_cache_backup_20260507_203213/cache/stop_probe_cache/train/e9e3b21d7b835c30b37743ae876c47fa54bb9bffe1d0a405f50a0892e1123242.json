@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "horror",
+  "pred_answer": "horror",
+  "normalized_gold": "horror",
+  "normalized_pred": "horror",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85f4d35542991dd0999ed8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85f4d35542991dd0999ed8::Herschell Gordon Lewis::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85f4d35542991dd0999ed8::Lucio Fulci::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85f4d35542991dd0999ed8::Splatter film::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85f4d35542991dd0999ed8::A Cat in the Brain::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85f4d35542991dd0999ed8::Lucio Fulci",
+        "5a85f4d35542991dd0999ed8::Splatter film"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85f4d35542991dd0999ed8::Herschell Gordon Lewis::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85f4d35542991dd0999ed8::Lucio Fulci::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85f4d35542991dd0999ed8::Splatter film::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85f4d35542991dd0999ed8::A Cat in the Brain::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85f4d35542991dd0999ed8::A Cat in the Brain::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A Cat in the Brain (Italian: Un gatto nel cervello; also known as Nightmare Concert and I volti del terrore) is a 1990 Italian horror film written and directed by the \"Italian godfather of gore\" Lucio Fulci.\n[2] A splatter film or gore film is a subgenre of horror film that deliberately focuses on graphic portrayals of gore and graphic violence.\n[3] He is perhaps best known for his gore films, including \"Zombi 2\" (1979) and \"The Beyond\" (1981), although he made films in genres as diverse as giallo, western and comedy.\n[4] Herschell Gordon Lewis (June 15, 1926 – September 26, 2016) was an American filmmaker, best known for creating the \"splatter\" subgenre of horror films."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

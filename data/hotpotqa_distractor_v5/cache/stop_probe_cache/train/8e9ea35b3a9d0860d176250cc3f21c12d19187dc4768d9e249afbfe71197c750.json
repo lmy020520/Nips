@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Kenneth John \"Kenny\" Ortega",
+  "pred_answer": "Kenneth John \"Kenny\" Ortega",
+  "normalized_gold": "kenneth john kenny ortega",
+  "normalized_pred": "kenneth john kenny ortega",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade1f0455429975fa854e73",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade1f0455429975fa854e73::Paula Heredia::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade1f0455429975fa854e73::Josann McGibbon::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade1f0455429975fa854e73::Kenny Ortega::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade1f0455429975fa854e73::Travis Payne::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade1f0455429975fa854e73::Paula Heredia",
+        "5ade1f0455429975fa854e73::Kenny Ortega"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade1f0455429975fa854e73::Paula Heredia::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade1f0455429975fa854e73::Josann McGibbon::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade1f0455429975fa854e73::Kenny Ortega::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade1f0455429975fa854e73::Travis Payne::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade1f0455429975fa854e73::Travis Payne::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Travis Payne (born July 5, 1971) is an American choreographer, director, and producer.\n[2] Kenneth John \"Kenny\" Ortega (born April 18, 1950) is an American producer, director, and choreographer.\n[3] McGibbon and Parriott wrote and co-produced the Disney Channel movie, \"Descendants\" which was directed by Kenny Ortega and premiered in July, 2015.\n[4] Paula Patricia Heredia Suarez (born October 13, 1957 in San Salvador, El Salvador) is a filmmaker based in New York City."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

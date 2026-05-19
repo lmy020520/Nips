@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "13 October 1958",
+  "pred_answer": "13 October 1958",
+  "normalized_gold": "13 october 1958",
+  "normalized_pred": "13 october 1958",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8758ae5542993e715abf02",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8758ae5542993e715abf02::Fruitbat::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8758ae5542993e715abf02::Paddington Bear::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8758ae5542993e715abf02::Paddington Bear::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8758ae5542993e715abf02::Fruitbat",
+        "5a8758ae5542993e715abf02::Paddington Bear"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8758ae5542993e715abf02::Fruitbat::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8758ae5542993e715abf02::Paddington Bear::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8758ae5542993e715abf02::Paddington Bear::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8758ae5542993e715abf02::Paddington Bear::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He first appeared on 13 October 1958 in the children's book \"A Bear Called Paddington\" and has been featured in more than twenty books written by English author Michael Bond and illustrated by Peggy Fortnum and other artists.\n[2] A much loved fictional character in British culture, a Paddington Bear soft toy was chosen by British tunnellers as the first item to pass through to their French counterparts when the two sides of the Channel Tunnel were linked in 1994.\n[3] As well as his official birthday he also celebrates a second birthday \"like the Queen and Paddington Bear\" on 12 February."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

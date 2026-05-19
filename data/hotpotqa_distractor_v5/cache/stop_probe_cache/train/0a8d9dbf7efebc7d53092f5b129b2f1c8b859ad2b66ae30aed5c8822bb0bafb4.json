@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1990",
+  "pred_answer": "1990",
+  "normalized_gold": "1990",
+  "normalized_pred": "1990",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9b28c554299743d22ebad",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9b28c554299743d22ebad::Shawn Johnson::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9b28c554299743d22ebad::Katie Taylor::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9b28c554299743d22ebad::Pan American Games::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab9b28c554299743d22ebad::Track and field at the 2007 Military World Games::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9b28c554299743d22ebad::Shawn Johnson",
+        "5ab9b28c554299743d22ebad::Pan American Games"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9b28c554299743d22ebad::Shawn Johnson::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9b28c554299743d22ebad::Katie Taylor::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9b28c554299743d22ebad::Pan American Games::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab9b28c554299743d22ebad::Track and field at the 2007 Military World Games::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9b28c554299743d22ebad::Track and field at the 2007 Military World Games::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Kenya topped the medal table with five gold medals and a total of 12 – the track and field competition accounted for all of the African nation's medals at the games, which brought them sixth place on the overall games medal count.\n[2] The only Winter Pan American Games were held in 1990.\n[3] s of 2017 , she has won five consecutive gold medals at the Women's World Championships, six gold medals at the European Championships, and five gold medals at the European Union Championships.\n[4] Johnson is also a five-time Pan American Games gold medalist, winning the team titles in 2007 and 2011, as well as titles in the all-around, uneven bars, and balance beam in 2007."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

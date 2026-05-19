@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "an actress who has delivered an outstanding performance in a leading role while working within the film industry",
+  "pred_answer": "an actress who has delivered an outstanding performance in a leading role while working within the film industry",
+  "normalized_gold": "an actress who has delivered an outstanding performance in a leading role while working within the film industry",
+  "normalized_pred": "an actress who has delivered an outstanding performance in a leading role while working within the film industry",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c43de5542995e66a47585",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c43de5542995e66a47585::Merely Mary Ann::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c43de5542995e66a47585::List of Amy Adams performances::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c43de5542995e66a47585::Academy Award for Best Actress::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8c43de5542995e66a47585::Janet McTeer::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c43de5542995e66a47585::Merely Mary Ann",
+        "5a8c43de5542995e66a47585::Academy Award for Best Actress"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c43de5542995e66a47585::Merely Mary Ann::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c43de5542995e66a47585::List of Amy Adams performances::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c43de5542995e66a47585::Academy Award for Best Actress::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8c43de5542995e66a47585::Janet McTeer::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c43de5542995e66a47585::Janet McTeer::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She also won a Golden Globe Award and was nominated for the Academy Award for Best Actress for her role as Mary Jo Walker in the 1999 film \"Tumbleweeds\", and was nominated for the Academy Award for Best Supporting Actress for her role as Hubert Page in the 2011 film \"Albert Nobbs\".\n[2] It is given in honor of an actress who has delivered an outstanding performance in a leading role while working within the film industry.\n[3] In 2007, she starred in the Disney romantic comedy \"Enchanted\", for which she won the Saturn Award for Best Actress, and was nominated for her first Golden Globe Award for Best Actress (Comedy or Musical).\n[4] Gaynor and Farrell made almost a dozen films together, including Frank Borzage's classics \"Seventh Heaven\" (1927), \"Street Angel\" (1928), and \"Lucky Star\" (1929); Gaynor won the first Academy Award for Best Actress for the first two and F. W. Murnau's \"Sunrise\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

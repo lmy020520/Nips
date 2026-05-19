@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "1991",
+  "pred_answer": "1991",
+  "normalized_gold": "1991",
+  "normalized_pred": "1991",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79d9305542994bb94570eb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79d9305542994bb94570eb::Lynn Whitfield::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79d9305542994bb94570eb::Women in the French Resistance::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79d9305542994bb94570eb::Josephine Baker::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a79d9305542994bb94570eb::René Carmille::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79d9305542994bb94570eb::Lynn Whitfield",
+        "5a79d9305542994bb94570eb::Josephine Baker"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79d9305542994bb94570eb::Lynn Whitfield::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79d9305542994bb94570eb::Women in the French Resistance::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79d9305542994bb94570eb::Josephine Baker::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a79d9305542994bb94570eb::René Carmille::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a79d9305542994bb94570eb::René Carmille::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In World War II he was a double agent for the French Resistance and part of the Marco Polo Network.\n[2] Josephine Baker (born Freda Josephine McDonald; 3 June 1906 – 12 April 1975) was an entertainer, activist, and French Resistance agent.\n[3] Women in the French Resistance played an important role in the context of the resistance to occupying German forces during World War II.\n[4] She won a Primetime Emmy Award for Outstanding Lead Actress in a Miniseries or a Movie and received a Golden Globe Award nomination for her performance as Josephine Baker in the HBO biographical drama film \"The Josephine Baker Story\" (1991)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

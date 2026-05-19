@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "film director",
+  "pred_answer": "film director",
+  "normalized_gold": "film director",
+  "normalized_pred": "film director",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f7a815542995b4424204f",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f7a815542995b4424204f::City Under the Sea::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f7a815542995b4424204f::Canyon Passage::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f7a815542995b4424204f::Susan Seidelman::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8f7a815542995b4424204f::Jacques Tourneur::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8f7a815542995b4424204f::The Hot Flashes::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f7a815542995b4424204f::Susan Seidelman",
+        "5a8f7a815542995b4424204f::Jacques Tourneur"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f7a815542995b4424204f::City Under the Sea::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f7a815542995b4424204f::Canyon Passage::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f7a815542995b4424204f::Susan Seidelman::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8f7a815542995b4424204f::Jacques Tourneur::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8f7a815542995b4424204f::The Hot Flashes::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f7a815542995b4424204f::The Hot Flashes::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Hot Flashes is a film by Susan Seidelman, director of \"Desperately Seeking Susan\".\n[2] Jacques Tourneur (] ; November 12, 1904 – December 19, 1977) was a French film director known for the classic film noir \"Out of the Past\" and a series of low-budget horror films he made for RKO Studios, including \"Cat People\", \"I Walked with a Zombie\" and \"The Leopard Man\".\n[3] Susan Seidelman (born December 11, 1952) is an American film director, producer and writer.\n[4] Canyon Passage is a 1946 Technicolor Western film directed by Jacques Tourneur and set in frontier Oregon."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

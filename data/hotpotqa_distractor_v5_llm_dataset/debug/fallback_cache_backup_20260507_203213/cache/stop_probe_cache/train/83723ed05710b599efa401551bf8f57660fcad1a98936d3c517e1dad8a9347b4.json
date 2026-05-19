@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Pot Luck",
+  "pred_answer": "Pot Luck",
+  "normalized_gold": "pot luck",
+  "normalized_pred": "pot luck",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77c7215542997042120b31",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77c7215542997042120b31::StarStruck (2000 TV series)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77c7215542997042120b31::Barbara Radulović::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77c7215542997042120b31::Pot Luck (TV series)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77c7215542997042120b31::Ernie Sigley::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a77c7215542997042120b31::New Faces (Australian talent show)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77c7215542997042120b31::Pot Luck (TV series)",
+        "5a77c7215542997042120b31::Ernie Sigley"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77c7215542997042120b31::StarStruck (2000 TV series)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77c7215542997042120b31::Barbara Radulović::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77c7215542997042120b31::Pot Luck (TV series)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77c7215542997042120b31::Ernie Sigley::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a77c7215542997042120b31::New Faces (Australian talent show)::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77c7215542997042120b31::New Faces (Australian talent show)::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The program began in 1963 under the name \"Kevin Dennis Auditions\", sponsored by the new car dealership, Kevin Dennis Motors, which was run by Kevin Dennis (Dennis Gowing), who was also a well known face on Australian TV from his catchy 'Update' TV Commercials in the 1960s-70s, which were featured during the breaks of the popular show.\n[2] Ernest \"Ernie\" William Sigley (born 2 September 1938, in Footscray, Australia) is a Gold Logie winning Australian television host, radio presenter and singer.\n[3] Pot Luck was an Australian talent television series aired on Network Ten in 1987, It was hosted by Ernie Sigley.\n[4] Barbara Radulović (born 2 September 1982) is a Croatian TV host."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Oklahoma",
+  "pred_answer": "Oklahoma",
+  "normalized_gold": "oklahoma",
+  "normalized_pred": "oklahoma",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade466a55429939a52fe875",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade466a55429939a52fe875::2013 East–West Shrine Game::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade466a55429939a52fe875::Adrian Peterson::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade466a55429939a52fe875::Adrian Peterson::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade466a55429939a52fe875::NFL Top 100 Players of 2013::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ade466a55429939a52fe875::NFL Top 100 Players of 2017::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade466a55429939a52fe875::Adrian Peterson",
+        "5ade466a55429939a52fe875::NFL Top 100 Players of 2013"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade466a55429939a52fe875::2013 East–West Shrine Game::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade466a55429939a52fe875::Adrian Peterson::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade466a55429939a52fe875::Adrian Peterson::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade466a55429939a52fe875::NFL Top 100 Players of 2013::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ade466a55429939a52fe875::NFL Top 100 Players of 2017::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade466a55429939a52fe875::NFL Top 100 Players of 2017::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The NFL Top 100 Players of 2017 was the seventh season in the series.\n[2] The NFL Top 100 Players of 2013 was the third season of the series.\n[3] He played college football at Oklahoma and was drafted by the Minnesota Vikings seventh overall in the 2007 NFL Draft.\n[4] Adrian Lewis Peterson (born March 21, 1985) is an American football running back for the New Orleans Saints of the National Football League (NFL)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

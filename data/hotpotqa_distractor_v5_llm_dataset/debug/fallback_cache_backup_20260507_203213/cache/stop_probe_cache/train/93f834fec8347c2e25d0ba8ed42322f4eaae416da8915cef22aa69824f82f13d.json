@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Crocodile Dundee",
+  "pred_answer": "Crocodile Dundee",
+  "normalized_gold": "crocodile dundee",
+  "normalized_pred": "crocodile dundee",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3a6a75542990afbd1e19e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3a6a75542990afbd1e19e::Peter Best (composer)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3a6a75542990afbd1e19e::Crocodile Dundee II::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3a6a75542990afbd1e19e::Crocodile Dundee::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae3a6a75542990afbd1e19e::Crocodile Dundee in Los Angeles::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3a6a75542990afbd1e19e::Peter Best (composer)",
+        "5ae3a6a75542990afbd1e19e::Crocodile Dundee"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3a6a75542990afbd1e19e::Peter Best (composer)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3a6a75542990afbd1e19e::Crocodile Dundee II::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3a6a75542990afbd1e19e::Crocodile Dundee::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae3a6a75542990afbd1e19e::Crocodile Dundee in Los Angeles::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3a6a75542990afbd1e19e::Crocodile Dundee in Los Angeles::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Crocodile Dundee in Los Angeles (also known as Crocodile Dundee III) is a 2001 Australian-American comedy film, directed by Simon Wincer and starring Paul Hogan.\n[2] Crocodile Dundee (stylized as \"Crocodile\" Dundee in the U.S.) is a 1986 Australian-American comedy film set in the Australian Outback and in New York City.\n[3] Crocodile Dundee II is a 1988 Australian-American adventure and comedy film.\n[4] Peter Best (born 18 October 1943 in Adelaide, South Australia, Australia) is an Australian film composer who has contributed to such films as \"The Adventures of Barry McKenzie\" (1972), \"Barry McKenzie Holds His Own\" (1974), \"End Play\" (1976), \"The Picture Show Man\" (1977), \"We of the Never Never\" (1982), \"Goodbye Paradise\" (1983), \"Bliss\" (1985), \"Crocodile Dundee\" (1986), \"Crocodile Dundee II\" (1"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

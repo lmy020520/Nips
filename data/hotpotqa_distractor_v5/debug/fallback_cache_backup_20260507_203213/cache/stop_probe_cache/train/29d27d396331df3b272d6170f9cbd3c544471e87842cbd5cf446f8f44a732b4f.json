@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Outlandish",
+  "pred_answer": "Outlandish",
+  "normalized_gold": "outlandish",
+  "normalized_pred": "outlandish",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3db31554299204fd21ea6",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3db31554299204fd21ea6::Malbec (band)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3db31554299204fd21ea6::Rock music in Denmark::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3db31554299204fd21ea6::Outlandish::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3db31554299204fd21ea6::Music of Denmark::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac3db31554299204fd21ea6::Jay Orpin::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3db31554299204fd21ea6::Outlandish",
+        "5ac3db31554299204fd21ea6::Music of Denmark"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3db31554299204fd21ea6::Malbec (band)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3db31554299204fd21ea6::Rock music in Denmark::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3db31554299204fd21ea6::Outlandish::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3db31554299204fd21ea6::Music of Denmark::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac3db31554299204fd21ea6::Jay Orpin::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3db31554299204fd21ea6::Jay Orpin::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Most of his music is under the influence of today's modern pop punk, dance-punk, and emo music, but he does write some pop and hip-hop music as well.\n[2] The modern pop and rock scene has produced a few names of note, including MØ, Lukas Graham, D-A-D, Tina Dico, Aqua, The Raveonettes, Michael Learns to Rock, Volbeat, Alphabeat, Safri Duo, Medina, Oh Land, Kashmir, King Diamond, Outlandish, and Mew.\n[3] Outlandish was a hip-hop music group based in Denmark.\n[4] Towards the end of the 1950s and throughout the 1960s, Danish rock was heavily influenced by British music, one of the genres being R&B."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

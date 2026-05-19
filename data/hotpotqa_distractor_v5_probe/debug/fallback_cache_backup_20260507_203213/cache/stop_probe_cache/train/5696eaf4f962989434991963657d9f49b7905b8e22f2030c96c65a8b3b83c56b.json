@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ghostbusters",
+  "pred_answer": "Ghostbusters",
+  "normalized_gold": "ghostbusters",
+  "normalized_pred": "ghostbusters",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abffd5a5542997d64295996",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abffd5a5542997d64295996::Ghostbusters::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abffd5a5542997d64295996::Ghostbusters II::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abffd5a5542997d64295996::Sigourney Weaver::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abffd5a5542997d64295996::Memoirs of an Invisible Man (film)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abffd5a5542997d64295996::Ghostbusters",
+        "5abffd5a5542997d64295996::Sigourney Weaver"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abffd5a5542997d64295996::Ghostbusters::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abffd5a5542997d64295996::Ghostbusters II::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abffd5a5542997d64295996::Sigourney Weaver::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abffd5a5542997d64295996::Memoirs of an Invisible Man (film)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abffd5a5542997d64295996::Memoirs of an Invisible Man (film)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \", the film was initially developed for director Ivan Reitman; however, this version never came to fruition, due to disagreements between Reitman and Chevy Chase.\n[2] Susan Alexandra Weaver (born October 8, 1949), known professionally as Sigourney Weaver, is an American actress and film producer.\n[3] Ghostbusters II is a 1989 American supernatural comedy film directed and produced by Ivan Reitman, written by Dan Aykroyd and Harold Ramis and starring Bill Murray, Aykroyd, Sigourney Weaver, Ramis, Ernie Hudson and Rick Moranis.\n[4] Ghostbusters is a 1984 American supernatural comedy film directed and produced by Ivan Reitman and written by Dan Aykroyd and Harold Ramis."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

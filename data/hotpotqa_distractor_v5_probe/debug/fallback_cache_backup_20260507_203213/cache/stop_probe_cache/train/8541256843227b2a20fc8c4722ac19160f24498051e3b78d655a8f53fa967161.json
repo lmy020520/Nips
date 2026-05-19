@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Deirdre Barlow",
+  "pred_answer": "Deirdre Barlow",
+  "normalized_gold": "deirdre barlow",
+  "normalized_pred": "deirdre barlow",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a72acc15542994cef4bc3cd",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a72acc15542994cef4bc3cd::Blanche Hunt::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a72acc15542994cef4bc3cd::Deirdre Barlow::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a72acc15542994cef4bc3cd::Anne Kirkbride::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a72acc15542994cef4bc3cd::Peter Barlow (Coronation Street)::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a72acc15542994cef4bc3cd::Blanche Hunt",
+        "5a72acc15542994cef4bc3cd::Anne Kirkbride"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a72acc15542994cef4bc3cd::Blanche Hunt::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a72acc15542994cef4bc3cd::Deirdre Barlow::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a72acc15542994cef4bc3cd::Anne Kirkbride::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a72acc15542994cef4bc3cd::Peter Barlow (Coronation Street)::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a72acc15542994cef4bc3cd::Peter Barlow (Coronation Street)::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In April 2015, it was announced that Gascoyne would reprise the role for two episodes for the funeral of Deirdre Barlow (Anne Kirkbride) and Peter returned on 15 July 2015 and left once again on 16 July.\n[2] Anne Kirkbride (21 June 1954 – 19 January 2015) was an English actress, known for her long-running role as Deirdre Barlow in the ITV soap \"Coronation Street\", which she played for over 42 years from 1972 to 2015.\n[3] Deirdre Anne Barlow (also Hunt, Langton and Rachid) was a fictional character from the British ITV soap opera, \"Coronation Street\", played by Anne Kirkbride.\n[4] Blanche was the mother of Deirdre Barlow (Anne Kirkbride), grandmother of Tracy Barlow (Kate Ford) and great-grandmother of Amy."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

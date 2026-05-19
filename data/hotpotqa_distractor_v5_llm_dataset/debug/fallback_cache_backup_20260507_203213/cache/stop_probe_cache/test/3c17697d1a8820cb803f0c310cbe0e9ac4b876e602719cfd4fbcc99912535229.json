@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ant Timpson, Ted Geoghegan and Tim League",
+  "pred_answer": "Ant Timpson, Ted Geoghegan and Tim League",
+  "normalized_gold": "ant timpson ted geoghegan and tim league",
+  "normalized_pred": "ant timpson ted geoghegan and tim league",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a87184a5542991e771816c5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a87184a5542991e771816c5::The ABCs of Death::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a87184a5542991e771816c5::ABCs of Death 2::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a87184a5542991e771816c5::ABCs of Death 2.5::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a87184a5542991e771816c5::American Horror Story::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a87184a5542991e771816c5::The ABCs of Death",
+        "5a87184a5542991e771816c5::ABCs of Death 2.5"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a87184a5542991e771816c5::The ABCs of Death::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a87184a5542991e771816c5::ABCs of Death 2::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a87184a5542991e771816c5::ABCs of Death 2.5::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a87184a5542991e771816c5::American Horror Story::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a87184a5542991e771816c5::American Horror Story::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] American Horror Story is an American anthology horror series created and produced by Ryan Murphy and Brad Falchuk.\n[2] ABCs of Death 2.5 is a 2016 American anthology horror comedy film produced by Ant Timpson, Ted Geoghegan and Tim League.\n[3] It is a sequel to the 2012 film \"The ABCs of Death\".\n[4] The ABCs of Death is a 2012 American anthology horror comedy film produced by international producers and directed by filmmakers from around the world."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

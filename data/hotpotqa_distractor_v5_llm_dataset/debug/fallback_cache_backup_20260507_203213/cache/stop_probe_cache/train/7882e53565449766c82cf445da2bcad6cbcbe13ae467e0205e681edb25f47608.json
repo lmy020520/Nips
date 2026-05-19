@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Parliamentary",
+  "pred_answer": "Parliamentary",
+  "normalized_gold": "parliamentary",
+  "normalized_pred": "parliamentary",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac26c1d5542992f1f2b38bf",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac26c1d5542992f1f2b38bf::Elizabeth Capell, Countess of Essex::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac26c1d5542992f1f2b38bf::Edward Burghall::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac26c1d5542992f1f2b38bf::Algernon Percy, 10th Earl of Northumberland::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac26c1d5542992f1f2b38bf::Bristol in the English Civil War::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac26c1d5542992f1f2b38bf::Elizabeth Capell, Countess of Essex",
+        "5ac26c1d5542992f1f2b38bf::Algernon Percy, 10th Earl of Northumberland"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac26c1d5542992f1f2b38bf::Elizabeth Capell, Countess of Essex::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac26c1d5542992f1f2b38bf::Edward Burghall::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac26c1d5542992f1f2b38bf::Algernon Percy, 10th Earl of Northumberland::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac26c1d5542992f1f2b38bf::Bristol in the English Civil War::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac26c1d5542992f1f2b38bf::Bristol in the English Civil War::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] During the English Civil War (1642–1651), Bristol was a key port on the west coast of England and considered strategically important by both Royalists and Parliamentarians.\n[2] Algernon Percy, 10th Earl of Northumberland, 4th Baron Percy, KG (29 September 1602 – 13 October 1668) was an English military leader and a prominent supporter of the Parliamentary cause in the English Civil War.\n[3] Edward Burghall (died 1665) was an English ejected minister, a Puritan who supported the Parliamentary cause in the English Civil War.\n[4] Elizabeth Capell, Countess of Essex (1 December 1636 – 5 February 1718; née Percy) was an English noblewoman, the daughter of Algernon Percy, 10th Earl of Northumberland."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

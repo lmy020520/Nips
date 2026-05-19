@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bally’s Hotel and Casino",
+  "pred_answer": "Bally’s Hotel and Casino",
+  "normalized_gold": "ballys hotel and casino",
+  "normalized_pred": "ballys hotel and casino",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a87234b5542996432c5722a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a87234b5542996432c5722a::Bally's Las Vegas::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a87234b5542996432c5722a::16th AVN Awards::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a87234b5542996432c5722a::11th AVN Awards::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a87234b5542996432c5722a::28th AVN Awards::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a87234b5542996432c5722a::Bally's Las Vegas",
+        "5a87234b5542996432c5722a::11th AVN Awards"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a87234b5542996432c5722a::Bally's Las Vegas::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a87234b5542996432c5722a::16th AVN Awards::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a87234b5542996432c5722a::11th AVN Awards::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a87234b5542996432c5722a::28th AVN Awards::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a87234b5542996432c5722a::28th AVN Awards::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 28th AVN Awards ceremony in Las Vegas, presented by \"Adult Video News\" (\"AVN\"), honored the best pornographic movies and adult entertainment products of 2010.\n[2] The 11th AVN Awards ceremony, organized by Adult Video News (AVN), honored pornographic films released in 1993 and took place on January 8, 1994, at Bally’s Hotel and Casino in Paradise, Nevada beginning at 7:45 p.m. PST / 10:45 p.m. EST.\n[3] The 16th AVN Awards ceremony, organized by \"Adult Video News\" (AVN) honored the best of 1998 in pornographic movies and took place on January 9, 1999, at Bally's Las Vegas, Las Vegas, Nevada.\n[4] Bally's Las Vegas (formerly MGM Grand Hotel and Casino) is a hotel and casino on the Las Vegas Strip in Paradise, Nevada."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Stephen Farrelly",
+  "pred_answer": "Stephen Farrelly",
+  "normalized_gold": "stephen farrelly",
+  "normalized_pred": "stephen farrelly",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8a0c9c5542992d82986e7c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8a0c9c5542992d82986e7c::King of the Ring (2015)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8a0c9c5542992d82986e7c::Monster Clown::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8a0c9c5542992d82986e7c::Sheamus::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8a0c9c5542992d82986e7c::Sheamus::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8a0c9c5542992d82986e7c::King of the Ring (2015)",
+        "5a8a0c9c5542992d82986e7c::Sheamus"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8a0c9c5542992d82986e7c::King of the Ring (2015)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8a0c9c5542992d82986e7c::Monster Clown::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8a0c9c5542992d82986e7c::Sheamus::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8a0c9c5542992d82986e7c::Sheamus::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8a0c9c5542992d82986e7c::Sheamus::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Stephen Farrelly (Irish: \"Stíofán Ó Fearghaile\" ; born 28 January 1978) is an Irish professional wrestler and actor.\n[2] He is signed to the American professional wrestling promotion WWE, where he performs under the ring name Sheamus (pronounced ) shortened from his previous ring name Sheamus O'Shaunessy.\n[3] In the summer of 2009 he was forced to change his ring name from Zombie Clown to Monster Clown due to copyright problems.\n[4] It would also feature the most recent King of the Ring, Sheamus, who lost in the semi-finals to Neville due to a distraction from Dolph Ziggler."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

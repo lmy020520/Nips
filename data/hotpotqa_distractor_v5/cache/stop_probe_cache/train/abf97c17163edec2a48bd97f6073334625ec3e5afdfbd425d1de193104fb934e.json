@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Robin Hardy",
+  "pred_answer": "Robin Hardy",
+  "normalized_gold": "robin hardy",
+  "normalized_pred": "robin hardy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adffda455429942ec259bc1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adffda455429942ec259bc1::Gerry Cowper::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adffda455429942ec259bc1::Paul Giovanni::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adffda455429942ec259bc1::The Wicker Man::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adffda455429942ec259bc1::The Wicker Tree::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adffda455429942ec259bc1::Gerry Cowper",
+        "5adffda455429942ec259bc1::The Wicker Man"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adffda455429942ec259bc1::Gerry Cowper::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adffda455429942ec259bc1::Paul Giovanni::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adffda455429942ec259bc1::The Wicker Man::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adffda455429942ec259bc1::The Wicker Tree::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adffda455429942ec259bc1::The Wicker Tree::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Wicker Tree is a 2011 horror film written and directed by British filmmaker Robin Hardy.\n[2] The Wicker Man is a 1973 British mystery horror film directed by Robin Hardy.\n[3] New Yorker Giovanni is best known for writing the music for the 1973 British horror film \"The Wicker Man\".\n[4] Geraldine \"Gerry\" Cowper (born 23 June 1958) is an English actress who is best known for playing Rowan Morrison in the 1973 British Lion classic horror film, The Wicker Man and later as Rosie Miller in \"EastEnders\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

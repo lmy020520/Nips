@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Las Vegas, Nevada",
+  "pred_answer": "Las Vegas, Nevada",
+  "normalized_gold": "las vegas nevada",
+  "normalized_pred": "las vegas nevada",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd13d655429933744ab70b",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd13d655429933744ab70b::Sorry to Bother You::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd13d655429933744ab70b::Alphavirus::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd13d655429933744ab70b::Guillotine IV (The Final Chapter)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd13d655429933744ab70b::Falling in Reverse::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abd13d655429933744ab70b::List of Twin Star Exorcists episodes::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd13d655429933744ab70b::Guillotine IV (The Final Chapter)",
+        "5abd13d655429933744ab70b::Falling in Reverse"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd13d655429933744ab70b::Sorry to Bother You::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd13d655429933744ab70b::Alphavirus::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd13d655429933744ab70b::Guillotine IV (The Final Chapter)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd13d655429933744ab70b::Falling in Reverse::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abd13d655429933744ab70b::List of Twin Star Exorcists episodes::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd13d655429933744ab70b::List of Twin Star Exorcists episodes::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The second opening theme, \"Re:Call\", is performed by the idol group i☆Ris, while the second ending theme, \"Yadori-boshi\" (宿り星 ) is performed by the two-man group Itowokashi (Kashitarō Itō and Ryō Miyada).\n[2] Falling in Reverse is an American rock band based in Las Vegas, Nevada and formed in 2008, signed to Epitaph Records.\n[3] 'Guillotine IV (The Final Chapter)' is the second single from Falling in Reverse's third album \"Just Like You\".\n[4] In biology and immunology, an alphavirus belongs to the group IV Togaviridae family of viruses, according to the system of classification based on viral genome composition introduced by David Baltimore in 1971."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

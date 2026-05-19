@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hyacinthella",
+  "pred_answer": "Hyacinthella",
+  "normalized_gold": "hyacinthella",
+  "normalized_pred": "hyacinthella",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b9e49554299240d9c203a",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b9e49554299240d9c203a::Hyacinthella::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b9e49554299240d9c203a::Buxus sempervirens::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b9e49554299240d9c203a::Hyacinthella::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8b9e49554299240d9c203a::Drosanthemum::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8b9e49554299240d9c203a::Akbesia::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b9e49554299240d9c203a::Hyacinthella",
+        "5a8b9e49554299240d9c203a::Drosanthemum"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b9e49554299240d9c203a::Hyacinthella::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b9e49554299240d9c203a::Buxus sempervirens::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b9e49554299240d9c203a::Hyacinthella::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8b9e49554299240d9c203a::Drosanthemum::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8b9e49554299240d9c203a::Akbesia::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b9e49554299240d9c203a::Akbesia::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Akbesia is a genus of moths in the Sphingidae family, containing only one species, the Pistacia hawkmoth, Akbesia davidi, which is known from southern Turkey, northern Syria, northern Israel, western Jordan, south-eastern Turkey, north-eastern Iraq, south-eastern Georgia, northern Iran, eastern Afghanistan and Iranian Beluchistan.\n[2] Drosanthemum (\"dewflowers\") is a genus of succulent plants in the ice plant family native to the winter-rainfall regions of southern Africa.\n[3] Hyacinthella is a genus of bulbous flowering plants in the family Asparagaceae, subfamily Scilloideae (formerly the family Hyacinthaceae).\n[4] Buxus sempervirens, the common box, European box, or boxwood, is a species of flowering plant in the genus \"Buxus\", native to western and southern Europe, northwest Africa, and southwest Asia, from southern England south to northern Morocco, and east through the northern Mediterranean region to Turkey. \""
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Steve McQueen",
+  "pred_answer": "Steve McQueen",
+  "normalized_gold": "steve mcqueen",
+  "normalized_pred": "steve mcqueen",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84e3a95542994c784dda7a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84e3a95542994c784dda7a::Shame (2011 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84e3a95542994c784dda7a::List of accolades received by Steve Jobs (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84e3a95542994c784dda7a::Nicole Beharie::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a84e3a95542994c784dda7a::American Violet::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84e3a95542994c784dda7a::Shame (2011 film)",
+        "5a84e3a95542994c784dda7a::Nicole Beharie"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84e3a95542994c784dda7a::Shame (2011 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84e3a95542994c784dda7a::List of accolades received by Steve Jobs (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84e3a95542994c784dda7a::Nicole Beharie::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a84e3a95542994c784dda7a::American Violet::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84e3a95542994c784dda7a::American Violet::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] American Violet is a 2008 drama film directed by Tim Disney and starring Nicole Beharie.\n[2] She is known for her roles in the drama film \"American Violet\" (2008), the drama \"Shame\" (2011), and the biographical sports drama \"42\" (2013).\n[3] \"Steve Jobs\" is a 2015 American biographical drama film based on the life of Apple co-founder Steve Jobs, directed by Danny Boyle and starring Michael Fassbender in the title role along with Kate Winslet, Seth Rogen, and Jeff Daniels.\n[4] Shame is a 2011 British-American drama film directed and co-written by Steve McQueen, starring Michael Fassbender and Carey Mulligan as grown siblings."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

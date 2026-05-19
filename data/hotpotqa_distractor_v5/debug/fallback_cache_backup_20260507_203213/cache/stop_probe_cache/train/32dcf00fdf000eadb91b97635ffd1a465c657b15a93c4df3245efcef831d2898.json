@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Led Zeppelin",
+  "pred_answer": "Led Zeppelin",
+  "normalized_gold": "led zeppelin",
+  "normalized_pred": "led zeppelin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e4bb355429934daa2fbfc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e4bb355429934daa2fbfc::White Summer::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e4bb355429934daa2fbfc::Davey Graham::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e4bb355429934daa2fbfc::Jimmy Page::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7e4bb355429934daa2fbfc::Tommy Hubbard::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e4bb355429934daa2fbfc::White Summer",
+        "5a7e4bb355429934daa2fbfc::Jimmy Page"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e4bb355429934daa2fbfc::White Summer::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e4bb355429934daa2fbfc::Davey Graham::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e4bb355429934daa2fbfc::Jimmy Page::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7e4bb355429934daa2fbfc::Tommy Hubbard::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e4bb355429934daa2fbfc::Tommy Hubbard::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Hubbard was the first-place winner of the 03 Riffathon, an international guitar competition judged by Jimmy Page of Led Zeppelin and Brian May of Queen.\n[2] James Patrick Page, {'1': \", '2': \", '3': \", '4': \"} (born 9 January 1944) is an English musician, songwriter, and record producer who achieved international success as the guitarist and founder of the rock band Led Zeppelin.\n[3] He inspired many famous practitioners of the fingerstyle acoustic guitar such as Bert Jansch, Wizz Jones, John Renbourn, Martin Carthy, John Martyn, Paul Simon and Jimmy Page, who based his solo \"White Summer\" on Graham's \"She Moved Through the Fair\".\n[4] \"White Summer\" is a guitar instrumental by English rock guitarist Jimmy Page, which incorporates Indian and Arabic musical influences."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

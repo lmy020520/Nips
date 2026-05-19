@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Henderson Land Development",
+  "pred_answer": "Henderson Land Development",
+  "normalized_gold": "henderson land development",
+  "normalized_pred": "henderson land development",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae40f4355429970de88d8cd",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae40f4355429970de88d8cd::Sha Tin Plaza::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae40f4355429970de88d8cd::Sha Tin Centre::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae40f4355429970de88d8cd::New Town Plaza::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae40f4355429970de88d8cd::Sha Tin Plaza::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae40f4355429970de88d8cd::Sha Tin Plaza",
+        "5ae40f4355429970de88d8cd::New Town Plaza"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae40f4355429970de88d8cd::Sha Tin Plaza::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae40f4355429970de88d8cd::Sha Tin Centre::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae40f4355429970de88d8cd::New Town Plaza::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae40f4355429970de88d8cd::Sha Tin Plaza::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae40f4355429970de88d8cd::Sha Tin Plaza::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Sha Tin Plaza () is one of the main private housing estates in Sha Tin Town Centre, Sha Tin District, New Territories, Hong Kong, which is near New Town Plaza Phase I, Lucky Plaza and Sha Tin Centre.\n[2] New Town Plaza is a shopping mall in the town centre of Sha Tin, Hong Kong.\n[3] It comprises 8 high-rise buildings and a shopping arcade, developed by Henderson Land Development in 1981.\n[4] Formerly Sha Tin Hui Bus Terminus (), it comprises 4 high-rise buildings and a shopping arcade, developed by Henderson Land Development in 1988."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

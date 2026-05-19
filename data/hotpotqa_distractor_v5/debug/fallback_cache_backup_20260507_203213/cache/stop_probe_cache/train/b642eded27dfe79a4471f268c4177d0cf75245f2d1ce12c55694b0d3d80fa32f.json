@@ -1,0 +1,101 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1980",
+  "pred_answer": "1980",
+  "normalized_gold": "1980",
+  "normalized_pred": "1980",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7bcd09554299294a54aaeb",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7bcd09554299294a54aaeb::Rajendra Prasad (actor)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7bcd09554299294a54aaeb::Lim Kay Tong::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7bcd09554299294a54aaeb::Chris Pine::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7bcd09554299294a54aaeb::derived::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7bcd09554299294a54aaeb::The Finest Hours (2016 film)::0"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5a7bcd09554299294a54aaeb::SS Pendleton::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7bcd09554299294a54aaeb::Chris Pine",
+        "5a7bcd09554299294a54aaeb::The Finest Hours (2016 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7bcd09554299294a54aaeb::Rajendra Prasad (actor)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7bcd09554299294a54aaeb::Lim Kay Tong::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7bcd09554299294a54aaeb::Chris Pine::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7bcd09554299294a54aaeb::The Finest Hours (2016 film)::0",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5a7bcd09554299294a54aaeb::SS Pendleton::4",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a7bcd09554299294a54aaeb::derived::0",
+          "added_step": 3
+        }
+      ],
+      "last_added_unit_id": "5a7bcd09554299294a54aaeb::SS Pendleton::4",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] Tougias' book inspired the 2016 film \"The Finest Hours\" with Chris Pine, which focuses on the \"Pendelton\" rescue.\n[2] The Finest Hours is a 2016 American historical drama-thriller film directed by Craig Gillespie and produced by Walt Disney Pictures.\n[3] Christopher Whitelaw Pine (born August 26, 1980) is an American actor.\n[4] Notably, he starred opposite Sean Penn in \"Shanghai Surprise\" (1986), Pierce Brosnan in \"Noble House\" (1988) and Claire Danes in \"Brokedown Palace\" (1999), and was the lead actor in \"Growing Up\" (1996–2001) and \"Perth\" (2004).\n\nNotes:\n[bridge] Tougias' book inspired the 2016 film \"The Finest Hours\" with Chris Pine, which focuses on the \"Pendelton\" rescue."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

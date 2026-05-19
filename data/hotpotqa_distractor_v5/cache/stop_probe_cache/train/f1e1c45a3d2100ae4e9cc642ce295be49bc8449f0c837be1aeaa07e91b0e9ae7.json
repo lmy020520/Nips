@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "singer, songwriter",
+  "pred_answer": "singer, songwriter",
+  "normalized_gold": "singer songwriter",
+  "normalized_pred": "singer songwriter",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7fce225542995d8a8ddf28",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7fce225542995d8a8ddf28::Viktor Király::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7fce225542995d8a8ddf28::Gwen Stefani::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7fce225542995d8a8ddf28::Adam Levine::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7fce225542995d8a8ddf28::Viktor Király::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7fce225542995d8a8ddf28::Gwen Stefani",
+        "5a7fce225542995d8a8ddf28::Adam Levine"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7fce225542995d8a8ddf28::Viktor Király::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7fce225542995d8a8ddf28::Gwen Stefani::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7fce225542995d8a8ddf28::Adam Levine::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7fce225542995d8a8ddf28::Viktor Király::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7fce225542995d8a8ddf28::Viktor Király::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Viktor Király (born 29 March 1984) is a Hungarian-American singer.\n[2] Adam Noah Levine (born March 18, 1979) is an American singer, songwriter, multi-instrumentalist, actor, and record producer.\n[3] Gwen Renée Stefani ( ; born October 3, 1969) is an American singer, songwriter, fashion designer, actress, and television personality.\n[4] In 2015, he took part in season 9 of the American series \"The Voice\", initially as part of Adam Levine's team, and later Gwen Stefani's, but was eliminated on 11 November during the Live Playoffs round, in which the Top 24 competed for the public's vote and coaches' choices."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hans-Jürgen Abt",
+  "pred_answer": "Hans-Jürgen Abt",
+  "normalized_gold": "hans-jürgen abt",
+  "normalized_pred": "hans-jürgen abt",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7a51855429952e35ea9a0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7a51855429952e35ea9a0::2017 Mexico City ePrix::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7a51855429952e35ea9a0::2016 Mexico City ePrix::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7a51855429952e35ea9a0::Abt Sportsline::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae7a51855429952e35ea9a0::2008 Desafio Internacional das Estrelas::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7a51855429952e35ea9a0::2017 Mexico City ePrix",
+        "5ae7a51855429952e35ea9a0::Abt Sportsline"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7a51855429952e35ea9a0::2017 Mexico City ePrix::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7a51855429952e35ea9a0::2016 Mexico City ePrix::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7a51855429952e35ea9a0::Abt Sportsline::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae7a51855429952e35ea9a0::2008 Desafio Internacional das Estrelas::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7a51855429952e35ea9a0::2008 Desafio Internacional das Estrelas::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The ten fastest qualifiers took part in the top ten shootout for the pole which was won by Lucas di Grassi.\n[2] After the death of their father Johann in 2003, the company with 170 employees in their headquarters in Kempten was run by the brothers Hans-Jürgen Abt (born 1962, Managing Director) and Christian Abt.\n[3] The 2016 Mexico City ePrix was a Formula E motor race held on 12 March 2016 at the Autódromo Hermanos Rodríguez in Mexico City, Mexico.\n[4] The 2017 Mexico City ePrix (formally the 2017 FIA Formula E Julius Baer Mexico City ePrix) was a Formula E motor race held on 1 April 2017 before a crowd of 36,000 people at the Autódromo Hermanos Rodríguez, Mexico City, Mexico."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

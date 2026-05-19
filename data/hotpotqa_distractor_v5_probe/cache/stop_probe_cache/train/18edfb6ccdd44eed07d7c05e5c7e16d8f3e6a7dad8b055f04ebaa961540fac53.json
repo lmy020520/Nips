@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "no",
+  "pred_answer": "no",
+  "normalized_gold": "no",
+  "normalized_pred": "no",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "yes_no_both_entities_supported",
+  "support_evidence_summary": "Kim Jong-hyun (singer) is South Korean; Dappy is English. Therefore, they are not both Korean.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "yes_no_both_entities_supported",
+    "support_evidence_summary": "Kim Jong-hyun (singer) is South Korean; Dappy is English. Therefore, they are not both Korean.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8079d95542992bc0c4a730",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8079d95542992bc0c4a730::List of songs written by Kim Jong-hyun::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8079d95542992bc0c4a730::Kim Jong-hyun (singer)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8079d95542992bc0c4a730::Dappy::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8079d95542992bc0c4a730::Kim Jong-hyun (sport shooter)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8079d95542992bc0c4a730::Kim Jong-hyun (singer)",
+        "5a8079d95542992bc0c4a730::Dappy"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8079d95542992bc0c4a730::List of songs written by Kim Jong-hyun::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8079d95542992bc0c4a730::Kim Jong-hyun (singer)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8079d95542992bc0c4a730::Dappy::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8079d95542992bc0c4a730::Kim Jong-hyun (sport shooter)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8079d95542992bc0c4a730::Kim Jong-hyun (sport shooter)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Kim Jong-hyun (] ; born July 21, 1985) is a South Korean sport shooter.\n[2] Costadinos Contostavlos (born 11 June 1987), better known by his stage name Dappy, is an English singer, songwriter, rapper, and actor.\n[3] Kim Jong-hyun (born April 8, 1990), better known by the mononym Jonghyun, is a South Korean singer-songwriter, and radio host.\n[4] Kim Jong-hyun (most often credited as Jonghyun), is a South Korean singer-songwriter and producer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

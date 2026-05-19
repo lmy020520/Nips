@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Oklahoma City Thunder",
+  "pred_answer": "Oklahoma City Thunder",
+  "normalized_gold": "oklahoma city thunder",
+  "normalized_pred": "oklahoma city thunder",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9b13b554299743d22eba7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9b13b554299743d22eba7::Karl Tilleman::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9b13b554299743d22eba7::Nikolai Andrianov::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9b13b554299743d22eba7::Carmelo Anthony::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab9b13b554299743d22eba7::Carmelo Anthony::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9b13b554299743d22eba7::Karl Tilleman",
+        "5ab9b13b554299743d22eba7::Carmelo Anthony"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9b13b554299743d22eba7::Karl Tilleman::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9b13b554299743d22eba7::Nikolai Andrianov::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9b13b554299743d22eba7::Carmelo Anthony::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab9b13b554299743d22eba7::Carmelo Anthony::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9b13b554299743d22eba7::Carmelo Anthony::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Carmelo Kyam Anthony (born May 29, 1984) is an American professional basketball player for the Oklahoma City Thunder of the National Basketball Association (NBA).\n[2] In Anthony's freshman season, he led the Orangemen to their first and only National Championship and was named the NCAA Tournament's Most Outstanding Player.\n[3] Within the sport of Men's Artistic Gymnastics, he also holds the men's record for most individual Olympic medals (12) and shares the male record for most individual Olympic gold medals in gymnastics (6), tied with Boris Shakhlin and Dmitry Bilozerchev (the latter of which only if you count the 1984 Alternate Olympics).\n[4] Tilleman's Olympic three-point record has never been broken in 28 years, but has been tied twice, most recently by Carmelo Anthony of the USA, in 2012."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

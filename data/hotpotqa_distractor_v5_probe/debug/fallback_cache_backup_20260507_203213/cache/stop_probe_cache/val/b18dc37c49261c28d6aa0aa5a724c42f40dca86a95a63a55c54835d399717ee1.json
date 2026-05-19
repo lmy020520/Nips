@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Chocolate",
+  "pred_answer": "Chocolate",
+  "normalized_gold": "chocolate",
+  "normalized_pred": "chocolate",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7332ad5542994cef4bc4ae",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7332ad5542994cef4bc4ae::Chocolate (The 1975 song)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7332ad5542994cef4bc4ae::Love, Rosie (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7332ad5542994cef4bc4ae::Rainbow (rock band)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7332ad5542994cef4bc4ae::Chocolate (The 1975 song)",
+        "5a7332ad5542994cef4bc4ae::Love, Rosie (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7332ad5542994cef4bc4ae::Chocolate (The 1975 song)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7332ad5542994cef4bc4ae::Love, Rosie (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7332ad5542994cef4bc4ae::Rainbow (rock band)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7332ad5542994cef4bc4ae::Rainbow (rock band)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Rainbow (also known as Ritchie Blackmore's Rainbow or Blackmore's Rainbow) are a British rock band led by guitarist Ritchie Blackmore, active from 1975 to 1984, from 1993 to 1997, and from 2015 to the present.\n[2] Love, Rosie is a 2014 British-German romantic comedy-drama film directed by and written by Juliette Towhidi, based on the 2004 novel \"Where Rainbows End\" by Irish author Cecelia Ahern.\n[3] \"Chocolate\" is a song by English rock band The 1975."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

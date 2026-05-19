@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Westminster system",
+  "pred_answer": "Westminster system",
+  "normalized_gold": "westminster system",
+  "normalized_pred": "westminster system",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8eed625542995085b374b9",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8eed625542995085b374b9::Irish measure::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8eed625542995085b374b9::General Assembly House::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8eed625542995085b374b9::Westminster system::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8eed625542995085b374b9::Constitution of Alberta::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8eed625542995085b374b9::Atlantis Music Prize::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8eed625542995085b374b9::Westminster system",
+        "5a8eed625542995085b374b9::Constitution of Alberta"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8eed625542995085b374b9::Irish measure::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8eed625542995085b374b9::General Assembly House::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8eed625542995085b374b9::Westminster system::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8eed625542995085b374b9::Constitution of Alberta::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8eed625542995085b374b9::Atlantis Music Prize::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8eed625542995085b374b9::Atlantis Music Prize::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The award is modeled after the Polaris Music Prize for all of Canada (which in turn is modeled after the Mercury Music Prize in the United Kingdom).\n[2] As is typical of all Canadian provinces, and Westminster systems more generally, Alberta's is an unwritten constitution.\n[3] The Westminster system is a parliamentary system of government modelled after that which developed in the United Kingdom.\n[4] After the abolition of the provincial government system, the building was used by government's survey department and was then used by Auckland University College."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

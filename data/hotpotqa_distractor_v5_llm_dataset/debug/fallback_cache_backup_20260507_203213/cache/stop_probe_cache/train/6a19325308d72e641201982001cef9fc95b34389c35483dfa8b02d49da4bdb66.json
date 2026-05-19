@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"Gone with the Wind\"",
+  "pred_answer": "\"Gone with the Wind\"",
+  "normalized_gold": "gone with the wind",
+  "normalized_pred": "gone with the wind",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab432c355429942dd415ed9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab432c355429942dd415ed9::Intermezzo (1939 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab432c355429942dd415ed9::Emile Sherman::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab432c355429942dd415ed9::David O. Selznick::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab432c355429942dd415ed9::Crossfire (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab432c355429942dd415ed9::Intermezzo (1939 film)",
+        "5ab432c355429942dd415ed9::David O. Selznick"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab432c355429942dd415ed9::Intermezzo (1939 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab432c355429942dd415ed9::Emile Sherman::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab432c355429942dd415ed9::David O. Selznick::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab432c355429942dd415ed9::Crossfire (film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab432c355429942dd415ed9::Crossfire (film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Crossfire is a 1947 film noir drama film which deals with the theme of anti-Semitism, as did that year's Academy Award for Best Picture winner, \"Gentleman's Agreement\".\n[2] He is best known for producing \"Gone with the Wind\" (1939) and \"Rebecca\" (1940), both earning him an Academy Award for Best Picture.\n[3] Sherman won an Academy Award for Best Picture for \"The King's Speech\" (2010) and has produced other critically acclaimed films including \"Lion\" (2016), which earned him a second Academy Award nomination for Best Picture.\n[4] Intermezzo (also called Intermezzo: A Love Story) (1939) is a romantic film made in the USA by Selznick International Pictures and nominated for two Academy Awards."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

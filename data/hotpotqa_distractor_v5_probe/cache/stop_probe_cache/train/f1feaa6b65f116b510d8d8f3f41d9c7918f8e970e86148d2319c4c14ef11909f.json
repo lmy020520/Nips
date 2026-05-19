@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Hum",
+  "pred_answer": "Hum",
+  "normalized_gold": "hum",
+  "normalized_pred": "hum",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8009eb5542992e7d278dee",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8009eb5542992e7d278dee::Hum (band)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8009eb5542992e7d278dee::Shades Apart::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8009eb5542992e7d278dee::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8009eb5542992e7d278dee::The Virgins::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8009eb5542992e7d278dee::C.C.C.P. (band)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8009eb5542992e7d278dee::Hum (band)",
+        "5a8009eb5542992e7d278dee::The Virgins"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8009eb5542992e7d278dee::Hum (band)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8009eb5542992e7d278dee::Shades Apart::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8009eb5542992e7d278dee::The Virgins::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8009eb5542992e7d278dee::C.C.C.P. (band)::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a8009eb5542992e7d278dee::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a8009eb5542992e7d278dee::C.C.C.P. (band)::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] They are best known for their US radio hit, \"The Question\".\n[2] They were best known for their 1986 instrumentals \"American-Soviets I\" and \"American-Soviets II\", released by Clockwork Germany.\n[3] It was also a crossover hit, crossing over to pop radio as their first top 40 radio hit since \"Closer\" and \"Hurt\" in 1994 and 1995, respectively, peaking at number 31 on the Billboard Hot 100 chart.\n[4] The Virgins was an American indie rock band formed in 2006 in New York City.\n\nNotes:\n[bridge] The band Hum is best known for their 1995 radio hit 'Stars', but none of the raw candidates mention Hum or 'Stars'."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Romeo and Juliet",
+  "pred_answer": "Romeo and Juliet",
+  "normalized_gold": "romeo and juliet",
+  "normalized_pred": "romeo and juliet",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74752655429929fddd8434",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74752655429929fddd8434::Romeo and Juliet on screen::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74752655429929fddd8434::Pericles, Prince of Tyre::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74752655429929fddd8434::Romeo and Juliet (1968 film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74752655429929fddd8434::List of films based on video games::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74752655429929fddd8434::Romeo and Juliet on screen",
+        "5a74752655429929fddd8434::Romeo and Juliet (1968 film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74752655429929fddd8434::Romeo and Juliet on screen::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74752655429929fddd8434::Pericles, Prince of Tyre::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74752655429929fddd8434::Romeo and Juliet (1968 film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74752655429929fddd8434::List of films based on video games::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74752655429929fddd8434::List of films based on video games::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] They include their scores on Rotten Tomatoes, the region in which they were released (for foreign adaptations), approximate budget, their approximate box office revenue (for theatrical releases) and the publisher of the original game at the time the film was made (this means that publishers may change between two adaptations of the same game or game series, such as \"Mortal Kombat\").\n[2] Romeo and Juliet is a 1968 British-Italian romance film based on the tragic play of the same name (1591–1595) by William Shakespeare.\n[3] Pericles, Prince of Tyre is a Jacobean play written at least in part by William Shakespeare and included in modern editions of his collected works despite questions over its authorship, as it was not included in the First Folio.\n[4] The most notable theatrical releases were George Cukor's multi-Oscar-nominated 1936 production \"Romeo and Juliet\", Franco Zeffirelli's 1968 film \"Romeo and Juliet\", and Baz Luhrmann's 1996 MTV-inspired \"Romeo + Juliet\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

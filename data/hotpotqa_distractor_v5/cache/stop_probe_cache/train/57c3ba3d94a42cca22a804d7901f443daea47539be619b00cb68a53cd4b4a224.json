@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Chelsea",
+  "pred_answer": "Chelsea",
+  "normalized_gold": "chelsea",
+  "normalized_pred": "chelsea",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b64e555429950cd6afcda",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b64e555429950cd6afcda::Hedvig Lindahl::8"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b64e555429950cd6afcda::PFA Players' Player of the Year::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b64e555429950cd6afcda::N'Golo Kanté::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8b64e555429950cd6afcda::Hedvig Lindahl::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b64e555429950cd6afcda::PFA Players' Player of the Year",
+        "5a8b64e555429950cd6afcda::N'Golo Kanté"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b64e555429950cd6afcda::Hedvig Lindahl::8",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b64e555429950cd6afcda::PFA Players' Player of the Year::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b64e555429950cd6afcda::N'Golo Kanté::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8b64e555429950cd6afcda::Hedvig Lindahl::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b64e555429950cd6afcda::Hedvig Lindahl::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Rut Hedvig Lindahl (born 29 April 1983) is a Swedish professional football goalkeeper who plays for Chelsea Ladies.\n[2] N'Golo Kanté (] ; born 29 March 1991) is a French professional footballer who plays as a defensive midfielder for English club Chelsea and the France national team.\n[3] The Professional Footballers' Association Players' Player of the Year (often called the PFA Players' Player of the Year, the Players' Player of the Year, or simply the Player of the Year) is an annual award given to the player who is adjudged to have been the best of the year in English football.\n[4] In 2016, Lindahl was one of 5 nominees for Women's PFA Players' Player of the Year and was also picked for the WSL Team of the Year."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "convocare",
+  "pred_answer": "convocare",
+  "normalized_gold": "convocare",
+  "normalized_pred": "convocare",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8065a1554299485f5985e1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8065a1554299485f5985e1::Transcaucasian Commissariat::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8065a1554299485f5985e1::Trebizond Peace Conference::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8065a1554299485f5985e1::Convocation::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8065a1554299485f5985e1::Jane Marum Roush::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8065a1554299485f5985e1::Transcaucasian Commissariat",
+        "5a8065a1554299485f5985e1::Convocation"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8065a1554299485f5985e1::Transcaucasian Commissariat::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8065a1554299485f5985e1::Trebizond Peace Conference::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8065a1554299485f5985e1::Convocation::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8065a1554299485f5985e1::Jane Marum Roush::7",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8065a1554299485f5985e1::Jane Marum Roush::7",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Nevertheless, the governor announced his view that the legislature was not in session and purported to reappoint her for a second interim term.\n[2] A convocation (from the Latin \"convocare\" meaning \"to call/come together\", a translation of the Greek ἐκκλησία \"ekklēsia\") is a group of people formally assembled for a special purpose, mostly ecclesiastical or academic.\n[3] The Trebizond Peace Conference was a conference held between March and April 1918 in Trebizond between the Ottoman Empire and a delegation of the Transcaucasian Diet (Transcaucasian Sejm) and government.\n[4] The Commissariat decided to strengthen the Georgian–Armenian–Azerbaijani union by convoking a Diet or general assembly (\"Sejm\") in January 1918."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

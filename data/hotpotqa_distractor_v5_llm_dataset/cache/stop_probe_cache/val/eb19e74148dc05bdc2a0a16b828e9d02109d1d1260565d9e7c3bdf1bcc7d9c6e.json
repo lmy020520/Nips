@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bleak House",
+  "pred_answer": "Bleak House",
+  "normalized_gold": "bleak house",
+  "normalized_pred": "bleak house",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1ecfa5542997f29b3c1ab",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1ecfa5542997f29b3c1ab::Bleak House::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1ecfa5542997f29b3c1ab::The Death of Poor Joe::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1ecfa5542997f29b3c1ab::Adrian John Ebell::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1ecfa5542997f29b3c1ab::Bleak House",
+        "5ae1ecfa5542997f29b3c1ab::The Death of Poor Joe"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1ecfa5542997f29b3c1ab::Bleak House::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1ecfa5542997f29b3c1ab::The Death of Poor Joe::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1ecfa5542997f29b3c1ab::Adrian John Ebell::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1ecfa5542997f29b3c1ab::Adrian John Ebell::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He wrote an article in June 1863 in \"Harper's Magazine\" titled \"The Indian Massacres and War of 1862\", which included the famous photograph \"People escaping from the Indian massacre of 1862 in Minnesota, at dinner on a prairie\".\n[2] The film, which went on release in March 1901, takes its name from a famous photograph posed by Oscar Rejlander after an episode in Charles Dickens' \"Bleak House\" and is the oldest known surviving film featuring a Dickens character.\n[3] Bleak House is the ninth novel by English author Charles Dickens, first published as a serial between March 1852 and September 1853."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

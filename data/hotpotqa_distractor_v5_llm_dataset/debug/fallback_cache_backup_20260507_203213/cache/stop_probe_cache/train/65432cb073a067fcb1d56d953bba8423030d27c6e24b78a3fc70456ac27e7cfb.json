@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1931",
+  "pred_answer": "1931",
+  "normalized_gold": "1931",
+  "normalized_pred": "1931",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d123155429909bec76939",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d123155429909bec76939::2013 American Le Mans Series at Long Beach::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d123155429909bec76939::Rajaji Salai, Chennai::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d123155429909bec76939::Rip Torn::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7d123155429909bec76939::Beach Red::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7d123155429909bec76939::Beach Road, Perth::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d123155429909bec76939::Rip Torn",
+        "5a7d123155429909bec76939::Beach Red"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d123155429909bec76939::2013 American Le Mans Series at Long Beach::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d123155429909bec76939::Rajaji Salai, Chennai::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d123155429909bec76939::Rip Torn::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7d123155429909bec76939::Beach Red::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7d123155429909bec76939::Beach Road, Perth::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d123155429909bec76939::Beach Road, Perth::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It was mostly built between 1967 and 1974, and is a dual carriageway for most of its length, except for a small western part between Marmion Avenue and the coast, which is a minor residential distributor road and is discontinuous at Marmion Avenue.\n[2] Beach Red is a 1967 World War II film starring Cornel Wilde (who also directed) and Rip Torn.\n[3] Elmore Rual Torn Jr. (born February 6, 1931), known within his family and professionally as Rip Torn, is an American actor, voice artist, and comedian.\n[4] Rajaji Salai, also known as North Beach Road or First Line Beach, is one of the main thoroughfares of the commercial centre of George Town in Chennai, India."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

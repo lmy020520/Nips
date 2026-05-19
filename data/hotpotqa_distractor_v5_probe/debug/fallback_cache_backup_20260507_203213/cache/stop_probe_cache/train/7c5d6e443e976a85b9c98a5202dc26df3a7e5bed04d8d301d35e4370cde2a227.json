@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bullmastiff",
+  "pred_answer": "Bullmastiff",
+  "normalized_gold": "bullmastiff",
+  "normalized_pred": "bullmastiff",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abeab0a5542990832d3a08e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abeab0a5542990832d3a08e::Husky beagle::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abeab0a5542990832d3a08e::Bullmastiff::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abeab0a5542990832d3a08e::Labrador Husky::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abeab0a5542990832d3a08e::Foundation Stock Service Program::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abeab0a5542990832d3a08e::Bullmastiff",
+        "5abeab0a5542990832d3a08e::Labrador Husky"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abeab0a5542990832d3a08e::Husky beagle::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abeab0a5542990832d3a08e::Bullmastiff::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abeab0a5542990832d3a08e::Labrador Husky::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abeab0a5542990832d3a08e::Foundation Stock Service Program::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abeab0a5542990832d3a08e::Foundation Stock Service Program::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Foundation Stock Service (FSS) Program is a breed registry of the American Kennel Club in which breeders can record the birth and parentage of a rare breed they are working to establish in the United States.\n[2] The Labrador Husky is a spitz type of dog that was bred for work as a very strong, fast sled dog; it is a purebred originating from Canada.\n[3] The Bullmastiff is a large-sized breed of domestic dog, with a solid build and a short muzzle.\n[4] A Husky Beagle, or Cornish Husky, is a type of dog bred between a male Husky and female Beagle."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

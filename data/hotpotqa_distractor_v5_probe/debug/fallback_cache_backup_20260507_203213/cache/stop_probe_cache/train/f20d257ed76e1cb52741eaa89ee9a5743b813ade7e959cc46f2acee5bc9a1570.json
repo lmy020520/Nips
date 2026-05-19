@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New York City",
+  "pred_answer": "New York City",
+  "normalized_gold": "new york city",
+  "normalized_pred": "new york city",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79c4445542996c55b2dc6c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79c4445542996c55b2dc6c::Elizabeth Christ Trump::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79c4445542996c55b2dc6c::Business career of Donald Trump::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79c4445542996c55b2dc6c::Fred Trump::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a79c4445542996c55b2dc6c::Elizabeth Christ Trump::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79c4445542996c55b2dc6c::Elizabeth Christ Trump",
+        "5a79c4445542996c55b2dc6c::Fred Trump"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79c4445542996c55b2dc6c::Elizabeth Christ Trump::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79c4445542996c55b2dc6c::Business career of Donald Trump::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79c4445542996c55b2dc6c::Fred Trump::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a79c4445542996c55b2dc6c::Elizabeth Christ Trump::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a79c4445542996c55b2dc6c::Elizabeth Christ Trump::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Elizabeth Christ Trump (born Elisabeth Christ; October 10, 1880 – June 6, 1966) was a German-born American businesswoman and is considered the matriarch of the Trump family.\n[2] Frederick Christ Trump Sr. (October 11, 1905 – June 25, 1999) was an American real estate developer and philanthropist, primarily in New York City, and father of Donald Trump, the 45th President of the United States, and Maryanne Trump Barry, a United States Court of Appeals judge.\n[3] He began his real estate career at his father's company, Elizabeth Trump and Son, which he later renamed to The Trump Organization.\n[4] She founded the real estate development company Elizabeth Trump & Son with her son Fred."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

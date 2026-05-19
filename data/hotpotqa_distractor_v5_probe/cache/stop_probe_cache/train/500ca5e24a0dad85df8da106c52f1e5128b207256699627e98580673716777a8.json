@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1.5 million",
+  "pred_answer": "1.5 million",
+  "normalized_gold": "15 million",
+  "normalized_pred": "15 million",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4fc9c55429908b63264cb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4fc9c55429908b63264cb::Mosque Scorpio::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4fc9c55429908b63264cb::Bhour::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4fc9c55429908b63264cb::Basra::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4fc9c55429908b63264cb::Basra::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4fc9c55429908b63264cb::Mosque Scorpio",
+        "5ae4fc9c55429908b63264cb::Basra"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4fc9c55429908b63264cb::Mosque Scorpio::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4fc9c55429908b63264cb::Bhour::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4fc9c55429908b63264cb::Basra::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4fc9c55429908b63264cb::Basra::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4fc9c55429908b63264cb::Basra::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It had an estimated population of 1.5 million in 2012.\n[2] Basra (Arabic: البصرة‎ ‎ \"al-Baṣrah\"), is an Iraqi city located on the Shatt al-Arab between Kuwait and Iran.\n[3] Bhour is a village in the Punjab state of India, located near the city of Sultanpur Lodhi, in the Kapurthala district.\n[4] Scorpio Mosque is a mosque located near the city of Almtihh in Basra."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

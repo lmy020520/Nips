@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Stern–Gerlach Medal",
+  "pred_answer": "Stern–Gerlach Medal",
+  "normalized_gold": "stern–gerlach medal",
+  "normalized_pred": "stern–gerlach medal",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac38f0655429939154137d0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac38f0655429939154137d0::Otto Stern::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac38f0655429939154137d0::Ramón Menéndez Pidal::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac38f0655429939154137d0::Stern–Gerlach Medal::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac38f0655429939154137d0::List of Nobel laureates in Chemistry::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac38f0655429939154137d0::Otto Stern",
+        "5ac38f0655429939154137d0::Stern–Gerlach Medal"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac38f0655429939154137d0::Otto Stern::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac38f0655429939154137d0::Ramón Menéndez Pidal::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac38f0655429939154137d0::Stern–Gerlach Medal::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac38f0655429939154137d0::List of Nobel laureates in Chemistry::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac38f0655429939154137d0::List of Nobel laureates in Chemistry::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Each recipient receives a medal, a diploma and a monetary award prize that has varied throughout the years.\n[2] The Stern–Gerlach Medal is the most prestigious German Award for experimental physicists, named after the scientists of the Stern–Gerlach experiment, Otto Stern and Walther Gerlach.\n[3] He was nominated for a Nobel Prize 151 times, the most nominated person, three times more than the second most nominated person, André Malraux.\n[4] He was the second most nominated person for a Nobel Prize with 82 nominations in the years 1925–1945 (most times nominated is Arnold Sommerfeld with 84 nominations), ultimately winning in 1943."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

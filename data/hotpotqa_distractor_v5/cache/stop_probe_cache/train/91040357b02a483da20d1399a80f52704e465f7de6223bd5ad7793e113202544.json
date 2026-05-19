@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "King Lear",
+  "pred_answer": "King Lear",
+  "normalized_gold": "king lear",
+  "normalized_pred": "king lear",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac1306f55429964131be166",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac1306f55429964131be166::Edmund (King Lear)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac1306f55429964131be166::Kate Mailer::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac1306f55429964131be166::Goneril::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac1306f55429964131be166::Cordelia (King Lear)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac1306f55429964131be166::Edmund (King Lear)",
+        "5ac1306f55429964131be166::Goneril"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac1306f55429964131be166::Edmund (King Lear)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac1306f55429964131be166::Kate Mailer::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac1306f55429964131be166::Goneril::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac1306f55429964131be166::Cordelia (King Lear)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac1306f55429964131be166::Cordelia (King Lear)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Cordelia is a fictional character in William Shakespeare's tragic play, \"King Lear\".\n[2] Goneril is a character in Shakespeare's tragic play \"King Lear\" (1605).\n[3] Her work includes roles on stage in the Anton Chekhov play \"The Cherry Orchard\", and on film in Jean-Luc Godard's adaptation of the William Shakespeare play \"King Lear\" with Burgess Meredith (1987) and in W. T. Morgan's \"A Matter of Degrees\" with Arye Gross (1990).\n[4] Edmund or Edmond is a fictional character and the main antagonist in William Shakespeare's \"King Lear\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

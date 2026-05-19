@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Juliette Lewis",
+  "pred_answer": "Juliette Lewis",
+  "normalized_gold": "juliette lewis",
+  "normalized_pred": "juliette lewis",
+  "exact_match": true,
+  "context_exact_match": false,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2d6d855429921a00ab060",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2d6d855429921a00ab060::Juliette Lewis::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2d6d855429921a00ab060::Husbands and Wives::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2d6d855429921a00ab060::Cape Fear (1991 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2d6d855429921a00ab060::Juliette Lewis",
+        "5ac2d6d855429921a00ab060::Husbands and Wives"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2d6d855429921a00ab060::Juliette Lewis::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2d6d855429921a00ab060::Husbands and Wives::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2d6d855429921a00ab060::Cape Fear (1991 film)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2d6d855429921a00ab060::Cape Fear (1991 film)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Cape Fear is a 1991 American psychological thriller film directed by Martin Scorsese and a remake of the 1962 film of the same name.\n[2] Husbands and Wives is a 1992 American comedy-drama film written and directed by Woody Allen.\n[3] She gained fame for her role in Martin Scorsese's 1991 remake of the thriller \"Cape Fear\" for which she was nominated for both an Academy Award and Golden Globe for Best Supporting Actress."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

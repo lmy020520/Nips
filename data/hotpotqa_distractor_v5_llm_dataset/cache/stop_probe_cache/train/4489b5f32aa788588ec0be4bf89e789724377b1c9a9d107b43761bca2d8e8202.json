@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "former professional basketball player.",
+  "pred_answer": "former professional basketball player.",
+  "normalized_gold": "former professional basketball player",
+  "normalized_pred": "former professional basketball player",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7889255429952e35ea963",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7889255429952e35ea963::R. Kelly::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7889255429952e35ea963::Ester Dean::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7889255429952e35ea963::ATL (band)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae7889255429952e35ea963::List of songs recorded by Tori Kelly::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7889255429952e35ea963::R. Kelly",
+        "5ae7889255429952e35ea963::ATL (band)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7889255429952e35ea963::R. Kelly::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7889255429952e35ea963::Ester Dean::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7889255429952e35ea963::ATL (band)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae7889255429952e35ea963::List of songs recorded by Tori Kelly::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7889255429952e35ea963::List of songs recorded by Tori Kelly::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Tori Kelly is an American singer, songwriter, record producer and actress who slowly gained recognition after starting to post videos on YouTube at the age of 14.\n[2] They had enlisted R. Kelly to produce their debut album \"The ATL Project\", released in July 2004.\n[3] Esther Renay Dean (born April 15, 1982), known professionally as Ester Dean, is an American singer, songwriter, record producer, and actress.\n[4] Robert Sylvester Kelly (born January 8, 1967), known professionally as R. Kelly, is an American singer, songwriter, record producer, and former professional basketball player."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

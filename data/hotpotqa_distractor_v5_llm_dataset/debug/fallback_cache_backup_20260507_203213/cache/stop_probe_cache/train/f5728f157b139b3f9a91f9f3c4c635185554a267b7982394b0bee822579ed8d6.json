@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "San Francisco, California",
+  "pred_answer": "San Francisco, California",
+  "normalized_gold": "san francisco california",
+  "normalized_pred": "san francisco california",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae793d55542997b22f6a7b6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae793d55542997b22f6a7b6::HopSkipDrive::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae793d55542997b22f6a7b6::Daimler Hire::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae793d55542997b22f6a7b6::Uber (company)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae793d55542997b22f6a7b6::Campervan hire agency::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae793d55542997b22f6a7b6::HopSkipDrive",
+        "5ae793d55542997b22f6a7b6::Uber (company)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae793d55542997b22f6a7b6::HopSkipDrive::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae793d55542997b22f6a7b6::Daimler Hire::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae793d55542997b22f6a7b6::Uber (company)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae793d55542997b22f6a7b6::Campervan hire agency::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae793d55542997b22f6a7b6::Campervan hire agency::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Campervan hire is popular in the UK, especially for music festivals and there are several companies in the market.\n[2] Uber Technologies Inc. is an American private hire company headquartered in San Francisco, California, United States, operating in 633 cities worldwide.\n[3] The company's services later included self-drive hire cars, which continued to the end of the company's existence.\n[4] It was founded in 2016 by Joanna McFarland, Carolyn Yashari Becher, and Janelle McGlothin and is aimed at children below the age of 18 years who are legally restricted to avail the services of other ride-hailing services like Uber and Lyft."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

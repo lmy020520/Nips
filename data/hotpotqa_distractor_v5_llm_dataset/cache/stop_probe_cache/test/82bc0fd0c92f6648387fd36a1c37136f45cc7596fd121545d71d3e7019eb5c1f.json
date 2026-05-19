@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Maheen Zia",
+  "pred_answer": "Maheen Zia",
+  "normalized_gold": "maheen zia",
+  "normalized_pred": "maheen zia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d598d5542995f4f402262",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d598d5542995f4f402262::Maheen Zia::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d598d5542995f4f402262::Burton L. King::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d598d5542995f4f402262::The Master Mystery::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d598d5542995f4f402262::Maheen Zia",
+        "5a7d598d5542995f4f402262::Burton L. King"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d598d5542995f4f402262::Maheen Zia::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d598d5542995f4f402262::Burton L. King::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d598d5542995f4f402262::The Master Mystery::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d598d5542995f4f402262::The Master Mystery::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The film was directed by Harry Grossman and Burton L. King and written by Arthur B. Reeve and Charles Logue.\n[2] Burton L. King (August 25, 1877 – May 4, 1944) was an American film actor and director.\n[3] Maheen Zia is a Pakistani film director and film editor."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ladder 49",
+  "pred_answer": "Ladder 49",
+  "normalized_gold": "ladder 49",
+  "normalized_pred": "ladder 49",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8ba2215542995d1e6f142a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8ba2215542995d1e6f142a::Joaquin Phoenix filmography::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8ba2215542995d1e6f142a::Kevin Daniels::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8ba2215542995d1e6f142a::Ladder 49::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8ba2215542995d1e6f142a::Ladder 49::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8ba2215542995d1e6f142a::Kevin Daniels",
+        "5a8ba2215542995d1e6f142a::Ladder 49"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8ba2215542995d1e6f142a::Joaquin Phoenix filmography::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8ba2215542995d1e6f142a::Kevin Daniels::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8ba2215542995d1e6f142a::Ladder 49::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8ba2215542995d1e6f142a::Ladder 49::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8ba2215542995d1e6f142a::Ladder 49::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Ladder 49 is a 2004 American drama film, directed by Jay Russell, about the heroics of fictional Baltimore firefighter Jack Morrison, who is trapped inside a warehouse fire, and his recollection of the events that got him to that point.\n[2] The film stars Joaquin Phoenix and John Travolta.\n[3] Kevin Dwight Daniels Jr., known as Kevin Daniels (born December 9, 1976), is an American actor who started his career with a supporting role in the 1998 film \"Twelfth Night, or What You Will\" by director Nicholas Hytner.\n[4] Joaquin Phoenix is an American actor who started his career performing as a child on television."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

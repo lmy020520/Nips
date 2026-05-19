@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Saturday Night Live",
+  "pred_answer": "Saturday Night Live",
+  "normalized_gold": "saturday night live",
+  "normalized_pred": "saturday night live",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e80ef5542997cc2c47558",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e80ef5542997cc2c47558::Almost Heroes::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e80ef5542997cc2c47558::The One with Rachel's Date::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e80ef5542997cc2c47558::Chris Farley::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7e80ef5542997cc2c47558::Almost Heroes (TV series)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e80ef5542997cc2c47558::Almost Heroes",
+        "5a7e80ef5542997cc2c47558::Chris Farley"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e80ef5542997cc2c47558::Almost Heroes::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e80ef5542997cc2c47558::The One with Rachel's Date::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e80ef5542997cc2c47558::Chris Farley::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7e80ef5542997cc2c47558::Almost Heroes (TV series)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e80ef5542997cc2c47558::Almost Heroes (TV series)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Almost Heroes was a Canadian comedy TV series that premiered on Thursday, June 2, 2011 on Showcase, and ran for one season (eight episodes) before being discontinued by Showcase at the beginning of the 2011 fall season.\n[2] Farley was known for his loud, energetic comedic style, and was a member of Chicago's Second City Theatre and later a cast member of the NBC sketch comedy show \"Saturday Night Live\" between 1990 and 1995.\n[3] In the subplot, Joey (Matt LeBlanc) introduces Rachel (Jennifer Aniston) to his Days of Our Lives co-star, Kash Ford, and they go out on a date, which bothers Ross (David Schwimmer).\n[4] Almost Heroes is a 1998 American adventure comedy film directed by Christopher Guest, narrated by Guest's friend and frequent collaborator Harry Shearer, and starring Chris Farley and Matthew Perry."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

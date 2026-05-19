@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"Eye in the Sky\"",
+  "pred_answer": "\"Eye in the Sky\"",
+  "normalized_gold": "eye in the sky",
+  "normalized_pred": "eye in the sky",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae79de65542997ec27276c0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae79de65542997ec27276c0::Han Hyo-joo::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae79de65542997ec27276c0::Poetry (film)::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae79de65542997ec27276c0::Cold Eyes::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae79de65542997ec27276c0::Lee Eun-woo::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae79de65542997ec27276c0::Han Hyo-joo",
+        "5ae79de65542997ec27276c0::Cold Eyes"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae79de65542997ec27276c0::Han Hyo-joo::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae79de65542997ec27276c0::Poetry (film)::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae79de65542997ec27276c0::Cold Eyes::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae79de65542997ec27276c0::Lee Eun-woo::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae79de65542997ec27276c0::Lee Eun-woo::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 2013, she was nominated for Best New Actress at the 34th Blue Dragon Film Awards.\n[2] A remake of 2007 Hong Kong film \"Eye in the Sky\", the film is about detectives from the surveillance team of a special crime unit who work together to take down a bank robbing organization.\n[3] Other accolades include the Grand Bell Awards for Best Picture and Best Actress, the Blue Dragon Film Awards for Best Actress, and the Los Angeles Film Critics Association Award for Best Actress.\n[4] She is best known for her leading roles in television drama series: \"Brilliant Legacy\" (2009); \"Dong Yi\" (2010) and \"W - Two Worlds\" (2016); as well as the film \"Cold Eyes\" (2013), for which she won Best Actress at the 34th Blue Dragon Film Awards."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

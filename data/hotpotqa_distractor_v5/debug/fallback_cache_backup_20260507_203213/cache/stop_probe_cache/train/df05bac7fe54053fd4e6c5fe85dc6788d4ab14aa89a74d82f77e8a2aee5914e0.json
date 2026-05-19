@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "film",
+  "pred_answer": "film",
+  "normalized_gold": "film",
+  "normalized_pred": "film",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0dfeb5542990adbacf69b",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0dfeb5542990adbacf69b::The Walt Disney Company::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0dfeb5542990adbacf69b::Walt Disney World Dolphin::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0dfeb5542990adbacf69b::Walt Disney::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0dfeb5542990adbacf69b::Aram Avakian::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae0dfeb5542990adbacf69b::Walt Disney Pictures::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0dfeb5542990adbacf69b::Walt Disney",
+        "5ae0dfeb5542990adbacf69b::Aram Avakian"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0dfeb5542990adbacf69b::The Walt Disney Company::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0dfeb5542990adbacf69b::Walt Disney World Dolphin::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0dfeb5542990adbacf69b::Walt Disney::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0dfeb5542990adbacf69b::Aram Avakian::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae0dfeb5542990adbacf69b::Walt Disney Pictures::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0dfeb5542990adbacf69b::Walt Disney Pictures::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Walt Disney Pictures, Inc. is an American film production company and a subsidiary of Walt Disney Studios, owned by The Walt Disney Company.\n[2] His work in the latter role includes \"Jazz on a Summer's Day\" (1960) and the indie film \"End of the Road\" (1970).\n[3] A pioneer of the American animation industry, he introduced several developments in the production of cartoons.\n[4] The Walt Disney World Dolphin is a resort hotel designed by architect Michael Graves located between Epcot and Disney's Hollywood Studios in the Walt Disney World Resort in Bay Lake, Florida, next to Disney's BoardWalk Resort area."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fifty Shades Darker",
+  "pred_answer": "Fifty Shades Darker",
+  "normalized_gold": "fifty shades darker",
+  "normalized_pred": "fifty shades darker",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3e3075542997ea680c97b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3e3075542997ea680c97b::Fifty Shades Darker (film)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3e3075542997ea680c97b::Fifty Shades (film series)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3e3075542997ea680c97b::Kinky (film)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3e3075542997ea680c97b::Fifty Shades Freed (film)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3e3075542997ea680c97b::Fifty Shades Darker (film)",
+        "5ac3e3075542997ea680c97b::Kinky (film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3e3075542997ea680c97b::Fifty Shades Darker (film)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3e3075542997ea680c97b::Fifty Shades (film series)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3e3075542997ea680c97b::Kinky (film)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3e3075542997ea680c97b::Fifty Shades Freed (film)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3e3075542997ea680c97b::Fifty Shades Freed (film)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is the final film in the \"Fifty Shades\" trilogy, and a sequel to \"Fifty Shades of Grey\" (2015) and \"Fifty Shades Darker\" (2017).\n[2] The film is scheduled to release in November 2017 as counter-programming to \"Fifty Shades Darker\".\n[3] Fifty Shades is an American film series that consists of three erotic romantic drama films, based on the \" Fifty Shades\" trilogy by English author E. L. James.\n[4] The second film in the \"Fifty Shades\" film series, it is the sequel to the 2015 film \"Fifty Shades of Grey\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

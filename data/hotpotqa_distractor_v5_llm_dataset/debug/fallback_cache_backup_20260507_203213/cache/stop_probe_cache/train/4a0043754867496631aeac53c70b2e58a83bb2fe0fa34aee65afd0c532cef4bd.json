@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Harold Holt",
+  "pred_answer": "Harold Holt",
+  "normalized_gold": "harold holt",
+  "normalized_pred": "harold holt",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2b69c5542990b17b15464",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2b69c5542990b17b15464::Harold Holt::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2b69c5542990b17b15464::Western Australian Liberal Party (1911–17)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2b69c5542990b17b15464::Australian federal election, 1966::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2b69c5542990b17b15464::Australian federal election, 1969::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2b69c5542990b17b15464::Harold Holt",
+        "5ac2b69c5542990b17b15464::Australian federal election, 1966"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2b69c5542990b17b15464::Harold Holt::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2b69c5542990b17b15464::Western Australian Liberal Party (1911–17)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2b69c5542990b17b15464::Australian federal election, 1966::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2b69c5542990b17b15464::Australian federal election, 1969::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2b69c5542990b17b15464::Australian federal election, 1969::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The incumbent Liberal Party of Australia led by Prime Minister of Australia John Gorton with coalition partner the Country Party led by John McEwen (who had also served as Prime Minister for three weeks after Harold Holt's disappearance) defeated the Australian Labor Party led by Gough Whitlam.\n[2] The incumbent Liberal Party of Australia, led by Prime Minister of Australia Harold Holt, with coalition partner the Country Party, led by John McEwen, was elected to an eighth term in government, defeating the Australian Labor Party led by Arthur Calwell.\n[3] The Western Australian Liberal Party was a political party which existed from 1911 until 1917 in the Australian state of Western Australia.\n[4] He was born in Stanmore, New South Wales and won a scholarship to study law at the University of Melbourne."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

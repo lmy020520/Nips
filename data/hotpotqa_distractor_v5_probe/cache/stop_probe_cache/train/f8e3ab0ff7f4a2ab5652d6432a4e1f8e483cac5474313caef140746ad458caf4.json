@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "born 12 December 1925",
+  "pred_answer": "12 December 1925",
+  "normalized_gold": "born 12 december 1925",
+  "normalized_pred": "12 december 1925",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7bca68554299294a54aada",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7bca68554299294a54aada::Den Pobedy::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7bca68554299294a54aada::Lev Leshchenko::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7bca68554299294a54aada::Vladimir Shainsky::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7bca68554299294a54aada::Here's the Tender Coming::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7bca68554299294a54aada::Den Pobedy",
+        "5a7bca68554299294a54aada::Vladimir Shainsky"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7bca68554299294a54aada::Den Pobedy::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7bca68554299294a54aada::Lev Leshchenko::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7bca68554299294a54aada::Vladimir Shainsky::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7bca68554299294a54aada::Here's the Tender Coming::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7bca68554299294a54aada::Here's the Tender Coming::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In the sleeve notes for the album, Rachel Unthank said that although the Tender in the album's title track refers to the boat that is on its way to press men to sea, \"the title of this song seemed to encapsulate for us the feeling of our new album, which is perhaps calmer and a little warmer in contrast to the stark bleakness of \"The Bairns\"\".\n[2] Vladimir Yakovlevich Shainsky (Russian: Владимир Яковлевич Шаинский ; born 12 December 1925) is a Soviet and Russian composer.\n[3] Lev Valerjanovich Leshchenko (Russian: Лев Валерианович Лещенко ; born 1 February 1942), is a Russian singer, who was best known for his rendition of \"Den Pobedy\" and the 1980 Summer Olympics closing ceremony theme song \"Do svidanja, Moskva\".\n[4] In the words of Vladimir Shainsky, a veteran composer, \"the song seemed to have turned back the time."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

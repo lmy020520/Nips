@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1993",
+  "pred_answer": "1993",
+  "normalized_gold": "1993",
+  "normalized_pred": "1993",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85fd445542994775f606e6",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85fd445542994775f606e6::Laura Pausini (1994 album)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85fd445542994775f606e6::Spaniards::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85fd445542994775f606e6::Laura Pausini (1994 album)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85fd445542994775f606e6::Italians::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a85fd445542994775f606e6::Albanians::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85fd445542994775f606e6::Laura Pausini (1994 album)",
+        "5a85fd445542994775f606e6::Italians"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85fd445542994775f606e6::Laura Pausini (1994 album)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85fd445542994775f606e6::Spaniards::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85fd445542994775f606e6::Laura Pausini (1994 album)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85fd445542994775f606e6::Italians::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a85fd445542994775f606e6::Albanians::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85fd445542994775f606e6::Albanians::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Albanians (Albanian: \"Shqiptarët\" ) are a nation and ethnic group, native to Albania, Kosovo and other countries who share a common culture, ancestry and speak the Albanian language as a native tongue.\n[2] The Italians (Italian: \"Italiani\" ] ) are a nation and ethnic group native to Italy, who share a common culture, history, ancestry and language.\n[3] This self-titled work offers Spanish language renditions of selected tracks and greatest hits from her native Italian language albums \"Laura Pausini\" (1993) and \"Laura\" (1994).\n[4] Spaniards are a nation and ethnic group indigenous to Spain that share a common Spanish culture and speak one of the national languages of Spain, including most numerously Spanish, as a primary language."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

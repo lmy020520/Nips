@@ -1,0 +1,22 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the player who successfully took the penalty kick earned by Jakubko. Raw candidate 1 directly states it was Róbert Vittek, but we need to verify that Vittek currently plays for ŠK Slovan Bratislava. Raw candidate 2 mentions Ladislav Pecko played for Slovan, but not Vittek. Raw candidate 3 is about the club. A verification note can check if Vittek currently plays for Slovan, possibly using external knowledge or additional evidence. However, since we only have these raw candidates, we can derive a bridge note linking the penalty taker to the club requirement.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Róbert Vittek is the Slovak football player who successfully took the penalty kick earned by Martin Jakubko.",
+      "source_unit_ids": [
+        "5a7f95135542995d8a8ddea8::Martin Jakubko::3"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Róbert Vittek currently plays for ŠK Slovan Bratislava.",
+      "source_unit_ids": [
+        "5a7f95135542995d8a8ddea8::ŠK Slovan Bratislava::0"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

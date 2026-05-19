@@ -1,0 +1,28 @@
+seed: 42
+output_dir: outputs/ranker/deberta_v3_base_v5_llm_quick
+
+model:
+  pretrained_name: microsoft/deberta-v3-base
+  dropout: 0.1
+
+data:
+  train_samples: data/hotpotqa_distractor_v5_llm_dataset/samples/train.jsonl
+  val_samples: data/hotpotqa_distractor_v5_llm_dataset/samples/val.jsonl
+  test_samples: data/hotpotqa_distractor_v5_llm_dataset/samples/test.jsonl
+
+  train_memory: data/hotpotqa_distractor_v5_llm_dataset/unit_registry/raw_units_train.jsonl
+  val_memory: data/hotpotqa_distractor_v5_llm_dataset/unit_registry/raw_units_val.jsonl
+  test_memory: data/hotpotqa_distractor_v5_llm_dataset/unit_registry/raw_units_test.jsonl
+
+train:
+  batch_size: 2
+  num_workers: 0
+  epochs: 1
+  lr: 2.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.06
+  max_length: 256
+  grad_accum_steps: 8
+  max_grad_norm: 1.0
+  log_every: 20
+  fp16: true

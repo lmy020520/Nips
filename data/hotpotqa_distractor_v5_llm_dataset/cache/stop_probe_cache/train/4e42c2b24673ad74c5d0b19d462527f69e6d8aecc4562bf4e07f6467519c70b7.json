@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "producer, and director of film",
+  "pred_answer": "producer, and director of film",
+  "normalized_gold": "producer and director of film",
+  "normalized_pred": "producer and director of film",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abbee6a554299114383a0a2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abbee6a554299114383a0a2::Paul Haggis::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abbee6a554299114383a0a2::Edward Lachman::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abbee6a554299114383a0a2::Ulrich Seidl::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abbee6a554299114383a0a2::Import/Export::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abbee6a554299114383a0a2::Paul Haggis",
+        "5abbee6a554299114383a0a2::Ulrich Seidl"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abbee6a554299114383a0a2::Paul Haggis::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abbee6a554299114383a0a2::Edward Lachman::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abbee6a554299114383a0a2::Ulrich Seidl::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abbee6a554299114383a0a2::Import/Export::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abbee6a554299114383a0a2::Import/Export::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Import/Export is an Austrian film by the director Ulrich Seidl from 2007.\n[2] Ulrich Maria Seidl (born 24 November 1952 in Vienna) is an Austrian film director, writer and producer.\n[3] Lachman is mostly associated with the American independent film movement, and has served as director of photography on films by Todd Haynes (including \"Far From Heaven\" in 2002, which earned Lachman an Academy Award nomination), Ulrich Seidl, Wim Wenders, Steven Soderbergh and Paul Schrader.\n[4] Paul Edward Haggis (born March 10, 1953) is a Canadian screenwriter, producer, and director of film and television."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "film",
+  "pred_answer": "film",
+  "normalized_gold": "film",
+  "normalized_pred": "film",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8d01ca554299441c6b9fb0",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8d01ca554299441c6b9fb0::Metro-Goldwyn-Mayer::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8d01ca554299441c6b9fb0::Die Another Day (song)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8d01ca554299441c6b9fb0::Bede Aircraft::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8d01ca554299441c6b9fb0::Metro-Goldwyn-Mayer",
+        "5a8d01ca554299441c6b9fb0::Die Another Day (song)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8d01ca554299441c6b9fb0::Metro-Goldwyn-Mayer::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8d01ca554299441c6b9fb0::Die Another Day (song)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8d01ca554299441c6b9fb0::Bede Aircraft::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8d01ca554299441c6b9fb0::Bede Aircraft::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The tiny jet also appeared in two James Bond movies; \"Octopussy\" starring Sir Roger Moore, and later in a cameo appearance, hanging from the wall of Q's workshop in \"Die Another Day\" starring Pierce Brosnan as Agent 007.\n[2] \"Die Another Day\" is the theme song from the James Bond film of the same name by American singer and songwriter Madonna.\n[3] Metro-Goldwyn-Mayer Studios Inc. (abbreviated as MGM or M-G-M, also known as Metro-Goldwyn-Mayer Pictures, Metro-Goldwyn-Mayer or simply Metro, and for a former interval known as Metro-Goldwyn-Mayer/United Artists, or MGM/UA) is an American media company, involved primarily in the production and distribution of feature films and television programs."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

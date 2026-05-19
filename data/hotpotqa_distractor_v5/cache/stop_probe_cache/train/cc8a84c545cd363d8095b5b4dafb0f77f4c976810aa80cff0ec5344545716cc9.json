@@ -1,0 +1,85 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "American",
+  "pred_answer": "American",
+  "normalized_gold": "american",
+  "normalized_pred": "american",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7755ee5542994aec3b7294",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7755ee5542994aec3b7294::Sweets and Other Stories::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7755ee5542994aec3b7294::Venus on the Half-Shell and Others::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7755ee5542994aec3b7294::derived::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7755ee5542994aec3b7294::Nick Tosches::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7755ee5542994aec3b7294::Sweets and Other Stories",
+        "5a7755ee5542994aec3b7294::Nick Tosches"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7755ee5542994aec3b7294::Sweets and Other Stories::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7755ee5542994aec3b7294::Venus on the Half-Shell and Others::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7755ee5542994aec3b7294::Nick Tosches::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a7755ee5542994aec3b7294::derived::1",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a7755ee5542994aec3b7294::Nick Tosches::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"On the Quai at Smyrna\" is a short story written by Ernest Hemingway, first published in the 1930 Scribner's edition of the \"In Our Time\" collection of short stories, then titled \"Introduction by the author\".\n[2] His 1982 biography of Jerry Lee Lewis, \"Hellfire\", was praised by \"Rolling Stone\" magazine as \"the best rock and roll biography ever written.\"\n[3] Carey, who had access to Farmer's correspondence while editing the book, reveals in his introduction that in the early to mid-1970s Farmer planned to edit an anthology of fictional-author stories by other writers.\n[4] Sweets and Other Stories is the 2009 debut novel by soul singer Andre Williams.\n\nNotes:\n[verification] Ernest Hemingway is an American author, as known from general knowledge, but this needs confirmation from the provided evidence."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

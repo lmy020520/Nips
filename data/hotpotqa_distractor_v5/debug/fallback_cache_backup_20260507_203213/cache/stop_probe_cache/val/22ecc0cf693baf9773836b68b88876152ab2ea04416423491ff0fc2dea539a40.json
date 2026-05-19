@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "El Al",
+  "pred_answer": "El Al",
+  "normalized_gold": "el al",
+  "normalized_pred": "el al",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3a609554299741d48a2bd",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3a609554299741d48a2bd::CAL Cargo Air Lines::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3a609554299741d48a2bd::Civil Aviation Authority of Israel::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3a609554299741d48a2bd::Ben Gurion Airport::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3a609554299741d48a2bd::Up (airline)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac3a609554299741d48a2bd::CAL Cargo Air Lines::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3a609554299741d48a2bd::Ben Gurion Airport",
+        "5ac3a609554299741d48a2bd::Up (airline)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3a609554299741d48a2bd::CAL Cargo Air Lines::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3a609554299741d48a2bd::Civil Aviation Authority of Israel::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3a609554299741d48a2bd::Ben Gurion Airport::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3a609554299741d48a2bd::Up (airline)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac3a609554299741d48a2bd::CAL Cargo Air Lines::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3a609554299741d48a2bd::CAL Cargo Air Lines::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] קווי אוויר למטען‎ ‎ ) is an all cargo airline with its corporate headquarters in the Airport City development of Ben Gurion International Airport, Israel.\n[2] Up (styled as UP) is a low-cost brand of Israeli airline El Al.\n[3] Named after Israel's first Prime Minister David Ben-Gurion, the airport serves as a hub for El Al, Israir Airlines, Arkia, Up and Sun D'Or.\n[4] Its head office is in the Golan House building in the Airport City business park near Ben Gurion Airport; prior to 2010 its head office was on the airport grounds."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

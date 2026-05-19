@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Battle of the Little Bighorn",
+  "pred_answer": "Battle of the Little Bighorn",
+  "normalized_gold": "battle of the little bighorn",
+  "normalized_pred": "battle of the little bighorn",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add70e35542992200553b1d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add70e35542992200553b1d::American Horse (elder)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add70e35542992200553b1d::Chief Red Fox::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add70e35542992200553b1d::Crazy Horse::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5add70e35542992200553b1d::American Horse (elder)::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add70e35542992200553b1d::Chief Red Fox",
+        "5add70e35542992200553b1d::Crazy Horse"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add70e35542992200553b1d::American Horse (elder)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add70e35542992200553b1d::Chief Red Fox::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add70e35542992200553b1d::Crazy Horse::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5add70e35542992200553b1d::American Horse (elder)::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add70e35542992200553b1d::American Horse (elder)::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] On September 9, 1876, American Horse was mortally wounded in the Battle of Slim Buttes fighting to protect his family and defending against the white invasion of the \"“Paha Sapa“\" Black Hills.\n[2] His participation in several famous battles of the American Indian Wars on the northern Great Plains, among them the Fetterman massacre in 1866, in which he acted as a decoy, and the Battle of the Little Bighorn in 1876, in which he led a war party to victory, earned him great respect from both his enemies and his own people.\n[3] Chief Red Fox (Lakota: \"Tokála Luta,\" also known as Chief William Red Fox; June 11, 1870 – 1976) was an Oglala Lakota Sioux performer, actor, and Sioux Indian rights advocate, born on the Pine Ridge Reservation in the Dakota Territory.\n[4] American Horse is notable in American history as one of the principal war chiefs allied with Crazy Horse during Red Cloud's War (1866–1868) and the Battle of the Little Bighorn during the Great Sioux War of 1876-1877."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

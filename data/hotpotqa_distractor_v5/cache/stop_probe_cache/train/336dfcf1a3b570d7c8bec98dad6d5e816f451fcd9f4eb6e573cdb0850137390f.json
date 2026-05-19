@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "I Have a Dream",
+  "pred_answer": "I Have a Dream",
+  "normalized_gold": "i have a dream",
+  "normalized_pred": "i have a dream",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8def3a5542995085b3735e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8def3a5542995085b3735e::WOW Gospel 2013::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8def3a5542995085b3735e::Clarence Benjamin Jones::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8def3a5542995085b3735e::I Have a Dream::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8def3a5542995085b3735e::WOW Gospel 2013::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8def3a5542995085b3735e::WOW Gospel 2013",
+        "5a8def3a5542995085b3735e::I Have a Dream"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8def3a5542995085b3735e::WOW Gospel 2013::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8def3a5542995085b3735e::Clarence Benjamin Jones::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8def3a5542995085b3735e::I Have a Dream::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8def3a5542995085b3735e::WOW Gospel 2013::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8def3a5542995085b3735e::WOW Gospel 2013::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The second Atlanta tribute is based on the 50th anniversary of the March on Washington for Jobs and Freedom and the \"I Have a Dream\" speech by Martin Luther King, Jr. The album topped out at #1 on the \"Billboard\" Gospel Albums chart and #43 on the \"Billboard\" 200 chart.\n[2] \"I Have a Dream\" is a public speech delivered by American civil rights activist Martin Luther King Jr. during the March on Washington for Jobs and Freedom on August 28, 1963, in which he calls for an end to racism in the United States and called for civil and economic rights.\n[3] Clarence B. Jones (born January 8, 1931) is the former personal counsel, advisor, draft speech writer and close friend of Martin Luther King Jr. He is a Scholar in Residence at the Martin Luther King, Jr.\n[4] The album cover pay tribute to Atlanta, Georgia, and it is second \"WOW Gospel\" album to do so (\"WOW Gospel 2007\" is the first)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

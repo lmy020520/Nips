@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "India",
+  "pred_answer": "India",
+  "normalized_gold": "india",
+  "normalized_pred": "india",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abf9c405542994516f454db",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abf9c405542994516f454db::Loktantrik Jan Samta Party::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abf9c405542994516f454db::Lok Sabha::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abf9c405542994516f454db::Member of Parliament, Rajya Sabha::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abf9c405542994516f454db::Loktantrik Jan Samta Party",
+        "5abf9c405542994516f454db::Lok Sabha"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abf9c405542994516f454db::Loktantrik Jan Samta Party::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abf9c405542994516f454db::Lok Sabha::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abf9c405542994516f454db::Member of Parliament, Rajya Sabha::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abf9c405542994516f454db::Member of Parliament, Rajya Sabha::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Rajya Sabha MPs are elected by the electoral college of the elected members of the State Assembly with a system of proportional representation by a single transferable vote.\n[2] Members of the Lok Sabha are elected by adult universal suffrage and a first-past-the-post system to represent their respective constituencies, and they hold their seats for five years or until the body is dissolved by the President on the advice of the council of ministers.\n[3] The Loktantrik Jan Samta Party is a political party in India."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

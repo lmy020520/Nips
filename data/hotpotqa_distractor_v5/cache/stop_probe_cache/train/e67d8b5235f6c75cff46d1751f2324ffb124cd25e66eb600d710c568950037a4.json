@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "21 January 1956",
+  "pred_answer": "21 January 1956",
+  "normalized_gold": "21 january 1956",
+  "normalized_pred": "21 january 1956",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade0cab5542997545bbbe32",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade0cab5542997545bbbe32::Funny Wonder::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade0cab5542997545bbbe32::Plug (comics)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade0cab5542997545bbbe32::The Beezer::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade0cab5542997545bbbe32::Funny Wonder::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade0cab5542997545bbbe32::Plug (comics)",
+        "5ade0cab5542997545bbbe32::The Beezer"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade0cab5542997545bbbe32::Funny Wonder::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade0cab5542997545bbbe32::Plug (comics)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade0cab5542997545bbbe32::The Beezer::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade0cab5542997545bbbe32::Funny Wonder::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade0cab5542997545bbbe32::Funny Wonder::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The first was published from 30 July 1892-25 May 1901 this comic was more satirical in nature like other early comics during its first run, also in this first run it absorbed another comic called Wonder in 1893.\n[2] The Beezer (called The Beezer and Topper for the last 3 years of publication) was a British comic that ran from (issues dates) 21 January 1956 to 21 August 1993.\n[3] Plug was a British comics magazine that ran for 75 issues from 24 September 1977 until 24 February 1979, when it merged with \"The Beezer\".\n[4] A second series ran from 26 December 1914-16 May 1942 when it merged with \"Wonder\" which in turn merged with \"Radio Fun\" in 1953."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

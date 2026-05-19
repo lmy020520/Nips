@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Dublin",
+  "pred_answer": "Dublin",
+  "normalized_gold": "dublin",
+  "normalized_pred": "dublin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a809579554299485f59865f",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a809579554299485f59865f::Sermons of Jonathan Swift::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a809579554299485f59865f::St. Patrick's Cathedral (Manhattan)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a809579554299485f59865f::Lilliput and Blefuscu::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a809579554299485f59865f::Jonathan Swift::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a809579554299485f59865f::Sermons of Jonathan Swift::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a809579554299485f59865f::Lilliput and Blefuscu",
+        "5a809579554299485f59865f::Jonathan Swift"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a809579554299485f59865f::Sermons of Jonathan Swift::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a809579554299485f59865f::St. Patrick's Cathedral (Manhattan)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a809579554299485f59865f::Lilliput and Blefuscu::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a809579554299485f59865f::Jonathan Swift::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a809579554299485f59865f::Sermons of Jonathan Swift::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a809579554299485f59865f::Sermons of Jonathan Swift::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Although Swift is better known today for his secular writings such as \"Gulliver's Travels\", \"A Tale of a Tub\", or the \"Drapier's Letters\", Swift was known in Dublin for his sermons that were delivered every fifth Sunday.\n[2] Jonathan Swift (30 November 1667 – 19 October 1745) was an Anglo-Irish satirist, essayist, political pamphleteer (first for the Whigs, then for the Tories), poet and cleric who became Dean of St Patrick's Cathedral, Dublin.\n[3] Lilliput and Blefuscu are two fictional island nations that appear in the first part of the 1726 novel \"Gulliver's Travels\" by Jonathan Swift.\n[4] The Cathedral of St. Patrick (commonly called St. Patrick's Cathedral) is a decorated Neo-Gothic-style Roman Catholic cathedral church in the United States and a prominent landmark of New York City."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

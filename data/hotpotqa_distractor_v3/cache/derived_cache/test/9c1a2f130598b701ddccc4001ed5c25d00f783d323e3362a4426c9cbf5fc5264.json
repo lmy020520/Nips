@@ -1,0 +1,39 @@
+{
+  "should_derive": true,
+  "reason": "The question asks about a river near Eilean Tioram, but current evidence lacks direct mention of Eilean Tioram or a river. Deriving bridge notes can help organize evidence by linking tidal islands and lochs to potential rivers, and verification notes can clarify target types to focus on rivers, aiding in answer-facing organization and target type disambiguation as required in repair_after_false_stop mode.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Eilean Shona is a tidal island in Loch Moidart, which may be near other tidal islands like Eilean Tioram.",
+      "source_unit_ids": [
+        "5ab678f455429954757d32d3::Eilean Shona::0"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "bridge_note",
+      "text": "Loch Shiel is a freshwater loch near Fort William, and rivers often flow from or into such lochs.",
+      "source_unit_ids": [
+        "5ab678f455429954757d32d3::Loch Shiel::0"
+      ],
+      "coarse_priority": 3
+    },
+    {
+      "type": "verification_note",
+      "text": "The question specifically asks for a river, so evidence should focus on river names and locations.",
+      "source_unit_ids": [
+        "5ab678f455429954757d32d3::Loch Shiel::0",
+        "5ab678f455429954757d32d3::Eilean Shona::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "Castle Tioram is located west of Acharacle, suggesting Eilean Tioram might be in a similar area with nearby rivers.",
+      "source_unit_ids": [
+        "5ab678f455429954757d32d3::Castle Tioram::1"
+      ],
+      "coarse_priority": 4
+    }
+  ]
+}

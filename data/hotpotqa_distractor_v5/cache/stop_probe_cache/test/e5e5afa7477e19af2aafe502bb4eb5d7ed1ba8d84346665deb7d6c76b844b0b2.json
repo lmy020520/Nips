@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Leonarda Cianciulli",
+  "pred_answer": "Leonarda Cianciulli",
+  "normalized_gold": "leonarda cianciulli",
+  "normalized_pred": "leonarda cianciulli",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c7ac2554299653c1aa08e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c7ac2554299653c1aa08e::Black Journal::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c7ac2554299653c1aa08e::Bible John::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c7ac2554299653c1aa08e::Leonarda Cianciulli::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8c7ac2554299653c1aa08e::Mary Ann Cotton::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c7ac2554299653c1aa08e::Black Journal",
+        "5a8c7ac2554299653c1aa08e::Leonarda Cianciulli"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c7ac2554299653c1aa08e::Black Journal::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c7ac2554299653c1aa08e::Bible John::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c7ac2554299653c1aa08e::Leonarda Cianciulli::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8c7ac2554299653c1aa08e::Mary Ann Cotton::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c7ac2554299653c1aa08e::Mary Ann Cotton::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is likely that she murdered three of her four husbands, apparently in order to collect on their insurance policies, and many others.\n[2] Better known as the \"Soap-Maker of Correggio\" (Italian: \"la Saponificatrice di Correggio\"), she murdered three women in Correggio between 1939 and 1940, and turned their bodies into soap and teacakes.\n[3] Bible John is the nickname of a serial killer who is believed to have murdered three young women after meeting them at the Barrowland Ballroom in Glasgow, Scotland, between 1968 and 1969.\n[4] It is based on the real life events of Leonarda Cianciulli, the Italian serial killer best known as the \"Soap-Maker of Correggio\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

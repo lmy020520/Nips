@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mughals",
+  "pred_answer": "Mughals",
+  "normalized_gold": "mughals",
+  "normalized_pred": "mughals",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac15ba55542994ab5c67cf4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac15ba55542994ab5c67cf4::Mughal architecture::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac15ba55542994ab5c67cf4::Mughal clothing::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac15ba55542994ab5c67cf4::Origins and architecture of the Taj Mahal::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac15ba55542994ab5c67cf4::Hoysala architecture::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac15ba55542994ab5c67cf4::Mughal architecture",
+        "5ac15ba55542994ab5c67cf4::Origins and architecture of the Taj Mahal"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac15ba55542994ab5c67cf4::Mughal architecture::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac15ba55542994ab5c67cf4::Mughal clothing::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac15ba55542994ab5c67cf4::Origins and architecture of the Taj Mahal::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac15ba55542994ab5c67cf4::Hoysala architecture::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac15ba55542994ab5c67cf4::Hoysala architecture::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Hoysala architecture is the building style developed under the rule of the Hoysala Empire between the 11th and 14th centuries, in the region known today as Karnataka, a state of India.\n[2] The 'Taj Mahal' represents the finest and most sophisticated example of Mughal architecture.\n[3] Mughal clothing refers to clothing developed by the Mughals in the 16th, 17th and 18th centuries throughout the extent of their empire in the Indian subcontinent.\n[4] Mughal architecture is an architectural style developed by the Mughals in the 16th, 17th and 18th centuries throughout the ever-changing extent of their empire in Medieval India."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

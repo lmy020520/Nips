@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Queens of the Stone Age",
+  "pred_answer": "Queens of the Stone Age",
+  "normalized_gold": "queens of the stone age",
+  "normalized_pred": "queens of the stone age",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89e910554299669944a609",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89e910554299669944a609::List of Queens of the Stone Age contributors::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89e910554299669944a609::Queens of the Stone Age::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89e910554299669944a609::U2::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a89e910554299669944a609::Queens of the Stone Age (album)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89e910554299669944a609::Queens of the Stone Age",
+        "5a89e910554299669944a609::U2"
+      ],
+      "k_br": 0.0,
+      "k_dis": 1.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89e910554299669944a609::List of Queens of the Stone Age contributors::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89e910554299669944a609::Queens of the Stone Age::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89e910554299669944a609::U2::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a89e910554299669944a609::Queens of the Stone Age (album)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a89e910554299669944a609::Queens of the Stone Age (album)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Queens of the Stone Age is the eponymous debut album by American rock band Queens of the Stone Age, released in September 1998 by Loosegroove Records.\n[2] U2 are an Irish rock band from Dublin formed in 1976.\n[3] Queens of the Stone Age (sometimes shortened to QotSA or Queens) is an American rock band formed in 1996 in Palm Desert, California.\n[4] Queens of the Stone Age (also known as QOTSA or simply Queens) are a rock band from Palm Desert, California, United States, formed in 1997."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

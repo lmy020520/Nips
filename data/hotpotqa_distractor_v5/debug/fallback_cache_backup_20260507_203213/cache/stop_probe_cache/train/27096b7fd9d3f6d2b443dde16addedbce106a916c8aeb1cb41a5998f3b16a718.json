@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Imperial German spies",
+  "pred_answer": "Imperial German spies",
+  "normalized_gold": "imperial german spies",
+  "normalized_pred": "imperial german spies",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab92f25554299753720f77c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab92f25554299753720f77c::1915 Vanceboro international bridge bombing::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab92f25554299753720f77c::Vanceboro - St. Croix Border Crossing::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab92f25554299753720f77c::Orient – Fosterville Border Crossing::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab92f25554299753720f77c::1915 Vanceboro international bridge bombing",
+        "5ab92f25554299753720f77c::Vanceboro - St. Croix Border Crossing"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab92f25554299753720f77c::1915 Vanceboro international bridge bombing::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab92f25554299753720f77c::Vanceboro - St. Croix Border Crossing::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab92f25554299753720f77c::Orient – Fosterville Border Crossing::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab92f25554299753720f77c::Orient – Fosterville Border Crossing::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] This part of the border is at the St. Croix River, which is little more than a stream here.\n[2] A few hundred yards south of this crossing is also an international rail bridge which is notable for the 1915 Vanceboro international bridge bombing incident where a German spy attempted to destroy the bridge.\n[3] The 1915 Vanceboro international bridge bombing was an attempt to destroy the Saint Croix-Vanceboro Railway Bridge on February 2, 1915, by Imperial German spies."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

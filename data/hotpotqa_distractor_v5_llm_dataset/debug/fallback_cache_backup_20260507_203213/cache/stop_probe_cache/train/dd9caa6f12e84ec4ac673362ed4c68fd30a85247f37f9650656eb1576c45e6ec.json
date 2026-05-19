@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Dauphin County.",
+  "pred_answer": "Dauphin County.",
+  "normalized_gold": "dauphin county",
+  "normalized_pred": "dauphin county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab298f9554299449642c921",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab298f9554299449642c921::WSYY-FM::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab298f9554299449642c921::WHP (AM)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab298f9554299449642c921::Harrisburg, Pennsylvania::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab298f9554299449642c921::WSTU::11"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab298f9554299449642c921::WHP (AM)",
+        "5ab298f9554299449642c921::Harrisburg, Pennsylvania"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab298f9554299449642c921::WSYY-FM::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab298f9554299449642c921::WHP (AM)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab298f9554299449642c921::Harrisburg, Pennsylvania::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab298f9554299449642c921::WSTU::11",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab298f9554299449642c921::WSTU::11",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] From the earliest days the Martin County community viewed the station as more of a public utility than a privately owned radio station.\n[2] Harrisburg (Pennsylvania German: \"Harrisbarrig\") is the capital city of the Commonwealth of Pennsylvania in the United States, and the county seat of Dauphin County.\n[3] WHP (580 AM, \"NewsRadio WHP 580\") is a commercial AM radio station licensed to serve Harrisburg, Pennsylvania.\n[4] Licensed to Millinocket, Maine, United States, the station's broadcast signal serves the Central Penobscot County, Eastern Piscataquis County, and Southern Aroostook County Maine areas, and the station is licensed to serve the town of Millinocket, Maine, the very town where its studios/offices and tower site are located."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

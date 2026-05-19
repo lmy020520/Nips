@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "musical",
+  "pred_answer": "musical",
+  "normalized_gold": "musical",
+  "normalized_pred": "musical",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab67b5b55429953192ad2d3",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab67b5b55429953192ad2d3::Howard Cunningham (Happy Days character)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab67b5b55429953192ad2d3::19th Tony Awards::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab67b5b55429953192ad2d3::Tom Bosley::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab67b5b55429953192ad2d3::Fiorello!::3"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab67b5b55429953192ad2d3::Private Sessions (film)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab67b5b55429953192ad2d3::Tom Bosley",
+        "5ab67b5b55429953192ad2d3::Fiorello!"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab67b5b55429953192ad2d3::Howard Cunningham (Happy Days character)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab67b5b55429953192ad2d3::19th Tony Awards::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab67b5b55429953192ad2d3::Tom Bosley::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab67b5b55429953192ad2d3::Fiorello!::3",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab67b5b55429953192ad2d3::Private Sessions (film)::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab67b5b55429953192ad2d3::Private Sessions (film)::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Starring Mike Farrell as a New York therapist, and Kelly McGillis & Tom Bosley as two of his patients with different problems, the film was originally a television pilot, that failed to impress the audience and was never picked up.\n[2] It is one of only nine musicals to win the Pulitzer Prize for Drama.\n[3] He originated the title role of the Pulitzer Prize–winning Broadway musical \"Fiorello!\n[4] The Masters of Ceremonies were Tom Bosley, Jose Ferrer, and Van Johnson."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "zither",
+  "pred_answer": "zither",
+  "normalized_gold": "zither",
+  "normalized_pred": "zither",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc1c43554299438c868d60",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc1c43554299438c868d60::Hearts of the Dulcimer::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc1c43554299438c868d60::Hammer-on::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc1c43554299438c868d60::Appalachian dulcimer::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc1c43554299438c868d60::Octave mandolin::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc1c43554299438c868d60::Hearts of the Dulcimer",
+        "5adc1c43554299438c868d60::Appalachian dulcimer"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc1c43554299438c868d60::Hearts of the Dulcimer::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc1c43554299438c868d60::Hammer-on::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc1c43554299438c868d60::Appalachian dulcimer::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc1c43554299438c868d60::Octave mandolin::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc1c43554299438c868d60::Octave mandolin::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The octave mandolin is a fretted string instrument with four pairs of strings tuned in fifths, G, D, A, E (low to high), an octave below a mandolin.\n[2] The Appalachian dulcimer (many variant names; see below) is a fretted string instrument of the zither family, typically with three or four strings, originally played in the Appalachian region of the United States.\n[3] A hammer-on is a playing technique performed on a stringed instrument (especially on a fretted string instrument, such as a guitar) by sharply bringing a fretting-hand finger down on the fingerboard behind a fret, causing a note to sound.\n[4] Hearts of the Dulcimer is a 2013 independent documentary film focusing on the Appalachian dulcimer, and particularly its role in the 1960s California counterculture, through interviews with builders and players of this musical instrument."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

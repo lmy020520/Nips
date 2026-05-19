@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mikael Salomon",
+  "pred_answer": "Mikael Salomon",
+  "normalized_gold": "mikael salomon",
+  "normalized_pred": "mikael salomon",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe3a0955429965af743e9f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe3a0955429965af743e9f::Hard Rain (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe3a0955429965af743e9f::Mark Wahlberg::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe3a0955429965af743e9f::Graham Yost::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe3a0955429965af743e9f::Broken Arrow (1996 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe3a0955429965af743e9f::Hard Rain (film)",
+        "5abe3a0955429965af743e9f::Graham Yost"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe3a0955429965af743e9f::Hard Rain (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe3a0955429965af743e9f::Mark Wahlberg::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe3a0955429965af743e9f::Graham Yost::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe3a0955429965af743e9f::Broken Arrow (1996 film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe3a0955429965af743e9f::Broken Arrow (1996 film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Broken Arrow is a 1996 American action film directed by John Woo, written by Graham Yost, and starring John Travolta and Christian Slater.\n[2] Graham John Yost (born September 5, 1959) is a Canadian film and television screenwriter.\n[3] In the 2010s, he starred in the action comedy \"The Other Guys\" alongside Will Ferrell, the biographical sports drama \"The Fighter\" (for which he earned an Academy Award nomination as a producer for Best Picture), the comedy \"Ted\", the war film \"Lone Survivor\", the crime comedy \"Pain & Gain\", the science fiction action film \"\" and the sequel \"\", the comedy \"Daddy's Home\", the disaster film \"Deepwat\n[4] Hard Rain is a 1998 action-thriller disaster film produced by Mark Gordon, written by Graham Yost, and directed by former cinematographer-turned director Mikael Salomon."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

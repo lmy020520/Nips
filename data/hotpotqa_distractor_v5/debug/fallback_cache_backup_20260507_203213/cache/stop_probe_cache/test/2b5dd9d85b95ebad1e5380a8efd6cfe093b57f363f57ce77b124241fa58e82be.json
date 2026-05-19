@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Gerard \"Gerry\" Adams",
+  "pred_answer": "Gerard \"Gerry\" Adams",
+  "normalized_gold": "gerard gerry adams",
+  "normalized_pred": "gerard gerry adams",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf34d35542993a75d26425",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf34d35542993a75d26425::Hume–Adams dialogue::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf34d35542993a75d26425::Gerry Adams::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf34d35542993a75d26425::History of Sinn Féin::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf34d35542993a75d26425::Hume–Adams dialogue",
+        "5adf34d35542993a75d26425::Gerry Adams"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf34d35542993a75d26425::Hume–Adams dialogue::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf34d35542993a75d26425::Gerry Adams::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf34d35542993a75d26425::History of Sinn Féin::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf34d35542993a75d26425::History of Sinn Féin::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Sinn Féin (\"\"We Ourselves\"\", often mistranslated as \"Ourselves Alone\") is the name of an Irish political party founded in 1905 by Arthur Griffith.\n[2] Gerard \"Gerry\" Adams (Irish: \"Gearóid Mac Ádhaimh\" ; born 6 October 1948) is an Irish republican politician who is the president of the Sinn Féin political party and a Teachta Dála (TD; a member of the Irish parliament) for Louth since the 2011 general election.\n[3] The Hume–Adams dialogue was a series of talks between then Social Democratic and Labour Party leader John Hume and Sinn Féin leader Gerry Adams during the Northern Ireland peace process."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

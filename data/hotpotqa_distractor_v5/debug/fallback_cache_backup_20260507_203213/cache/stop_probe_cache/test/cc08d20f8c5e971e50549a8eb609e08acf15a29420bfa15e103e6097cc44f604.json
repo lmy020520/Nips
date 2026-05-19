@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Brad Silberling",
+  "pred_answer": "Brad Silberling",
+  "normalized_gold": "brad silberling",
+  "normalized_pred": "brad silberling",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe239355429976d4830a7d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe239355429976d4830a7d::Jamie Harris (actor)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe239355429976d4830a7d::Usman Ally::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe239355429976d4830a7d::Lemony Snicket's A Series of Unfortunate Events::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe239355429976d4830a7d::Man Against the Mob::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe239355429976d4830a7d::Jamie Harris (actor)",
+        "5abe239355429976d4830a7d::Lemony Snicket's A Series of Unfortunate Events"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe239355429976d4830a7d::Jamie Harris (actor)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe239355429976d4830a7d::Usman Ally::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe239355429976d4830a7d::Lemony Snicket's A Series of Unfortunate Events::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe239355429976d4830a7d::Man Against the Mob::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe239355429976d4830a7d::Man Against the Mob::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Man Against the Mob (also known as \"Trouble in the City of Angels\") is a 1988 NBC television movie directed by Steven Hilliard Stern, starring George Peppard, Kathryn Harrold and Max Gail.\n[2] Lemony Snicket's A Series of Unfortunate Events is a 2004 American dark comedy film directed by Brad Silberling.\n[3] He is known for his on screen roles such as Vincent on \"Agents of S.H.I.E.L.D.\" and The hook-handed man in \"A Series of Unfortunate Events\".\n[4] He is best known for his role as The Hook-Handed Man in \"Lemony Snicket's A Series of Unfortunate Events\", Rodney in \"Rise of the Planet of the Apes\" and Gordon in Marvel's \"Agents of S.H.I.E.L.D.\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

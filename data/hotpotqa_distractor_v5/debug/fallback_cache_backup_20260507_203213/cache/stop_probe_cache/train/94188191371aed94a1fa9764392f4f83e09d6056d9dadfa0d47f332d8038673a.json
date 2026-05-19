@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "London",
+  "pred_answer": "London",
+  "normalized_gold": "london",
+  "normalized_pred": "london",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab96ffe5542996be20204ed",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab96ffe5542996be20204ed::Royal Pudding::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab96ffe5542996be20204ed::Wedding of Prince William and Catherine Middleton::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab96ffe5542996be20204ed::Butters' Very Own Episode::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab96ffe5542996be20204ed::Royal Pudding",
+        "5ab96ffe5542996be20204ed::Wedding of Prince William and Catherine Middleton"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab96ffe5542996be20204ed::Royal Pudding::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab96ffe5542996be20204ed::Wedding of Prince William and Catherine Middleton::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab96ffe5542996be20204ed::Butters' Very Own Episode::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab96ffe5542996be20204ed::Butters' Very Own Episode::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] In the episode, Butters survives a murder attempt by his own mother after discovering his father's homosexual dalliances and must travel back to South Park in time for his parents' wedding anniversary at Bennigan's.\n[2] The wedding of Prince William, Duke of Cambridge, and Catherine Middleton took place on 29 April 2011 at Westminster Abbey in London, United Kingdom.\n[3] \"Royal Pudding\" is the third episode of the fifteenth season of the American animated television series \"South Park\", and the 212th episode of the series overall."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

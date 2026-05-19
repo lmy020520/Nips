@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "USS Portland",
+  "pred_answer": "USS Portland",
+  "normalized_gold": "uss portland",
+  "normalized_pred": "uss portland",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab8accd55429916710eb0aa",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab8accd55429916710eb0aa::USS Portland (CA-33)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab8accd55429916710eb0aa::AMC-6::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab8accd55429916710eb0aa::Eastern Promenade::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab8accd55429916710eb0aa::Eastern Promenade::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab8accd55429916710eb0aa::USS Portland (CA-33)",
+        "5ab8accd55429916710eb0aa::Eastern Promenade"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab8accd55429916710eb0aa::USS Portland (CA-33)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab8accd55429916710eb0aa::AMC-6::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab8accd55429916710eb0aa::Eastern Promenade::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab8accd55429916710eb0aa::Eastern Promenade::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab8accd55429916710eb0aa::Eastern Promenade::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Promenade is home to many historical sites, including a mass grave and the mast of the \"USS Portland\"\n[2] The Eastern Promenade (Eastern Prom) is a historic promenade, 68.2 acre public park and recreation area in Portland, Maine.\n[3] Located in a geostationary orbit parallel to the eastern United States coastline, AMC-6 provides service to commercial and government customers, and is used as an Internet platform due to its wide coverage, scale and redundancy.\n[4] Launched in 1932, she saw a number of training and goodwill cruises in the interwar period."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

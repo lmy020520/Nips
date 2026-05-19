@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "A Man Escaped",
+  "pred_answer": "A Man Escaped",
+  "normalized_gold": "a man escaped",
+  "normalized_pred": "a man escaped",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf9336554299025d62a2ca",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf9336554299025d62a2ca::Diary of a Country Priest::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf9336554299025d62a2ca::A Man Escaped::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf9336554299025d62a2ca::François Leterrier::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf9336554299025d62a2ca::Pickpocket (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf9336554299025d62a2ca::A Man Escaped",
+        "5adf9336554299025d62a2ca::François Leterrier"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf9336554299025d62a2ca::Diary of a Country Priest::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf9336554299025d62a2ca::A Man Escaped::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf9336554299025d62a2ca::François Leterrier::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf9336554299025d62a2ca::Pickpocket (film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf9336554299025d62a2ca::Pickpocket (film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Pickpocket is a 1959 French film directed by Robert Bresson, generally believed to have been inspired by the novel \"Crime and Punishment\" by Fyodor Dostoevsky.\n[2] He entered the film industry when he was cast in Robert Bresson's film \"A Man Escaped\".\n[3] It is based on the memoirs of André Devigny, a member of the French Resistance held in Montluc prison by the occupying Germans during World War II.\n[4] Diary of a Country Priest (French: \"Journal d'un curé de campagne\" ) is a 1951 French film written and directed by Robert Bresson, and starring Claude Laydu."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

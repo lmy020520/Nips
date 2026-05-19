@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2170",
+  "pred_answer": "2170",
+  "normalized_gold": "2170",
+  "normalized_pred": "2170",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae67c2955429908198fa5ec",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae67c2955429908198fa5ec::William Sublette::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae67c2955429908198fa5ec::Oregon Trail::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae67c2955429908198fa5ec::Landsat program::8"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae67c2955429908198fa5ec::William Sublette",
+        "5ae67c2955429908198fa5ec::Oregon Trail"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae67c2955429908198fa5ec::William Sublette::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae67c2955429908198fa5ec::Oregon Trail::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae67c2955429908198fa5ec::Landsat program::8",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae67c2955429908198fa5ec::Landsat program::8",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Each Landsat scene is about 115 miles long and 115 miles wide (or 100 nautical miles long and 100 nautical miles wide, or 185 kilometers long and 185 kilometers wide).\n[2] The Oregon Trail is a 2170 mi historic east–west, large-wheeled wagon route and emigrant trail in the United States that connected the Missouri River to valleys in Oregon.\n[3] William Lewis Sublette also spelled Sublett (September 21 1798 - July 23 1845), was a pioneer, frontiersman, trapper, fur trader, explorer, and mountain man, who, with his four brothers, after 1823, became an agent of the Rocky Mountain Fur Company and later, one of its co-owners, exploiting the riches of the Oregon Country, which helped settle and improve the best routes, along the Oregon Trail."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

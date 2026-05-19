@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "\"The Carol Burnett Show\"",
+  "pred_answer": "The Carol Burnett Show",
+  "normalized_gold": "the carol burnett show",
+  "normalized_pred": "the carol burnett show",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e3ff05542991319bc944e",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e3ff05542991319bc944e::Harvey Korman::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e3ff05542991319bc944e::Pamela Norris::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e3ff05542991319bc944e::derived::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7e3ff05542991319bc944e::Leo &amp; Liz in Beverly Hills::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7e3ff05542991319bc944e::Syd Saylor::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e3ff05542991319bc944e::Harvey Korman",
+        "5a7e3ff05542991319bc944e::Leo &amp; Liz in Beverly Hills"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e3ff05542991319bc944e::Harvey Korman::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e3ff05542991319bc944e::Pamela Norris::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e3ff05542991319bc944e::Leo &amp; Liz in Beverly Hills::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7e3ff05542991319bc944e::Syd Saylor::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a7e3ff05542991319bc944e::derived::1",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a7e3ff05542991319bc944e::Syd Saylor::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] His big break was being a featured performer on CBS' \"The Danny Kaye Show\", but he is best remembered for his performances on the sketch comedy series \"The Carol Burnett Show\" and in several films by Mel Brooks.\n[2] Syd Saylor (born Leo Sailor; March 24, 1895 – December 21, 1962) was an American comedic actor and movie cowboy sidekick who appeared in 395 films and TV series between 1926 and 1962.\n[3] Leo & Liz in Beverly Hills is an American sitcom starring Harvey Korman, Valerie Perrine, Sue Ball, and their monkey Bernard that was broadcast from April 25 to June 6, 1986 on Friday nights at 8:30 p.m ET on CBS.\n[4] She is best known for her work on the NBC sketch comedy series \"Saturday Night Live\" (1980–84), and for co-writing the screenplay of the 1989 film \"Troop Beverly Hills\".\n\nNotes:\n[bridge] Harvey Korman is best remembered for his performances on the sketch comedy series The Carol Burnett Show."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

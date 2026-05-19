@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "six",
+  "pred_answer": "six",
+  "normalized_gold": "six",
+  "normalized_pred": "six",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7f5e235542994857a76707",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7f5e235542994857a76707::A Warrior's Call::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7f5e235542994857a76707::Toshiki Kadomatsu::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7f5e235542994857a76707::Volbeat::4"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7f5e235542994857a76707::6 Tre G::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7f5e235542994857a76707::A Warrior's Call",
+        "5a7f5e235542994857a76707::Volbeat"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7f5e235542994857a76707::A Warrior's Call::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7f5e235542994857a76707::Toshiki Kadomatsu::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7f5e235542994857a76707::Volbeat::4",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7f5e235542994857a76707::6 Tre G::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7f5e235542994857a76707::6 Tre G::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] 6 Tre G has released many studio albums Don Mazerati, Boss Muzik, El Trapo and many more.\n[2] The band is signed to Dutch label Mascot Records and has released six studio albums and one DVD.\n[3] He has released many studio albums, as well as several instrumental and live albums.\n[4] \"A Warrior's Call\" is a song by Danish heavy metal band Volbeat and the ninth track from their fourth studio album, \"Beyond Hell/Above Heaven\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

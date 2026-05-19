@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Jeff Cunningham",
+  "pred_answer": "Jeff Cunningham",
+  "normalized_gold": "jeff cunningham",
+  "normalized_pred": "jeff cunningham",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a76184955429976ec32bd07",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a76184955429976ec32bd07::Landon Donovan::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a76184955429976ec32bd07::Kristine Lilly::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a76184955429976ec32bd07::Jeff Cunningham::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a76184955429976ec32bd07::Ross Ongaro::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a76184955429976ec32bd07::Landon Donovan",
+        "5a76184955429976ec32bd07::Jeff Cunningham"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a76184955429976ec32bd07::Landon Donovan::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a76184955429976ec32bd07::Kristine Lilly::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a76184955429976ec32bd07::Jeff Cunningham::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a76184955429976ec32bd07::Ross Ongaro::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a76184955429976ec32bd07::Ross Ongaro::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Ross Ongaro (born September 9, 1959, in Edmonton, Alberta) is a retired Canadian soccer player who earned one cap each with the Canada U-20 men's national soccer team and Canadian Olympic soccer team.\n[2] Jeff Cunningham (born August 21, 1976) is an American soccer player.\n[3] She was a member of the United States women's national soccer team for 23 years and is the most capped soccer player in the history of the sport (men's or women's) gaining her 354th and final cap against Mexico in a World Cup qualifier in November 2010.\n[4] He holds numerous individual records in Major League Soccer (MLS) and for the United States national team and is often regarded as the greatest American men's soccer player of all-time."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

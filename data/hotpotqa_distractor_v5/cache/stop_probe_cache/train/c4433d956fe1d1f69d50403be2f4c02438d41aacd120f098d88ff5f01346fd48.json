@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Deron Williams",
+  "pred_answer": "Deron Williams",
+  "normalized_gold": "deron williams",
+  "normalized_pred": "deron williams",
+  "exact_match": true,
+  "context_exact_match": false,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77c0205542997042120b16",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77c0205542997042120b16::Todd Fuller::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77c0205542997042120b16::Cavaliers–Warriors rivalry::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77c0205542997042120b16::Deron Williams::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77c0205542997042120b16::Derrick Favors::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77c0205542997042120b16::Cavaliers–Warriors rivalry",
+        "5a77c0205542997042120b16::Deron Williams"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77c0205542997042120b16::Todd Fuller::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77c0205542997042120b16::Cavaliers–Warriors rivalry::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77c0205542997042120b16::Deron Williams::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77c0205542997042120b16::Derrick Favors::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77c0205542997042120b16::Derrick Favors::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Favors played college basketball for Georgia Tech for one season before being drafted third overall by the New Jersey Nets in the 2010 NBA draft.\n[2] He played college basketball for the University of Illinois before being drafted third overall in the 2005 NBA draft by the Utah Jazz.\n[3] The Cavaliers–Warriors rivalry is a National Basketball Association (NBA) rivalry between the Cleveland Cavaliers and the Golden State Warriors.\n[4] Todd Douglas Fuller (born July 25, 1974) is a retired American professional basketball player who was selected by the Golden State Warriors with the 11th overall pick of the 1996 NBA Draft."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

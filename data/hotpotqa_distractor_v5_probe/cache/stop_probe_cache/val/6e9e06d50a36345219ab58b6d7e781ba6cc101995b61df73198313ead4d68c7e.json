@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "II",
+  "pred_answer": "II",
+  "normalized_gold": "ii",
+  "normalized_pred": "ii",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae061705542993d6555eb26",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae061705542993d6555eb26::Meet the People::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae061705542993d6555eb26::Camelford water pollution incident::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae061705542993d6555eb26::Rags Ragland::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae061705542993d6555eb26::The Society of Floristry Limited::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae061705542993d6555eb26::Meet the People",
+        "5ae061705542993d6555eb26::Rags Ragland"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae061705542993d6555eb26::Meet the People::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae061705542993d6555eb26::Camelford water pollution incident::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae061705542993d6555eb26::Rags Ragland::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae061705542993d6555eb26::The Society of Floristry Limited::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae061705542993d6555eb26::The Society of Floristry Limited::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Society of Floristry Limited was formed in 1951 to meet the growing need for professional recognition for florists. Its first major task, after forming a Council of directors composed of leading florists in the industry, was to write, run and mark examinations in floristry skills and theory, which it did successfully for almost 49 years.\n[2] Ragland made his show business reputation in burlesque, where he was one of the house comics for the famed Minsky burlesque shows.\n[3] Inquests on people who died many years later found very high levels of aluminium in the brain.\n[4] Meet the People (1944) is a Metro-Goldwyn-Mayer musical comedy film made during World War II, and starring Lucille Ball and Dick Powell and featuring Virginia O'Brien, Bert Lahr, Rags Ragland and June Allyson."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

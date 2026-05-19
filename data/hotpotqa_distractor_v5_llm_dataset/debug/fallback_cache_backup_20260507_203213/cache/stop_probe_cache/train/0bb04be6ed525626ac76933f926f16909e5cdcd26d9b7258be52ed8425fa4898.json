@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Austria",
+  "pred_answer": "Austria",
+  "normalized_gold": "austria",
+  "normalized_pred": "austria",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a864ac85542991e77181601",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a864ac85542991e77181601::Graz University of Technology::6"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a864ac85542991e77181601::Dieter Schmalstieg::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a864ac85542991e77181601::University of Graz::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a864ac85542991e77181601::Graz University of Technology::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a864ac85542991e77181601::Graz University of Technology",
+        "5a864ac85542991e77181601::University of Graz"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a864ac85542991e77181601::Graz University of Technology::6",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a864ac85542991e77181601::Dieter Schmalstieg::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a864ac85542991e77181601::University of Graz::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a864ac85542991e77181601::Graz University of Technology::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a864ac85542991e77181601::Graz University of Technology::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Graz University of Technology (German: \"Technische Universität Graz\" , short \"TU Graz\") is one of five universities in Styria, Austria.\n[2] The University of Graz (German: \"Karl-Franzens-Universität Graz\"), located in Graz, Austria, is the largest and oldest university in Styria, as well as the second-largest and second-oldest university in Austria.\n[3] Dieter Schmalstieg is an Austrian computer scientist, full professor, and head of the Institute of Computer Graphics and Vision at Graz University of Technology.\n[4] Science study programmes are offered in the framework of NAWI Graz together with the University of Graz."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Francis Gary Powers",
+  "pred_answer": "Francis Gary Powers",
+  "normalized_gold": "francis gary powers",
+  "normalized_pred": "francis gary powers",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab428395542991751b4d6b0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab428395542991751b4d6b0::1960 U-2 incident::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab428395542991751b4d6b0::David Ferrie::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab428395542991751b4d6b0::Francis Gary Powers::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab428395542991751b4d6b0::1960 U-2 incident::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab428395542991751b4d6b0::1960 U-2 incident",
+        "5ab428395542991751b4d6b0::Francis Gary Powers"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab428395542991751b4d6b0::1960 U-2 incident::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab428395542991751b4d6b0::David Ferrie::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab428395542991751b4d6b0::Francis Gary Powers::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab428395542991751b4d6b0::1960 U-2 incident::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab428395542991751b4d6b0::1960 U-2 incident::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The aircraft, flown by Central Intelligence Agency pilot Francis Gary Powers was performing photographic aerial reconnaissance when it was hit by an S-75 Dvina (SA-2 Guideline) surface-to-air missile and crashed near Sverdlovsk.\n[2] Francis Gary Powers (August 17, 1929 – August 1, 1977) – often referred to as simply Gary Powers – was an American pilot whose Central Intelligence Agency (CIA) U-2 spy plane was shot down while flying a reconnaissance mission in Soviet Union airspace, causing the 1960 U-2 incident.\n[3] David William Ferrie (March 28, 1918 – February 22, 1967) was an American pilot who was alleged by New Orleans District Attorney Jim Garrison to have been involved in a conspiracy to assassinate President John F. Kennedy.\n[4] The 1960 U-2 incident occurred during the Cold War on 1 May 1960, during the presidency of Dwight D. Eisenhower and the premiership of Nikita Khrushchev, when a United States U-2 spy plane was shot down while in Soviet airspace."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

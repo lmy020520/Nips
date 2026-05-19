@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Pillows",
+  "pred_answer": "The Pillows",
+  "normalized_gold": "the pillows",
+  "normalized_pred": "the pillows",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3f4c85542995dadf24270",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3f4c85542995dadf24270::Prognostics::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3f4c85542995dadf24270::Baseline (medicine)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3f4c85542995dadf24270::The Pillows::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae3f4c85542995dadf24270::Failure (band)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae3f4c85542995dadf24270::Baseline (medicine)::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3f4c85542995dadf24270::The Pillows",
+        "5ae3f4c85542995dadf24270::Failure (band)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3f4c85542995dadf24270::Prognostics::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3f4c85542995dadf24270::Baseline (medicine)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3f4c85542995dadf24270::The Pillows::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae3f4c85542995dadf24270::Failure (band)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae3f4c85542995dadf24270::Baseline (medicine)::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3f4c85542995dadf24270::Baseline (medicine)::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] For that person with kidney failure, absolute normal no longer applies because he will never again be able to obtain an absolutely normal creatinine level (0.5-1.2 mg/dL) with kidneys that no longer function properly.\n[2] Failure is an American alternative rock band from Los Angeles that was active from 1990 to 1997 and from 2014 onwards.\n[3] The Pillows (ザ・ピロウズ , stylized as the pillows) is a Japanese alternative rock band formed in 1989.\n[4] A baseline in medicine is information found at the beginning of a study or other initial known value which is used for comparison with later data."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

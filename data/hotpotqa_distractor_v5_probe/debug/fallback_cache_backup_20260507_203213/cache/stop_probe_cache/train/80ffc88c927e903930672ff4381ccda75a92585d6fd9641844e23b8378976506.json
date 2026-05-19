@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "University of Illinois System",
+  "pred_answer": "University of Illinois System",
+  "normalized_gold": "university of illinois system",
+  "normalized_pred": "university of illinois system",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c9ba05542996e8ac88aec",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c9ba05542996e8ac88aec::Edward McCaffery::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c9ba05542996e8ac88aec::Roy Dow::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c9ba05542996e8ac88aec::University of Illinois system::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8c9ba05542996e8ac88aec::California Institute of Technology::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8c9ba05542996e8ac88aec::University of Illinois Press::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c9ba05542996e8ac88aec::University of Illinois system",
+        "5a8c9ba05542996e8ac88aec::California Institute of Technology"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c9ba05542996e8ac88aec::Edward McCaffery::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c9ba05542996e8ac88aec::Roy Dow::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c9ba05542996e8ac88aec::University of Illinois system::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8c9ba05542996e8ac88aec::California Institute of Technology::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8c9ba05542996e8ac88aec::University of Illinois Press::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c9ba05542996e8ac88aec::University of Illinois Press::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The University of Illinois Press (UIP) is a major American university press and is part of the University of Illinois system.\n[2] The California Institute of Technology (abbreviated Caltech) is a private doctorate-granting university located in Pasadena, California, United States.\n[3] The University of Illinois System of universities comprises three universities in the U.S. state of Illinois: Urbana–Champaign, Chicago, and Springfield.\n[4] Dow was also the head coach of men's basketball at the California Institute of Technology."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

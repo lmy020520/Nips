@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "2014 Macau Open Grand Prix Gold",
+  "pred_answer": "2014 Macau Open Grand Prix Gold",
+  "normalized_gold": "2014 macau open grand prix gold",
+  "normalized_pred": "2014 macau open grand prix gold",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a82826655429966c78a6a39",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a82826655429966c78a6a39::P. V. Sindhu::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a82826655429966c78a6a39::Kim Hyo-min::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a82826655429966c78a6a39::Kim Hyo-min::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a82826655429966c78a6a39::P. V. Sindhu",
+        "5a82826655429966c78a6a39::Kim Hyo-min"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a82826655429966c78a6a39::P. V. Sindhu::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a82826655429966c78a6a39::Kim Hyo-min::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a82826655429966c78a6a39::Kim Hyo-min::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a82826655429966c78a6a39::Kim Hyo-min::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] In 2014, Kim beat Sun Yu to reach the final of the 2014 Macau Open Grand Prix Gold, and she became the runner-up after defeated by P. V. Sindhu in the final round.\n[2] Kim Hyo-min (born 8 December 1995 in Ulsan) is a South Korean female badminton player.\n[3] She was also a silver medalist at the 2017 BWF World Championships and, in 2017, became first Indian ever to win Korea Open Super Series."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

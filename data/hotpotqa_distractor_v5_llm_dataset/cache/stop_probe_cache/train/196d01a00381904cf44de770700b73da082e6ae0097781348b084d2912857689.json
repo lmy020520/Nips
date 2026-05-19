@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1998",
+  "pred_answer": "1998",
+  "normalized_gold": "1998",
+  "normalized_pred": "1998",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1437a55429920d523435b",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1437a55429920d523435b::The Prince of Egypt::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1437a55429920d523435b::Sally Dworsky::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1437a55429920d523435b::The Prince of Egypt::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1437a55429920d523435b::The Prince of Egypt",
+        "5ae1437a55429920d523435b::Sally Dworsky"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1437a55429920d523435b::The Prince of Egypt::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1437a55429920d523435b::Sally Dworsky::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1437a55429920d523435b::The Prince of Egypt::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1437a55429920d523435b::The Prince of Egypt::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Prince of Egypt is a 1998 American animated epic musical film and the first traditional animated film produced and released by DreamWorks.\n[2] She has been an important voice actress and singer in animated films such as \"The Lion King\", \"The Prince of Egypt\", and \"Shrek\" in addition to releasing her own albums.\n[3] The film is an adaptation of the Book of Exodus and follows the life of Moses from being a prince of Egypt to his ultimate destiny to lead the children of Israel out of Egypt."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

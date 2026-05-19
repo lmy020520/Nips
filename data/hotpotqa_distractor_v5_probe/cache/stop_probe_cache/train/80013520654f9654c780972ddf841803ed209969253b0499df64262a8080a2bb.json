@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "8th to late 11th centuries",
+  "pred_answer": "8th to late 11th centuries",
+  "normalized_gold": "8th to late 11th centuries",
+  "normalized_pred": "8th to late 11th centuries",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab5f63d554299110f219999",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab5f63d554299110f219999::Traditional fishing boat::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab5f63d554299110f219999::Thayer IV::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab5f63d554299110f219999::Vikings::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab5f63d554299110f219999::Treenailed boat::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab5f63d554299110f219999::Thayer IV::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab5f63d554299110f219999::Vikings",
+        "5ab5f63d554299110f219999::Treenailed boat"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab5f63d554299110f219999::Traditional fishing boat::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab5f63d554299110f219999::Thayer IV::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab5f63d554299110f219999::Vikings::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab5f63d554299110f219999::Treenailed boat::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab5f63d554299110f219999::Thayer IV::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab5f63d554299110f219999::Thayer IV::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The other boat, also a Chris-Craft Sportsman (U22-1802), was sold in 1983 by the marine coordinator for the movie, Mr. Pat Curtin, as the boat which Henry Fonda and Katharine Hepburn used for their excursions on Golden Pond.\n[2] The treenailed boat is a boat model used in Northern Europe, usually associated with Vikings but should perhaps be ascribed to Pomeranian groups.\n[3] Vikings (Old English: \"wicing\"—\"pirate\", Danish and Bokmål: \"vikinger\" ; Swedish and Nynorsk: \"vikingar\" ; Icelandic: \"víkingar\" , from Old Norse \"víkingar \"), were Norse seafarers, mainly speaking the Old Norse language, who raided and traded from their Northern European homelands across wide areas of northern, central and eastern Europe, during the late 8th to late 11th centuries.\n[4] These were provided by Patrick Curtin of Eastern Classics, a boatyard in Laconia, New Hampshire, specializing in the restoration of mahogany speed boats."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

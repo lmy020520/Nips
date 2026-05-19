@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "9",
+  "pred_answer": "9",
+  "normalized_gold": "9",
+  "normalized_pred": "9",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2997d554299545a2cf9c9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2997d554299545a2cf9c9::2013 Walt Disney World Pro Soccer Classic::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2997d554299545a2cf9c9::2014 Walt Disney World Pro Soccer Classic::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2997d554299545a2cf9c9::ESPN Wide World of Sports Complex::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab2997d554299545a2cf9c9::ESPN Wide World of Sports Complex::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2997d554299545a2cf9c9::2013 Walt Disney World Pro Soccer Classic",
+        "5ab2997d554299545a2cf9c9::ESPN Wide World of Sports Complex"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2997d554299545a2cf9c9::2013 Walt Disney World Pro Soccer Classic::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2997d554299545a2cf9c9::2014 Walt Disney World Pro Soccer Classic::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2997d554299545a2cf9c9::ESPN Wide World of Sports Complex::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab2997d554299545a2cf9c9::ESPN Wide World of Sports Complex::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2997d554299545a2cf9c9::ESPN Wide World of Sports Complex::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The complex includes 9 venues and hosts numerous amateur and professional sporting events throughout the year.\n[2] The ESPN Wide World of Sports Complex is a 220 acre athletic complex located in the Walt Disney World Resort, in Bay Lake, Florida, near Orlando, Florida.\n[3] The 2014 Walt Disney World Pro Soccer Classic was the fifth edition of the Walt Disney World Pro Soccer Classic, a pre-season exhibition tournament held at the ESPN Wide World of Sports Complex at the Walt Disney World Resort in Lake Buena Vista, Florida.\n[4] The 2013 Walt Disney World Pro Soccer Classic was the fourth edition of the Walt Disney World Pro Soccer Classic, a pre-season exhibition tournament held at the ESPN Wide World of Sports Complex at the Walt Disney World Resort in Lake Buena Vista, Florida."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

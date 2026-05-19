@@ -1,0 +1,88 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Elizabeth \"Betty\" Hemings",
+  "pred_answer": "Annette Gordon-Reed",
+  "normalized_gold": "elizabeth betty hemings",
+  "normalized_pred": "annette gordon-reed",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "The evidence shows that Annette Gordon-Reed won the Pulitzer Prize and National Book Award for her work on the Hemings family, but the gold answer is 'Elizabeth \"Betty\" Hemings', while the pred answer is 'Annette Gordon-Reed'. The question asks for the full name of the lady that Gordon-Reed won the prizes for her work, which is Betty Hemings. The selected chunks include information about Betty Hemings, but the pred answer does not match the gold answer. The evidence supports the gold answer, but the pred answer is incorrect. Therefore, support is insufficient because the pred answer is not supported by the evidence.",
+  "missing_support_reasons": [
+    "The pred answer 'Annette Gordon-Reed' is not the lady referred to in the question; the correct answer is 'Elizabeth \"Betty\" Hemings'. The evidence supports the gold answer but not the pred answer."
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "The evidence shows that Annette Gordon-Reed won the Pulitzer Prize and National Book Award for her work on the Hemings family, but the gold answer is 'Elizabeth \"Betty\" Hemings', while the pred answer is 'Annette Gordon-Reed'. The question asks for the full name of the lady that Gordon-Reed won the prizes for her work, which is Betty Hemings. The selected chunks include information about Betty Hemings, but the pred answer does not match the gold answer. The evidence supports the gold answer, but the pred answer is incorrect. Therefore, support is insufficient because the pred answer is not supported by the evidence.",
+    "missing_support_reasons": [
+      "The pred answer 'Annette Gordon-Reed' is not the lady referred to in the question; the correct answer is 'Elizabeth \"Betty\" Hemings'. The evidence supports the gold answer but not the pred answer."
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5a72f0c55542992359bc31e0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a72f0c55542992359bc31e0::Annette Gordon-Reed::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a72f0c55542992359bc31e0::Reginald Gibbons::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a72f0c55542992359bc31e0::Betty Hemings::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a72f0c55542992359bc31e0::Robert Weil (editor)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a72f0c55542992359bc31e0::Annette Gordon-Reed",
+        "5a72f0c55542992359bc31e0::Betty Hemings"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a72f0c55542992359bc31e0::Annette Gordon-Reed::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a72f0c55542992359bc31e0::Reginald Gibbons::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a72f0c55542992359bc31e0::Betty Hemings::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a72f0c55542992359bc31e0::Robert Weil (editor)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a72f0c55542992359bc31e0::Robert Weil (editor)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Over the course of his career, “Weil has published six National Book Award winners and three National Book Award finalists.\n[2] She had six children with her master, planter John Wayles, over a 12-year period, including Sally Hemings; they were three-quarters white and, following the condition of their mother, all were enslaved from birth and half-siblings to his daughter Martha Jefferson.\n[3] His book \"Creatures of a Day\" was a finalist for the 2008 National Book Award for poetry.\n[4] She was awarded the Pulitzer Prize for History and the National Book Award for Nonfiction and 15 other prizes in 2009 for her work on the Hemings family of Monticello."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

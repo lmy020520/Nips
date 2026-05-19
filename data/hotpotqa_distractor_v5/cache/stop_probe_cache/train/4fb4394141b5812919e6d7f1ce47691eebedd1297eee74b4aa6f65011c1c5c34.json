@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Athens, Georgia",
+  "pred_answer": "Athens, Georgia",
+  "normalized_gold": "athens georgia",
+  "normalized_pred": "athens georgia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae100f9554299422ee995b9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae100f9554299422ee995b9::Conmemorativo: A Tribute to Gram Parsons::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae100f9554299422ee995b9::GP (album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae100f9554299422ee995b9::Vic Chesnutt::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae100f9554299422ee995b9::Hickory Wind::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae100f9554299422ee995b9::Conmemorativo: A Tribute to Gram Parsons",
+        "5ae100f9554299422ee995b9::Vic Chesnutt"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae100f9554299422ee995b9::Conmemorativo: A Tribute to Gram Parsons::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae100f9554299422ee995b9::GP (album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae100f9554299422ee995b9::Vic Chesnutt::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae100f9554299422ee995b9::Hickory Wind::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae100f9554299422ee995b9::Hickory Wind::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The song was written on a train ride the pair took from Florida to Los Angeles in early 1968, and first appeared on The Byrds' \"Sweetheart of the Rodeo\" album.\n[2] James Victor Chesnutt (November 12, 1964 – December 25, 2009) was an American singer-songwriter from Athens, Georgia.\n[3] GP is American singer-songwriter Gram Parsons' debut solo album.\n[4] Conmemoritivo: A Tribute to Gram Parsons is an album of covers of singer-songwriter Gram Parsons' songs released by Rhino in 1993."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

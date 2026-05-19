@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Congress party",
+  "pred_answer": "Congress party",
+  "normalized_gold": "congress party",
+  "normalized_pred": "congress party",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abea93a5542990832d3a079",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abea93a5542990832d3a079::Nayantara Sahgal::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abea93a5542990832d3a079::Crow Terrace Poetry Trial::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abea93a5542990832d3a079::Nehru–Gandhi family::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abea93a5542990832d3a079::Nehru–Gandhi family::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abea93a5542990832d3a079::Nayantara Sahgal",
+        "5abea93a5542990832d3a079::Nehru–Gandhi family"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abea93a5542990832d3a079::Nayantara Sahgal::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abea93a5542990832d3a079::Crow Terrace Poetry Trial::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abea93a5542990832d3a079::Nehru–Gandhi family::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abea93a5542990832d3a079::Nehru–Gandhi family::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abea93a5542990832d3a079::Nehru–Gandhi family::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Members of the family have traditionally led the Congress party and the Republic of India since independence.\n[2] The Nehru–Indira Gandhi family is a prominent Indian political dynasty, which primarily consisted of Jawaharlal Nehru, Indira Gandhi and her descendants.\n[3] Of the several tens or dozens accused, the most prominent figure was the remarkable artist and political leader Su Shi, whose works of poetry were produced as a key part of the evidence against him.\n[4] Nayantara Sahgal (born 10 May 1927) is an Indian writer who writes in English."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Viennese Actionism",
+  "pred_answer": "Viennese Actionism",
+  "normalized_gold": "viennese actionism",
+  "normalized_pred": "viennese actionism",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a73a4bc55429908901be30a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a73a4bc55429908901be30a::Viennese Actionism::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a73a4bc55429908901be30a::Friedl Kubelka::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a73a4bc55429908901be30a::Anatoly Rykov::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a73a4bc55429908901be30a::Viennese Actionism",
+        "5a73a4bc55429908901be30a::Friedl Kubelka"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a73a4bc55429908901be30a::Viennese Actionism::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a73a4bc55429908901be30a::Friedl Kubelka::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a73a4bc55429908901be30a::Anatoly Rykov::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a73a4bc55429908901be30a::Anatoly Rykov::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] An expert on both Russian and Western art history and theory, he has written on a range of subjects in the Renaissance, 18th, 19th and 20th Century art.\n[2] Her photographic practice has been attributed to a 20th century movement known as Feminist Actionism or Viennese Actionism, perhaps due in part to certain performance elements, and her ties with post-war European avant-garde artists, writers and filmmakers.\n[3] Viennese Actionism was a short and violent movement in 20th-century art."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

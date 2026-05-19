@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Van Morrison",
+  "pred_answer": "Van Morrison",
+  "normalized_gold": "van morrison",
+  "normalized_pred": "van morrison",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abec3815542994516f45427",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abec3815542994516f45427::Beautiful Vision::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abec3815542994516f45427::Dweller on the Threshold (song)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abec3815542994516f45427::Alice Bailey::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abec3815542994516f45427::Beautiful Vision::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abec3815542994516f45427::Beautiful Vision",
+        "5abec3815542994516f45427::Alice Bailey"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abec3815542994516f45427::Beautiful Vision::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abec3815542994516f45427::Dweller on the Threshold (song)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abec3815542994516f45427::Alice Bailey::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abec3815542994516f45427::Beautiful Vision::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abec3815542994516f45427::Beautiful Vision::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] As with many of Morrison's recordings, spirituality is a major theme and some of the songs are based on the teachings of Alice Bailey.\n[2] Alice Ann Bailey (June 16, 1880 – December 15, 1949) was a writer of more than twenty-four books on theosophical subjects, and was one of the first writers to use the term New Age.\n[3] \"Dweller on the Threshold\" is a song written by Northern Irish singer-songwriter Van Morrison and first released on his 1982 album, \"Beautiful Vision\".\n[4] Beautiful Vision is the thirteenth studio album by Northern Irish singer-songwriter Van Morrison, released in February 1982."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

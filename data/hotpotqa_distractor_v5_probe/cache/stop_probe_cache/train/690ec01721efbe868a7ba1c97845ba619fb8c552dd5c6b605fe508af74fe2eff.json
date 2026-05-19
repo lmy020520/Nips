@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Oldham County",
+  "pred_answer": "Oldham County",
+  "normalized_gold": "oldham county",
+  "normalized_pred": "oldham county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8006bc55429969796c1ba2",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8006bc55429969796c1ba2::Centerfield, Kentucky::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8006bc55429969796c1ba2::Oldham County, Kentucky::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8006bc55429969796c1ba2::Kentucky State Reformatory::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8006bc55429969796c1ba2::Centerfield, Kentucky",
+        "5a8006bc55429969796c1ba2::Oldham County, Kentucky"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8006bc55429969796c1ba2::Centerfield, Kentucky::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8006bc55429969796c1ba2::Oldham County, Kentucky::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8006bc55429969796c1ba2::Kentucky State Reformatory::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8006bc55429969796c1ba2::Kentucky State Reformatory::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The prison is located in unincorporated Oldham County, Kentucky, near La Grange, and about 30 mi northeast of Louisville.\n[2] Oldham County was a prohibition or completely dry county until January 2005 as the result of a 2004 'moist' vote, permitting sales of alcohol in restaurants that seat at least 100 patrons in which 70%+ of total revenue is derived from sales of food.\n[3] Residential services are provided by Louisville Gas & Electric, Oldham County Water Company and Time Warner Cable."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

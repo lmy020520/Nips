@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1,545",
+  "pred_answer": "1,545",
+  "normalized_gold": "1545",
+  "normalized_pred": "1545",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5f42b55429929b0807a3c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5f42b55429929b0807a3c::Pointon::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5f42b55429929b0807a3c::Aquilo (band)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5f42b55429929b0807a3c::Silverdale, Lancashire::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae5f42b55429929b0807a3c::Cardiff Urban Area::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5f42b55429929b0807a3c::Aquilo (band)",
+        "5ae5f42b55429929b0807a3c::Silverdale, Lancashire"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5f42b55429929b0807a3c::Pointon::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5f42b55429929b0807a3c::Aquilo (band)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5f42b55429929b0807a3c::Silverdale, Lancashire::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae5f42b55429929b0807a3c::Cardiff Urban Area::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5f42b55429929b0807a3c::Cardiff Urban Area::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The vast bulk of the population and area are contributed by Cardiff which had a population of 335,145 as recorded at the 2011 census.\n[2] The parish had a population of 1,545 recorded in the 2001 census, reducing slightly to 1,519 at the 2011 Census.\n[3] Aquilo is an alternative musical duo from Silverdale, Lancashire, England, consisting of Tom Higham and Ben Fletcher.\n[4] Pointon is a small village situated 7 mi north from Bourne, in the South Kesteven district of Lincolnshire, England."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "St. Louis, Missouri",
+  "pred_answer": "St. Louis, Missouri",
+  "normalized_gold": "st louis missouri",
+  "normalized_pred": "st louis missouri",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7fbbac5542995d8a8ddf05",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7fbbac5542995d8a8ddf05::Mississippian stone statuary::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7fbbac5542995d8a8ddf05::Gaziantep Museum of Archaeology::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7fbbac5542995d8a8ddf05::Cahokia::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7fbbac5542995d8a8ddf05::Kincaid Mounds State Historic Site::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7fbbac5542995d8a8ddf05::Mississippian stone statuary",
+        "5a7fbbac5542995d8a8ddf05::Cahokia"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7fbbac5542995d8a8ddf05::Mississippian stone statuary::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7fbbac5542995d8a8ddf05::Gaziantep Museum of Archaeology::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7fbbac5542995d8a8ddf05::Cahokia::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7fbbac5542995d8a8ddf05::Kincaid Mounds State Historic Site::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7fbbac5542995d8a8ddf05::Kincaid Mounds State Historic Site::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Kincaid Mounds Historic Site (11MX2-11; 11PO2-10)   1050-1400 CE, is the site of a city from the prehistoric Mississippian culture.\n[2] The Cahokia Mounds State Historic Site (11 MS 2) is the site of a pre-Columbian Native American city ( 600–1400 CE) directly across the Mississippi River from modern St. Louis, Missouri.\n[3] Attached to the museum is a garden containing a selection of stone artifacts, including pagan tombstones from Zeugma, Christian tombstones, and Hittite statuary.\n[4] The Mississippian stone statuary are artifacts of polished stone in the shape of human figurines made by members of the Mississippian culture (800 to 1600 CE) and found in archaeological sites in the American Midwest and Southeast."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

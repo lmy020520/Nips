@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Edward Allen Harris",
+  "pred_answer": "Edward Allen Harris",
+  "normalized_gold": "edward allen harris",
+  "normalized_pred": "edward allen harris",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2a84d554299545a2cf9f5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2a84d554299545a2cf9f5::The Right Stuff (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2a84d554299545a2cf9f5::Game Change (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2a84d554299545a2cf9f5::Ed Harris::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab2a84d554299545a2cf9f5::Ed Harris::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2a84d554299545a2cf9f5::Game Change (film)",
+        "5ab2a84d554299545a2cf9f5::Ed Harris"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2a84d554299545a2cf9f5::The Right Stuff (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2a84d554299545a2cf9f5::Game Change (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2a84d554299545a2cf9f5::Ed Harris::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab2a84d554299545a2cf9f5::Ed Harris::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2a84d554299545a2cf9f5::Ed Harris::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Edward Allen Harris (born November 28, 1950) is an American actor, producer, director, and screenwriter.\n[2] He is known for his performances in films such as \"The Right Stuff\" (1983), \"The Abyss\" (1989), \"Glengarry Glen Ross\" (1992), \"Apollo 13\" (1995), \"Nixon\" (1995), \"The Rock\" (1996), \"Absolute Power\" (1997), \"A Beautiful Mind\" (2001), \"Enemy at the Gates\" (2001), \"Radio\" (2003), \"A History of Violence\" (2005), \"Gone Baby Gone\" (2007), \"The Way Back\" (2010), \"Man on a Ledge\" (2012), \"Gravity\" (2013),\n[3] Game Change is a 2012 American HBO political drama film based on events of the 2008 United States presidential election campaign of John McCain, directed by Jay Roach and written by Danny Strong, based on the 2010 book of the same name documenting the campaign by political journalists Mark Halperin and John Heilemann.\n[4] The Right Stuff is a 1983 American epic historical drama film."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

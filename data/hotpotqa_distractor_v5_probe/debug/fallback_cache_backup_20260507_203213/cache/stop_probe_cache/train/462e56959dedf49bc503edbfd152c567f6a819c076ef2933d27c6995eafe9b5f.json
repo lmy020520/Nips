@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Winston Churchill",
+  "pred_answer": "Winston Churchill",
+  "normalized_gold": "winston churchill",
+  "normalized_pred": "winston churchill",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2950555429921a00aafd2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2950555429921a00aafd2::Winston Churchill::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2950555429921a00aafd2::Alfred Edwards (politician)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2950555429921a00aafd2::Terminological inexactitude::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2950555429921a00aafd2::Lyng's Cabinet::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2950555429921a00aafd2::Winston Churchill",
+        "5ac2950555429921a00aafd2::Terminological inexactitude"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2950555429921a00aafd2::Winston Churchill::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2950555429921a00aafd2::Alfred Edwards (politician)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2950555429921a00aafd2::Terminological inexactitude::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2950555429921a00aafd2::Lyng's Cabinet::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2950555429921a00aafd2::Lyng's Cabinet::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was the first in 28 years not to be led by the Norwegian Labour Party.\n[2] Terminological inexactitude is a phrase introduced in 1906 by British politician (later Prime Minister) Winston Churchill.\n[3] His origins were as a company director in the foundry industry in Middlesbrough, which led him into conflict with the Labour Party when it proposed to nationalise the iron and steel industries; profoundly unable to support the party, he crossed the floor and became an active Conservative Party supporter.\n[4] He led the Conservative Party for fifteen years from 1940 to 1955."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

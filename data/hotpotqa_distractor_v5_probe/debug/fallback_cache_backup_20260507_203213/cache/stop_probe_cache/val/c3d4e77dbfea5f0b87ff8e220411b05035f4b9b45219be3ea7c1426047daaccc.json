@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Alan G. Hevesi",
+  "pred_answer": "Alan G. Hevesi",
+  "normalized_gold": "alan g hevesi",
+  "normalized_pred": "alan g hevesi",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5aba12e55542994dbf0198a8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5aba12e55542994dbf0198a8::John Faso::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5aba12e55542994dbf0198a8::Steve LaTourette::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5aba12e55542994dbf0198a8::New York Comptroller election, 2002::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5aba12e55542994dbf0198a8::John Faso::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5aba12e55542994dbf0198a8::John Faso",
+        "5aba12e55542994dbf0198a8::New York Comptroller election, 2002"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5aba12e55542994dbf0198a8::John Faso::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5aba12e55542994dbf0198a8::Steve LaTourette::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5aba12e55542994dbf0198a8::New York Comptroller election, 2002::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5aba12e55542994dbf0198a8::John Faso::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5aba12e55542994dbf0198a8::John Faso::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A Republican, he gave up his seat in the Assembly to run for New York State Comptroller in 2002, losing to Alan Hevesi.\n[2] New York City Comptroller Alan G. Hevesi defeated former Assembly Minority Leader John Faso.\n[3] Steven Clare \"Steve\" LaTourette (July 22, 1954 – August 3, 2016) was an American politician who served as the U.S. Representative for Ohio 's 19 congressional district and then Ohio 's 14 congressional district from 1995 to 2013.\n[4] John James Faso Jr. (born August 25, 1952) is an American politician and the U.S. Representative for New York 's 19 congressional district since January 3, 2017."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

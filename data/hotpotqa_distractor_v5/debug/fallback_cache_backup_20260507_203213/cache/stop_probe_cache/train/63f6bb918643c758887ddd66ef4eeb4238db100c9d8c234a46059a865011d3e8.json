@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "October 12, 2014",
+  "pred_answer": "October 12, 2014",
+  "normalized_gold": "october 12 2014",
+  "normalized_pred": "october 12 2014",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae539605542990ba0bbb239",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae539605542990ba0bbb239::Jake Siciliano::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae539605542990ba0bbb239::Homeland (season 4)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae539605542990ba0bbb239::The Affair (TV series)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae539605542990ba0bbb239::Ray Donovan::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae539605542990ba0bbb239::Jake Siciliano",
+        "5ae539605542990ba0bbb239::The Affair (TV series)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae539605542990ba0bbb239::Jake Siciliano::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae539605542990ba0bbb239::Homeland (season 4)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae539605542990ba0bbb239::The Affair (TV series)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae539605542990ba0bbb239::Ray Donovan::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae539605542990ba0bbb239::Ray Donovan::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Ray Donovan is an American television crime drama series created by Ann Biderman for Showtime.\n[2] The series premiered on Showtime on October 12, 2014.\n[3] The fourth season of the American television drama series \"Homeland\" premiered on October 5, 2014, and concluded on December 21, 2014, on Showtime, consisting of 12 episodes.\n[4] Jake Siciliano (born October 23, 1998) is an American actor best known for his roles in \"Shame\" (2011), Solitary Man (2009), \"The Taking of Pelham 123\" (2009), and \"The Affair\" (2014–present)"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

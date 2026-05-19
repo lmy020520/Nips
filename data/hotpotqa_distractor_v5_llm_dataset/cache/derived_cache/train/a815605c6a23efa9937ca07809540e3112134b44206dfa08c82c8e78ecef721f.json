@@ -1,0 +1,22 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the given name of the artist who released 'Ain't Thinkin' 'Bout You' featuring Chris Brown. The raw evidence includes a unit about Tyga (unit_id 5a78d9d155429970f5fffda8::Tyga::0) which gives his given name as Micheal Ray Stevenson, and a unit about The Monarch (unit_id 5a78d9d155429970f5fffda8::The Monarch (production team)::1) which mentions a song 'Thinkin' About You' by Mario, but not the exact title. A bridge note could connect Tyga to the song, and a verification note could check if Tyga indeed released that song.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Tyga released the song 'Ain't Thinkin' 'Bout You' featuring Chris Brown.",
+      "source_unit_ids": [
+        "5a78d9d155429970f5fffda8::Tyga::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "The song 'Thinkin' About You' by Mario is produced by The Monarch, but not the same as 'Ain't Thinkin' 'Bout You'.",
+      "source_unit_ids": [
+        "5a78d9d155429970f5fffda8::The Monarch (production team)::1"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

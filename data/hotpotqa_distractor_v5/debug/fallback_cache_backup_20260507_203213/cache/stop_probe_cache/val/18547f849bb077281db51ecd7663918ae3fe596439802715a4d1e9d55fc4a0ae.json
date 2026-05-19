@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "General José de Urrea",
+  "pred_answer": "General José de Urrea",
+  "normalized_gold": "general josé de urrea",
+  "normalized_pred": "general josé de urrea",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae67a685542995703ce8b67",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae67a685542995703ce8b67::Fannin Battleground State Historic Site::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae67a685542995703ce8b67::Texas Park Road 27::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae67a685542995703ce8b67::Battle of Coleto::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae67a685542995703ce8b67::San Jacinto Monument::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae67a685542995703ce8b67::Texas Park Road 27",
+        "5ae67a685542995703ce8b67::Battle of Coleto"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae67a685542995703ce8b67::Fannin Battleground State Historic Site::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae67a685542995703ce8b67::Texas Park Road 27::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae67a685542995703ce8b67::Battle of Coleto::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae67a685542995703ce8b67::San Jacinto Monument::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae67a685542995703ce8b67::San Jacinto Monument::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The monument is topped with a 220-ton star that commemorates the site of the Battle of San Jacinto, the decisive battle of the Texas Revolution.\n[2] In February, General José de Urrea led a branch of the Mexican army up the Gulf Coast of Mexican Texas toward Goliad, where a large contingent of soldiers from the Texian Army were garrisoned under Colonel James W. Fannin.\n[3] Park Road 27 or PR 27 is a Texas park road that runs from Fannin to the Fannin Battleground State Historic Site, which is the site of the Battle of Coleto.\n[4] The Fannin Battleground State Historic Site commemorates the Battle of Coleto Creek, a battle of the Texas Revolution, fought on March 19 and 20, 1836 between Texian forces commanded by Col. James W. Fannin and the Mexican Army commanded by Mexican General Jose de Urrea."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

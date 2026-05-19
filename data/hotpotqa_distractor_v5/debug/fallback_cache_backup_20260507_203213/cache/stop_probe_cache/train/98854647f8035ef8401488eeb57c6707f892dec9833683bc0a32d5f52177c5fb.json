@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Woody Allen",
+  "pred_answer": "Woody Allen",
+  "normalized_gold": "woody allen",
+  "normalized_pred": "woody allen",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae27bac554299492dc91c2a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae27bac554299492dc91c2a::To a Tee::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae27bac554299492dc91c2a::Cleaver (The Sopranos)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae27bac554299492dc91c2a::Annie Hall::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae27bac554299492dc91c2a::Billy the Kid Versus Dracula::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae27bac554299492dc91c2a::To a Tee",
+        "5ae27bac554299492dc91c2a::Annie Hall"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae27bac554299492dc91c2a::To a Tee::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae27bac554299492dc91c2a::Cleaver (The Sopranos)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae27bac554299492dc91c2a::Annie Hall::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae27bac554299492dc91c2a::Billy the Kid Versus Dracula::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae27bac554299492dc91c2a::Billy the Kid Versus Dracula::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Billy the Kid vs. Dracula is a 1966 American low-budget horror-Western film directed by William Beaudine.\n[2] Annie Hall is a 1977 American romantic comedy film directed by Woody Allen from a screenplay he co-wrote with Marshall Brickman.\n[3] After the project eventually materializes, Cleaver can be categorized as a direct-to-DVD mafia-slasher film, described alternately as \"\"Saw\" meets \"the Godfather II\"\", \"\"the Ring\" meets \"The Godfather\"\", and \"a story about a young man who goes to pieces and then manages to pull himself together again\".\n[4] To a Tee is a 2006 film written and directed by Matt Riddlehoover, which has been described as “\"Annie Hall\" meets \"Will & Grace\"” ."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

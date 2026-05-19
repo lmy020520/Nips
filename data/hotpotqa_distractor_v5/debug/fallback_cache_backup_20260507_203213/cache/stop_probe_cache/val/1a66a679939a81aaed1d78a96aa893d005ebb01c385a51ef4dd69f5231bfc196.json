@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Paul McCartney and Linda McCartney",
+  "pred_answer": "Paul McCartney and Linda McCartney",
+  "normalized_gold": "paul mccartney and linda mccartney",
+  "normalized_pred": "paul mccartney and linda mccartney",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5aba8b8055429955dce3ee7e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5aba8b8055429955dce3ee7e::Wings at the Speed of Sound::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5aba8b8055429955dce3ee7e::Cook of the House::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5aba8b8055429955dce3ee7e::Silly Love Songs::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5aba8b8055429955dce3ee7e::Silly Love Songs::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5aba8b8055429955dce3ee7e::Wings at the Speed of Sound",
+        "5aba8b8055429955dce3ee7e::Silly Love Songs"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5aba8b8055429955dce3ee7e::Wings at the Speed of Sound::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5aba8b8055429955dce3ee7e::Cook of the House::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5aba8b8055429955dce3ee7e::Silly Love Songs::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5aba8b8055429955dce3ee7e::Silly Love Songs::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5aba8b8055429955dce3ee7e::Silly Love Songs::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Silly Love Songs\" is a song written by Paul McCartney and Linda McCartney and performed by Wings.\n[2] The song appears on the 1976 album \"Wings at the Speed of Sound.\"\n[3] \"Cook of the House\" is a song written by Paul and Linda McCartney that was first released on Wings' 1976 album \"Wings at the Speed of Sound\".\n[4] Wings at the Speed of Sound is the fifth studio album by Wings, released on 25 March 1976 as a follow-up to their previous album \"Venus and Mars\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

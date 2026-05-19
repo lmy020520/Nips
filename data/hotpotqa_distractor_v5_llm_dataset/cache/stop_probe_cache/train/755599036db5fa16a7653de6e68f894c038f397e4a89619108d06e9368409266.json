@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Working Title Films",
+  "pred_answer": "Working Title Films",
+  "normalized_gold": "working title films",
+  "normalized_pred": "working title films",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae6ee0d5542991bbc97619c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae6ee0d5542991bbc97619c::Eric Fellner::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae6ee0d5542991bbc97619c::Working Title Films::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae6ee0d5542991bbc97619c::Universal Studios Singapore::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae6ee0d5542991bbc97619c::Eric Fellner",
+        "5ae6ee0d5542991bbc97619c::Working Title Films"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae6ee0d5542991bbc97619c::Eric Fellner::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae6ee0d5542991bbc97619c::Working Title Films::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae6ee0d5542991bbc97619c::Universal Studios Singapore::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae6ee0d5542991bbc97619c::Universal Studios Singapore::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It was a key component of Genting's bid for the right to build Singapore's second integrated resort.\n[2] Working Title Films Limited is a British film and television production company, affiliated with Universal Studios.\n[3] He is the co-chairman (along with Tim Bevan) of the production company Working Title Films."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

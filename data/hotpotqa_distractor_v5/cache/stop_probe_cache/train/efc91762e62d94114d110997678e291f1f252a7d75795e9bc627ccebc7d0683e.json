@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Daimler AG",
+  "pred_answer": "Daimler AG",
+  "normalized_gold": "daimler ag",
+  "normalized_pred": "daimler ag",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a813e68554299260e20a279",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a813e68554299260e20a279::Mercedes-Benz W116::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a813e68554299260e20a279::Mercedes-Benz S-Class::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a813e68554299260e20a279::Mercedes-Benz W140::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a813e68554299260e20a279::Mercedes-Benz W116",
+        "5a813e68554299260e20a279::Mercedes-Benz S-Class"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a813e68554299260e20a279::Mercedes-Benz W116::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a813e68554299260e20a279::Mercedes-Benz S-Class::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a813e68554299260e20a279::Mercedes-Benz W140::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a813e68554299260e20a279::Mercedes-Benz W140::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Mercedes-Benz W140 is a series of flagship vehicles that were manufactured by the German automotive company Mercedes-Benz.\n[2] The Mercedes-Benz S-Class, formerly known as Sonderklasse (German for \"special class\", abbreviated as \"S-Klasse\"), is a series of luxury flagship vehicles produced by the German automaker Mercedes-Benz, a division of German company Daimler AG.\n[3] The Mercedes-Benz W116 is a series of flagship luxury sedans produced from September 1972 until 1980."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "60,000",
+  "pred_answer": "60,000",
+  "normalized_gold": "60000",
+  "normalized_pred": "60000",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac02f985542992a796decc6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac02f985542992a796decc6::Elephantine Colossus::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac02f985542992a796decc6::Temple of Satet::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac02f985542992a796decc6::Coney Island::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac02f985542992a796decc6::Coney Island::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac02f985542992a796decc6::Elephantine Colossus",
+        "5ac02f985542992a796decc6::Coney Island"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac02f985542992a796decc6::Elephantine Colossus::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac02f985542992a796decc6::Temple of Satet::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac02f985542992a796decc6::Coney Island::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac02f985542992a796decc6::Coney Island::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac02f985542992a796decc6::Coney Island::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The residential portion of the peninsula is a community of 60,000 people in its western part, with Sea Gate to its west, Brighton Beach and Manhattan Beach to its east, the Lower Bay to the south, and Gravesend to the north.\n[2] Coney Island is a peninsular residential neighborhood, beach, and leisure/entertainment destination on the Coney Island Channel, which is part of the Lower Bay in the southwestern part of the borough of Brooklyn in New York City.\n[3] The temple was located on the Nile Valley island of Elephantine, Egypt.\n[4] The Elephantine Colossus, otherwise known as the Colossal Elephant or the Elephant Colossus, or by its function as the Elephant Hotel, was a tourist attraction located on Coney Island in Brooklyn, New York City."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "\"Rules and Regulations\"",
+  "pred_answer": "Rules and Regulations",
+  "normalized_gold": "rules and regulations",
+  "normalized_pred": "rules and regulations",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77cbce5542992a6e59dfd2",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77cbce5542992a6e59dfd2::Tiergarten (song)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77cbce5542992a6e59dfd2::Oh What a World (song)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77cbce5542992a6e59dfd2::Rules and Regulations (song)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77cbce5542992a6e59dfd2::Release the Stars::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a77cbce5542992a6e59dfd2::Waiting for a Want::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77cbce5542992a6e59dfd2::Rules and Regulations (song)",
+        "5a77cbce5542992a6e59dfd2::Release the Stars"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77cbce5542992a6e59dfd2::Tiergarten (song)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77cbce5542992a6e59dfd2::Oh What a World (song)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77cbce5542992a6e59dfd2::Rules and Regulations (song)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77cbce5542992a6e59dfd2::Release the Stars::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a77cbce5542992a6e59dfd2::Waiting for a Want::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77cbce5542992a6e59dfd2::Waiting for a Want::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Waiting for a Want is the first EP by Canadian-American singer-songwriter Rufus Wainwright, released through DreamWorks Records electronically on June 29, 2004.\n[2] Release the Stars is the fifth studio album by Canadian-American singer-songwriter Rufus Wainwright, released through Geffen Records on May 15, 2007.\n[3] \"Rules and Regulations\" is a song written and performed by Canadian-American singer-songwriter Rufus Wainwright.\n[4] \"Oh What a World\" is a song written and performed by Canadian-American singer-songwriter Rufus Wainwright."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

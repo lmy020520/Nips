@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The 75th Ranger Regiment",
+  "pred_answer": "The 75th Ranger Regiment",
+  "normalized_gold": "the 75th ranger regiment",
+  "normalized_pred": "the 75th ranger regiment",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf68f95542993344016c7d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf68f95542993344016c7d::Stanley A. McChrystal::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf68f95542993344016c7d::Kevin Tillman::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf68f95542993344016c7d::75th Ranger Regiment (United States)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf68f95542993344016c7d::Stanley A. McChrystal::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf68f95542993344016c7d::Kevin Tillman",
+        "5adf68f95542993344016c7d::75th Ranger Regiment (United States)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf68f95542993344016c7d::Stanley A. McChrystal::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf68f95542993344016c7d::Kevin Tillman::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf68f95542993344016c7d::75th Ranger Regiment (United States)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf68f95542993344016c7d::Stanley A. McChrystal::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf68f95542993344016c7d::Stanley A. McChrystal::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He previously served as Director, Joint Staff from August 2008 to June 2009 and as Commander of JSOC from 2003 to 2008, where he was credited with the death of Abu Musab al-Zarqawi, leader of Al-Qaeda in Iraq, but also criticized for his alleged role in the cover-up of the Pat Tillman friendly fire incident.\n[2] The 75th Ranger Regiment, also known as Army Rangers, is a light infantry special operations force part of the United States Army Special Operations Command.\n[3] Kevin and Pat Tillman were deployed to the Middle East together as part of Operation Iraqi Freedom.\n[4] Stanley Allen McChrystal (born August 14, 1954) is a retired United States Army general best known for his command of Joint Special Operations Command (JSOC) in the mid-2000s."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

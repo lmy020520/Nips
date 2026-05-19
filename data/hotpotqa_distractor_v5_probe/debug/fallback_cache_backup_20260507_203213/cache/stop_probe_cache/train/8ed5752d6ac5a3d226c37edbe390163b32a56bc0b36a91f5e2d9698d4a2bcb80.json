@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Berlin, Germany",
+  "pred_answer": "Berlin, Germany",
+  "normalized_gold": "berlin germany",
+  "normalized_pred": "berlin germany",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a809d4d5542992097ad300c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a809d4d5542992097ad300c::Rene Capo::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a809d4d5542992097ad300c::Suriname at the 2008 Summer Olympics::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a809d4d5542992097ad300c::René Koch::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a809d4d5542992097ad300c::1936 Summer Olympics::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a809d4d5542992097ad300c::Luke Hall (swimmer)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a809d4d5542992097ad300c::René Koch",
+        "5a809d4d5542992097ad300c::1936 Summer Olympics"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a809d4d5542992097ad300c::Rene Capo::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a809d4d5542992097ad300c::Suriname at the 2008 Summer Olympics::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a809d4d5542992097ad300c::René Koch::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a809d4d5542992097ad300c::1936 Summer Olympics::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a809d4d5542992097ad300c::Luke Hall (swimmer)::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a809d4d5542992097ad300c::Luke Hall (swimmer)::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He competed at the 2008 Summer Olympics and the 2012 Summer Olympics where he was the flag bearer for his country.\n[2] The 1936 Summer Olympics (German: \"Olympische Sommerspiele 1936\"), officially known as the Games of the XI Olympiad, was an international multi-sport event that was held in 1936 in Berlin, Germany.\n[3] He competed in the 50 m pistol event at the 1936 Summer Olympics.\n[4] The appearance of Suriname at Beijing marked its tenth Olympic appearance, which included every Olympic games since the 1968 Summer Olympics in Mexico City and excluded the 1980 Summer Olympics in Moscow."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

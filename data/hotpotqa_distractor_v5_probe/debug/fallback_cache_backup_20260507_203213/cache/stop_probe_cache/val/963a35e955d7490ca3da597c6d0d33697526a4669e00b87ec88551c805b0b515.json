@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "playwright",
+  "pred_answer": "playwright",
+  "normalized_gold": "playwright",
+  "normalized_pred": "playwright",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add57e35542992200553ac2",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add57e35542992200553ac2::List of Agatha Christie's Marple episodes::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add57e35542992200553ac2::Pitfall (1962 film)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add57e35542992200553ac2::Agatha Christie::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5add57e35542992200553ac2::Kōbō Abe::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5add57e35542992200553ac2::Agatha Christie: Evil Under the Sun::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add57e35542992200553ac2::Agatha Christie",
+        "5add57e35542992200553ac2::Kōbō Abe"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add57e35542992200553ac2::List of Agatha Christie's Marple episodes::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add57e35542992200553ac2::Pitfall (1962 film)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add57e35542992200553ac2::Agatha Christie::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5add57e35542992200553ac2::Kōbō Abe::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5add57e35542992200553ac2::Agatha Christie: Evil Under the Sun::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add57e35542992200553ac2::Agatha Christie: Evil Under the Sun::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Agatha Christie: Evil Under the Sun is a video game released for the PC and Nintendo Wii, and is the third installment of The Adventure Company's \"Agatha Christie\" series, developed by AWE Productions, based on Agatha Christie's novel \"Evil Under the Sun\".\n[2] Kōbō Abe (安部 公房 , \"Abe Kōbō\" ) , pseudonym of Kimifusa Abe (安部 公房 , \"Abe Kimifusa\" , March 7, 1924 – January 22, 1993) , was a Japanese writer, playwright, photographer and inventor.\n[3] Dame Agatha Mary Clarissa Christie, Lady Mallowan, DBE (\"née\" Miller; 15 September 1890 – 12 January 1976) was an English crime novelist, short story writer and playwright.\n[4] The Pitfall and Kashi To Kodomo, is a 1962 Japanese film directed by Hiroshi Teshigahara, written by Kōbō Abe."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

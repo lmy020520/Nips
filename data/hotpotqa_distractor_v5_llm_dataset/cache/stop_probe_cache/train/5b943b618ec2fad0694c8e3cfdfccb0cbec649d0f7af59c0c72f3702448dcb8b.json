@@ -1,0 +1,100 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "The Daily Beast",
+  "pred_answer": "The Daily Beast",
+  "normalized_gold": "the daily beast",
+  "normalized_pred": "the daily beast",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a826b8f5542995ce29dcd01",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a826b8f5542995ce29dcd01::The New York Enterprise Report::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a826b8f5542995ce29dcd01::Robert Gersony::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a826b8f5542995ce29dcd01::Joy-Ann Reid::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a826b8f5542995ce29dcd01::Joy-Ann Reid::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a826b8f5542995ce29dcd01::The Reid Report::0"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5a826b8f5542995ce29dcd01::Robert Gersony::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a826b8f5542995ce29dcd01::Joy-Ann Reid",
+        "5a826b8f5542995ce29dcd01::The Reid Report"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a826b8f5542995ce29dcd01::The New York Enterprise Report::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a826b8f5542995ce29dcd01::Robert Gersony::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a826b8f5542995ce29dcd01::Joy-Ann Reid::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a826b8f5542995ce29dcd01::Joy-Ann Reid::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a826b8f5542995ce29dcd01::The Reid Report::0",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5a826b8f5542995ce29dcd01::Robert Gersony::0",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a826b8f5542995ce29dcd01::Robert Gersony::0",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] Robert Gersony is an American consultant known for his reports on conflict-affected countries, in particular in Africa.\n[2] The Reid Report is an hour-long weekday U.S. and world political commentary program on MSNBC.\n[3] She is also a regular political commentator on both television and in publications such as \"The Daily Beast\".\n[4] Joy-Ann M. Lomena-Reid (born December 8, 1968), also known as Joy Reid, is an American cable television host and a national correspondent at MSNBC."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

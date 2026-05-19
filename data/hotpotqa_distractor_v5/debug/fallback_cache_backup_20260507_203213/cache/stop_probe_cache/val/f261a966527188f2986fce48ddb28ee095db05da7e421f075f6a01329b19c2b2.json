@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "England",
+  "pred_answer": "England",
+  "normalized_gold": "england",
+  "normalized_pred": "england",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7f2c595542993067513670",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7f2c595542993067513670::Greater Manchester Built-up Area::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7f2c595542993067513670::Economy of Manchester::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7f2c595542993067513670::Demography of Greater Manchester::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7f2c595542993067513670::Greater Manchester Built-up Area",
+        "5a7f2c595542993067513670::Economy of Manchester"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7f2c595542993067513670::Greater Manchester Built-up Area::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7f2c595542993067513670::Economy of Manchester::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7f2c595542993067513670::Demography of Greater Manchester::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7f2c595542993067513670::Demography of Greater Manchester::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The demography of Greater Manchester is analysed by the Office for National Statistics and data is produced for each of its ten metropolitan boroughs, each of the Greater Manchester electoral wards, the NUTS3 statistical sub-regions, each of the Parliamentary constituencies in Greater Manchester, the 15 civil parishes in Greater Manchester, and for all of Greater Manchester as a whole; the latter\n[2] Manchester is a city and metropolitan borough of Greater Manchester.\n[3] The Greater Manchester Built-up Area is an area of land defined by the Office for National Statistics (ONS), consisting of the large conurbation that encompasses the urban element of the city of Manchester and the continuous metropolitan area that spreads outwards from it, forming much of Greater Manchester in North West England."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

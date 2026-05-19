@@ -1,0 +1,101 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Inside the Actors Studio",
+  "pred_answer": "Inside the Actors Studio",
+  "normalized_gold": "inside the actors studio",
+  "normalized_pred": "inside the actors studio",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81b80955429926c1cdad68",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81b80955429926c1cdad68::King of the Jungle (TV series)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81b80955429926c1cdad68::Desert Car Kings::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81b80955429926c1cdad68::James Lipton::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81b80955429926c1cdad68::derived::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a81b80955429926c1cdad68::Sherry!::2"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5a81b80955429926c1cdad68::Sherry Gunther::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81b80955429926c1cdad68::James Lipton",
+        "5a81b80955429926c1cdad68::Sherry!"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81b80955429926c1cdad68::King of the Jungle (TV series)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81b80955429926c1cdad68::Desert Car Kings::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81b80955429926c1cdad68::James Lipton::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a81b80955429926c1cdad68::Sherry!::2",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5a81b80955429926c1cdad68::Sherry Gunther::0",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a81b80955429926c1cdad68::derived::0",
+          "added_step": 3
+        }
+      ],
+      "last_added_unit_id": "5a81b80955429926c1cdad68::Sherry Gunther::0",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] Sherry Gunther is an American producer known for her work in animation.\n[2] He is also the author of three novels and a theatrical play, \"Edges\".\n[3] The musical is based on the George S. Kaufman-Moss Hart play \"The Man Who Came to Dinner\".\n[4] He is the executive producer, writer and host of the Bravo cable television series \"Inside the Actors Studio\", which debuted in 1994.\n\nNotes:\n[bridge] Sherry Gunther is an American producer, and Harry Winkler is an author, but they may be the same person or related."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

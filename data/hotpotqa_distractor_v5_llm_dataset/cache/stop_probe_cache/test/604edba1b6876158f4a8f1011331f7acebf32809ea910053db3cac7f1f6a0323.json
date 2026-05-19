@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Dundee Canal",
+  "pred_answer": "Dundee Canal",
+  "normalized_gold": "dundee canal",
+  "normalized_pred": "dundee canal",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf430e5542993a75d2645e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf430e5542993a75d2645e::Carrier Canal::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf430e5542993a75d2645e::Miami Canal::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf430e5542993a75d2645e::Dundee Canal::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf430e5542993a75d2645e::Dundee Canal::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf430e5542993a75d2645e::Miami Canal",
+        "5adf430e5542993a75d2645e::Dundee Canal"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf430e5542993a75d2645e::Carrier Canal::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf430e5542993a75d2645e::Miami Canal::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf430e5542993a75d2645e::Dundee Canal::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf430e5542993a75d2645e::Dundee Canal::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf430e5542993a75d2645e::Dundee Canal::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Dundee Canal was an industrial canal in Clifton and Passaic in Passaic County, New Jersey.\n[2] It supplied hydropower and water for manufacturing.\n[3] The canal flows in a south and southeasterly direction for approximately 77 miles, and passes through three counties: Broward, Palm Beach, and Miami-Dade.\n[4] It originates from a common diversion at Manor Street in Bakersfield, which also supplies the Kern Island Canal and Eastside Canal."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "He is president of the National Policy Institute",
+  "pred_answer": "He is president of the National Policy Institute",
+  "normalized_gold": "he is president of the national policy institute",
+  "normalized_pred": "he is president of the national policy institute",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc17725542994650320c68",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc17725542994650320c68::Alt-right::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc17725542994650320c68::Beta male (slang)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc17725542994650320c68::Richard B. Spencer::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc17725542994650320c68::Richard Spencer (Royal Navy officer)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc17725542994650320c68::Alt-right",
+        "5adc17725542994650320c68::Richard B. Spencer"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc17725542994650320c68::Alt-right::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc17725542994650320c68::Beta male (slang)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc17725542994650320c68::Richard B. Spencer::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc17725542994650320c68::Richard Spencer (Royal Navy officer)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc17725542994650320c68::Richard Spencer (Royal Navy officer)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Captain Sir Richard Spencer KCH (9 December 1779 – 24 July 1839) the son of Richard Spencer, a London merchant.\n[2] He is president of the National Policy Institute, a white supremacist think tank, as well as Washington Summit Publishers.\n[3] The term has been frequently used in the manosphere and was later adopted by alt-right activists who question feminist views on gender roles, masculinity and manhood.\n[4] The alt-right, or alternative right, is a loosely defined group of people with far-right ideologies who reject mainstream conservatism in favor of white nationalism."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Magic Dirt",
+  "pred_answer": "Magic Dirt",
+  "normalized_gold": "magic dirt",
+  "normalized_pred": "magic dirt",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c2f8f5542996dd594b8b5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c2f8f5542996dd594b8b5::Ida Maria::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c2f8f5542996dd594b8b5::Fortress Round My Heart::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c2f8f5542996dd594b8b5::Magic Dirt::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7c2f8f5542996dd594b8b5::Magic Dirt (US Version)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c2f8f5542996dd594b8b5::Ida Maria",
+        "5a7c2f8f5542996dd594b8b5::Magic Dirt"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c2f8f5542996dd594b8b5::Ida Maria::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c2f8f5542996dd594b8b5::Fortress Round My Heart::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c2f8f5542996dd594b8b5::Magic Dirt::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7c2f8f5542996dd594b8b5::Magic Dirt (US Version)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c2f8f5542996dd594b8b5::Magic Dirt (US Version)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Magic Dirt is an album by Australian alternative rock band Magic Dirt released in the U.S. on the Dirt label.\n[2] Initially forming an alternative underground band called Deer Bubbles which split and formed into the much heavier, rock based group called The Jim Jims, they were renamed as Magic Dirt in 1992.\n[3] Fortress Round My Heart is the debut album by Norwegian musician Ida Maria.\n[4] Ida Maria Børli Sivertsen ( ; born 13 July 1984), better known simply as Ida Maria, is a Norwegian musician and songwriter."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

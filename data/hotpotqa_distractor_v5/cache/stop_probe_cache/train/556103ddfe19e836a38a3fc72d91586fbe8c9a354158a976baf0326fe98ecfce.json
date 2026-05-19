@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jonas Elmer",
+  "pred_answer": "Jonas Elmer",
+  "normalized_gold": "jonas elmer",
+  "normalized_pred": "jonas elmer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adeac5455429939a52fe944",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adeac5455429939a52fe944::James Durham (baseball)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adeac5455429939a52fe944::Durham Bulls::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adeac5455429939a52fe944::New in Town::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adeac5455429939a52fe944::Belle Chrystall::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adeac5455429939a52fe944::James Durham (baseball)",
+        "5adeac5455429939a52fe944::New in Town"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adeac5455429939a52fe944::James Durham (baseball)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adeac5455429939a52fe944::Durham Bulls::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adeac5455429939a52fe944::New in Town::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adeac5455429939a52fe944::Belle Chrystall::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adeac5455429939a52fe944::Belle Chrystall::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She came to London and after appearing on stage was given a minor part in a film \"A Warm Corner\", directed by Victor Saville but she was given no more work after that.\n[2] New in Town is a 2009 American-Canadian romantic comedy film, directed by Jonas Elmer, starring Renée Zellweger, Harry Connick Jr and Siobhan Fallon Hogan.\n[3] The Durham Bulls are a Triple-A minor league baseball team that currently plays in the International League.\n[4] He also had a minor part in the movie New in Town."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

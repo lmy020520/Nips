@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Episcopal",
+  "pred_answer": "Episcopal",
+  "normalized_gold": "episcopal",
+  "normalized_pred": "episcopal",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade8b5455429939a52fe8ed",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade8b5455429939a52fe8ed::United States Senate election in Missouri, 1976::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade8b5455429939a52fe8ed::United States Senate election in Missouri, 2016::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade8b5455429939a52fe8ed::John Danforth::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade8b5455429939a52fe8ed::John Danforth::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade8b5455429939a52fe8ed::United States Senate election in Missouri, 1976",
+        "5ade8b5455429939a52fe8ed::John Danforth"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade8b5455429939a52fe8ed::United States Senate election in Missouri, 1976::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade8b5455429939a52fe8ed::United States Senate election in Missouri, 2016::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade8b5455429939a52fe8ed::John Danforth::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade8b5455429939a52fe8ed::John Danforth::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade8b5455429939a52fe8ed::John Danforth::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Danforth is an ordained Episcopal priest.\n[2] John Claggett Danforth (born September 5, 1936) is a retired American politician who began his career in 1968 as the Attorney General of Missouri and served three terms as United States Senator from Missouri.\n[3] The 2016 United States Senate election in Missouri was held on November 8, 2016, to elect a member of the United States Senate to represent the State of Missouri, concurrently with the 2016 U.S. presidential election, as well as other elections to the United States Senate in other states and elections to the United States House of Representatives and various state and local elections.\n[4] The 1976 United States Senate election in Missouri took place on November 2, 1976."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

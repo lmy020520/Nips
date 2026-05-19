@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Stolac",
+  "pred_answer": "Stolac",
+  "normalized_gold": "stolac",
+  "normalized_pred": "stolac",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85b1bf5542994c784ddb46",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85b1bf5542994c784ddb46::Radimlja::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85b1bf5542994c784ddb46::Kočerin tablet::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85b1bf5542994c784ddb46::Stolac::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85b1bf5542994c784ddb46::Jelah::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85b1bf5542994c784ddb46::Radimlja",
+        "5a85b1bf5542994c784ddb46::Stolac"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85b1bf5542994c784ddb46::Radimlja::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85b1bf5542994c784ddb46::Kočerin tablet::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85b1bf5542994c784ddb46::Stolac::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85b1bf5542994c784ddb46::Jelah::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85b1bf5542994c784ddb46::Jelah::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Jelah is a municipality on the river Usora in the northern part of Bosnia and Herzegovina, located near Teslić, Doboj and Tešanj.\n[2] Stolac is a town and municipality in Bosnia and Herzegovina, located in Herzegovina.\n[3] It was made in 1404 or 1405 on the bottom of the stećak (tombstone) of Viganj Milošević, in a necropolis in a field located close to the village of Kočerin, 9 kilometers away from the city of Široki Brijeg, today in Bosnia and Herzegovina.\n[4] Radimlja is a stećak necropolis located near Stolac, Bosnia and Herzegovina."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

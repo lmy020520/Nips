@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "United States Military Academy at West Point",
+  "pred_answer": "United States Military Academy at West Point",
+  "normalized_gold": "united states military academy at west point",
+  "normalized_pred": "united states military academy at west point",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4d6265542990ba0bbb16b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4d6265542990ba0bbb16b::Douglas MacArthur::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4d6265542990ba0bbb16b::Douglas MacArthur in World War II::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4d6265542990ba0bbb16b::MacArthur Monument (West Point)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4d6265542990ba0bbb16b::Vicente Lim::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4d6265542990ba0bbb16b::Douglas MacArthur",
+        "5ae4d6265542990ba0bbb16b::MacArthur Monument (West Point)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4d6265542990ba0bbb16b::Douglas MacArthur::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4d6265542990ba0bbb16b::Douglas MacArthur in World War II::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4d6265542990ba0bbb16b::MacArthur Monument (West Point)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4d6265542990ba0bbb16b::Vicente Lim::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4d6265542990ba0bbb16b::Vicente Lim::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Lim was the first Filipino graduate of the United States Military Academy at West Point (Class of 1914).\n[2] The Douglas MacArthur Monument at the United States Military Academy at West Point commemorates the Medal of Honor-winning former Superintendent and General of the Army Douglas MacArthur.\n[3] General of the Army Douglas MacArthur (January 26, 1880 – April 5, 1964) was an American general and field marshal of the Philippine Army.\n[4] Douglas MacArthur (26 January 18805 April 1964) was an American five-star general and Field Marshal of the Philippine Army."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

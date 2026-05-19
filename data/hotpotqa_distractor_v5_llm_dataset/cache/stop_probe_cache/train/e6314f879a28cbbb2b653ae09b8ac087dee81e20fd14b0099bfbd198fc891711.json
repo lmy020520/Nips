@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Rich Aurilia",
+  "pred_answer": "Rich Aurilia",
+  "normalized_gold": "rich aurilia",
+  "normalized_pred": "rich aurilia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae202e65542997f29b3c1fd",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae202e65542997f29b3c1fd::Ruddy Lugo::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae202e65542997f29b3c1fd::Rich Aurilia::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae202e65542997f29b3c1fd::Ruddy Lugo::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae202e65542997f29b3c1fd::Ruddy Lugo",
+        "5ae202e65542997f29b3c1fd::Rich Aurilia"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae202e65542997f29b3c1fd::Ruddy Lugo::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae202e65542997f29b3c1fd::Rich Aurilia::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae202e65542997f29b3c1fd::Ruddy Lugo::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae202e65542997f29b3c1fd::Ruddy Lugo::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He attended Xaverian High School (famous alumni include Chris Mullin and Rich Aurilia) in Brooklyn, New York.\n[2] The 24th round pick of the Texas Rangers in the 1992 Major League Baseball draft, Aurilia played in the Rangers minor league system before being traded with first baseman Desi Wilson to the San Francisco Giants for pitcher John Burkett in 1994 .\n[3] Ruddy Joraider Lugo (born May 22, 1980) is a former Dominican-American Major League Baseball right-handed relief pitcher."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

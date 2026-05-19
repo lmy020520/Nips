@@ -1,0 +1,100 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Daybreakers",
+  "pred_answer": "Daybreakers",
+  "normalized_gold": "daybreakers",
+  "normalized_pred": "daybreakers",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a75e37055429976ec32bc75",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a75e37055429976ec32bc75::Staten Island (film)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a75e37055429976ec32bc75::Evolver (film)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a75e37055429976ec32bc75::Daybreakers::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a75e37055429976ec32bc75::Daybreakers::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a75e37055429976ec32bc75::Isabel Lucas::0"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5a75e37055429976ec32bc75::The Black Album (Beatles album)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a75e37055429976ec32bc75::Daybreakers",
+        "5a75e37055429976ec32bc75::Isabel Lucas"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a75e37055429976ec32bc75::Staten Island (film)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a75e37055429976ec32bc75::Evolver (film)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a75e37055429976ec32bc75::Daybreakers::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a75e37055429976ec32bc75::Daybreakers::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a75e37055429976ec32bc75::Isabel Lucas::0",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5a75e37055429976ec32bc75::The Black Album (Beatles album)::1",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a75e37055429976ec32bc75::The Black Album (Beatles album)::1",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] It was created by the American actor Ethan Hawke, and became widely known as a result of its inclusion in the 2014 film \"Boyhood\".\n[2] Isabel Lucas (born 29 January 1985) is an Australian actress, and model.\n[3] Daybreakers is a 2009 Australian-American science fiction horror film written and directed by Michael and Peter Spierig.\n[4] Lead vampire hematologist Edward Dalton's (Ethan Hawke) work is interrupted by human survivors led by former vampire \"Elvis\" (Willem Dafoe), who has a cure that can save the human species."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

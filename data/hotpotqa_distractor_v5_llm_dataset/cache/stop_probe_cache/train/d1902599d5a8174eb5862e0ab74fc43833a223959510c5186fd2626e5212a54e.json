@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "1945",
+  "pred_answer": "1945",
+  "normalized_gold": "1945",
+  "normalized_pred": "1945",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7cfb4955429909bec768da",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7cfb4955429909bec768da::Pogoń Lwów (1904)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7cfb4955429909bec768da::Pogoń Lwów (2009)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7cfb4955429909bec768da::World War II::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7cfb4955429909bec768da::Zygmunt Steuermann::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7cfb4955429909bec768da::Pogoń Lwów (1904)",
+        "5a7cfb4955429909bec768da::World War II"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7cfb4955429909bec768da::Pogoń Lwów (1904)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7cfb4955429909bec768da::Pogoń Lwów (2009)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7cfb4955429909bec768da::World War II::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7cfb4955429909bec768da::Zygmunt Steuermann::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7cfb4955429909bec768da::Zygmunt Steuermann::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] During the following year he moved to Lwów (modern Lviv, Ukraine), where he joined the ŻKS Lwów sports club.\n[2] World War II (often abbreviated to WWII or WW2), also known as the Second World War, was a global war that lasted from 1939 to 1945, although related conflicts began earlier.\n[3] LKS Pogoń Lwów (Ukrainian: Погонь Львів ) is a sports club which was located in Lviv in Ukraine.\n[4] LKS Pogoń Lwów is a former Polish professional sports club which was located in Lwów (now Lviv in Ukraine), and existed from 1904 until the outbreak of World War II in 1939."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

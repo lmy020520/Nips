@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "October 2009",
+  "pred_answer": "October 2009",
+  "normalized_gold": "october 2009",
+  "normalized_pred": "october 2009",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a9061e05542995651fb5152",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a9061e05542995651fb5152::Lady Gaga::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a9061e05542995651fb5152::Bad Romance::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a9061e05542995651fb5152::Bad Romance::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a9061e05542995651fb5152::Lady Gaga",
+        "5a9061e05542995651fb5152::Bad Romance"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a9061e05542995651fb5152::Lady Gaga::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a9061e05542995651fb5152::Bad Romance::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a9061e05542995651fb5152::Bad Romance::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a9061e05542995651fb5152::Bad Romance::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Following an illegal demo leak, Gaga showcased the final product at Alexander McQueen's show at the Paris Fashion Week in October 2009, followed by the release of the single's cover art.\n[2] The song contains a few lines in French.\n[3] She also studied at CAP21 through New York University's Tisch School of the Arts before dropping out to pursue a musical career."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

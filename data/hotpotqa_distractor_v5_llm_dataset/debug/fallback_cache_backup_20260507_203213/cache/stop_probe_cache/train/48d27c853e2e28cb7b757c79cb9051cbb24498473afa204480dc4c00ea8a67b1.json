@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "23",
+  "pred_answer": "23",
+  "normalized_gold": "23",
+  "normalized_pred": "23",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abdaca255429965af743db9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abdaca255429965af743db9::Milan, Tennessee::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abdaca255429965af743db9::Gibson Generating Station::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abdaca255429965af743db9::Milan Army Ammunition Plant::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abdaca255429965af743db9::Chapman, Lawrence County, Kentucky::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abdaca255429965af743db9::Milan, Tennessee",
+        "5abdaca255429965af743db9::Milan Army Ammunition Plant"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abdaca255429965af743db9::Milan, Tennessee::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abdaca255429965af743db9::Gibson Generating Station::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abdaca255429965af743db9::Milan Army Ammunition Plant::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abdaca255429965af743db9::Chapman, Lawrence County, Kentucky::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abdaca255429965af743db9::Chapman, Lawrence County, Kentucky::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Chapman is an unincorporated community located in Lawrence County, Kentucky, United States on the eastern bank of the Levisa Fork River.\n[2] Milan Army Ammunition Plant (MLAAP) is an ammunition plant of the United States Army near Milan, Tennessee and about 23 miles (37 km) north of Jackson, Tennessee.\n[3] With a 2013 aggregate output capacity among its five units of 3,345 megawatts, it is the largest power plant run by Duke Energy, the third-largest coal power plant in the world, and the tenth-largest electrical plant in the United States, With the reduction of Nanticoke Generating Station, it became the largest coal power plant in North America by generated power late in 2012.\n[4] Milan ( ) is the second largest city after Humboldt in Gibson County, Tennessee, and the largest entirely within the county."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

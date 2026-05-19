@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Mountain Cur",
+  "pred_answer": "Mountain Cur",
+  "normalized_gold": "mountain cur",
+  "normalized_pred": "mountain cur",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a73853255429905862fe04d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a73853255429905862fe04d::Mountain Cur::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a73853255429905862fe04d::West Siberian Laika::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a73853255429905862fe04d::East Siberian Laika::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a73853255429905862fe04d::Mountain Cur::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a73853255429905862fe04d::Mountain Cur",
+        "5a73853255429905862fe04d::East Siberian Laika"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a73853255429905862fe04d::Mountain Cur::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a73853255429905862fe04d::West Siberian Laika::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a73853255429905862fe04d::East Siberian Laika::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a73853255429905862fe04d::Mountain Cur::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a73853255429905862fe04d::Mountain Cur::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Mountain Cur is a type of working dog that is bred specifically for treeing and trailing small game, like squirrel and raccoons.\n[2] The East Siberian Laika (Vostotchno-Sibirskaia Laika) is a Russian breed of dog of spitz type, a hunting dog originating in parts of Siberia east of the Yenisei River.\n[3] The West Siberian Laika or \"WSL\", is a breed of hunting dog and a breed of spitz type.\n[4] It can also be used as a water dog."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

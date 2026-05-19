@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "German submarine U-505",
+  "pred_answer": "German submarine U-505",
+  "normalized_gold": "german submarine u-505",
+  "normalized_pred": "german submarine u-505",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a1c115542990198eaf086",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a1c115542990198eaf086::Type 35 torpedo boat::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a1c115542990198eaf086::Foreign U-boats::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a1c115542990198eaf086::Zenon B. Lukosius::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a1c115542990198eaf086::German submarine U-505::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7a1c115542990198eaf086::Foreign U-boats::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a1c115542990198eaf086::Zenon B. Lukosius",
+        "5a7a1c115542990198eaf086::German submarine U-505"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a1c115542990198eaf086::Type 35 torpedo boat::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a1c115542990198eaf086::Foreign U-boats::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a1c115542990198eaf086::Zenon B. Lukosius::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a1c115542990198eaf086::German submarine U-505::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7a1c115542990198eaf086::Foreign U-boats::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a1c115542990198eaf086::Foreign U-boats::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Seven of these were destroyed by  , which was a modified Type IX U-Boat originally built for the Turkish Navy.\n[2] U-505 is a German Type IXC U-boat built for Nazi Germany's \"Kriegsmarine\" during World War II.\n[3] Zenon B. Lukosius (August 24, 1918 – August 12, 2006) was a Lithuanian–American World War II veteran who was a member of the U.S. Navy crew that captured the German submarine U-505, in 1944.\n[4] Foreign U-Boats was the title for a special section created by Nazi Germany's \"Kriegsmarine\" that adopted 13 captured enemy submarines and a single Turkish vessel into the U-Boat corps."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

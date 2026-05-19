@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Rip",
+  "pred_answer": "Rip",
+  "normalized_gold": "rip",
+  "normalized_pred": "rip",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd09e155429965836004fe",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd09e155429965836004fe::T. J. Lottie::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd09e155429965836004fe::Husband Flint Mill Site::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd09e155429965836004fe::Richard Hamilton (basketball)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd09e155429965836004fe::So Plush::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd09e155429965836004fe::T. J. Lottie",
+        "5abd09e155429965836004fe::Richard Hamilton (basketball)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd09e155429965836004fe::T. J. Lottie::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd09e155429965836004fe::Husband Flint Mill Site::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd09e155429965836004fe::Richard Hamilton (basketball)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd09e155429965836004fe::So Plush::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd09e155429965836004fe::So Plush::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] So Plush was an American R&B group composed of Rhonda Roussel, Donielle Carter, Raquel Campbell and T. J. Lottie who was signed to Epic Records in the 1990s.\n[2] Richard Clay \"Rip\" Hamilton (born February 14, 1978) is an American retired professional basketball player who played 14 seasons in the National Basketball Association (NBA).\n[3] It was originally built in the 19th century by Joshua Husband, then acquired by George J. Kroeger in 1909.\n[4] T. J. Lottie is an American singer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

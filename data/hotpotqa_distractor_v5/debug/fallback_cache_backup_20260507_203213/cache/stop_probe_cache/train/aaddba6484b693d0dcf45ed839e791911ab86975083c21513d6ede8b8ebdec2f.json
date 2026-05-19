@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "East Lindsey district",
+  "pred_answer": "East Lindsey district",
+  "normalized_gold": "east lindsey district",
+  "normalized_pred": "east lindsey district",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8a26195542992d82986eca",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8a26195542992d82986eca::Brook, Heywood::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8a26195542992d82986eca::Thirukkattupalli::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8a26195542992d82986eca::Spilsby::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8a26195542992d82986eca::Willoughby, Lincolnshire::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8a26195542992d82986eca::Brook, Heywood",
+        "5a8a26195542992d82986eca::Spilsby"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8a26195542992d82986eca::Brook, Heywood::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8a26195542992d82986eca::Thirukkattupalli::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8a26195542992d82986eca::Spilsby::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8a26195542992d82986eca::Willoughby, Lincolnshire::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8a26195542992d82986eca::Willoughby, Lincolnshire::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Willoughby is a village in the East Lindsey district of Lincolnshire, England.\n[2] Spilsby is a market town, civil parish and electoral ward in the East Lindsey district of Lincolnshire, England.\n[3] Thirukkattupalli (Ancient name: Melaithirukattupalli) is a small ancient agricultural town near Thiruvaiyaru in Thanjavur district, Tamil Nadu.\n[4] It was the seat of Robert Willoughby, 1st Baron Willoughby de Broke (c.1452-1502), KG, an important supporter of King Henry VII, whose title unusually incorporates the name of his seat, in order to differentiate him from his ancestors Barons Willoughby of Eresby, seated at Eresby Manor near Spilsby in Lincolnshire."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

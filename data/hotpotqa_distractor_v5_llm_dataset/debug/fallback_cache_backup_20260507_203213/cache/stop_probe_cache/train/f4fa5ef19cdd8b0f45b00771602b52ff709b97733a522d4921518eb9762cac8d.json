@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Herzegovina",
+  "pred_answer": "Herzegovina",
+  "normalized_gold": "herzegovina",
+  "normalized_pred": "herzegovina",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abfb2a35542997ec76fd436",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abfb2a35542997ec76fd436::Slobodan Princip::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abfb2a35542997ec76fd436::Gavrilo Princip::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abfb2a35542997ec76fd436::Jezdimir Dangić::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abfb2a35542997ec76fd436::Slobodan Princip",
+        "5abfb2a35542997ec76fd436::Gavrilo Princip"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abfb2a35542997ec76fd436::Slobodan Princip::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abfb2a35542997ec76fd436::Gavrilo Princip::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abfb2a35542997ec76fd436::Jezdimir Dangić::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abfb2a35542997ec76fd436::Jezdimir Dangić::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Born in the town of Bratunac, he was imprisoned during World War I for his membership of the revolutionary movement Young Bosnia.\n[2] Gavrilo Princip (Serbian Cyrillic: , ] ; 25 July [O.S. 13 July] 1894 28 April 1918) was a Bosnian Serb member of Young Bosnia, a Yugoslavist organization seeking an end to Austro-Hungarian rule in Bosnia and Herzegovina.\n[3] Slobodan Princip (; 25 May 1914–May 1942), nicknamed Seljo (Сељо), was a Yugoslav Partisan fighter and the district staff chief of Partisan Sarajevo Oblast during World War II."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

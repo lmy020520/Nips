@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Moe Dalitz",
+  "pred_answer": "Moe Dalitz",
+  "normalized_gold": "moe dalitz",
+  "normalized_pred": "moe dalitz",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7666095542992d0ec060db",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7666095542992d0ec060db::Moe Dalitz::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7666095542992d0ec060db::Moe Greene::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7666095542992d0ec060db::Arthur Max::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7666095542992d0ec060db::Moe Dalitz",
+        "5a7666095542992d0ec060db::Moe Greene"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7666095542992d0ec060db::Moe Dalitz::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7666095542992d0ec060db::Moe Greene::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7666095542992d0ec060db::Arthur Max::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7666095542992d0ec060db::Arthur Max::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He was also nominated for \"Black Hawk Down\", \"Robin Hood\", \"American Gangster\", \"Prometheus\" and \"Panic Room\".\n[2] Morris \"Moe\" Greene is a fictional character appearing in Mario Puzo's 1969 novel \"The Godfather\" and the 1972 movie of the same name.\n[3] Morris Barney Dalitz (December 25, 1899 – August 31, 1989), known as Moe Dalitz, was an American gangster, businessman, casino owner and philanthropist."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

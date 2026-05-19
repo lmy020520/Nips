@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Unbearable Lightness of Being",
+  "pred_answer": "The Unbearable Lightness of Being",
+  "normalized_gold": "the unbearable lightness of being",
+  "normalized_pred": "the unbearable lightness of being",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a73992e55429908901be308",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a73992e55429908901be308::In the Kingdom of Kitsch You Will Be a Monster::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a73992e55429908901be308::Soviet Kitsch::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a73992e55429908901be308::The Unbearable Lightness of Being::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a73992e55429908901be308::The Festival of Insignificance::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a73992e55429908901be308::In the Kingdom of Kitsch You Will Be a Monster",
+        "5a73992e55429908901be308::The Unbearable Lightness of Being"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a73992e55429908901be308::In the Kingdom of Kitsch You Will Be a Monster::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a73992e55429908901be308::Soviet Kitsch::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a73992e55429908901be308::The Unbearable Lightness of Being::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a73992e55429908901be308::The Festival of Insignificance::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a73992e55429908901be308::The Festival of Insignificance::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Festival of Insignificance (French: \"La fête de l'insignifiance\" ) is a novel by Milan Kundera.\n[2] The Unbearable Lightness of Being (Czech: \"Nesnesitelná lehkost bytí\" ) is a 1984 novel by Milan Kundera, about two women, two men, a dog and their lives in the 1968 Prague Spring period of Czechoslovak history.\n[3] The title is drawn from Milan Kundera's expression for the vacuous aesthetics of Stalinist-style communism, a theme in his book \"The Unbearable Lightness of Being\".\n[4] In the Kingdom of Kitsch You Will Be a Monster is an album by the Norwegian band Shining."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

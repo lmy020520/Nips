@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Tom Savini",
+  "pred_answer": "Tom Savini",
+  "normalized_gold": "tom savini",
+  "normalized_pred": "tom savini",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a754f655542993748c89826",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a754f655542993748c89826::John Amplas::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a754f655542993748c89826::Taso N. Stavrakis::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a754f655542993748c89826::Knightriders::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a754f655542993748c89826::Tom Savini::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a754f655542993748c89826::Wes Takahashi::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a754f655542993748c89826::Knightriders",
+        "5a754f655542993748c89826::Tom Savini"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a754f655542993748c89826::John Amplas::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a754f655542993748c89826::Taso N. Stavrakis::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a754f655542993748c89826::Knightriders::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a754f655542993748c89826::Tom Savini::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a754f655542993748c89826::Wes Takahashi::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a754f655542993748c89826::Wes Takahashi::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He is known for his special effects work on numerous films; his efforts include animating the time travel sequences for all three films in the \"Back to the Future\" trilogy, as well as animating the \"boy on the moon\" in the DreamWorks logo.\n[2] He is known for his makeup and special effects work on many films directed by George A. Romero, including \"Martin\", \"Dawn of the Dead\", \"Day of the Dead\", \"Creepshow\" and \"Monkey Shines\"; he also created the special effects and makeup for many cult classics like \"Friday the 13th\" (parts I and IV), \"Maniac\", \"The Burning\", \"The Prowler\" and \"The Texas Chainsaw Massacre 2\".\n[3] Knightriders, also known as George A. Romero's Knightriders, is a 1981 American drama film written and directed by George A. Romero and starring Ed Harris, Gary Lahti, Tom Savini, Amy Ingersoll, Patricia Tallman and Ken Foree.\n[4] Taso Nicholas Stavrakis (born July 12, 1957) is an American film and television actor and stunt performer best known for his appearances in the George A. Romero films \"Dawn of the Dead\", \"Knightriders\", and \"Day of the Dead\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

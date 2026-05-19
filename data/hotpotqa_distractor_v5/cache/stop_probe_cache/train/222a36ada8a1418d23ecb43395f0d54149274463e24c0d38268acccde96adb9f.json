@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Rob Pelinka",
+  "pred_answer": "Rob Pelinka",
+  "normalized_gold": "rob pelinka",
+  "normalized_pred": "rob pelinka",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2fda055429921a00ab0c3",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2fda055429921a00ab0c3::High School Football National Championship::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2fda055429921a00ab0c3::Demetrius Calip::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2fda055429921a00ab0c3::Rob Pelinka::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2fda055429921a00ab0c3::Demetrius Calip::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2fda055429921a00ab0c3::Demetrius Calip",
+        "5ac2fda055429921a00ab0c3::Rob Pelinka"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2fda055429921a00ab0c3::High School Football National Championship::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2fda055429921a00ab0c3::Demetrius Calip::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2fda055429921a00ab0c3::Rob Pelinka::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2fda055429921a00ab0c3::Demetrius Calip::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2fda055429921a00ab0c3::Demetrius Calip::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] As a member of the 1988-1989 National Champions, his teammates included Glen Rice, Terry Mills, Loy Vaught, Rumeal Robinson, Sean Higgins, and Rob Pelinka.\n[2] Robert Todd Pelinka Jr. (born December 23, 1969) is an American lawyer, National Basketball Association (NBA) team executive, sports agent, and former college basketball player from Lake Bluff, Illinois (suburban Chicago).\n[3] Demetrius Calip (born November 18, 1969) is an American professional basketball player formerly of the Los Angeles Lakers of the NBA.\n[4] The High School Football National Championship is a national championship honor awarded to the best high school football team(s) in the United States of America based on rankings from \"USA Today\" and the National Prep Poll."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

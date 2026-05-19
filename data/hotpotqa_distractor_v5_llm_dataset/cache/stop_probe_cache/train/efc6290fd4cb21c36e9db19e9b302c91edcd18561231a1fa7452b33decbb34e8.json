@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Texas",
+  "pred_answer": "Texas",
+  "normalized_gold": "texas",
+  "normalized_pred": "texas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8716255542996432c5721a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8716255542996432c5721a::Neon Boots Dancehall &amp; Saloon::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8716255542996432c5721a::The Palace Restaurant and Saloon::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8716255542996432c5721a::Gilley's Club::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8716255542996432c5721a::Wildhorse Saloon::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8716255542996432c5721a::Neon Boots Dancehall &amp; Saloon",
+        "5a8716255542996432c5721a::Gilley's Club"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8716255542996432c5721a::Neon Boots Dancehall &amp; Saloon::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8716255542996432c5721a::The Palace Restaurant and Saloon::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8716255542996432c5721a::Gilley's Club::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8716255542996432c5721a::Wildhorse Saloon::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8716255542996432c5721a::Wildhorse Saloon::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Wildhorse Saloon is a country/western-themed restaurant, live music venue, and dance club located in downtown Nashville, Tennessee.\n[2] Gilley's was a bar/honky tonk founded in 1971 by country singer Mickey Gilley in Pasadena, Texas.\n[3] The Palace Restaurant and Saloon is both the oldest business and oldest bar operating in the state of Arizona, United States.\n[4] In the 1970s and 1980s the club was considered the main rival to Gilley's Club across town in Pasadena."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

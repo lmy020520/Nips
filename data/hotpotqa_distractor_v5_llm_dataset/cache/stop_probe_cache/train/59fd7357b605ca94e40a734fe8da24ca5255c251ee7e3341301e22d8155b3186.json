@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Saturday Night Live",
+  "pred_answer": "Saturday Night Live",
+  "normalized_gold": "saturday night live",
+  "normalized_pred": "saturday night live",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab5f760554299110f21999e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab5f760554299110f21999e::Tim Meadows::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab5f760554299110f21999e::List of previous General Hospital cast members::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab5f760554299110f21999e::Tween Fest::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab5f760554299110f21999e::General Hospital cast members::9"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab5f760554299110f21999e::Tim Meadows",
+        "5ab5f760554299110f21999e::Tween Fest"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab5f760554299110f21999e::Tim Meadows::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab5f760554299110f21999e::List of previous General Hospital cast members::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab5f760554299110f21999e::Tween Fest::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab5f760554299110f21999e::General Hospital cast members::9",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab5f760554299110f21999e::General Hospital cast members::9",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The following list is of cast members who are currently on the show: the main and recurring cast members, or those who are debuting, departing or returning to the series.\n[2] Tween Fest is an American comedy series produced by Funny Or Die for the streaming service go90.\n[3] This is a list of former, notable guest appearances, and deceased cast members.\n[4] Timothy \"Tim\" Meadows (born February 5, 1961) is an American actor and comedian and one of the longest-running cast members on \"Saturday Night Live\", where he appeared for ten seasons."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Legnago",
+  "pred_answer": "Legnago",
+  "normalized_gold": "legnago",
+  "normalized_pred": "legnago",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae80240554299321098402f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae80240554299321098402f::Prima la musica e poi le parole::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae80240554299321098402f::Giulio Sabino::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae80240554299321098402f::Antonio Salieri::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae80240554299321098402f::Richard Stone (musician)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae80240554299321098402f::Giulio Sabino",
+        "5ae80240554299321098402f::Antonio Salieri"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae80240554299321098402f::Prima la musica e poi le parole::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae80240554299321098402f::Giulio Sabino::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae80240554299321098402f::Antonio Salieri::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae80240554299321098402f::Richard Stone (musician)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae80240554299321098402f::Richard Stone (musician)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He performs on lute and theorbo as a soloist and accompanist; he co-founded and co-directs Tempesta di Mare, The Philadelphia Baroque Orchestra; his musical editions are published by AR Editions and Prima la Musica; and he lectures and teaches lute, theorbo, continuo and performance practice for singers and instrumentalists at the Peabody Conservatory of The Johns Hopkins University.\n[2] He was born in Legnago, south of Verona, in the Republic of Venice, and spent his adult life and career as a subject of the Habsburg Monarchy.\n[3] The opera, staged in six or seven European countries at the end of the 18th century, was the subject of a parody in Antonio Salieri's 1786 work \"Prima la musica e poi le parole\".\n[4] Prima la musica e poi le parole (\"First the music and then the words\"), also called \"Prima la musica, poi le parole \" is an opera in one act by Antonio Salieri to a libretto by Giovanni Battista Casti."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

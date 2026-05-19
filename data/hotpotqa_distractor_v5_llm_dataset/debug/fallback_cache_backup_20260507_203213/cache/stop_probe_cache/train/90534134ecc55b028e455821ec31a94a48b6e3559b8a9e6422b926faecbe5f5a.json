@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Merle Haggard",
+  "pred_answer": "Merle Haggard",
+  "normalized_gold": "merle haggard",
+  "normalized_pred": "merle haggard",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8eff8f5542997ba9cb317e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8eff8f5542997ba9cb317e::Holding My Own::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8eff8f5542997ba9cb317e::Lonesome Pine Fiddlers::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8eff8f5542997ba9cb317e::Marty Haggard::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8eff8f5542997ba9cb317e::John R. Cash::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8eff8f5542997ba9cb317e::Holding My Own",
+        "5a8eff8f5542997ba9cb317e::Marty Haggard"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8eff8f5542997ba9cb317e::Holding My Own::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8eff8f5542997ba9cb317e::Lonesome Pine Fiddlers::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8eff8f5542997ba9cb317e::Marty Haggard::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8eff8f5542997ba9cb317e::John R. Cash::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8eff8f5542997ba9cb317e::John R. Cash::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Cash original \"Lonesome to the Bone\" had previously appeared on \"Ragged Old Flag\" (1974) and would make one more appearance on \"Silver\" (1979).\n[2] He is the son of singer-songwriter Merle Haggard.\n[3] Ray and Charlie's father, Charlie, was a talented banjo player and the women in the family, Geraldine and Bobbi, were great singers.\n[4] \"Trains Make Me Lonesome\" was previously recorded by the trio Schuyler, Knobloch, & Overstreet on their self-titled debut album, and before that by Marty Haggard."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

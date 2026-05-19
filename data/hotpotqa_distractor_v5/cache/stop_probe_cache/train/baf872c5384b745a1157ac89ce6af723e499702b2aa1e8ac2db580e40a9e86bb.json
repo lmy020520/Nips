@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "May 29, 1954",
+  "pred_answer": "May 29, 1954",
+  "normalized_gold": "may 29 1954",
+  "normalized_pred": "may 29 1954",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae775c15542997ec2727662",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae775c15542997ec2727662::The Bear That Couldn't Sleep::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae775c15542997ec2727662::Metro-Goldwyn-Mayer::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae775c15542997ec2727662::Little School Mouse::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae775c15542997ec2727662::Aladdin's Lantern::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae775c15542997ec2727662::Metro-Goldwyn-Mayer",
+        "5ae775c15542997ec2727662::Little School Mouse"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae775c15542997ec2727662::The Bear That Couldn't Sleep::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae775c15542997ec2727662::Metro-Goldwyn-Mayer::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae775c15542997ec2727662::Little School Mouse::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae775c15542997ec2727662::Aladdin's Lantern::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae775c15542997ec2727662::Aladdin's Lantern::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was the 171st \"Our Gang\" short (172nd episode, 83rd talking short, 84th talking episode, and third MGM produced episode) that was released.\n[2] The cartoon was animated by Irven Spence and Ed Barge, with backgrounds by Robert Gentle, and released on May 29, 1954 by Metro-Goldwyn-Mayer.\n[3] Metro-Goldwyn-Mayer Studios Inc. (abbreviated as MGM or M-G-M, also known as Metro-Goldwyn-Mayer Pictures, Metro-Goldwyn-Mayer or simply Metro, and for a former interval known as Metro-Goldwyn-Mayer/United Artists, or MGM/UA) is an American media company, involved primarily in the production and distribution of feature films and television programs.\n[4] The Bear That Couldn't Sleep is a 1939 animated short film, directed by Rudolf Ising for MGM as part of Metro-Goldwyn-Mayer's \"Barney Bear\" series."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

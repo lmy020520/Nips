@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "No Reservations",
+  "pred_answer": "No Reservations",
+  "normalized_gold": "no reservations",
+  "normalized_pred": "no reservations",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a78e96b554299148911f994",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a78e96b554299148911f994::No Reservations (film)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a78e96b554299148911f994::Mostly Martha (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a78e96b554299148911f994::Abigail Breslin::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a78e96b554299148911f994::Martina Gedeck::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a78e96b554299148911f994::No Reservations (film)",
+        "5a78e96b554299148911f994::Abigail Breslin"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a78e96b554299148911f994::No Reservations (film)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a78e96b554299148911f994::Mostly Martha (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a78e96b554299148911f994::Abigail Breslin::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a78e96b554299148911f994::Martina Gedeck::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a78e96b554299148911f994::Martina Gedeck::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She came to broader, international attention due to her roles in films such as \"Mostly Martha\" (2001), \"The Lives of Others\" (2006), and \"The Baader Meinhof Complex\" (2008).\n[2] Her other film roles include \"Raising Helen\" (2004), \"Little Miss Sunshine\" (2006), for which she was nominated for the Academy Award for Best Supporting Actress, \"No Reservations\" (2007), \"Nim's Island\" (2008), \"Definitely, Maybe\" (2008), \"My Sister's Keeper\" (2009), \"Zombieland\" (2009), \"Rango\" (2011), and \"\" (2013).\n[3] Mostly Martha (original German title: \"Bella Martha\") is a 2001 German romantic comedy drama film written and directed by Sandra Nettelbeck and starring Martina Gedeck, Maxime Foerste, and Sergio Castellitto.\n[4] Starring Catherine Zeta-Jones, Aaron Eckhart and Abigail Breslin, the screenplay by Carol Fuchs is an adaptation of an original script by Sandra Nettelbeck, which served as the basis for the 2001 German film \"Mostly Martha\", and revolves around a hard-edged chef whose life is turned upside down when she decides to take in her young niece following a tragic accident that killed her sister."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

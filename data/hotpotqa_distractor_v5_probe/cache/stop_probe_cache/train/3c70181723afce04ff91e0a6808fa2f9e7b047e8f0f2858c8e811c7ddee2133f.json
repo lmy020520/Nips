@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Impatiens",
+  "pred_answer": "Impatiens",
+  "normalized_gold": "impatiens",
+  "normalized_pred": "impatiens",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abfa7fe5542994516f454e4",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abfa7fe5542994516f454e4::Ommatidae::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abfa7fe5542994516f454e4::List of Celtic tribes::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abfa7fe5542994516f454e4::Impatiens::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abfa7fe5542994516f454e4::Clitoria::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abfa7fe5542994516f454e4::Jaguar Conservation Fund::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abfa7fe5542994516f454e4::Impatiens",
+        "5abfa7fe5542994516f454e4::Clitoria"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abfa7fe5542994516f454e4::Ommatidae::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abfa7fe5542994516f454e4::List of Celtic tribes::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abfa7fe5542994516f454e4::Impatiens::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abfa7fe5542994516f454e4::Clitoria::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abfa7fe5542994516f454e4::Jaguar Conservation Fund::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abfa7fe5542994516f454e4::Jaguar Conservation Fund::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The largest part (48%) of the jaguar’s geographical distribution, which extends from northern Argentina to the southwestern United States, lies within Brazil.\n[2] Clitoria is a genus of Old World, insect-pollinated flowering pea vines.\n[3] Impatiens is a genus of about 850 to 1,000 species of flowering plants, widely distributed throughout the Northern Hemisphere and the tropics.\n[4] This geographical distribution of Celtic tribes does not imply that tribes that lived in the same general geographical area were more related."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

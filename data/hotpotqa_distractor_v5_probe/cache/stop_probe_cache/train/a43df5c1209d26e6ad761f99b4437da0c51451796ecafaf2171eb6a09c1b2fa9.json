@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Meet the Patels",
+  "pred_answer": "Meet the Patels",
+  "normalized_gold": "meet the patels",
+  "normalized_pred": "meet the patels",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add8da65542992200553b53",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add8da65542992200553b53::Meet the Patels::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add8da65542992200553b53::Sheila Nevins::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add8da65542992200553b53::Protected (film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5add8da65542992200553b53::The Bride Walks Out::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add8da65542992200553b53::Meet the Patels",
+        "5add8da65542992200553b53::Protected (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add8da65542992200553b53::Meet the Patels::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add8da65542992200553b53::Sheila Nevins::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add8da65542992200553b53::Protected (film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5add8da65542992200553b53::The Bride Walks Out::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add8da65542992200553b53::The Bride Walks Out::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Bride Walks Out is a 1936 American romantic comedy film directed by Leigh Jason and starring Barbara Stanwyck, Gene Raymond, and Robert Young.\n[2] Protected is a 1975 documentary film, narrated by Don Brady and Sydney born producer Robert Hughes.\n[3] Sheila Nevins (born April 6, 1939) is an American television producer and the President of HBO Documentary Films.\n[4] Meet the Patels is a 2014 American romantic comedy documentary film directed by siblings Geeta V. Patel and Ravi V. Patel."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

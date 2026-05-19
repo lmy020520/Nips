@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hanna",
+  "pred_answer": "Hanna",
+  "normalized_gold": "hanna",
+  "normalized_pred": "hanna",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac119335542992a796dede4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac119335542992a796dede4::I'd Come for You::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac119335542992a796dede4::Jane Vain and the Dark Matter::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac119335542992a796dede4::Nickelback::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac119335542992a796dede4::The Famines (band)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac119335542992a796dede4::I'd Come for You",
+        "5ac119335542992a796dede4::Nickelback"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac119335542992a796dede4::I'd Come for You::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac119335542992a796dede4::Jane Vain and the Dark Matter::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac119335542992a796dede4::Nickelback::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac119335542992a796dede4::The Famines (band)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac119335542992a796dede4::The Famines (band)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Famines are a Canadian indie rock band formed in 2008 in Edmonton, Alberta, Canada now based in Montreal, Quebec, Canada.\n[2] Nickelback is a Canadian rock band formed in 1995 in Hanna, Alberta, Canada.\n[3] Jane Vain and the Dark Matter is an indie rock band formed in 2005 from Calgary, Alberta, Canada.\n[4] \"I'd Come for You\" is the second European single (fourth in Canada) from Nickelback's 2008 album \"Dark Horse\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

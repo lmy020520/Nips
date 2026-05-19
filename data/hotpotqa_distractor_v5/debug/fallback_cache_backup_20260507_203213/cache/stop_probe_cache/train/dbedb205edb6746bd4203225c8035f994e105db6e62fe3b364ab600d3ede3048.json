@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Italy",
+  "pred_answer": "Italy",
+  "normalized_gold": "italy",
+  "normalized_pred": "italy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3825e5542990afbd1e17e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3825e5542990afbd1e17e::Princess Yolanda of Savoy::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3825e5542990afbd1e17e::Amaro Montenegro::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3825e5542990afbd1e17e::Elena of Montenegro::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae3825e5542990afbd1e17e::Marie Jeanne Baptiste of Savoy-Nemours::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3825e5542990afbd1e17e::Princess Yolanda of Savoy",
+        "5ae3825e5542990afbd1e17e::Elena of Montenegro"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3825e5542990afbd1e17e::Princess Yolanda of Savoy::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3825e5542990afbd1e17e::Amaro Montenegro::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3825e5542990afbd1e17e::Elena of Montenegro::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae3825e5542990afbd1e17e::Marie Jeanne Baptiste of Savoy-Nemours::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3825e5542990afbd1e17e::Marie Jeanne Baptiste of Savoy-Nemours::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Marie Jeanne of Savoy (Marie Jeanne Baptiste; 11 April 1644 – 15 March 1724) was born a Princess of Savoy and became the Duchess of Savoy by marriage.\n[2] Princess Elena of Montenegro or more commonly known as Queen Elena of Italy (8 January 1871 – 28 November 1952) nicknamed \"Jela\" was the daughter of King Nicholas I of Montenegro and his wife, Milena Vukotić.\n[3] The amaro was first produced by Stanislao Cobianchi in 1885 and is named after Princess Elena of Montenegro.\n[4] Princess Yolanda of Savoy (1 June 1901 – 16 October 1986) was the eldest daughter of King Victor Emmanuel III of Italy and his wife Queen Elena of Montenegro, and the sister of Umberto II, the last king of Italy."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

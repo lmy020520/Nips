@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Wheathampstead",
+  "pred_answer": "Wheathampstead",
+  "normalized_gold": "wheathampstead",
+  "normalized_pred": "wheathampstead",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d5c925542991319bc93b2",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d5c925542991319bc93b2::Marshalls Heath::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d5c925542991319bc93b2::Wheathampstead::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d5c925542991319bc93b2::Watercress Wildlife Site::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d5c925542991319bc93b2::Marshalls Heath",
+        "5a7d5c925542991319bc93b2::Wheathampstead"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d5c925542991319bc93b2::Marshalls Heath::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d5c925542991319bc93b2::Wheathampstead::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d5c925542991319bc93b2::Watercress Wildlife Site::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d5c925542991319bc93b2::Watercress Wildlife Site::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Watercress Wildlife Site is a 1.2 hectare Local Nature Reserve in St Albans, Hertfordshire, England.\n[2] Wheathampstead is a village and civil parish in Hertfordshire, England, north of St Albans.\n[3] Marshalls Heath is a 4 hectare Local Nature Reserve in Wheathampstead in Hertfordshire."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

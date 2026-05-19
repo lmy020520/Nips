@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Miley Cyrus",
+  "pred_answer": "Miley Cyrus",
+  "normalized_gold": "miley cyrus",
+  "normalized_pred": "miley cyrus",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d51205542991319bc93a6",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d51205542991319bc93a6::Ashtrays and Heartbreaks::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d51205542991319bc93a6::Reincarnated (album)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d51205542991319bc93a6::D'Kings Men::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d51205542991319bc93a6::Ashtrays and Heartbreaks",
+        "5a7d51205542991319bc93a6::Reincarnated (album)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d51205542991319bc93a6::Ashtrays and Heartbreaks::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d51205542991319bc93a6::Reincarnated (album)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d51205542991319bc93a6::D'Kings Men::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d51205542991319bc93a6::D'Kings Men::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Nigerian recording artist D'banj started working on the album prior to splitting with his longtime business partner, Don Jazzy.\n[2] It is his only release under his reggae persona Snoop Lion.\n[3] \"Ashtrays and Heartbreaks\" is a song by American recording artist Snoop Lion featuring American recording artist Miley Cyrus."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

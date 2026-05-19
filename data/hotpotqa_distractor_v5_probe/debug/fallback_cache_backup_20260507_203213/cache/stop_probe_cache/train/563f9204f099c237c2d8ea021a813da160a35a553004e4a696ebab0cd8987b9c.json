@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "November 27, 1940",
+  "pred_answer": "November 27, 1940",
+  "normalized_gold": "november 27 1940",
+  "normalized_pred": "november 27 1940",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae697505542996d980e7c29",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae697505542996d980e7c29::Bruce Lee::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae697505542996d980e7c29::Danny Chan Kwok-kwan::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae697505542996d980e7c29::The Legend of Bruce Lee::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae697505542996d980e7c29::Bruce Lee",
+        "5ae697505542996d980e7c29::Danny Chan Kwok-kwan"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae697505542996d980e7c29::Bruce Lee::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae697505542996d980e7c29::Danny Chan Kwok-kwan::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae697505542996d980e7c29::The Legend of Bruce Lee::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae697505542996d980e7c29::The Legend of Bruce Lee::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Legend of Bruce Lee is a 2008 Chinese biographical martial arts television series based on the life story of martial artist and actor Bruce Lee.\n[2] Danny Chan Kwok-kwan (born 1 August 1975) is a Hong Kong actor, dance choreographer, and lead singer of the rock band, Poet.\n[3] Lee Jun-fan (; November 27, 1940 – July 20, 1973), known professionally as Bruce Lee, was a Hong Kong and American actor, film director, martial artist, martial arts instructor, philosopher and founder of the martial art Jeet Kune Do."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

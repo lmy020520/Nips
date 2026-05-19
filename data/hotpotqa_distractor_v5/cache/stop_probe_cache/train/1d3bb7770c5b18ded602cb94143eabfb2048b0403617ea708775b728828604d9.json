@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Walt Disney Productions",
+  "pred_answer": "Walt Disney Productions",
+  "normalized_gold": "walt disney productions",
+  "normalized_pred": "walt disney productions",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adfbc2555429906c02daa24",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adfbc2555429906c02daa24::Kaiser Aluminum::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adfbc2555429906c02daa24::Ashtead Common::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adfbc2555429906c02daa24::Candleshoe::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adfbc2555429906c02daa24::The Rescuers::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5adfbc2555429906c02daa24::National Grid Corporation of the Philippines::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adfbc2555429906c02daa24::Candleshoe",
+        "5adfbc2555429906c02daa24::The Rescuers"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adfbc2555429906c02daa24::Kaiser Aluminum::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adfbc2555429906c02daa24::Ashtead Common::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adfbc2555429906c02daa24::Candleshoe::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adfbc2555429906c02daa24::The Rescuers::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5adfbc2555429906c02daa24::National Grid Corporation of the Philippines::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adfbc2555429906c02daa24::National Grid Corporation of the Philippines::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It also updates the daily power situation outlook for Luzon, Visayas, and Mindanao by determining the available capacity, system peak, and gross reserve (all of which are in units of MW or megawatts).\n[2] The Rescuers is a 1977 American animated comedy-drama adventure film produced by Walt Disney Productions and first released on June 22, 1977, by Buena Vista Distribution.\n[3] Candleshoe is a 1977 American family adventure film produced by Walt Disney Productions based on the Michael Innes novel \"Christmas at Candleshoe\" and starring Jodie Foster, David Niven, Helen Hayes in her last big screen appearance and Leo McKern.\n[4] It is owned and managed by the City of London Corporation."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

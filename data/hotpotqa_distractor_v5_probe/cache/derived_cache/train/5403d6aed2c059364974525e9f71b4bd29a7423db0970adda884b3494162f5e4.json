@@ -1,0 +1,20 @@
+{
+  "should_derive": true,
+  "reason": "We have birth dates for Svetlana Kuznetsova (27 June 1985) and Peter Fleming (21 January 1955) from the state summary, but the state summary does not include the birth date for Peter Fleming in a structured way. A verification note can confirm Peter Fleming's birth date from the state summary, and a bridge note can compare the two dates to answer the question.",
+  "derived_candidates": [
+    {
+      "type": "verification_note",
+      "text": "Peter Fleming was born on January 21, 1955.",
+      "source_unit_ids": [],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "Svetlana Kuznetsova was born on June 27, 1985, which is after Peter Fleming's birth on January 21, 1955.",
+      "source_unit_ids": [
+        "5a79c7cc554299148911fa4a::Svetlana Kuznetsova::0"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

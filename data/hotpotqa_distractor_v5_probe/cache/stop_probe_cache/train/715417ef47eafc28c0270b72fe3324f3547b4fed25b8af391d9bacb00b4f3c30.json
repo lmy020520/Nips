@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New Order",
+  "pred_answer": "New Order",
+  "normalized_gold": "new order",
+  "normalized_pred": "new order",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac07f595542996f0d89cbfc",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac07f595542996f0d89cbfc::New Order (band)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac07f595542996f0d89cbfc::Total: From Joy Division to New Order::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac07f595542996f0d89cbfc::Elegia::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac07f595542996f0d89cbfc::New Order (band)",
+        "5ac07f595542996f0d89cbfc::Total: From Joy Division to New Order"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac07f595542996f0d89cbfc::New Order (band)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac07f595542996f0d89cbfc::Total: From Joy Division to New Order::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac07f595542996f0d89cbfc::Elegia::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac07f595542996f0d89cbfc::Elegia::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] \"Elegia\" is a piece composed by Peter Hook, Gillian Gilbert, Stephen Morris, and Bernard Sumner for the British rock band New Order.\n[2] Total: From Joy Division to New Order is a compilation album of material from Joy Division and New Order.\n[3] New Order are an English rock band formed in 1980, currently comprising Bernard Sumner, Stephen Morris, Gillian Gilbert, Phil Cunningham and Tom Chapman."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

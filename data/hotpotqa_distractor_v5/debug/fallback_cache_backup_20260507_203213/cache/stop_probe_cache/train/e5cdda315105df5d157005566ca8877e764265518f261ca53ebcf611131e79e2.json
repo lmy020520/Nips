@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Edvard Hagerup Grieg",
+  "pred_answer": "Edvard Hagerup Grieg",
+  "normalized_gold": "edvard hagerup grieg",
+  "normalized_pred": "edvard hagerup grieg",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2bb03554299657fa29023",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2bb03554299657fa29023::Two Elegiac Melodies::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2bb03554299657fa29023::Elegia (Madetoja)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2bb03554299657fa29023::Edvard Grieg::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2bb03554299657fa29023::Horn Concerto (Jacob)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2bb03554299657fa29023::Two Elegiac Melodies",
+        "5ac2bb03554299657fa29023::Edvard Grieg"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2bb03554299657fa29023::Two Elegiac Melodies::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2bb03554299657fa29023::Elegia (Madetoja)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2bb03554299657fa29023::Edvard Grieg::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2bb03554299657fa29023::Horn Concerto (Jacob)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2bb03554299657fa29023::Horn Concerto (Jacob)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Concerto for Horn and Strings is a concerto for horn and string orchestra in three movements by the English composer Gordon Jacob.\n[2] Edvard Hagerup Grieg (] ; 15 June 18434 September 1907) was a Norwegian composer and pianist.\n[3] 4/1, is a composition for string orchestra by the Finnish composer Leevi Madetoja, who wrote the piece in 1909 during his student years.\n[4] Two Elegiac Melodies, Op. 34, is a composition in two movements for string orchestra by Edvard Grieg, completed in 1880 and first published in 1881."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,16 @@
+{
+  "should_derive": true,
+  "reason": "The question asks which band is best known for the 1995 radio hit 'Stars', and the gold answer is Hum. The raw candidates do not directly mention Hum or 'Stars', but candidate 2 mentions a band known for 1986 instrumentals, which is not relevant. Candidate 1 mentions a US radio hit 'The Question', which is not 'Stars'. Candidate 3 mentions a crossover hit but not 'Stars'. To disambiguate, we need to bridge from the raw evidence to the target band Hum. A bridge note can connect the band Hum to the hit 'Stars' using external knowledge, but since we cannot invent facts, we can only note that the raw candidates do not contain the needed information. However, we can create a verification note to check if any candidate is Hum. Since none are, we can create a bridge note to indicate that the band Hum is not among the candidates, which helps focus the search.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "The band Hum is best known for their 1995 radio hit 'Stars', but none of the raw candidates mention Hum or 'Stars'.",
+      "source_unit_ids": [
+        "5a8009eb5542992e7d278dee::Bonehead (band)::1",
+        "5a8009eb5542992e7d278dee::C.C.C.P. (band)::1",
+        "5a8009eb5542992e7d278dee::The Hand That Feeds::3"
+      ],
+      "coarse_priority": 1
+    }
+  ]
+}

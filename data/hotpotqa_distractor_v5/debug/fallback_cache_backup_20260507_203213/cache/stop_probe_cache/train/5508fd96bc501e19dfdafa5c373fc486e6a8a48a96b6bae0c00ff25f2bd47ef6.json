@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "North Pole",
+  "pred_answer": "North Pole",
+  "normalized_gold": "north pole",
+  "normalized_pred": "north pole",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8d577e5542994ba4e3dc78",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8d577e5542994ba4e3dc78::The Millionaires' Unit::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8d577e5542994ba4e3dc78::First Yale Unit::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8d577e5542994ba4e3dc78::Robert Peary::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8d577e5542994ba4e3dc78::Sharon Oster::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8d577e5542994ba4e3dc78::First Yale Unit",
+        "5a8d577e5542994ba4e3dc78::Robert Peary"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8d577e5542994ba4e3dc78::The Millionaires' Unit::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8d577e5542994ba4e3dc78::First Yale Unit::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8d577e5542994ba4e3dc78::Robert Peary::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8d577e5542994ba4e3dc78::Sharon Oster::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8d577e5542994ba4e3dc78::Sharon Oster::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She is widely known as an economist focusing on business strategy and non-profit organization management, and was the first women to receive tenure at Yale School of Management.\n[2] He is best known for claiming to have reached the geographic North Pole with his expedition on April 6, 1909.\n[3] After meeting with Admiral Robert Peary to gain authorization for the unit, Trubee Davison acquired a Curtiss Model F flying boat and members of the First Yale Unit were trained as pilots during the summer of 1916.\n[4] The Millionaires' Unit is a 2015 American documentary film by Darroch Greer and Ron King about the First Yale Unit, a group of Yale college students who took the initiative to learn to fly in preparation for America's entry into the Great War."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

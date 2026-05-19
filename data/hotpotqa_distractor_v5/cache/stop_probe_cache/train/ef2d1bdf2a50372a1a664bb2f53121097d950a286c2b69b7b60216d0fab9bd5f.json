@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "William Shakespeare",
+  "pred_answer": "William Shakespeare",
+  "normalized_gold": "william shakespeare",
+  "normalized_pred": "william shakespeare",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab83a5355429919ba4e2274",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab83a5355429919ba4e2274::Christopher Marlowe::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab83a5355429919ba4e2274::The Unsinkable Molly Brown (film)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab83a5355429919ba4e2274::Marlowe (musical)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab83a5355429919ba4e2274::The Wave (novel)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab83a5355429919ba4e2274::Christopher Marlowe",
+        "5ab83a5355429919ba4e2274::Marlowe (musical)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab83a5355429919ba4e2274::Christopher Marlowe::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab83a5355429919ba4e2274::The Unsinkable Molly Brown (film)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab83a5355429919ba4e2274::Marlowe (musical)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab83a5355429919ba4e2274::The Wave (novel)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab83a5355429919ba4e2274::The Wave (novel)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is a novelization of a teleplay by Johnny Dawkins for the movie \"The Wave\", a fictionalized account of the \"Third Wave\" teaching experiment by Ron Jones that took place in a Ellwood P. Cubberley High School history class in Palo Alto, California.\n[2] Despite a claim in the \"Playbill\" that \"the story of this drama is essentially true and accurate,\" much of it is a fictionalized account of the life of Elizabethan playwright Christopher Marlowe.\n[3] The plot is a fictionalized account of the life of Margaret Brown, who survived the 1912 sinking of the  .\n[4] He greatly influenced William Shakespeare, who was born in the same year as Marlowe and who rose to become the pre-eminent Elizabethan playwright after Marlowe's mysterious early death."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

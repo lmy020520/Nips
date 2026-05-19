@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Moses Michael Levi (born Jamal Michael Barrow, 8 November 1979), better known by his stage name Shyne",
+  "pred_answer": "Moses Michael Levi (born Jamal Michael Barrow, 8 November 1979), better known by his stage name Shyne",
+  "normalized_gold": "moses michael levi born jamal michael barrow 8 november 1979 better known by his stage name shyne",
+  "normalized_pred": "moses michael levi born jamal michael barrow 8 november 1979 better known by his stage name shyne",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2a3d855429921a00ab012",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2a3d855429921a00ab012::Prodezra::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2a3d855429921a00ab012::Lonesome Pine Fiddlers::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2a3d855429921a00ab012::Shyne::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2a3d855429921a00ab012::Prodezra::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2a3d855429921a00ab012::Prodezra",
+        "5ac2a3d855429921a00ab012::Shyne"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2a3d855429921a00ab012::Prodezra::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2a3d855429921a00ab012::Lonesome Pine Fiddlers::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2a3d855429921a00ab012::Shyne::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2a3d855429921a00ab012::Prodezra::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2a3d855429921a00ab012::Prodezra::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Reuben Ezra Formey (born 1981), known by his stage name Prodezra, is an American Jewish rapper and producer based in Savannah, Georgia.\n[2] Moses Michael Levi (born Jamal Michael Barrow, 8 November 1979), better known by his stage name Shyne, is a Belizean rapper.\n[3] The Lonesome Pine Fiddlers (1938- 1966) were an early bluegrass band which included such notable \"first generation\" bluegrass musicians as Ezra Cline, Bobby Osborne, Paul Williams, Melvin Goins, Charlie Cline, Curly Ray Cline, Larry Richardson and for a short time Jimmy Martin.\n[4] He is notable, along with Y-Love, Nissim, and Shyne, as one of several African-American Orthodox Jewish rappers."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

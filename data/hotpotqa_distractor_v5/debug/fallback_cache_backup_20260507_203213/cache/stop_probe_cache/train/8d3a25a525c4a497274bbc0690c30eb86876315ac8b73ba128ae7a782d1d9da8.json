@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "King of Pop",
+  "pred_answer": "King of Pop",
+  "normalized_gold": "king of pop",
+  "normalized_pred": "king of pop",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae68df35542992ae0d16357",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae68df35542992ae0d16357::Kami (1982 film)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae68df35542992ae0d16357::Michael Jackson::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae68df35542992ae0d16357::Ronnie Rancifer::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae68df35542992ae0d16357::Let It Rock (Ronnie Hawkins album)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae68df35542992ae0d16357::Michael Jackson",
+        "5ae68df35542992ae0d16357::Ronnie Rancifer"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae68df35542992ae0d16357::Kami (1982 film)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae68df35542992ae0d16357::Michael Jackson::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae68df35542992ae0d16357::Ronnie Rancifer::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae68df35542992ae0d16357::Let It Rock (Ronnie Hawkins album)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae68df35542992ae0d16357::Let It Rock (Ronnie Hawkins album)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Let It Rock is a Juno Award-nominated album that documents American-Canadian singer Ronnie Hawkins' 60th birthday celebration and concert at Massey Hall in Toronto, Ontario, Canada.\n[2] Ronnie Rancifer is an American keyboardist, musician and songwriter, noted for being the original keyboardist for The Jackson 5 from their early Gary, Indiana days until the end of their famed career at Motown.\n[3] Dubbed the \"King of Pop\", he was one of the most popular entertainers in the world, and was the best-selling music artist at the time of his death.\n[4] It is notable as being the only feature film featuring Sudirman Haji Arshad, a successful Malay singer dubbed the \"Singing Lawyer\" as he was a law graduate from the University of Malaya in Kuala Lumpur (an academic background almost unheard of among Malay entertainers)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "World War II",
+  "pred_answer": "World War II",
+  "normalized_gold": "world war ii",
+  "normalized_pred": "world war ii",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abba14f5542996cc5e4a02c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abba14f5542996cc5e4a02c::Henry J. Kaiser::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abba14f5542996cc5e4a02c::Fritz Johann Hansgirg::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abba14f5542996cc5e4a02c::Kaiser Ventures::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abba14f5542996cc5e4a02c::Henry J. Kaiser",
+        "5abba14f5542996cc5e4a02c::Fritz Johann Hansgirg"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abba14f5542996cc5e4a02c::Henry J. Kaiser::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abba14f5542996cc5e4a02c::Fritz Johann Hansgirg::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abba14f5542996cc5e4a02c::Kaiser Ventures::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abba14f5542996cc5e4a02c::Kaiser Ventures::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It was founded by Henry J. Kaiser to provide steel plate for the Pacific Coast shipbuilding industry, which expanded during World War II, then shrank, then expanded again during the Korean War.\n[2] Coming to the United States in 1940, he worked with American industrialist Henry J. Kaiser to design a magnesium plant in California, but at the outbreak of World War II, Hansgirg was arrested by the FBI on a Presidential warrant and interned for \"the duration of the war.\"\n[3] He established the Kaiser Shipyards, which built Liberty ships during World War II, after which he formed Kaiser Aluminum and Kaiser Steel."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

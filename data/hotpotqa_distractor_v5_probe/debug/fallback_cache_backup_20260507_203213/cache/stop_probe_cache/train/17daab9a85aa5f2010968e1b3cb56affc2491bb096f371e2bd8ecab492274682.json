@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "William Shakespeare",
+  "pred_answer": "William Shakespeare",
+  "normalized_gold": "william shakespeare",
+  "normalized_pred": "william shakespeare",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c548b5542995e66a475c5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c548b5542995e66a475c5::Raymond Bragg::8"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c548b5542995e66a475c5::Marlovian theory of Shakespeare authorship::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c548b5542995e66a475c5::David Rhys Williams::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8c548b5542995e66a475c5::Raymond Bragg::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c548b5542995e66a475c5::Marlovian theory of Shakespeare authorship",
+        "5a8c548b5542995e66a475c5::David Rhys Williams"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c548b5542995e66a475c5::Raymond Bragg::8",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c548b5542995e66a475c5::Marlovian theory of Shakespeare authorship::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c548b5542995e66a475c5::David Rhys Williams::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8c548b5542995e66a475c5::Raymond Bragg::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c548b5542995e66a475c5::Raymond Bragg::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Raymond Bennett Bragg (1902–1979) was an American Unitarian minister who played a key role in the writing of the Humanist Manifesto and eventually signing Humanist Manifesto.\n[2] David Rhys Williams (1890 – March 28, 1970) was an American Congregational and Unitarian minister who wrote a Marlovian book called \"Shakespeare Thy Name Is Marlowe\".\n[3] The Marlovian theory of Shakespeare authorship holds that the Elizabethan poet and playwright Christopher Marlowe was the main author of the poems and plays attributed to William Shakespeare.\n[4] Upon his retirement, he was elected Minister Emeritus by the Kansas City congregation."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

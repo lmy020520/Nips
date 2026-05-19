@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Day for Night",
+  "pred_answer": "Day for Night",
+  "normalized_gold": "day for night",
+  "normalized_pred": "day for night",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a76f7e65542994aec3b71a4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a76f7e65542994aec3b71a4::Suzanne Schiffman::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a76f7e65542994aec3b71a4::The Green Room (film)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a76f7e65542994aec3b71a4::Day for Night (film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a76f7e65542994aec3b71a4::La Balance::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a76f7e65542994aec3b71a4::Suzanne Schiffman",
+        "5a76f7e65542994aec3b71a4::Day for Night (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a76f7e65542994aec3b71a4::Suzanne Schiffman::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a76f7e65542994aec3b71a4::The Green Room (film)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a76f7e65542994aec3b71a4::Day for Night (film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a76f7e65542994aec3b71a4::La Balance::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a76f7e65542994aec3b71a4::La Balance::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] La Balance (U.S. title: \"The Nark\"; literal translation : \"The Informer\") is a 1982 French film directed by Bob Swaim.\n[2] Day for Night (French: La Nuit américaine ) is a 1973 French film directed by François Truffaut.\n[3] It was Truffaut's seventeenth feature film as a director and the third and last of his own films in which he acted in a leading role.\n[4] The 'script girl' Joelle, played by Nathalie Baye in Truffaut's \"Day for Night\" was based on Schiffman."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Alden Ehrenreich",
+  "pred_answer": "Alden Ehrenreich",
+  "normalized_gold": "alden ehrenreich",
+  "normalized_pred": "alden ehrenreich",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc004c5542996e685252a2",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc004c5542996e685252a2::The Yellow Birds (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc004c5542996e685252a2::Alden Ehrenreich::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc004c5542996e685252a2::Tetro::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc004c5542996e685252a2::The Yellow Birds (film)",
+        "5adc004c5542996e685252a2::Alden Ehrenreich"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc004c5542996e685252a2::The Yellow Birds (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc004c5542996e685252a2::Alden Ehrenreich::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc004c5542996e685252a2::Tetro::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc004c5542996e685252a2::Tetro::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Tetro is a 2009 American-Argentine drama film written, directed and produced by Francis Ford Coppola and starring Vincent Gallo, Alden Ehrenreich and Maribel Verdú.\n[2] He made his feature film debut in Francis Ford Coppola's independent film \"Tetro\" (2009) and appeared in Coppola's subsequent film \"Twixt\" (2011).\n[3] The Yellow Birds is a 2017 American war film directed by Alexandre Moors and based on the novel \"The Yellow Birds\" by Kevin Powers."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

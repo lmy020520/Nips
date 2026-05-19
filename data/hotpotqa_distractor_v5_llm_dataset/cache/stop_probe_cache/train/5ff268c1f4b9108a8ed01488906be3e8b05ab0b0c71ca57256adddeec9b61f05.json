@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "2002",
+  "pred_answer": "2002",
+  "normalized_gold": "2002",
+  "normalized_pred": "2002",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a93c2554299042af8f66f",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a93c2554299042af8f66f::Karen Todner::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a93c2554299042af8f66f::Gary McKinnon::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a93c2554299042af8f66f::Kristina Svechinskaya::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a93c2554299042af8f66f::Karen Todner",
+        "5a7a93c2554299042af8f66f::Gary McKinnon"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a93c2554299042af8f66f::Karen Todner::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a93c2554299042af8f66f::Gary McKinnon::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a93c2554299042af8f66f::Kristina Svechinskaya::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a93c2554299042af8f66f::Kristina Svechinskaya::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] A student of the New York University, in 2010 she was accused of a plot to defraud several British and U.S. banks of sizeable sums and usage of false passports.\n[2] Gary McKinnon (born 10 February 1966) is a Scottish systems administrator and hacker who was accused in 2002 of perpetrating the \"biggest military computer hack of all time,\" although McKinnon himself states that he was merely looking for evidence of free energy suppression and a cover-up of UFO activity and other technologies potentially useful to the public.\n[3] Karen Elizabeth Todner (born April 1962), is a British solicitor and author."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

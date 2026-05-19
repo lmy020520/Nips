@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "American",
+  "pred_answer": "American",
+  "normalized_gold": "american",
+  "normalized_pred": "american",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adfad33554299025d62a338",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adfad33554299025d62a338::Pseudophysics::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adfad33554299025d62a338::George Green (mathematician)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adfad33554299025d62a338::John C. Baez::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adfad33554299025d62a338::Visual rhetoric::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adfad33554299025d62a338::Pseudophysics",
+        "5adfad33554299025d62a338::John C. Baez"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adfad33554299025d62a338::Pseudophysics::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adfad33554299025d62a338::George Green (mathematician)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adfad33554299025d62a338::John C. Baez::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adfad33554299025d62a338::Visual rhetoric::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adfad33554299025d62a338::Visual rhetoric::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In other words, it is one's ability to understand what an image is attempting to communicate.\n[2] John Carlos Baez ( ; born June 12, 1961) is an American mathematical physicist and a professor of mathematics at the University of California, Riverside (UCR) in Riverside, California.\n[3] George Green (14 July 1793 – 31 May 1841) was a British mathematical physicist who wrote \"An Essay on the Application of Mathematical Analysis to the Theories of Electricity and Magnetism\" (Green, 1828).\n[4] Mathematical physicist John C. Baez famously invented a crackpot index to give an idea of what sort of claims and rhetoric were commonplace among pseudophysics proposals he had come across."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

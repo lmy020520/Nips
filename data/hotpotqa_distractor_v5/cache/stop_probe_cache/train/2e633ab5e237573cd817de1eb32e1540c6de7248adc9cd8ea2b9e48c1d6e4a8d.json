@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "11 November 1918",
+  "pred_answer": "11 November 1918",
+  "normalized_gold": "11 november 1918",
+  "normalized_pred": "11 november 1918",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add1c525542994ed6169c92",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add1c525542994ed6169c92::World War I::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add1c525542994ed6169c92::Zafir Premčević::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add1c525542994ed6169c92::Yugoslav monitor Sava::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add1c525542994ed6169c92::World War I",
+        "5add1c525542994ed6169c92::Zafir Premčević"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add1c525542994ed6169c92::World War I::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add1c525542994ed6169c92::Zafir Premčević::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add1c525542994ed6169c92::Yugoslav monitor Sava::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add1c525542994ed6169c92::Yugoslav monitor Sava::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] She fired the first shots of World War I on the night of 28 July 1914, when she and two other monitors shelled Serbian defences near Belgrade.\n[2] Zafir Premčević (; 1872—1937) was a Serbian Chetnik commander in Old Serbia and Macedonia during the Macedonian Struggle, who also participated in the Balkan Wars and World War I.\n[3] World War I (WWI or WW1), also known as the First World War, the Great War, or the War to End All Wars, was a global war originating in Europe that lasted from 28 July 1914 to 11 November 1918."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

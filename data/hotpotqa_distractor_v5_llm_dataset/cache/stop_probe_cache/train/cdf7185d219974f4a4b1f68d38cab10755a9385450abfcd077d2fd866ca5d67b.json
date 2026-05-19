@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Allstate Arena",
+  "pred_answer": "Allstate Arena",
+  "normalized_gold": "allstate arena",
+  "normalized_pred": "allstate arena",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0fc235542997b2ef7d0ce",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0fc235542997b2ef7d0ce::B96 Pepsi SummerBash::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0fc235542997b2ef7d0ce::Allstate Arena::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0fc235542997b2ef7d0ce::Gene Ubriaco::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0fc235542997b2ef7d0ce::B96 Pepsi SummerBash",
+        "5ae0fc235542997b2ef7d0ce::Allstate Arena"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0fc235542997b2ef7d0ce::B96 Pepsi SummerBash::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0fc235542997b2ef7d0ce::Allstate Arena::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0fc235542997b2ef7d0ce::Gene Ubriaco::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0fc235542997b2ef7d0ce::Gene Ubriaco::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He is currently the Director of Hockey Operations for the Chicago Wolves of the American Hockey League (AHL).\n[2] It is home to the Chicago Wolves of the American Hockey League (AHL) and the Chicago Sky of the Women's National Basketball Association (WNBA).\n[3] In 2016, the event was held at Allstate Arena in the suburb of Rosemont."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

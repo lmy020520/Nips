@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Niagara County",
+  "pred_answer": "Niagara County",
+  "normalized_gold": "niagara county",
+  "normalized_pred": "niagara county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab964ae5542996be20204c0",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab964ae5542996be20204c0::Hartland Swamp Wildlife Management Area::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab964ae5542996be20204c0::Amelia Wildlife Management Area::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab964ae5542996be20204c0::Lockport (city), New York::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab964ae5542996be20204c0::Hartland Swamp Wildlife Management Area::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab964ae5542996be20204c0::Chester F. Phelps Wildlife Management Area::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab964ae5542996be20204c0::Lockport (city), New York",
+        "5ab964ae5542996be20204c0::Hartland Swamp Wildlife Management Area"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab964ae5542996be20204c0::Hartland Swamp Wildlife Management Area::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab964ae5542996be20204c0::Amelia Wildlife Management Area::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab964ae5542996be20204c0::Lockport (city), New York::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab964ae5542996be20204c0::Hartland Swamp Wildlife Management Area::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab964ae5542996be20204c0::Chester F. Phelps Wildlife Management Area::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab964ae5542996be20204c0::Chester F. Phelps Wildlife Management Area::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Chester F. Phelps Wildlife Management Area (also known as the C.F. Phelps Wildlife Management Area) is a 4539 acre Wildlife Management Area located in Fauquier and Culpeper counties, Virginia.\n[2] Hartland Swamp WMA is located northeast of Lockport in the Town of Hartland in northeastern Niagara County.\n[3] Lockport is a city in Niagara County, New York, United States.\n[4] Amelia Wildlife Management Area is a 2217 acre Wildlife Management Area located in Amelia County, Virginia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Albert Finney",
+  "pred_answer": "Albert Finney",
+  "normalized_gold": "albert finney",
+  "normalized_pred": "albert finney",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade30e35542997c77adeda6",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade30e35542997c77adeda6::Night Must Fall (1964 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade30e35542997c77adeda6::Albert Finney::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade30e35542997c77adeda6::Night Must Fall (1964 film)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade30e35542997c77adeda6::Night Must Fall (1964 film)",
+        "5ade30e35542997c77adeda6::Albert Finney"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade30e35542997c77adeda6::Night Must Fall (1964 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade30e35542997c77adeda6::Albert Finney::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade30e35542997c77adeda6::Night Must Fall (1964 film)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade30e35542997c77adeda6::Night Must Fall (1964 film)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It was directed by Karel Reisz from a script by Clive Exton and starred Albert Finney, Mona Washbourne, and Susan Hampshire, but was not as successful as the original film.\n[2] He is known for his roles in \"Saturday Night and Sunday Morning\" (1960), \"Tom Jones\" (1963), \"Scrooge\" (1970), \"Annie\" (1982), \"The Dresser\" (1983), \"Miller's Crossing\" (1990), \"Big Fish\" (2003), \"The Bourne Ultimatum\" (2007), \"Before the Devil Knows You're Dead\" (2007), \"The Bourne Legacy\" (2012), and the James Bond film \"Skyfall\" (2012).\n[3] Night Must Fall is a remake of the 1937 film of the same name, which was in turn based on the 1935 play by Emlyn Williams."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "German",
+  "pred_answer": "German",
+  "normalized_gold": "german",
+  "normalized_pred": "german",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab67f9e5542995eadef0009",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab67f9e5542995eadef0009::Friede::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab67f9e5542995eadef0009::Gaelic Society of Moscow::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab67f9e5542995eadef0009::Hermann Oberth::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab67f9e5542995eadef0009::Refugee Act::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab67f9e5542995eadef0009::Friede",
+        "5ab67f9e5542995eadef0009::Hermann Oberth"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab67f9e5542995eadef0009::Friede::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab67f9e5542995eadef0009::Gaelic Society of Moscow::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab67f9e5542995eadef0009::Hermann Oberth::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab67f9e5542995eadef0009::Refugee Act::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab67f9e5542995eadef0009::Refugee Act::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The United States Refugee Act of 1980 (Public Law 96-212) is an amendment to the earlier Immigration and Nationality Act and the Migration and Refugee Assistance Act, and was created to provide a permanent and systematic procedure for the admission to the United States of refugees of special humanitarian concern to the U.S., and to provide comprehensive and uniform provisions for the effective res\n[2] Hermann Julius Oberth (] ; 25 June 1894 – 28 December 1989) was an Austro-Hungarian-born German physicist and engineer.\n[3] Comann Gàidhlig Mhosgo (\"Gaelic Society of Moscow\") was founded by a Russian scholar Maria Koroleva on November 30, 1999.\n[4] Friede was a fictional spacecraft designed by Hermann Oberth and was featured in the 1929 silent movie \"Woman in the Moon\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

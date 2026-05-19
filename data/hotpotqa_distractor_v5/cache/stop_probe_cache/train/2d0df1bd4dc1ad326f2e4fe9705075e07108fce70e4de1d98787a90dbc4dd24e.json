@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bernie Ecclestone",
+  "pred_answer": "Bernie Ecclestone",
+  "normalized_gold": "bernie ecclestone",
+  "normalized_pred": "bernie ecclestone",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab3126255429976abd1bc4e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab3126255429976abd1bc4e::Wall of Fame (game show)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab3126255429976abd1bc4e::Tamara Ecclestone::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab3126255429976abd1bc4e::I Love My Country (UK TV series)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab3126255429976abd1bc4e::Wall of Fame (game show)",
+        "5ab3126255429976abd1bc4e::Tamara Ecclestone"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab3126255429976abd1bc4e::Wall of Fame (game show)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab3126255429976abd1bc4e::Tamara Ecclestone::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab3126255429976abd1bc4e::I Love My Country (UK TV series)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab3126255429976abd1bc4e::I Love My Country (UK TV series)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] I Love My Country was a British television comedy panel game shown on BBC One which began airing on 3 August 2013 and finished on 28 September 2013.\n[2] Tamara Ecclestone Rutland (born 28 June 1984) is a British model, socialite, television personality, and the daughter of billionaire Bernie Ecclestone.\n[3] Wall of Fame is a British comedy panel game that was first broadcast on Sky1 in 2011."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "John Symon Asher \"Jack\" Bruce",
+  "pred_answer": "John Symon Asher \"Jack\" Bruce",
+  "normalized_gold": "john symon asher jack bruce",
+  "normalized_pred": "john symon asher jack bruce",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8fbf2255429918e830d2c7",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8fbf2255429918e830d2c7::Dharmamangal::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8fbf2255429918e830d2c7::Larry Coryell at the Village Gate::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8fbf2255429918e830d2c7::Jack Bruce::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8fbf2255429918e830d2c7::Katie White::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8fbf2255429918e830d2c7::Hands (The Ting Tings song)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8fbf2255429918e830d2c7::Jack Bruce",
+        "5a8fbf2255429918e830d2c7::Katie White"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8fbf2255429918e830d2c7::Dharmamangal::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8fbf2255429918e830d2c7::Larry Coryell at the Village Gate::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8fbf2255429918e830d2c7::Jack Bruce::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8fbf2255429918e830d2c7::Katie White::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8fbf2255429918e830d2c7::Hands (The Ting Tings song)::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8fbf2255429918e830d2c7::Hands (The Ting Tings song)::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The song was written by both Katie White and Jules De Martino and mixed by label-mate Calvin Harris.\n[2] Katie Rebecca White (born 18 January 1983) is a British musician and member of the pop duo the Ting Tings.\n[3] John Symon Asher \"Jack\" Bruce (14 May 1943 – 25 October 2014) was a Scottish musician, singer and songwriter known primarily for his contributions to the British supergroup Cream, which also included guitarist-singer Eric Clapton and drummer Ginger Baker.\n[4] It also contained a cover of a Jack Bruce song with whom Coryell had toured in 1968 as part of the Jack Bruce and Friends tour."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

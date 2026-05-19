@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bellagio and The Mirage",
+  "pred_answer": "Bellagio and The Mirage",
+  "normalized_gold": "bellagio and the mirage",
+  "normalized_pred": "bellagio and the mirage",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adde98b5542992200553ba0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adde98b5542992200553ba0::Evo 2012::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adde98b5542992200553ba0::Cochrane Park::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adde98b5542992200553ba0::Caesars Palace::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adde98b5542992200553ba0::Southland Mall (Hayward, California)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adde98b5542992200553ba0::Evo 2012",
+        "5adde98b5542992200553ba0::Caesars Palace"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adde98b5542992200553ba0::Evo 2012::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adde98b5542992200553ba0::Cochrane Park::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adde98b5542992200553ba0::Caesars Palace::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adde98b5542992200553ba0::Southland Mall (Hayward, California)::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adde98b5542992200553ba0::Southland Mall (Hayward, California)::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The center is located off I-880 at Winton Avenue, at the western end of the city.\n[2] The hotel is situated on the west side of the Las Vegas Strip between Bellagio and The Mirage.\n[3] Cochrane Park, located at Newcastle upon Tyne, England, is the principal competitive venue for football, rugby and cricket at Newcastle University.\n[4] The 2012 Evolution Championship Series (commonly referred to as Evo 2012 or EVO 2012) was a fighting game event held at Caesars Palace, Las Vegas on July 6–8."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

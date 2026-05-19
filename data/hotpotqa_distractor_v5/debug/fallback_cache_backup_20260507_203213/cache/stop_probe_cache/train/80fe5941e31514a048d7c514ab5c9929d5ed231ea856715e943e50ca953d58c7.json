@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jason White",
+  "pred_answer": "Jason White",
+  "normalized_gold": "jason white",
+  "normalized_pred": "jason white",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a732a505542991f29ee2d22",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a732a505542991f29ee2d22::Heisman curse::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a732a505542991f29ee2d22::Jason White (American football)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a732a505542991f29ee2d22::Billy Sims::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a732a505542991f29ee2d22::Heisman curse",
+        "5a732a505542991f29ee2d22::Jason White (American football)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a732a505542991f29ee2d22::Heisman curse::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a732a505542991f29ee2d22::Jason White (American football)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a732a505542991f29ee2d22::Billy Sims::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a732a505542991f29ee2d22::Billy Sims::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Billy Ray Sims (born September 18, 1955) is a former American college and professional football player who was a running back in the National Football League (NFL) for five seasons during the 1980s.\n[2] Jason White (born June 19, 1980) is an American former college football quarterback who played for the University of Oklahoma, was recognized as a unanimous All-American, and won the Heisman Trophy in 2003.\n[3] The trend of post-award failure has garnered the attention of the mainstream media."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

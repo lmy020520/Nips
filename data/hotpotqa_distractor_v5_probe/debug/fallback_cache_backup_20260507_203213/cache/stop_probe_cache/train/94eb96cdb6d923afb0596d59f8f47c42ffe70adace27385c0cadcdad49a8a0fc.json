@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "game",
+  "pred_answer": "game",
+  "normalized_gold": "game",
+  "normalized_pred": "game",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b62aa55429949d91db587",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b62aa55429949d91db587::Bet-at-home.com::6"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b62aa55429949d91db587::Dead money (poker)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b62aa55429949d91db587::Pot (poker)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8b62aa55429949d91db587::Betting in poker::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8b62aa55429949d91db587::Mambo stud::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b62aa55429949d91db587::Pot (poker)",
+        "5a8b62aa55429949d91db587::Betting in poker"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b62aa55429949d91db587::Bet-at-home.com::6",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b62aa55429949d91db587::Dead money (poker)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b62aa55429949d91db587::Pot (poker)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8b62aa55429949d91db587::Betting in poker::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8b62aa55429949d91db587::Mambo stud::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b62aa55429949d91db587::Mambo stud::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The players are dealt one downcard and one upcard, followed by a round of betting, one more upcard, one more round of betting, and then a community card, with a final round of betting.\n[2] In the game of poker, the play largely centers on the act of betting, and as such, a protocol has been developed to speed up play, lessen confusion, and increase security while playing.\n[3] The pot in poker refers to the sum of money that players wager during a single hand or game, according to the betting rules of the variant being played.\n[4] In poker, dead money is the amount of money in the pot other than the equal amounts bet by active remaining players in that pot."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

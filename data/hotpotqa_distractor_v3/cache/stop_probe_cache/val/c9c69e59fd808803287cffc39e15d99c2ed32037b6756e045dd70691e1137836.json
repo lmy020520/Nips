@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "1865",
+  "pred_answer": "1865",
+  "normalized_gold": "1865",
+  "normalized_pred": "1865",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "The evidence shows that 'Jabberwocky' was included in the 1871 novel 'Through the Looking-Glass', which is the sequel to 'Alice's Adventures in Wonderland', and that 'Alice's Adventures in Wonderland' was written in 1865. This supports the multi-hop reasoning from the poem to the sequel to the original novel's publication year.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "The evidence shows that 'Jabberwocky' was included in the 1871 novel 'Through the Looking-Glass', which is the sequel to 'Alice's Adventures in Wonderland', and that 'Alice's Adventures in Wonderland' was written in 1865. This supports the multi-hop reasoning from the poem to the sequel to the original novel's publication year.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae690fd55429908198fa624",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae690fd55429908198fa624::Jabberwocky::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae690fd55429908198fa624::Angelfall::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae690fd55429908198fa624::Jabberwocky::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae690fd55429908198fa624::Alice's Adventures in Wonderland::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae690fd55429908198fa624::Lewis Carroll::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae690fd55429908198fa624::Jabberwocky::1",
+        "5ae690fd55429908198fa624::Jabberwocky",
+        "5ae690fd55429908198fa624::Alice's Adventures in Wonderland"
+      ],
+      "k_br": 2.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae690fd55429908198fa624::Jabberwocky::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae690fd55429908198fa624::Angelfall::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae690fd55429908198fa624::Jabberwocky::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae690fd55429908198fa624::Alice's Adventures in Wonderland::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae690fd55429908198fa624::Lewis Carroll::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae690fd55429908198fa624::Lewis Carroll::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] His most famous writings are \"Alice's Adventures in Wonderland\", its sequel \"Through the Looking-Glass\", which includes the poem \"Jabberwocky\", and the poem \"Th\n[2] Alice's Adventures in Wonderland (commonly shortened to Alice in Wonderland) is an 1865 fantasy novel written by English mathematician Charles Lutwidge Dodgson\n[3] \"Jabberwocky\" is a nonsense poem written by Lewis Carroll about the killing of a creature named \"the Jabberwock\".\n[4] Angelfall is a post-apocalyptic fantasy novel written by Korean-American author Susan Ee."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

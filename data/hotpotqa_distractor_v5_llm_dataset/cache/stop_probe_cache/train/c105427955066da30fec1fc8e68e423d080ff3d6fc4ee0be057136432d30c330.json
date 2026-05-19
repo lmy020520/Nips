@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Darby O'Gill and the Little People",
+  "pred_answer": "Darby O'Gill and the Little People",
+  "normalized_gold": "darby ogill and the little people",
+  "normalized_pred": "darby ogill and the little people",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77b7255542995d83181278",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77b7255542995d83181278::Albert Sharpe::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77b7255542995d83181278::Walt Disney's Treasury of Classic Tales::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77b7255542995d83181278::The Misadventures of Merlin Jones::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77b7255542995d83181278::Darby O'Gill and the Little People::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a77b7255542995d83181278::Tommy Kirk::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77b7255542995d83181278::The Misadventures of Merlin Jones",
+        "5a77b7255542995d83181278::Darby O'Gill and the Little People"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77b7255542995d83181278::Albert Sharpe::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77b7255542995d83181278::Walt Disney's Treasury of Classic Tales::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77b7255542995d83181278::The Misadventures of Merlin Jones::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77b7255542995d83181278::Darby O'Gill and the Little People::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a77b7255542995d83181278::Tommy Kirk::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77b7255542995d83181278::Tommy Kirk::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He is best known for his performances in a number of highly popular movies made by Walt Disney Studios such as \"Old Yeller\", \"The Shaggy Dog\", \"The Swiss Family Robinson\" and \"The Misadventures of Merlin Jones\", as well as beach party movies of the mid 1960s.\n[2] Darby O'Gill and the Little People is a 1959 Walt Disney Productions feature film starring Albert Sharpe, Janet Munro, Sean Connery and Jimmy O'Dea, in a tale about a wily Irishman and his battle of wits with leprechauns.\n[3] The Misadventures of Merlin Jones is a 1964 Walt Disney production starring Tommy Kirk and Annette Funicello.\n[4] Each story adapted a different Disney film, such as Darby O'Gill and the Little People, Peter Pan, or Davy Crockett."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

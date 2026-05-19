@@ -1,0 +1,80 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm_failure",
+  "gold_answer": "yes",
+  "pred_answer": null,
+  "normalized_gold": "yes",
+  "normalized_pred": null,
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "",
+  "missing_support_reasons": [
+    "missing_pred_answer"
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "",
+    "missing_support_reasons": [
+      "missing_pred_answer"
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5abf81d75542997719eab693",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abf81d75542997719eab693::Caltha::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abf81d75542997719eab693::Tabernaemontana::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abf81d75542997719eab693::Echinacea::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abf81d75542997719eab693::Caltha",
+        "5abf81d75542997719eab693::Tabernaemontana"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abf81d75542997719eab693::Caltha::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abf81d75542997719eab693::Tabernaemontana::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abf81d75542997719eab693::Echinacea::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abf81d75542997719eab693::Echinacea::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Echinacea is a genus, or group of herbaceous flowering plants in the daisy family.\n[2] Tabernaemontana is a genus of flowering plants in the family Apocynaceae.\n[3] Caltha is a genus of rhizomatous perennial flowering plants in the family Ranunculaceae (\"buttercup family\"), to which ten species have been assigned."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

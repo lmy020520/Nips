@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Halldór Kiljan Laxness",
+  "pred_answer": "Halldór Kiljan Laxness",
+  "normalized_gold": "halldór kiljan laxness",
+  "normalized_pred": "halldór kiljan laxness",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab87c2055429934fafe6df7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab87c2055429934fafe6df7::Halldór Laxness::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab87c2055429934fafe6df7::Free Methodist Church in Canada::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab87c2055429934fafe6df7::A. A. Milne::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab87c2055429934fafe6df7::Jesusland map::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab87c2055429934fafe6df7::Halldór Laxness",
+        "5ab87c2055429934fafe6df7::A. A. Milne"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab87c2055429934fafe6df7::Halldór Laxness::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab87c2055429934fafe6df7::Free Methodist Church in Canada::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab87c2055429934fafe6df7::A. A. Milne::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab87c2055429934fafe6df7::Jesusland map::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab87c2055429934fafe6df7::Jesusland map::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The map implies the existence of a fundamental political divide between contiguous northern and southern regions of North America, the former including both the socially liberal Canada and the West Coast, Northeastern, and Upper Midwestern states, and suggests that these states are closer in spirit to Canada than to the more conservative regions of their own country.\n[2] Milne was a noted writer, primarily as a playwright, before the huge success of Pooh overshadowed all his previous work.\n[3] The Free Methodist Church is a denomination of Methodism, which is a branch of Protestantism.\n[4] Halldór Kiljan Laxness (] ; born Halldór Guðjónsson; 23 April 1902 – 8 February 1998) was a twentieth-century Icelandic writer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

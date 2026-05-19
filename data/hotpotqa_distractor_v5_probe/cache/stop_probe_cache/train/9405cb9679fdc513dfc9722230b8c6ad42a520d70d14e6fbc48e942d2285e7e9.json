@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Benny Stulwicz",
+  "pred_answer": "Benny Stulwicz",
+  "normalized_gold": "benny stulwicz",
+  "normalized_pred": "benny stulwicz",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac545dc5542993e66e82290",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac545dc5542993e66e82290::Rebecca Forstadt::6"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac545dc5542993e66e82290::Dr. Giggles::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac545dc5542993e66e82290::Larry Drake::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac545dc5542993e66e82290::Anita Finlay::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac545dc5542993e66e82290::Dr. Giggles",
+        "5ac545dc5542993e66e82290::Larry Drake"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac545dc5542993e66e82290::Rebecca Forstadt::6",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac545dc5542993e66e82290::Dr. Giggles::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac545dc5542993e66e82290::Larry Drake::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac545dc5542993e66e82290::Anita Finlay::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac545dc5542993e66e82290::Anita Finlay::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Anita Finlay is an American film and television actress who played the recurring role of \"Dr. Nora Thompson\" on \"The Young and the Restless\" for seven years.\n[2] Larry Richard Drake (February 21, 1950 – March 17, 2016) was an American actor, voice artist, and comedian best known as Benny Stulwicz in \"L.A. Law\", Robert G. Durant in both \"Darkman\" and \"\" and the voice of Pops in \"Johnny Bravo\".\n[3] Dr. Giggles is a 1992 horror film directed by Manny Coto, starring Larry Drake as the titular antagonist and Holly Marie Combs as the protagonist.\n[4] She also appeared as a television actress in \"Hill Street Blues\", \"St. Elsewhere\", and \"L.A. Law\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

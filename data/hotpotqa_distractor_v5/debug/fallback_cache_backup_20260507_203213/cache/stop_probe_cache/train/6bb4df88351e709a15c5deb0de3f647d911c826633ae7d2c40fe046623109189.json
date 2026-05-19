@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1962",
+  "pred_answer": "1962",
+  "normalized_gold": "1962",
+  "normalized_pred": "1962",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8ee50a55429917b4a5be09",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8ee50a55429917b4a5be09::Roberta Latow::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8ee50a55429917b4a5be09::Green Coca-Cola Bottles::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8ee50a55429917b4a5be09::Campbell's Soup Cans::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8ee50a55429917b4a5be09::Empire (1964 film)::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8ee50a55429917b4a5be09::Roberta Latow",
+        "5a8ee50a55429917b4a5be09::Campbell's Soup Cans"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8ee50a55429917b4a5be09::Roberta Latow::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8ee50a55429917b4a5be09::Green Coca-Cola Bottles::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8ee50a55429917b4a5be09::Campbell's Soup Cans::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8ee50a55429917b4a5be09::Empire (1964 film)::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8ee50a55429917b4a5be09::Empire (1964 film)::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Its use of the long take \"in extremis\" is an extension of Warhol's earlier work the previous year with \"Sleep\".\n[2] Campbell's Soup Cans, which is sometimes referred to as 32 Campbell's Soup Cans, is a work of art produced in 1962 by Andy Warhol.\n[3] Warhol’s piece was a hybrid craft that is to say that he utilized a silkscreen technique, which mechanicalized some aspects of the painting, but also kept it so that he had to put in some of his individualized “unevenness” across the painting, to reel in the human aspect.\n[4] She has been credited with giving Andy Warhol the original idea to paint \"Campbell's Soup Cans\" and the \"200 One-Dollar Bills\" silkscreens, and her written works reflect her travels throughout Europe."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

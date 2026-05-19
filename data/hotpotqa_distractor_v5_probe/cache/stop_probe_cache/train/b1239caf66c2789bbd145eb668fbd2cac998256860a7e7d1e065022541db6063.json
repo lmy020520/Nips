@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "film director",
+  "pred_answer": "film director",
+  "normalized_gold": "film director",
+  "normalized_pred": "film director",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8a64a95542996c9b8d5eca",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8a64a95542996c9b8d5eca::Valeria Sarmiento::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8a64a95542996c9b8d5eca::Donald Sawyer::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8a64a95542996c9b8d5eca::Walter Ritte::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8a64a95542996c9b8d5eca::Valeria Sarmiento",
+        "5a8a64a95542996c9b8d5eca::Donald Sawyer"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8a64a95542996c9b8d5eca::Valeria Sarmiento::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8a64a95542996c9b8d5eca::Donald Sawyer::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8a64a95542996c9b8d5eca::Walter Ritte::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8a64a95542996c9b8d5eca::Walter Ritte::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Other occupations took place and Ritte, along with Richard Sawyer, occupied and stayed hidden on the island for 35 days, an act which led to his arrest and brief imprisonment.\n[2] Donald Sawyer is a film director, currently residing in Westfield, New Jersey.\n[3] Valeria Sarmiento (born 29 October 1948) is a Chilean film editor, director and screenwriter."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

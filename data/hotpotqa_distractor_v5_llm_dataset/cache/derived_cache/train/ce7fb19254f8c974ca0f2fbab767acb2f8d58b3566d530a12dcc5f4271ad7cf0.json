@@ -1,0 +1,30 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the other station in the Warrington station group, and the provided evidence mentions 'Central' but not the other station. The raw candidates include similar station groups (Gainsborough, Dorchester) that follow a pattern of naming stations after their location (e.g., Central and Lea Road, South and West). This suggests that the missing station might be named after a location (e.g., Bank Quay). A bridge note can connect the pattern to the Warrington group, and a verification note can check if Warrington Bank Quay is indeed the other station.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "The Gainsborough station group consists of Central and Lea Road, suggesting that station groups often pair a central station with a named station.",
+      "source_unit_ids": [
+        "5a74cbbc5542996c70cfadf1::Gainsborough station group::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "The Dorchester station group consists of South and West, indicating that station groups may use directional or locational names for the second station.",
+      "source_unit_ids": [
+        "5a74cbbc5542996c70cfadf1::Dorchester station group::0"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "Warrington Bank Quay railway station is one of two railway stations serving the town centre of Warrington, which matches the pattern of a named station paired with Central.",
+      "source_unit_ids": [
+        "5a74cbbc5542996c70cfadf1::Manchester station group::0"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

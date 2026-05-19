@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lard of the Dance",
+  "pred_answer": "Lard of the Dance",
+  "normalized_gold": "lard of the dance",
+  "normalized_pred": "lard of the dance",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a838c5a5542992ef85e22f2",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a838c5a5542992ef85e22f2::Lard of the Dance::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a838c5a5542992ef85e22f2::The Book Job::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a838c5a5542992ef85e22f2::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a838c5a5542992ef85e22f2::The Simpsons (season 10)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a838c5a5542992ef85e22f2::Loan modification in the United States::19"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a838c5a5542992ef85e22f2::Lard of the Dance",
+        "5a838c5a5542992ef85e22f2::The Simpsons (season 10)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a838c5a5542992ef85e22f2::Lard of the Dance::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a838c5a5542992ef85e22f2::The Book Job::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a838c5a5542992ef85e22f2::The Simpsons (season 10)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a838c5a5542992ef85e22f2::Loan modification in the United States::19",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a838c5a5542992ef85e22f2::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a838c5a5542992ef85e22f2::Loan modification in the United States::19",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] \"Make Room for Lisa\" is the sixteenth episode of \"The Simpsons\"' tenth season.\n[2] This money Note Holders were unaware of is the prize of real estate and the cause of the Real Estate Crash of 2008 where Lending Institutions provided mortgages to people years prior they know they would eventually loose with Loan holders purchasing Balloon Mortgages lending product that is designed to make fast money off the note holder whom is always typically unaware of their escrow, equity and\n[3] \"The Simpsons\"' tenth season was originally broadcast on the Fox network in the United States between August 23, 1998, and May 16, 1999.\n[4] \"The Book Job\" is the sixth episode of the twenty-third season of the American animated sitcom \"The Simpsons\".\n\nNotes:\n[bridge] The episode where Homer discovers he can make money by stealing and reselling grease is 'Lard of the Dance', which is the tenth episode of the tenth season of T"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

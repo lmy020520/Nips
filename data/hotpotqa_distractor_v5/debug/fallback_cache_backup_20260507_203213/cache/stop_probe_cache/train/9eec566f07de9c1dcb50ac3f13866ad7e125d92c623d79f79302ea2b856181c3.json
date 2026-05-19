@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Arlington House",
+  "pred_answer": "Arlington House",
+  "normalized_gold": "arlington house",
+  "normalized_pred": "arlington house",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab57793554299637185c5a7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab57793554299637185c5a7::Fort Craig (Virginia)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab57793554299637185c5a7::Pope Branch::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab57793554299637185c5a7::Arlington House, The Robert E. Lee Memorial::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab57793554299637185c5a7::Battle of Aquia Creek::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab57793554299637185c5a7::Fort Craig (Virginia)",
+        "5ab57793554299637185c5a7::Arlington House, The Robert E. Lee Memorial"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab57793554299637185c5a7::Fort Craig (Virginia)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab57793554299637185c5a7::Pope Branch::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab57793554299637185c5a7::Arlington House, The Robert E. Lee Memorial::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab57793554299637185c5a7::Battle of Aquia Creek::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab57793554299637185c5a7::Battle of Aquia Creek::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Confederates set up several shore batteries to block Union military and commercial vessels from moving in the Chesapeake Bay and along the lower Potomac River as well as for defensive purposes.\n[2] It overlooks the Potomac River and the National Mall in Washington, D.C. During the American Civil War, the grounds of the mansion were selected as the site of Arlington National Cemetery, in part to ensure that Lee would never again be able to return to his home.\n[3] The headwaters of the stream originate near Fort Davis Drive, and the branch flows roughly northwest for about 1 mi to the Anacostia, which drains to the Potomac River and the Chesapeake Bay.\n[4] Fort Craig stood less than a mile away from Arlington House, the Union-occupied estate of Confederate General Robert E. Lee."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

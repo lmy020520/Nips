@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Oedipus",
+  "pred_answer": "Oedipus",
+  "normalized_gold": "oedipus",
+  "normalized_pred": "oedipus",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e7e0555429949594199df",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e7e0555429949594199df::Polynices::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e7e0555429949594199df::Oedipus::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e7e0555429949594199df::Leo (constellation)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e7e0555429949594199df::Polynices",
+        "5a7e7e0555429949594199df::Oedipus"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e7e0555429949594199df::Polynices::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e7e0555429949594199df::Oedipus::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e7e0555429949594199df::Leo (constellation)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e7e0555429949594199df::Leo (constellation)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Its name is Latin for lion, and to the ancient Greeks represented the Nemean Lion killed by the mythical Greek hero Heracles (known to the ancient Romans as Hercules) as one of his twelve labors.\n[2] A tragic hero in Greek mythology, Oedipus accidentally fulfilled a prophecy that he would end up killing his father and marrying his mother, thereby bringing disaster to his city and family.\n[3] His father, Oedipus, was discovered to have killed his father and married his mother, and was expelled from Thebes, leaving his sons Eteocles and Polynices to rule."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Enshi () is a county-level city in and the seat of Enshi Tujia",
+  "pred_answer": "Enshi () is a county-level city in and the seat of Enshi Tujia",
+  "normalized_gold": "enshi is a county-level city in and the seat of enshi tujia",
+  "normalized_pred": "enshi is a county-level city in and the seat of enshi tujia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0b881554299603e418447",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0b881554299603e418447::Zhonglu::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0b881554299603e418447::Enshi City::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0b881554299603e418447::Zhuzhou::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0b881554299603e418447::Lichuan, Hubei::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0b881554299603e418447::Enshi City",
+        "5ae0b881554299603e418447::Zhuzhou"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0b881554299603e418447::Zhonglu::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0b881554299603e418447::Enshi City::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0b881554299603e418447::Zhuzhou::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0b881554299603e418447::Lichuan, Hubei::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0b881554299603e418447::Lichuan, Hubei::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Lichuan () is a county-level city of the Enshi Tujia and Miao Autonomous Prefecture, in southwestern Hubei province, People's Republic of China, located 52 km west of Enshi City, the prefecture seat, as the crow flies.\n[2] Zhuzhou (), formerly Jianning, is a prefecture-level city of Hunan Province, China, a little to the southeast of Changsha and bordering Jiangxi to the east.\n[3] Enshi () is a county-level city in and the seat of Enshi Tujia and Miao Autonomous Prefecture, in western Hubei province, People's Republic of China.\n[4] Zhonglu () is a town in the Enshi Tujia and Miao Autonomous Prefecture, in extreme southwestern Hubei province, China, 36 km southwest of downtown Lichuan, which administers the town, and 78 km west-southwest of Enshi City, the prefectural seat."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

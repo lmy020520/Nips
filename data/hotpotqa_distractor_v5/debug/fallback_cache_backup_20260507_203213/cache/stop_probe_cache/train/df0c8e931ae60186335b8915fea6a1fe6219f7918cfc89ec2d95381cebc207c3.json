@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New England",
+  "pred_answer": "New England",
+  "normalized_gold": "new england",
+  "normalized_pred": "new england",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a82a51c55429954d2e2eb93",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a82a51c55429954d2e2eb93::Boston University Terriers football::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a82a51c55429954d2e2eb93::Boston University Terriers women's ice hockey::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a82a51c55429954d2e2eb93::Hockey East::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a82a51c55429954d2e2eb93::Agganis Arena::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a82a51c55429954d2e2eb93::Boston University Terriers women's ice hockey",
+        "5a82a51c55429954d2e2eb93::Hockey East"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a82a51c55429954d2e2eb93::Boston University Terriers football::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a82a51c55429954d2e2eb93::Boston University Terriers women's ice hockey::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a82a51c55429954d2e2eb93::Hockey East::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a82a51c55429954d2e2eb93::Agganis Arena::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a82a51c55429954d2e2eb93::Agganis Arena::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is home to the five-time national champion Boston University Terriers men's ice hockey team.\n[2] The Hockey East Association, also known as Hockey East, is a college ice hockey conference which operates mostly in New England.\n[3] The Terriers play in the Hockey East conference.\n[4] The Boston University Terriers football program were the American football team for Boston University located in Boston, Massachusetts."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

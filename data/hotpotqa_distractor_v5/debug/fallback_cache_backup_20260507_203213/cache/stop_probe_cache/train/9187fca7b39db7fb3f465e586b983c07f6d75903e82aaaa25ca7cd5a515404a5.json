@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Australia",
+  "pred_answer": "Australia",
+  "normalized_gold": "australia",
+  "normalized_pred": "australia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add8df15542990dbb2f7e6c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add8df15542990dbb2f7e6c::Jack Thompson (actor)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add8df15542990dbb2f7e6c::The Club (1980 film)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add8df15542990dbb2f7e6c::Charlie Pannam (footballer, born 1874)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add8df15542990dbb2f7e6c::Jack Thompson (actor)",
+        "5add8df15542990dbb2f7e6c::The Club (1980 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add8df15542990dbb2f7e6c::Jack Thompson (actor)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add8df15542990dbb2f7e6c::The Club (1980 film)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add8df15542990dbb2f7e6c::Charlie Pannam (footballer, born 1874)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add8df15542990dbb2f7e6c::Charlie Pannam (footballer, born 1874)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Charles Henry \"Charlie\" Pannam (original family surname was Pannamopoulos: 2 October 1874 - 29 October 1952) was a Greek-born Australian rules footballer who played for the Collingwood Football Club in the Victorian Football Association (VFA) between 1894 and 1896 then in the Victorian Football League (VFL) between 1897 and 1906.\n[2] It was inspired by the backroom dealings and antics of the Victorian Football League's Collingwood Football Club.\n[3] Jack Thompson, AM (born 31 August 1940) is an Australian actor and one of the major figures of Australian cinema."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

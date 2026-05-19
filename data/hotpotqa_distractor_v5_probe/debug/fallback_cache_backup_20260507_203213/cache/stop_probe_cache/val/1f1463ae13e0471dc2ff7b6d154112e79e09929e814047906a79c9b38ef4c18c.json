@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "$2.65 billion",
+  "pred_answer": "$2.65 billion",
+  "normalized_gold": "$265 billion",
+  "normalized_pred": "$265 billion",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abcd7f25542993a06baf981",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abcd7f25542993a06baf981::Harris Publications::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abcd7f25542993a06baf981::Yvan Rodic::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abcd7f25542993a06baf981::Armani::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abcd7f25542993a06baf981::Marijuana Control, Regulation, and Education Act::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abcd7f25542993a06baf981::Yvan Rodic",
+        "5abcd7f25542993a06baf981::Armani"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abcd7f25542993a06baf981::Harris Publications::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abcd7f25542993a06baf981::Yvan Rodic::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abcd7f25542993a06baf981::Armani::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abcd7f25542993a06baf981::Marijuana Control, Regulation, and Education Act::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abcd7f25542993a06baf981::Marijuana Control, Regulation, and Education Act::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] As introduced, this proposal is estimated to raise over $1 billion in annual revenue by taxing the retail production and sale of marijuana for adults 21 years of age and older.\n[2] In 2016, estimated sales of the company were around $2.65 billion.\n[3] In February 2006, he began posting the results online and since then he's contributed to brands like Armani, Esprit and Volvo.\n[4] Harris Publications Inc. was an American special interest media company, operating over 75 brands with print, digital, mobile and live event platforms prior to its sale to Athlon Media in 2016."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

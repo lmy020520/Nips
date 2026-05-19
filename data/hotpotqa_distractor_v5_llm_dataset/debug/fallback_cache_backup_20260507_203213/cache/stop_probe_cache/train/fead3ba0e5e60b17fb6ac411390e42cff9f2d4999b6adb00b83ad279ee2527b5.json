@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the First World War",
+  "pred_answer": "the First World War",
+  "normalized_gold": "the first world war",
+  "normalized_pred": "the first world war",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a757b695542992d0ec05fa7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a757b695542992d0ec05fa7::8th Cavalry Brigade (United Kingdom)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a757b695542992d0ec05fa7::8th (Lucknow) Division::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a757b695542992d0ec05fa7::Western Front (World War I)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a757b695542992d0ec05fa7::3rd (Meerut) Cavalry Brigade::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a757b695542992d0ec05fa7::8th Cavalry Brigade (United Kingdom)",
+        "5a757b695542992d0ec05fa7::Western Front (World War I)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a757b695542992d0ec05fa7::8th Cavalry Brigade (United Kingdom)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a757b695542992d0ec05fa7::8th (Lucknow) Division::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a757b695542992d0ec05fa7::Western Front (World War I)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a757b695542992d0ec05fa7::3rd (Meerut) Cavalry Brigade::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a757b695542992d0ec05fa7::3rd (Meerut) Cavalry Brigade::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 4th (Meerut) Cavalry Brigade was a cavalry brigade of the British Indian Army that formed part of the Indian Army during the First World War.\n[2] The Western Front was the main theatre of war during the First World War.\n[3] The Division remained in India on internal security duties during World War I, though the 8th (Lucknow) Cavalry Brigade was transferred to the 1st Indian Cavalry Division and served in France on the Western Front, and the 22nd Lucknow Infantry Brigade served as part of the 11th Indian Division in Egypt.\n[4] The 8th Cavalry Brigade was a cavalry brigade of the British Army in World War I."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

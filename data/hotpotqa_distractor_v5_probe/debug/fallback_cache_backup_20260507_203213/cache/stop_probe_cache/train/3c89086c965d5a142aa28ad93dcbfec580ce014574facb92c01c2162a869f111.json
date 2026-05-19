@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Aloysia",
+  "pred_answer": "Aloysia",
+  "normalized_gold": "aloysia",
+  "normalized_pred": "aloysia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac32c6e5542995ef918c15a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac32c6e5542995ef918c15a::Aloysia wrightii::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac32c6e5542995ef918c15a::Kniphofia::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac32c6e5542995ef918c15a::Aloysia::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac32c6e5542995ef918c15a::Mount Lofty Botanic Garden::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac32c6e5542995ef918c15a::Kniphofia",
+        "5ac32c6e5542995ef918c15a::Aloysia"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac32c6e5542995ef918c15a::Aloysia wrightii::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac32c6e5542995ef918c15a::Kniphofia::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac32c6e5542995ef918c15a::Aloysia::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac32c6e5542995ef918c15a::Mount Lofty Botanic Garden::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac32c6e5542995ef918c15a::Mount Lofty Botanic Garden::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The cooler, wetter location suits plants from temperate climates which are difficult to grow on the Adelaide Plains.\n[2] They are native to the Americas, where they are distributed in temperate climates, as well as in subtropical and desert climates.\n[3] Kniphofia , also called tritoma, red hot poker, torch lily, knofflers or poker plant, is a genus of flowering plants in the family Asphodelaceae, first described as a genus in 1794.\n[4] Aloysia wrightii is a species of flowering plant in the verbena family known by the common names Wright's beebrush and oreganillo."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

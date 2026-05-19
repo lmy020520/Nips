@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "completely outside Euro-American culture",
+  "pred_answer": "completely outside Euro-American culture",
+  "normalized_gold": "completely outside euro-american culture",
+  "normalized_pred": "completely outside euro-american culture",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74698a55429979e2882945",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74698a55429979e2882945::Bernardin Gantin::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74698a55429979e2882945::Saxton Pope::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74698a55429979e2882945::Ishi::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74698a55429979e2882945::Pio Laghi::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74698a55429979e2882945::Saxton Pope",
+        "5a74698a55429979e2882945::Ishi"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74698a55429979e2882945::Bernardin Gantin::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74698a55429979e2882945::Saxton Pope::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74698a55429979e2882945::Ishi::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74698a55429979e2882945::Pio Laghi::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74698a55429979e2882945::Pio Laghi::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He had a particularly close relationship with George H.W. Bush, and George W. Bush.\n[2] Widely acclaimed in his time as the \"last wild Indian\" in America, Ishi lived most of his life completely outside Euro-American culture.\n[3] He is most famous as the father of modern bow hunting, and for his close relationship with Ishi, the last member of the Yahi tribe and the last known American Indian to be raised largely isolated from Western culture.\n[4] He enjoyed a close relationship with Pope John XXIII, Popes Paul VI and John Paul I, and most especially, with Pope John Paul II and his fellow curial cardinal and future Pope, Joseph Ratzinger."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Robert McNamara",
+  "pred_answer": "Ford",
+  "normalized_gold": "robert mcnamara",
+  "normalized_pred": "ford",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "The evidence shows that Ford owns an 8% stake in Aston Martin, and that Robert McNamara was selected as President of Ford Motor Company and then as Secretary of Defense. However, the question asks for a Secretary of State, not Secretary of Defense. The gold answer is Robert McNamara, but he was Secretary of Defense, not Secretary of State. The pred answer is Ford, which is a company, not a person. The evidence does not support that any Secretary of State was president of the company that owns 8% stake in Aston Martin.",
+  "missing_support_reasons": [
+    "The question asks for a Secretary of State, but the evidence mentions Robert McNamara as Secretary of Defense, not Secretary of State.",
+    "The pred answer 'Ford' is a company, not a person, and does not match the gold answer 'Robert McNamara'.",
+    "There is no evidence that any Secretary of State was president of Ford Motor Company."
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "The evidence shows that Ford owns an 8% stake in Aston Martin, and that Robert McNamara was selected as President of Ford Motor Company and then as Secretary of Defense. However, the question asks for a Secretary of State, not Secretary of Defense. The gold answer is Robert McNamara, but he was Secretary of Defense, not Secretary of State. The pred answer is Ford, which is a company, not a person. The evidence does not support that any Secretary of State was president of the company that owns 8% stake in Aston Martin.",
+    "missing_support_reasons": [
+      "The question asks for a Secretary of State, but the evidence mentions Robert McNamara as Secretary of Defense, not Secretary of State.",
+      "The pred answer 'Ford' is a company, not a person, and does not match the gold answer 'Robert McNamara'.",
+      "There is no evidence that any Secretary of State was president of Ford Motor Company."
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5ab1c447554299722f9b4c5a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab1c447554299722f9b4c5a::Ford Motor Company::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab1c447554299722f9b4c5a::Polnet Communications::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab1c447554299722f9b4c5a::1960 in Michigan::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab1c447554299722f9b4c5a::List of Aston Villa F.C. managers::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab1c447554299722f9b4c5a::Ford Motor Company",
+        "5ab1c447554299722f9b4c5a::1960 in Michigan"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab1c447554299722f9b4c5a::Ford Motor Company::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab1c447554299722f9b4c5a::Polnet Communications::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab1c447554299722f9b4c5a::1960 in Michigan::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab1c447554299722f9b4c5a::List of Aston Villa F.C. managers::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab1c447554299722f9b4c5a::List of Aston Villa F.C. managers::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Aston Villa were the first top-tier club to appoint a manager from outside the United Kingdom or Ireland when Jozef Vengloš was appointed in 1990.\n[2] The top stories of the year in Michigan included: (1) the nomination and election of John Swainson, a 35-year-old double amputee, as Governor of Michigan; (2) the decision of G. Mennen Williams not to run for a seventh term as Governor; (3) the selection of Michigan's Nancy Fleming as Miss America; (4) John F. Kennedy's taking Michigan's electoral votes over Richard M. Nixon; (5) the selection of\n[3] Polnet Communications, Ltd. is a Chicago, Illinois-based company that owns 8 AM radio stations in the United States.\n[4] Ford owns an 8% stake in Aston Martin of the United Kingdom, and a 49% stake in Jiangling of China."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

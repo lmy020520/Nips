@@ -1,0 +1,22 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the CEO of the company that won the National Lottery franchise in 1994, 2001, and 2007. The raw candidate unit_id=5a8507ba5542994c784ddadb::Andy Duncan (executive)::0 directly states that Andy Duncan is CEO of Camelot Group, which operates the UK National Lottery. However, we need to confirm that Camelot Group indeed won the franchise in those years. The other raw candidates do not provide this confirmation. A bridge note can connect the CEO to the franchise wins, and a verification note can confirm the franchise awards.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Andy Duncan is the CEO of Camelot Group, which operates the UK National Lottery.",
+      "source_unit_ids": [
+        "5a8507ba5542994c784ddadb::Andy Duncan (executive)::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Camelot Group was awarded the National Lottery franchise in 1994, 2001, and 2007.",
+      "source_unit_ids": [
+        "5a8507ba5542994c784ddadb::Camelot Group::3"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

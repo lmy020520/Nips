@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Syracuse, New York",
+  "pred_answer": "Syracuse, New York",
+  "normalized_gold": "syracuse new york",
+  "normalized_pred": "syracuse new york",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade3d185542997c77adedba",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade3d185542997c77adedba::Fairmount, New York::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade3d185542997c77adedba::Salt Commission::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade3d185542997c77adedba::James Geddes (engineer)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade3d185542997c77adedba::Onondaga Lake::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ade3d185542997c77adedba::Fairmount, New York::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade3d185542997c77adedba::James Geddes (engineer)",
+        "5ade3d185542997c77adedba::Onondaga Lake"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade3d185542997c77adedba::Fairmount, New York::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade3d185542997c77adedba::Salt Commission::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade3d185542997c77adedba::James Geddes (engineer)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade3d185542997c77adedba::Onondaga Lake::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ade3d185542997c77adedba::Fairmount, New York::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade3d185542997c77adedba::Fairmount, New York::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Fairmount is a hamlet (and census-designated place) in Onondaga County, New York, United States.\n[2] Onondaga Lake is a lake in Central New York located northwest of Syracuse, New York.\n[3] He was also at the forefront of development of the salt industry at Onondaga Lake near Syracuse, New York beginning in 1794.\n[4] The Salt Industry Commission was an organization created in 758, during the decline of Tang dynasty China, used to raise tax revenue from the state monopoly of the salt trade, or salt gabelle."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

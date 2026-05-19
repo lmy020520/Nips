@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Reader's Digest",
+  "pred_answer": "Reader's Digest",
+  "normalized_gold": "readers digest",
+  "normalized_pred": "readers digest",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac004545542997d642959a4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac004545542997d642959a4::Reader's Digest::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac004545542997d642959a4::Reader's Digest Condensed Books::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac004545542997d642959a4::Soccer America::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac004545542997d642959a4::Urdu Digest::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac004545542997d642959a4::Reader's Digest",
+        "5ac004545542997d642959a4::Soccer America"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac004545542997d642959a4::Reader's Digest::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac004545542997d642959a4::Reader's Digest Condensed Books::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac004545542997d642959a4::Soccer America::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac004545542997d642959a4::Urdu Digest::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac004545542997d642959a4::Urdu Digest::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Its appearance is similar to the famous American monthly, \"Reader's Digest\".\n[2] Soccer America is a quarterly American magazine devoted to soccer.\n[3] Most volumes contained five (although a considerable minority consisted of three, four, or six) current best-selling novels and nonfiction books which were abridged (or \"condensed\") specifically for \"Reader's Digest\".\n[4] Reader's Digest is an American general-interest family magazine, published ten times a year."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

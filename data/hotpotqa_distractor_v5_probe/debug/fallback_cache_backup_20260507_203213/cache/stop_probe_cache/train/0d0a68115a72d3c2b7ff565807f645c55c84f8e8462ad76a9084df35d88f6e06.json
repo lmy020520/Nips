@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hollywood Undead",
+  "pred_answer": "Hollywood Undead",
+  "normalized_gold": "hollywood undead",
+  "normalized_pred": "hollywood undead",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac45d2c5542995c82c4ad39",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac45d2c5542995c82c4ad39::Wax on Radio::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac45d2c5542995c82c4ad39::Deuce (singer)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac45d2c5542995c82c4ad39::Hollywood Undead::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac45d2c5542995c82c4ad39::American Tragedy Redux::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac45d2c5542995c82c4ad39::Wax on Radio",
+        "5ac45d2c5542995c82c4ad39::Hollywood Undead"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac45d2c5542995c82c4ad39::Wax on Radio::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac45d2c5542995c82c4ad39::Deuce (singer)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac45d2c5542995c82c4ad39::Hollywood Undead::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac45d2c5542995c82c4ad39::American Tragedy Redux::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac45d2c5542995c82c4ad39::American Tragedy Redux::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] American Tragedy Redux is the second remix album by American rap rock band Hollywood Undead, taking songs exclusively off the band's 2011 studio album, \"American Tragedy\", and remixing them.\n[2] Hollywood Undead is an American rap rock band from Los Angeles, California, formed in 2005.\n[3] Brought to fame as a producer, singer-songwriter and one of the founding members of rap rock band Hollywood Undead, Deuce has since moved on to solo work through the label \"Five Seven Music\", a branch of Eleven Seven Music.\n[4] Wax on Radio was an American alternative rock band from Chicago, Illinois."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

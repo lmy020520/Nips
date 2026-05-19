@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Living Heritage Tree Museum",
+  "pred_answer": "Living Heritage Tree Museum",
+  "normalized_gold": "living heritage tree museum",
+  "normalized_pred": "living heritage tree museum",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77ca0d55429967ab1052a0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77ca0d55429967ab1052a0::Isabelle Romée::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77ca0d55429967ab1052a0::Joan of Arc::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77ca0d55429967ab1052a0::Living Heritage Tree Museum::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77ca0d55429967ab1052a0::Living Heritage Tree Museum::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77ca0d55429967ab1052a0::Joan of Arc",
+        "5a77ca0d55429967ab1052a0::Living Heritage Tree Museum"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77ca0d55429967ab1052a0::Isabelle Romée::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77ca0d55429967ab1052a0::Joan of Arc::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77ca0d55429967ab1052a0::Living Heritage Tree Museum::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77ca0d55429967ab1052a0::Living Heritage Tree Museum::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77ca0d55429967ab1052a0::Living Heritage Tree Museum::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Living Heritage Tree Museum is located in the city of Storm Lake, Iowa, US.\n[2] The museum collection includes descendents of trees with historical connections to Joan of Arc, Johnny Appleseed, and Henry Wadsworth Longfellow.\n[3] Joan of Arc was born to Jacques d'Arc and Isabelle Romée, a peasant family, at Domrémy in north-east France.\n[4] Isabelle Romée, also known as Isabelle de Vouthon and Isabelle d'Arc (1377–1458) and Ysabeau Romee, was the mother of Joan of Arc."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

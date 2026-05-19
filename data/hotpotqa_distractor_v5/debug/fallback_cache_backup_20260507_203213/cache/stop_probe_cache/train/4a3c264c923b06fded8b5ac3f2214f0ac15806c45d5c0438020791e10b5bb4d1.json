@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Johnny Hyde",
+  "pred_answer": "Johnny Hyde",
+  "normalized_gold": "johnny hyde",
+  "normalized_pred": "johnny hyde",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a791f6c55429974737f7998",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a791f6c55429974737f7998::This Year's Blonde::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a791f6c55429974737f7998::Ashley-Famous::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a791f6c55429974737f7998::Johnny Hyde::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a791f6c55429974737f7998::Beau Bridges::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a791f6c55429974737f7998::This Year's Blonde",
+        "5a791f6c55429974737f7998::Johnny Hyde"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a791f6c55429974737f7998::This Year's Blonde::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a791f6c55429974737f7998::Ashley-Famous::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a791f6c55429974737f7998::Johnny Hyde::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a791f6c55429974737f7998::Beau Bridges::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a791f6c55429974737f7998::Beau Bridges::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Bridges was awarded a star on the Hollywood Walk of Fame on April 7, 2003 at 7065 Hollywood Boulevard for his contributions to the television industry.\n[2] Johnny Hyde (23 April 1895 – 18 December 1950) was a Russian-American talent agent.\n[3] Ashley-Famous was a talent agency started in 1951 by talent agent Ted Ashley.\n[4] This Year's Blonde is a 1980 low-budgeted American television drama film, based on the Garson Kanin novel \"Moviola\" about 1950s sex symbol Marilyn Monroe."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

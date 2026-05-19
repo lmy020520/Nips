@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Paul von Hindenburg",
+  "pred_answer": "Paul von Hindenburg",
+  "normalized_gold": "paul von hindenburg",
+  "normalized_pred": "paul von hindenburg",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a78b55542994f819ef1e9",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a78b55542994f819ef1e9::Kurt von Schleicher::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a78b55542994f819ef1e9::Paul von Hindenburg::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a78b55542994f819ef1e9::Constantin Brătescu::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a78b55542994f819ef1e9::Kurt von Schleicher",
+        "5a7a78b55542994f819ef1e9::Paul von Hindenburg"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a78b55542994f819ef1e9::Kurt von Schleicher::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a78b55542994f819ef1e9::Paul von Hindenburg::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a78b55542994f819ef1e9::Constantin Brătescu::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a78b55542994f819ef1e9::Constantin Brătescu::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] In 1941, he served first as Chief Propaganda Section General Staff (Romania's Propaganda Minister) and then as a Romanian liaison officer to the German Military Mission, meaning that he served as a German military officer during Operation Barbarossa and the Axis Invasion of the Soviet Union.\n[2] Paul Ludwig Hans Anton von Beneckendorff und von Hindenburg (   ), known generally as Paul von Hindenburg (] ; 2 October 1847 – 2 August 1934) was a German military officer, statesman, and politician who largely controlled German policy in the second half of World War I and served as the elected President of Germany from 1925 until his death in 1934.\n[3] Kurt Ferdinand Friedrich Hermann von Schleicher (   ; 7 April 1882 – 30 June 1934) was a German general and the last Chancellor of Germany during the era of the Weimar Republic."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Utah",
+  "pred_answer": "Utah",
+  "normalized_gold": "utah",
+  "normalized_pred": "utah",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7f4cc5542992aa3b8c890",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7f4cc5542992aa3b8c890::List of cities and towns in New Hampshire::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7f4cc5542992aa3b8c890::Cummins Falls::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7f4cc5542992aa3b8c890::Turbo Drop::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab7f4cc5542992aa3b8c890::Supreme Scream::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab7f4cc5542992aa3b8c890::List of cities and towns in New Hampshire::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7f4cc5542992aa3b8c890::Turbo Drop",
+        "5ab7f4cc5542992aa3b8c890::Supreme Scream"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7f4cc5542992aa3b8c890::List of cities and towns in New Hampshire::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7f4cc5542992aa3b8c890::Cummins Falls::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7f4cc5542992aa3b8c890::Turbo Drop::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab7f4cc5542992aa3b8c890::Supreme Scream::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab7f4cc5542992aa3b8c890::List of cities and towns in New Hampshire::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7f4cc5542992aa3b8c890::List of cities and towns in New Hampshire::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] This is a list of the 221 towns and 13 cities in the U.S. state of New Hampshire.\n[2] Supreme Scream is a drop tower located at Knott's Berry Farm in Buena Park, CA, USA and was designed and manufactured by S&S Worldwide, Inc. of Utah.\n[3] The current tallest Turbo Drop installation in operation is Supreme Scream at Knott's Berry Farm in Buena Park, California.\n[4] Cummins Falls is a waterfall on the Blackburn Fork State Scenic River and is located in southern Jackson County, Tennessee."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

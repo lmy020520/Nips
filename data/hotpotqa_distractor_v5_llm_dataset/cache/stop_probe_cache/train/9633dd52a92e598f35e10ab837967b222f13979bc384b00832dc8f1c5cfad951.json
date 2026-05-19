@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Silk",
+  "pred_answer": "Silk",
+  "normalized_gold": "silk",
+  "normalized_pred": "silk",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abcd480554299114383a16b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abcd480554299114383a16b::Hancock and Joan::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abcd480554299114383a16b::Loved Up::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abcd480554299114383a16b::Maxine Peake::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abcd480554299114383a16b::Morgana O'Reilly::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abcd480554299114383a16b::Hancock and Joan",
+        "5abcd480554299114383a16b::Maxine Peake"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abcd480554299114383a16b::Hancock and Joan::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abcd480554299114383a16b::Loved Up::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abcd480554299114383a16b::Maxine Peake::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abcd480554299114383a16b::Morgana O'Reilly::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abcd480554299114383a16b::Morgana O'Reilly::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] O'Reilly played Lynn Matthews in the biographical television film \"Billy\" and guested in \"Nothing Trivial\".\n[2] She has since played Veronica Ball in Channel 4's Manchester-based comedy drama series \"Shameless\", barrister Martha Costello in the BBC legal drama \"Silk\" and Grace Middleton in \"The Village\".\n[3] The film was directed by Peter Cattaneo, who would go on to direct the feature films \"The Full Monty\" (1997) and \"Lucky Break\" (2001).\n[4] Hancock and Joan is a 2008 British biographical television film based on the affair between the comedian Tony Hancock and Joan Le Mesurier, the third wife of actor John Le Mesurier."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

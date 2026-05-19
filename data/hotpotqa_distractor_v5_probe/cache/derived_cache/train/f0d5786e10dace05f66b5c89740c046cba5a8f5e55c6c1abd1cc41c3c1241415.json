@@ -1,0 +1,30 @@
+{
+  "should_derive": true,
+  "reason": "Need to bridge from 'directed' and 'crime' to find the director of the film starring Sigourney Weaver, Tony Shalhoub, and others. Galaxy Quest includes both actors but is not a crime thriller. Michael Budd is an actor/director but not known for this film. Need to connect to Walter Hill.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Galaxy Quest is a science fiction parody, not a crime thriller, so it is not the film in question.",
+      "source_unit_ids": [
+        "5a829e0455429954d2e2eb7e::Galaxy Quest::1"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "Michael Budd is an award-winning Australian actor and director, but his film The Cold Light of Day stars Sigourney Weaver and Bruce Willis, not Michelle Rodriguez or Tony Shalhoub.",
+      "source_unit_ids": [
+        "5a829e0455429954d2e2eb7e::Michael Budd::2"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "The film starring Sigourney Weaver, Tony Shalhoub, Michelle Rodriguez, and Caitlin Gerard is likely a crime thriller directed by Walter Hill.",
+      "source_unit_ids": [
+        "5a829e0455429954d2e2eb7e::James Cameron filmography::8"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

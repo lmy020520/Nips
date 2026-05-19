@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Cao Zizheng",
+  "pred_answer": "Cao Zizheng",
+  "normalized_gold": "cao zizheng",
+  "normalized_pred": "cao zizheng",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abf280b5542997ec76fd3dc",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abf280b5542997ec76fd3dc::Cao Cao::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abf280b5542997ec76fd3dc::Cao Zizheng::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abf280b5542997ec76fd3dc::Prince Yide::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abf280b5542997ec76fd3dc::Cao Cao",
+        "5abf280b5542997ec76fd3dc::Cao Zizheng"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abf280b5542997ec76fd3dc::Cao Cao::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abf280b5542997ec76fd3dc::Cao Zizheng::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abf280b5542997ec76fd3dc::Prince Yide::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abf280b5542997ec76fd3dc::Prince Yide::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He was posthumously honored as crown prince after his father Emperor Zhongzong was restored to the throne in 705 and in 706, Emperor Zhongzong provided Li Chongrun with an honorable burial by interring his remains at the Qianling Mausoleum.\n[2] Cao Zizheng (died 218) was a son of Cao Cao, a warlord who rose to power in the late Eastern Han dynasty and laid the foundation for the state of Cao Wei in the Three Kingdoms period of China.\n[3] As one of the central figures of the Three Kingdoms period, he laid the foundations for what was to become the state of Cao Wei and was posthumously honoured as \"Emperor Wu of Wei\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Tony Awards",
+  "pred_answer": "Tony Awards",
+  "normalized_gold": "tony awards",
+  "normalized_pred": "tony awards",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b299555429931da12ca0d",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b299555429931da12ca0d::Hank Zipzer's Christmas Catastrophe::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b299555429931da12ca0d::Mithila Palkar::10"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b299555429931da12ca0d::Jason Robert Brown::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7b299555429931da12ca0d::The Last Five Years (film)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7b299555429931da12ca0d::Pitch Perfect (film series)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b299555429931da12ca0d::Jason Robert Brown",
+        "5a7b299555429931da12ca0d::The Last Five Years (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b299555429931da12ca0d::Hank Zipzer's Christmas Catastrophe::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b299555429931da12ca0d::Mithila Palkar::10",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b299555429931da12ca0d::Jason Robert Brown::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7b299555429931da12ca0d::The Last Five Years (film)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7b299555429931da12ca0d::Pitch Perfect (film series)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b299555429931da12ca0d::Pitch Perfect (film series)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Pitch Perfect is a series of musical comedy films created by Kay Cannon, loosely based on the non-fiction book \"Pitch Perfect: The Quest for Collegiate a Cappella Glory\" by Mickey Rapkin.\n[2] The Last Five Years is a 2014 American musical comedy-drama film starring Anna Kendrick and Jeremy Jordan.\n[3] He has won Tony Awards for his work on \"Parade\" and \"The Bridges of Madison County\".\n[4] She has starred along with Amey Wagh in a Marathi movie called Muramba which released on 2 June 2017."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

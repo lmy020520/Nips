@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Steven Seagal",
+  "pred_answer": "Steven Seagal",
+  "normalized_gold": "steven seagal",
+  "normalized_pred": "steven seagal",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3ea035542995dadf2424a",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3ea035542995dadf2424a::Martina Sáblíková::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3ea035542995dadf2424a::Didem Erol::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3ea035542995dadf2424a::Max Ryan::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae3ea035542995dadf2424a::Steven Seagal::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae3ea035542995dadf2424a::Charles K. Kao::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3ea035542995dadf2424a::Max Ryan",
+        "5ae3ea035542995dadf2424a::Steven Seagal"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3ea035542995dadf2424a::Martina Sáblíková::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3ea035542995dadf2424a::Didem Erol::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3ea035542995dadf2424a::Max Ryan::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae3ea035542995dadf2424a::Steven Seagal::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae3ea035542995dadf2424a::Charles K. Kao::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3ea035542995dadf2424a::Charles K. Kao::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Sir Charles Kuen Kao, GBM, KBE, FRS, FREng (born 4 November 1933) is a Chinese-born Hong Kong, American and British electrical engineer and physicist who pioneered in the development and use of fiber optics in telecommunications.\n[2] Steven Frederic Seagal (born April 10, 1952) is an actor, producer, screenwriter, director, martial artist, and musician who holds American, Russian, and Serbian citizenship.\n[3] His performance led to other opportunities such as co-starring with Steven Seagal as the main villain in \"The Foreigner\" as well as appearing in Sean Connery's \"The League of Extraordinary Gentlemen\".\n[4] Holding multiple citizenships, Didem Erol is fluent in English and Turkish."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

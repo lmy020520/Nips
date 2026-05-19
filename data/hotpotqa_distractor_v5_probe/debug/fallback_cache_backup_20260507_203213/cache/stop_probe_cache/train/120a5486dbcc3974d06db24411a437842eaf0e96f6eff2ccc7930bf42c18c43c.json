@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fatboy Slim",
+  "pred_answer": "Fatboy Slim",
+  "normalized_gold": "fatboy slim",
+  "normalized_pred": "fatboy slim",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab8652c55429934fafe6d9e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab8652c55429934fafe6d9e::Fatboy Slim::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab8652c55429934fafe6d9e::Kurtis Mantronik::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab8652c55429934fafe6d9e::Mantronix::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab8652c55429934fafe6d9e::Fatboy Slim",
+        "5ab8652c55429934fafe6d9e::Kurtis Mantronik"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab8652c55429934fafe6d9e::Fatboy Slim::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab8652c55429934fafe6d9e::Kurtis Mantronik::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab8652c55429934fafe6d9e::Mantronix::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab8652c55429934fafe6d9e::Mantronix::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The band was formed by DJ Kurtis Mantronik (Kurtis el Khaleel) and rapper MC Tee (Touré Embden).\n[2] Kurtis el Khaleel (Arabic: خليل‎ ‎ ) (born September 4, 1965, Jamaica), known by the stage name Kurtis Mantronik, is an American-British hip hop and electronic-music artist, DJ, remixer, and producer.\n[3] Norman Quentin Cook (born Quentin Leo Cook; 31 July 1963), also known by his stage name Fatboy Slim, is an English DJ, musician, multi-instrumentalist and record producer/mixer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

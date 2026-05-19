@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Aaron Sorkin",
+  "pred_answer": "Aaron Sorkin",
+  "normalized_gold": "aaron sorkin",
+  "normalized_pred": "aaron sorkin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a870c3c55429960ec39b70b",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a870c3c55429960ec39b70b::A Few Good Men::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a870c3c55429960ec39b70b::What Dreams May Come (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a870c3c55429960ec39b70b::A Few Good Men::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a870c3c55429960ec39b70b::Cuba Gooding Jr.::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a870c3c55429960ec39b70b::End Game (2006 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a870c3c55429960ec39b70b::A Few Good Men",
+        "5a870c3c55429960ec39b70b::Cuba Gooding Jr."
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a870c3c55429960ec39b70b::A Few Good Men::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a870c3c55429960ec39b70b::What Dreams May Come (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a870c3c55429960ec39b70b::A Few Good Men::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a870c3c55429960ec39b70b::Cuba Gooding Jr.::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a870c3c55429960ec39b70b::End Game (2006 film)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a870c3c55429960ec39b70b::End Game (2006 film)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] End Game is a 2006 American action film written and directed by Andy Cheng, and starring Cuba Gooding Jr. as Secret Service agent Alex Thomas, who is shot in the hand while unsuccessfully trying to protect the President (Jack Scalia) from an assassin's bullet.\n[2] Cuba M. Gooding Jr. (born January 2, 1968) is an American actor.\n[3] It was adapted for the screen by Aaron Sorkin from his play of the same name but includes contributions by William Goldman.\n[4] What Dreams May Come is a 1998 American fantasy drama film, starring Robin Williams and Cuba Gooding Jr. The film is based on the 1978 novel of the same name by Richard Matheson, and was directed by Vincent Ward."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

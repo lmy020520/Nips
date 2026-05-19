@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Los Angeles Memorial Coliseum",
+  "pred_answer": "Los Angeles Memorial Coliseum",
+  "normalized_gold": "los angeles memorial coliseum",
+  "normalized_pred": "los angeles memorial coliseum",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a60635542990783324f33",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a60635542990783324f33::Bobby Hunt::6"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a60635542990783324f33::Super Bowl I::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a60635542990783324f33::The Pride of Arizona::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a60635542990783324f33::Willie Mitchell (American football)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a60635542990783324f33::Super Bowl I",
+        "5a7a60635542990783324f33::The Pride of Arizona"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a60635542990783324f33::Bobby Hunt::6",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a60635542990783324f33::Super Bowl I::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a60635542990783324f33::The Pride of Arizona::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a60635542990783324f33::Willie Mitchell (American football)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a60635542990783324f33::Willie Mitchell (American football)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] After winning the League Championship with the American Football League's Kansas City Chiefs in 1966, he started for them in the first AFL-NFL World Championship Game, and was on the Chiefs team that won the 1969 AFL Championship and then defeated the NFL's heavily favored Minnesota Vikings in the fourth and final AFL-NFL World Championship Game.\n[2] The Pride of Arizona (POA) is the University of Arizona's Marching band.\n[3] The first AFL-NFL World Championship Game in professional American football, known retroactively as Super Bowl I and referred to in some contemporaneous reports, including the game's radio broadcast, as the Super Bowl, was played on January 15, 1967 at the Los Angeles Memorial Coliseum in Los Angeles, California.\n[4] He was an AFL Champion with the Chiefs in 1962 and in 1967, when he played for them in the first AFL-NFL World Championship game."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

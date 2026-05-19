@@ -1,0 +1,81 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "China 9, Liberty 37",
+  "pred_answer": "Love lead and fury",
+  "normalized_gold": "china 9 liberty 37",
+  "normalized_pred": "love lead and fury",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "The evidence confirms that Warren Oates played John Dillinger in 'Dillinger' and that he starred with Jenny Agutter in 'China 9, Liberty 37' (also known as 'Love lead and fury'). However, the pred answer 'Love lead and fury' is the Italian title of the same film, not a different film. The question asks for the 1978 western film, which is 'China 9, Liberty 37'. The pred answer is incorrect because it gives the Italian title, but the gold answer is 'China 9, Liberty 37'. The evidence supports the gold answer, not the pred answer.",
+  "missing_support_reasons": [
+    "The pred answer 'Love lead and fury' is not the correct film title; the correct film is 'China 9, Liberty 37'. The evidence does not support the pred answer as the correct answer to the question."
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "The evidence confirms that Warren Oates played John Dillinger in 'Dillinger' and that he starred with Jenny Agutter in 'China 9, Liberty 37' (also known as 'Love lead and fury'). However, the pred answer 'Love lead and fury' is the Italian title of the same film, not a different film. The question asks for the 1978 western film, which is 'China 9, Liberty 37'. The pred answer is incorrect because it gives the Italian title, but the gold answer is 'China 9, Liberty 37'. The evidence supports the gold answer, not the pred answer.",
+    "missing_support_reasons": [
+      "The pred answer 'Love lead and fury' is not the correct film title; the correct film is 'China 9, Liberty 37'. The evidence does not support the pred answer as the correct answer to the question."
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5a83054255429903bc27ba6c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a83054255429903bc27ba6c::China 9, Liberty 37::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a83054255429903bc27ba6c::Warren Oates::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a83054255429903bc27ba6c::derived::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a83054255429903bc27ba6c::China 9, Liberty 37",
+        "5a83054255429903bc27ba6c::Warren Oates"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a83054255429903bc27ba6c::China 9, Liberty 37::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a83054255429903bc27ba6c::Warren Oates::2",
+          "added_step": 1
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a83054255429903bc27ba6c::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a83054255429903bc27ba6c::derived::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It stars Warren Oates as Dillinger, Ben Johnson as his pursuer, FBI Agent Melvin Purvis, and Cloris Leachman as the \"Lady in Red\" who made it possible for Purvis to kill Dillinger.\n[2] Oates also portrayed John Dillinger in the biopic \"Dillinger\" (1973) and as the supporting character U.S. Army Sergeant Hulka in the military comedy \"Stripes\" (1981), starring Bill Murray.\n[3] \"Love lead and fury\") is an Italian-Spanish 1978 Western film directed by Monte Hellman, starring Warren Oates, Jenny Agutter, and Fabio Testi.\n\nNotes:\n[verification] Warren Oates portrayed John Dillinger in the 1973 film 'Dillinger'."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

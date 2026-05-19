@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "6 August 1775",
+  "pred_answer": "6 August 1775",
+  "normalized_gold": "6 august 1775",
+  "normalized_pred": "6 august 1775",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab200b05542993be8fa98a1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab200b05542993be8fa98a1::John Henry Foley::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab200b05542993be8fa98a1::Henry Brocas::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab200b05542993be8fa98a1::Daniel O'Connell::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab200b05542993be8fa98a1::Vanessa Ament::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab200b05542993be8fa98a1::John Henry Foley",
+        "5ab200b05542993be8fa98a1::Daniel O'Connell"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab200b05542993be8fa98a1::John Henry Foley::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab200b05542993be8fa98a1::Henry Brocas::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab200b05542993be8fa98a1::Daniel O'Connell::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab200b05542993be8fa98a1::Vanessa Ament::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab200b05542993be8fa98a1::Vanessa Ament::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Vanessa Theme Ament (born January 8, 1955 in Glendale, California) is an American author, academic, Foley artist, and musician, best known for her 2009 book \"The Foley Grail\", one of the first monographs about the craft of Foley sound in movies and television.\n[2] Daniel O'Connell (Irish: \"Dónall Ó Conaill\" ; 6 August 1775 – 15 May 1847), often referred to as The Liberator or The Emancipator, was an Irish political leader in the first half of the 19th century.\n[3] Henry Brocas, born in Dublin in 1762, was well known as a landscape painter and as a drawing-master in the Dublin schools.\n[4] he is best known for his statues of Daniel O'Connell in Dublin, and of Prince Albert for the Albert Memorial in London."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "English Anglican",
+  "pred_answer": "English Anglican",
+  "normalized_gold": "english anglican",
+  "normalized_pred": "english anglican",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74d8e35542993748c89709",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74d8e35542993748c89709::Hospice::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74d8e35542993748c89709::North London Hospice::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74d8e35542993748c89709::Cicely Saunders::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74d8e35542993748c89709::Cicely Saunders::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74d8e35542993748c89709::Hospice",
+        "5a74d8e35542993748c89709::Cicely Saunders"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74d8e35542993748c89709::Hospice::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74d8e35542993748c89709::North London Hospice::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74d8e35542993748c89709::Cicely Saunders::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74d8e35542993748c89709::Cicely Saunders::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74d8e35542993748c89709::Cicely Saunders::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Dame Cicely Mary Saunders (22 June 1918 – 14 July 2005) was an English Anglican nurse, social worker, physician and writer, involved with many international universities.\n[2] She is best known for her role in the birth of the hospice movement, emphasising the importance of palliative care in modern medicine.\n[3] The north London Hospice was the United Kingdom's first multi-faith hospice.\n[4] The first modern hospice care was created by Cicely Saunders in 1967."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

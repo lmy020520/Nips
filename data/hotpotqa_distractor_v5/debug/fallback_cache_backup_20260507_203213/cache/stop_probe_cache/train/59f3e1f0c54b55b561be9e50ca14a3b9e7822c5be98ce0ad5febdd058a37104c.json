@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "pumpkin flesh",
+  "pred_answer": "pumpkin flesh",
+  "normalized_gold": "pumpkin flesh",
+  "normalized_pred": "pumpkin flesh",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77e9d255429949eeb29fa8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77e9d255429949eeb29fa8::Pumpkin ale::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77e9d255429949eeb29fa8::Pumpkin bread::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77e9d255429949eeb29fa8::Mash ingredients::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77e9d255429949eeb29fa8::Mashing::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77e9d255429949eeb29fa8::Pumpkin ale",
+        "5a77e9d255429949eeb29fa8::Mash ingredients"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77e9d255429949eeb29fa8::Pumpkin ale::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77e9d255429949eeb29fa8::Pumpkin bread::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77e9d255429949eeb29fa8::Mash ingredients::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77e9d255429949eeb29fa8::Mashing::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77e9d255429949eeb29fa8::Mashing::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In brewing and distilling, mashing is the process of combining a mix of grain (typically malted barley with supplementary grains such as corn, sorghum, rye or wheat), known as the \"grain bill\", and water, known as \"liquor\", and heating this mixture.\n[2] Mash ingredients, mash bill, mashbill, or grain bill are the materials that brewers use to produce the wort that they then ferment into alcohol.\n[3] The pumpkin can be cooked and softened before being used or simply baked with the bread (using canned pumpkin renders it a simpler dish to prepare).\n[4] Pumpkin ale may be produced using pumpkin flesh in combination with malt or other more typical beer grains as a portion of the mash bill, contributing fermentable sugars to the wort."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

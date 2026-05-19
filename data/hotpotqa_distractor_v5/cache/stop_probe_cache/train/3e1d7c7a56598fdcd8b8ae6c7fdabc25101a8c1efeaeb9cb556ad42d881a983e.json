@@ -1,0 +1,101 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "two",
+  "pred_answer": "two",
+  "normalized_gold": "two",
+  "normalized_pred": "two",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89fd7c55429970aeb701e7",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89fd7c55429970aeb701e7::Gordon Edelstein::7"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89fd7c55429970aeb701e7::Golden Globe Award for Best Animated Feature Film::8"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89fd7c55429970aeb701e7::Joan Plowright::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a89fd7c55429970aeb701e7::derived::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a89fd7c55429970aeb701e7::Uncle Vanya (1963 film)::2"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5a89fd7c55429970aeb701e7::Golden Globe Award for Best Animated Feature Film::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89fd7c55429970aeb701e7::Joan Plowright",
+        "5a89fd7c55429970aeb701e7::Uncle Vanya (1963 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89fd7c55429970aeb701e7::Gordon Edelstein::7",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89fd7c55429970aeb701e7::Golden Globe Award for Best Animated Feature Film::8",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89fd7c55429970aeb701e7::Joan Plowright::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a89fd7c55429970aeb701e7::Uncle Vanya (1963 film)::2",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5a89fd7c55429970aeb701e7::Golden Globe Award for Best Animated Feature Film::0",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a89fd7c55429970aeb701e7::derived::0",
+          "added_step": 3
+        }
+      ],
+      "last_added_unit_id": "5a89fd7c55429970aeb701e7::Golden Globe Award for Best Animated Feature Film::0",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] It was the first time that the Golden Globe Awards had created a separate category for animated films since its establishment.\n[2] The Golden Globe Award for Best Animated Feature Film was awarded for the first time at the 64th Golden Globe Awards in 2007.\n[3] It was a filmed version of the Chichester Festival production, directed by (and starring) Laurence Olivier as Astrov, and also starring Michael Redgrave (Vanya), Rosemary Harris (Elena), and Joan Plowright (Sonya).\n[4] She has won two Golden Globe Awards and a Tony Award and has been nominated for an Academy Award, an Emmy and two BAFTA Awards.\n\nNotes:\n[bridge] Golden Globe Award for Best Animated Feature Film was the first time that the Golden Globe Awards had created a separate category for animated films since its e"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

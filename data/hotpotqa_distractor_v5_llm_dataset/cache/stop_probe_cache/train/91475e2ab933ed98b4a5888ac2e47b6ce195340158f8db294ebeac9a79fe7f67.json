@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Barry George",
+  "pred_answer": "Barry George",
+  "normalized_gold": "barry george",
+  "normalized_pred": "barry george",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a799f685542996c55b2dc2a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a799f685542996c55b2dc2a::Barry George::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a799f685542996c55b2dc2a::James Joseph Richardson::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a799f685542996c55b2dc2a::Scott Lomax::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a799f685542996c55b2dc2a::Satish Sekar::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a799f685542996c55b2dc2a::Barry George",
+        "5a799f685542996c55b2dc2a::Scott Lomax"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a799f685542996c55b2dc2a::Barry George::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a799f685542996c55b2dc2a::James Joseph Richardson::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a799f685542996c55b2dc2a::Scott Lomax::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a799f685542996c55b2dc2a::Satish Sekar::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a799f685542996c55b2dc2a::Satish Sekar::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Satish C. Sekar (born September 1963) is a British author and journalist, and a consultant in forensic evidence.\n[2] Scott Lomax (born 1982) is a campaigner and true crime author who wrote about the case of the convicted murderer Jeremy Bamber, and also about the innocence of Barry George who was acquitted of the murder of Jill Dando on 1 August 2008 after a retrial ordered by the Court of Appeal.\n[3] James Joseph Richardson (born December 12, 1935) is an African-American man who was wrongly convicted in 1968 for the October 1967 murders of his seven children.\n[4] Barry Michael George (born 15 April 1960, also known as Barry Bulsara) is a British man who was wrongly convicted on 2 July 2001 of the murder of British television presenter Jill Dando."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "30 Rock",
+  "pred_answer": "30 Rock",
+  "normalized_gold": "30 rock",
+  "normalized_pred": "30 rock",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe6e725542991f6610618b",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe6e725542991f6610618b::Peggy Olson::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe6e725542991f6610618b::Public Relations (Mad Men)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe6e725542991f6610618b::Jon Hamm::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe6e725542991f6610618b::Generalissimo (30 Rock)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abe6e725542991f6610618b::The Good News (Mad Men)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe6e725542991f6610618b::Jon Hamm",
+        "5abe6e725542991f6610618b::Generalissimo (30 Rock)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe6e725542991f6610618b::Peggy Olson::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe6e725542991f6610618b::Public Relations (Mad Men)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe6e725542991f6610618b::Jon Hamm::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe6e725542991f6610618b::Generalissimo (30 Rock)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abe6e725542991f6610618b::The Good News (Mad Men)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe6e725542991f6610618b::The Good News (Mad Men)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] \"The Good News\" is the third episode of the fourth season of the American television drama series \"Mad Men\", and the 42nd overall episode of the series.\n[2] \"Generalissimo\" is the tenth episode of the third season of the American television comedy series \"30 Rock\".\n[3] Jonathan Daniel Hamm (born March 10, 1971) is an American actor, director, and television producer best known for playing advertising executive Don Draper for the AMC television drama series, \"Mad Men\" (2007–2015).\n[4] \"Public Relations\" is the season premiere of the fourth season of the American television drama series \"Mad Men\", and the 40th overall episode of the series."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

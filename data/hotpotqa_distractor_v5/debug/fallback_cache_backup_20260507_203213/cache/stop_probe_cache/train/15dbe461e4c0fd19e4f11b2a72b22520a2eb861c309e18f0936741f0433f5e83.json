@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Transcendentalism",
+  "pred_answer": "Transcendentalism",
+  "normalized_gold": "transcendentalism",
+  "normalized_pred": "transcendentalism",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4a88255429970de88d9f8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4a88255429970de88d9f8::Transcendentalism::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4a88255429970de88d9f8::Latter Day Saint movement::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4a88255429970de88d9f8::Frederic Henry Hedge::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4a88255429970de88d9f8::Mormonism in the 19th century::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4a88255429970de88d9f8::Transcendentalism",
+        "5ae4a88255429970de88d9f8::Frederic Henry Hedge"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4a88255429970de88d9f8::Transcendentalism::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4a88255429970de88d9f8::Latter Day Saint movement::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4a88255429970de88d9f8::Frederic Henry Hedge::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4a88255429970de88d9f8::Mormonism in the 19th century::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4a88255429970de88d9f8::Mormonism in the 19th century::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In the late 1820s, founder Joseph Smith, founder of the Latter Day Saint movement, announced that an angel had given him a set of golden plates engraved with a chronicle of ancient American peoples, which he had a unique gift to translate.\n[2] He was a founder of the Transcendental Club, originally called Hedge's Club, and active in the development of Transcendentalism.\n[3] The Latter Day Saint movement (also called the LDS movement, LDS restorationist movement, or Smith–Rigdon movement) is the collection of independent church groups that trace their origins to a Christian primitivist movement founded by Joseph Smith in the late 1820s.\n[4] Transcendentalism is a philosophical movement that developed in the late 1820s and 1830s in the eastern United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

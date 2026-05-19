@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "achondroplasia",
+  "pred_answer": "achondroplasia",
+  "normalized_gold": "achondroplasia",
+  "normalized_pred": "achondroplasia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f45c45542992414482a28",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f45c45542992414482a28::Timmy Lenox::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f45c45542992414482a28::Josh Ryan Evans::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f45c45542992414482a28::Josh Ryan Evans::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f45c45542992414482a28::Timmy Lenox",
+        "5a8f45c45542992414482a28::Josh Ryan Evans"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f45c45542992414482a28::Timmy Lenox::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f45c45542992414482a28::Josh Ryan Evans::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f45c45542992414482a28::Josh Ryan Evans::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f45c45542992414482a28::Josh Ryan Evans::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Though he was 17 years old when \"Passions\" debuted, Evans had the appearance and voice of a small child due to achondroplasia, a form of dwarfism.\n[2] Joshua Ryan \"Josh\" Evans (January 10, 1982 – August 5, 2002) was an American actor who became known for his role of Timmy Lenox in the soap opera \"Passions\".\n[3] In a tragically ironic twist of fate, the actor died of a congenital heart defect the very day his character Timmy died on the show and donated his heart to Charity Standish."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

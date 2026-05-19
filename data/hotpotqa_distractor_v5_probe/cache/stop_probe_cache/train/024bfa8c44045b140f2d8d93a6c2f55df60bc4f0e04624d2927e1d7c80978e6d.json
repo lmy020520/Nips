@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "George Kisevalter",
+  "pred_answer": "George Kisevalter",
+  "normalized_gold": "george kisevalter",
+  "normalized_pred": "george kisevalter",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac29e08554299218029dac5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac29e08554299218029dac5::George Kisevalter::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac29e08554299218029dac5::Augustine of Canterbury::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac29e08554299218029dac5::Oleg Penkovsky::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac29e08554299218029dac5::Pyotr Semyonovich Popov::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac29e08554299218029dac5::George Kisevalter",
+        "5ac29e08554299218029dac5::Oleg Penkovsky"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac29e08554299218029dac5::George Kisevalter::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac29e08554299218029dac5::Augustine of Canterbury::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac29e08554299218029dac5::Oleg Penkovsky::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac29e08554299218029dac5::Pyotr Semyonovich Popov::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac29e08554299218029dac5::Pyotr Semyonovich Popov::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Codenamed ATTIC, for most of his time with the CIA, Popov's case officer was George Kisevalter.\n[2] Oleg Vladimirovich Penkovsky (Russian: Олег Владимирович Пеньковский ; 23 April 1919 – 16 May 1963), codenamed HERO, was a colonel with Soviet military intelligence (GRU) during the late 1950s and early 1960s who informed the United Kingdom and the United States about the Soviet emplacement of missiles in Cuba.\n[3] Augustine of Canterbury (born first third of the 6th century – died probably 26 May 604) was a Catholic Benedictine monk who became the first Archbishop of Canterbury in the year 597.\n[4] George Kisevalter (4 April 1910 – October 1997) was an American operations officer of the CIA, who handled Major Pyotr Popov, the first Soviet GRU officer run by the CIA, and Colonel Oleg Penkovsky."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

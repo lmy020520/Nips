@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Chicago Cubs",
+  "pred_answer": "Chicago Cubs",
+  "normalized_gold": "chicago cubs",
+  "normalized_pred": "chicago cubs",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7d0b45542993210983f54",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7d0b45542993210983f54::Clark (mascot)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7d0b45542993210983f54::Kris Bryant::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7d0b45542993210983f54::List of Chicago Cubs first-round draft picks::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7d0b45542993210983f54::Clark (mascot)",
+        "5ae7d0b45542993210983f54::Kris Bryant"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7d0b45542993210983f54::Clark (mascot)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7d0b45542993210983f54::Kris Bryant::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7d0b45542993210983f54::List of Chicago Cubs first-round draft picks::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7d0b45542993210983f54::List of Chicago Cubs first-round draft picks::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Chicago Cubs are a Major League Baseball (MLB) franchise based in Chicago, Illinois.\n[2] The Cubs selected him number-two overall in the 2013 MLB draft and he quickly became one of the top prospects in baseball.\n[3] He was introduced that day at the Advocate Illinois Masonic Medical Center's pediatric developmental center along with some of the Cubs' top prospects such as number one draft pick Kris Bryant and Albert Almora, Jorge Soler, Mike Olt and Eric Jokisch."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

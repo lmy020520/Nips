@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "31 July 2006.",
+  "pred_answer": "31 July 2006.",
+  "normalized_gold": "31 july 2006",
+  "normalized_pred": "31 july 2006",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab466f95542996a3a969f7d",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab466f95542996a3a969f7d::I Killed the Prom Queen::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab466f95542996a3a969f7d::Music for the Recently Deceased::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab466f95542996a3a969f7d::Lisa Mitchell::9"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab466f95542996a3a969f7d::I Killed the Prom Queen",
+        "5ab466f95542996a3a969f7d::Music for the Recently Deceased"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab466f95542996a3a969f7d::I Killed the Prom Queen::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab466f95542996a3a969f7d::Music for the Recently Deceased::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab466f95542996a3a969f7d::Lisa Mitchell::9",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab466f95542996a3a969f7d::Lisa Mitchell::9",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Her third album with producer Eric J - \"Warriors\" was released on 16 October 2016 and debuted Top 10 on the ARIA Albums Chart.\n[2] Music for the Recently Deceased is the second album by Australian metalcore band I Killed the Prom Queen that was released on 31 July 2006.\n[3] They issued 3 studio albums, \"When Goodbye Means Forever...\" (2003) \"Music for the Recently Deceased\" (2006) – the latter reached the top 30 on the ARIA Albums Chart and most recently \"Beloved\" (2014)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2008",
+  "pred_answer": "2008",
+  "normalized_gold": "2008",
+  "normalized_pred": "2008",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3d6e05542995c82c4ac40",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3d6e05542995c82c4ac40::Minus the Machine::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3d6e05542995c82c4ac40::10 Years (band)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3d6e05542995c82c4ac40::Division (10 Years album)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3d6e05542995c82c4ac40::Baby Animals::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3d6e05542995c82c4ac40::10 Years (band)",
+        "5ac3d6e05542995c82c4ac40::Division (10 Years album)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3d6e05542995c82c4ac40::Minus the Machine::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3d6e05542995c82c4ac40::10 Years (band)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3d6e05542995c82c4ac40::Division (10 Years album)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3d6e05542995c82c4ac40::Baby Animals::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3d6e05542995c82c4ac40::Baby Animals::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Their fourth studio album, \"This Is not the End\" was issued in May 2013, which reached the top 20.\n[2] Division is 10 Years's fourth studio album and second major label release which was released May 13, 2008.\n[3] Their eighth studio album, \"(How to Live) As Ghosts\", is scheduled for release on October 27, 2017.\n[4] Lead singer, Jesse Hasek, spoke about the album saying “We wanted to create an album that has no boundaries.”"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

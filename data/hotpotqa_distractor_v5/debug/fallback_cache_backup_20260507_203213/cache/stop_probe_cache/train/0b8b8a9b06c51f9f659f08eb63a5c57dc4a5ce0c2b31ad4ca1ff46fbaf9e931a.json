@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Five",
+  "pred_answer": "The Five",
+  "normalized_gold": "the five",
+  "normalized_pred": "the five",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c40865542995e66a4757b",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c40865542995e66a4757b::Pyotr Ilyich Tchaikovsky and The Five::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c40865542995e66a4757b::Russian Easter Festival Overture::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c40865542995e66a4757b::Alexander Borodin::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8c40865542995e66a4757b::The Mighty Handful::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8c40865542995e66a4757b::Anatoliy Brandukov::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c40865542995e66a4757b::Alexander Borodin",
+        "5a8c40865542995e66a4757b::The Mighty Handful"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c40865542995e66a4757b::Pyotr Ilyich Tchaikovsky and The Five::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c40865542995e66a4757b::Russian Easter Festival Overture::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c40865542995e66a4757b::Alexander Borodin::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8c40865542995e66a4757b::The Mighty Handful::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8c40865542995e66a4757b::Anatoliy Brandukov::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c40865542995e66a4757b::Anatoliy Brandukov::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Born as Russian classical music was flourishing in the middle of the 19th century, he worked with many of the important composers and musicians of the day, including performances with Anton Rubinstein and Alexander Siloti.\n[2] The Mighty Handful (Russian: Могучая кучка ), also known as The Five and The New Russian School, were five prominent 19th-century Russian composers who worked together to create a distinctly Russian classical music.\n[3] He was one of the prominent 19th century composers known as The Mighty Handful, a group dedicated to producing a uniquely Russian kind of classical music, rather than imitating earlier Western European models.\n[4] It was dedicated to the memories of Modest Mussorgsky and Alexander Borodin, two members of the group of composers known in English as \"The Five\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

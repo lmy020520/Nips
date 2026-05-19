@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "United States Air Force lieutenant general",
+  "pred_answer": "United States Air Force lieutenant general",
+  "normalized_gold": "united states air force lieutenant general",
+  "normalized_pred": "united states air force lieutenant general",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e08dd5542995f4f4023b2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e08dd5542995f4f4023b2::Tower Commission::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e08dd5542995f4f4023b2::Thomas E. Donilon::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e08dd5542995f4f4023b2::Brent Scowcroft::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7e08dd5542995f4f4023b2::Homeland Security Advisor::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e08dd5542995f4f4023b2::Tower Commission",
+        "5a7e08dd5542995f4f4023b2::Brent Scowcroft"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e08dd5542995f4f4023b2::Tower Commission::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e08dd5542995f4f4023b2::Thomas E. Donilon::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e08dd5542995f4f4023b2::Brent Scowcroft::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7e08dd5542995f4f4023b2::Homeland Security Advisor::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e08dd5542995f4f4023b2::Homeland Security Advisor::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Assistant to the President for Homeland Security and Counterterrorism, commonly referred to as the Homeland Security Advisor and occasionally holding the title of Deputy National Security Advisor for Homeland Security and Counterterrorism, is a senior aide in the Executive Office of the President, based in the West Wing of the White House, who serves as the chief in-house advisor to the Presid\n[2] Brent Scowcroft ( ; born March 19, 1925) is a retired United States Air Force lieutenant general who was the United States National Security Advisor under U.S. Presidents Gerald Ford and George H. W. Bush.\n[3] Thomas E. \"Tom\" Donilon (born May 14, 1955) is an American lawyer and former government official who served as National Security Advisor in the Obama administration.\n[4] The Tower Commission was commissioned on 1 December 1986 by U.S. President Ronald Reagan in response to the Iran Contra scandal."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

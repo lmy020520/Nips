@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Barry Adrian Reese",
+  "pred_answer": "Barry Adrian Reese",
+  "normalized_gold": "barry adrian reese",
+  "normalized_pred": "barry adrian reese",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a864cd35542991e77181607",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a864cd35542991e77181607::Split Personality (Cassidy album)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a864cd35542991e77181607::Sybil (2007 film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a864cd35542991e77181607::Cassidy (rapper)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a864cd35542991e77181607::Mila J::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a864cd35542991e77181607::Split Personality (Cassidy album)",
+        "5a864cd35542991e77181607::Cassidy (rapper)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a864cd35542991e77181607::Split Personality (Cassidy album)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a864cd35542991e77181607::Sybil (2007 film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a864cd35542991e77181607::Cassidy (rapper)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a864cd35542991e77181607::Mila J::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a864cd35542991e77181607::Mila J::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She released several singles in 2006–2009 under the name \"Mila J\" and then went on a hiatus for a number of years following the release of her original debut studio album \"Split Personality\" before returning as \"Japallonia\" in 2012 and then reverting to her stage name as Mila J.\n[2] Barry Adrian Reese (born July 7, 1982), better known by his stage name Cassidy, is an American hip hop recording artist from Philadelphia, Pennsylvania.\n[3] Sybil is a 2007 American made-for-television drama film directed by Joseph Sargent and written by John Pielmeier based on the 1973 book of the same name by Flora Rheta Schreiber which fictionalized the story of Shirley Ardell Mason, who was diagnosed with multiple personality disorder (more commonly then as \"split personality\", now called dissociative identity disorder).\n[4] Split Personality is the debut studio album by American rapper Cassidy."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

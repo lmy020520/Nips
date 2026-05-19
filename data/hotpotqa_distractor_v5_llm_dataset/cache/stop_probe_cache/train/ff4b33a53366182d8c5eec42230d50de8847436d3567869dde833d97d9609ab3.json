@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "1988",
+  "pred_answer": "1988",
+  "normalized_gold": "1988",
+  "normalized_pred": "1988",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a807ced554299485f598617",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a807ced554299485f598617::Matilda the Musical::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a807ced554299485f598617::Roald Dahl: Collected Stories::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a807ced554299485f598617::Kerry Ingram::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a807ced554299485f598617::Roald Dahl's Willy Wonka (musical)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a807ced554299485f598617::Matilda the Musical",
+        "5a807ced554299485f598617::Kerry Ingram"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a807ced554299485f598617::Matilda the Musical::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a807ced554299485f598617::Roald Dahl: Collected Stories::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a807ced554299485f598617::Kerry Ingram::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a807ced554299485f598617::Roald Dahl's Willy Wonka (musical)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a807ced554299485f598617::Roald Dahl's Willy Wonka (musical)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Roald Dahl's Willy Wonka is a musical that combines elements of both Roald Dahl's book \"Charlie and the Chocolate Factory\" and of the 1971 movie \"Willy Wonka & the Chocolate Factory\" with newly created material.\n[2] Kerry Danielle Ingram (born 26 May 1999) is an English actress, best known for her role as Shireen Baratheon in the HBO series \"Game of Thrones\" and Matilda Wormwood in \"Matilda the Musical.\"\n[3] Roald Dahl: Collected Stories is a hardcover edition of short-stories by Roald Dahl for adults.\n[4] Matilda the Musical is a stage musical based on the 1988 children's novel of the same name by Roald Dahl."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

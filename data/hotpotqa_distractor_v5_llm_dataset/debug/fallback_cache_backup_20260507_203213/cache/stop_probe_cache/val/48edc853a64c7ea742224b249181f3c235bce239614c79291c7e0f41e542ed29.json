@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ryan McLaren",
+  "pred_answer": "Ryan McLaren",
+  "normalized_gold": "ryan mclaren",
+  "normalized_pred": "ryan mclaren",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f2a9055429918e830d1b5",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f2a9055429918e830d1b5::Alberto Mazzoncini::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f2a9055429918e830d1b5::Robert Mutch::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f2a9055429918e830d1b5::Ryan McLaren::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8f2a9055429918e830d1b5::Adrian McLaren::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8f2a9055429918e830d1b5::Ravenor Nicholson::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f2a9055429918e830d1b5::Ryan McLaren",
+        "5a8f2a9055429918e830d1b5::Adrian McLaren"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f2a9055429918e830d1b5::Alberto Mazzoncini::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f2a9055429918e830d1b5::Robert Mutch::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f2a9055429918e830d1b5::Ryan McLaren::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8f2a9055429918e830d1b5::Adrian McLaren::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8f2a9055429918e830d1b5::Ravenor Nicholson::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f2a9055429918e830d1b5::Ravenor Nicholson::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Nicholson is the cousin of Test match brothers Peter and Graeme Pollock.\n[2] Adrian Peter McLaren (born 21 April 1980 in Kimberley, Northern Cape) is a South African first class cricketer who plays for Griqualand West.\n[3] Ryan McLaren (born 9 February 1983, Kimberley, Cape Province, South Africa) is a South African cricketer, who plays for all formats in international level.\n[4] He is a left-handed batsman and left arm medium-fast bowler."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

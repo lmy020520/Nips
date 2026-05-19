@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Universal Pictures",
+  "pred_answer": "Universal Pictures",
+  "normalized_gold": "universal pictures",
+  "normalized_pred": "universal pictures",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74be0b5542996c70cfadc8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74be0b5542996c70cfadc8::Universal Pictures::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74be0b5542996c70cfadc8::Radio Patrol (serial)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74be0b5542996c70cfadc8::Radio Patrol (film)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74be0b5542996c70cfadc8::The Green Hornet Strikes Again!::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74be0b5542996c70cfadc8::Universal Pictures",
+        "5a74be0b5542996c70cfadc8::Radio Patrol (film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74be0b5542996c70cfadc8::Universal Pictures::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74be0b5542996c70cfadc8::Radio Patrol (serial)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74be0b5542996c70cfadc8::Radio Patrol (film)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74be0b5542996c70cfadc8::The Green Hornet Strikes Again!::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74be0b5542996c70cfadc8::The Green Hornet Strikes Again!::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] (1941) is a Universal movie serial based on The Green Hornet radio series by George W. Trendle and Fran Striker.\n[2] It was released on June 2, 1932, by Universal Pictures.\n[3] Radio Patrol is a 1937 Universal movie serial based on the comic strip \"Radio Patrol\".\n[4] Universal Pictures (also referred to as Universal Studios or simply Universal) is an American film studio owned by Comcast through the Universal Filmed Entertainment Group division of its wholly owned subsidiary NBCUniversal."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

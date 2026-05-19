@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Parliament",
+  "pred_answer": "Parliament",
+  "normalized_gold": "parliament",
+  "normalized_pred": "parliament",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae172c155429920d52343de",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae172c155429920d52343de::Celebrity Fifteen to One::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae172c155429920d52343de::Democratic Party (Denmark)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae172c155429920d52343de::Gyles Brandreth::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae172c155429920d52343de::Baron Dunleath::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae172c155429920d52343de::Celebrity Fifteen to One",
+        "5ae172c155429920d52343de::Gyles Brandreth"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae172c155429920d52343de::Celebrity Fifteen to One::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae172c155429920d52343de::Democratic Party (Denmark)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae172c155429920d52343de::Gyles Brandreth::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae172c155429920d52343de::Baron Dunleath::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae172c155429920d52343de::Baron Dunleath::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was created in 1892 for the businessman and former Conservative Member of Parliament for Downpatrick, John Mulholland.\n[2] Gyles Daubeney Brandreth (born 8 March 1948) is an English writer, broadcaster, actor, and former Conservative Member of Parliament.\n[3] The party was founded in September 2012 by former conservative member of parliament and former chairman of the Christian Democrats, Per Ørum Jørgensen, a few weeks after his resignation as chairman.\n[4] Celebrity Fifteen to One is a celebrity version of the Channel 4 game show \"Fifteen to One\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

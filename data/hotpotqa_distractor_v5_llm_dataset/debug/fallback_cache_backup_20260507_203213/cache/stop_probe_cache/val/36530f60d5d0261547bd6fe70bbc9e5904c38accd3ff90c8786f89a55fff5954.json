@@ -1,0 +1,77 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "James P. Comer",
+  "pred_answer": "James P. Comer",
+  "normalized_gold": "james p comer",
+  "normalized_pred": "james p comer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0c04455429906c02dab27",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0c04455429906c02dab27::James P. Comer::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0c04455429906c02dab27::Parents (magazine)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0c04455429906c02dab27::derived::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0c04455429906c02dab27::James P. Comer",
+        "5ae0c04455429906c02dab27::Parents (magazine)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0c04455429906c02dab27::James P. Comer::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0c04455429906c02dab27::Parents (magazine)::0",
+          "added_step": 1
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5ae0c04455429906c02dab27::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5ae0c04455429906c02dab27::derived::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] James P. Comer (born James Pierpont Comer, September 25, 1934 in East Chicago, Indiana) is currently the Maurice Falk Professor of Child Psychiatry at the Yale Child Study Center and has been since 1976.\n[2] Parents, published by Meredith Corporation, is an American mass circulation monthly magazine that features scientific information on child development geared to help parents in raising their children.\n[3] He has also written more than 150 articles for Parents (magazine) and more than 300 articles on children's health and development and race relations.\n\nNotes:\n[verification] James P."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "February 29, 1976",
+  "pred_answer": "February 29, 1976",
+  "normalized_gold": "february 29 1976",
+  "normalized_pred": "february 29 1976",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a87a3745542996e4f308896",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a87a3745542996e4f308896::Half Past Dead::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a87a3745542996e4f308896::DJ Mustard::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a87a3745542996e4f308896::Ja Rule::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a87a3745542996e4f308896::Half Past Dead 2::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a87a3745542996e4f308896::Machete (2010 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a87a3745542996e4f308896::Ja Rule",
+        "5a87a3745542996e4f308896::Half Past Dead 2"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a87a3745542996e4f308896::Half Past Dead::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a87a3745542996e4f308896::DJ Mustard::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a87a3745542996e4f308896::Ja Rule::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a87a3745542996e4f308896::Half Past Dead 2::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a87a3745542996e4f308896::Machete (2010 film)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a87a3745542996e4f308896::Machete (2010 film)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Machete is a 2010 American action film written, produced, and directed by Robert Rodriguez and Ethan Maniquis.\n[2] Half Past Dead 2 is a 2007 American action film directed by Art Camacho, and starring Bill Goldberg and Kurupt.\n[3] Jeffrey Edward Atkins (born February 29, 1976), better known by his stage name Ja Rule, is an American rapper, singer, songwriter, record producer, record executive, and actor from Queens, New York.\n[4] Dijon Isaiah McFarlane (born June 5, 1990), professionally known as DJ Mustard, is an American rapper, singer, songwriter, record producer, record executive, actor, and DJ from Los Angeles, California."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

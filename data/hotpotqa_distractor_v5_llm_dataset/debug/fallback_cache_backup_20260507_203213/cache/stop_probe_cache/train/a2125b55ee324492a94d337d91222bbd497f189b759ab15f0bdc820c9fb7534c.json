@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "M. M. Roberts Stadium",
+  "pred_answer": "M. M. Roberts Stadium",
+  "normalized_gold": "m m roberts stadium",
+  "normalized_pred": "m m roberts stadium",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abbdafa55429931dba145a9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abbdafa55429931dba145a9::Jimmy Allen::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abbdafa55429931dba145a9::Carl Allen (American football)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abbdafa55429931dba145a9::Southern Miss Golden Eagles football::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abbdafa55429931dba145a9::Jimmy Allen::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abbdafa55429931dba145a9::Carl Allen (American football)",
+        "5abbdafa55429931dba145a9::Southern Miss Golden Eagles football"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abbdafa55429931dba145a9::Jimmy Allen::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abbdafa55429931dba145a9::Carl Allen (American football)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abbdafa55429931dba145a9::Southern Miss Golden Eagles football::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abbdafa55429931dba145a9::Jimmy Allen::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abbdafa55429931dba145a9::Jimmy Allen::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He played for the Steelers for four seasons, where he was a member of their Super Bowls IX & X teams.\n[2] The Eagles are members of Conference USA and play their home games at M. M. Roberts Stadium in Hattiesburg, Mississippi.\n[3] Carl Allen (born December 21, 1955 in Hattiesburg, Mississippi) is a former American football cornerback in the National Football League.\n[4] A 1970 graduate of Los Angeles High School, Allen played college football at Pierce College and UCLA."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

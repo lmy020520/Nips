@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1879",
+  "pred_answer": "1879",
+  "normalized_gold": "1879",
+  "normalized_pred": "1879",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae6090555429929b0807a93",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae6090555429929b0807a93::Fort Davis, Alaska::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae6090555429929b0807a93::Jeff Davis County Courthouse (Texas)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae6090555429929b0807a93::Jefferson C. Davis::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae6090555429929b0807a93::Fort Davis, Texas::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae6090555429929b0807a93::Fort Davis, Alaska",
+        "5ae6090555429929b0807a93::Jefferson C. Davis"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae6090555429929b0807a93::Fort Davis, Alaska::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae6090555429929b0807a93::Jeff Davis County Courthouse (Texas)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae6090555429929b0807a93::Jefferson C. Davis::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae6090555429929b0807a93::Fort Davis, Texas::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae6090555429929b0807a93::Fort Davis, Texas::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was the site of Fort Davis established in 1854 on the San Antonio-El Paso Road through west Texas and named after Jefferson Davis, who was then the Secretary of War under President Franklin Pierce.\n[2] Jefferson Columbus Davis (March 2, 1828 – November 30, 1879) was a regular officer of the United States Army during the American Civil War, known for the similarity of his name to Confederate President Jefferson Davis and for his killing of a superior officer in 1862.\n[3] The Jeff Davis County Courthouse is located in the town of Fort Davis, the seat of Jeff Davis County in the U.S. state of Texas.\n[4] Fort Davis was a United States Army post established in the Nome Census Area of Alaska in 1900."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Cassandra Clare",
+  "pred_answer": "Cassandra Clare",
+  "normalized_gold": "cassandra clare",
+  "normalized_pred": "cassandra clare",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f65ff5542997ba9cb3248",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f65ff5542997ba9cb3248::City of Glass (Clare novel)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f65ff5542997ba9cb3248::Cassandra Clare::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f65ff5542997ba9cb3248::Pen name::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f65ff5542997ba9cb3248::City of Glass (Clare novel)",
+        "5a8f65ff5542997ba9cb3248::Cassandra Clare"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f65ff5542997ba9cb3248::City of Glass (Clare novel)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f65ff5542997ba9cb3248::Cassandra Clare::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f65ff5542997ba9cb3248::Pen name::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f65ff5542997ba9cb3248::Pen name::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] A pen name may be used to make the author's name more distinctive, to disguise his or her gender, to distance an author from some or all of his or her previous works, to protect the author from retribution for his or her writings, to combine more than one author into a single author, or for any of a number of reasons related to the marketing or aesthetic presentation of the work.\n[2] Judith Lewis (née Rumelt, born July 27, 1973), better known by her pen name Cassandra Clare, is an American author of young adult fiction, best known for her bestselling series \"\"The Mortal Instruments\".\n[3] City of Glass is the third book in \"The Mortal Instruments\" series, an urban fantasy series set in New York written by Cassandra Clare."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Concrete Blonde",
+  "pred_answer": "Concrete Blonde",
+  "normalized_gold": "concrete blonde",
+  "normalized_pred": "concrete blonde",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adee69b55429975fa854fb0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adee69b55429975fa854fb0::Concrete Blonde (album)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adee69b55429975fa854fb0::Eve's Plum::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adee69b55429975fa854fb0::Concrete Blonde::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adee69b55429975fa854fb0::Concrete Blonde y Los Illegals::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adee69b55429975fa854fb0::Eve's Plum",
+        "5adee69b55429975fa854fb0::Concrete Blonde"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adee69b55429975fa854fb0::Concrete Blonde (album)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adee69b55429975fa854fb0::Eve's Plum::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adee69b55429975fa854fb0::Concrete Blonde::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adee69b55429975fa854fb0::Concrete Blonde y Los Illegals::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adee69b55429975fa854fb0::Concrete Blonde y Los Illegals::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] An album produced as a joint effort between Johnette Napolitano and James Mankey, previously founding members of alternative rock band Concrete Blonde, and L.A. pachucho punk band Los Illegals.\n[2] Concrete Blonde were an alternative rock band based in the United States.\n[3] Eve's Plum was an American New York City-based alternative rock band, who recorded in the 1990s.\n[4] Concrete Blonde is the acclaimed debut album of American alternative rock band Concrete Blonde."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

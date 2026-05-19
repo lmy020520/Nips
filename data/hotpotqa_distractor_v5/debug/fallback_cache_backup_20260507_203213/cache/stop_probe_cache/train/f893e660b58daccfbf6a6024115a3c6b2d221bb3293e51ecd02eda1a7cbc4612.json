@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Catch-22",
+  "pred_answer": "Catch-22",
+  "normalized_gold": "catch-22",
+  "normalized_pred": "catch-22",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5aba8e395542994dbf019940",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5aba8e395542994dbf019940::Leonard Bishop::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5aba8e395542994dbf019940::Seven in Darkness::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5aba8e395542994dbf019940::Joseph Heller::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5aba8e395542994dbf019940::Satire VI::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5aba8e395542994dbf019940::Leonard Bishop",
+        "5aba8e395542994dbf019940::Joseph Heller"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5aba8e395542994dbf019940::Leonard Bishop::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5aba8e395542994dbf019940::Seven in Darkness::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5aba8e395542994dbf019940::Joseph Heller::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5aba8e395542994dbf019940::Satire VI::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5aba8e395542994dbf019940::Satire VI::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Its current significance rests in its role as a crucial—although problematic—body of evidence on Roman conceptions of gender and sexuality.\n[2] His best-known work is the novel \"Catch-22\", a satire on war and bureaucracy, whose title has become a synonym for an absurd or contradictory choice.\n[3] Seven in Darkness is an American made-for-TV adventure film directed by Michael Caffey and based on the novel \"Against Heaven's Hand\" by Leonard Bishop.\n[4] Leonard Bishop (1922–2002) was a novelist, writing teacher, and newspaper columnist."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

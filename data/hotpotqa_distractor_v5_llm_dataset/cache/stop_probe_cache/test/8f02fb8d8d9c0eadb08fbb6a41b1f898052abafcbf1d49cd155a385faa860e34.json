@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "poet and novelist",
+  "pred_answer": "poet and novelist",
+  "normalized_gold": "poet and novelist",
+  "normalized_pred": "poet and novelist",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add64065542995b365fab25",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add64065542995b365fab25::Nâzım Hikmet::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add64065542995b365fab25::International Nazim Hikmet Poetry Award::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add64065542995b365fab25::Lavinia Greenlaw::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5add64065542995b365fab25::Lavinia Greenlaw::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add64065542995b365fab25::Nâzım Hikmet",
+        "5add64065542995b365fab25::Lavinia Greenlaw"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add64065542995b365fab25::Nâzım Hikmet::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add64065542995b365fab25::International Nazim Hikmet Poetry Award::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add64065542995b365fab25::Lavinia Greenlaw::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5add64065542995b365fab25::Lavinia Greenlaw::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add64065542995b365fab25::Lavinia Greenlaw::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Lavinia Greenlaw (born 30 July 1962) is an English poet and novelist.\n[2] Her most recent work is \"A Double Sorrow: A Version of Troilus and Criseyde\", which was shortlisted for the Costa Poetry Award in 2014.\n[3] The International Nazim Hikmet Poetry Award is an award created in memory of Turkish poet Nâzım Hikmet Ran.\n[4] Nâzım Hikmet Ran (15 January 1902 – 3 June 1963), commonly known as Nâzım Hikmet (] ) was a Turkish poet, playwright, novelist, screenwriter, director and memoirist."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

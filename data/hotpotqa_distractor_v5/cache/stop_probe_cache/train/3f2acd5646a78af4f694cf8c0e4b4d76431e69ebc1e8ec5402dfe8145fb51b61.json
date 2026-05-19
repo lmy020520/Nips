@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Alan Mak Siu-fai",
+  "pred_answer": "Alan Mak Siu-fai",
+  "normalized_gold": "alan mak siu-fai",
+  "normalized_pred": "alan mak siu-fai",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5607555429960a22e02d7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5607555429960a22e02d7::Alan Mak (director)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5607555429960a22e02d7::Gerold, Prefect of Bavaria::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5607555429960a22e02d7::Harry Lachman::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae5607555429960a22e02d7::Science Supercourse::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5607555429960a22e02d7::Alan Mak (director)",
+        "5ae5607555429960a22e02d7::Harry Lachman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5607555429960a22e02d7::Alan Mak (director)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5607555429960a22e02d7::Gerold, Prefect of Bavaria::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5607555429960a22e02d7::Harry Lachman::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae5607555429960a22e02d7::Science Supercourse::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5607555429960a22e02d7::Science Supercourse::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Being a useful tool for at least one million students from around the globe, Supercourse has been a well-established starting point which triggered the emergence of the new Science Supercourse in 2008 with a wider scope in terms of content and functionalities.\n[2] Harry B. Lachman (June 29, 1886 – March 19, 1975) was an American artist, set designer, and film director.\n[3] Gerold both aided the continuity of Agilofing rule of Bavaria, as well as took steps to integrate Bavarians into the wider scope of the Frankish Kingdom.\n[4] Alan Mak Siu-fai (; born 1 January 1965), is a Hong Kong writer, director, actor and producer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

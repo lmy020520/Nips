@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "north-western Italy",
+  "pred_answer": "north-western Italy",
+  "normalized_gold": "north-western italy",
+  "normalized_pred": "north-western italy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e9c00554299306751359f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e9c00554299306751359f::Molini di Triora::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e9c00554299306751359f::Triora::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e9c00554299306751359f::Liguria::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7e9c00554299306751359f::Zoagli::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e9c00554299306751359f::Molini di Triora",
+        "5a7e9c00554299306751359f::Liguria"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e9c00554299306751359f::Molini di Triora::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e9c00554299306751359f::Triora::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e9c00554299306751359f::Liguria::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7e9c00554299306751359f::Zoagli::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e9c00554299306751359f::Zoagli::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Zoagli is a \"comune\" (municipality) in the Province of Genoa in the Italian region Liguria, located about 30 km southeast of Genoa.\n[2] Liguria (] , Ligurian: \"Ligûria\" ] ) is a coastal region of north-western Italy; its capital is Genoa.\n[3] It is a \"comune\" (municipality) in the province of Imperia in the Italian region Liguria, located about 100 km southwest of Genoa and about 25 km northwest of Imperia, on the border with France.\n[4] Molini di Triora is a \"comune\" (municipality) in the Province of Imperia in the Italian region Liguria, located about 100 km southwest of Genoa and about 25 km northwest of Imperia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

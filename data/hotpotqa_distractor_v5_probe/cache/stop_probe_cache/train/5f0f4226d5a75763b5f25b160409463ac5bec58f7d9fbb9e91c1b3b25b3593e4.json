@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "plants",
+  "pred_answer": "plants",
+  "normalized_gold": "plants",
+  "normalized_pred": "plants",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a864327554299211dda2ad6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a864327554299211dda2ad6::Fatshedera lizei::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a864327554299211dda2ad6::Ammi visnaga::7"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a864327554299211dda2ad6::Ammi (plant)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a864327554299211dda2ad6::Anani ben Sason::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a864327554299211dda2ad6::Fatshedera lizei",
+        "5a864327554299211dda2ad6::Ammi (plant)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a864327554299211dda2ad6::Fatshedera lizei::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a864327554299211dda2ad6::Ammi visnaga::7",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a864327554299211dda2ad6::Ammi (plant)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a864327554299211dda2ad6::Anani ben Sason::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a864327554299211dda2ad6::Anani ben Sason::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is what R. Eleazar had reported in the name of R. Oshaiah\" (M. Ḳ.\n[2] Ammi is a genus of 3 to 6 species of plants in the Apiaceae family.\n[3] This and other \"Ammi\" species are sources of khellin, a diuretic extract.\n[4] × Fatshedera lizei is a hybrid of flowering plants, common name tree ivy or aralia ivy."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

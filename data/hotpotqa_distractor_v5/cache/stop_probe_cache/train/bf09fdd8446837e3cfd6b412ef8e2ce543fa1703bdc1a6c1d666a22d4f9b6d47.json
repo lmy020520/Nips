@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "William Saroyan",
+  "pred_answer": "William Saroyan",
+  "normalized_gold": "william saroyan",
+  "normalized_pred": "william saroyan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae341ef5542991a06ce997e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae341ef5542991a06ce997e::Albert Kapikian::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae341ef5542991a06ce997e::William Saroyan::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae341ef5542991a06ce997e::The Human Comedy (film)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae341ef5542991a06ce997e::Albert Kapikian",
+        "5ae341ef5542991a06ce997e::William Saroyan"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae341ef5542991a06ce997e::Albert Kapikian::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae341ef5542991a06ce997e::William Saroyan::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae341ef5542991a06ce997e::The Human Comedy (film)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae341ef5542991a06ce997e::The Human Comedy (film)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It is often thought to be based on the William Saroyan novel of the same name, but Saroyan actually wrote the screenplay first, was fired from the movie project, and quickly wrote the novel and published it just before the film was released.\n[2] He was awarded the Pulitzer Prize for Drama in 1940, and in 1943 won the Academy Award for Best Story for the film adaptation of his novel \"The Human Comedy\".\n[3] Albert Z. Kapikian (1930 – 2014) was an Armenian-American virologist who developed the first licensed vaccine against rotavirus, the most common cause of severe diarrhea in infants."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

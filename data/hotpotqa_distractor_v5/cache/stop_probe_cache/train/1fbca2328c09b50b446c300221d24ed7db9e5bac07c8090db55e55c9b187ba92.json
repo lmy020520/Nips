@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Persepolis",
+  "pred_answer": "Persepolis",
+  "normalized_gold": "persepolis",
+  "normalized_pred": "persepolis",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab33d8055429969a97a8109",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab33d8055429969a97a8109::Zlatko Ivanković::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab33d8055429969a97a8109::Ali Daei::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab33d8055429969a97a8109::Branko Ivanković::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab33d8055429969a97a8109::Belgian First Division A::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab33d8055429969a97a8109::Zlatko Ivanković",
+        "5ab33d8055429969a97a8109::Branko Ivanković"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab33d8055429969a97a8109::Zlatko Ivanković::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab33d8055429969a97a8109::Ali Daei::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab33d8055429969a97a8109::Branko Ivanković::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab33d8055429969a97a8109::Belgian First Division A::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab33d8055429969a97a8109::Belgian First Division A::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Belgian First Division A is the top league competition for association football clubs in Belgium.\n[2] Branko Ivanković (] ; born 28 February 1954) is a Croatian football manager and former player who currently manages Persepolis in persian gulf Pro League.\n[3] Daei currently manages Persian Gulf Pro League club Saipa Tehran.\n[4] He is the brother of former national team coach Branko Ivanković."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

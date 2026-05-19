@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "novelist",
+  "pred_answer": "writer",
+  "normalized_gold": "novelist",
+  "normalized_pred": "writer",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": true,
+  "support_rule": "explicit_answer_in_evidence",
+  "support_evidence_summary": "Selected chunk 1 explicitly states John Lanchester is a 'novelist'. Selected chunk 3 explicitly states Alan Dean Foster is a 'writer'. The question asks for a profession they have in common, and both 'novelist' and 'writer' are professions in the writing field, with 'novelist' being a specific type of writer. The evidence supports that both individuals are writers, making 'writer' a valid common profession.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "explicit_answer_in_evidence",
+    "support_evidence_summary": "Selected chunk 1 explicitly states John Lanchester is a 'novelist'. Selected chunk 3 explicitly states Alan Dean Foster is a 'writer'. The question asks for a profession they have in common, and both 'novelist' and 'writer' are professions in the writing field, with 'novelist' being a specific type of writer. The evidence supports that both individuals are writers, making 'writer' a valid common profession.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b42be55429949d91db515",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b42be55429949d91db515::John Lanchester::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b42be55429949d91db515::Bloodhype::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b42be55429949d91db515::Alan Dean Foster::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b42be55429949d91db515::John Lanchester::0",
+        "5a8b42be55429949d91db515::Alan Dean Foster"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b42be55429949d91db515::John Lanchester::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b42be55429949d91db515::Bloodhype::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b42be55429949d91db515::Alan Dean Foster::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b42be55429949d91db515::Alan Dean Foster::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Alan Dean Foster (born November 18, 1946) is an American writer of fantasy and science fiction, a prolific creator of and contributor to book series as well as\n[2] Bloodhype (1973) is a science fiction novel by American writer Alan Dean Foster.\n[3] John Henry Lanchester (born 25 February 1962) is a British journalist and novelist."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

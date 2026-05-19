@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Garford Motor Truck Company",
+  "pred_answer": "Garford Motor Truck Company",
+  "normalized_gold": "garford motor truck company",
+  "normalized_pred": "garford motor truck company",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85eb2c5542996432c57126",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85eb2c5542996432c57126::Mid Bus::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85eb2c5542996432c57126::Superior Coach Company::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85eb2c5542996432c57126::Vermont Translines::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85eb2c5542996432c57126::Mid Bus",
+        "5a85eb2c5542996432c57126::Superior Coach Company"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85eb2c5542996432c57126::Mid Bus::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85eb2c5542996432c57126::Superior Coach Company::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85eb2c5542996432c57126::Vermont Translines::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85eb2c5542996432c57126::Vermont Translines::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Vermont Translines is an intercity bus company founded by its parent company, charter bus company Premier Coach, in 2013.\n[2] Founded in 1909 as the Garford Motor Truck Company, Superior is best known for constructing bodies for professional cars (hearses) and yellow school buses.\n[3] Formed in 1981 by former employees of Superior Coach Company in Lima, Ohio, it grew from a dozen employees working in a small facility in Lima to become one of the country's largest manufacturers of smaller school buses, moving to a much larger facility a few miles north of Lima in 1995."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Albuquerque, New Mexico",
+  "pred_answer": "Albuquerque, New Mexico",
+  "normalized_gold": "albuquerque new mexico",
+  "normalized_pred": "albuquerque new mexico",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf907f5542995ec70e903d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf907f5542995ec70e903d::War on Everyone::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf907f5542995ec70e903d::Paul Saltzman::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf907f5542995ec70e903d::Alexander Skarsgård::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf907f5542995ec70e903d::War on Everyone::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf907f5542995ec70e903d::War on Everyone",
+        "5adf907f5542995ec70e903d::Alexander Skarsgård"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf907f5542995ec70e903d::War on Everyone::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf907f5542995ec70e903d::Paul Saltzman::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf907f5542995ec70e903d::Alexander Skarsgård::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf907f5542995ec70e903d::War on Everyone::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf907f5542995ec70e903d::War on Everyone::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Set and filmed in Albuquerque, New Mexico, it was screened in the Panorama section of the 66th Berlin International Film Festival.\n[2] He is best known for his roles as vampire Eric Northman on the HBO series \"True Blood\", Meekus in \"Zoolander\", the title character in \"The Legend of Tarzan\", Brad Colbert in the HBO miniseries \"Generation Kill\" and as Perry Wright in the HBO miniseries \"Big Little Lies\", for which he won an Emmy.\n[3] The 2008 documentary feature, \"Prom Night in Mississippi\", featuring actor Morgan Freeman, premiered at the 2009 Sundance Film Festival.\n[4] War on Everyone is a 2016 British black comedy buddy cop film written and directed by John Michael McDonagh."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

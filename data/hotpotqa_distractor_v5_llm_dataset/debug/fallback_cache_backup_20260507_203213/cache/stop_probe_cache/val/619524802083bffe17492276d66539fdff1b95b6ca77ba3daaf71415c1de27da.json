@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Tupperware",
+  "pred_answer": "Tupperware",
+  "normalized_gold": "tupperware",
+  "normalized_pred": "tupperware",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f4e5d5542997ba9cb322f",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f4e5d5542997ba9cb322f::Tupperware::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f4e5d5542997ba9cb322f::Stuart O'Keeffe::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f4e5d5542997ba9cb322f::Brand ambassador::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f4e5d5542997ba9cb322f::Tupperware",
+        "5a8f4e5d5542997ba9cb322f::Stuart O'Keeffe"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f4e5d5542997ba9cb322f::Tupperware::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f4e5d5542997ba9cb322f::Stuart O'Keeffe::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f4e5d5542997ba9cb322f::Brand ambassador::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f4e5d5542997ba9cb322f::Brand ambassador::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The key element of brand ambassadors is their ability to use promotional strategies that will strengthen the customer-product-service relationship and influence a large audience to buy and consume more.\n[2] He was a brand ambassador for Tupperware and served as their North American chef from 2008-2011.\n[3] Tupperware is the name of a home products line that includes preparation, storage, containment, and serving products for the kitchen and home."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

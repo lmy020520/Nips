@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Alexander Hamilton",
+  "pred_answer": "Alexander Hamilton",
+  "normalized_gold": "alexander hamilton",
+  "normalized_pred": "alexander hamilton",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab791825542995dae37e964",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab791825542995dae37e964::Eliza Hamilton Holly::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab791825542995dae37e964::Alexander Hamilton::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab791825542995dae37e964::First Report on the Public Credit::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab791825542995dae37e964::Eliza Hamilton Holly",
+        "5ab791825542995dae37e964::Alexander Hamilton"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab791825542995dae37e964::Eliza Hamilton Holly::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab791825542995dae37e964::Alexander Hamilton::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab791825542995dae37e964::First Report on the Public Credit::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab791825542995dae37e964::First Report on the Public Credit::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The First Report on the Public Credit was one of three major reports on fiscal and economic policy submitted by American Founding Father and first United States Treasury Secretary Alexander Hamilton on the request of Congress.\n[2] Alexander Hamilton (January 11, 1755 or 1757July 12, 1804) was an American statesman and one of the Founding Fathers of the United States.\n[3] Eliza Hamilton Holly (1799–1859) was the seventh child and second daughter of Alexander Hamilton, one of the Founding Fathers of the United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

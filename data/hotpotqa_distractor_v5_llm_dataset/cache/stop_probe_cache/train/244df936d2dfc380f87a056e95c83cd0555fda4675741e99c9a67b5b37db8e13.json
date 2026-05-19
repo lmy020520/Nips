@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Manuel L. Quezon",
+  "pred_answer": "Manuel L. Quezon",
+  "normalized_gold": "manuel l quezon",
+  "normalized_pred": "manuel l quezon",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae32d3a5542991a06ce9943",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae32d3a5542991a06ce9943::Miss Philippines Earth 2007::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae32d3a5542991a06ce9943::Quezon City::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae32d3a5542991a06ce9943::Miss Philippines Earth 2001::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae32d3a5542991a06ce9943::Miss Philippines Earth 2007",
+        "5ae32d3a5542991a06ce9943::Quezon City"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae32d3a5542991a06ce9943::Miss Philippines Earth 2007::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae32d3a5542991a06ce9943::Quezon City::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae32d3a5542991a06ce9943::Miss Philippines Earth 2001::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae32d3a5542991a06ce9943::Miss Philippines Earth 2001::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Miss Philippines 2001, the first edition of Miss Philippines Earth beauty pageant, was held on April 28, 2001 at the University of the Philippines Theater in Quezon City, Philippines.\n[2] It was founded by and named after Manuel L. Quezon, the 2nd President of the Philippines to replace Manila as the national capital.\n[3] Miss Philippines Earth 2007, the seventh edition of Miss Philippines Earth beauty pageant, was held on April 29, 2007 at the University of the Philippines Theater in Quezon City, Philippines."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "The Trial",
+  "pred_answer": "The Trial",
+  "normalized_gold": "the trial",
+  "normalized_pred": "the trial",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e5a0955429949594199a6",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e5a0955429949594199a6::Jadran Film::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e5a0955429949594199a6::The Trial (1962 film)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e5a0955429949594199a6::Orson Welles Show (radio)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e5a0955429949594199a6::Jadran Film",
+        "5a7e5a0955429949594199a6::The Trial (1962 film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e5a0955429949594199a6::Jadran Film::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e5a0955429949594199a6::The Trial (1962 film)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e5a0955429949594199a6::Orson Welles Show (radio)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e5a0955429949594199a6::Orson Welles Show (radio)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Orson Welles Show (1941–42), also known as The Orson Welles Theater, Orson Welles and his Mercury Theater and the Lady Esther Show (after its sponsor), is a live CBS Radio series produced, directed and hosted by Orson Welles.\n[2] Filmed in Europe, Welles stated immediately after completing the film: \"\"The Trial\" is the best film I have ever made\".\n[3] In the period between the early 1960s and late 1980s Jadran Film was one of the biggest and most notable film studios in Central Europe, with some 145 international and around 120 Yugoslav productions filmed at the studio during those three decades, including two Oscar-winning films and Orson Welles' 1962 screen adaptation of Franz Kafka's novel \"The Trial\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

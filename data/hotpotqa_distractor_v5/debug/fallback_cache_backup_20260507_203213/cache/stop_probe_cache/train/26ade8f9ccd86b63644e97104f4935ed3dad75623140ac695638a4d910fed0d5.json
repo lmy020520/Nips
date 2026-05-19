@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lynn Herring",
+  "pred_answer": "Lynn Herring",
+  "normalized_gold": "lynn herring",
+  "normalized_pred": "lynn herring",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4b34d55429913cc2044d4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4b34d55429913cc2044d4::Lucy Coe::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4b34d55429913cc2044d4::Corinthos family::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4b34d55429913cc2044d4::Lynn Herring::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4b34d55429913cc2044d4::Port Charles::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4b34d55429913cc2044d4::Lucy Coe",
+        "5ae4b34d55429913cc2044d4::Lynn Herring"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4b34d55429913cc2044d4::Lucy Coe::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4b34d55429913cc2044d4::Corinthos family::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4b34d55429913cc2044d4::Lynn Herring::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4b34d55429913cc2044d4::Port Charles::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4b34d55429913cc2044d4::Port Charles::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Port Charles (commonly abbreviated as PC) is an American television soap opera which aired on ABC from June 1, 1997 to October 3, 2003.\n[2] Sheryl Lynn Herring (born September 22, 1958 in Enid, Oklahoma) is an American soap opera actress.\n[3] The Corinthos family is a fictional family from the ABC Daytime soap opera, \"General Hospital.\"\n[4] Lucy Coe is a fictional character from the ABC Daytime soap operas \"General Hospital\" and \"Port Charles\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

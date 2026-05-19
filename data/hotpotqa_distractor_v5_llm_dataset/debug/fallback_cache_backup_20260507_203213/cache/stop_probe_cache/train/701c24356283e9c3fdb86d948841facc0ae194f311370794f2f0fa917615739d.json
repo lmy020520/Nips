@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "PRS Guitars",
+  "pred_answer": "PRS Guitars",
+  "normalized_gold": "prs guitars",
+  "normalized_pred": "prs guitars",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85388f5542997b5ce3ffcd",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85388f5542997b5ce3ffcd::PRS Guitars::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85388f5542997b5ce3ffcd::Rian Adkinson::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85388f5542997b5ce3ffcd::Taylor Guitars::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85388f5542997b5ce3ffcd::PRS Guitars",
+        "5a85388f5542997b5ce3ffcd::Rian Adkinson"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85388f5542997b5ce3ffcd::PRS Guitars::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85388f5542997b5ce3ffcd::Rian Adkinson::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85388f5542997b5ce3ffcd::Taylor Guitars::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85388f5542997b5ce3ffcd::Taylor Guitars::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Taylor Guitars is an American guitar manufacturer based in El Cajon, California and is the #1 manufacturer of acoustic guitars in the United States.\n[2] Adkinson is a PRS endorsed artist and is known for using the S2 Mira Antique White and the S2 Custom 22 SH.\n[3] PRS Guitars (also known as Paul Reed Smith Guitars) is an American guitar manufacturer headquartered in Stevensville, Maryland, founded by luthier Paul Reed Smith in 1985."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

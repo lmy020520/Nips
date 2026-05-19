@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Tao of Physics",
+  "pred_answer": "The Tao of Physics",
+  "normalized_gold": "the tao of physics",
+  "normalized_pred": "the tao of physics",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3ff4955429919431738f1",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3ff4955429919431738f1::The Tao of Physics::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3ff4955429919431738f1::Chet Bowers::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3ff4955429919431738f1::Life Against Death::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3ff4955429919431738f1::The Tao of Physics",
+        "5ac3ff4955429919431738f1::Chet Bowers"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3ff4955429919431738f1::The Tao of Physics::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3ff4955429919431738f1::Chet Bowers::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3ff4955429919431738f1::Life Against Death::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3ff4955429919431738f1::Life Against Death::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Life Against Death: The Psychoanalytical Meaning of History (1959; second edition 1985) is a book by American classicist Norman O. Brown, in which the author offers a radical analysis and critique of the work of Sigmund Freud, tries to provide a theoretical rationale for a nonrepressive civilization, explores parallels between psychoanalysis and Martin Luther's theology, and draws on revolutionary\n[2] Fritjof Capra, author of the best seller, \"The Tao of Physics\", physicist and founder of the Center for Ecoliteracy, says, \"C.A.Bowers has argued eloquently, language is metaphoric, conveying tacit understandings shared within a culture.\"\n[3] The Tao of Physics: An Exploration of the Parallels Between Modern Physics and Eastern Mysticism is a 1975 book by physicist Fritjof Capra."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

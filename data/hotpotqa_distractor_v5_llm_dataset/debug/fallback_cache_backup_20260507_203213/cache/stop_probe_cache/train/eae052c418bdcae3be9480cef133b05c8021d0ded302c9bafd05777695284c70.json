@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1985",
+  "pred_answer": "1985",
+  "normalized_gold": "1985",
+  "normalized_pred": "1985",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc2d51554299438c868d69",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc2d51554299438c868d69::Tom Frieden::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc2d51554299438c868d69::Don I. Wortman::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc2d51554299438c868d69::Agency for Toxic Substances and Disease Registry::4"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc2d51554299438c868d69::Anne Schuchat::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc2d51554299438c868d69::Tom Frieden",
+        "5adc2d51554299438c868d69::Agency for Toxic Substances and Disease Registry"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc2d51554299438c868d69::Tom Frieden::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc2d51554299438c868d69::Don I. Wortman::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc2d51554299438c868d69::Agency for Toxic Substances and Disease Registry::4",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc2d51554299438c868d69::Anne Schuchat::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc2d51554299438c868d69::Anne Schuchat::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Anne Schuchat is a U.S. medical doctor who served as the Acting Director of the Centers for Disease Control and Prevention (CDC) and Acting Administrator of the Agency for Toxic Substances and Disease Registry (ATSDR) until July 7, 2017.\n[2] ATSDR was created as an advisory, nonregulatory agency by the Superfund legislation and was formally organized in 1985.\n[3] On two occasions—6 months in 1975 and the first 3 months of 1977—he was Acting Administrator of the Social and Rehabilitation Services, the agency which, at that time, administered the Medicaid program and the Aid to Families with Dependent Children program.\n[4] Thomas R. Frieden, M.D., M.P.H is an American infectious disease expert and the former director of the U.S. Centers for Disease Control and Prevention (CDC) and acting administrator of the Agency for Toxic Substances and Disease Registry from 2009 to 2017."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

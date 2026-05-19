@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "5,602",
+  "pred_answer": "5,602",
+  "normalized_gold": "5602",
+  "normalized_pred": "5602",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf724b5542995534e8c7ae",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf724b5542995534e8c7ae::John C. Tibbetts::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf724b5542995534e8c7ae::Mission Hills, Kansas::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf724b5542995534e8c7ae::Paola, Kansas::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf724b5542995534e8c7ae::Omer, Michigan::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf724b5542995534e8c7ae::John C. Tibbetts",
+        "5adf724b5542995534e8c7ae::Paola, Kansas"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf724b5542995534e8c7ae::John C. Tibbetts::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf724b5542995534e8c7ae::Mission Hills, Kansas::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf724b5542995534e8c7ae::Paola, Kansas::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf724b5542995534e8c7ae::Omer, Michigan::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf724b5542995534e8c7ae::Omer, Michigan::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] As of the 2010 census, the city population was 313.\n[2] As of the 2010 census, the city population was 5,602.\n[3] As of the 2010 census, the city population was 3,498.\n[4] John C. Tibbetts (born Paola, Kansas, October 6, 1946 and grew up in Leavenworth, Kansas) is an American film critic, historian, author, painter, and pianist."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

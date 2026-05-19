@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "August 7, 1963",
+  "pred_answer": "August 7, 1963",
+  "normalized_gold": "august 7 1963",
+  "normalized_pred": "august 7 1963",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84afc65542994c784dda0c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84afc65542994c784dda0c::Cadence (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84afc65542994c784dda0c::No Code of Conduct::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84afc65542994c784dda0c::Ramon Estevez::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a84afc65542994c784dda0c::Cadence (film)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84afc65542994c784dda0c::Cadence (film)",
+        "5a84afc65542994c784dda0c::Ramon Estevez"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84afc65542994c784dda0c::Cadence (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84afc65542994c784dda0c::No Code of Conduct::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84afc65542994c784dda0c::Ramon Estevez::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a84afc65542994c784dda0c::Cadence (film)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84afc65542994c784dda0c::Cadence (film)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Sheen plays alongside his father Martin Sheen and brother Ramon Estevez.\n[2] Ramón Luis Estevez (born August 7, 1963), sometimes billed as Ramón Sheen, is an American actor and director who runs Estevez Sheen Productions.\n[3] The film stars Charlie Sheen, and Martin Sheen as father-and-son vice unit detectives, along with Mark Dacascos who portrays Charlie Sheen's partner.\n[4] Cadence (also known as Stockade) is a 1990 film directed by (and starring) Martin Sheen, in which Charlie Sheen plays an inmate in a United States Army military prison in West Germany during the 1960s."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

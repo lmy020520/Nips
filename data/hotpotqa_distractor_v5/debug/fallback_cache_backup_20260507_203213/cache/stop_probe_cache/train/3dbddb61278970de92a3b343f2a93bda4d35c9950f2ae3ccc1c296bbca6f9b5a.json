@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Robert Anthony Buell",
+  "pred_answer": "Robert Anthony Buell",
+  "normalized_gold": "robert anthony buell",
+  "normalized_pred": "robert anthony buell",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abb140f5542992ccd8e7f03",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abb140f5542992ccd8e7f03::Murder of Krista Harrison::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abb140f5542992ccd8e7f03::Robert Anthony Buell::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abb140f5542992ccd8e7f03::Murder of Jacqueline Thomas::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abb140f5542992ccd8e7f03::Murder of Krista Harrison",
+        "5abb140f5542992ccd8e7f03::Robert Anthony Buell"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abb140f5542992ccd8e7f03::Murder of Krista Harrison::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abb140f5542992ccd8e7f03::Robert Anthony Buell::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abb140f5542992ccd8e7f03::Murder of Jacqueline Thomas::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abb140f5542992ccd8e7f03::Murder of Jacqueline Thomas::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] A suspect was identified at the time, but there was insufficient evidence to charge him, and the crime remained unsolved for over four decades until a cold case review in the 2000s.\n[2] Robert Anthony Buell (September 10, 1940 – September 24, 2002) was a former Akron, Ohio Planning Department worker, convicted of the murder of 11-year-old Krista Lea Harrison on July 17, 1982.\n[3] The murder of Krista Lea Harrison occurred on July 17, 1982, in Marshallville, Ohio."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

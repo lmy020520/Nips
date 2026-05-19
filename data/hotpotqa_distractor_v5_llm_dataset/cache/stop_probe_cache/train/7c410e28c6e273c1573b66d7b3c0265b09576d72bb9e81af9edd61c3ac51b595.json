@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Favela Rising",
+  "pred_answer": "Favela Rising",
+  "normalized_gold": "favela rising",
+  "normalized_pred": "favela rising",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a72932f5542992359bc310e",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a72932f5542992359bc310e::Favela Rising::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a72932f5542992359bc310e::Carolina Maria de Jesus::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a72932f5542992359bc310e::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a72932f5542992359bc310e::Burma VJ::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a72932f5542992359bc310e::Favela Rising::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a72932f5542992359bc310e::Favela Rising",
+        "5a72932f5542992359bc310e::Burma VJ"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a72932f5542992359bc310e::Favela Rising::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a72932f5542992359bc310e::Carolina Maria de Jesus::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a72932f5542992359bc310e::Burma VJ::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a72932f5542992359bc310e::Favela Rising::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a72932f5542992359bc310e::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a72932f5542992359bc310e::Favela Rising::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It debuted at the Tribeca Film Festival on April 24, 2005 where it won the award for \"Best New Documentary Filmmaker\" for Zimbalist and Mochary.\n[2] Favela Rising is a 2005 documentary film by American directors Jeff Zimbalist and Matt Mochary.\n[3] Burma VJ: Reporting from a Closed Country is a 2008 Danish documentary film directed by Anders Østergaard.\n[4] Carolina Maria de Jesus (14 March 1914 – 13 February 1977) was a Brazilian writer who lived most of her life in a favela (slums) of São Paulo, Brazil.\n\nNotes:\n[bridge] Favela Rising is a documentary about life in Brazil's slums."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

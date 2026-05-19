@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Woman's Viewpoint",
+  "pred_answer": "Woman's Viewpoint",
+  "normalized_gold": "womans viewpoint",
+  "normalized_pred": "womans viewpoint",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7cc70f554299452d57ba50",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7cc70f554299452d57ba50::Woman's Viewpoint (magazine)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7cc70f554299452d57ba50::Target audience::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7cc70f554299452d57ba50::Women's Running::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7cc70f554299452d57ba50::WBTP::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7cc70f554299452d57ba50::Woman's Viewpoint (magazine)",
+        "5a7cc70f554299452d57ba50::Women's Running"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7cc70f554299452d57ba50::Woman's Viewpoint (magazine)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7cc70f554299452d57ba50::Target audience::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7cc70f554299452d57ba50::Women's Running::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7cc70f554299452d57ba50::WBTP::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7cc70f554299452d57ba50::WBTP::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Its target audience is African Americans between the ages of 18-34, but its main competitor is WLLD, which has a very similar target audience as well.\n[2] Published 10 times yearly by Competitor Group, Inc., it is the only women's-specific running magazine available in the North American market.\n[3] Businesses that have a wide target market will focus on a specific target audience for certain messages to send, such as The Body Shops Mother’s Day advertisements, which were aimed at the children and spouses of women, rather than the whole market which would have included the women themselves.\n[4] The Woman's Viewpoint was a woman's magazine founded in Texas in 1923 and published by Florence M. Sterling."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

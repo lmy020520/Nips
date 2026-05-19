@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New York City Ballet",
+  "pred_answer": "New York City Ballet",
+  "normalized_gold": "new york city ballet",
+  "normalized_pred": "new york city ballet",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5e53555429929b08079fe",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5e53555429929b08079fe::Benjamin Millepied::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5e53555429929b08079fe::Céline Cassone::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5e53555429929b08079fe::George Strait albums discography::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5e53555429929b08079fe::Benjamin Millepied",
+        "5ae5e53555429929b08079fe::Céline Cassone"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5e53555429929b08079fe::Benjamin Millepied::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5e53555429929b08079fe::Céline Cassone::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5e53555429929b08079fe::George Strait albums discography::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5e53555429929b08079fe::George Strait albums discography::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] As of June 2014, he has sold 45 million albums in the US since 1991 when SoundScan started tracking album sales, and has amassed more top 10 albums than any other artist in that time.\n[2] Céline Cassone is a French-born ballerina dancing with the Morphoses/The Wheeldon Company and Benjamin Millepied's Danses Concertantes at the Joyce Theater during their 2008 seasons.\n[3] Benjamin Millepied (] ; born 10 June 1977) is a French dancer and choreographer, who has lived and worked in the United States after joining the New York City Ballet in 1995, where he became a soloist in 1998 and a principal in 2002."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Comic Market",
+  "pred_answer": "Comic Market",
+  "normalized_gold": "comic market",
+  "normalized_pred": "comic market",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7fbcf85542994857a767ef",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7fbcf85542994857a767ef::Comiket::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7fbcf85542994857a767ef::Tsukihime::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7fbcf85542994857a767ef::White Album 2::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7fbcf85542994857a767ef::Comiket",
+        "5a7fbcf85542994857a767ef::Tsukihime"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7fbcf85542994857a767ef::Comiket::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7fbcf85542994857a767ef::Tsukihime::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7fbcf85542994857a767ef::White Album 2::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7fbcf85542994857a767ef::White Album 2::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] White Album 2 (ホワイトアルバム2 , Howaito Arubamu 2 ) is a trilogy of Japanese adult visual novels developed by the visual novel company Leaf for the Microsoft Windows PC, and is the sequel to Leaf's earlier visual novel, \"White Album\".\n[2] \"Lunar Princess\") is a Japanese adult dōjin visual novel created by Type-Moon, who first released it at the Winter Comiket in December 2000.\n[3] Comiket (コミケット , Komiketto ) , otherwise known as the Comic Market (コミックマーケット , Komikku Māketto ) , is the world's largest dōjinshi fair, held twice a year in Tokyo, Japan."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

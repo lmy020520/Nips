@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "KBS2",
+  "pred_answer": "KBS2",
+  "normalized_gold": "kbs2",
+  "normalized_pred": "kbs2",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae69f8d5542991bbc976153",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae69f8d5542991bbc976153::Shin Hye-sun::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae69f8d5542991bbc976153::Sinner or Saint (TV series)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae69f8d5542991bbc976153::My Golden Life::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae69f8d5542991bbc976153::My Golden Life::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae69f8d5542991bbc976153::Shin Hye-sun",
+        "5ae69f8d5542991bbc976153::My Golden Life"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae69f8d5542991bbc976153::Shin Hye-sun::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae69f8d5542991bbc976153::Sinner or Saint (TV series)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae69f8d5542991bbc976153::My Golden Life::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae69f8d5542991bbc976153::My Golden Life::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae69f8d5542991bbc976153::My Golden Life::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The series airs on KBS2 every Saturday and Sunday from 7:55 p.m. to 9:15 p.m. (KST).\n[2] My Golden Life () is a 2017 South Korean television series starring Park Si-hoo, Shin Hye-sun, Lee Tae-hwan, and Seo Eun-soo.\n[3] Sinner or Saint is a 2011 Philippine correctional-theme drama series produced by GMA Network starring Dennis Trillo, Bianca King (her first protagonist role), Alessandra de Rossi (her comeback after three years) and Polo Ravales.\n[4] She made her debut in the television series \"School 2013\" and acted her first protagonist role in \"My Golden Life\" (2017)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

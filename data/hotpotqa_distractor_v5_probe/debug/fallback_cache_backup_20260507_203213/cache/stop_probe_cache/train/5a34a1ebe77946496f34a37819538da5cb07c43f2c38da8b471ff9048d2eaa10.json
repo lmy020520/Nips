@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "felony money-laundering charges",
+  "pred_answer": "felony money-laundering charges",
+  "normalized_gold": "felony money-laundering charges",
+  "normalized_pred": "felony money-laundering charges",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7d5425542995dae37e9ae",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7d5425542995dae37e9ae::Alex Vause::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7d5425542995dae37e9ae::Elizabeth Chapman::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7d5425542995dae37e9ae::Piper Kerman::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab7d5425542995dae37e9ae::Piper Chapman::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab7d5425542995dae37e9ae::Alex Vause::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7d5425542995dae37e9ae::Piper Kerman",
+        "5ab7d5425542995dae37e9ae::Piper Chapman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7d5425542995dae37e9ae::Alex Vause::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7d5425542995dae37e9ae::Elizabeth Chapman::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7d5425542995dae37e9ae::Piper Kerman::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab7d5425542995dae37e9ae::Piper Chapman::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab7d5425542995dae37e9ae::Alex Vause::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7d5425542995dae37e9ae::Alex Vause::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Before her arrest, Vause worked for an international drug cartel and was in a relationship with protagonist Piper Chapman, who once transported drug money for her during their travels.\n[2] She is based on Piper Kerman, author of the non-fiction book \"\", upon which the series is based.\n[3] Piper Eressea Kerman (born September 28, 1969) is an American memoirist convicted of felony money-laundering charges; her memoir \"\" about her experiences in prison was adapted into the critically acclaimed Netflix original comedy-drama series \"Orange Is the New Black\".\n[4] Elizabeth Chapman (aka Constance Elizabeth Chapman) is a children's author who created a series of books based on a fictional red lorry called \"Marmaduke\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

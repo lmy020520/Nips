@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "William Monahan",
+  "pred_answer": "William Monahan",
+  "normalized_gold": "william monahan",
+  "normalized_pred": "william monahan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3c46b554299391541394b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3c46b554299391541394b::Give 'Em the Boot IV::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3c46b554299391541394b::Cliff Dorfman::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3c46b554299391541394b::The Departed::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3c46b554299391541394b::The Departed::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3c46b554299391541394b::Give 'Em the Boot IV",
+        "5ac3c46b554299391541394b::The Departed"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3c46b554299391541394b::Give 'Em the Boot IV::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3c46b554299391541394b::Cliff Dorfman::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3c46b554299391541394b::The Departed::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3c46b554299391541394b::The Departed::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3c46b554299391541394b::The Departed::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Departed is a 2006 American crime drama film directed by Martin Scorsese and written by William Monahan.\n[2] The film stars Leonardo DiCaprio, Matt Damon, Jack Nicholson, and Mark Wahlberg, with Martin Sheen, Ray Winstone, Vera Farmiga, Anthony Anderson and Alec Baldwin in supporting roles.\n[3] He also worked as a Hollywood club promoter, appearing in the documentary film \"Hollywood: Wild in the Streets\" and in Bret Easton Ellis' 1999 novel \"Glamorama\", in which Dorfman is named as a friend of actor Leonardo DiCaprio.\n[4] The song would be re-recorded for \"The Warrior's Code\", featured on the soundtrack for \"The Departed\" and would eventually become the band's biggest selling single breaking them through to a wider audience."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

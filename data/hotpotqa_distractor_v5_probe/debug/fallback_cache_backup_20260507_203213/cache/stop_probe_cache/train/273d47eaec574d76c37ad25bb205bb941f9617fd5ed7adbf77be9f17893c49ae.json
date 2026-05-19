@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Browning Automatic Rifle",
+  "pred_answer": "Browning Automatic Rifle",
+  "normalized_gold": "browning automatic rifle",
+  "normalized_pred": "browning automatic rifle",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e817b55429949594199e9",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e817b55429949594199e9::New England Westinghouse Company::7"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e817b55429949594199e9::M1918 Browning Automatic Rifle::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e817b55429949594199e9::M249 light machine gun::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e817b55429949594199e9::New England Westinghouse Company",
+        "5a7e817b55429949594199e9::M1918 Browning Automatic Rifle"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e817b55429949594199e9::New England Westinghouse Company::7",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e817b55429949594199e9::M1918 Browning Automatic Rifle::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e817b55429949594199e9::M249 light machine gun::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e817b55429949594199e9::M249 light machine gun::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The M249 is manufactured in the United States by the local subsidiary FN Manufacturing LLC in South Carolina and is widely used in the U.S. Armed Forces.\n[2] The Browning Automatic Rifle (BAR) is a family of United States automatic rifles (machine rifles) and light machine guns used by the United States and numerous other countries during the 20th century.\n[3] The company entered hard times and started producing M1918 Browning Automatic Rifles at the former Stevens-Duryea factory that was originally constructed for car manufacturing in 1912."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

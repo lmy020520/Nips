@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "James Ingram Merrill",
+  "pred_answer": "James Ingram Merrill",
+  "normalized_gold": "james ingram merrill",
+  "normalized_pred": "james ingram merrill",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab51b985542991779162d7f",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab51b985542991779162d7f::Colin Wilson::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab51b985542991779162d7f::James Merrill::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab51b985542991779162d7f::James Merrill::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab51b985542991779162d7f::Colin Wilson",
+        "5ab51b985542991779162d7f::James Merrill"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab51b985542991779162d7f::Colin Wilson::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab51b985542991779162d7f::James Merrill::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab51b985542991779162d7f::James Merrill::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab51b985542991779162d7f::James Merrill::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] James Ingram Merrill (March 3, 1926 – February 6, 1995) was an American poet.\n[2] He was awarded the Pulitzer Prize for Poetry (1977) for \"Divine Comedies\" (1976).\n[3] Colin Henry Wilson (26 June 1931 – 5 December 2013) was an English writer, philosopher and novelist."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

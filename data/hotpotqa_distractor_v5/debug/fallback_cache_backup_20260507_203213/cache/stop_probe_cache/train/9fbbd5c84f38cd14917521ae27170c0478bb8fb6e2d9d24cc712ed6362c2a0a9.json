@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "boreal forest",
+  "pred_answer": "boreal forest",
+  "normalized_gold": "boreal forest",
+  "normalized_pred": "boreal forest",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3e1995542997ea680c974",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3e1995542997ea680c974::Marecchia::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3e1995542997ea680c974::Kazan River::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3e1995542997ea680c974::Taiga::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3e1995542997ea680c974::Aropaoanui River::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3e1995542997ea680c974::Kazan River",
+        "5ac3e1995542997ea680c974::Taiga"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3e1995542997ea680c974::Marecchia::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3e1995542997ea680c974::Kazan River::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3e1995542997ea680c974::Taiga::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3e1995542997ea680c974::Aropaoanui River::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3e1995542997ea680c974::Aropaoanui River::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The valley and bay into which the river flows are also known as Aropaoanui, as is the metal road which meets the Napier–Wairoa highway.\n[2] Taiga ( ; Russian: тайга́ ; ] ; from Turkic) also known as boreal forest or snow forest, is a biome characterized by coniferous forests consisting mostly of pines, spruces and larches.\n[3] Along its course the river flows through several lakes, including Ennadai Lake and Yathkyed Lake, over the Kazan Falls (25 m ), down a red sandstone gorge and through both boreal forest and tundra.\n[4] In ancient times it was known as the \"Ariminus\" which was from the Greek \"Ariminos\", \"Αρίμινος\" (which is also the ancient name of Rimini)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

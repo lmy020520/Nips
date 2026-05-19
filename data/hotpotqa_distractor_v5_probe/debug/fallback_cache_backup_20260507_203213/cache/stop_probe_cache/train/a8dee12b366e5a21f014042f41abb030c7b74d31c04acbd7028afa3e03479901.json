@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "genus of plants",
+  "pred_answer": "genus of plants",
+  "normalized_gold": "genus of plants",
+  "normalized_pred": "genus of plants",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab8a31355429916710eb0a2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab8a31355429916710eb0a2::Bouteloua::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab8a31355429916710eb0a2::Bouteloua megapotamica::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab8a31355429916710eb0a2::Calceolaria::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab8a31355429916710eb0a2::Ophiosphaerella::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab8a31355429916710eb0a2::Bouteloua",
+        "5ab8a31355429916710eb0a2::Calceolaria"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab8a31355429916710eb0a2::Bouteloua::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab8a31355429916710eb0a2::Bouteloua megapotamica::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab8a31355429916710eb0a2::Calceolaria::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab8a31355429916710eb0a2::Ophiosphaerella::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab8a31355429916710eb0a2::Ophiosphaerella::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Ophiosphaerella korrae\", \"O. narmari\", and \"O. herpotricha\" affect bermudagrass (\"Cynodon\" species), while the latter fungus also causes dead spot in buffalo grass (\"Bouteloua dactyloides\"). \"\n[2] Calceolaria ( ), also called lady's purse, slipper flower and pocketbook flower, or slipperwort, is a genus of plants in the Calceolariaceae family, sometimes classified in Scrophulariaceae by some authors.\n[3] Bouteloua megapotamica is a grass in the genus Bouteloua, family Poaceae.\n[4] Bouteloua is a genus of plants in the grass family."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

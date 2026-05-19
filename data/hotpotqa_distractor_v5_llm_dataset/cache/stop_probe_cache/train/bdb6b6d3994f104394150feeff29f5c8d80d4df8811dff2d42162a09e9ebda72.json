@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Hunter",
+  "pred_answer": "The Hunter",
+  "normalized_gold": "the hunter",
+  "normalized_pred": "the hunter",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8cedf4554299441c6b9f86",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8cedf4554299441c6b9f86::Marc Wilmots::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8cedf4554299441c6b9f86::2011–12 FC Schalke 04 season::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8cedf4554299441c6b9f86::Klaas-Jan Huntelaar::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8cedf4554299441c6b9f86::Ebbe Sand::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8cedf4554299441c6b9f86::2011–12 FC Schalke 04 season",
+        "5a8cedf4554299441c6b9f86::Klaas-Jan Huntelaar"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8cedf4554299441c6b9f86::Marc Wilmots::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8cedf4554299441c6b9f86::2011–12 FC Schalke 04 season::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8cedf4554299441c6b9f86::Klaas-Jan Huntelaar::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8cedf4554299441c6b9f86::Ebbe Sand::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8cedf4554299441c6b9f86::Ebbe Sand::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Ebbe Sand (born 19 July 1972) is a Danish former professional footballer who played as a striker for Brøndby IF in Denmark and FC Schalke 04 in Germany.\n[2] Dirk Jan Klaas \"Klaas-Jan\" Huntelaar (] ; born 12 August 1983), nicknamed \"The Hunter\", is a Dutch professional footballer who plays as a striker for Ajax and the Netherlands national team.\n[3] The 2011–12 season is the 108th season in Schalke 04's history.\n[4] With five goals, he is Belgium's all-time top scorer at the FIFA World Cup."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

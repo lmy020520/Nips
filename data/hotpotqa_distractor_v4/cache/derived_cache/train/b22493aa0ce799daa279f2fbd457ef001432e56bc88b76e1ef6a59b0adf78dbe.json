@@ -1,0 +1,32 @@
+{
+  "should_derive": true,
+  "reason": "The recent probe feedback indicates the predicted answer 'Liev Schreiber' is correct but support is insufficient. In repair_after_false_stop mode, we need to organize evidence to better support the answer by bridging connections and verifying key facts. The top raw candidates provide relevant information about Liev Schreiber, Scream 2, and Wes Craven's films, which can be used to create notes that link the answer to the question's criteria.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Liev Schreiber stars in Scream 2, which is a 1997 film.",
+      "source_unit_ids": [
+        "5a77a95d5542992a6e59df64::Scream 2::1",
+        "5a77a95d5542992a6e59df64::Liev Schreiber::1"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "Scream 2 is part of the Scream trilogy directed by Wes Craven.",
+      "source_unit_ids": [
+        "5a77a95d5542992a6e59df64::Scream 2::1",
+        "5a77a95d5542992a6e59df64::Liev Schreiber::1"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "Liev Schreiber was born in 1967, as indicated in the state summary.",
+      "source_unit_ids": [
+        "5a77a95d5542992a6e59df64::Liev Schreiber::1"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

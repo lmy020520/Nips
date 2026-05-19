@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "John Steinbeck",
+  "pred_answer": "John Steinbeck",
+  "normalized_gold": "john steinbeck",
+  "normalized_pred": "john steinbeck",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae66de65542992ae0d16347",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae66de65542992ae0d16347::Sarah Willis (author)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae66de65542992ae0d16347::Of Mice and Men::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae66de65542992ae0d16347::Sarah Willis (hornist)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae66de65542992ae0d16347::Sarah Willis (author)",
+        "5ae66de65542992ae0d16347::Of Mice and Men"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae66de65542992ae0d16347::Sarah Willis (author)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae66de65542992ae0d16347::Of Mice and Men::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae66de65542992ae0d16347::Sarah Willis (hornist)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae66de65542992ae0d16347::Sarah Willis (hornist)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] She is a member of the Berlin Philharmonic, and is a presenter of TV and online programs about classical music.\n[2] Of Mice and Men is a novella written by author John Steinbeck.\n[3] Theater and the arts have informed much of Willis’ work, especially her second novel, \"The Rehearsal\", which is about a theater troupe preparing a performance of \"Of Mice and Men\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

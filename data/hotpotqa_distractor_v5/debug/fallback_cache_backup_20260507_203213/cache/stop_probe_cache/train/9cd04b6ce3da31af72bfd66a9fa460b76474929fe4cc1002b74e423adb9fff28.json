@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Orlando",
+  "pred_answer": "Orlando",
+  "normalized_gold": "orlando",
+  "normalized_pred": "orlando",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc1550554299700f9d77d5",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc1550554299700f9d77d5::Il palazzo incantato::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc1550554299700f9d77d5::Orlando paladino::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc1550554299700f9d77d5::Orlando (opera)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abc1550554299700f9d77d5::Il tabarro::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abc1550554299700f9d77d5::Gianni Schicchi discography::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc1550554299700f9d77d5::Orlando (opera)",
+        "5abc1550554299700f9d77d5::Il tabarro"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc1550554299700f9d77d5::Il palazzo incantato::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc1550554299700f9d77d5::Orlando paladino::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc1550554299700f9d77d5::Orlando (opera)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abc1550554299700f9d77d5::Il tabarro::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abc1550554299700f9d77d5::Gianni Schicchi discography::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc1550554299700f9d77d5::Gianni Schicchi discography::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] This is a list of the recordings of Gianni Schicchi, the third of a group of three one-act operas by Giacomo Puccini collectively known as \"Il trittico\"; the other operas are \"Il tabarro\" and \"Suor Angelica\".\n[2] Il tabarro (The Cloak) is an opera in one act by Giacomo Puccini to an Italian libretto by Giuseppe Adami, based on Didier Gold's play \"La houppelande\".\n[3] Orlando (HWV 31) is an opera seria in three acts by George Frideric Handel written for the King's Theatre in London in 1733.\n[4] 28/11, is an opera in three acts by Joseph Haydn which was first performed at Eszterháza on 6 December 1782."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

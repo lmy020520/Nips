@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Akira Ishida",
+  "pred_answer": "Akira Ishida",
+  "normalized_gold": "akira ishida",
+  "normalized_pred": "akira ishida",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a829c2355429954d2e2eb7b",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a829c2355429954d2e2eb7b::Samuel Vincent::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a829c2355429954d2e2eb7b::Akira Ishida::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a829c2355429954d2e2eb7b::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a829c2355429954d2e2eb7b::Athrun Zala::5"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a829c2355429954d2e2eb7b::Samuel Vincent::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a829c2355429954d2e2eb7b::Samuel Vincent",
+        "5a829c2355429954d2e2eb7b::Athrun Zala"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a829c2355429954d2e2eb7b::Samuel Vincent::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a829c2355429954d2e2eb7b::Akira Ishida::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a829c2355429954d2e2eb7b::Athrun Zala::5",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a829c2355429954d2e2eb7b::Samuel Vincent::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a829c2355429954d2e2eb7b::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a829c2355429954d2e2eb7b::Samuel Vincent::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He also voiced Athrun Zala from \"Mobile Suit Gundam SEED\", Hikaru Shindo from \"Hikaru no Go\", Julian Star from \"Cardcaptors\", and Tieria Erde from \"Mobile Suit Gundam 00\".\n[2] Athrun Zala (アスラン・ザラ , Asuran Zara ) is a fictional character from the Japanese science fiction anime television series \"Mobile Suit Gundam SEED\" and its sequel \"Mobile Suit Gundam SEED Destiny\", part of the Gundam franchise.\n[3] Samuel Vincent Khouth is a Canadian voice actor who works in Vancouver and voices characters in animated series, anime dubs and video games.\n[4] He is voiced in Japanese by Akira Ishida and in English by Samuel Vincent in the Ocean dub and by Chris Hackney in the NYAV dub.\n\nNotes:\n[bridge] Samuel Vincent voiced Athrun Zala in the English dub of Gundam SEED, but the Japanese voice actor is Akira Ishida."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

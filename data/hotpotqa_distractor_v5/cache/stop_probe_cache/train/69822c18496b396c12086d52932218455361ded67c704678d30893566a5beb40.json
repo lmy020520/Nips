@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Vincent Johnson",
+  "pred_answer": "Vincent Johnson",
+  "normalized_gold": "vincent johnson",
+  "normalized_pred": "vincent johnson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab4376f5542991751b4d6f2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab4376f5542991751b4d6f2::Vinnie Johnson::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab4376f5542991751b4d6f2::Chauncey Billups::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab4376f5542991751b4d6f2::1990 NBA Finals::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab4376f5542991751b4d6f2::2005 NBA Finals::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab4376f5542991751b4d6f2::Vinnie Johnson",
+        "5ab4376f5542991751b4d6f2::1990 NBA Finals"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab4376f5542991751b4d6f2::Vinnie Johnson::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab4376f5542991751b4d6f2::Chauncey Billups::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab4376f5542991751b4d6f2::1990 NBA Finals::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab4376f5542991751b4d6f2::2005 NBA Finals::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab4376f5542991751b4d6f2::2005 NBA Finals::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 2005 NBA Finals was the championship round of the National Basketball Association (NBA)'s 2004–05 season, and the culmination of the season's playoffs.\n[2] The 1990 NBA Finals was the championship round of the 1989–90 NBA season.\n[3] He won the NBA Finals MVP in 2004 after helping the Pistons beat the Los Angeles Lakers in the Finals, and was given the nickname \"Mr. Big Shot\" for making late-game shots with Detroit.\n[4] Vincent Johnson (born September 1, 1956), is a retired American professional basketball player and a key player as sixth man for the Detroit Pistons during the team's NBA championships of 1989 and 1990."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

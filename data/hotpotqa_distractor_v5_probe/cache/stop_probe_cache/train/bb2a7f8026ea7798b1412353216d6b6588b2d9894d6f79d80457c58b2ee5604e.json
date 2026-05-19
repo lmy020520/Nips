@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Phil Hartman",
+  "pred_answer": "Phil Hartman",
+  "normalized_gold": "phil hartman",
+  "normalized_pred": "phil hartman",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7f6e85542991d322237e3",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7f6e85542991d322237e3::Lost Our Lisa::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7f6e85542991d322237e3::Lionel Hutz::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7f6e85542991d322237e3::Jeff Miller (Lassie)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7f6e85542991d322237e3::Lost Our Lisa",
+        "5ab7f6e85542991d322237e3::Lionel Hutz"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7f6e85542991d322237e3::Lost Our Lisa::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7f6e85542991d322237e3::Lionel Hutz::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7f6e85542991d322237e3::Jeff Miller (Lassie)::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7f6e85542991d322237e3::Jeff Miller (Lassie)::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Jeff makes his first appearance in the series premiere, \"The Inheritance\" (1954), and his last appearance in the mid-fourth season episode, \"Transition\" (1957).\n[2] He was voiced by Phil Hartman, and his first appearance was in the season two episode \"Bart Gets Hit by a Car\".\n[3] The episode contains the last appearance of the character Lionel Hutz."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

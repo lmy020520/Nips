@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fifth Third Bank",
+  "pred_answer": "Fifth Third Bank",
+  "normalized_gold": "fifth third bank",
+  "normalized_pred": "fifth third bank",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a86ffee554299211dda2b8b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a86ffee554299211dda2b8b::First Charter Bank::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a86ffee554299211dda2b8b::First Financial Bank (Ohio)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a86ffee554299211dda2b8b::Fifth Third Bank::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a86ffee554299211dda2b8b::Viking Bank::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a86ffee554299211dda2b8b::First Charter Bank",
+        "5a86ffee554299211dda2b8b::Fifth Third Bank"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a86ffee554299211dda2b8b::First Charter Bank::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a86ffee554299211dda2b8b::First Financial Bank (Ohio)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a86ffee554299211dda2b8b::Fifth Third Bank::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a86ffee554299211dda2b8b::Viking Bank::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a86ffee554299211dda2b8b::Viking Bank::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Viking Bank is a part of Russian Banking System; the Bank's work is governed by the applicable law of the Russian Federation, regulatory acts of the Central Bank of the Russian Federation, and the Charter.\n[2] Fifth Third Bank (5/3 Bank) is a U.S. regional banking corporation, headquartered in Cincinnati, Ohio at Fifth Third Center, and is the principal subsidiary of holding company Fifth Third Bancorp.\n[3] First Financial Bancorp (NASDAQ: FFBC ) is a regional bank headquartered in Cincinnati, Ohio, with its operations center in the northern Cincinnati, Tri-County area.\n[4] First Charter Bank (NASDAQ: FCTR), a subsidiary of First Charter Corporation, was a bank headquartered in Charlotte, North Carolina, United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

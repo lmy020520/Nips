@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Dark Knight",
+  "pred_answer": "The Dark Knight",
+  "normalized_gold": "the dark knight",
+  "normalized_pred": "the dark knight",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abff8515542994516f45559",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abff8515542994516f45559::Blackrock (film)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abff8515542994516f45559::Ross Fichtner::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abff8515542994516f45559::William Fichtner::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abff8515542994516f45559::The Dark Knight (film)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abff8515542994516f45559::Ross Fichtner::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abff8515542994516f45559::William Fichtner",
+        "5abff8515542994516f45559::The Dark Knight (film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abff8515542994516f45559::Blackrock (film)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abff8515542994516f45559::Ross Fichtner::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abff8515542994516f45559::William Fichtner::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abff8515542994516f45559::The Dark Knight (film)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abff8515542994516f45559::Ross Fichtner::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abff8515542994516f45559::Ross Fichtner::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He is also the father of Randy Fichtner, who was the receivers coach and is currently the quarterbacks coach for the Pittsburgh Steelers.\n[2] Featuring the DC Comics character Batman, the film is the second part of Nolan's \"The Dark Knight Trilogy\" and a sequel to 2005's \"Batman Begins\", starring an ensemble cast including Christian Bale, Michael Caine, Heath Ledger, Gary Oldman, Aaron Eckhart, Maggie Gyllenhaal and Morgan Freeman.\n[3] He is known for his roles as Sheriff Tom Underlay in the television series \"Invasion\", Alexander Mahone on \"Prison Break\", and numerous film roles, including: \"Quiz Show\", \"Heat\", blind astronomer Kent in \"Contact\", \"Armageddon\", \"The Perfect Storm\", \"Crash\", \"Blades of Glory\", \"Black Hawk Down\", \"Nine Lives\", \"The Longest Yard\", \"Mr. & Mrs. Smith\", \"The Dark Knight\", \"Date Night\", \"The Lone Range\n[4] Ross William Fichtner (born October 26, 1938 in McKeesport, Pennsylvania) was an American football cornerback in the NFL for the Cleveland Browns and New Orleans Saints."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

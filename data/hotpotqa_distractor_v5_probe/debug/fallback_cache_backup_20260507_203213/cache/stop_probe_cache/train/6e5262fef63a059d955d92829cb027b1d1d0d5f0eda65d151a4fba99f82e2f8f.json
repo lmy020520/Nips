@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Cosgrove Hall Films.",
+  "pred_answer": "Cosgrove Hall Films.",
+  "normalized_gold": "cosgrove hall films",
+  "normalized_pred": "cosgrove hall films",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac020815542990832d3a1f8",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac020815542990832d3a1f8::Oscar's Orchestra::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac020815542990832d3a1f8::Cartoon Network Development Studio Europe::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac020815542990832d3a1f8::Fantomcat::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac020815542990832d3a1f8::Cosgrove Hall Films::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac020815542990832d3a1f8::Avenger Penguins::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac020815542990832d3a1f8::Fantomcat",
+        "5ac020815542990832d3a1f8::Cosgrove Hall Films"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac020815542990832d3a1f8::Oscar's Orchestra::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac020815542990832d3a1f8::Cartoon Network Development Studio Europe::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac020815542990832d3a1f8::Fantomcat::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac020815542990832d3a1f8::Cosgrove Hall Films::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac020815542990832d3a1f8::Avenger Penguins::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac020815542990832d3a1f8::Avenger Penguins::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Avenger Penguins is an animated series produced by Cosgrove Hall Films and Thames Television in 1993, filmed by Alfonso Productions, a Spanish-based animation studio also responsible for bringing Cosgrove Hall's show \"Fantomcat\" to life.\n[2] Cosgrove Hall Films (also known as Cosgrove Hall Productions) was a British animation studio founded by Brian Cosgrove and Mark Hall; its headquarters was in Chorlton-cum-Hardy, Manchester.\n[3] Fantomcat is an animated series produced by Cosgrove Hall Films.\n[4] Cartoon Network Development Studio Europe is a British animation studio based in London that is owned by Cartoon Network and Turner Broadcasting System Europe, both of which are subsidiaries of Time Warner."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

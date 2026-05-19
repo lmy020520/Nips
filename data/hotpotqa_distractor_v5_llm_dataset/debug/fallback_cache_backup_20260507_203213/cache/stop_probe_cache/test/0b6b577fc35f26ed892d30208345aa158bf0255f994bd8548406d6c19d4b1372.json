@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Viet Minh's base",
+  "pred_answer": "Viet Minh's base",
+  "normalized_gold": "viet minhs base",
+  "normalized_pred": "viet minhs base",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac275f155429921a00aaf82",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac275f155429921a00aaf82::Hanoi::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac275f155429921a00aaf82::Landmines in the Vietnam War::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac275f155429921a00aaf82::Việt Bắc::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac275f155429921a00aaf82::Geneva Agreements::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac275f155429921a00aaf82::Hanoi",
+        "5ac275f155429921a00aaf82::Việt Bắc"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac275f155429921a00aaf82::Hanoi::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac275f155429921a00aaf82::Landmines in the Vietnam War::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac275f155429921a00aaf82::Việt Bắc::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac275f155429921a00aaf82::Geneva Agreements::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac275f155429921a00aaf82::Geneva Agreements::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Geneva Agreements of 1954 (also, \"Geneva Accords\") arranged a settlement which brought about an end to the First Indochina War.\n[2] Việt Bắc (\"Northern Vietnam\") is a region of Vietnam north of Hanoi that served as the Viet Minh's base of support during the First Indochina War (1946–1954).\n[3] Since the outbreak of the First Indochina War in 1946 and later the bloodier Second Indochina War of the 1960s and 1970s, countless numbers of land mines have been planted in what is now the Socialist Republic of Vietnam.\n[4] Hanoi ( or ; Vietnamese: \"Hà Nội\" , ] ) is the capital of the Socialist Republic of Vietnam and the country's second largest city by population."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

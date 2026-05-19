@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Kevin Lima",
+  "pred_answer": "Kevin Lima",
+  "normalized_gold": "kevin lima",
+  "normalized_pred": "kevin lima",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae45b2c55429970de88d941",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae45b2c55429970de88d941::101 Dalmatians (1996 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae45b2c55429970de88d941::One Hundred and One Dalmatians::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae45b2c55429970de88d941::102 Dalmatians::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae45b2c55429970de88d941::101 Dalmatians II: Patch's London Adventure::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae45b2c55429970de88d941::101 Dalmatians (1996 film)",
+        "5ae45b2c55429970de88d941::102 Dalmatians"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae45b2c55429970de88d941::101 Dalmatians (1996 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae45b2c55429970de88d941::One Hundred and One Dalmatians::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae45b2c55429970de88d941::102 Dalmatians::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae45b2c55429970de88d941::101 Dalmatians II: Patch's London Adventure::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae45b2c55429970de88d941::101 Dalmatians II: Patch's London Adventure::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] 101 Dalmatians II: Patch's London Adventure is a 2003 American direct-to-video animated adventure musical drama film, written and directed by Jim Kammerud and Brian Smith, released by Walt Disney Home Entertainment on February 25, 2003, and based on Dodie Smith's characters, \"The Hundred and One Dalmatians\" and is also inspired by \"The Starlight Barking\".\n[2] 102 Dalmatians is a 2000 American live action and CG-animated film adventure drama film directed by Kevin Lima in his live-action directorial debut and produced by Edward S. Feldman and Walt Disney Pictures.\n[3] One Hundred and One Dalmatians, often abbreviated as 101 Dalmatians, is a 1961 American animated adventure film produced by Walt Disney and based on the 1956 novel \"The Hundred and One Dalmatians\" by Dodie Smith.\n[4] 101 Dalmatians is a 1996 American live-action comedy adventure film based on Walt Disney's animated 1961 movie adaptation of Dodie Smith's 1956 novel \"The Hundred and One Dalmatians.\""
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Princeton University and Massachusetts Institute of Technology",
+  "pred_answer": "Princeton University and Massachusetts Institute of Technology",
+  "normalized_gold": "princeton university and massachusetts institute of technology",
+  "normalized_pred": "princeton university and massachusetts institute of technology",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85f98e5542996432c57152",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85f98e5542996432c57152::William T. Van de Graaff::8"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85f98e5542996432c57152::Pelletron::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85f98e5542996432c57152::Robert J. Van de Graaff::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85f98e5542996432c57152::Hollywood Blues Tour::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85f98e5542996432c57152::William T. Van de Graaff",
+        "5a85f98e5542996432c57152::Robert J. Van de Graaff"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85f98e5542996432c57152::William T. Van de Graaff::8",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85f98e5542996432c57152::Pelletron::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85f98e5542996432c57152::Robert J. Van de Graaff::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85f98e5542996432c57152::Hollywood Blues Tour::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85f98e5542996432c57152::Hollywood Blues Tour::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] To embrace the group's renowned concept of visual imagery, the stage featured an LED drape for a backdrop video screen that showed visual effects, video clips and flashing text phrases, along with amplifiers stacks and a Van de Graaff generator.\n[2] He taught at Princeton University and Massachusetts Institute of Technology.\n[3] A pelletron is a type of electrostatic particle accelerator similar to a Van de Graaff generator.\n[4] He was the older brother of physicist Robert J. Van de Graaff, the designer of the Van de Graaff generator which produces high voltages. Bully's two older brothers, Hargrove and Adrian, were also Alabama football players."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

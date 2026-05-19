@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "French-Mexican",
+  "pred_answer": "French-Mexican",
+  "normalized_gold": "french-mexican",
+  "normalized_pred": "french-mexican",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85e3c75542994c784ddbac",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85e3c75542994c784ddbac::Ronnie Lane::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85e3c75542994c784ddbac::Van Dick 73::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85e3c75542994c784ddbac::Angelique Boyer::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85e3c75542994c784ddbac::Rose Marie::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85e3c75542994c784ddbac::Van Dick 73",
+        "5a85e3c75542994c784ddbac::Angelique Boyer"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85e3c75542994c784ddbac::Ronnie Lane::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85e3c75542994c784ddbac::Van Dick 73::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85e3c75542994c784ddbac::Angelique Boyer::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85e3c75542994c784ddbac::Rose Marie::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85e3c75542994c784ddbac::Rose Marie::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Rose Marie Mazetta (born August 15, 1923), known professionally as Rose Marie, is an American actress.\n[2] Angelique Boyer (] ; born Angelique Monique-Paulette Boyer Rousseau ] on July 4, 1988) is a French-Mexican actress.\n[3] Van Dick 73, also known as La vecindad de Teresa, is the street address of the famous low-income apartment complex (\"vecindad\") used in the 2010 telenovela \"Teresa\" starring Angelique Boyer.\n[4] Ronald Frederick Lane (1 April 1946 – 4 June 1997) was an English musician, songwriter, and producer who is best known as the bass guitarist and founding member of two prominent English rock and roll bands: the Small Faces where he was nicknamed \"Plonk\" (1965–69), and, after losing the band's frontman, the Faces, with two new members added to the line-up (from The Jeff Beck Group), who dubbed him"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

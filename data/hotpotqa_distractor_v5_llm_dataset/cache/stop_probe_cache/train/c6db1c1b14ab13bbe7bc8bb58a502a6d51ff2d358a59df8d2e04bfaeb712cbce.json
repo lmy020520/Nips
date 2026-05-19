@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "17 August 1930",
+  "pred_answer": "17 August 1930",
+  "normalized_gold": "17 august 1930",
+  "normalized_pred": "17 august 1930",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abeae7a5542990832d3a0aa",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abeae7a5542990832d3a0aa::Brian Moses::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abeae7a5542990832d3a0aa::William Diaper::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abeae7a5542990832d3a0aa::Ted Hughes::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abeae7a5542990832d3a0aa::The Blue Flannel Suit::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abeae7a5542990832d3a0aa::Stephen Romer::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abeae7a5542990832d3a0aa::Ted Hughes",
+        "5abeae7a5542990832d3a0aa::The Blue Flannel Suit"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abeae7a5542990832d3a0aa::Brian Moses::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abeae7a5542990832d3a0aa::William Diaper::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abeae7a5542990832d3a0aa::Ted Hughes::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abeae7a5542990832d3a0aa::The Blue Flannel Suit::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abeae7a5542990832d3a0aa::Stephen Romer::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abeae7a5542990832d3a0aa::Stephen Romer::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] A selection of his recent poems appeared in the Carcanet Oxford Poets anthology 2001, and a book of his selected poems in French translation, Tribut, was published by Editions Le Temps qu'il fait in 2007.\n[2] \"The Blue Flannel Suit\" is a poem by Ted Hughes published in 1998 in his book \"Birthday Letters\".\n[3] Edward James Hughes, {'1': \", '2': \", '3': \", '4': \"} (17 August 1930 – 28 October 1998) was an English poet and children's writer.\n[4] William Diaper (1685–1717) was an English poet of the Augustan era."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

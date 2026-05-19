@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Look What You Made Me",
+  "pred_answer": "Look What You Made Me",
+  "normalized_gold": "look what you made me",
+  "normalized_pred": "look what you made me",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add228c5542990d50227dfe",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add228c5542990d50227dfe::Exit Wounds (soundtrack)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add228c5542990d50227dfe::Berry (singer)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add228c5542990d50227dfe::Yung Berg::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5add228c5542990d50227dfe::Casey Dienel::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add228c5542990d50227dfe::Exit Wounds (soundtrack)",
+        "5add228c5542990d50227dfe::Yung Berg"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add228c5542990d50227dfe::Exit Wounds (soundtrack)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add228c5542990d50227dfe::Berry (singer)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add228c5542990d50227dfe::Yung Berg::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5add228c5542990d50227dfe::Casey Dienel::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add228c5542990d50227dfe::Casey Dienel::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Dienel has also performed and recorded as White Hinterland, whose first album, titled \"Phylactery Factory\", was released on March 4, 2008, by the independent record label Dead Oceans.\n[2] His debut album \"Look What You Made Me\" was released in 2008.\n[3] A second album titled \"Les passagers\" (\"The passengers\") was released in 2012.\n[4] Exit Wounds: The Album is the soundtrack to the 2001 film, \"Exit Wounds\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

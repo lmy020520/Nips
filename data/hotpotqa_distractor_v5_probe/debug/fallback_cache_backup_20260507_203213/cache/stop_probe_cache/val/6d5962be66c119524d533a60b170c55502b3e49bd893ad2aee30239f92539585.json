@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jeffrey R. MacDonald",
+  "pred_answer": "Jeffrey R. MacDonald",
+  "normalized_gold": "jeffrey r macdonald",
+  "normalized_pred": "jeffrey r macdonald",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae834b75542997ec2727769",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae834b75542997ec2727769::Jeffrey R. MacDonald::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae834b75542997ec2727769::Jean Lanfray::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae834b75542997ec2727769::The Journalist and the Murderer::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae834b75542997ec2727769::The Journalist and the Murderer::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae834b75542997ec2727769::Jeffrey R. MacDonald",
+        "5ae834b75542997ec2727769::The Journalist and the Murderer"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae834b75542997ec2727769::Jeffrey R. MacDonald::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae834b75542997ec2727769::Jean Lanfray::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae834b75542997ec2727769::The Journalist and the Murderer::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae834b75542997ec2727769::The Journalist and the Murderer::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae834b75542997ec2727769::The Journalist and the Murderer::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The journalist in question is Joe McGinniss; the murderer is the former Special Forces captain Dr. Jeffrey R. MacDonald, who became the subject of McGinniss' 1983 book \"Fatal Vision\".\n[2] The Journalist and the Murderer is a study by Janet Malcolm about the ethics of journalism, published by Alfred A. Knopf/Random House in 1990.\n[3] Jean Lanfray (1873/74 – February 26, 1906), a laborer who was French by birth but living in Switzerland was convicted of murdering his pregnant wife and two children in a drunken rage on the afternoon of August 28, 1905, in Commugny, Switzerland.\n[4] Jeffrey Robert MacDonald (born October 12, 1943) is an American medical doctor who was convicted in 1979 of murdering his pregnant wife and two daughters in February 1970."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

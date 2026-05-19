@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Spain",
+  "pred_answer": "Spain",
+  "normalized_gold": "spain",
+  "normalized_pred": "spain",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "The selected chunks provide a two-hop chain: (1) Thomas Parker Sanborn was a model for the protagonist in Santayana's only novel (from Thomas Parker Sanborn chunk), and (2) Santayana was originally from Spain (from George Santayana chunk). Both hops are explicitly supported by the evidence.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "The selected chunks provide a two-hop chain: (1) Thomas Parker Sanborn was a model for the protagonist in Santayana's only novel (from Thomas Parker Sanborn chunk), and (2) Santayana was originally from Spain (from George Santayana chunk). Both hops are explicitly supported by the evidence.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae363e85542994393b9e6a5",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae363e85542994393b9e6a5::Thomas Parker Sanborn::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae363e85542994393b9e6a5::Pitts Sanborn::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae363e85542994393b9e6a5::George Santayana::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae363e85542994393b9e6a5::Thomas Parker Sanborn::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae363e85542994393b9e6a5::Hugh McCulloch (poet)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae363e85542994393b9e6a5::Thomas Parker Sanborn::1",
+        "5ae363e85542994393b9e6a5::George Santayana",
+        "5ae363e85542994393b9e6a5::Thomas Parker Sanborn"
+      ],
+      "k_br": 2.0,
+      "k_dis": 1.0,
+      "k_sup": 0.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae363e85542994393b9e6a5::Thomas Parker Sanborn::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae363e85542994393b9e6a5::Pitts Sanborn::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae363e85542994393b9e6a5::George Santayana::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae363e85542994393b9e6a5::Thomas Parker Sanborn::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae363e85542994393b9e6a5::Hugh McCulloch (poet)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae363e85542994393b9e6a5::Hugh McCulloch (poet)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Hugh McCulloch (March 9, 1869 – March 27, 1902) was an American poet.\n[2] Thomas Parker Sanborn ( ; February 24, 1865 - March 2, 1889) was an American poet.\n[3] Originally from Spain, Santayana was raised and educated in the United States from the age of eight and identified himself as an American, although he always ke\n[4] As a novelist, his 1929 novel \"Prima Donna\" was called by one New York Times critic “an amazing achievement; nothing quite like it has been done in this country"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

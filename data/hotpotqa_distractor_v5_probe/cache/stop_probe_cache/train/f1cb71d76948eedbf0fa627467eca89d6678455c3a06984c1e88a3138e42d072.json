@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "four years",
+  "pred_answer": "four years",
+  "normalized_gold": "four years",
+  "normalized_pred": "four years",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a87970d5542996e4f308866",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a87970d5542996e4f308866::Bad Books::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a87970d5542996e4f308866::Stevie Ray Vaughan::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a87970d5542996e4f308866::Jimi Hendrix::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a87970d5542996e4f308866::Baby Grandmothers::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a87970d5542996e4f308866::Gilgamesh Night::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a87970d5542996e4f308866::Jimi Hendrix",
+        "5a87970d5542996e4f308866::Baby Grandmothers"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a87970d5542996e4f308866::Bad Books::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a87970d5542996e4f308866::Stevie Ray Vaughan::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a87970d5542996e4f308866::Jimi Hendrix::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a87970d5542996e4f308866::Baby Grandmothers::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a87970d5542996e4f308866::Gilgamesh Night::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a87970d5542996e4f308866::Gilgamesh Night::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Airing Saturdays at 1:15 a.m. on TV Tokyo, the hour-long show helped launch the career of one of its late hosts, Ai Iijima, who afterwards moved into a more mainstream career.\n[2] Although the Baby Grandmothers rarely performed outside Sweden, the band did tour alongside Jimi Hendrix in 1968.\n[3] Although his mainstream career spanned only four years, he is widely regarded as one of the most influential electric guitarists in the history of popular music, and one of the most celebrated musicians of the 20th century.\n[4] In spite of a short-lived mainstream career spanning seven years, he was one of the most influential guitarists in the revival of blues in the 1980s and one of the greatest guitarists of all time."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

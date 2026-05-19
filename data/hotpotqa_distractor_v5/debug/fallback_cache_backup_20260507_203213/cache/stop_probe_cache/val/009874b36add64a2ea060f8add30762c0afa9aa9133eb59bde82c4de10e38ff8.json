@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sept. 1963",
+  "pred_answer": "Sept. 1963",
+  "normalized_gold": "sept 1963",
+  "normalized_pred": "sept 1963",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab593cb5542992aa134a365",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab593cb5542992aa134a365::Snapper Carr::7"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab593cb5542992aa134a365::List of Waterloo Road characters (series 4)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab593cb5542992aa134a365::Magneto (comics)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab593cb5542992aa134a365::Bill Milner::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab593cb5542992aa134a365::Snapper Carr::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab593cb5542992aa134a365::Magneto (comics)",
+        "5ab593cb5542992aa134a365::Bill Milner"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab593cb5542992aa134a365::Snapper Carr::7",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab593cb5542992aa134a365::List of Waterloo Road characters (series 4)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab593cb5542992aa134a365::Magneto (comics)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab593cb5542992aa134a365::Bill Milner::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab593cb5542992aa134a365::Snapper Carr::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab593cb5542992aa134a365::Snapper Carr::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The character, whose fictional nickname is almost always used by other characters in favor of his given name, was created by Gardner Fox (writer) and Mike Sekowsky (penciller), and made his first appearance in \"The Brave and the Bold\" in February 1960.\n[2] \" (2008), and the young Erik Lensherr / Magneto in \"\" (2011).\n[3] Created by writer Stan Lee and artist Jack Kirby, the character first appears in \"The X-Men\" #1 (cover-dated Sept. 1963) as the archenemy of the X-Men.\n[4] The main cast remains mostly unchanged from series 3, augmented by Rob Cleaver in the first ten episodes and returning character Kim Campbell from episode eleven."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

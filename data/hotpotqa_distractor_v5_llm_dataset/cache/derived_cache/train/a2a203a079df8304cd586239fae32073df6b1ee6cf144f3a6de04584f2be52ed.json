@@ -1,0 +1,30 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the school district of the high school Jonathan Florencio attended. The state summary mentions two different districts: East Clinton Local School district and Bellmore-Merrick Central High School District. The gold answer indicates Bellmore-Merrick Central High School District. The raw candidates provide information about other schools but not directly about Jonathan Florencio's school. A verification note can help confirm which district is correct by checking if any candidate mentions being the only high school in a district, which aligns with the state summary's mention of 'only high school in the East Clinton Local School district' but that contradicts the gold answer. A bridge note could connect the gold answer to a candidate that mentions being one of three high schools in a district, similar to Bellmore-Merrick. However, the raw candidates do not include Bellmore-Merrick. So we need to derive notes to clarify the discrepancy.",
+  "derived_candidates": [
+    {
+      "type": "verification_note",
+      "text": "Powdersville High School is one of three high schools in Anderson School District One, not Bellmore-Merrick.",
+      "source_unit_ids": [
+        "5a79b5ea554299029c4b5f6a::Powdersville High School::1"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Steilacoom High School is the only high school in its district, which matches the description of East Clinton Local School district but not Bellmore-Merrick.",
+      "source_unit_ids": [
+        "5a79b5ea554299029c4b5f6a::Steilacoom High School::1"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "Cedar Cliff High School is one of two high schools in West Shore School District, not Bellmore-Merrick.",
+      "source_unit_ids": [
+        "5a79b5ea554299029c4b5f6a::Cedar Cliff High School::0"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

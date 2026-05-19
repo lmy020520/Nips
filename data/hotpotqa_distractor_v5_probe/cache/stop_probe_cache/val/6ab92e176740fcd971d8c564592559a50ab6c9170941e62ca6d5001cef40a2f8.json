@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "SkyTeam",
+  "pred_answer": "SkyTeam",
+  "normalized_gold": "skyteam",
+  "normalized_pred": "skyteam",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac40bd7554299204fd21eed",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac40bd7554299204fd21eed::SkyTeam::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac40bd7554299204fd21eed::Cho Yang-ho::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac40bd7554299204fd21eed::History of Kingfisher Airlines::12"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac40bd7554299204fd21eed::SkyTeam",
+        "5ac40bd7554299204fd21eed::Cho Yang-ho"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac40bd7554299204fd21eed::SkyTeam::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac40bd7554299204fd21eed::Cho Yang-ho::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac40bd7554299204fd21eed::History of Kingfisher Airlines::12",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac40bd7554299204fd21eed::History of Kingfisher Airlines::12",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Kingfisher confirmed on 20 December 2011 that it will join the Oneworld airline alliance on 10 February 2012.\n[2] Cho Yangho (Korean: 조양호, Hanja: 趙亮鎬, RR: \"Jo Yang-ho\", M-R: \"Cho Yangho\"; sometimes written Y. H. Cho) is the chairman and chief executive officer of Korean Air, chairman of the Hanjin Group, and a founding member of SkyTeam alliance.\n[3] s of 2014 , SkyTeam consists of 20 carriers from five continents and operates with the slogan \"Caring more about you\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

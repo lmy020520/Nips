@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Asking for Trouble",
+  "pred_answer": "Asking for Trouble",
+  "normalized_gold": "asking for trouble",
+  "normalized_pred": "asking for trouble",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae190ef554299234fd04295",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae190ef554299234fd04295::Heartbeat (1993 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae190ef554299234fd04295::The Wedding Date::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae190ef554299234fd04295::The Wedding Date::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae190ef554299234fd04295::Clare Kilner::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae190ef554299234fd04295::Annabelle's Affairs::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae190ef554299234fd04295::The Wedding Date",
+        "5ae190ef554299234fd04295::Clare Kilner"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae190ef554299234fd04295::Heartbeat (1993 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae190ef554299234fd04295::The Wedding Date::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae190ef554299234fd04295::The Wedding Date::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae190ef554299234fd04295::Clare Kilner::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae190ef554299234fd04295::Annabelle's Affairs::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae190ef554299234fd04295::Annabelle's Affairs::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The film is based on the play \"Good Gracious Annabelle\" by Clare Kummer.\n[2] Clare Kilner is an English film director.\n[3] Based on the novel \"Asking for Trouble\" by Elizabeth Young, the film is about a single woman who hires a male escort to pose as her boyfriend at her sister's wedding in order to dupe her ex-fiancé, who dumped her a few years prior.\n[4] The Wedding Date is a 2005 American romantic comedy film directed by Clare Kilner and starring Debra Messing, Dermot Mulroney, and Amy Adams."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

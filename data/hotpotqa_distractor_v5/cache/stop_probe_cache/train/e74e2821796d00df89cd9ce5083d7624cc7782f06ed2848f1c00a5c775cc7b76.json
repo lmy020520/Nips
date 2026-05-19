@@ -1,0 +1,88 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Governor",
+  "pred_answer": "Governor of New South Wales",
+  "normalized_gold": "governor",
+  "normalized_pred": "governor of new south wales",
+  "exact_match": false,
+  "context_exact_match": true,
+  "answer_match_rule": "context_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "Evidence shows Richard Bourke was Governor of New South Wales, and Bourke's parrot is named after him. However, the pred answer 'Governor of New South Wales' is more specific than the gold answer 'Governor'. The evidence does not explicitly state that 'Governor' is the common government position; it only shows that Richard Bourke held the specific position of Governor of New South Wales. The question asks for the type of government position, which could be 'Governor' in general, but the evidence does not confirm that 'Governor' is a type of position common to both entities (the parrot does not hold a position).",
+  "missing_support_reasons": [
+    "The evidence does not support that 'Governor' (without specification) is the common government position; it only supports 'Governor of New South Wales' for Richard Bourke. The parrot does not hold a government position, so the commonality is only through naming, not through holding the same type of position."
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "Evidence shows Richard Bourke was Governor of New South Wales, and Bourke's parrot is named after him. However, the pred answer 'Governor of New South Wales' is more specific than the gold answer 'Governor'. The evidence does not explicitly state that 'Governor' is the common government position; it only shows that Richard Bourke held the specific position of Governor of New South Wales. The question asks for the type of government position, which could be 'Governor' in general, but the evidence does not confirm that 'Governor' is a type of position common to both entities (the parrot does not hold a position).",
+    "missing_support_reasons": [
+      "The evidence does not support that 'Governor' (without specification) is the common government position; it only supports 'Governor of New South Wales' for Richard Bourke. The parrot does not hold a government position, so the commonality is only through naming, not through holding the same type of position."
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5a81f668554299676cceb19e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81f668554299676cceb19e::Bourke's parrot::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81f668554299676cceb19e::Lord High Treasurer::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81f668554299676cceb19e::Richard Bourke::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81f668554299676cceb19e::Bourke's parrot::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81f668554299676cceb19e::Bourke's parrot",
+        "5a81f668554299676cceb19e::Richard Bourke"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81f668554299676cceb19e::Bourke's parrot::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81f668554299676cceb19e::Lord High Treasurer::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81f668554299676cceb19e::Richard Bourke::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a81f668554299676cceb19e::Bourke's parrot::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a81f668554299676cceb19e::Bourke's parrot::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is named after General Sir Richard Bourke, Governor of New South Wales from 1831 to 1837.\n[2] General Sir Richard Bourke, KCB (4 May 1777 – 12 August 1855) was an Irish-born British Army officer who served as Governor of New South Wales from 1831 to 1837.\n[3] The post of Lord High Treasurer or Lord Treasurer was an English government position and has been a British government position since the Acts of Union of 1707.\n[4] The Bourke's parrot (\"Neopsephotus bourkii\", formerly known as \"Neophema bourkii\"), also known as the blue-vented parrot, sundown parrot, pink-bellied parrot, Bourke's parakeet, Bourke or \"Bourkie\", is a small parrot originating in Australia and the only species in its genus Neopsephotus."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

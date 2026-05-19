@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "yes",
+  "pred_answer": "yes",
+  "normalized_gold": "yes",
+  "normalized_pred": "yes",
+  "exact_match": true,
+  "context_exact_match": false,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "yes_no_both_entities_supported",
+  "support_evidence_summary": "Evidence confirms that Maria Stuarda is an opera (Donizetti) and Salome is an opera (Strauss).",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "yes_no_both_entities_supported",
+    "support_evidence_summary": "Evidence confirms that Maria Stuarda is an opera (Donizetti) and Salome is an opera (Strauss).",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a845bb65542996488c2e523",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a845bb65542996488c2e523::Lodovico Filippo Laurenti::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a845bb65542996488c2e523::Salome (opera)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a845bb65542996488c2e523::Maria Stuarda::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a845bb65542996488c2e523::Mary Stuart (play)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a845bb65542996488c2e523::Salome (opera)",
+        "5a845bb65542996488c2e523::Maria Stuarda"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a845bb65542996488c2e523::Lodovico Filippo Laurenti::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a845bb65542996488c2e523::Salome (opera)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a845bb65542996488c2e523::Maria Stuarda::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a845bb65542996488c2e523::Mary Stuart (play)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a845bb65542996488c2e523::Mary Stuart (play)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Mary Stuart (German: \"Maria Stuart\" ) is a verse play by Friedrich Schiller that depicts the last days of Mary, Queen of Scots.\n[2] Maria Stuarda (Mary Stuart) is a tragic opera (\"tragedia lirica\"), in two acts, by Gaetano Donizetti, to a libretto by Giuseppe Bardari, based on Andrea Maffei's translation of Friedrich Schiller's 1800 play \"Maria Stuart\".\n[3] Salome, Op.\n[4] Lodovico composed an oratorio entitled \"Maria Stuarda Regina d\"Inghilterra\", which received several Bolognese performances in 1718."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

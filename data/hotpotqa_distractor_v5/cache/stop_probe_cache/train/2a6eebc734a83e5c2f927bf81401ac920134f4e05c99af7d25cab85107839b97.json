@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Manchester, England",
+  "pred_answer": "Manchester, England",
+  "normalized_gold": "manchester england",
+  "normalized_pred": "manchester england",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a840408554299123d8c21cc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a840408554299123d8c21cc::Debbie Bampton::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a840408554299123d8c21cc::Mechanisms and Robotics Award::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a840408554299123d8c21cc::English Football Hall of Fame::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a840408554299123d8c21cc::Debbie Bampton::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a840408554299123d8c21cc::Debbie Bampton",
+        "5a840408554299123d8c21cc::English Football Hall of Fame"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a840408554299123d8c21cc::Debbie Bampton::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a840408554299123d8c21cc::Mechanisms and Robotics Award::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a840408554299123d8c21cc::English Football Hall of Fame::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a840408554299123d8c21cc::Debbie Bampton::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a840408554299123d8c21cc::Debbie Bampton::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She was inducted into the English Football Hall of Fame in 2005.\n[2] The English Football Hall of Fame is housed at the National Football Museum, in Manchester, England.\n[3] The Mechanisms and Robotics Award is an honor that is given annually by the Mechanisms and Robotics Committee of the American Society of Mechanical Engineers (ASME), to engineers known for a lifelong contribution to the field of mechanism design or theory.\n[4] Deborah \"Debbie\" Bampton, MBE, (born 7 October 1961) is an English former international football midfielder."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

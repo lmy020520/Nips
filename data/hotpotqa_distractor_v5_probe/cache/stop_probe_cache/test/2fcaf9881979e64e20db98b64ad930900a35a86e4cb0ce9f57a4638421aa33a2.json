@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Southbank",
+  "pred_answer": "Southbank",
+  "normalized_gold": "southbank",
+  "normalized_pred": "southbank",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abea7c25542990832d3a068",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abea7c25542990832d3a068::State Theatre (Melbourne)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abea7c25542990832d3a068::Bella Rose Arts Centre::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abea7c25542990832d3a068::Arts Centre Melbourne::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abea7c25542990832d3a068::Toronto Centre for the Arts::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abea7c25542990832d3a068::State Theatre (Melbourne)",
+        "5abea7c25542990832d3a068::Arts Centre Melbourne"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abea7c25542990832d3a068::State Theatre (Melbourne)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abea7c25542990832d3a068::Bella Rose Arts Centre::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abea7c25542990832d3a068::Arts Centre Melbourne::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abea7c25542990832d3a068::Toronto Centre for the Arts::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abea7c25542990832d3a068::Toronto Centre for the Arts::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Toronto Centre for the Arts, previously known as the \"Ford Centre for the Performing Arts\", is a performing arts centre in the former city of North York in Toronto, Ontario, Canada.\n[2] The Arts Centre Melbourne, originally known as the Victorian Arts Centre and briefly officially called the Arts Centre, is a performing arts centre consisting of a complex of theatres and concert halls in the Melbourne Arts Precinct, located in the central Melbourne suburb of Southbank in Victoria, Australia.\n[3] The Bella Rose Arts Centre is a community-based proscenium theatre performing arts centre located inside of Halifax West High School in the Clayton Park neighbourhood of the Halifax.\n[4] The State Theatre opened in 1984 and is part of the Arts Centre Melbourne located by the Yarra River and St Kilda Road."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

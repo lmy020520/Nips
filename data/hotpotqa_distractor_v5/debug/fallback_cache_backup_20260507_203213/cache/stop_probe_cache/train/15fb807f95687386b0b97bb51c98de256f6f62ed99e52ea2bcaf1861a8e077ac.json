@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "5084",
+  "pred_answer": "5084",
+  "normalized_gold": "5084",
+  "normalized_pred": "5084",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8e51c4554299068b959e86",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8e51c4554299068b959e86::Kilburn, South Australia::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8e51c4554299068b959e86::Blair Athol, South Australia::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8e51c4554299068b959e86::Kilburn, South Australia::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8e51c4554299068b959e86::Kilburn, South Australia",
+        "5a8e51c4554299068b959e86::Blair Athol, South Australia"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8e51c4554299068b959e86::Kilburn, South Australia::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8e51c4554299068b959e86::Blair Athol, South Australia::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8e51c4554299068b959e86::Kilburn, South Australia::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8e51c4554299068b959e86::Kilburn, South Australia::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Kilburn shares the same postcode as Blair Athol which is 5084 and was previously known as 'Little Chicago' before its name was changed during the 20th century.\n[2] Blair Athol is located about 15 km north of the Adelaide CBD, South Australia.\n[3] Kilburn is a suburb in the inner north of Adelaide, South Australia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

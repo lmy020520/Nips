@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Plymouth Gin",
+  "pred_answer": "Plymouth Gin",
+  "normalized_gold": "plymouth gin",
+  "normalized_pred": "plymouth gin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc7dbf5542994d58a2f618",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc7dbf5542994d58a2f618::Gimlet (cocktail)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc7dbf5542994d58a2f618::Weisslacker::7"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc7dbf5542994d58a2f618::Pink Gin::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc7dbf5542994d58a2f618::Potato doughnut::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc7dbf5542994d58a2f618::Gimlet (cocktail)",
+        "5adc7dbf5542994d58a2f618::Pink Gin"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc7dbf5542994d58a2f618::Gimlet (cocktail)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc7dbf5542994d58a2f618::Weisslacker::7",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc7dbf5542994d58a2f618::Pink Gin::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc7dbf5542994d58a2f618::Potato doughnut::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc7dbf5542994d58a2f618::Potato doughnut::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The potato doughnut, sometimes called a Spudnut, is a doughnut, typically sweet, made with either mashed potatoes or potato starch instead of flour, the most common ingredient used for doughnut dough.\n[2] Pink Gin or Pink Plymouth is a cocktail made fashionable in England in the mid-19th century, consisting of Plymouth gin and a dash of Angostura bitters, a dark red bitters that makes the whole drink pinkish.\n[3] This cheese is a common ingredient in various breads, soups, and dips.\n[4] The description in the 1953 Raymond Chandler novel \"The Long Goodbye\" stated that \"a real gimlet is half gin and half Rose's lime juice and nothing else\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

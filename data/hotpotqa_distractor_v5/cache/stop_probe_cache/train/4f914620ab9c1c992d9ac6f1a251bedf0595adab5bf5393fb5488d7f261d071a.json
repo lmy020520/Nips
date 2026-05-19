@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "1950",
+  "pred_answer": "1950",
+  "normalized_gold": "1950",
+  "normalized_pred": "1950",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7dfc785542995f4f40236d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7dfc785542995f4f40236d::The Springheel Saga::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7dfc785542995f4f40236d::Larry Lamb::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7dfc785542995f4f40236d::Matthew Kelly::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7dfc785542995f4f40236d::Tear Ring Saga::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7dfc785542995f4f40236d::The Springheel Saga",
+        "5a7dfc785542995f4f40236d::Matthew Kelly"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7dfc785542995f4f40236d::The Springheel Saga::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7dfc785542995f4f40236d::Larry Lamb::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7dfc785542995f4f40236d::Matthew Kelly::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7dfc785542995f4f40236d::Tear Ring Saga::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7dfc785542995f4f40236d::Tear Ring Saga::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Direct ties to \"Fire Emblem\" were dropped, and its original title, \"Emblem Saga\", was changed to its final title as to not sound so similar to \"Fire Emblem\", and the game was released in Japan on May 24, 2001, by Enterbrain, for Nintendo's competitor, Sony, on their PlayStation console.\n[2] Matthew Kelly (born David Allan Kelly, 9 May 1950) is an English Olivier Award-winning actor and presenter.\n[3] He played Archie Mitchell in the BBC soap opera \"EastEnders\", Mick Shipman in the BBC romantic comedy series \"Gavin & Stacey\" and Ted Case in the final series of the BBC Crime Drama \"New Tricks\".\n[4] The third and final series, \"The Secret Of Springheel'd Jack\", released over 2015 and 2016, features Jenny Runacre and Matthew Kelly, and deals with the 1877 Aldershot barracks incident."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

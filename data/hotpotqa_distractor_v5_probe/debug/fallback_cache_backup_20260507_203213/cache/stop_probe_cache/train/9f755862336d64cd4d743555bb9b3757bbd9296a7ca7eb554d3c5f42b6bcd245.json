@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hudson",
+  "pred_answer": "Hudson",
+  "normalized_gold": "hudson",
+  "normalized_pred": "hudson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0a69d5542993d6555ebe7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0a69d5542993d6555ebe7::Port of Albany–Rensselaer::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0a69d5542993d6555ebe7::Pennsylvania Route 75::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0a69d5542993d6555ebe7::Port Subdivision::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0a69d5542993d6555ebe7::Castleton Subdivision::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0a69d5542993d6555ebe7::Port of Albany–Rensselaer",
+        "5ae0a69d5542993d6555ebe7::Port Subdivision"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0a69d5542993d6555ebe7::Port of Albany–Rensselaer::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0a69d5542993d6555ebe7::Pennsylvania Route 75::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0a69d5542993d6555ebe7::Port Subdivision::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0a69d5542993d6555ebe7::Castleton Subdivision::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0a69d5542993d6555ebe7::Castleton Subdivision::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] At its southeast end, it junctions with the Berkshire Subdivision and Schodack Subdivision.\n[2] At its south end, the Port Subdivision junctions with the Castleton Subdivision and River Subdivision; its north end is at the Port of Albany, served by the Albany Port Railroad.\n[3] The northern terminus is at an interchange with U.S. Route 22 (US 22) and US 322 northeast of Port Royal.\n[4] The Port of Albany–Rensselaer, widely known as the Port of Albany, is a port of entry in the United States with facilities on both sides of the Hudson River in Albany and Rensselaer, New York."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

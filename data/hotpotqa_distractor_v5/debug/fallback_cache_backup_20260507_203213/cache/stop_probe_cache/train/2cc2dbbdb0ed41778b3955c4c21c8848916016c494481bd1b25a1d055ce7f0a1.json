@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1967",
+  "pred_answer": "1967",
+  "normalized_gold": "1967",
+  "normalized_pred": "1967",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac1b9c155429963665198fe",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac1b9c155429963665198fe::The Notorious Mr. Bout::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac1b9c155429963665198fe::Ai Weiwei: The Fake Case::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac1b9c155429963665198fe::Viktor Bout::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac1b9c155429963665198fe::Lord of War::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac1b9c155429963665198fe::The Notorious Mr. Bout",
+        "5ac1b9c155429963665198fe::Viktor Bout"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac1b9c155429963665198fe::The Notorious Mr. Bout::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac1b9c155429963665198fe::Ai Weiwei: The Fake Case::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac1b9c155429963665198fe::Viktor Bout::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac1b9c155429963665198fe::Lord of War::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac1b9c155429963665198fe::Lord of War::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The film was officially endorsed by the human rights group Amnesty International for highlighting the arms trafficking by the international arms industry.\n[2] Viktor Anatolyevich Bout (Russian: Виктор Анатольевич Бут ; born 13 January 1967) is a Russian arms dealer.\n[3] The film won Best 2014 Documentary in Danish Film Critics Association's 67th Bodil Awards, played in the official selection of 2014 Hot Docs Canadian International Documentary Festival in Toronto and International Documentary Film Festival Amsterdam.\n[4] The film focuses on the life of Viktor Bout, an international arms smuggler."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

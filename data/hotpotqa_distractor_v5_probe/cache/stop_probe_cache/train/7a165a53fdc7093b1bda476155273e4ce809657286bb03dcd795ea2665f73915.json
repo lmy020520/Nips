@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Rush",
+  "pred_answer": "Rush",
+  "normalized_gold": "rush",
+  "normalized_pred": "rush",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adea4dd5542992fa25da7ec",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adea4dd5542992fa25da7ec::Victor (album)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adea4dd5542992fa25da7ec::Feedback (Rush album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adea4dd5542992fa25da7ec::Rush (band)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adea4dd5542992fa25da7ec::Grace Under Pressure (Rush album)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adea4dd5542992fa25da7ec::Victor (album)",
+        "5adea4dd5542992fa25da7ec::Rush (band)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adea4dd5542992fa25da7ec::Victor (album)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adea4dd5542992fa25da7ec::Feedback (Rush album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adea4dd5542992fa25da7ec::Rush (band)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adea4dd5542992fa25da7ec::Grace Under Pressure (Rush album)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adea4dd5542992fa25da7ec::Grace Under Pressure (Rush album)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Grace Under Pressure is the tenth studio album by Canadian rock band Rush, released in 1984.\n[2] Rush is a Canadian rock band composed of Geddy Lee (bass guitar, lead vocals, keyboards), Alex Lifeson (guitars, backing vocals) and Neil Peart (drums, percussion, lyrics).\n[3] Feedback is a cover album by Canadian rock band Rush, released in 2004.\n[4] Victor is a solo album by Rush guitarist Alex Lifeson under the name \"Victor\" released January 9, 1996 on Atlantic Records outside Canada and Anthem Records within Canada."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

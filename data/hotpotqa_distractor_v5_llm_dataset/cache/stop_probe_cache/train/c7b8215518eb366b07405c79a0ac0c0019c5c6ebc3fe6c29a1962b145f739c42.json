@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Edinson Cavani",
+  "pred_answer": "Edinson Cavani",
+  "normalized_gold": "edinson cavani",
+  "normalized_pred": "edinson cavani",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abbb52a55429931dba144b1",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abbb52a55429931dba144b1::Ligue 1 Player of the Year::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abbb52a55429931dba144b1::Ligue 1 Young player of the year::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abbb52a55429931dba144b1::Ligue 1 Player of the Year::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abbb52a55429931dba144b1::Edinson Cavani::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abbb52a55429931dba144b1::List of Ligue 1 top scorers::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abbb52a55429931dba144b1::Ligue 1 Player of the Year",
+        "5abbb52a55429931dba144b1::Edinson Cavani"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abbb52a55429931dba144b1::Ligue 1 Player of the Year::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abbb52a55429931dba144b1::Ligue 1 Young player of the year::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abbb52a55429931dba144b1::Ligue 1 Player of the Year::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abbb52a55429931dba144b1::Edinson Cavani::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abbb52a55429931dba144b1::List of Ligue 1 top scorers::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abbb52a55429931dba144b1::List of Ligue 1 top scorers::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The latest top scorer of Ligue 1 is Edinson Cavani of Paris Saint-Germain.\n[2] Edinson Roberto Cavani Gómez (] ; born 14 February 1987) is a Uruguayan professional footballer who plays as a striker for Ligue 1 club Paris Saint-Germain and the Uruguay national team.\n[3] The current holder is Edinson Cavani, who won the award for his performances throughout the 2016–17 campaign for Paris Saint-Germain scoring 35 goals.\n[4] The Ligue 1 Young Player of the Year is an award given to the player aged 23 years or under at the start of the season whose performances are considered to be the best, playing in Ligue 1."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

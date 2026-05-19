@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "murders",
+  "pred_answer": "murders",
+  "normalized_gold": "murders",
+  "normalized_pred": "murders",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7a82855429952e35ea9a9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7a82855429952e35ea9a9::Murders of Chaney, Goodman, and Schwerner::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7a82855429952e35ea9a9::Edgar Ray Killen::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7a82855429952e35ea9a9::Andrew Goodman::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae7a82855429952e35ea9a9::Roy K. Moore::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7a82855429952e35ea9a9::Murders of Chaney, Goodman, and Schwerner",
+        "5ae7a82855429952e35ea9a9::Andrew Goodman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7a82855429952e35ea9a9::Murders of Chaney, Goodman, and Schwerner::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7a82855429952e35ea9a9::Edgar Ray Killen::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7a82855429952e35ea9a9::Andrew Goodman::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae7a82855429952e35ea9a9::Roy K. Moore::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7a82855429952e35ea9a9::Roy K. Moore::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Roy K. Moore (June 11, 1914 Hood River Oregon - October 12, 2008 Madison Wisconsin) was an American FBI agent and former Marine who was best known as the chief agent who investigated the disappearance of civil rights workers James Chaney, Michael Schwerner and Andrew Goodman.\n[2] Andrew Goodman (November 23, 1943 – June 21, 1964) was one of three American activists of the Civil Rights Movement and also a Social Worker, murdered near Philadelphia, Mississippi, during Freedom Summer in 1964 by members of the Ku Klux Klan.\n[3] Edgar Ray \"Preacher\" Killen (born January 17, 1925) is a former Ku Klux Klan organizer who planned and directed the murders of James Chaney, Andrew Goodman, and Michael Schwerner, three civil rights activists participating in the Freedom Summer of 1964.\n[4] The murders of Chaney, Goodman, and Schwerner, also known as the Freedom Summer murders, the Mississippi civil rights workers' murders or the Mississippi Burning murders, involved three activists that were abducted and murdered in Neshoba County, Mississippi in June 1964 during the Civil Rights Movement."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

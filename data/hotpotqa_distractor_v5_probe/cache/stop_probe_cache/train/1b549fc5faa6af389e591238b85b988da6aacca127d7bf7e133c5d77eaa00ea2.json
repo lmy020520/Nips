@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Windsors",
+  "pred_answer": "The Windsors",
+  "normalized_gold": "the windsors",
+  "normalized_pred": "the windsors",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b572b55429950cd6afcbe",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b572b55429950cd6afcbe::Prince Harry::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b572b55429950cd6afcbe::Richard Goulding::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b572b55429950cd6afcbe::Chris Tally Evans::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b572b55429950cd6afcbe::Prince Harry",
+        "5a8b572b55429950cd6afcbe::Richard Goulding"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b572b55429950cd6afcbe::Prince Harry::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b572b55429950cd6afcbe::Richard Goulding::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b572b55429950cd6afcbe::Chris Tally Evans::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b572b55429950cd6afcbe::Chris Tally Evans::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Chris Tally Evans is a British disabled artist, actor, director and writer.\n[2] Richard Goulding is a British actor, best known for playing Prince Harry in the 2014 stage play \"King Charles III\", and its 2017 BBC TV adaptation, as well as in 2016 television series \"The Windsors\".\n[3] Prince Henry of Wales {'1': \", '2': \", '3': \", '4': \"} (Henry Charles Albert David; born 15 September 1984), familiarly known as Prince Harry, is the younger son of Charles, Prince of Wales, and Diana, Princess of Wales."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

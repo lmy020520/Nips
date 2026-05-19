@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bedřich Smetana",
+  "pred_answer": "Bedřich Smetana",
+  "normalized_gold": "bedřich smetana",
+  "normalized_pred": "bedřich smetana",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2ed9b5542990b17b154b8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2ed9b5542990b17b154b8::Bedřich Smetana::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2ed9b5542990b17b154b8::Libuše (opera)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2ed9b5542990b17b154b8::George Gershwin::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2ed9b5542990b17b154b8::Viola (opera)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2ed9b5542990b17b154b8::Bedřich Smetana",
+        "5ac2ed9b5542990b17b154b8::George Gershwin"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2ed9b5542990b17b154b8::Bedřich Smetana::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2ed9b5542990b17b154b8::Libuše (opera)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2ed9b5542990b17b154b8::George Gershwin::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2ed9b5542990b17b154b8::Viola (opera)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2ed9b5542990b17b154b8::Viola (opera)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Viola is an unfinished romantic opera by Bedřich Smetana.\n[2] George Jacob Gershwin ( ; September 26, 1898 July 11, 1937) was an American composer and pianist.\n[3] is a '\"festival opera\" in three acts, with music by Bedřich Smetana.\n[4] Bedřich Smetana (] ; 2 March 1824 – 12 May 1884) was a Czech composer who pioneered the development of a musical style which became closely identified with his country's aspirations to independent statehood."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

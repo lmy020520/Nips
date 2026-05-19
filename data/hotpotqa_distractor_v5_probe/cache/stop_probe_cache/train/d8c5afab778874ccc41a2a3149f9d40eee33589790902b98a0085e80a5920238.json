@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"apple orchard\"",
+  "pred_answer": "\"apple orchard\"",
+  "normalized_gold": "apple orchard",
+  "normalized_pred": "apple orchard",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac26d565542992f1f2b38c2",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac26d565542992f1f2b38c2::Stanisław Nogaj::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac26d565542992f1f2b38c2::Camptown Historic District::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac26d565542992f1f2b38c2::Manzanar::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac26d565542992f1f2b38c2::William Hohri::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac26d565542992f1f2b38c2::Erich Zoddel::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac26d565542992f1f2b38c2::Manzanar",
+        "5ac26d565542992f1f2b38c2::William Hohri"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac26d565542992f1f2b38c2::Stanisław Nogaj::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac26d565542992f1f2b38c2::Camptown Historic District::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac26d565542992f1f2b38c2::Manzanar::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac26d565542992f1f2b38c2::William Hohri::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac26d565542992f1f2b38c2::Erich Zoddel::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac26d565542992f1f2b38c2::Erich Zoddel::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] In November 1943, after a brief stay at Buchenwald concentration camp, he was taken to Mittelbau-Dora concentration camp.\n[2] He was sent to the Manzanar concentration camp with his family after the attack on Pearl Harbor triggered the United States' entry into the war.\n[3] Manzanar (which means \"apple orchard\" in Spanish) was identified by the United States National Park Service as the best-preserved of the former camp sites, and is now the Manzanar National Historic Site, which preserves and interprets the legacy of Japanese American incarceration in the United States.\n[4] The area was said to be named \"Camptown,\" but, since there was already another community in Pennsylvania that used that name, the name \"La Mott\" was chosen when the post office was established in 1885."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

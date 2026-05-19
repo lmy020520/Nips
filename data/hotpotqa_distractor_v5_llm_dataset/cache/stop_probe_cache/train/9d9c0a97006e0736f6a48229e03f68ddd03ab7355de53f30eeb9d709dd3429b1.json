@@ -1,0 +1,101 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Alan and Priscilla Oppenheimer Foundation",
+  "pred_answer": "Alan and Priscilla Oppenheimer Foundation",
+  "normalized_gold": "alan and priscilla oppenheimer foundation",
+  "normalized_pred": "alan and priscilla oppenheimer foundation",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79db725542994f819ef0d7",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79db725542994f819ef0d7::LaserWriter::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79db725542994f819ef0d7::Market run::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79db725542994f819ef0d7::Tektronix Phaser 740::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a79db725542994f819ef0d7::derived::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a79db725542994f819ef0d7::Alan B. Oppenheimer::4"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5a79db725542994f819ef0d7::LED printer::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79db725542994f819ef0d7::LaserWriter",
+        "5a79db725542994f819ef0d7::Alan B. Oppenheimer"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79db725542994f819ef0d7::LaserWriter::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79db725542994f819ef0d7::Market run::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79db725542994f819ef0d7::Tektronix Phaser 740::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a79db725542994f819ef0d7::Alan B. Oppenheimer::4",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5a79db725542994f819ef0d7::LED printer::0",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a79db725542994f819ef0d7::derived::1",
+          "added_step": 3
+        }
+      ],
+      "last_added_unit_id": "5a79db725542994f819ef0d7::LED printer::0",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] The Phaser 740 is notable for being the industry's first true 1200×1200 dpi color laser printer.\n[2] An LED printer is a type of computer printer similar to laser printer.\n[3] Alan is author of several books and runs the Alan and Priscilla Oppenheimer Foundation with his wife.\n[4] The Tektronix Phaser 740 was a series of color laser printers sold by Tektronix's printer division, now a part of Xerox.\n\nNotes:\n[bridge] The inventor of the first laser printer available to the mass market may be associated with the Alan and Priscilla Oppenheimer Foundation."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "64 times",
+  "pred_answer": "64 times",
+  "normalized_gold": "64 times",
+  "normalized_pred": "64 times",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab41a2155429969a97a8244",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab41a2155429969a97a8244::Manfred Müller (footballer)::7"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab41a2155429969a97a8244::Jean-Marie Pfaff::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab41a2155429969a97a8244::FC Bayern Munich Junior Team::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab41a2155429969a97a8244::Manfred Müller (footballer)",
+        "5ab41a2155429969a97a8244::Jean-Marie Pfaff"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab41a2155429969a97a8244::Manfred Müller (footballer)::7",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab41a2155429969a97a8244::Jean-Marie Pfaff::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab41a2155429969a97a8244::FC Bayern Munich Junior Team::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab41a2155429969a97a8244::FC Bayern Munich Junior Team::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It has educated many players who have become regulars in the Bundesliga and Germany.\n[2] Pfaff was capped 64 times playing for Belgium, and participated at the 1982 FIFA World Cup and 1986 FIFA World Cup tournaments.\n[3] Müller was on the move again, and after a brief spell at ESV Ingolstadt, moved on to Bayern Munich, ostensibly as cover for Walter Junghans."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Atlanta",
+  "pred_answer": "Atlanta",
+  "normalized_gold": "atlanta",
+  "normalized_pred": "atlanta",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac503415542994611c8b30e",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac503415542994611c8b30e::Richway::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac503415542994611c8b30e::H &amp; J Smith's::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac503415542994611c8b30e::Rich's (department store)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac503415542994611c8b30e::Davison's::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac503415542994611c8b30e::Kaufmann's::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac503415542994611c8b30e::Rich's (department store)",
+        "5ac503415542994611c8b30e::Davison's"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac503415542994611c8b30e::Richway::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac503415542994611c8b30e::H &amp; J Smith's::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac503415542994611c8b30e::Rich's (department store)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac503415542994611c8b30e::Davison's::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac503415542994611c8b30e::Kaufmann's::6",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac503415542994611c8b30e::Kaufmann's::6",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] On September 9, 2006, Macy's retired the Kaufmann's name as Federated Department Stores converted the former May Company brands to its masthead.\n[2] It was the major competition to Rich's and it took the Macy's name in 1986.\n[3] Many of the former Rich's stores today form the core of Macy's Central, an Atlanta-based division of Macy's, Inc., which formerly operated as Federated Department Stores, Inc.\n[4] The Department Stores are located in Invercargill, Dunedin, Gore, Queenstown, Te Anau and Balclutha."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

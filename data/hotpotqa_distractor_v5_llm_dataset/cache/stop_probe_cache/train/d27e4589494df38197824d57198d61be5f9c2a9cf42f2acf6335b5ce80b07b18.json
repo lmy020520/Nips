@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Tonga",
+  "pred_answer": "Tonga",
+  "normalized_gold": "tonga",
+  "normalized_pred": "tonga",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae74fb45542997b22f6a6b1",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae74fb45542997b22f6a6b1::Tonga::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae74fb45542997b22f6a6b1::Alaska Taufa::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae74fb45542997b22f6a6b1::Taufaʻao Filise::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae74fb45542997b22f6a6b1::Tonga",
+        "5ae74fb45542997b22f6a6b1::Alaska Taufa"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae74fb45542997b22f6a6b1::Tonga::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae74fb45542997b22f6a6b1::Alaska Taufa::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae74fb45542997b22f6a6b1::Taufaʻao Filise::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae74fb45542997b22f6a6b1::Taufaʻao Filise::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Taufa'ao Filise (born May 26, 1977 in Malapo) is a Tongan rugby union footballer.\n[2] Alaska Taufa (born 24 July 1983) is a Tongan rugby union footballer.\n[3] Tonga ( or ; Tongan: ] \"Puleʻanga Fakatuʻi ʻo Tonga\"), officially the Kingdom of Tonga, is a Polynesian sovereign state and archipelago comprising 169 islands, of which 36 are inhabited."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

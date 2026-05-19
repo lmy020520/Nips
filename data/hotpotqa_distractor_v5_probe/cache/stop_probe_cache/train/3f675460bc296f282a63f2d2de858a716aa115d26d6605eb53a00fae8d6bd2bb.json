@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hasbro",
+  "pred_answer": "Hasbro",
+  "normalized_gold": "hasbro",
+  "normalized_pred": "hasbro",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2ec5b55429928c4239566",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2ec5b55429928c4239566::Montezuma's Return!::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2ec5b55429928c4239566::Montezuma's Revenge (album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2ec5b55429928c4239566::Parker Brothers::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae2ec5b55429928c4239566::God of War (franchise)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2ec5b55429928c4239566::Montezuma's Return!",
+        "5ae2ec5b55429928c4239566::Parker Brothers"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2ec5b55429928c4239566::Montezuma's Return!::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2ec5b55429928c4239566::Montezuma's Revenge (album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2ec5b55429928c4239566::Parker Brothers::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae2ec5b55429928c4239566::God of War (franchise)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2ec5b55429928c4239566::God of War (franchise)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Debuting in 2005 , the series has become a flagship title for the PlayStation brand, consisting of seven games across multiple platforms.\n[2] Parker Brothers was an American toy and game manufacturer which later became a brand of Hasbro.\n[3] Montezuma's Revenge is the fifth album by the Oakland hip hop group Souls of Mischief.\n[4] is a 1998 action/adventure video game and the sequel to the original Parker Brothers game \"Montezuma's Revenge\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

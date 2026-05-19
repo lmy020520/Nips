@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "October 5, 1930",
+  "pred_answer": "October 5, 1930",
+  "normalized_gold": "october 5 1930",
+  "normalized_pred": "october 5 1930",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abb2f2f554299232ef4a3d7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abb2f2f554299232ef4a3d7::Riverside Church::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abb2f2f554299232ef4a3d7::Harry Emerson Fosdick::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abb2f2f554299232ef4a3d7::Stewart Cleveland Cureton::10"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abb2f2f554299232ef4a3d7::Riverside Church",
+        "5abb2f2f554299232ef4a3d7::Harry Emerson Fosdick"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abb2f2f554299232ef4a3d7::Riverside Church::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abb2f2f554299232ef4a3d7::Harry Emerson Fosdick::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abb2f2f554299232ef4a3d7::Stewart Cleveland Cureton::10",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abb2f2f554299232ef4a3d7::Stewart Cleveland Cureton::10",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] In 1965 he was called to pastor Reedy Fork Baptist Church and Reedy River Baptist Church which was his home church.\n[2] Although a Baptist, he was called to serve as pastor, in New York City, at First Presbyterian Church in Manhattan's West Village, and then at the historic, inter-denominational Riverside Church in Morningside Heights, Manhattan.\n[3] It opened its doors on October 5, 1930."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

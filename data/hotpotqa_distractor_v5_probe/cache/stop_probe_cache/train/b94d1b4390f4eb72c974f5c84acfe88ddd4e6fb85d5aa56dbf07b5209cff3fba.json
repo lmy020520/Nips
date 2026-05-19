@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "University of Phoenix Stadium",
+  "pred_answer": "University of Phoenix Stadium",
+  "normalized_gold": "university of phoenix stadium",
+  "normalized_pred": "university of phoenix stadium",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a86679a554299211dda2b20",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a86679a554299211dda2b20::Anthony Madison::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a86679a554299211dda2b20::Dallas Cowboys::9"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a86679a554299211dda2b20::Arizona Cardinals::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a86679a554299211dda2b20::1982 Miami Dolphins season::16"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a86679a554299211dda2b20::Anthony Madison",
+        "5a86679a554299211dda2b20::Arizona Cardinals"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a86679a554299211dda2b20::Anthony Madison::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a86679a554299211dda2b20::Dallas Cowboys::9",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a86679a554299211dda2b20::Arizona Cardinals::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a86679a554299211dda2b20::1982 Miami Dolphins season::16",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a86679a554299211dda2b20::1982 Miami Dolphins season::16",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In Super Bowl XVII, they lost to the Redskins 27-17 in a rematch of Super Bowl VII which concluded Miami's perfect 1972 season.\n[2] The Cardinals play their home games at the University of Phoenix Stadium, which is located in the northwestern suburb of Glendale, Arizona.\n[3] The Cowboys have won five of those Super Bowl appearances, tying them with their NFC rivals, the San Francisco 49ers, and the AFC's Patriots; all three are second to Pittsburgh's record six Super Bowl championships.\n[4] He appeared in 2 Super Bowls and winning Super Bowl XLIII against the Arizona Cardinals."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

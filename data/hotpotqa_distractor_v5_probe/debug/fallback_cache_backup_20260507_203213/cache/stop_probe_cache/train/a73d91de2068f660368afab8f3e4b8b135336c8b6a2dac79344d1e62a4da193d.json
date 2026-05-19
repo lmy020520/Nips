@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1,493,350",
+  "pred_answer": "1,493,350",
+  "normalized_gold": "1493350",
+  "normalized_pred": "1493350",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a20b15542996c55b2dd1d",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a20b15542996c55b2dd1d::Montauk Point Light::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a20b15542996c55b2dd1d::Suffolk County, New York::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a20b15542996c55b2dd1d::Stockton Springs, Maine::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a20b15542996c55b2dd1d::Montauk Point Light",
+        "5a7a20b15542996c55b2dd1d::Suffolk County, New York"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a20b15542996c55b2dd1d::Montauk Point Light::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a20b15542996c55b2dd1d::Suffolk County, New York::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a20b15542996c55b2dd1d::Stockton Springs, Maine::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a20b15542996c55b2dd1d::Stockton Springs, Maine::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The population was 1,591 at the 2010 census.\n[2] As of the 2010 census, the county's population was 1,493,350, estimated to have decreased to 1,492,583 in 2016, making it the fourth-most populous county in New York.\n[3] The Montauk Point Light is a lighthouse located adjacent to Montauk Point State Park, at the easternmost point of Long Island, in the hamlet of Montauk in the Town of East Hampton in Suffolk County, New York."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

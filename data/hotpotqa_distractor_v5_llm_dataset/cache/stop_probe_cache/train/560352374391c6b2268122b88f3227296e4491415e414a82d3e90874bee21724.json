@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Wasdale",
+  "pred_answer": "Wasdale",
+  "normalized_gold": "wasdale",
+  "normalized_pred": "wasdale",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7f24b5542994a481bbe4c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7f24b5542994a481bbe4c::Margaret Hogg::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7f24b5542994a481bbe4c::Ernest Greenfield::7"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7f24b5542994a481bbe4c::Wast Water::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae7f24b5542994a481bbe4c::Glen Lake::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7f24b5542994a481bbe4c::Margaret Hogg",
+        "5ae7f24b5542994a481bbe4c::Wast Water"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7f24b5542994a481bbe4c::Margaret Hogg::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7f24b5542994a481bbe4c::Ernest Greenfield::7",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7f24b5542994a481bbe4c::Wast Water::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae7f24b5542994a481bbe4c::Glen Lake::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7f24b5542994a481bbe4c::Glen Lake::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Glen Lake is a lake located in Leelanau County in the U.S. state of Michigan, near Lake Michigan.\n[2] Wast Water or Wastwater ( ) is a lake located in Wasdale, a valley in the western part of the Lake District National Park, England.\n[3] In a letter to Cook, preserved at the museum, Hogg stated that Greenfield 'had the right ideas, but was discouraged 'after having lost his finds and site notes off the back of his motorbike!'\n[4] Margaret Hogg (c. 1939 – October 1976) was a manslaughter victim whose body was preserved in Wast Water, Lake District National Park, Cumbria, for eight years."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

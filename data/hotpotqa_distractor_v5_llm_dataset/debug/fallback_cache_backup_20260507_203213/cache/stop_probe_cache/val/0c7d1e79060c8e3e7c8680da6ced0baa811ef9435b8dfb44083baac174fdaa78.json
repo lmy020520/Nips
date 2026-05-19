@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bill Watts",
+  "pred_answer": "Bill Watts",
+  "normalized_gold": "bill watts",
+  "normalized_pred": "bill watts",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab922ce554299753720f729",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab922ce554299753720f729::Jerry Stubbs::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab922ce554299753720f729::Bill Watts::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab922ce554299753720f729::Big Boss Man (wrestler)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab922ce554299753720f729::Jerry Stubbs",
+        "5ab922ce554299753720f729::Bill Watts"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab922ce554299753720f729::Jerry Stubbs::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab922ce554299753720f729::Bill Watts::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab922ce554299753720f729::Big Boss Man (wrestler)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab922ce554299753720f729::Big Boss Man (wrestler)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Ray Washington Traylor Jr. (May 2, 1963 – September 22, 2004) was an American professional wrestler who was best known for his appearances with the World Wrestling Federation (WWF) under the ring name (The) Big Boss Man (sometimes spelled Bossman), as well as for his appearances with World Championship Wrestling (WCW) as The Boss, The Man, The Guardian Angel, and Big Bubba Rogers.\n[2] William F. Watts Jr. (born May 5, 1939) is an American former professional wrestler, promoter, and WWE Hall of Fame Inductee (2009).\n[3] Stubbs wrestled as Mr. Olympia in Bill Watts's Mid-South wrestling area (Louisiana, Mississippi, Texas) and as the villainous Jerry \"Mr. Perfect\" Stubbs in Southeast/Continental wrestling promotions."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

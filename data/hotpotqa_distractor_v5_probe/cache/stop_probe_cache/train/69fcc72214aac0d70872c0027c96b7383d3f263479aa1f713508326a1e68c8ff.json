@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Roger Williamson",
+  "pred_answer": "Roger Williamson",
+  "normalized_gold": "roger williamson",
+  "normalized_pred": "roger williamson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77854e5542995d8318118d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77854e5542995d8318118d::The Lost Generation (book)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77854e5542995d8318118d::1973 Dutch Grand Prix::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77854e5542995d8318118d::Roger Williamson::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77854e5542995d8318118d::1980 Dutch Grand Prix::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77854e5542995d8318118d::The Lost Generation (book)",
+        "5a77854e5542995d8318118d::Roger Williamson"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77854e5542995d8318118d::The Lost Generation (book)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77854e5542995d8318118d::1973 Dutch Grand Prix::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77854e5542995d8318118d::Roger Williamson::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77854e5542995d8318118d::1980 Dutch Grand Prix::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77854e5542995d8318118d::1980 Dutch Grand Prix::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 1980 Dutch Grand Prix was a Formula One motor race held on 31 August 1980 at the Circuit Zandvoort in the Netherlands.\n[2] Roger Williamson (2 February 1948 – 29 July 1973) was a British racing driver who died during the 1973 Dutch Grand Prix at Zandvoort Circuit in the Netherlands.\n[3] The 1973 Dutch Grand Prix was a Formula One motor race held at Zandvoort on July 29, 1973.\n[4] The Lost Generation: The Brilliant but Tragic Lives of Rising British F1 Stars Roger Williamson, Tony Brise and Tom Pryce (ISBN  ) is a book written by David Tremayne."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

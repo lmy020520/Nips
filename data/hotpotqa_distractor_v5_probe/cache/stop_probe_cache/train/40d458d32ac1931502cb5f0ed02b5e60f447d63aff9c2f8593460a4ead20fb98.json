@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jim Steinman",
+  "pred_answer": "Jim Steinman",
+  "normalized_gold": "jim steinman",
+  "normalized_pred": "jim steinman",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9921e5542996be2020559",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9921e5542996be2020559::Bat Out of Hell II: Picture Show::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9921e5542996be2020559::Drinking Dizzy Bat::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9921e5542996be2020559::Bat Out of Hell II: Back into Hell::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab9921e5542996be2020559::Jim Steinman::3"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab9921e5542996be2020559::Slide whistle::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9921e5542996be2020559::Bat Out of Hell II: Picture Show",
+        "5ab9921e5542996be2020559::Jim Steinman"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9921e5542996be2020559::Bat Out of Hell II: Picture Show::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9921e5542996be2020559::Drinking Dizzy Bat::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9921e5542996be2020559::Bat Out of Hell II: Back into Hell::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab9921e5542996be2020559::Jim Steinman::3",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab9921e5542996be2020559::Slide whistle::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9921e5542996be2020559::Slide whistle::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] A slide whistle (variously known as a swanee or swannee whistle, lotos flute piston flute, or jazz flute) is a wind instrument consisting of a fipple like a recorder's and a tube with a piston in it.\n[2] Beginning his career in musical theater, Steinman's most notable work in the area includes lyrics for \"Whistle Down the Wind\" and music for \"Tanz der Vampire\".\n[3] Bat Out of Hell II: Back into Hell is the sixth studio album by American rock singer Meat Loaf and was written and produced by Jim Steinman.\n[4] Drinking Dizzy Bat is a drinking game in which the participant chugs a full beer out of the holding end of a wiffle ball bat."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

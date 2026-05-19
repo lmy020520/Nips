@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "March Air Reserve Base",
+  "pred_answer": "March Air Reserve Base",
+  "normalized_gold": "march air reserve base",
+  "normalized_pred": "march air reserve base",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae61e115542996de7b71b68",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae61e115542996de7b71b68::March Air Reserve Base::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae61e115542996de7b71b68::Riverside, California::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae61e115542996de7b71b68::452d Air Mobility Wing::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae61e115542996de7b71b68::Hemet Maze Stone::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae61e115542996de7b71b68::March Air Reserve Base",
+        "5ae61e115542996de7b71b68::452d Air Mobility Wing"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae61e115542996de7b71b68::March Air Reserve Base::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae61e115542996de7b71b68::Riverside, California::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae61e115542996de7b71b68::452d Air Mobility Wing::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae61e115542996de7b71b68::Hemet Maze Stone::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae61e115542996de7b71b68::Hemet Maze Stone::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is just outside Hemet in Reinhardt Canyon, within the Lakeview Mountains, in Riverside County, California.\n[2] It is assigned to the Fourth Air Force, Air Force Reserve Command, stationed at March Air Reserve Base, California.\n[3] Riverside is a city in Riverside County, California, United States, located in the Inland Empire metropolitan area.\n[4] March Air Reserve Base (IATA: RIV, ICAO: KRIV, FAA LID: RIV) (March ARB), previously known as March Air Force Base (March AFB) is located in Riverside County, California between the cities of Riverside and Moreno Valley."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

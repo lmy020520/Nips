@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "six Tony Awards",
+  "pred_answer": "six Tony Awards",
+  "normalized_gold": "six tony awards",
+  "normalized_pred": "six tony awards",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae695bb5542991bbc976144",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae695bb5542991bbc976144::Audra McDonald::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae695bb5542991bbc976144::Frank Harts::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae695bb5542991bbc976144::Audra McDonald::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae695bb5542991bbc976144::Master Class::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae695bb5542991bbc976144::Wim Goes Architectuur::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae695bb5542991bbc976144::Audra McDonald",
+        "5ae695bb5542991bbc976144::Master Class"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae695bb5542991bbc976144::Audra McDonald::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae695bb5542991bbc976144::Frank Harts::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae695bb5542991bbc976144::Audra McDonald::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae695bb5542991bbc976144::Master Class::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae695bb5542991bbc976144::Wim Goes Architectuur::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae695bb5542991bbc976144::Wim Goes Architectuur::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He received his master's degree from Sint-Lucas School of Science & Arts in 1993 and attended the 2006 Glenn Murcutt International Master Class in Australia and the 2008 Master Class in New Zealand with Ian Athfield.\n[2] The play opened on Broadway in 1995, with stars Zoe Caldwell and Audra McDonald winning Tony Awards.\n[3] She has won six Tony Awards, more performance wins than any other actor, and is the only person to win all four acting categories.\n[4] He played George Murchison in the 2004 Tony Award-winning Broadway revival of \"A Raisin In The Sun\" opposite Sean Combs, Audra McDonald, Phylicia Rashad, and Sanaa Lathan."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

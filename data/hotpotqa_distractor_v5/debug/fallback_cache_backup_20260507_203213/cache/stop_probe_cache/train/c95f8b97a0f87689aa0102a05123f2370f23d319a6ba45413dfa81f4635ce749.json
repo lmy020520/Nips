@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "June 1, 2005",
+  "pred_answer": "June 1, 2005",
+  "normalized_gold": "june 1 2005",
+  "normalized_pred": "june 1 2005",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2f5dc554299677310265b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2f5dc554299677310265b::Dancing with the Stars (U.S. TV series)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2f5dc554299677310265b::Mira Quien Baila (U.S. season 2)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2f5dc554299677310265b::Mira Quien Baila (U.S. season 4)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2f5dc554299677310265b::Mira Quien Baila (U.S. season 1)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2f5dc554299677310265b::Dancing with the Stars (U.S. TV series)",
+        "5ac2f5dc554299677310265b::Mira Quien Baila (U.S. season 4)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2f5dc554299677310265b::Dancing with the Stars (U.S. TV series)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2f5dc554299677310265b::Mira Quien Baila (U.S. season 2)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2f5dc554299677310265b::Mira Quien Baila (U.S. season 4)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2f5dc554299677310265b::Mira Quien Baila (U.S. season 1)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2f5dc554299677310265b::Mira Quien Baila (U.S. season 1)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The TV series is the Spanish version of British version Strictly Come Dancing and American Version Dancing with the Stars (U.S. TV series).\n[2] The TV series is the Spanish version of British version \"Strictly Come Dancing\" and American version \"Dancing with the Stars\".\n[3] Mira Quien Baila (also known as Mira Quien Baila 2011 and Mira Quien Baila 2) debuted on Univision on September 11, 2011 at 8pm central.\n[4] Dancing with the Stars is an American dance competition television series that premiered on June 1, 2005, on ABC."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

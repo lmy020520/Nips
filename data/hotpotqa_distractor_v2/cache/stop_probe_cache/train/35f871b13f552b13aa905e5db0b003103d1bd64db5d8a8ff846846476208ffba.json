@@ -1,0 +1,85 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "24",
+  "pred_answer": "24 hours",
+  "normalized_gold": "24",
+  "normalized_pred": "24 hours",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "The evidence confirms that Hurricane Patricia (2015) grew from tropical storm to Category 5 in 24 hours, and that Typhoon Nora's pressure record was surpassed by one hurricane (which is Patricia).",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "The evidence confirms that Hurricane Patricia (2015) grew from tropical storm to Category 5 in 24 hours, and that Typhoon Nora's pressure record was surpassed by one hurricane (which is Patricia).",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a82a36a55429954d2e2eb8d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a82a36a55429954d2e2eb8d::Hurricane Patricia::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a82a36a55429954d2e2eb8d::Typhoon Nora (1973)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a82a36a55429954d2e2eb8d::Hurricane Patricia::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a82a36a55429954d2e2eb8d::Typhoon Nora (1973)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a82a36a55429954d2e2eb8d::Hurricane Patricia::5",
+        "5a82a36a55429954d2e2eb8d::Hurricane Patricia",
+        "5a82a36a55429954d2e2eb8d::Typhoon Nora (1973)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a82a36a55429954d2e2eb8d::Hurricane Patricia::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a82a36a55429954d2e2eb8d::Typhoon Nora (1973)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a82a36a55429954d2e2eb8d::Hurricane Patricia::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a82a36a55429954d2e2eb8d::Typhoon Nora (1973)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a82a36a55429954d2e2eb8d::Typhoon Nora (1973)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Originating from an area of low pressure over the western Pacific, Nora was first identified as a tropical depression on October 2, 1973.\n[2] Originating from a sprawling disturbance near the Gulf of Tehuantepec, south of Mexico, in mid-October 2015, Patricia was first classified a tropical depression\n[3] After turning northwestward, the typhoon underwent a period of rapid intensification, during which its central pressure decreased by 77 mb (hPa; 2.27 inHg) in 2\n[4] A well-defined eye developed within an intense central dense overcast and Patricia grew from a tropical storm to a Category 5 hurricane in just 24 hours—a near-"
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

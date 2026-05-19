@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "over a period of three years",
+  "pred_answer": "over a period of three years",
+  "normalized_gold": "over a period of three years",
+  "normalized_pred": "over a period of three years",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a90477d5542995651fb5102",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a90477d5542995651fb5102::Kashmir (song)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a90477d5542995651fb5102::Ass (album)::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a90477d5542995651fb5102::Physical Graffiti::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a90477d5542995651fb5102::In the Light::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a90477d5542995651fb5102::Kashmir (song)",
+        "5a90477d5542995651fb5102::Physical Graffiti"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a90477d5542995651fb5102::Kashmir (song)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a90477d5542995651fb5102::Ass (album)::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a90477d5542995651fb5102::Physical Graffiti::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a90477d5542995651fb5102::In the Light::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a90477d5542995651fb5102::In the Light::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"In the Light\" is a song by English rock band Led Zeppelin from their 1975 album \"Physical Graffiti\".\n[2] Physical Graffiti is the sixth studio album by the English rock band Led Zeppelin, released as a double album on 24 February 1975 by their newly founded imprint label Swan Song Records.\n[3] The cover was painted by Grammy Award-winning artist Peter Corriston, who would later create album covers for Led Zeppelin (\"Physical Graffiti\") and the Rolling Stones (\"Some Girls\", \"Tattoo You\").\n[4] Included on their sixth album \"Physical Graffiti\" (1975), it was written by Jimmy Page and Robert Plant (with contributions from John Bonham) over a period of three years with lyrics dating to 1973."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

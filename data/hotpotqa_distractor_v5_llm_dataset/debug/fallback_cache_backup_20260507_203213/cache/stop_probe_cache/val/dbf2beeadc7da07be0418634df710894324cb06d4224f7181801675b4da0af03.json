@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Essex County",
+  "pred_answer": "Essex County",
+  "normalized_gold": "essex county",
+  "normalized_pred": "essex county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adcaee35542990d50227cef",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adcaee35542990d50227cef::2013–14 Seton Hall Pirates men's basketball team::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adcaee35542990d50227cef::2016–17 Seton Hall Pirates men's basketball team::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adcaee35542990d50227cef::Newark, New Jersey::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adcaee35542990d50227cef::Prudential Center::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adcaee35542990d50227cef::2013–14 Seton Hall Pirates men's basketball team",
+        "5adcaee35542990d50227cef::Newark, New Jersey"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adcaee35542990d50227cef::2013–14 Seton Hall Pirates men's basketball team::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adcaee35542990d50227cef::2016–17 Seton Hall Pirates men's basketball team::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adcaee35542990d50227cef::Newark, New Jersey::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adcaee35542990d50227cef::Prudential Center::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adcaee35542990d50227cef::Prudential Center::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Opened in 2007, it is the home of the New Jersey Devils of the National Hockey League (NHL) and the Seton Hall Pirates men's basketball team from Seton Hall University.\n[2] Newark ( or also locally ) is the most populous city in the U.S. state of New Jersey and the seat of Essex County.\n[3] The 2016–17 Seton Hall Pirates men's basketball team represented Seton Hall University in the 2016–17 NCAA Division I men's basketball season.\n[4] The 2013–14 Seton Hall Pirates men's basketball team represented Seton Hall University during the 2013–14 NCAA Division I men's basketball season."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

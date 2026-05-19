@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Netherlands",
+  "pred_answer": "Netherlands",
+  "normalized_gold": "netherlands",
+  "normalized_pred": "netherlands",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab400a355429976abd1bd24",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab400a355429976abd1bd24::Carice van Houten::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab400a355429976abd1bd24::Race (2016 film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab400a355429976abd1bd24::Carice van Houten::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab400a355429976abd1bd24::Carice van Houten",
+        "5ab400a355429976abd1bd24::Race (2016 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab400a355429976abd1bd24::Carice van Houten::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab400a355429976abd1bd24::Race (2016 film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab400a355429976abd1bd24::Carice van Houten::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab400a355429976abd1bd24::Carice van Houten::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Born in Leiderdorp, a town in the western Netherlands, she was brought up by writer and theatre-radio producer Theodore van Houten.\n[2] Race is a 2016 biographical sports drama film about African American athlete Jesse Owens, who won a record-breaking four gold medals at the 1936 Berlin Olympic Games.\n[3] Carice Anouk van Houten (] ; born 5 September 1976) is a Dutch actress and singer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

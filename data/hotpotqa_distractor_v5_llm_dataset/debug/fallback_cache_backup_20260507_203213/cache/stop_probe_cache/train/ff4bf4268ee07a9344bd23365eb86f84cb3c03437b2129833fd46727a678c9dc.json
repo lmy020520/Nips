@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mark Rosman",
+  "pred_answer": "Mark Rosman",
+  "normalized_gold": "mark rosman",
+  "normalized_pred": "mark rosman",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a78aef1554299148911f921",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a78aef1554299148911f921::S. Shankar::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a78aef1554299148911f921::The Blue Yonder::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a78aef1554299148911f921::Mark Rosman::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a78aef1554299148911f921::Life-Size::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a78aef1554299148911f921::S. Shankar",
+        "5a78aef1554299148911f921::Mark Rosman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a78aef1554299148911f921::S. Shankar::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a78aef1554299148911f921::The Blue Yonder::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a78aef1554299148911f921::Mark Rosman::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a78aef1554299148911f921::Life-Size::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a78aef1554299148911f921::Life-Size::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Life-Size is a 2000 American fantasy-comedy television film directed by Mark Rosman and starring Lindsay Lohan and Tyra Banks.\n[2] Mark Rosman (born 1959) is an American film director, film producer, television director and screenwriter.\n[3] It was directed by Mark Rosman, written by Mark Rosman, produced by Alan Shapiro and Annette Handley, and starred Peter Coyote, Huckleberry Fox, Art Carney, Dennis Lipscomb and Joe Flood.\n[4] Shankar Shanmugam (born 17 August 1963), credited mononymously as Shankar, is an Indian film director and producer who predominantly works in Tamil cinema."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Spain",
+  "pred_answer": "Spain",
+  "normalized_gold": "spain",
+  "normalized_pred": "spain",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab5c99b554299488d4d9a22",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab5c99b554299488d4d9a22::Air Costa::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab5c99b554299488d4d9a22::Air Algérie Flight 5017::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab5c99b554299488d4d9a22::Swiftair::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab5c99b554299488d4d9a22::Air Algérie Flight 2208::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab5c99b554299488d4d9a22::Air Algérie Flight 5017",
+        "5ab5c99b554299488d4d9a22::Swiftair"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab5c99b554299488d4d9a22::Air Costa::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab5c99b554299488d4d9a22::Air Algérie Flight 5017::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab5c99b554299488d4d9a22::Swiftair::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab5c99b554299488d4d9a22::Air Algérie Flight 2208::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab5c99b554299488d4d9a22::Air Algérie Flight 2208::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Air Algérie Flight 2208 was a cargo flight between Algiers-Houari Boumediene Airport, Algiers, Algeria, and Frankfurt Airport, Germany.\n[2] Swiftair S.A. is an airline headquartered in Madrid, Spain.\n[3] Air Algérie Flight 5017 (AH5017/DAH5017) was a scheduled international passenger flight from Ouagadougou, Burkina Faso, to Algiers, Algeria, which crashed in Mali, near Gossi, on 24 July 2014.\n[4] Air Costa was an Indian regional airline headquartered in Vijayawada and based out of Chennai Airport."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

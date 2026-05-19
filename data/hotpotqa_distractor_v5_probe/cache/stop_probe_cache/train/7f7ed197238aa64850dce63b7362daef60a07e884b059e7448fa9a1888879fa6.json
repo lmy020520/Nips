@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "costumes.",
+  "pred_answer": "costumes.",
+  "normalized_gold": "costumes",
+  "normalized_pred": "costumes",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2b4ab5542994d89d5b437",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2b4ab5542994d89d5b437::Peninsula Players::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2b4ab5542994d89d5b437::Summer stock theatre::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2b4ab5542994d89d5b437::Summer stock theatre::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2b4ab5542994d89d5b437::Peninsula Players",
+        "5ae2b4ab5542994d89d5b437::Summer stock theatre"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2b4ab5542994d89d5b437::Peninsula Players::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2b4ab5542994d89d5b437::Summer stock theatre::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2b4ab5542994d89d5b437::Summer stock theatre::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2b4ab5542994d89d5b437::Summer stock theatre::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The name combines the season with the tradition of staging shows by a resident company, reusing stock scenery and costumes. Summer stock theatres frequently take advantage of seasonal weather by having their productions outdoors or under tents set up temporarily for their use.\n[2] Summer stock theatre is any theatre that presents stage productions only in the summer.\n[3] Peninsula Players is a summer theater program located in Fish Creek, Wisconsin."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

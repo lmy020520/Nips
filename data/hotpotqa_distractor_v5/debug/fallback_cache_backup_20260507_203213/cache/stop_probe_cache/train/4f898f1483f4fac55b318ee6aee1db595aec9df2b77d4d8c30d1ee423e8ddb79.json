@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "11 August 1983",
+  "pred_answer": "11 August 1983",
+  "normalized_gold": "11 august 1983",
+  "normalized_pred": "11 august 1983",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7b97b5542993210983f0c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7b97b5542993210983f0c::Chris Hemsworth::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7b97b5542993210983f0c::Rachel Armstrong::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7b97b5542993210983f0c::Chris Hemsworth::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae7b97b5542993210983f0c::Kim Hyde::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae7b97b5542993210983f0c::Maddy Osborne::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7b97b5542993210983f0c::Chris Hemsworth",
+        "5ae7b97b5542993210983f0c::Kim Hyde"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7b97b5542993210983f0c::Chris Hemsworth::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7b97b5542993210983f0c::Rachel Armstrong::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7b97b5542993210983f0c::Chris Hemsworth::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae7b97b5542993210983f0c::Kim Hyde::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae7b97b5542993210983f0c::Maddy Osborne::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7b97b5542993210983f0c::Maddy Osborne::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Madeleine \"Maddy\" Osborne is a fictional character from the Australian Channel Seven soap opera \"Home and Away\", played by Kassandra Clementi.\n[2] Kimberly Jonathan \"Kim\" Hyde was a fictional character from the Australian soap opera \"Home and Away\", played by Chris Hemsworth.\n[3] Chris Hemsworth (born 11 August 1983) is an Australian actor.\n[4] Rachel Marie Holden (also Armstrong and Hyde) is a fictional character from the Australian Channel Seven soap opera \"Home and Away\", played by Amy Mathews."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

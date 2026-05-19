@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Doctor",
+  "pred_answer": "Doctor",
+  "normalized_gold": "doctor",
+  "normalized_pred": "doctor",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a75321555429916b0164290",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a75321555429916b0164290::Alan Kamil::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a75321555429916b0164290::David M. Sever::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a75321555429916b0164290::Daniel Mills (biologist)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a75321555429916b0164290::Doctor of Philosophy::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a75321555429916b0164290::Doctor of Philosophy::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a75321555429916b0164290::Daniel Mills (biologist)",
+        "5a75321555429916b0164290::Doctor of Philosophy"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a75321555429916b0164290::Alan Kamil::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a75321555429916b0164290::David M. Sever::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a75321555429916b0164290::Daniel Mills (biologist)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a75321555429916b0164290::Doctor of Philosophy::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a75321555429916b0164290::Doctor of Philosophy::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a75321555429916b0164290::Doctor of Philosophy::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Individuals who have earned a Doctor of Philosophy degree may, in most jurisdictions, use the title of \"Doctor\" (often abbreviated \"Dr\") or, in non-English speaking countries, variants such as \"Dr. phil.\"\n[2] The completion of a Ph.D. is often a requirement for employment as a university professor, researcher, or scientist in many fields.\n[3] After some time spent in general practice, he became a Lecturer, Senior Lecturer and Principal Lecturer in animal behaviour at De Montfort University, and subsequently the University of Lincoln, where he has been Head of the Department of Biological Sciences.\n[4] He has been a professor and department head in the Department of Biological Sciences at Southeastern Louisiana University since 2004, and held the Kenneth Dyson Endowed Professorship in Biological Sciences from 2012 to 2015."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

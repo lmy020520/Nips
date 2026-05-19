@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1987",
+  "pred_answer": "1987",
+  "normalized_gold": "1987",
+  "normalized_pred": "1987",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6505b55429953192ad2bf",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6505b55429953192ad2bf::A Cry in the Wild::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6505b55429953192ad2bf::Cry of Battle::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6505b55429953192ad2bf::Hatchet (novel)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6505b55429953192ad2bf::Between Friends (1983 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6505b55429953192ad2bf::A Cry in the Wild",
+        "5ab6505b55429953192ad2bf::Hatchet (novel)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6505b55429953192ad2bf::A Cry in the Wild::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6505b55429953192ad2bf::Cry of Battle::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6505b55429953192ad2bf::Hatchet (novel)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6505b55429953192ad2bf::Between Friends (1983 film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6505b55429953192ad2bf::Between Friends (1983 film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Between Friends (Canadian title: Nobody Makes Me Cry) is a 1983 American-Canadian HBO made-for-television drama film starring Elizabeth Taylor and Carol Burnett, based on the 1975 novel \"Nobody Makes Me Cry\" by Shelley List.\n[2] Hatchet is a 1987 Newbery Honor-winning young-adult wilderness survival novel written by American writer Gary Paulsen.\n[3] Cry of Battle is a 1963 American coming of age war film based on the 1951 novel \"Fortress in the Rice\" by Benjamin Appel who was a journalist and special assistant to the U.S. Commissioner for the Philippines from 1945-46.\n[4] A Cry in the Wild is a 1990 coming of age-survival drama film based on the book \"Hatchet\", written by Gary Paulsen."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

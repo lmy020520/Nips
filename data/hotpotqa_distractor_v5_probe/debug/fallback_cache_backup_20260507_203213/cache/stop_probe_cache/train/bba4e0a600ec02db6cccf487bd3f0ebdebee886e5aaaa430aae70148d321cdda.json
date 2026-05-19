@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lietkabelis Panevėžys",
+  "pred_answer": "Lietkabelis Panevėžys",
+  "normalized_gold": "lietkabelis panevėžys",
+  "normalized_pred": "lietkabelis panevėžys",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a88c4005542993b751ca847",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a88c4005542993b751ca847::Darjuš Lavrinovič::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a88c4005542993b751ca847::Kšyštof Lavrinovič::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a88c4005542993b751ca847::Two (TV series)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a88c4005542993b751ca847::Darjuš Lavrinovič",
+        "5a88c4005542993b751ca847::Kšyštof Lavrinovič"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a88c4005542993b751ca847::Darjuš Lavrinovič::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a88c4005542993b751ca847::Kšyštof Lavrinovič::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a88c4005542993b751ca847::Two (TV series)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a88c4005542993b751ca847::Two (TV series)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It featured Michael Easton as Gus McClain, a college professor from Seattle who is framed for the murder of his wife by his twin brother Booth Hubbard (Easton in a dual role).\n[2] Kšyštof Lavrinovič (Polish: \"Krzysztof Ławrynowicz\" , born November 1, 1979) is a Lithuanian professional basketball player playing for Lietkabelis Panevėžys of the Lithuanian Basketball League.\n[3] His twin brother Kšyštof is also a professional basketball player."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Rakesh Roshan",
+  "pred_answer": "Rakesh Roshan",
+  "normalized_gold": "rakesh roshan",
+  "normalized_pred": "rakesh roshan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5addea585542995b365fab85",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5addea585542995b365fab85::Ameesha Patel::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5addea585542995b365fab85::Race 2::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5addea585542995b365fab85::Kaho Naa... Pyaar Hai::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5addea585542995b365fab85::Aakatayi::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5addea585542995b365fab85::Ameesha Patel",
+        "5addea585542995b365fab85::Kaho Naa... Pyaar Hai"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5addea585542995b365fab85::Ameesha Patel::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5addea585542995b365fab85::Race 2::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5addea585542995b365fab85::Kaho Naa... Pyaar Hai::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5addea585542995b365fab85::Aakatayi::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5addea585542995b365fab85::Aakatayi::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Aakatayi is a 2017 Indian Telugu-language action film directed by Rom Bhimana.\n[2] Kaho Naa... Pyaar Hai (Translation: \"Say... You're in love\") is a 2000 Indian romantic film, written and directed by Rakesh Roshan.\n[3] Ameesha Patel replaced Sameera Reddy who was assistant to Anil Kapoor in 1st installment.\n[4] Making her acting debut in the 2000 romantic thriller film, \"Kaho Naa... Pyaar Hai\", Patel won critical praise for her performance in \"\" (2001), which became one of the biggest hits in the history of Hindi cinema, earning her a Filmfare Special Performance Award."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

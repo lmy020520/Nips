@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "1974 FIFA World Cup Final",
+  "pred_answer": "1974 FIFA World Cup Final",
+  "normalized_gold": "1974 fifa world cup final",
+  "normalized_pred": "1974 fifa world cup final",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a763008554299109176e6ac",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a763008554299109176e6ac::Bernd Hölzenbein::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a763008554299109176e6ac::Bernd Schulz::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a763008554299109176e6ac::1974 FIFA World Cup Final::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a763008554299109176e6ac::Bernd Hölzenbein::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a763008554299109176e6ac::Bernd Hölzenbein",
+        "5a763008554299109176e6ac::1974 FIFA World Cup Final"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a763008554299109176e6ac::Bernd Hölzenbein::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a763008554299109176e6ac::Bernd Schulz::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a763008554299109176e6ac::1974 FIFA World Cup Final::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a763008554299109176e6ac::Bernd Hölzenbein::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a763008554299109176e6ac::Bernd Hölzenbein::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] At international level, he was a member of the West German team that won the World Cup in 1974.\n[2] The 1974 FIFA World Cup Final was the final match of the 1974 FIFA World Cup, the 10th FIFA World Cup, a competition to determine the world champion among national men's football sides.\n[3] Bernd Schulz (born February 12, 1960) is a German former footballer.\n[4] He is best known for being fouled in the final against Netherlands, which led to the Germans' equalising penalty."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

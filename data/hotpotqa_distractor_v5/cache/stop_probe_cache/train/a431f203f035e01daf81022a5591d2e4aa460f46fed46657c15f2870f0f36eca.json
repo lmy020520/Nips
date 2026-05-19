@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Apatow Productions",
+  "pred_answer": "Apatow Productions",
+  "normalized_gold": "apatow productions",
+  "normalized_pred": "apatow productions",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab950f5554299753720f7f2",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab950f5554299753720f7f2::Shauna Robertson::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab950f5554299753720f7f2::Crowdrise::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab950f5554299753720f7f2::Superbad (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab950f5554299753720f7f2::Shauna Robertson",
+        "5ab950f5554299753720f7f2::Crowdrise"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab950f5554299753720f7f2::Shauna Robertson::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab950f5554299753720f7f2::Crowdrise::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab950f5554299753720f7f2::Superbad (film)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab950f5554299753720f7f2::Superbad (film)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Superbad is a 2007 American teen comedy film directed by Greg Mottola and produced by Judd Apatow.\n[2] CrowdRise was founded by Edward Norton, Shauna Robertson, and the founders of Moosejaw, Robert and Jeffrey Wolfe.\n[3] She has worked frequently with Judd Apatow, and has produced a number of films for Apatow Productions, including \"\", \"The 40-Year-Old Virgin\", \"Knocked Up\", \"Superbad\", \"Forgetting Sarah Marshall\" and \"Pineapple Express\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

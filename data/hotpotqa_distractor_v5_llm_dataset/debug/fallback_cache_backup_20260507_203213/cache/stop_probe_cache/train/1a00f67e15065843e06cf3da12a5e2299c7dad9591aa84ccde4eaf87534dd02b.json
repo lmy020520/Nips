@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"A Long Way Home\"",
+  "pred_answer": "\"A Long Way Home\"",
+  "normalized_gold": "a long way home",
+  "normalized_pred": "a long way home",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab90c2655429916710eb0ed",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab90c2655429916710eb0ed::Never Give Up (Sia song)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab90c2655429916710eb0ed::Lion (2016 film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab90c2655429916710eb0ed::Wake Up 2::8"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab90c2655429916710eb0ed::Never Give Up (Sia song)",
+        "5ab90c2655429916710eb0ed::Lion (2016 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab90c2655429916710eb0ed::Never Give Up (Sia song)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab90c2655429916710eb0ed::Lion (2016 film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab90c2655429916710eb0ed::Wake Up 2::8",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab90c2655429916710eb0ed::Wake Up 2::8",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] This series' tag-line is Never Give Up, not only as a line of encouragement, but also a question about when they should or have to give up (eg.\n[2] Lion is a 2016 biographical film directed by Garth Davis (in his feature debut) and written by Luke Davies, based on the non-fiction book \"A Long Way Home\" by Saroo Brierley with Larry Buttrose.\n[3] \"Never Give Up\" is a song recorded by Sia, from the soundtrack of the Garth Davis-directed film, \"Lion\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

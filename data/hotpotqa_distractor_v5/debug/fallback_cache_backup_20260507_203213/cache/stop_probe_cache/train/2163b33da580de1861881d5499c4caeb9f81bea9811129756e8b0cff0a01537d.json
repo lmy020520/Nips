@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "American",
+  "pred_answer": "American",
+  "normalized_gold": "american",
+  "normalized_pred": "american",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2caef554299545a2cfa80",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2caef554299545a2cfa80::Cosmolabe::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2caef554299545a2cfa80::The Heavenly Bodies (1960s tag team)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2caef554299545a2cfa80::The Heavenly Bodies (1990s tag team)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab2caef554299545a2cfa80::Jim Cornette::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab2caef554299545a2cfa80::Triquetrum (astronomy)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2caef554299545a2cfa80::The Heavenly Bodies (1990s tag team)",
+        "5ab2caef554299545a2cfa80::Jim Cornette"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2caef554299545a2cfa80::Cosmolabe::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2caef554299545a2cfa80::The Heavenly Bodies (1960s tag team)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2caef554299545a2cfa80::The Heavenly Bodies (1990s tag team)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab2caef554299545a2cfa80::Jim Cornette::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab2caef554299545a2cfa80::Triquetrum (astronomy)::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2caef554299545a2cfa80::Triquetrum (astronomy)::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Also known as \"Parallactic Rulers\", it was used for determining altitudes of heavenly bodies.\n[2] James Mark Cornette (born September 17, 1961) is an American professional wrestling manager, commentator, promoter, booker and podcaster.\n[3] The Heavenly Bodies was a professional wrestling tag team famous for having worked in Smoky Mountain Wrestling, the World Wrestling Federation, and various independent promotions.\n[4] The Heavenly Bodies was a professional wrestling tag team that wrestled in the Tennessee area."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

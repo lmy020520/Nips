@@ -1,0 +1,100 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Paul Abraham Dukas",
+  "pred_answer": "Paul Abraham Dukas",
+  "normalized_gold": "paul abraham dukas",
+  "normalized_pred": "paul abraham dukas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a80b418554299485f5986ce",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a80b418554299485f5986ce::Nõiduse õpilane::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a80b418554299485f5986ce::Symphony in C (Bizet)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a80b418554299485f5986ce::Paul Dukas::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a80b418554299485f5986ce::Paul Dukas::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a80b418554299485f5986ce::Georges Favre::1"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5a80b418554299485f5986ce::Symphony in C (Bizet)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a80b418554299485f5986ce::Paul Dukas",
+        "5a80b418554299485f5986ce::Georges Favre"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a80b418554299485f5986ce::Nõiduse õpilane::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a80b418554299485f5986ce::Symphony in C (Bizet)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a80b418554299485f5986ce::Paul Dukas::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a80b418554299485f5986ce::Paul Dukas::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a80b418554299485f5986ce::Georges Favre::1",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5a80b418554299485f5986ce::Symphony in C (Bizet)::3",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a80b418554299485f5986ce::Symphony in C (Bizet)::3",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] It was written while he was studying at the Paris Conservatoire under the composer Charles Gounod, and was evidently a student assignment.\n[2] He was a student of Paul Dukas for composition and Vincent d'Indy for conduction.\n[3] Paul Abraham Dukas (] ; 1 October 1865 – 17 May 1935) was a French composer, critic, scholar and teacher.\n[4] His best known work is the orchestral piece \"The Sorcerer's Apprentice\" (\"L'apprenti sorcier\"), the fame of which has eclipsed that of his other surviving works."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

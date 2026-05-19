@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "summer of 1971",
+  "pred_answer": "summer of 1971",
+  "normalized_gold": "summer of 1971",
+  "normalized_pred": "summer of 1971",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc37f555429944faac2470",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc37f555429944faac2470::Attack on the Four Square Laundry::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc37f555429944faac2470::2014 Enugu State Broadcasting Service attack::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc37f555429944faac2470::Military Reaction Force::5"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc37f555429944faac2470::Military Reaction Force::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc37f555429944faac2470::Attack on the Four Square Laundry",
+        "5adc37f555429944faac2470::Military Reaction Force"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc37f555429944faac2470::Attack on the Four Square Laundry::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc37f555429944faac2470::2014 Enugu State Broadcasting Service attack::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc37f555429944faac2470::Military Reaction Force::5",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc37f555429944faac2470::Military Reaction Force::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc37f555429944faac2470::Military Reaction Force::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The unit was formed during the summer of 1971 and operated until late 1972 or early 1973.\n[2] In October 1972, the Provisional IRA uncovered and attacked two of the MRF's front companies—a mobile laundry service and a massage parlour—which contributed to the unit's dissolution.\n[3] The 2014 Enugu State Broadcasting Service Attack took place on June 5, 2014, when about 13 members of the Biafra Zionist Federation militant group attacked the Enugu State Broadcasting Service (ESBS) in an attempt to make a public announcement on radio and television declaring the sovereign state of Biafra.\n[4] The Attack on the Four Square Laundry was a Provisional IRA ambush in the Twinbrook area of Belfast against a special British Military unit known as the Military Reaction Force."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

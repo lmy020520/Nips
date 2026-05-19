@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1981",
+  "pred_answer": "1981",
+  "normalized_gold": "1981",
+  "normalized_pred": "1981",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab834a755429919ba4e2264",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab834a755429919ba4e2264::Bosquito::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab834a755429919ba4e2264::Mark Brzezicki::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab834a755429919ba4e2264::Big Country::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab834a755429919ba4e2264::Bosquito::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab834a755429919ba4e2264::Mark Brzezicki",
+        "5ab834a755429919ba4e2264::Big Country"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab834a755429919ba4e2264::Bosquito::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab834a755429919ba4e2264::Mark Brzezicki::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab834a755429919ba4e2264::Big Country::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab834a755429919ba4e2264::Bosquito::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab834a755429919ba4e2264::Bosquito::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The band is well known for infusing their songs with diverse influences, including Gypsy music, Latin, balkan, punk, and elements of symphonic music.\n[2] Big Country is a Scottish rock band formed in Dunfermline, Fife, in 1981.\n[3] Mark Michael Brzezicki (born 21 June 1957, Slough, Buckinghamshire, England) is a rock drummer, who is primarily known for his work with Big Country, and was a member of the groups The Cult, Ultravox, From The Jam and Procol Harum.\n[4] Bosquito (Pronunciation: ʙᴏsᴋɪːᴛᴏ) is a Romanian rock band formed in Brașov in the year 1999."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

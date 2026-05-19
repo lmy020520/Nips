@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Port Adelaide Football Club",
+  "pred_answer": "Port Adelaide Football Club",
+  "normalized_gold": "port adelaide football club",
+  "normalized_pred": "port adelaide football club",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3cca65542992f92d82373",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3cca65542992f92d82373::Beau Ryan::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3cca65542992f92d82373::Kane Cornes::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3cca65542992f92d82373::The Sunday Footy Show (AFL)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae3cca65542992f92d82373::Renee Gartner::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3cca65542992f92d82373::Kane Cornes",
+        "5ae3cca65542992f92d82373::The Sunday Footy Show (AFL)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3cca65542992f92d82373::Beau Ryan::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3cca65542992f92d82373::Kane Cornes::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3cca65542992f92d82373::The Sunday Footy Show (AFL)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae3cca65542992f92d82373::Renee Gartner::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3cca65542992f92d82373::Renee Gartner::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She was an on-air panelist on the TV show \"SportsFan Clubhouse\" which aired on 7mate for three seasons from 2013 until 2015.\n[2] The Sunday Footy Show is an Australian rules football program aired on the Nine Network on Sunday mornings at 11am, hosted by Tony Jones with a panel consisting of Damian Barrett, Nathan Brown, Matthew Lloyd, Kane Cornes and Billy Brownless.\n[3] Kane Graham Cornes (born 5 January 1983) is a former professional Australian rules footballer who played for the Port Adelaide Football Club in the Australian Football League (AFL).\n[4] Ryan is also well known for his comedic work on \"The Footy Show\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

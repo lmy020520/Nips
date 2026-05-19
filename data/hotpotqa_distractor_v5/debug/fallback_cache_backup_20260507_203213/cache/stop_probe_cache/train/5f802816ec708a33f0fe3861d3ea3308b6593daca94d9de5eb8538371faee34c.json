@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Liz Friedman",
+  "pred_answer": "Liz Friedman",
+  "normalized_gold": "liz friedman",
+  "normalized_pred": "liz friedman",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe05ab55429976d4830a5b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe05ab55429976d4830a5b::Liz Friedman::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe05ab55429976d4830a5b::Orange Is the New Black (season 1)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe05ab55429976d4830a5b::Orange Is the New Black::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe05ab55429976d4830a5b::Lesbian Request Denied::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe05ab55429976d4830a5b::Liz Friedman",
+        "5abe05ab55429976d4830a5b::Orange Is the New Black"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe05ab55429976d4830a5b::Liz Friedman::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe05ab55429976d4830a5b::Orange Is the New Black (season 1)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe05ab55429976d4830a5b::Orange Is the New Black::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe05ab55429976d4830a5b::Lesbian Request Denied::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe05ab55429976d4830a5b::Lesbian Request Denied::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Lesbian Request Denied\" is the third episode of the first season of American comedy-drama series \"Orange Is the New Black\" (\"OITNB\"), based on Piper Kerman's memoir, \"\" (2010), regarding her time at FCI Danbury, a minimum-security federal prison.\n[2] The series is based on Piper Kerman's memoir, \"\" (2010), about her experiences at FCI Danbury, a minimum-security federal prison.\n[3] The series is based on Piper Kerman's memoir, \"\" (2010), about her experiences at FCI Danbury, a minimum-security federal prison.\n[4] Liz Friedman is an American television producer and television writer known especially for her work on \"\", \"Young Hercules\", \"House\" and \"Jessica Jones\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

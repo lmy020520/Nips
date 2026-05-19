@@ -1,0 +1,30 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the album title containing the Rihanna song Tokio Myers performed. The raw candidate 'Diamonds (Rihanna song)' provides the album name 'Unapologetic', but it is not yet linked to Tokio Myers or Britain's Got Talent. A bridge note can connect these pieces.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Tokio Myers performed a Rihanna song on Britain's Got Talent.",
+      "source_unit_ids": [
+        "5a7c8cfc55429935c91b5215::Britain's Got Talent::1"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "The Rihanna song Tokio Myers performed is 'Diamonds'.",
+      "source_unit_ids": [
+        "5a7c8cfc55429935c91b5215::Diamonds (Rihanna song)::0"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "The album containing 'Diamonds' is 'Unapologetic'.",
+      "source_unit_ids": [
+        "5a7c8cfc55429935c91b5215::Diamonds (Rihanna song)::0"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

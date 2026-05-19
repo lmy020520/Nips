@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jeff Healey",
+  "pred_answer": "Jeff Healey",
+  "normalized_gold": "jeff healey",
+  "normalized_pred": "jeff healey",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a721cdb55429971e9dc9281",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a721cdb55429971e9dc9281::Redbone (band)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a721cdb55429971e9dc9281::Let It Rock (Ronnie Hawkins album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a721cdb55429971e9dc9281::Let It Rock (Ronnie Hawkins album)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a721cdb55429971e9dc9281::Jeff Healey::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a721cdb55429971e9dc9281::No Tengo Dinero (Los Umbrellos song)::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a721cdb55429971e9dc9281::Let It Rock (Ronnie Hawkins album)",
+        "5a721cdb55429971e9dc9281::Jeff Healey"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a721cdb55429971e9dc9281::Redbone (band)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a721cdb55429971e9dc9281::Let It Rock (Ronnie Hawkins album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a721cdb55429971e9dc9281::Let It Rock (Ronnie Hawkins album)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a721cdb55429971e9dc9281::Jeff Healey::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a721cdb55429971e9dc9281::No Tengo Dinero (Los Umbrellos song)::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a721cdb55429971e9dc9281::No Tengo Dinero (Los Umbrellos song)::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The song peaked at number 42 on the \"Billboard\" Hot 100 in the United States.\n[2] He hit Number 5 on the U.S. \"Billboard\" Hot 100 chart with \"Angel Eyes\" and reached the Top 10 in Canada with the songs \"I Think I Love You Too Much\" and \"How Long Can a Man Be Strong\".\n[3] Jeff Healey sat in on guitar for most, if not all, of the performances.\n[4] Let It Rock is a Juno Award-nominated album that documents American-Canadian singer Ronnie Hawkins' 60th birthday celebration and concert at Massey Hall in Toronto, Ontario, Canada."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

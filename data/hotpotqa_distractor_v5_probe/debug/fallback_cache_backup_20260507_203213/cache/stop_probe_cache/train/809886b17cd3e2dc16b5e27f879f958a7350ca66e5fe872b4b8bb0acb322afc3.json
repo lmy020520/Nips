@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mario Gianluigi Puzo",
+  "pred_answer": "Mario Gianluigi Puzo",
+  "normalized_gold": "mario gianluigi puzo",
+  "normalized_pred": "mario gianluigi puzo",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abae3635542996cc5e49ede",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abae3635542996cc5e49ede::The Family (Puzo novel)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abae3635542996cc5e49ede::Mario Puzo::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abae3635542996cc5e49ede::Mario Puzo::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abae3635542996cc5e49ede::Bruce Jay Friedman::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abae3635542996cc5e49ede::Stir Crazy (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abae3635542996cc5e49ede::Mario Puzo",
+        "5abae3635542996cc5e49ede::Bruce Jay Friedman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abae3635542996cc5e49ede::The Family (Puzo novel)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abae3635542996cc5e49ede::Mario Puzo::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abae3635542996cc5e49ede::Mario Puzo::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abae3635542996cc5e49ede::Bruce Jay Friedman::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abae3635542996cc5e49ede::Stir Crazy (film)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abae3635542996cc5e49ede::Stir Crazy (film)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Stir Crazy is a 1980 American comedy film directed by Sidney Poitier, produced by Hannah Weinstein and written by Bruce Jay Friedman.\n[2] Bruce Jay Friedman is an American novelist, screenwriter, playwright, and actor.\n[3] Mario Gianluigi Puzo ( ; ] ; October 15, 1920 – July 2, 1999) was an American author, screenwriter and journalist of Italian descent.\n[4] His last novel, \"The Family\", was released posthumously in 2001."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

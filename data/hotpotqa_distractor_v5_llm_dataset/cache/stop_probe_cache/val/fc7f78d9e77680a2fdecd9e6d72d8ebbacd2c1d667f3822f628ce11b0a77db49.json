@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Kevin Smith",
+  "pred_answer": "Kevin Smith",
+  "normalized_gold": "kevin smith",
+  "normalized_pred": "kevin smith",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adff58055429925eb1afb9a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adff58055429925eb1afb9a::Kevin Smith::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adff58055429925eb1afb9a::Walt Flanagan::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adff58055429925eb1afb9a::Bryan Johnson (comic book writer)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adff58055429925eb1afb9a::Kevin Smith",
+        "5adff58055429925eb1afb9a::Walt Flanagan"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adff58055429925eb1afb9a::Kevin Smith::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adff58055429925eb1afb9a::Walt Flanagan::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adff58055429925eb1afb9a::Bryan Johnson (comic book writer)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adff58055429925eb1afb9a::Bryan Johnson (comic book writer)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Bryan Lee Johnson (born December 7, 1967) is an American comic book writer, podcaster, actor and television personality associated with filmmaker Kevin Smith and the View Askewniverse.\n[2] Walter Flanagan (born October 23, 1967) is a comic book store manager, reality television personality, podcaster, and comic book artist.\n[3] Kevin Patrick Smith (born August 2, 1970) is an American filmmaker, actor, comic book writer, author, and podcaster."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

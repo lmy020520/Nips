@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Amerigo Vespucci",
+  "pred_answer": "Amerigo Vespucci",
+  "normalized_gold": "amerigo vespucci",
+  "normalized_pred": "amerigo vespucci",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab48fd05542991779162cde",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab48fd05542991779162cde::Blattner's conjecture::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab48fd05542991779162cde::Amerigo Vespucci::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab48fd05542991779162cde::Padrón Real::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab48fd05542991779162cde::Siege of Petersburg::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab48fd05542991779162cde::Amerigo Vespucci",
+        "5ab48fd05542991779162cde::Padrón Real"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab48fd05542991779162cde::Blattner's conjecture::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab48fd05542991779162cde::Amerigo Vespucci::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab48fd05542991779162cde::Padrón Real::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab48fd05542991779162cde::Siege of Petersburg::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab48fd05542991779162cde::Siege of Petersburg::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The campaign consisted of nine months of trench warfare in which Union forces commanded by Lt. Gen. Ulysses S. Grant assaulted Petersburg unsuccessfully and then constructed trench lines that eventually extended over 30 mi from the eastern outskirts of Richmond, Virginia, to around the eastern and southern outskirts of Petersburg.\n[2] The Padrón Real (] , \"Royal Register\"), known after 2 August 1527 as the Padrón General (] , \"General Register\"), was the official and secret Spanish master map used as a template for the maps present on all Spanish ships during the 16th century.\n[3] Amerigo Vespucci (] ; March 9, 1454February 22, 1512) was an Italian explorer, financier, navigator and cartographer who first demonstrated that Brazil and the West Indies did not represent Asia's eastern outskirts as initially conjectured from Columbus' voyages, but instead constituted an entirely separate landmass hitherto unknown to people of the Old World.\n[4] It first appeared in print in , where it was first referred to as \"Blattner's Conjecture,\" despite the results of that paper having been obtained without knowledge of Blattner's question and notwithstanding Blattner's not having made such a conjecture."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

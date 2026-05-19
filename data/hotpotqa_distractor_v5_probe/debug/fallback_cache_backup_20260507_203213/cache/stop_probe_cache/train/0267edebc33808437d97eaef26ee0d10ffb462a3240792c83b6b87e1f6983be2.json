@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Southbank, Melbourne, Victoria",
+  "pred_answer": "Southbank, Melbourne, Victoria",
+  "normalized_gold": "southbank melbourne victoria",
+  "normalized_pred": "southbank melbourne victoria",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade0a7b5542997545bbbe2e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade0a7b5542997545bbbe2e::Lindeman's::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade0a7b5542997545bbbe2e::Tomasello Winery::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade0a7b5542997545bbbe2e::Treasury Wine Estates::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade0a7b5542997545bbbe2e::Treasury Wine Estates::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade0a7b5542997545bbbe2e::Lindeman's",
+        "5ade0a7b5542997545bbbe2e::Treasury Wine Estates"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade0a7b5542997545bbbe2e::Lindeman's::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade0a7b5542997545bbbe2e::Tomasello Winery::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade0a7b5542997545bbbe2e::Treasury Wine Estates::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade0a7b5542997545bbbe2e::Treasury Wine Estates::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade0a7b5542997545bbbe2e::Treasury Wine Estates::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is headquartered in Southbank, Melbourne, Victoria, and until a demerger in May 2011, was the wine division of international brewing company Foster's Group.\n[2] Treasury Wine Estates is an Australian-based global winemaking and distribution business.\n[3] The winery is named after the family that owns it.\n[4] Lindeman's is an Australian winery, owned by Treasury Wine Estates."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

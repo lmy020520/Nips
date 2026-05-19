@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the Hart dynasty",
+  "pred_answer": "the Hart dynasty",
+  "normalized_gold": "the hart dynasty",
+  "normalized_pred": "the hart dynasty",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abac9f855429901930fa8b9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abac9f855429901930fa8b9::Bret Hart::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abac9f855429901930fa8b9::Bret Hart: Survival of the Hitman::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abac9f855429901930fa8b9::Hart wrestling family::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abac9f855429901930fa8b9::Keith Hart (wrestler)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abac9f855429901930fa8b9::Bret Hart",
+        "5abac9f855429901930fa8b9::Hart wrestling family"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abac9f855429901930fa8b9::Bret Hart::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abac9f855429901930fa8b9::Bret Hart: Survival of the Hitman::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abac9f855429901930fa8b9::Hart wrestling family::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abac9f855429901930fa8b9::Keith Hart (wrestler)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abac9f855429901930fa8b9::Keith Hart (wrestler)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He is a member of the Hart wrestling family and the third son of Helen and Stu Hart, CM.\n[2] The Hart wrestling family, sometimes known as the Hart dynasty is a mainly Canadian family with a significant history within professional wrestling.\n[3] Bret Hart: Survival of the Hitman also known as just Survival of the Hitman is a TV documentary chronicling Canadian professional wrestler Bret Hart's life as he prepared for his in-ring return at WrestleMania XXVI after a ten-year absence from the ring after a career ending concussion.\n[4] Bret Sergeant Hart (born July 2, 1957), better known by the ring name Bret \"The Hitman\" Hart, is a Canadian-American retired professional wrestler, retired amateur wrestler, writer and actor."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Anne Elizabeth Pusey",
+  "pred_answer": "Anne Elizabeth Pusey",
+  "normalized_gold": "anne elizabeth pusey",
+  "normalized_pred": "anne elizabeth pusey",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77487155429966f1a36cdf",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77487155429966f1a36cdf::Anne E. Pusey::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77487155429966f1a36cdf::Dawn Prince-Hughes::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77487155429966f1a36cdf::Jane Goodall::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77487155429966f1a36cdf::Gregoire (chimpanzee)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77487155429966f1a36cdf::Anne E. Pusey",
+        "5a77487155429966f1a36cdf::Jane Goodall"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77487155429966f1a36cdf::Anne E. Pusey::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77487155429966f1a36cdf::Dawn Prince-Hughes::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77487155429966f1a36cdf::Jane Goodall::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77487155429966f1a36cdf::Gregoire (chimpanzee)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77487155429966f1a36cdf::Gregoire (chimpanzee)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Previously he had been confined by himself for more than 40 years in a cage at the Brazzaville Zoo before being rescued by staff of the Jane Goodall Institute and airlifted to the Sanctuary during a time of war.\n[2] Dame Jane Morris Goodall {'1': \", '2': \", '3': \", '4': \"} ( ; born Valerie Jane Morris-Goodall, 3 April 1934), formerly Baroness Jane van Lawick-Goodall, is a British primatologist, ethologist, anthropologist, and UN Messenger of Peace.\n[3] She is the executive chair of ApeNet Inc., has served as the executive director of the Institute for Cognitive Archaeological Research and is associated with the Jane Goodall Institute.\n[4] Anne Elizabeth Pusey is director of the Jane Goodall Institute Research Center and a professor of evolutionary anthropology at Duke University."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

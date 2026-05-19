@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Indian",
+  "pred_answer": "Indian",
+  "normalized_gold": "indian",
+  "normalized_pred": "indian",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1d1995542997283cd226c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1d1995542997283cd226c::Additi Gupta::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1d1995542997283cd226c::Ishqbaaaz::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1d1995542997283cd226c::Saans::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1d1995542997283cd226c::Additi Gupta",
+        "5ae1d1995542997283cd226c::Ishqbaaaz"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1d1995542997283cd226c::Additi Gupta::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1d1995542997283cd226c::Ishqbaaaz::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1d1995542997283cd226c::Saans::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1d1995542997283cd226c::Saans::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Saans (English: \"Breath\") is an Indian television series written and directed by television actress Neena Gupta who works in the series as well alongside television actor Kanwaljit Singh.\n[2] Ishqbaaaz (English: \"Lovers\") is an Indian drama television series which is broadcast on Star Plus.\n[3] She is also known for her negative roles in Pardes Mein Hai Mera Dil and Star Plus's Ishqbaaz."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

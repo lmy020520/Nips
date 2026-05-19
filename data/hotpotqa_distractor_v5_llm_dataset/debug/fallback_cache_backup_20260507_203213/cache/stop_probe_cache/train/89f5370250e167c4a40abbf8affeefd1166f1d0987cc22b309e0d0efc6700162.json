@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Chicago",
+  "pred_answer": "Chicago",
+  "normalized_gold": "chicago",
+  "normalized_pred": "chicago",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4cba755429960a22e01e9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4cba755429960a22e01e9::Mannish Boy::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4cba755429960a22e01e9::Mel London::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4cba755429960a22e01e9::Muddy Waters::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4cba755429960a22e01e9::The London Muddy Waters Sessions::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4cba755429960a22e01e9::Mel London",
+        "5ae4cba755429960a22e01e9::Muddy Waters"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4cba755429960a22e01e9::Mannish Boy::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4cba755429960a22e01e9::Mel London::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4cba755429960a22e01e9::Muddy Waters::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4cba755429960a22e01e9::The London Muddy Waters Sessions::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4cba755429960a22e01e9::The London Muddy Waters Sessions::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The London Muddy Waters Sessions is a studio album by Muddy Waters, released in 1972 on Chess Records.\n[2] McKinley Morganfield (April 4, 1913April 30, 1983), better known as Muddy Waters, was an American blues musician who is often cited as the \"father of modern Chicago blues\".\n[3] London is best known for his compositions for Chicago blues artists Howlin' Wolf, Muddy Waters, Elmore James, and Junior Wells as well as being the record producer and owner of Chief Records (and its Profile Records and Age Records subsidiaries).\n[4] \"Mannish Boy\" features a repeating stop-time figure on one chord throughout the song and is credited to Waters, Mel London, and Bo Diddley."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

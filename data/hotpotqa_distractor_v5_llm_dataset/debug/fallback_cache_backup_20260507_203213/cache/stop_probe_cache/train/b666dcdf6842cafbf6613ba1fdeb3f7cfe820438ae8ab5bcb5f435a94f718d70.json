@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lyudmila Evgenyevna Ulitskaya",
+  "pred_answer": "Lyudmila Evgenyevna Ulitskaya",
+  "normalized_gold": "lyudmila evgenyevna ulitskaya",
+  "normalized_pred": "lyudmila evgenyevna ulitskaya",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a835ed9554299334474600a",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a835ed9554299334474600a::A Frolic of His Own::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a835ed9554299334474600a::The Kukotsky Enigma::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a835ed9554299334474600a::Lyudmila Ulitskaya::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a835ed9554299334474600a::William Gaddis::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a835ed9554299334474600a::The Kukotsky Enigma::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a835ed9554299334474600a::Lyudmila Ulitskaya",
+        "5a835ed9554299334474600a::William Gaddis"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a835ed9554299334474600a::A Frolic of His Own::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a835ed9554299334474600a::The Kukotsky Enigma::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a835ed9554299334474600a::Lyudmila Ulitskaya::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a835ed9554299334474600a::William Gaddis::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a835ed9554299334474600a::The Kukotsky Enigma::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a835ed9554299334474600a::The Kukotsky Enigma::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] With five, Ulitskaya holds the record for the most nominations for that prestigious award.\n[2] William Thomas Gaddis, Jr. (December 29, 1922 – December 16, 1998) was an American novelist.\n[3] Lyudmila Evgenyevna Ulitskaya (Russian: Людмила Евгеньевна Улицкая , born February 21, 1943) is an internationally acclaimed modern Russian novelist and short-story writer who, in 2014, was awarded the prestigious Austrian State Prize for European Literature for her oeuvre.\n[4] The Kukotsky Enigma (Russian: Казус Кукоцкого ) is a novel by acclaimed Russian novelist and public intellectual Lyudmila Ulitskaya."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

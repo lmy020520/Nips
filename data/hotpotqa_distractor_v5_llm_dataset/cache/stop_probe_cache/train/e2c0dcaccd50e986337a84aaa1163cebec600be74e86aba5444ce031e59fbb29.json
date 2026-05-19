@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Paddington",
+  "pred_answer": "Paddington",
+  "normalized_gold": "paddington",
+  "normalized_pred": "paddington",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7be1d4554299294a54ab41",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7be1d4554299294a54ab41::Paddington (film)::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7be1d4554299294a54ab41::Empire Award for Best Comedy::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7be1d4554299294a54ab41::Paddington (film)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7be1d4554299294a54ab41::Paddington (film)",
+        "5a7be1d4554299294a54ab41::Empire Award for Best Comedy"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7be1d4554299294a54ab41::Paddington (film)::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7be1d4554299294a54ab41::Empire Award for Best Comedy::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7be1d4554299294a54ab41::Paddington (film)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7be1d4554299294a54ab41::Paddington (film)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Based on \"Paddington Bear\" by Michael Bond, the film stars Ben Whishaw as the voice of the title character, along with Hugh Bonneville, Sally Hawkins, Julie Walters, Jim Broadbent, Peter Capaldi and Nicole Kidman in live-action roles.\n[2] The Empire Award for Best Comedy is one of four new Best Film ongoing awards which were first introduced at the 11th Empire Awards ceremony in 2006 (along with Best Horror, Best Sci-Fi/Fantasy and Best Thriller) with \"\" receiving the award. \"\n[3] Among several honours, King was nominated for the BAFTA Award for Best Adapted Screenplay and both he and Heyman were nominated for the BAFTA Award for Best British Film."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

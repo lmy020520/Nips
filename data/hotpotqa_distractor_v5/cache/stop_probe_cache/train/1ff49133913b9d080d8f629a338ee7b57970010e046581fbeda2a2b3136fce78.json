@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Tim Hamblin",
+  "pred_answer": "Tim Hamblin",
+  "normalized_gold": "tim hamblin",
+  "normalized_pred": "tim hamblin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab68ebd554299710c8d1ec6",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab68ebd554299710c8d1ec6::Maize South High School::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab68ebd554299710c8d1ec6::Campus High School::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab68ebd554299710c8d1ec6::Derby High School (Kansas)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab68ebd554299710c8d1ec6::Derby, Kansas::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab68ebd554299710c8d1ec6::Tri-Cities High School::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab68ebd554299710c8d1ec6::Derby High School (Kansas)",
+        "5ab68ebd554299710c8d1ec6::Derby, Kansas"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab68ebd554299710c8d1ec6::Maize South High School::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab68ebd554299710c8d1ec6::Campus High School::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab68ebd554299710c8d1ec6::Derby High School (Kansas)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab68ebd554299710c8d1ec6::Derby, Kansas::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab68ebd554299710c8d1ec6::Tri-Cities High School::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab68ebd554299710c8d1ec6::Tri-Cities High School::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Tri-Cities High School is a public high school in East Point, Georgia, United States.\n[2] Derby is a city in Sedgwick County, Kansas, United States and the largest suburb of Wichita.\n[3] The current principal is Tim Hamblin.\n[4] Campus High School is a public high school located in Wichita, Kansas, serving students in grades 9-12."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

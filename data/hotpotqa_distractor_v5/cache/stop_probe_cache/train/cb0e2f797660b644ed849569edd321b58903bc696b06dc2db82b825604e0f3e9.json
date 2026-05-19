@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Danish",
+  "pred_answer": "Danish",
+  "normalized_gold": "danish",
+  "normalized_pred": "danish",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a90b47255429933b8a20592",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a90b47255429933b8a20592::Colegio San Agustin – Makati::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a90b47255429933b8a20592::Robinson Ekspeditionen 2010::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a90b47255429933b8a20592::Hans Christian Andersen::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a90b47255429933b8a20592::HC Andersen (band)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a90b47255429933b8a20592::Robinson Ekspeditionen 2010::9"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a90b47255429933b8a20592::Hans Christian Andersen",
+        "5a90b47255429933b8a20592::HC Andersen (band)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a90b47255429933b8a20592::Colegio San Agustin – Makati::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a90b47255429933b8a20592::Robinson Ekspeditionen 2010::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a90b47255429933b8a20592::Hans Christian Andersen::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a90b47255429933b8a20592::HC Andersen (band)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a90b47255429933b8a20592::Robinson Ekspeditionen 2010::9",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a90b47255429933b8a20592::Robinson Ekspeditionen 2010::9",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Also in episode 3, it was revealed that, like last year, there is a mole competing in the game.\n[2] HC Andersen (also known as HCA) is a Finnish rock band group named after poet and author Hans Christian Andersen.\n[3] Andersen's popularity is not limited to children; his stories, called \"eventyr\" in Danish, express themes that transcend age and nationality.\n[4] The major twist this season is that the contestants have been divided into tribes with half of each tribe being \"Masters\" and the other half being \"Slaves\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

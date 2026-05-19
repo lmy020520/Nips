@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Boaz Yakin",
+  "pred_answer": "Boaz Yakin",
+  "normalized_gold": "boaz yakin",
+  "normalized_pred": "boaz yakin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a73d2ea55429905862fe0d5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a73d2ea55429905862fe0d5::Uptown Girls::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a73d2ea55429905862fe0d5::Joe Camp::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a73d2ea55429905862fe0d5::Boaz Yakin::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a73d2ea55429905862fe0d5::Now You See Me (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a73d2ea55429905862fe0d5::Joe Camp",
+        "5a73d2ea55429905862fe0d5::Boaz Yakin"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a73d2ea55429905862fe0d5::Uptown Girls::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a73d2ea55429905862fe0d5::Joe Camp::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a73d2ea55429905862fe0d5::Boaz Yakin::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a73d2ea55429905862fe0d5::Now You See Me (film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a73d2ea55429905862fe0d5::Now You See Me (film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Now You See Me is a 2013 American heist thriller film directed by Louis Leterrier and written by Ed Solomon, Boaz Yakin and Edward Ricourt.\n[2] Boaz Yakin (born June 20, 1966) is an American screenwriter and film director based in New York City.\n[3] Joseph S. Camp, Jr. (born April 20, 1939 in St. Louis, Missouri) is a motion picture director and writer who is best known as the creator and director of the Benji films as well as \"Hawmps!\n[4] Uptown Girls is a 2003 comedy-drama film directed by Boaz Yakin, who was working from a screenplay which Julia Dahl, Mo Ogrodnik and Lisa Davidowitz had adapted from the story by Allison Jacobs."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

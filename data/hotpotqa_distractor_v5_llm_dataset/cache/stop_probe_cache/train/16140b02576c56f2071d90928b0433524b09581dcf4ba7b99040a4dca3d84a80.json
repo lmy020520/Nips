@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "May 26, 1948",
+  "pred_answer": "May 26, 1948",
+  "normalized_gold": "may 26 1948",
+  "normalized_pred": "may 26 1948",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab596ce554299488d4d99f1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab596ce554299488d4d99f1::Lindsey Buckingham/Christine McVie::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab596ce554299488d4d99f1::The Dance (Fleetwood Mac album)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab596ce554299488d4d99f1::Stevie Nicks::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab596ce554299488d4d99f1::Say You Will (album)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab596ce554299488d4d99f1::The Dance (Fleetwood Mac album)",
+        "5ab596ce554299488d4d99f1::Stevie Nicks"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab596ce554299488d4d99f1::Lindsey Buckingham/Christine McVie::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab596ce554299488d4d99f1::The Dance (Fleetwood Mac album)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab596ce554299488d4d99f1::Stevie Nicks::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab596ce554299488d4d99f1::Say You Will (album)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab596ce554299488d4d99f1::Say You Will (album)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Members Lindsey Buckingham, Stevie Nicks and John McVie shared keyboard duties for the album, though Christine McVie is featured on two songs which had been originally recorded for an unreleased Lindsey Buckingham solo album (tracks 13 and 14).\n[2] Stephanie Lynn Nicks (born May 26, 1948) is an American singer-songwriter who is often referred to as the Queen of Rock and Roll.\n[3] It hailed the return of the band's most successful line-up of Lindsey Buckingham, Mick Fleetwood, Christine McVie, John McVie and Stevie Nicks, who had not released an album together since 1987's \"Tango in the Night\" a decade earlier.\n[4] Lindsey Buckingham/Christine McVie (also referred to as simply Buckingham/McVie) is a studio album by Fleetwood Mac vocalists Lindsey Buckingham and Christine McVie, released on June 9, 2017."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

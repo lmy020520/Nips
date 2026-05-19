@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Roberto Durán",
+  "pred_answer": "Roberto Durán",
+  "normalized_gold": "roberto durán",
+  "normalized_pred": "roberto durán",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8638585542994775f6072b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8638585542994775f6072b::Simon Brown (boxer)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8638585542994775f6072b::Pepe Correa::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8638585542994775f6072b::Roberto Durán::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8638585542994775f6072b::Rigoberto Riasco::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8638585542994775f6072b::Pepe Correa",
+        "5a8638585542994775f6072b::Roberto Durán"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8638585542994775f6072b::Simon Brown (boxer)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8638585542994775f6072b::Pepe Correa::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8638585542994775f6072b::Roberto Durán::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8638585542994775f6072b::Rigoberto Riasco::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8638585542994775f6072b::Rigoberto Riasco::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Rigoberto Riasco (born January 11, 1953) also known as \"Little Poison\", was a Panamanian professional boxer who competed from 1968 to 1982.\n[2] Roberto Durán Samaniego (born June 16, 1951) is a Panamanian former professional boxer who competed from 1968 to 2001.\n[3] Jose \"Pepe\" Correa is a boxing trainer who has trained Sugar Ray Leonard, Roberto Durán, Lennox Lewis, Simon Brown and Maurice Blocker.\n[4] Known as \"Mantequilla\", a name given to him by his famous trainer Jose 'Pepe' Correa, Brown was two-weight world champion in the welterweight and light-middleweight divisions, and at one point considered one of the best pound-for-pound fighters in boxing."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

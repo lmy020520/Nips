@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Warren, Michigan",
+  "pred_answer": "Warren, Michigan",
+  "normalized_gold": "warren michigan",
+  "normalized_pred": "warren michigan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c75f75542995e66a47602",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c75f75542995e66a47602::Halmich Park::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c75f75542995e66a47602::Bidwell Park::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c75f75542995e66a47602::Warren, Michigan::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8c75f75542995e66a47602::Ostrava::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c75f75542995e66a47602::Halmich Park",
+        "5a8c75f75542995e66a47602::Warren, Michigan"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c75f75542995e66a47602::Halmich Park::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c75f75542995e66a47602::Bidwell Park::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c75f75542995e66a47602::Warren, Michigan::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8c75f75542995e66a47602::Ostrava::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c75f75542995e66a47602::Ostrava::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In terms of both population and area Ostrava is the third largest city in the Czech Republic, the second largest city in Moravia, and the largest city in Czech Silesia; it straddles the border of the two historic provinces of Moravia and Silesia.\n[2] The 2010 census places the city's population at 134,056, making Warren the largest city in Macomb County, the third largest city in Michigan, and Metro Detroit's largest suburb.\n[3] Today, the total Park size is 3,670 acres (15 km), nearly 11 miles (18 km) in length, making it the third largest municipal park in California and one of the 25 largest city parks in the United States.\n[4] Halmich Park, is located on 13 Mile between Ryan Road and Dequindre Rd. in Warren, Michigan."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

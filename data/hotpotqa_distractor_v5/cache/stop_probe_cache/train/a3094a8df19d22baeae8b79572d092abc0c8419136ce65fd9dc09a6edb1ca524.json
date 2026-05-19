@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "September 17, 1923",
+  "pred_answer": "September 17, 1923",
+  "normalized_gold": "september 17 1923",
+  "normalized_pred": "september 17 1923",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab5218a5542990594ba9d15",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab5218a5542990594ba9d15::Vince Mira::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab5218a5542990594ba9d15::Who's That Girl (Guy Sebastian song)::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab5218a5542990594ba9d15::Hank Williams::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab5218a5542990594ba9d15::Shinedown::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab5218a5542990594ba9d15::Vince Mira",
+        "5ab5218a5542990594ba9d15::Hank Williams"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab5218a5542990594ba9d15::Vince Mira::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab5218a5542990594ba9d15::Who's That Girl (Guy Sebastian song)::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab5218a5542990594ba9d15::Hank Williams::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab5218a5542990594ba9d15::Shinedown::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab5218a5542990594ba9d15::Shinedown::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Shinedown has sold more than ten million records worldwide, and has had 11 number one singles on the \"Billboard\" Mainstream Rock charts, the third most of all-time, behind Van Halen and Three Days Grace.\n[2] Hiram \"Hank\" Williams ( ; September 17, 1923 – January 1, 1953) was an American singer-songwriter and musician.\n[3] \"Who's That Girl\" reached number one on the ARIA Singles Chart, Sebastian's fifth of six number one singles in Australia and Eve's first.\n[4] Vince Mira (born March 18, 1992) is a singer/songwriter from Federal Way, Washington who specializes in country and rock and roll music."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Curtis Bernhardt",
+  "pred_answer": "Curtis Bernhardt",
+  "normalized_gold": "curtis bernhardt",
+  "normalized_pred": "curtis bernhardt",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7cb1ed5542996dd594b98d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7cb1ed5542996dd594b98d::Curtis Bernhardt::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7cb1ed5542996dd594b98d::The Secrets of Jonathan Sperry::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7cb1ed5542996dd594b98d::Rich Christiano::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7cb1ed5542996dd594b98d::Dave Christiano::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7cb1ed5542996dd594b98d::Curtis Bernhardt",
+        "5a7cb1ed5542996dd594b98d::Rich Christiano"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7cb1ed5542996dd594b98d::Curtis Bernhardt::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7cb1ed5542996dd594b98d::The Secrets of Jonathan Sperry::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7cb1ed5542996dd594b98d::Rich Christiano::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7cb1ed5542996dd594b98d::Dave Christiano::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7cb1ed5542996dd594b98d::Dave Christiano::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Dave Christiano (born October 2, 1956) is a Christian filmmaker and twin brother of Rich Christiano.\n[2] Rich Christiano (born October 2, 1956) is an American filmmaker, who has directed, produced and written many Christian films.\n[3] It was directed by Rich Christiano, and the majority of the film was filmed in Holley, New York, beginning August 18, 2007.\n[4] Curtis Bernhardt (15 April 1899 – 22 February 1981) was a German film director born in Worms, Germany, under the name Kurt Bernhardt."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the Hundred Years' War",
+  "pred_answer": "the Hundred Years' War",
+  "normalized_gold": "the hundred years war",
+  "normalized_pred": "the hundred years war",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a87a2df5542996e4f308893",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a87a2df5542996e4f308893::La Femme Accident::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a87a2df5542996e4f308893::Joan of Arc::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a87a2df5542996e4f308893::The OMD Singles::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a87a2df5542996e4f308893::La Femme Accident",
+        "5a87a2df5542996e4f308893::Joan of Arc"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a87a2df5542996e4f308893::La Femme Accident::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a87a2df5542996e4f308893::Joan of Arc::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a87a2df5542996e4f308893::The OMD Singles::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a87a2df5542996e4f308893::The OMD Singles::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The OMD Singles is a singles compilation album by Orchestral Manoeuvres in the Dark, released in 1998.\n[2] Joan of Arc (French: Jeanne d'Arc , ] ; 6 January c. 1412 – 30 May 1431), nicknamed \"The Maid of Orléans\" (French: \"La Pucelle d'Orléans\" ), is considered a heroine of France for her role during the Lancastrian phase of the Hundred Years' War and was canonized as a Roman Catholic saint.\n[3] \"La Femme Accident\" is a song by Orchestral Manoeuvres in the Dark released as the third and final single from their 1985 album \"Crush\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

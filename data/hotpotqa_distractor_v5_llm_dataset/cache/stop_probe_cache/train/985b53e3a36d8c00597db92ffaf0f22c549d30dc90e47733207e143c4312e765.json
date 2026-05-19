@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "elder son",
+  "pred_answer": "elder son",
+  "normalized_gold": "elder son",
+  "normalized_pred": "elder son",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe372955429965af743e9a",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe372955429965af743e9a::Manmohan Singh (film director)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe372955429965af743e9a::Dil To Pagal Hai::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe372955429965af743e9a::Yash Raj Films::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe372955429965af743e9a::Aditya Chopra::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abe372955429965af743e9a::Kajol filmography::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe372955429965af743e9a::Yash Raj Films",
+        "5abe372955429965af743e9a::Aditya Chopra"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe372955429965af743e9a::Manmohan Singh (film director)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe372955429965af743e9a::Dil To Pagal Hai::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe372955429965af743e9a::Yash Raj Films::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe372955429965af743e9a::Aditya Chopra::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abe372955429965af743e9a::Kajol filmography::7",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe372955429965af743e9a::Kajol filmography::7",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] As of 2014, \"Dilwale Dulhania Le Jayenge\" is the longest running Indian film.\n[2] His work as a director includes \"Dilwale Dulhania Le Jayenge\" (1995), \"Mohabbatein\" (2000), \"Rab Ne Bana Di Jodi\" (2008) and \"Befikre\" (2016).\n[3] His elder son Aditya Chopra took charge of the studio in 1995 and he started directing, writing & producing multiple movies under the YRF banner.\n[4] It was Khan's third collaboration with Yash Raj Films after \"Darr\" (1993) and \"Dilwale Dulhania Le Jayenge\" (1995)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

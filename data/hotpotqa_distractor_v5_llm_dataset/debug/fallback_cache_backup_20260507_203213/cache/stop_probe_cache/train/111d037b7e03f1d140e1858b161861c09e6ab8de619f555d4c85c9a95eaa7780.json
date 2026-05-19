@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Matewan",
+  "pred_answer": "Matewan",
+  "normalized_gold": "matewan",
+  "normalized_pred": "matewan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade8f015542997c77adee54",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade8f015542997c77adee54::Thurmond, West Virginia::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade8f015542997c77adee54::Matewan::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade8f015542997c77adee54::New River Coalfield::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade8f015542997c77adee54::Thurmond, West Virginia",
+        "5ade8f015542997c77adee54::Matewan"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade8f015542997c77adee54::Thurmond, West Virginia::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade8f015542997c77adee54::Matewan::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade8f015542997c77adee54::New River Coalfield::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade8f015542997c77adee54::New River Coalfield::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The New River Coalfield is located in northeastern Raleigh County and southern Fayette County, West Virginia.\n[2] Matewan ( ) is a 1987 American drama film written and directed by John Sayles, and starring Chris Cooper (in his film debut), James Earl Jones, Mary McDonnell and Will Oldham, with David Strathairn, Kevin Tighe and Gordon Clapp in supporting roles.\n[3] Thurmond is a town in Fayette County, West Virginia, United States, on the New River."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

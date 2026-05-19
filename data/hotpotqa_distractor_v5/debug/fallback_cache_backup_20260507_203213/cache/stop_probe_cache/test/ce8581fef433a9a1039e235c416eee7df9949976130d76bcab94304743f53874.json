@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "to make pictures that are \"literate, authoritative, transcendent\"",
+  "pred_answer": "to make pictures that are \"literate, authoritative, transcendent\"",
+  "normalized_gold": "to make pictures that are literate authoritative transcendent",
+  "normalized_pred": "to make pictures that are literate authoritative transcendent",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4183f5542996836b02c40",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4183f5542996836b02c40::Eakins Press::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4183f5542996836b02c40::Walker Evans::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4183f5542996836b02c40::Toby Amies::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4183f5542996836b02c40::Eakins Press",
+        "5ae4183f5542996836b02c40::Walker Evans"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4183f5542996836b02c40::Eakins Press::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4183f5542996836b02c40::Walker Evans::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4183f5542996836b02c40::Toby Amies::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4183f5542996836b02c40::Toby Amies::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Tobias \"Toby\" Amies (born 27 June 1967 in Birmingham, Warwickshire) is a broadcaster, filmmaker and photographer, best known for his feature-length documentary \"The Man Whose Mind Exploded\", and his work on Radio4, MTV UK's \"Alternative Nation\", FilmFour, \"Lonely Planet Six Degrees\" and \"The Rough Guides\".\n[2] He said that his goal as a photographer was to make pictures that are \"literate, authoritative, transcendent\".\n[3] Since its founding in 1966, the Eakins Press Foundation has published some of the classic volumes on American art and photography, including Lee Friedlander’s \"The American Monument\", Walker Evans’s \"Message from the Interior\", and Lincoln Kirstein’s definitive monograph on Elie Nadelman."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

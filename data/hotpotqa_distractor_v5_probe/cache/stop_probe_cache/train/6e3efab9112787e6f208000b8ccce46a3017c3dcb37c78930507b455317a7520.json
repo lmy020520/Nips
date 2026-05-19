@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "TurboDuo",
+  "pred_answer": "TurboDuo",
+  "normalized_gold": "turboduo",
+  "normalized_pred": "turboduo",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7322d95542992359bc3240",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7322d95542992359bc3240::Gate of Thunder::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7322d95542992359bc3240::Lords of Thunder::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7322d95542992359bc3240::TurboDuo::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7322d95542992359bc3240::TurboGrafx-16::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7322d95542992359bc3240::Gate of Thunder",
+        "5a7322d95542992359bc3240::TurboDuo"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7322d95542992359bc3240::Gate of Thunder::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7322d95542992359bc3240::Lords of Thunder::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7322d95542992359bc3240::TurboDuo::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7322d95542992359bc3240::TurboGrafx-16::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7322d95542992359bc3240::TurboGrafx-16::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The TurboGrafx-16 Entertainment SuperSystem, known in Japan and France as the PC Engine (PCエンジン , Pī Shī Enjin ) , is a home video game console jointly developed by Hudson Soft and NEC Home Electronics, released in Japan on October 30, 1987 and in the United States on August 29, 1989.\n[2] The TurboDuo is a fourth-generation video game console developed by NEC Home Electronics and Hudson Soft for the North American market.\n[3] Lords of Thunder, known as Winds of Thunder (ウィンズ オブ サンダー ) in Japan, is a shoot 'em up by Hudson Soft and Red Entertainment for the Turbo CD which was released in 1993.\n[4] Gate of Thunder (ゲート オブ サンダー ) is a 1992 scrolling shooter by Hudson Soft and Red Entertainment for the PC Engine Super CD-ROM²."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

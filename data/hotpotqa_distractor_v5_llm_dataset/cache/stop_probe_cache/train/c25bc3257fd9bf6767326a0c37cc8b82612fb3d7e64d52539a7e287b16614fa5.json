@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Love Never Dies",
+  "pred_answer": "Love Never Dies",
+  "normalized_gold": "love never dies",
+  "normalized_pred": "love never dies",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8eb7dc5542995a26add4f3",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8eb7dc5542995a26add4f3::Ben Elton::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8eb7dc5542995a26add4f3::School of Rock (musical)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8eb7dc5542995a26add4f3::Love Never Dies (musical)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8eb7dc5542995a26add4f3::All I Ask of You::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8eb7dc5542995a26add4f3::Ben Elton",
+        "5a8eb7dc5542995a26add4f3::Love Never Dies (musical)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8eb7dc5542995a26add4f3::Ben Elton::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8eb7dc5542995a26add4f3::School of Rock (musical)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8eb7dc5542995a26add4f3::Love Never Dies (musical)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8eb7dc5542995a26add4f3::All I Ask of You::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8eb7dc5542995a26add4f3::All I Ask of You::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was written by Andrew Lloyd Webber, Charles Hart and Richard Stilgoe, and produced by Lloyd Webber.\n[2] Love Never Dies is a romantic musical composed by Andrew Lloyd Webber with lyrics by Glenn Slater and a book by Lloyd Webber, Ben Elton, Frederick Forsyth and Slater.\n[3] School of Rock is a rock musical with music by Andrew Lloyd Webber, lyrics by Glenn Slater and a book by Julian Fellowes.\n[4] Benjamin Charles Elton (born 3 May 1959) is an English comedian, author, playwright, actor and director."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

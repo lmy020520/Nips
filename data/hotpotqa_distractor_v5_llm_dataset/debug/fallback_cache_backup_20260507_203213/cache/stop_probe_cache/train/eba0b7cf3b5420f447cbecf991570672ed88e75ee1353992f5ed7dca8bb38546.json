@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mary Vetsera",
+  "pred_answer": "Mary Vetsera",
+  "normalized_gold": "mary vetsera",
+  "normalized_pred": "mary vetsera",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5451e5542992663a4f1b1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5451e5542992663a4f1b1::Archduchess Elisabeth Marie of Austria::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5451e5542992663a4f1b1::Stéphanie Windisch-Graetz::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5451e5542992663a4f1b1::Princess Stéphanie of Belgium::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae5451e5542992663a4f1b1::Princess Stéphanie of Belgium::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5451e5542992663a4f1b1::Archduchess Elisabeth Marie of Austria",
+        "5ae5451e5542992663a4f1b1::Princess Stéphanie of Belgium"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5451e5542992663a4f1b1::Archduchess Elisabeth Marie of Austria::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5451e5542992663a4f1b1::Stéphanie Windisch-Graetz::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5451e5542992663a4f1b1::Princess Stéphanie of Belgium::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae5451e5542992663a4f1b1::Princess Stéphanie of Belgium::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5451e5542992663a4f1b1::Princess Stéphanie of Belgium::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She was famously widowed in 1889 when Rudolf and his mistress, Mary Vetsera, were found dead in an apparent murder-suicide pact at the Imperial hunting lodge at Mayerling in the Vienna Woods.\n[2] Princess Stéphanie of Belgium (21 May 1864 – 23 August 1945) was a Belgian princess by birth and became Crown Princess of Austria through her marriage to the heir-apparent of the Habsburg dynasty, Archduke Rudolf.\n[3] Archduchess Elisabeth was the daughter of Rudolf, Crown Prince of Austria and granddaughter of Emperor Franz Joseph I of Austria.\n[4] Archduchess Elisabeth Marie of Austria (Elisabeth Maria Henriette Stephanie Gisela; 2 September 1883 – 16 March 1963) was the only child of Rudolf, Crown Prince of Austria and Princess Stéphanie of Belgium, and a granddaughter of Emperor Franz Joseph I of Austria and King Leopold II of the Belgians."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

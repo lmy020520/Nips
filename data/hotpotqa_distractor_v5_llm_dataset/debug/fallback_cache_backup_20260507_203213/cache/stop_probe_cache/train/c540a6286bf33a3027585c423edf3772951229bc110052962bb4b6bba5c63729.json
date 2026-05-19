@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1837",
+  "pred_answer": "1837",
+  "normalized_gold": "1837",
+  "normalized_pred": "1837",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a82005655429926c1cdade1",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a82005655429926c1cdade1::The Baltimore Sun::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a82005655429926c1cdade1::Mars general circulation model::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a82005655429926c1cdade1::The Baltimore Sun::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a82005655429926c1cdade1::Reggie Harris (poet)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a82005655429926c1cdade1::Redwood City Daily News::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a82005655429926c1cdade1::The Baltimore Sun",
+        "5a82005655429926c1cdade1::Reggie Harris (poet)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a82005655429926c1cdade1::The Baltimore Sun::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a82005655429926c1cdade1::Mars general circulation model::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a82005655429926c1cdade1::The Baltimore Sun::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a82005655429926c1cdade1::Reggie Harris (poet)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a82005655429926c1cdade1::Redwood City Daily News::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a82005655429926c1cdade1::Redwood City Daily News::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The \"Redwood City Daily News\" was adjudicated as a newspaper of general circulation by the San Mateo County Superior Court in 2001, enabling it to publish legal notices.\n[2] His work has been included in publications such as The Baltimore Sun, African American Review, and the anthologies \"The Ringing Ear: Black Poets Lean South\" (Georgia University Press, 2007) and \"Voices Rising: Celebrating 20 Years of Black Lesbian, Gay, and Transgender Writing\" (RedBone Press, 2007).\n[3] Founded in 1837, it is owned by tronc (formerly known as Tribune Publishing).\n[4] The Mars general circulation model (MGCM) is the result of a research project by NASA to understand the nature of the general circulation of the atmosphere of Mars, how that circulation is driven and how it affects the climate of Mars in the long term."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "April 9, 1959",
+  "pred_answer": "April 9, 1959",
+  "normalized_gold": "april 9 1959",
+  "normalized_pred": "april 9 1959",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a76203955429976ec32bd23",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a76203955429976ec32bd23::Mercury-Atlas 7::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a76203955429976ec32bd23::Jay Barbree::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a76203955429976ec32bd23::Mercury Seven::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a76203955429976ec32bd23::Gordon Cooper::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a76203955429976ec32bd23::Gemini 3::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a76203955429976ec32bd23::Mercury Seven",
+        "5a76203955429976ec32bd23::Gordon Cooper"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a76203955429976ec32bd23::Mercury-Atlas 7::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a76203955429976ec32bd23::Jay Barbree::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a76203955429976ec32bd23::Mercury Seven::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a76203955429976ec32bd23::Gordon Cooper::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a76203955429976ec32bd23::Gemini 3::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a76203955429976ec32bd23::Gemini 3::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Gemini 3 was the first manned mission in NASA's Gemini program, the second American manned space program.\n[2] Leroy Gordon \"Gordo\" Cooper Jr. (March 6, 1927 – October 4, 2004), (Col, USAF), better known as Gordon Cooper, was an American aerospace engineer, test pilot, United States Air Force pilot, and one of the seven original astronauts in Project Mercury, the first manned space program of the United States.\n[3] The Mercury Seven were the group of seven Mercury astronauts announced by NASA on April 9, 1959.\n[4] Barbree is the only journalist to have covered every manned space mission in the United States, beginning with the first American in space, Alan Shepard aboard \"Freedom 7\" in 1961, continuing through to the last mission of the Space Shuttle, \"Atlantis's\" STS-135 mission in July 2011."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

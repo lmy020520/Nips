@@ -1,0 +1,23 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for a beer that is now produced by AB InBev and was known as 'The Cream of Manchester'. The state summary mentions a beer promoted as 'The Cream of Manchester' in the 1990s and now owned by AB-InBev. The gold answer is Boddingtons Bitter. The raw candidates include a unit about AB InBev (unit_id 2) and a unit about a beer owned by AB InBev (unit_id 1). A bridge note can connect AB InBev to the beer, and a verification note can confirm the beer's ownership.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "AB InBev owns SUN InBev Ukraine, which produces Chernihivske, but this is not the beer known as The Cream of Manchester.",
+      "source_unit_ids": [
+        "5a7c674e5542996dd594b91a::Chernihivske::3",
+        "5a7c674e5542996dd594b91a::Anheuser-Busch InBev::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "The beer known as The Cream of Manchester is now owned by AB InBev, as indicated by the state summary.",
+      "source_unit_ids": [
+        "5a7c674e5542996dd594b91a::Anheuser-Busch InBev::0"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

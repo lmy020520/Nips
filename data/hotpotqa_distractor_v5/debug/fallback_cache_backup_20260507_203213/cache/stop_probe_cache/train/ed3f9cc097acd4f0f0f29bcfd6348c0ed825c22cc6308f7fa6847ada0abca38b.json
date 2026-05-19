@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "documentary",
+  "pred_answer": "documentary",
+  "normalized_gold": "documentary",
+  "normalized_pred": "documentary",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adce7295542994ed6169c1a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adce7295542994ed6169c1a::Kon-Tiki (1950 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adce7295542994ed6169c1a::Norwegian Maritime Museum::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adce7295542994ed6169c1a::The Other Side of AIDS::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adce7295542994ed6169c1a::Invisible disability::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adce7295542994ed6169c1a::Kon-Tiki (1950 film)",
+        "5adce7295542994ed6169c1a::The Other Side of AIDS"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adce7295542994ed6169c1a::Kon-Tiki (1950 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adce7295542994ed6169c1a::Norwegian Maritime Museum::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adce7295542994ed6169c1a::The Other Side of AIDS::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adce7295542994ed6169c1a::Invisible disability::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adce7295542994ed6169c1a::Invisible disability::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A sitting disability is another category of invisible impairments; sitting problems are usually caused by chronic back pain.\n[2] The Other Side of AIDS is a 2004 documentary film by Robin Scovill.\n[3] The Norwegian Maritime Museum is situated near several other museums, including the Fram Museum; the Kon-Tiki Museum; the Norwegian Museum of Cultural History; and the Viking Ship Museum.\n[4] Kon-Tiki is a Norwegian-Swedish documentary film about the Kon-Tiki expedition led by Norwegian explorer and writer Thor Heyerdahl in 1947, released in Sweden, Norway, Finland, and Denmark in 1950, followed by the United States in 1951."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Hitlisten",
+  "pred_answer": "Hitlisten",
+  "normalized_gold": "hitlisten",
+  "normalized_pred": "hitlisten",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77db9855429967ab1052d5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77db9855429967ab1052d5::Happy Home (song)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77db9855429967ab1052d5::List of number-one hits of 2010 (Germany)::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77db9855429967ab1052d5::Hitlisten::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77db9855429967ab1052d5::Rose Garden (album)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77db9855429967ab1052d5::Happy Home (song)",
+        "5a77db9855429967ab1052d5::Hitlisten"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77db9855429967ab1052d5::Happy Home (song)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77db9855429967ab1052d5::List of number-one hits of 2010 (Germany)::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77db9855429967ab1052d5::Hitlisten::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77db9855429967ab1052d5::Rose Garden (album)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77db9855429967ab1052d5::Rose Garden (album)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It reached number 3 on the \"Billboard\" Hot 100 pop chart in early 1971 and hit number 1 in both \"Cash Box\" and \"Record World\".\n[2] Hitlisten (The Hit list) is a Danish top 40 record chart that is presented every Thursday midnight at hitlisten.nu.\n[3] Robbie Williams is the only artist who has had three different number albums in a year in Germany—\"Reality Killed the Video Star\" hit the top of the charts in January, his greatest hits album \"In and Out of Consciousness: The Greatest Hits 1990–2010\" hit number 1 in October, and \"Progress\", on which he sang as a member of Take That, hit number 1 in December.\n[4] Released on Copenhagen Records in association with Universal Music Denmark, it reached number 1 on Hitlisten, the Danish Official Singles Chart."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

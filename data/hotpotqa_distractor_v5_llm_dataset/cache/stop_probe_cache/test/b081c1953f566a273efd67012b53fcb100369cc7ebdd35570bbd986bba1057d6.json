@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "22,500 acres",
+  "pred_answer": "22,500 acres",
+  "normalized_gold": "22500 acres",
+  "normalized_pred": "22500 acres",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2342a5542993be8fa98c3",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2342a5542993be8fa98c3::The Alexander Dawson School at Rainbow Mountain::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2342a5542993be8fa98c3::Alexander Dawson School (Lafayette, Colorado)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2342a5542993be8fa98c3::Summerlin, Nevada::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab2342a5542993be8fa98c3::Grassland degradation::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2342a5542993be8fa98c3::The Alexander Dawson School at Rainbow Mountain",
+        "5ab2342a5542993be8fa98c3::Summerlin, Nevada"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2342a5542993be8fa98c3::The Alexander Dawson School at Rainbow Mountain::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2342a5542993be8fa98c3::Alexander Dawson School (Lafayette, Colorado)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2342a5542993be8fa98c3::Summerlin, Nevada::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab2342a5542993be8fa98c3::Grassland degradation::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2342a5542993be8fa98c3::Grassland degradation::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Initially only patches of grass appear to die and appear brown in nature; but the degradation process, if not addressed, can spread to decimate many acres of land, which in the most severe cases is merely bare, black soil bereft of any usefulness.\n[2] The community occupies 22,500 acres and includes a variety of land uses, including: residential, commercial, recreational, educational, medical, open space, and cultural.\n[3] Located in Lafayette, Colorado, the school serves children from kindergarten through twelfth grade) (K–12) in Lower, Middle and Upper School on a campus of 107 acre .\n[4] The Alexander Dawson School at Rainbow Mountain is an independent, day school in Summerlin, Nevada."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

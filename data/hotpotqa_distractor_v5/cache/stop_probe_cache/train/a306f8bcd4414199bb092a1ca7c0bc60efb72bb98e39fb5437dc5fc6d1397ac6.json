@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1995",
+  "pred_answer": "1995",
+  "normalized_gold": "1995",
+  "normalized_pred": "1995",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae255755542992decbdccc0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae255755542992decbdccc0::Domitian::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae255755542992decbdccc0::Titus Davis::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae255755542992decbdccc0::Corey Davis (wide receiver)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae255755542992decbdccc0::Antrobus baronets::14"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae255755542992decbdccc0::Titus Davis",
+        "5ae255755542992decbdccc0::Corey Davis (wide receiver)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae255755542992decbdccc0::Domitian::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae255755542992decbdccc0::Titus Davis::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae255755542992decbdccc0::Corey Davis (wide receiver)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae255755542992decbdccc0::Antrobus baronets::14",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae255755542992decbdccc0::Antrobus baronets::14",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] As of 2008 the title is held by the seventh Baronet's eldest son, the eighth Baronet, who succeeded in 1995.\n[2] Corey Davis (born January 11, 1995) is an American football wide receiver for the Tennessee Titans of the National Football League (NFL).\n[3] His younger brother, Corey Davis is a wide receiver for the Tennessee Titans.\n[4] He was the younger brother of Titus and son of Vespasian, his two predecessors on the throne, and the last member of the Flavian dynasty."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

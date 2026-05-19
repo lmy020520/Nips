@@ -1,0 +1,40 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the politician vacating the Senate seat Kweisi Mfume lost a primary for. The gold answer is Paul Sarbanes, but none of the raw candidates mention him. A bridge note can connect the raw candidates to the question by noting that the vacating senator is not among them, and a verification note can check if any raw candidate's context matches the question's timeframe and state.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "None of the provided raw candidates mention Paul Sarbanes, who vacated the Maryland Senate seat in 2006.",
+      "source_unit_ids": [
+        "5a7d99aa5542997cc2c47460::Rick Berg::4",
+        "5a7d99aa5542997cc2c47460::John Patrick (Maine politician)::6",
+        "5a7d99aa5542997cc2c47460::Roy Moore::2"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "The raw candidate about Rick Berg involves a North Dakota Senate seat vacated by Kent Conrad, not relevant to Maryland.",
+      "source_unit_ids": [
+        "5a7d99aa5542997cc2c47460::Rick Berg::4"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "The raw candidate about John Patrick involves a Maine state Senate seat, not the U.S. Senate.",
+      "source_unit_ids": [
+        "5a7d99aa5542997cc2c47460::John Patrick (Maine politician)::6"
+      ],
+      "coarse_priority": 3
+    },
+    {
+      "type": "verification_note",
+      "text": "The raw candidate about Roy Moore involves an Alabama Senate seat vacated by Jeff Sessions, not relevant to Maryland.",
+      "source_unit_ids": [
+        "5a7d99aa5542997cc2c47460::Roy Moore::2"
+      ],
+      "coarse_priority": 4
+    }
+  ]
+}

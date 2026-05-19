@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "NBC",
+  "pred_answer": "NBC",
+  "normalized_gold": "nbc",
+  "normalized_pred": "nbc",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae08be355429945ae9593af",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae08be355429945ae9593af::A Howling in the Woods::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae08be355429945ae9593af::Stonestreet: Who Killed the Centerfold Model?::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae08be355429945ae9593af::Vera Miles::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae08be355429945ae9593af::Lila Crane::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae08be355429945ae9593af::A Howling in the Woods",
+        "5ae08be355429945ae9593af::Vera Miles"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae08be355429945ae9593af::A Howling in the Woods::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae08be355429945ae9593af::Stonestreet: Who Killed the Centerfold Model?::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae08be355429945ae9593af::Vera Miles::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae08be355429945ae9593af::Lila Crane::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae08be355429945ae9593af::Lila Crane::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Lila Loomis (née Crane) is a fictional character created by Robert Bloch in his 1959 novel \"Psycho\", and portrayed by Vera Miles in the 1960 film of the same name directed by Alfred Hitchcock.\n[2] Vera June Miles (née Ralston, born August 23, 1929) is an American actress who worked closely with Alfred Hitchcock, most notably as Lila Crane in the classic 1960 film \"Psycho\", reprising the role in the 1983 sequel \"Psycho II\".\n[3] is a 1977 American made-for-television mystery-crime film starring Barbara Eden which premiered as the \"NBC Movie of the Week\" on January 16, 1977.\n[4] A Howling in the Woods is a 1971 American made-for-television thriller film starring Barbara Eden, Larry Hagman, John Rubinstein and Vera Miles, which premiered on NBC as the \"NBC World Premiere Movie\" on November 5, 1971."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

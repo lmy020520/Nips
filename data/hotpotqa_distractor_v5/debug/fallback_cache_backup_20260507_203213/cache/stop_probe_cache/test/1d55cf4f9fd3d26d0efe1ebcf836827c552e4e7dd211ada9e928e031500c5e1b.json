@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The St Andrews Agreement",
+  "pred_answer": "The St Andrews Agreement",
+  "normalized_gold": "the st andrews agreement",
+  "normalized_pred": "the st andrews agreement",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74f7405542996c70cfae59",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74f7405542996c70cfae59::St Andrews Agreement::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74f7405542996c70cfae59::Concerned Republicans::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74f7405542996c70cfae59::St Andrews Agreement::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74f7405542996c70cfae59::St Andrews Agreement",
+        "5a74f7405542996c70cfae59::Concerned Republicans"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74f7405542996c70cfae59::St Andrews Agreement::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74f7405542996c70cfae59::Concerned Republicans::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74f7405542996c70cfae59::St Andrews Agreement::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74f7405542996c70cfae59::St Andrews Agreement::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The St Andrews Agreement (Irish: \"Comhaontú Chill Rímhinn\" ; Ulster Scots: \"St Andra's 'Greement\", \"St Andrew's Greeance\" or \"St Andrae's Greeance\") was an agreement between the British and Irish governments and Northern Ireland's political parties in relation to the devolution of power in the region.\n[2] Concerned Republicans, formed in December 2006, is an umbrella political groups which plans to run independent republican candidates in the 2007 Northern Ireland Assembly election on a manifesto of non-endorsement of the Police Service of Northern Ireland and would be anti-Good Friday Agreement and anti-St Andrews Agreement.\n[3] The agreement resulted from multi-party talks held in St Andrews in Fife, Scotland, from 11 to 13 October 2006, between the two governments and all the major parties in Northern Ireland, including the two largest, the Democratic Unionist Party (DUP) and Sinn Féin."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

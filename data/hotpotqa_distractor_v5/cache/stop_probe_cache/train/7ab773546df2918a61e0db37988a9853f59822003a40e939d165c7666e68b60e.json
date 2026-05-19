@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "the cage of mad women",
+  "pred_answer": "The Cage of Madwomen",
+  "normalized_gold": "the cage of mad women",
+  "normalized_pred": "the cage of madwomen",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "The evidence shows that Gloria Gaynor's cover of 'I Am What I Am' is from the musical 'La Cage Aux Folles', and that 'La cage aux folles' literally means 'the cage of mad women'.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "The evidence shows that Gloria Gaynor's cover of 'I Am What I Am' is from the musical 'La Cage Aux Folles', and that 'La cage aux folles' literally means 'the cage of mad women'.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7af10755429931da12c98b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7af10755429931da12c98b::I Am Gloria Gaynor::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7af10755429931da12c98b::I Will Survive (TV series)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7af10755429931da12c98b::La Cage aux Folles (musical)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7af10755429931da12c98b::I Will Survive (Billie Jo Spears album)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7af10755429931da12c98b::I Am Gloria Gaynor",
+        "5a7af10755429931da12c98b::La Cage aux Folles (musical)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7af10755429931da12c98b::I Am Gloria Gaynor::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7af10755429931da12c98b::I Will Survive (TV series)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7af10755429931da12c98b::La Cage aux Folles (musical)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7af10755429931da12c98b::I Will Survive (Billie Jo Spears album)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7af10755429931da12c98b::I Will Survive (Billie Jo Spears album)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The title track, \"I Will Survive\", was a cover of the chart topper for Gloria Gaynor in 1978.\n[2] Based on the 1973 French play of the same name by Jean Poiret, it focuses on a gay couple: Georges, the manager of a Saint-Tropez nightclub featuring drag entertainment, and Albin, his romantic partner and star attraction, and the farcical adventures that ensue when Georges's son, Jean-Michel, brings home his fiancée's ultra-conservative parents to meet them.\n[3] The title of the show is derived from the title of a song in the production, \"I Will Survive\", originally sung by Gloria Gaynor.\n[4] The most notable song on the album was Gloria Gaynor's cover of \"I Am What I Am\" from the musical \"La Cage Aux Folles\"."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

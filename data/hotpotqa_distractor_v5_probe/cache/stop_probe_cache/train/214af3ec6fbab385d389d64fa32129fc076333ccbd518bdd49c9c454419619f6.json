@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Stanislav Yevgrafovich Petrov",
+  "pred_answer": "Stanislav Yevgrafovich Petrov",
+  "normalized_gold": "stanislav yevgrafovich petrov",
+  "normalized_pred": "stanislav yevgrafovich petrov",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a4dc05542990198eaf119",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a4dc05542990198eaf119::1983 Soviet nuclear false alarm incident::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a4dc05542990198eaf119::Stanislav Petrov::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a4dc05542990198eaf119::Korean Air Lines Flight 902::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a4dc05542990198eaf119::1983 Soviet nuclear false alarm incident",
+        "5a7a4dc05542990198eaf119::Stanislav Petrov"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a4dc05542990198eaf119::1983 Soviet nuclear false alarm incident::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a4dc05542990198eaf119::Stanislav Petrov::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a4dc05542990198eaf119::Korean Air Lines Flight 902::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a4dc05542990198eaf119::Korean Air Lines Flight 902::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Soviet Air Defence Forces initially identified it as part of the US air reconnaissance force, which carried out thousands of flights along Soviet borders annually at the time.\n[2] Stanislav Yevgrafovich Petrov (Russian: Станисла́в Евгра́фович Петро́в ; 7 September 1939 – 19 May 2017) was a lieutenant colonel of the Soviet Air Defence Forces who became known as \"the man who single-handedly saved the world from nuclear war\" for his role in the 1983 Soviet nuclear false alarm incident.\n[3] These missile attack warnings were correctly identified as a false alarm by Stanislav Yevgrafovich Petrov, an officer of the Soviet Air Defence Forces."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

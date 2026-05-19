@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Guru",
+  "pred_answer": "Guru",
+  "normalized_gold": "guru",
+  "normalized_pred": "guru",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c1e81554299683c1c62cc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c1e81554299683c1c62cc::Mayya (song)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c1e81554299683c1c62cc::Raavanan (soundtrack)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c1e81554299683c1c62cc::Guru (soundtrack)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7c1e81554299683c1c62cc::Dil Se..::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c1e81554299683c1c62cc::Mayya (song)",
+        "5a7c1e81554299683c1c62cc::Guru (soundtrack)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c1e81554299683c1c62cc::Mayya (song)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c1e81554299683c1c62cc::Raavanan (soundtrack)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c1e81554299683c1c62cc::Guru (soundtrack)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7c1e81554299683c1c62cc::Dil Se..::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c1e81554299683c1c62cc::Dil Se..::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Dil Se (translation: \"From the Heart)\" is a 1998 Indian romantic thriller film in the backdrop of insurgency in Northeast India, written and directed by Mani Ratnam, and produced by Mani Ratnam, Ram Gopal Varma, and Shekhar Kapur.\n[2] Guru is the soundtrack to the 2007 film directed by Mani Ratnam.\n[3] Raavanan is the soundtrack album to the 2010 Indian Tamil film of the same name, written and directed by Mani Ratnam.\n[4] \"Mayya\" is a popular Hindi song from the 2007 Hindi film \"Guru\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

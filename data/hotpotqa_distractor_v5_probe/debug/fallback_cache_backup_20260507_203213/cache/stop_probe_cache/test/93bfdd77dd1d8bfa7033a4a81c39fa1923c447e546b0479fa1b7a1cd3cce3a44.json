@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "American",
+  "pred_answer": "American",
+  "normalized_gold": "american",
+  "normalized_pred": "american",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3a2fa5542993915413857",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3a2fa5542993915413857::This One's for the Children::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3a2fa5542993915413857::Restless Heart::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3a2fa5542993915413857::Donnie Wahlberg::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3a2fa5542993915413857::Mystery (band)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3a2fa5542993915413857::This One's for the Children",
+        "5ac3a2fa5542993915413857::Donnie Wahlberg"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3a2fa5542993915413857::This One's for the Children::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3a2fa5542993915413857::Restless Heart::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3a2fa5542993915413857::Donnie Wahlberg::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3a2fa5542993915413857::Mystery (band)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3a2fa5542993915413857::Mystery (band)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 2007 the band released their third album \"Beneath the Veil of Winter's Face\" with singer Benoît David who would record two more studio albums with the band: \"One Among the Living\" in 2010 and \"The World is a Game\" in 2012.\n[2] Donald Edmond Wahlberg Jr. (born August 17, 1969) is an American singer, songwriter, actor, record producer, and film producer.\n[3] The band's longest-lasting lineup has consisted of Larry Stewart (lead vocals), John Dittrich (drums, background vocals), Paul Gregg (bass guitar, background vocals), Dave Innis (piano, keyboards, rhythm guitar, background vocals), and Greg Jennings (lead guitar, mandolin, background vocals).\n[4] \"This One's for the Children\" is a 1989 single from New Kids on the Block."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Alice",
+  "pred_answer": "Alice",
+  "normalized_gold": "alice",
+  "normalized_pred": "alice",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a813cf355429938b614230a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a813cf355429938b614230a::Manhattan Night::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a813cf355429938b614230a::Linda Lavin::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a813cf355429938b614230a::The Trust (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a813cf355429938b614230a::Manhattan Night",
+        "5a813cf355429938b614230a::Linda Lavin"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a813cf355429938b614230a::Manhattan Night::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a813cf355429938b614230a::Linda Lavin::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a813cf355429938b614230a::The Trust (film)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a813cf355429938b614230a::The Trust (film)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Trust is a 2016 American crime film directed by Alex Brewer and Ben Brewer and written by Ben Brewer and Adam Hirsch.\n[2] She is known for playing the title character in the sitcom \"Alice\" and for her stage performances, both on Broadway and Off-Broadway.\n[3] Manhattan Night is a 2016 American crime film written and directed by Brian DeCubellis."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

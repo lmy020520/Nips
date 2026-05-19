@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mohan Sithara",
+  "pred_answer": "Mohan Sithara",
+  "normalized_gold": "mohan sithara",
+  "normalized_pred": "mohan sithara",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7331b55542994cef4bc4a5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7331b55542994cef4bc4a5::Mohan Sithara::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7331b55542994cef4bc4a5::Viswajith::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7331b55542994cef4bc4a5::Last Bench::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7331b55542994cef4bc4a5::Yagam (1982 film)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7331b55542994cef4bc4a5::Mohan Sithara",
+        "5a7331b55542994cef4bc4a5::Last Bench"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7331b55542994cef4bc4a5::Mohan Sithara::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7331b55542994cef4bc4a5::Viswajith::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7331b55542994cef4bc4a5::Last Bench::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7331b55542994cef4bc4a5::Yagam (1982 film)::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7331b55542994cef4bc4a5::Yagam (1982 film)::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The film had musical score by MG Radhakrishnan.\n[2] The film had musical score by Mohan Sithara and Vishnu Sarath.\n[3] he won the Kerala State Award for the best Music Director 2009 (TV), Vayalar Award for the Best Music Director 2011 (TV) and Kerala State Award for the best Music Director 2014 (TV) ,Kerala State Award for the best Music Director 2015 (TV).\n[4] He received the Kerala State Award for the songs in Priyanandan's \"Sufi Paranja Kadha\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

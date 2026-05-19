@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Rainer Werner Fassbinder",
+  "pred_answer": "Rainer Werner Fassbinder",
+  "normalized_gold": "rainer werner fassbinder",
+  "normalized_pred": "rainer werner fassbinder",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a78e98955429974737f78fe",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a78e98955429974737f78fe::Gillian Armstrong::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a78e98955429974737f78fe::Hanna Schygulla::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a78e98955429974737f78fe::Rainer Werner Fassbinder::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a78e98955429974737f78fe::The Marriage of Maria Braun::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a78e98955429974737f78fe::Gillian Armstrong",
+        "5a78e98955429974737f78fe::Rainer Werner Fassbinder"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a78e98955429974737f78fe::Gillian Armstrong::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a78e98955429974737f78fe::Hanna Schygulla::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a78e98955429974737f78fe::Rainer Werner Fassbinder::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a78e98955429974737f78fe::The Marriage of Maria Braun::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a78e98955429974737f78fe::The Marriage of Maria Braun::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Marriage of Maria Braun (German: Die Ehe der Maria Braun ) is a 1979 West German film directed by Rainer Werner Fassbinder.\n[2] Rainer Werner Fassbinder (] ; 31 May 1945 – 10 June 1982) was a West German filmmaker, actor, playwright and theatre director, part of the New German Cinema movement.\n[3] Long associated with the theater and film director Rainer Werner Fassbinder, for whom she first worked in 1965, she is generally considered the most prominent German actress of the New German Cinema.\n[4] Gillian May Armstrong (born 18 December 1950) is an award-winning Australian feature film and documentary director, who specializes in period drama."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

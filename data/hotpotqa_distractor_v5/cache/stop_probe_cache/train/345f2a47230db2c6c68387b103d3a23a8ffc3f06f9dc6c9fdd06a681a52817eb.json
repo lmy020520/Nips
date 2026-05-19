@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1900",
+  "pred_answer": "1900",
+  "normalized_gold": "1900",
+  "normalized_pred": "1900",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adffdfb55429906c02daa9d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adffdfb55429906c02daa9d::SS Principessa Mafalda::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adffdfb55429906c02daa9d::Princess Mafalda of Savoy::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adffdfb55429906c02daa9d::Victor Emmanuel III of Italy::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adffdfb55429906c02daa9d::Marie Jeanne Baptiste of Savoy-Nemours::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adffdfb55429906c02daa9d::Princess Mafalda of Savoy",
+        "5adffdfb55429906c02daa9d::Victor Emmanuel III of Italy"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adffdfb55429906c02daa9d::SS Principessa Mafalda::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adffdfb55429906c02daa9d::Princess Mafalda of Savoy::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adffdfb55429906c02daa9d::Victor Emmanuel III of Italy::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adffdfb55429906c02daa9d::Marie Jeanne Baptiste of Savoy-Nemours::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adffdfb55429906c02daa9d::Marie Jeanne Baptiste of Savoy-Nemours::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She married Charles Emmanuel II, Duke of Savoy in 1665 who was her kinsman.\n[2] Victor Emmanuel III (Italian: \"Vittorio Emanuele III\" , Albanian: \"Viktor Emanueli III\" ; 11 November 1869 – 28 December 1947) was the King of Italy from 29 July 1900 until his abdication on 9 May 1946.\n[3] Princess Mafalda of Savoy (2 November 1902 – 27 August 1944) was the second daughter of King Victor Emmanuel III of Italy and his wife Elena of Montenegro.\n[4] Named after Princess Mafalda of Savoy, second daughter of King Victor Emmanuel III, the ship entered NGI's South American service between Genoa and Buenos Aires in 1909."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

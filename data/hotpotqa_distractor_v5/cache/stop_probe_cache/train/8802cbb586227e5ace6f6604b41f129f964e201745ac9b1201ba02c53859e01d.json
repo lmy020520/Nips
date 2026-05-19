@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1 April 1986",
+  "pred_answer": "1 April 1986",
+  "normalized_gold": "1 april 1986",
+  "normalized_pred": "1 april 1986",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abb1d3f5542996cc5e49fb0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abb1d3f5542996cc5e49fb0::Carla Fracci::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abb1d3f5542996cc5e49fb0::Peter Martins::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abb1d3f5542996cc5e49fb0::Erik Bruhn::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abb1d3f5542996cc5e49fb0::Oybin::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abb1d3f5542996cc5e49fb0::Carla Fracci",
+        "5abb1d3f5542996cc5e49fb0::Erik Bruhn"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abb1d3f5542996cc5e49fb0::Carla Fracci::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abb1d3f5542996cc5e49fb0::Peter Martins::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abb1d3f5542996cc5e49fb0::Erik Bruhn::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abb1d3f5542996cc5e49fb0::Oybin::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abb1d3f5542996cc5e49fb0::Oybin::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The ruins of a medieval monastery lend a wild romantic beauty to it and it was a favorite subject of 19th-century Romantic painters like Caspar David Friedrich.\n[2] Erik Belton Evers Bruhn (3 October 1928 – 1 April 1986) was a Danish danseur, choreographer, artistic director, actor, and author.\n[3] He was a principal dancer with the Royal Danish Ballet and with the New York City Ballet (NYCB), where he joined George Balanchine, Jerome Robbins and John Taras as balletmaster in 1981, retired from dancing in 1983 at which time he became Co-Ballet Master-In-Chief with Robbins, and since 1990 has borne sole responsibility for artistic leadership of City Ballet.\n[4] “As Erik Bruhn once said, [Fracci] gave the world a new idea of the ballerina in 19th-century Romantic ballets.”"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

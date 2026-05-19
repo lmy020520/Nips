@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Marilyn Manson",
+  "pred_answer": "Marilyn Manson",
+  "normalized_gold": "marilyn manson",
+  "normalized_pred": "marilyn manson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85acdd5542997175ce1fee",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85acdd5542997175ce1fee::Ballet master::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85acdd5542997175ce1fee::Michael McKean::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85acdd5542997175ce1fee::Marilyn Manson::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85acdd5542997175ce1fee::Twiggy Ramirez::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85acdd5542997175ce1fee::Michael McKean",
+        "5a85acdd5542997175ce1fee::Marilyn Manson"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85acdd5542997175ce1fee::Ballet master::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85acdd5542997175ce1fee::Michael McKean::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85acdd5542997175ce1fee::Marilyn Manson::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85acdd5542997175ce1fee::Twiggy Ramirez::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85acdd5542997175ce1fee::Twiggy Ramirez::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Jeordie Osbourne White (born June 20, 1971), once known professionally as Twiggy Ramirez, shortened to just Twiggy since returning to Marilyn Manson, and sometimes referred to by his real name, is an American musician, mostly known as the bassist and guitarist of the band Marilyn Manson.\n[2] Brian Hugh Warner (born January 5, 1969), known professionally as Marilyn Manson, is an American singer, songwriter, musician, composer, actor, painter, author and former music journalist.\n[3] Michael John McKean (born October 17, 1947) is an American actor, comedian, and musician, known for a variety of roles played since the 1970s.\n[4] Historic use of gender marking in job titles in ballet (and live theatre) is being supplanted by gender-neutral language job titles regardless of an employee's gender identity or expression (e.g. \"Ballet Master\" in lieu of \"Ballet Mistress\", \"Wig Master\" as an alternative to \"Wig Mistress\")."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

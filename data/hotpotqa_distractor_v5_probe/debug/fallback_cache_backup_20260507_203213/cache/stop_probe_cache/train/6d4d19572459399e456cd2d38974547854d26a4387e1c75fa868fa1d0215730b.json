@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Family Guy",
+  "pred_answer": "Family Guy",
+  "normalized_gold": "family guy",
+  "normalized_pred": "family guy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc0a5e554299438c868d12",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc0a5e554299438c868d12::And I'm Joyce Kinney::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc0a5e554299438c868d12::Pilot (The Cleveland Show)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc0a5e554299438c868d12::Family Guy::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc0a5e554299438c868d12::And I'm Joyce Kinney::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc0a5e554299438c868d12::And I'm Joyce Kinney",
+        "5adc0a5e554299438c868d12::Family Guy"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc0a5e554299438c868d12::And I'm Joyce Kinney::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc0a5e554299438c868d12::Pilot (The Cleveland Show)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc0a5e554299438c868d12::Family Guy::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc0a5e554299438c868d12::And I'm Joyce Kinney::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc0a5e554299438c868d12::And I'm Joyce Kinney::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"And I'm Joyce Kinney\" is the ninth episode of the ninth season of the animated comedy series \"Family Guy\".\n[2] Family Guy is an American animated sitcom created by Seth MacFarlane for the Fox Broadcasting Company.\n[3] Directed by Anthony Lioi and written by series creators Seth MacFarlane, Mike Henry and Richard Appel, the episode originally aired on Fox in the United States on September 27, 2009, along with the season 8 premiere of \"Family Guy\".\n[4] It originally aired on Fox in the United States on January 16, 2011."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

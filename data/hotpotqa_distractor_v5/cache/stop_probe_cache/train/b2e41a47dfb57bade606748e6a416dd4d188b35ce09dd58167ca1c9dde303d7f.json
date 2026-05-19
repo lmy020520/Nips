@@ -1,0 +1,82 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "the Firebirds",
+  "pred_answer": "Toronto Blue Jays",
+  "normalized_gold": "the firebirds",
+  "normalized_pred": "toronto blue jays",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "Evidence shows Marcus Stroman is a pitcher for Toronto Blue Jays, and Eldredge Park is home to Orleans Firebirds. However, the connection that Stroman calls Eldredge Park his summer home is not explicitly stated; the text says 'Former Cape Leaguers and Major Leaguers who have called it their summer home include ... Marcus Stroman', but it does not specify that he calls it his summer home currently or that he plays for the Firebirds. The pred answer 'Toronto Blue Jays' is not supported as the team that plays at that park.",
+  "missing_support_reasons": [
+    "The evidence does not state that Marcus Stroman currently calls Eldredge Park his summer home or that he plays for the Firebirds.",
+    "The pred answer 'Toronto Blue Jays' is not the team that plays at Eldredge Park; the team is the Orleans Firebirds."
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "Evidence shows Marcus Stroman is a pitcher for Toronto Blue Jays, and Eldredge Park is home to Orleans Firebirds. However, the connection that Stroman calls Eldredge Park his summer home is not explicitly stated; the text says 'Former Cape Leaguers and Major Leaguers who have called it their summer home include ... Marcus Stroman', but it does not specify that he calls it his summer home currently or that he plays for the Firebirds. The pred answer 'Toronto Blue Jays' is not supported as the team that plays at that park.",
+    "missing_support_reasons": [
+      "The evidence does not state that Marcus Stroman currently calls Eldredge Park his summer home or that he plays for the Firebirds.",
+      "The pred answer 'Toronto Blue Jays' is not the team that plays at Eldredge Park; the team is the Orleans Firebirds."
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5a7f9abf5542995d8a8ddebc",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7f9abf5542995d8a8ddebc::Eldredge Park::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7f9abf5542995d8a8ddebc::Marcus Stroman::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7f9abf5542995d8a8ddebc::Fred Frankhouse::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7f9abf5542995d8a8ddebc::Eldredge Park",
+        "5a7f9abf5542995d8a8ddebc::Marcus Stroman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7f9abf5542995d8a8ddebc::Eldredge Park::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7f9abf5542995d8a8ddebc::Marcus Stroman::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7f9abf5542995d8a8ddebc::Fred Frankhouse::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7f9abf5542995d8a8ddebc::Fred Frankhouse::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Frederick Meloy \"Fred\" Frankhouse (April 9, 1904 – August 17, 1989) was an American baseball pitcher who played 13 seasons in Major League Baseball from 1927 to 1939.\n[2] Marcus Earl Stroman (born May 1, 1991) is an American professional baseball pitcher for the Toronto Blue Jays of Major League Baseball (MLB).\n[3] Former Cape Leaguers and Major Leaguers who have called it their summer home include Frank Thomas, Mark Teixeira, Nomar Garciaparra, Todd Helton, Aaron Boone, Brandon Crawford, Marcus Stroman, and Jeff Conine to name a few."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

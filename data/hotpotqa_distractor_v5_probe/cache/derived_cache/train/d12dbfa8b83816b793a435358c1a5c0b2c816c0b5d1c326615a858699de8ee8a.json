@@ -1,0 +1,24 @@
+{
+  "should_derive": true,
+  "reason": "The question asks which hospital has been operating longer, but the state summary lacks founding dates for both hospitals. The raw candidates include founding dates for other hospitals, which may help infer or compare, but no direct evidence for Providence Hospital or MedStar NRH. A verification note could check if any raw candidate mentions founding dates for these hospitals, and a bridge note could connect the raw candidates to the question.",
+  "derived_candidates": [
+    {
+      "type": "verification_note",
+      "text": "None of the raw candidates mention Providence Hospital or MedStar National Rehabilitation Hospital.",
+      "source_unit_ids": [
+        "5a74402b55429974ef308bc6::Children's National Medical Center::1",
+        "5a74402b55429974ef308bc6::Magee Rehabilitation Hospital::0",
+        "5a74402b55429974ef308bc6::Burke Rehabilitation Hospital::2"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "Burke Rehabilitation Hospital opened in 1915, but it is not one of the hospitals in question.",
+      "source_unit_ids": [
+        "5a74402b55429974ef308bc6::Burke Rehabilitation Hospital::2"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

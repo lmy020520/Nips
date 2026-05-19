@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "United States Army",
+  "pred_answer": "United States Army",
+  "normalized_gold": "united states army",
+  "normalized_pred": "united states army",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a755ce25542992d0ec05f6e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a755ce25542992d0ec05f6e::Basin F::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a755ce25542992d0ec05f6e::National Eagle Repository::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a755ce25542992d0ec05f6e::Rocky Mountain Arsenal::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a755ce25542992d0ec05f6e::M34 grenade::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a755ce25542992d0ec05f6e::Basin F",
+        "5a755ce25542992d0ec05f6e::Rocky Mountain Arsenal"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a755ce25542992d0ec05f6e::Basin F::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a755ce25542992d0ec05f6e::National Eagle Repository::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a755ce25542992d0ec05f6e::Rocky Mountain Arsenal::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a755ce25542992d0ec05f6e::M34 grenade::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a755ce25542992d0ec05f6e::M34 grenade::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The M34 White Phosphorus Smoke Grenade or \"Willie Pete\" was a chemical grenade manufactured by Rocky Mountain Arsenal from the late 1950s and used by U.S. forces during the Vietnam War and was also used during the First Gulf War.\n[2] The site was completed December 1942, operated by the United States Army throughout the later 20th century and was controversial among local residents until its closure in 1992.\n[3] The National Eagle Repository is operated and managed under the Office of Law Enforcement of the United States Fish and Wildlife Service located at the Rocky Mountain Arsenal National Wildlife Refuge outside of Denver, Colorado.\n[4] Basin F was constructed by the United States Army in 1956 at the Rocky Mountain Arsenal, to provide for the disposal of contaminated liquid wastes from the chemical manufacturing operations of the Army and its lessee Shell Chemical Company."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

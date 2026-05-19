@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Joe Cornish",
+  "pred_answer": "Joe Cornish",
+  "normalized_gold": "joe cornish",
+  "normalized_pred": "joe cornish",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abbd39855429931dba1458a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abbd39855429931dba1458a::Alex Vincent (drummer)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abbd39855429931dba1458a::Alex Esmail::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abbd39855429931dba1458a::Attack the Block::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abbd39855429931dba1458a::Alex Kruz::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abbd39855429931dba1458a::Alex Esmail",
+        "5abbd39855429931dba1458a::Attack the Block"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abbd39855429931dba1458a::Alex Vincent (drummer)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abbd39855429931dba1458a::Alex Esmail::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abbd39855429931dba1458a::Attack the Block::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abbd39855429931dba1458a::Alex Kruz::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abbd39855429931dba1458a::Alex Kruz::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Alex Kruz (born November 30, 1978) is an American actor known for roles in television, theater and film.\n[2] Attack the Block is a 2011 British science fiction horror comedy film written and directed by Joe Cornish and starring John Boyega, Nick Frost, Jodie Whittaker and Luke Treadaway.\n[3] Alexander Nazir Esmail (born 18 July 1993) is a British actor, and former wrestler, who is best known for his role in the award-winning film \"Attack the Block\".\n[4] He is an American musician, songwriter, and actor who is best known as the drummer for the rock band Green River."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

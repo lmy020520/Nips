@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "beer and soft drinks",
+  "pred_answer": "beer and soft drinks",
+  "normalized_gold": "beer and soft drinks",
+  "normalized_pred": "beer and soft drinks",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a78ce5d55429974737f78ac",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a78ce5d55429974737f78ac::Region Zealand::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a78ce5d55429974737f78ac::Faxe::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a78ce5d55429974737f78ac::Caraga::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a78ce5d55429974737f78ac::Region Zealand",
+        "5a78ce5d55429974737f78ac::Faxe"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a78ce5d55429974737f78ac::Region Zealand::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a78ce5d55429974737f78ac::Faxe::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a78ce5d55429974737f78ac::Caraga::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a78ce5d55429974737f78ac::Caraga::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Caraga, officially known as the Caraga Administrative Region or simply Caraga Region and designated as Region XIII, is an administrative region in the Philippines occupying the northeastern section of the island of Mindanao.\n[2] The town is most known for Faxe Bryggeri, a relatively large brewery producing a range of beer and soft drinks.\n[3] Zealand Region (Danish: \"Region Sjælland\" ) is the southernmost administrative region of Denmark, established on January 1, 2007 as part of the 2007 Danish Municipal Reform, which replaced the traditional counties (\"amter\") with five larger regions."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

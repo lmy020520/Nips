@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Pete Shelley",
+  "pred_answer": "Pete Shelley",
+  "normalized_gold": "pete shelley",
+  "normalized_pred": "pete shelley",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a760f03554299109176e63e",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a760f03554299109176e63e::D-beat::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a760f03554299109176e63e::Point-of-view shot::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a760f03554299109176e63e::Shot by Both Sides::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a760f03554299109176e63e::Pete Shelley::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a760f03554299109176e63e::Manning M. Kimmel::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a760f03554299109176e63e::Shot by Both Sides",
+        "5a760f03554299109176e63e::Pete Shelley"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a760f03554299109176e63e::D-beat::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a760f03554299109176e63e::Point-of-view shot::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a760f03554299109176e63e::Shot by Both Sides::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a760f03554299109176e63e::Pete Shelley::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a760f03554299109176e63e::Manning M. Kimmel::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a760f03554299109176e63e::Manning M. Kimmel::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Manning Marius Kimmel (also known as Marius Manning Kimmel, October 25, 1832 – February 27, 1916) was a military officer who served on both sides of the American Civil War.\n[2] Pete Shelley (born Peter Campbell McNeish, 17 April 1955 in Leigh, Lancashire) is an English singer, songwriter and guitarist, best known as the leader of Buzzcocks.\n[3] \"Shot by Both Sides\" is a song written by Howard Devoto and Pete Shelley, and performed by the English post-punk band Magazine.\n[4] A point of view shot (also known as POV shot, First-person shot or a subjective camera) is a short film scene that shows what a character (the subject) is looking at (represented through the camera)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

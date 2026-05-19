@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "world champions",
+  "pred_answer": "world champions",
+  "normalized_gold": "world champions",
+  "normalized_pred": "world champions",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae694355542992ae0d16365",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae694355542992ae0d16365::Darkie Smith::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae694355542992ae0d16365::Wayne Elcock::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae694355542992ae0d16365::Chris Eubank::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae694355542992ae0d16365::Darkie Smith::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae694355542992ae0d16365::Darkie Smith",
+        "5ae694355542992ae0d16365::Chris Eubank"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae694355542992ae0d16365::Darkie Smith::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae694355542992ae0d16365::Wayne Elcock::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae694355542992ae0d16365::Chris Eubank::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae694355542992ae0d16365::Darkie Smith::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae694355542992ae0d16365::Darkie Smith::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Fighters trained to world titles include heavyweight Herbie Hide, light heavyweight and cruiserweight Fabrice Tiozzo, super middleweight Christophe Tiozzo and light welterweight Stephen Smith.\n[2] He held the WBO middleweight and super-middleweight titles, scoring victories over six world champions, and is ranked by BoxRec as the third best British super-middleweight boxer of all time.\n[3] Knocking out fellow contender Darren Rhodes in 1 minute 30 seconds in Elcocks homecoming and first ever fight with the Lynch brothers in Birmingham at a sold out Aston Events Centre, this setting up his first attempt at the prestigious British title Lonsdale Belt against Plymouth's Scott Dann (boxer) in the first British title fight to ever be scored by three judges, after defeat Wayne bounced bac\n[4] John \"Darkie\" Smith (born 1942) is a British former boxer, now employed in boxing training and boxing matchmaking."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

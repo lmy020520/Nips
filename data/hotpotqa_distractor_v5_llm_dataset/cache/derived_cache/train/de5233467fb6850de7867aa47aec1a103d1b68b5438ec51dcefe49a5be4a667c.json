@@ -1,0 +1,38 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for a member of the Achilles club born in 1900 who went to Oxford. The provided raw candidates include Henry Williams (bishop) who began ministry in 1900 at Oxford, but he is not a track athlete. Caryn Davies attended Oxford but is not born in 1900. John Reilly is not relevant. No candidate directly matches the Achilles club. A bridge note could connect Henry Williams to Oxford in 1900, and a verification note could check if he is in the Achilles club. However, Henry Williams is a bishop, not a track athlete. The gold answer is Evelyn Aubrey Montague, who is not in the candidates. So we need to derive notes to guide search.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Henry Williams began his ministry in 1900 at Hertford College, Oxford.",
+      "source_unit_ids": [
+        "5a737ee655429908901be2ce::Henry Williams (bishop)::1"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Henry Williams is not a member of the Achilles club as he is a bishop, not a track athlete.",
+      "source_unit_ids": [
+        "5a737ee655429908901be2ce::Henry Williams (bishop)::1"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "bridge_note",
+      "text": "Caryn Davies attended Pembroke College, Oxford as a visiting student in 2013.",
+      "source_unit_ids": [
+        "5a737ee655429908901be2ce::Caryn Davies::10"
+      ],
+      "coarse_priority": 3
+    },
+    {
+      "type": "verification_note",
+      "text": "Caryn Davies was born in 1979, not 1900.",
+      "source_unit_ids": [
+        "5a737ee655429908901be2ce::Caryn Davies::10"
+      ],
+      "coarse_priority": 4
+    }
+  ]
+}

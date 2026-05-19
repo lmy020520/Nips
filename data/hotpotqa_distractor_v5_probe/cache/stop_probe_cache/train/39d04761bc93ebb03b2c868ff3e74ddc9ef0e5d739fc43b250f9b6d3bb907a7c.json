@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "October 26, 1864",
+  "pred_answer": "October 26, 1864",
+  "normalized_gold": "october 26 1864",
+  "normalized_pred": "october 26 1864",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b3bdd5542992d025e67af",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b3bdd5542992d025e67af::Samuel P. Cox::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b3bdd5542992d025e67af::Battle of La Ebonal::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b3bdd5542992d025e67af::William T. Anderson::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7b3bdd5542992d025e67af::Herman Hollis::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b3bdd5542992d025e67af::Samuel P. Cox",
+        "5a7b3bdd5542992d025e67af::William T. Anderson"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b3bdd5542992d025e67af::Samuel P. Cox::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b3bdd5542992d025e67af::Battle of La Ebonal::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b3bdd5542992d025e67af::William T. Anderson::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7b3bdd5542992d025e67af::Herman Hollis::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b3bdd5542992d025e67af::Herman Hollis::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Hollis is best known for having been killed in the line of duty during an intense shootout with Chicago-area bank robber Lester Gillis, a.k.a. Baby Face Nelson, at the Battle of Barrington in 1934.\n[2] William T. Anderson (1840 – October 26, 1864)—known as \"Bloody Bill\" Anderson—was one of the deadliest and most brutal pro-Confederate guerrilla leaders in the American Civil War.\n[3] The United States Army responded by sending an expedition into the area, under the command of Major Samuel P. Heintzelman, with orders to pacify all resistance.\n[4] Samuel P. Cox (December 16, 1828 – August 21, 1913) was a businessman and farmer who is best remembered as the commander of the Union troops that killed \"Bloody Bill\" Anderson in the Battle of Albany in the American Civil War."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

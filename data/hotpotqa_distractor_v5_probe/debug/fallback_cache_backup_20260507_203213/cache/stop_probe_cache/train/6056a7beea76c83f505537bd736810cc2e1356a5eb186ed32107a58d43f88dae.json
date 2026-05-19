@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "11,177",
+  "pred_answer": "11,177",
+  "normalized_gold": "11177",
+  "normalized_pred": "11177",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7e0075542992aa3b8c869",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7e0075542992aa3b8c869::Chad A. Lupinacci::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7e0075542992aa3b8c869::Congressional district::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7e0075542992aa3b8c869::Elwood, New York::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab7e0075542992aa3b8c869::Konkomba people::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7e0075542992aa3b8c869::Chad A. Lupinacci",
+        "5ab7e0075542992aa3b8c869::Elwood, New York"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7e0075542992aa3b8c869::Chad A. Lupinacci::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7e0075542992aa3b8c869::Congressional district::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7e0075542992aa3b8c869::Elwood, New York::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab7e0075542992aa3b8c869::Konkomba people::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7e0075542992aa3b8c869::Konkomba people::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 2010 census data indicates that Bikpakpaam in Ghana number 823,000 and applying the intercensal growth rate would give a population of more than one million now.\n[2] The population was 11,177 at the 2010 census.\n[3] A congressional district is an electoral constituency that elects a single member of a congress.\n[4] Chad A. Lupinacci (born February 28, 1979) is the Assembly member for the 10th District of the New York Assembly."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

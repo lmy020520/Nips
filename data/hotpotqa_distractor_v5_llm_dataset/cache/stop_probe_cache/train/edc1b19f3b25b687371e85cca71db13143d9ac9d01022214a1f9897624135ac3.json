@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Pyrenean Mastiff",
+  "pred_answer": "Pyrenean Mastiff",
+  "normalized_gold": "pyrenean mastiff",
+  "normalized_pred": "pyrenean mastiff",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a80cd76554299260e20a167",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a80cd76554299260e20a167::West Highland White Terrier::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a80cd76554299260e20a167::Scottish Terrier::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a80cd76554299260e20a167::Pyrenean Mastiff::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a80cd76554299260e20a167::Teddy Roosevelt Terrier::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a80cd76554299260e20a167::West Highland White Terrier",
+        "5a80cd76554299260e20a167::Pyrenean Mastiff"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a80cd76554299260e20a167::West Highland White Terrier::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a80cd76554299260e20a167::Scottish Terrier::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a80cd76554299260e20a167::Pyrenean Mastiff::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a80cd76554299260e20a167::Teddy Roosevelt Terrier::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a80cd76554299260e20a167::Teddy Roosevelt Terrier::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is assumed that the Feist (dog), Bull Terrier, Smooth Fox Terrier, Manchester Terrier, Whippet, Italian Greyhound, the now extinct English White Terrier, Turnspit dog and or Wry Legged Terrier all share in the Teddy Roosevelt Terrier's ancestry.\n[2] The Pyrenean Mastiff (Spanish:\"Mastín del Pirineo\", Aragonese:\"Mostín d'o Pireneu\") is a large breed of dog originally from the Aragonese Pyrenees in Spain.\n[3] Initially one of the highland breeds of terrier that were grouped under the name of \"Skye Terrier\", it is one of five breeds of terrier that originated in Scotland, the other four being the modern Skye, Cairn, Dandie Dinmont, and West Highland White Terriers.\n[4] The West Highland White Terrier, commonly known as the Westie is a breed of dog from Scotland with a distinctive white harsh coat with a somewhat soft white undercoat."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "$1.8 billion",
+  "pred_answer": "$1.8 billion",
+  "normalized_gold": "$18 billion",
+  "normalized_pred": "$18 billion",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab790535542995dae37e960",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab790535542995dae37e960::2002 Winter Olympics::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab790535542995dae37e960::Chinese school::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab790535542995dae37e960::Los Angeles bid for the 2024 Summer Olympics::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab790535542995dae37e960::2028 Summer Olympics::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab790535542995dae37e960::List of Olympic Games host cities::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab790535542995dae37e960::Los Angeles bid for the 2024 Summer Olympics",
+        "5ab790535542995dae37e960::2028 Summer Olympics"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab790535542995dae37e960::2002 Winter Olympics::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab790535542995dae37e960::Chinese school::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab790535542995dae37e960::Los Angeles bid for the 2024 Summer Olympics::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab790535542995dae37e960::2028 Summer Olympics::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab790535542995dae37e960::List of Olympic Games host cities::6",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab790535542995dae37e960::List of Olympic Games host cities::6",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Five cities have been chosen by the IOC to host upcoming Olympic Games: Pyeongchang for the 2018 Winter Olympics, Tokyo for the 2020 Summer Olympics, Beijing for the 2022 Winter Olympics, Paris for the 2024 Summer Olympics, and Los Angeles for the 2028 Summer Olympics.\n[2] The 2028 Summer Olympics, officially known as the Games of the XXXIV Olympiad, and commonly known as LA 2028/Los Angeles 2028, is a forthcoming international multi-sport event, which will be hosted in the city of Los Angeles, California, United States between July 21 and August 6, 2028.\n[3] On July 31, 2017, the IOC announced Los Angeles as the sole candidate for the 2028 games, with $1.8 billion of additional funding to support local sports and the Games program.\n[4] A recent trend in 2011 shows that the Chinese government has also provided funding to U.S. school districts with additional funding on top of funding they already receive from the U.S. government."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "January 20, 2017",
+  "pred_answer": "January 20, 2017",
+  "normalized_gold": "january 20 2017",
+  "normalized_pred": "january 20 2017",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf235b5542992d7e9f92ac",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf235b5542992d7e9f92ac::Office of Trade and Manufacturing Policy::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf235b5542992d7e9f92ac::Commission on Foreign Economic Policy::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf235b5542992d7e9f92ac::Donald Trump::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf235b5542992d7e9f92ac::Gilbert B. Kaplan::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf235b5542992d7e9f92ac::Office of Trade and Manufacturing Policy",
+        "5adf235b5542992d7e9f92ac::Donald Trump"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf235b5542992d7e9f92ac::Office of Trade and Manufacturing Policy::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf235b5542992d7e9f92ac::Commission on Foreign Economic Policy::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf235b5542992d7e9f92ac::Donald Trump::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf235b5542992d7e9f92ac::Gilbert B. Kaplan::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf235b5542992d7e9f92ac::Gilbert B. Kaplan::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He is President Donald Trump's nominee to become Under Secretary of Commerce for International Trade in the United States Department of Commerce.\n[2] Donald John Trump (born June 14, 1946) is the 45th and current President of the United States, in office since January 20, 2017.\n[3] The U.S. President's Commission on Foreign Economic Policy (the Randall Commission) was established on August 7, 1953 by Public Law 215 entitled \"Trade Agreements Extension Act of 1953\" which extended the Trade Agreements Extension Act of 1951 for one year.\n[4] The Office of Trade and Manufacturing Policy (OTMP) is an office established within the White House Office by US President Donald Trump by Presidential Executive Order 13797 on 29 April 2017."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

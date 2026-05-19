@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "James Gandolfini",
+  "pred_answer": "James Gandolfini",
+  "normalized_gold": "james gandolfini",
+  "normalized_pred": "james gandolfini",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79c2955542994f819ef097",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79c2955542994f819ef097::Michael Rispoli::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79c2955542994f819ef097::The Taking of Pelham 123 (2009 film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79c2955542994f819ef097::Michael Rispoli::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79c2955542994f819ef097::Michael Rispoli",
+        "5a79c2955542994f819ef097::The Taking of Pelham 123 (2009 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79c2955542994f819ef097::Michael Rispoli::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79c2955542994f819ef097::The Taking of Pelham 123 (2009 film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79c2955542994f819ef097::Michael Rispoli::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a79c2955542994f819ef097::Michael Rispoli::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He was in the cast of the HBO television series \"The Sopranos\" as Jackie Aprile, Sr. Rispoli reunited with \"Sopranos\" co-star James Gandolfini in the 2009 thriller \"The Taking of Pelham 123\".\n[2] The Taking of Pelham 123 is a 2009 American thriller film directed by Tony Scott, and starring Denzel Washington and John Travolta.\n[3] Rispoli was a contender for the role of Tony Soprano that ultimately went to Gandolfini."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

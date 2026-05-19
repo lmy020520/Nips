@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "King of Cool",
+  "pred_answer": "King of Cool",
+  "normalized_gold": "king of cool",
+  "normalized_pred": "king of cool",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a849d775542991dd0999d46",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a849d775542991dd0999d46::Dean Martin::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a849d775542991dd0999d46::The Wrecking Crew (1968 film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a849d775542991dd0999d46::Martin and Lewis::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a849d775542991dd0999d46::Dean Martin",
+        "5a849d775542991dd0999d46::The Wrecking Crew (1968 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a849d775542991dd0999d46::Dean Martin::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a849d775542991dd0999d46::The Wrecking Crew (1968 film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a849d775542991dd0999d46::Martin and Lewis::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a849d775542991dd0999d46::Martin and Lewis::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Martin and Lewis were an American comedy duo, comprising singer Dean Martin and comedian Jerry Lewis.\n[2] The Wrecking Crew, released in December, 1968, and starring Dean Martin, Elke Sommer, Nancy Kwan, Tina Louise, and Sharon Tate, is the fourth and final film in a series of American comedy-spy-fi theatrical releases featuring Martin as secret agent Matt Helm.\n[3] One of the most popular and enduring American entertainers of the mid-20th century, Martin was nicknamed the \"King of Cool\" for his seemingly effortless charisma and self-assurance."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

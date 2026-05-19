@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Toussaint L'Ouverture or Toussaint Bréda,",
+  "pred_answer": "Toussaint L'Ouverture or Toussaint Bréda,",
+  "normalized_gold": "toussaint louverture or toussaint bréda",
+  "normalized_pred": "toussaint louverture or toussaint bréda",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a70fe7b5542994082a3e497",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a70fe7b5542994082a3e497::Victoria Montou::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a70fe7b5542994082a3e497::The Black Jacobins::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a70fe7b5542994082a3e497::Toussaint Louverture::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a70fe7b5542994082a3e497::Sanité Bélair::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a70fe7b5542994082a3e497::United States and the Haitian Revolution::13"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a70fe7b5542994082a3e497::Toussaint Louverture",
+        "5a70fe7b5542994082a3e497::Sanité Bélair"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a70fe7b5542994082a3e497::Victoria Montou::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a70fe7b5542994082a3e497::The Black Jacobins::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a70fe7b5542994082a3e497::Toussaint Louverture::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a70fe7b5542994082a3e497::Sanité Bélair::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a70fe7b5542994082a3e497::United States and the Haitian Revolution::13",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a70fe7b5542994082a3e497::United States and the Haitian Revolution::13",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] But there were anti-slavery advocates in northern cities who believed that consistency with the principles of the American Revolution — life, liberty and equality for all—demanded that the U.S. support the slave insurgents.\n[2] Suzanne Bélair, called \"Sanité Bélair\", (1781 – 5 October 1802), was a Haitian Freedom fighter and revolutionary, lieutenant in the army of Toussaint Louverture.\n[3] François-Dominique Toussaint Louverture (] 20 May 1743 – 7 April 1803), also known as Toussaint L'Ouverture or Toussaint Bréda, was the best-known leader of the Haitian Revolution.\n[4] James's text places the revolution in the context of the French Revolution, and focuses on the leadership of Toussaint L'Ouverture, who was born a slave but rose to prominence espousing the French Revolutionary ideals of liberty and equality."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

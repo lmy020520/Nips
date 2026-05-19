@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "portrayal as Kahlo",
+  "pred_answer": "portrayal as Kahlo",
+  "normalized_gold": "portrayal as kahlo",
+  "normalized_pred": "portrayal as kahlo",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab25a2d554299340b5254a4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab25a2d554299340b5254a4::Frida::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab25a2d554299340b5254a4::List of accolades received by Frida::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab25a2d554299340b5254a4::Mía Maestro::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab25a2d554299340b5254a4::Santanico Pandemonium::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab25a2d554299340b5254a4::Frida",
+        "5ab25a2d554299340b5254a4::Mía Maestro"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab25a2d554299340b5254a4::Frida::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab25a2d554299340b5254a4::List of accolades received by Frida::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab25a2d554299340b5254a4::Mía Maestro::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab25a2d554299340b5254a4::Santanico Pandemonium::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab25a2d554299340b5254a4::Santanico Pandemonium::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In the film series, she is portrayed by Salma Hayek and Ara Celi.\n[2] She is best known for her role as Nora Martinez in \"The Strain\", Nadia Santos in the television drama \"Alias\", as Christina Kahlo in \"Frida\", and as Carmen in \"The Twilight Saga\".\n[3] Actress Salma Hayek was cast as Kahlo, while Alfred Molina portrays her husband Diego Rivera.\n[4] It stars Salma Hayek in her Academy Award-nominated portrayal as Kahlo and Alfred Molina as her husband, Diego Rivera."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

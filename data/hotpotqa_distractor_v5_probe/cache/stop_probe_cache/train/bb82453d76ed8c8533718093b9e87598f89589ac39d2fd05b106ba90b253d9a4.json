@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "America",
+  "pred_answer": "America",
+  "normalized_gold": "america",
+  "normalized_pred": "america",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac1b08155429963665198ef",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac1b08155429963665198ef::St. Olaf Orchestra::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac1b08155429963665198ef::Magnum Chorum::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac1b08155429963665198ef::St. Olaf College::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac1b08155429963665198ef::Ben Houge::5"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac1b08155429963665198ef::Anton Armstrong::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac1b08155429963665198ef::St. Olaf College",
+        "5ac1b08155429963665198ef::Ben Houge"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac1b08155429963665198ef::St. Olaf Orchestra::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac1b08155429963665198ef::Magnum Chorum::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac1b08155429963665198ef::St. Olaf College::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac1b08155429963665198ef::Ben Houge::5",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac1b08155429963665198ef::Anton Armstrong::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac1b08155429963665198ef::Anton Armstrong::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Anton Eugene Armstrong (born April 26, 1956) is the conductor of the St. Olaf Choir as well as the Harry R. and Thora H. Tosdal Professor of Music at St. Olaf College of Northfield, Minnesota in the United States.\n[2] He received his Bachelor of Arts degree (B.A.) in Music Theory from St. Olaf College and his Master of Music degree (M.M.) from the University of Washington and is currently an assistant professor at Berklee College of Music.\n[3] The college is named after the King and the Patron Saint Olaf II of Norway and is affiliated with the Evangelical Lutheran Church in America.\n[4] Founded in 1991 in the choral tradition of St. Olaf College, membership was originally limited to St. Olaf graduates, but since 2005, auditions are open to singers devoted to excellence in choral music."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

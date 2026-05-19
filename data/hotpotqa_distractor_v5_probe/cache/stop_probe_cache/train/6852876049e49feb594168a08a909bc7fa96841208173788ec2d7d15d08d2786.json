@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Estadio Nueva Condomina",
+  "pred_answer": "Estadio Nueva Condomina",
+  "normalized_gold": "estadio nueva condomina",
+  "normalized_pred": "estadio nueva condomina",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3fe1f5542997ea680c9a8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3fe1f5542997ea680c9a8::List of Green Bay Packers stadiums::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3fe1f5542997ea680c9a8::Jesús Samper::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3fe1f5542997ea680c9a8::Real Murcia::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3fe1f5542997ea680c9a8::Blythe Heat::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3fe1f5542997ea680c9a8::Jesús Samper",
+        "5ac3fe1f5542997ea680c9a8::Real Murcia"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3fe1f5542997ea680c9a8::List of Green Bay Packers stadiums::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3fe1f5542997ea680c9a8::Jesús Samper::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3fe1f5542997ea680c9a8::Real Murcia::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3fe1f5542997ea680c9a8::Blythe Heat::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3fe1f5542997ea680c9a8::Blythe Heat::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] They are the only team in the instructional that play the home games somewhere other than the league's home base of Yuma, Arizona's Desert Sun Stadium.\n[2] Founded in 1919, it currently plays in Segunda División B – Group 4, playing home matches at \"Estadio Nueva Condomina\", which holds 31,179 spectators.\n[3] Jesús Samper Vidal (28 August 1950 – 18 December 2015) was a Spanish businessman and lawyer with holdings in many cities, as well as being the owner of the football team Real Murcia.\n[4] Hagemeister Park was a park owned by the Hagemeister brewery; during games ropes were set-up around the field and attendees either walked up or parked their cars nearby and used them for seats."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

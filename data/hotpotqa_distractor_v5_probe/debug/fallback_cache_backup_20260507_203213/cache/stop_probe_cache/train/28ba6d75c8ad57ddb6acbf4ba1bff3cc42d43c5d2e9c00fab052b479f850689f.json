@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Space Hulk",
+  "pred_answer": "Space Hulk",
+  "normalized_gold": "space hulk",
+  "normalized_pred": "space hulk",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b91c2554299042af8f784",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b91c2554299042af8f784::Space Hulk::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b91c2554299042af8f784::Komikan::14"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b91c2554299042af8f784::Space Hulk: Vengeance of the Blood Angels::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7b91c2554299042af8f784::Concept (board game)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7b91c2554299042af8f784::Komikan::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b91c2554299042af8f784::Space Hulk",
+        "5a7b91c2554299042af8f784::Concept (board game)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b91c2554299042af8f784::Space Hulk::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b91c2554299042af8f784::Komikan::14",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b91c2554299042af8f784::Space Hulk: Vengeance of the Blood Angels::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7b91c2554299042af8f784::Concept (board game)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7b91c2554299042af8f784::Komikan::7",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b91c2554299042af8f784::Komikan::7",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] J. I. Molina, in 1787, described it as ‘\"el artificioso juego del ajedrez, al cual dan el nombre de comican\"’ which translates to \"\"the ingenious game of chess to which they (the Mapuche) give the name comican\"\".\n[2] It was nominated for the Jeu de l'année prize in Cannes in 2014.\n[3] Space Hulk: Vengeance of the Blood Angels is a video game published by Electronic Arts in 1995 for the 3DO which was later ported to the PC, PlayStation, and Sega Saturn.\n[4] In Komikan, one player has only a single piece, usually called a \"puma\" or \"jaguar\", or \"\"kom ikelu\"\" (in Mapuche language \"the one which eats all\"), or \"leon\" (Spanish for lion), which can move one space at a time or capture the other player's pieces by hopping over them."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

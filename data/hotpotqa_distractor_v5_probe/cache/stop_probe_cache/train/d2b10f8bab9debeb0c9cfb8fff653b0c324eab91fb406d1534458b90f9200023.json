@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "airplane",
+  "pred_answer": "airplane",
+  "normalized_gold": "airplane",
+  "normalized_pred": "airplane",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a78d22c554299029c4b5ea9",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a78d22c554299029c4b5ea9::Octave Chanute::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a78d22c554299029c4b5ea9::Wright brothers::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a78d22c554299029c4b5ea9::Philip Orin Parmelee::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a78d22c554299029c4b5ea9::Octave Chanute",
+        "5a78d22c554299029c4b5ea9::Wright brothers"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a78d22c554299029c4b5ea9::Octave Chanute::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a78d22c554299029c4b5ea9::Wright brothers::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a78d22c554299029c4b5ea9::Philip Orin Parmelee::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a78d22c554299029c4b5ea9::Philip Orin Parmelee::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Philip Orin Parmelee (8 March 1887 – 1 June 1912) was an American aviation pioneer trained by the Wright brothers and credited with several early world aviation records and \"firsts\" in flight.\n[2] The Wright brothers, Orville (August 19, 1871 – January 30, 1948) and Wilbur (April 16, 1867 – May 30, 1912), were two American brothers, inventors, and aviation pioneers who are generally credited with inventing, building, and flying the world's first successful airplane.\n[3] Octave Chanute (February 18, 1832, Paris – November 23, 1910, Chicago, Illinois) was an American civil engineer and aviation pioneer, born in France."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

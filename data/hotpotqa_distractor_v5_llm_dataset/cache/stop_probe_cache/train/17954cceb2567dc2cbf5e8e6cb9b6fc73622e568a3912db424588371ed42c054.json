@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Kansas",
+  "pred_answer": "Kansas",
+  "normalized_gold": "kansas",
+  "normalized_pred": "kansas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8ee7285542990e94052baf",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8ee7285542990e94052baf::1957 Pittsburg State Gorillas football team::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8ee7285542990e94052baf::Ken Wilburn::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8ee7285542990e94052baf::Pittsburg State University::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8ee7285542990e94052baf::1941 NAIA Division I Men's Basketball Tournament::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8ee7285542990e94052baf::1957 Pittsburg State Gorillas football team",
+        "5a8ee7285542990e94052baf::Pittsburg State University"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8ee7285542990e94052baf::1957 Pittsburg State Gorillas football team::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8ee7285542990e94052baf::Ken Wilburn::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8ee7285542990e94052baf::Pittsburg State University::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8ee7285542990e94052baf::1941 NAIA Division I Men's Basketball Tournament::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8ee7285542990e94052baf::1941 NAIA Division I Men's Basketball Tournament::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It also was the first time that the tournament MVP was awarded to a player whose team did not win the championship, or make the NAIA Final Four (Charles Thomas played for Northwestern State University which lost in the second round to Texas Wesleyan University.\n[2] Pittsburg State University, also called Pitt State or PSU, is a public university with approximately 7,479 students (6,000 undergraduates and 1,400 graduate students) located in Pittsburg, Kansas, United States.\n[3] After setting the career scoring record at Central State University and leading his team to an NAIA championship, he played in the NBA, the ABA, the EPBL, and the EBA.\n[4] The 1957 Pittsburg State Gorillas football team represented Pittsburg State University during the 1957 NAIA football season."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

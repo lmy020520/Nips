@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Cleveland, Ohio",
+  "pred_answer": "Cleveland, Ohio",
+  "normalized_gold": "cleveland ohio",
+  "normalized_pred": "cleveland ohio",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85a1ce5542997175ce1fdf",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85a1ce5542997175ce1fdf::Zero Gravity Research Facility::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85a1ce5542997175ce1fdf::Dropping In Microgravity Environment::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85a1ce5542997175ce1fdf::Glenn Research Center::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85a1ce5542997175ce1fdf::Plum Brook Reactor::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85a1ce5542997175ce1fdf::Zero Gravity Research Facility",
+        "5a85a1ce5542997175ce1fdf::Glenn Research Center"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85a1ce5542997175ce1fdf::Zero Gravity Research Facility::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85a1ce5542997175ce1fdf::Dropping In Microgravity Environment::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85a1ce5542997175ce1fdf::Glenn Research Center::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85a1ce5542997175ce1fdf::Plum Brook Reactor::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85a1ce5542997175ce1fdf::Plum Brook Reactor::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Plum Brook Reactor was a NASA 60 megawatt water-cooled and moderated research nuclear reactor, located in Sandusky, Ohio, 50 mi west of the NASA Glenn Research Center (at that time the NASA Lewis Research Center) in Cleveland, of which it was organizationally a part.\n[2] NASA John H. Glenn Research Center at Lewis Field is a NASA center, located within the cities of Brook Park and Cleveland between Cleveland Hopkins International Airport and the Cleveland Metroparks's Rocky River Reservation, with a subsidiary facility in Sandusky, Ohio.\n[3] The teams prepare and submit proposals for research to be performed; four teams are selected to travel to the Glenn Research Center and perform their experiments at the Zero Gravity Research Facility, in the \"drop tower\", a deep shaft that can be completely depressurized and thus simulate microgravity when an object is in free fall in it.\n[4] The Zero Gravity Research Facility at the NASA Glenn Research Center in Cleveland, Ohio is a unique facility designed to perform tests in a reduced gravity environment."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

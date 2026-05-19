@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Harold Pinter",
+  "pred_answer": "Harold Pinter",
+  "normalized_gold": "harold pinter",
+  "normalized_pred": "harold pinter",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a86312155429960ec39b64b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a86312155429960ec39b64b::Harold Pinter::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a86312155429960ec39b64b::PEN Pinter Prize::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a86312155429960ec39b64b::Hugh MacDiarmid::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a86312155429960ec39b64b::Duncan Glen::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a86312155429960ec39b64b::Harold Pinter",
+        "5a86312155429960ec39b64b::Hugh MacDiarmid"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a86312155429960ec39b64b::Harold Pinter::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a86312155429960ec39b64b::PEN Pinter Prize::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a86312155429960ec39b64b::Hugh MacDiarmid::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a86312155429960ec39b64b::Duncan Glen::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a86312155429960ec39b64b::Duncan Glen::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He became known to the literary world through his first full-length book, \"Hugh MacDiarmid and the Scottish Renaissance\".\n[2] He is best known for his works written in 'synthetic Scots', a literary version of the Scots language that MacDiarmid himself developed.\n[3] The PEN Pinter Prize and the Pinter International Writer of Courage Award both comprise an annual literary award launched in 2009 by English PEN in honour of the late Nobel Literature Prize-winning playwright Harold Pinter, who had been a Vice President of English PEN and an active member of the International PEN Writers in Prison Committee (WiPC).\n[4] Harold Pinter ( ; 10 October 1930 – 24 December 2008) was a Nobel Prize-winning English playwright, screenwriter, director and actor."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

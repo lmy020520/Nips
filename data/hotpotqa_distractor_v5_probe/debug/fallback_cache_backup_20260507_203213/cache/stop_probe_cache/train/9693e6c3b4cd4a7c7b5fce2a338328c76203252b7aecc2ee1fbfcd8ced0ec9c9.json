@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "comedy",
+  "pred_answer": "comedy",
+  "normalized_gold": "comedy",
+  "normalized_pred": "comedy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3b7f95542990afbd1e1b7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3b7f95542990afbd1e1b7::Andy Bernard::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3b7f95542990afbd1e1b7::Product Recall::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3b7f95542990afbd1e1b7::AZFinText::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3b7f95542990afbd1e1b7::Andy Bernard",
+        "5ae3b7f95542990afbd1e1b7::Product Recall"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3b7f95542990afbd1e1b7::Andy Bernard::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3b7f95542990afbd1e1b7::Product Recall::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3b7f95542990afbd1e1b7::AZFinText::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3b7f95542990afbd1e1b7::AZFinText::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] This reduces the information lag-time problem evident in many similar systems where new information must be transcribed (e.g., such as losing a costly court battle or having a product recall), before the quant can react appropriately.\n[2] \"Product Recall\" is the twenty-first episode of the third season of the American comedy television series \"The Office\", and the show's forty-ninth episode overall.\n[3] Although throughout the ninth season, Andy's relationship with Wallace deteriorates from Andy's lack of focus and professionalism, eventually culminating in Andy's voluntary resignation, to his reinstatement as a salesman to his eventual firing again, after Andy begs David Wallace to fire him in order to pursue a singing career."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

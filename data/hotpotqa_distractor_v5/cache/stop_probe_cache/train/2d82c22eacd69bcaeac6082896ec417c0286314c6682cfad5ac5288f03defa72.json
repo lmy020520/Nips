@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Life After People",
+  "pred_answer": "Life After People",
+  "normalized_gold": "life after people",
+  "normalized_pred": "life after people",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a821da05542995ce29dccb0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a821da05542995ce29dccb0::Life After People::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a821da05542995ce29dccb0::Joshua ben Hananiah::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a821da05542995ce29dccb0::The Vanishing Prairie::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a821da05542995ce29dccb0::True-Life Adventures::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a821da05542995ce29dccb0::Life After People",
+        "5a821da05542995ce29dccb0::The Vanishing Prairie"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a821da05542995ce29dccb0::Life After People::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a821da05542995ce29dccb0::Joshua ben Hananiah::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a821da05542995ce29dccb0::The Vanishing Prairie::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a821da05542995ce29dccb0::True-Life Adventures::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a821da05542995ce29dccb0::True-Life Adventures::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] True-Life Adventures series is a collection of fourteen full length and short subject documentary films produced by Walt Disney Productions roughly between the years 1948 and 1960.\n[2] The Vanishing Prairie is a 1954 documentary film released by Walt Disney Productions.\n[3] His mother intended him for a life of study, and, as an older contemporary, Dosa ben Harkinas, relates (Jerusalem Talmud Yevamot 3a), she carried the child in his cradle into the synagogue, so that his ears might become accustomed to the sounds of the words of the Torah.\n[4] Life After People is a television series on which scientists, structural engineers, and other experts speculate about what might become of Earth should humanity instantly disappear."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

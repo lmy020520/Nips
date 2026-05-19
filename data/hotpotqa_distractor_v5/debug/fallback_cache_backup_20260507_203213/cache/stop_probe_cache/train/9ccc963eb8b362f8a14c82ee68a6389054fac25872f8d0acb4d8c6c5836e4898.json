@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Roland Emmerich",
+  "pred_answer": "Roland Emmerich",
+  "normalized_gold": "roland emmerich",
+  "normalized_pred": "roland emmerich",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab733205542992aa3b8c7ce",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab733205542992aa3b8c7ce::Igby Goes Down::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab733205542992aa3b8c7ce::Independence Day: Resurgence::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab733205542992aa3b8c7ce::Independence Day: Resurgence::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab733205542992aa3b8c7ce::Liam Hemsworth::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab733205542992aa3b8c7ce::Josh Willis (Neighbours)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab733205542992aa3b8c7ce::Independence Day: Resurgence",
+        "5ab733205542992aa3b8c7ce::Liam Hemsworth"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab733205542992aa3b8c7ce::Igby Goes Down::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab733205542992aa3b8c7ce::Independence Day: Resurgence::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab733205542992aa3b8c7ce::Independence Day: Resurgence::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab733205542992aa3b8c7ce::Liam Hemsworth::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab733205542992aa3b8c7ce::Josh Willis (Neighbours)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab733205542992aa3b8c7ce::Josh Willis (Neighbours)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Joshua Douglas \"Josh\" Willis is a fictional character from the Australian soap opera \"Neighbours\", played by Harley Bonner.\n[2] He played the role of Josh Taylor in the soap opera \"Neighbours\" and as Marcus on the children's television series \"The Elephant Princess\".\n[3] Independence Day: Resurgence is a 2016 American science fiction film written and directed by Roland Emmerich with co-writers Dean Devlin, Nicolas Wright, James A. Woods, and James Vanderbilt.\n[4] A sequel to the 1996 film \"Independence Day\", it stars an ensemble cast featuring Liam Hemsworth, Jeff Goldblum, Bill Pullman, Maika Monroe, Jessie Usher, Travis Tope, William Fichtner, Charlotte Gainsbourg, Judd Hirsch, Brent Spiner, and Sela Ward."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

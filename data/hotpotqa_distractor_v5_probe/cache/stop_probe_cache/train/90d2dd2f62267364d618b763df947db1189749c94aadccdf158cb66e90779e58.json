@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Nebula Award, the Philip K. Dick Award, and the Hugo Award",
+  "pred_answer": "Nebula Award, the Philip K. Dick Award, and the Hugo Award",
+  "normalized_gold": "nebula award the philip k dick award and the hugo award",
+  "normalized_pred": "nebula award the philip k dick award and the hugo award",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a848a5f5542992ef85e2420",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a848a5f5542992ef85e2420::Grimoire of Zero::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a848a5f5542992ef85e2420::Bobby Newmark::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a848a5f5542992ef85e2420::Neuromancer::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a848a5f5542992ef85e2420::Count Zero::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a848a5f5542992ef85e2420::Mona Lisa Overdrive::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a848a5f5542992ef85e2420::Neuromancer",
+        "5a848a5f5542992ef85e2420::Count Zero"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a848a5f5542992ef85e2420::Grimoire of Zero::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a848a5f5542992ef85e2420::Bobby Newmark::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a848a5f5542992ef85e2420::Neuromancer::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a848a5f5542992ef85e2420::Count Zero::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a848a5f5542992ef85e2420::Mona Lisa Overdrive::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a848a5f5542992ef85e2420::Mona Lisa Overdrive::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It is the final novel of the cyberpunk Sprawl trilogy, following \"Neuromancer\" and \"Count Zero\", taking place eight years after the events of the latter.\n[2] It is the second volume of the Sprawl trilogy, which begins with \"Neuromancer\" and concludes with \"Mona Lisa Overdrive\", and is an example of the cyberpunk subgenre.\n[3] It is one of the best-known works in the cyberpunk genre and the first novel to win the Nebula Award, the Philip K. Dick Award, and the Hugo Award.\n[4] His handle in the Matrix is \"Count Zero\", from which the novel derives its name."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

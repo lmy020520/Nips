@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Highway 654",
+  "pred_answer": "Highway 654",
+  "normalized_gold": "highway 654",
+  "normalized_pred": "highway 654",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac4f0f75542991943173a08",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac4f0f75542991943173a08::Ardath, Saskatchewan::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac4f0f75542991943173a08::Swanson, Saskatchewan::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac4f0f75542991943173a08::Canadian National Railway::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac4f0f75542991943173a08::Sand Hills, South Brunswick, New Jersey::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac4f0f75542991943173a08::Ardath, Saskatchewan",
+        "5ac4f0f75542991943173a08::Canadian National Railway"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac4f0f75542991943173a08::Ardath, Saskatchewan::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac4f0f75542991943173a08::Swanson, Saskatchewan::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac4f0f75542991943173a08::Canadian National Railway::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac4f0f75542991943173a08::Sand Hills, South Brunswick, New Jersey::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac4f0f75542991943173a08::Sand Hills, South Brunswick, New Jersey::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] There is a small cluster of houses and small businesses on Major Road just south of US 1 while more housing developments are found on the north side of the highway.\n[2] CN's slogan is \"\"North America's Railroad\"\".\n[3] The hamlet is located southwest of Saskatoon along Highway 45 along the Canadian National Railway, Delisle-Tichfield Junction stub.\n[4] Ardath is an unincorporated community in the west-central region of Saskatchewan located on Highway 654, along the Canadian National Railway, Delisle-Tichfield Junction stub."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

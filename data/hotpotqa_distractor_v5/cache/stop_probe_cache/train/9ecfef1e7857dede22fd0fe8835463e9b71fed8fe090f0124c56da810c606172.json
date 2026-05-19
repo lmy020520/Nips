@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Bloody Sunday",
+  "pred_answer": "Bloody Sunday",
+  "normalized_gold": "bloody sunday",
+  "normalized_pred": "bloody sunday",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77ed5f5542992a6e59e000",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77ed5f5542992a6e59e000::Bloody Sunday (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77ed5f5542992a6e59e000::Paul Greengrass::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77ed5f5542992a6e59e000::52nd Berlin International Film Festival::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77ed5f5542992a6e59e000::62nd Berlin International Film Festival::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77ed5f5542992a6e59e000::Bloody Sunday (film)",
+        "5a77ed5f5542992a6e59e000::52nd Berlin International Film Festival"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77ed5f5542992a6e59e000::Bloody Sunday (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77ed5f5542992a6e59e000::Paul Greengrass::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77ed5f5542992a6e59e000::52nd Berlin International Film Festival::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77ed5f5542992a6e59e000::62nd Berlin International Film Festival::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77ed5f5542992a6e59e000::62nd Berlin International Film Festival::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 62nd annual Berlin International Film Festival was held from 9 to 19 February 2012.\n[2] The 52nd annual Berlin International Film Festival was held from February 6 to 17, 2002.\n[3] His early film \"Bloody Sunday\" won the Golden Bear at 52nd Berlin International Film Festival.\n[4] Bloody Sunday is a 2002 film about the 1972 \"Bloody Sunday\" shootings in Derry, Northern Ireland."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

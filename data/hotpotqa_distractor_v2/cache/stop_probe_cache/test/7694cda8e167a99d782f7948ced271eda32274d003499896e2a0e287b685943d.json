@@ -1,0 +1,103 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "River Shiel",
+  "pred_answer": "River Shiel",
+  "normalized_gold": "river shiel",
+  "normalized_pred": "river shiel",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab678f455429954757d32d3",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab678f455429954757d32d3::Castle Tioram::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab678f455429954757d32d3::Loch Shiel::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab678f455429954757d32d3::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab678f455429954757d32d3::Loch Shiel::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab678f455429954757d32d3::Castle Tioram::2"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5ab678f455429954757d32d3::Castle Island, Scotland::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab678f455429954757d32d3::Castle Tioram::0",
+        "5ab678f455429954757d32d3::Loch Shiel::1",
+        "5ab678f455429954757d32d3::Loch Shiel",
+        "5ab678f455429954757d32d3::Castle Tioram"
+      ],
+      "k_br": 3.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab678f455429954757d32d3::Castle Tioram::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab678f455429954757d32d3::Loch Shiel::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab678f455429954757d32d3::Loch Shiel::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab678f455429954757d32d3::Castle Tioram::2",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5ab678f455429954757d32d3::Castle Island, Scotland::0",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5ab678f455429954757d32d3::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5ab678f455429954757d32d3::Castle Island, Scotland::0",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] Castle Island (Scottish Gaelic: \"Eilean a' Chaisteil\" ) or Allimturrail is a small tidal island, lying off the east coast of Little Cumbrae, and to the west of Trail Island, in the Firth of Clyde.\n[2] Though hidden from the sea, the castle controls access to Loch Shiel.\n[3] Loch Shiel (Scottish Gaelic: Loch Seile) is a 17+1/2 mi freshwater loch, 120 m (393 ft) deep, situated 12.4 miles west of Fort William in Lochaber, Highland, Scotland.\n[4] Its nature changes considerably along its length, being deep and enclosed by mountains in the north east and shallow surrounded by bog and rough pasture in the south west, from which end the 4 km River Shiel drains to the sea in Loch Moidart near Castle Tioram.\n\nNotes:\n[bridge] Castle Island is a small tidal island in the Firth of Clyde, described with Scottish Gaelic terms similar to Eilean Tioram."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

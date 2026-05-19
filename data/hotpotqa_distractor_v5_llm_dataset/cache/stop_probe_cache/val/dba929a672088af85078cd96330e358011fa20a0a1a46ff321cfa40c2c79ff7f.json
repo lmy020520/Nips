@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "171,400",
+  "pred_answer": "171,400",
+  "normalized_gold": "171400",
+  "normalized_pred": "171400",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6c4ec55429954757d3369",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6c4ec55429954757d3369::Paolo da San Leocadio::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6c4ec55429954757d3369::Avedøre::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6c4ec55429954757d3369::Reggio Emilia::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6c4ec55429954757d3369::Krakau, Saxony::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6c4ec55429954757d3369::Paolo da San Leocadio",
+        "5ab6c4ec55429954757d3369::Reggio Emilia"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6c4ec55429954757d3369::Paolo da San Leocadio::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6c4ec55429954757d3369::Avedøre::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6c4ec55429954757d3369::Reggio Emilia::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6c4ec55429954757d3369::Krakau, Saxony::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6c4ec55429954757d3369::Krakau, Saxony::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was located within the Sorbian area, where many inhabitants traditionally speak the West Slavic Sorbian language, and it shared its name with the much larger Polish city.\n[2] It has about 171,400 inhabitants and is the main \"comune\" (municipality) of the Province of Reggio Emilia.\n[3] The city has a relatively high rate of crime and many inhabitants are unemployed.\n[4] Pablo da San Leocadio or Paolo da Reggio (10 September 1447 – c. 1520) was an Italian painter from Reggio Emilia, who was mostly active in Spain."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

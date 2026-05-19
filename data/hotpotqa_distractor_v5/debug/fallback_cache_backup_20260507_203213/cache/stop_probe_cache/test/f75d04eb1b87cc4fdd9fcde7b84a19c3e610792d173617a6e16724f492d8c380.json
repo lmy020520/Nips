@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Armando Iannucci",
+  "pred_answer": "Armando Iannucci",
+  "normalized_gold": "armando iannucci",
+  "normalized_pred": "armando iannucci",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae11bc455429901ffe4ad94",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae11bc455429901ffe4ad94::Sufe Bradshaw::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae11bc455429901ffe4ad94::Veep::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae11bc455429901ffe4ad94::Veep::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae11bc455429901ffe4ad94::Sufe Bradshaw",
+        "5ae11bc455429901ffe4ad94::Veep"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae11bc455429901ffe4ad94::Sufe Bradshaw::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae11bc455429901ffe4ad94::Veep::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae11bc455429901ffe4ad94::Veep::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae11bc455429901ffe4ad94::Veep::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The series was created by Armando Iannucci as an adaptation of the British sitcom \"The Thick of It\".\n[2] Veep is an American political satire comedy television series, starring Julia Louis-Dreyfus, that premiered on HBO on April 22, 2012.\n[3] Sufe Bradshaw (pronounced \"Soo-fee\"; born April 16, 1986) is an American actress, best known for her role as Sue, the acerbic secretary and scheduler to Vice-President Selina Meyer, in the HBO comedy series \"Veep\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

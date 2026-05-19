@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "B1A4",
+  "pred_answer": "B1A4",
+  "normalized_gold": "b1a4",
+  "normalized_pred": "b1a4",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8260e355429966c78a6a06",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8260e355429966c78a6a06::Jung Jin-young (singer)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8260e355429966c78a6a06::Sweet Girl (EP)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8260e355429966c78a6a06::Let's Fly::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8260e355429966c78a6a06::Jung Jin-young (singer)",
+        "5a8260e355429966c78a6a06::Sweet Girl (EP)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8260e355429966c78a6a06::Jung Jin-young (singer)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8260e355429966c78a6a06::Sweet Girl (EP)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8260e355429966c78a6a06::Let's Fly::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8260e355429966c78a6a06::Let's Fly::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Let's Fly is the first mini-album released by B1A4 under WM Entertainment on April 21, 2011.\n[2] The title song of the album, \"Sweet Girl\", along with the other songs, was produced by leader Jinyoung.\n[3] Jung Jin-young (Hangul: 정진영 ; born November 18, 1991), professionally known as Jinyoung, is a South Korean singer, songwriter, record producer, and actor."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Raymond Wilson",
+  "pred_answer": "Raymond Wilson",
+  "normalized_gold": "raymond wilson",
+  "normalized_pred": "raymond wilson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7794f25542997042120aab",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7794f25542997042120aab::Ray Wilson Live::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7794f25542997042120aab::An Audience and Ray Wilson::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7794f25542997042120aab::Ray Wilson (musician)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7794f25542997042120aab::Lee Sung-min (singer)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7794f25542997042120aab::A Violent Prosecutor::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7794f25542997042120aab::Ray Wilson (musician)",
+        "5a7794f25542997042120aab::Lee Sung-min (singer)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7794f25542997042120aab::Ray Wilson Live::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7794f25542997042120aab::An Audience and Ray Wilson::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7794f25542997042120aab::Ray Wilson (musician)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7794f25542997042120aab::Lee Sung-min (singer)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7794f25542997042120aab::A Violent Prosecutor::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7794f25542997042120aab::A Violent Prosecutor::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] A Violent Prosecutor is a 2016 South Korean crime film directed by Lee Il-hyung, produced by Guk Su Ran and starring Hwang Jung-min, Kang Dong-won, Lee Sung-min and Park Sung-woong.\n[2] Lee Sung-min (born January 1, 1986) is a South Korean singer and actor.\n[3] Raymond Wilson (born 8 September 1968) is a Scottish musician, best known as vocalist in the post-grunge band Stiltskin, and in Genesis from 1996 to 1998.\n[4] An Audience and Ray Wilson is a live acoustic album by Ray Wilson released in 2006 prior to his reforming of Stiltskin."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

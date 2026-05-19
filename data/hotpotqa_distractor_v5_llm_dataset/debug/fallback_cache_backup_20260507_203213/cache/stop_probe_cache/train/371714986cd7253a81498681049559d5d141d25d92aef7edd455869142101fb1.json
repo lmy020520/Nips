@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Michael Antony Appleton",
+  "pred_answer": "Michael Antony Appleton",
+  "normalized_gold": "michael antony appleton",
+  "normalized_pred": "michael antony appleton",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84817d5542997175ce1ed1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84817d5542997175ce1ed1::2014–15 Oxford United F.C. season::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84817d5542997175ce1ed1::2014–15 Oxford City FC of Texas season::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84817d5542997175ce1ed1::Michael Appleton::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a84817d5542997175ce1ed1::List of Oxford United F.C. players::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84817d5542997175ce1ed1::2014–15 Oxford United F.C. season",
+        "5a84817d5542997175ce1ed1::Michael Appleton"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84817d5542997175ce1ed1::2014–15 Oxford United F.C. season::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84817d5542997175ce1ed1::2014–15 Oxford City FC of Texas season::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84817d5542997175ce1ed1::Michael Appleton::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a84817d5542997175ce1ed1::List of Oxford United F.C. players::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84817d5542997175ce1ed1::List of Oxford United F.C. players::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Oxford United F.C. is an English professional association football club based in Oxford.\n[2] Michael Antony Appleton (born 4 December 1975) is an English football coach and former player who is currently the assistant manager of Leicester City.\n[3] The 2014–15 Oxford City FC of Texas season was the third season for the Beaumont, Texas-based professional indoor soccer franchise.\n[4] The 2014–15 season was Oxford United's fifth season in League Two after returning from the Conference, and their first under new manager Michael Appleton."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

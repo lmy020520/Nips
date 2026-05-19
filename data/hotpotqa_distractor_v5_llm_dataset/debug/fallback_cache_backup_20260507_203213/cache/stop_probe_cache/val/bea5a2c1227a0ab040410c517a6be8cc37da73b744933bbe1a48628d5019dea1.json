@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Glee",
+  "pred_answer": "Glee",
+  "normalized_gold": "glee",
+  "normalized_pred": "glee",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a78e510554299029c4b5ece",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a78e510554299029c4b5ece::Furt::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a78e510554299029c4b5ece::Chris Colfer::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a78e510554299029c4b5ece::The Dalton Academy Warblers::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a78e510554299029c4b5ece::Furt",
+        "5a78e510554299029c4b5ece::Chris Colfer"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a78e510554299029c4b5ece::Furt::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a78e510554299029c4b5ece::Chris Colfer::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a78e510554299029c4b5ece::The Dalton Academy Warblers::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a78e510554299029c4b5ece::The Dalton Academy Warblers::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Dalton Academy Warblers are a fictional a cappella glee club from the private school Dalton Academy, located in Westerville, Ohio.\n[2] Christopher Paul Colfer (born May 27, 1990) is a Golden Globe Award winning American actor, singer, and Number 1 New York Times Bestselling writer.\n[3] The long-anticipated wedding of Burt Hummel (Mike O'Malley) and Carole Hudson (Romy Rosemont) is also featured, and the bullying storyline reaches a climax that results in Kurt (Chris Colfer) transferring from McKinley High to Dalton Academy at the end of the episode."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

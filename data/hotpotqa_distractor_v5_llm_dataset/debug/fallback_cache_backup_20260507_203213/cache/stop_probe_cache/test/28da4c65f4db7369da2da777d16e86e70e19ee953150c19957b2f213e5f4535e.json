@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Serial",
+  "pred_answer": "Serial",
+  "normalized_gold": "serial",
+  "normalized_pred": "serial",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7568175542992d0ec05f88",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7568175542992d0ec05f88::L'Élève Ducobu (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7568175542992d0ec05f88::Julia Piaton::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7568175542992d0ec05f88::Julia Piaton::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7568175542992d0ec05f88::Serial (Bad) Weddings::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7568175542992d0ec05f88::The Love Game::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7568175542992d0ec05f88::Julia Piaton",
+        "5a7568175542992d0ec05f88::Serial (Bad) Weddings"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7568175542992d0ec05f88::L'Élève Ducobu (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7568175542992d0ec05f88::Julia Piaton::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7568175542992d0ec05f88::Julia Piaton::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7568175542992d0ec05f88::Serial (Bad) Weddings::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7568175542992d0ec05f88::The Love Game::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7568175542992d0ec05f88::The Love Game::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Love Game (French: Les Jeux de l'amour ) is a 1960 French comedy film directed by Philippe de Broca.\n[2] is a French comedy film directed by Philippe de Chauveron released in 2014.\n[3] She is known for playing the role of Odile in \"Serial (Bad) Weddings\".\n[4] Julia Piaton (born 29 January 1985) is a French actress."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

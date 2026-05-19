@@ -1,0 +1,96 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Spice Hotel",
+  "pred_answer": "Hitam Putih Talk show",
+  "normalized_gold": "spice hotel",
+  "normalized_pred": "hitam putih talk show",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "The evidence shows that Evan Stone hosted 'Spice Hotel' and that Jessica Drake is an American pornographic actress, but it does not confirm that Evan Stone is Jessica Drake's ex-husband. The chunk about Evan Stone states 'In 2002 he married Jessica Drake, whom he has since divorced,' which is not present in the selected chunks. The selected chunks only mention Evan Stone hosting 'Spice Hotel' and Jessica Drake's profession, but the marriage/divorce link is missing.",
+  "missing_support_reasons": [
+    "The selected chunks do not contain evidence that Evan Stone is Jessica Drake's ex-husband. The chunk about Evan Stone in the selected chunks does not include the marriage/divorce information; it only mentions his hosting of 'Spice Hotel'. The chunk about Jessica Drake only states her profession. Therefore, the bridge hop (ex-husband relationship) is not supported."
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "The evidence shows that Evan Stone hosted 'Spice Hotel' and that Jessica Drake is an American pornographic actress, but it does not confirm that Evan Stone is Jessica Drake's ex-husband. The chunk about Evan Stone states 'In 2002 he married Jessica Drake, whom he has since divorced,' which is not present in the selected chunks. The selected chunks only mention Evan Stone hosting 'Spice Hotel' and Jessica Drake's profession, but the marriage/divorce link is missing.",
+    "missing_support_reasons": [
+      "The selected chunks do not contain evidence that Evan Stone is Jessica Drake's ex-husband. The chunk about Evan Stone in the selected chunks does not include the marriage/divorce information; it only mentions his hosting of 'Spice Hotel'. The chunk about Jessica Drake only states her profession. Therefore, the bridge hop (ex-husband relationship) is not supported."
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5ae43a2e55429970de88d921",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae43a2e55429970de88d921::The Look for Less::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae43a2e55429970de88d921::I Wanna Be a Soap Star::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae43a2e55429970de88d921::Evan Stone::5"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae43a2e55429970de88d921::Jessica Drake::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae43a2e55429970de88d921::Sisca Jessica::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae43a2e55429970de88d921::Evan Stone",
+        "5ae43a2e55429970de88d921::Jessica Drake"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae43a2e55429970de88d921::The Look for Less::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae43a2e55429970de88d921::I Wanna Be a Soap Star::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae43a2e55429970de88d921::Evan Stone::5",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae43a2e55429970de88d921::Jessica Drake::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae43a2e55429970de88d921::Sisca Jessica::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae43a2e55429970de88d921::Sisca Jessica::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Sisca Jessica (also known as Chika Jessica, born April 25, 1988) is an Indonesian actress best known for her work as a co-host in Hitam Putih Talk show hosted by Deddy Corbuzier.\n[2] Jessica Drake (born October 14, 1974) is an American pornographic actress and sex educator.\n[3] In 2011, he was named by CNBC as one of the 12 most popular stars in porn, being the only man on the list.\n[4] The show is hosted by \"All My Children\" star and ex-\"Dancing with the Stars\" participant, Cameron Mathison."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

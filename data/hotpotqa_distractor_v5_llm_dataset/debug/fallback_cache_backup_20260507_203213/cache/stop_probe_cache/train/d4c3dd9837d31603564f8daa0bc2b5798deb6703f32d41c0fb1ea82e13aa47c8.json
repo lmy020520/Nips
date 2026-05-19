@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the King had been taken ill",
+  "pred_answer": "the King had been taken ill",
+  "normalized_gold": "the king had been taken ill",
+  "normalized_pred": "the king had been taken ill",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5aba706455429955dce3ee26",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5aba706455429955dce3ee26::Thomas Cook (English politician)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5aba706455429955dce3ee26::1902 Coronation Honours::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5aba706455429955dce3ee26::1902 Coronation Honours::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5aba706455429955dce3ee26::Edward VII::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5aba706455429955dce3ee26::1902 State Landau::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5aba706455429955dce3ee26::1902 Coronation Honours",
+        "5aba706455429955dce3ee26::Edward VII"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5aba706455429955dce3ee26::Thomas Cook (English politician)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5aba706455429955dce3ee26::1902 Coronation Honours::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5aba706455429955dce3ee26::1902 Coronation Honours::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5aba706455429955dce3ee26::Edward VII::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5aba706455429955dce3ee26::1902 State Landau::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5aba706455429955dce3ee26::1902 State Landau::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It was built in 1902 for the coronation of King Edward VII and Queen Alexandra, and nowadays is most often seen during State visits conveying Elizabeth II and the visiting head of state to Buckingham Palace (or Windsor Castle) at the head of a procession of carriages.\n[2] Edward VII (Albert Edward; 9 November 1841 – 6 May 1910) was King of the United Kingdom and the British Dominions and Emperor of India from 22 January 1901 until his death in 1910.\n[3] The coronation was postponed because the King had been taken ill two days before, but he ordered that the honours list should be published on that day anyway.\n[4] The 1902 Coronation Honours were announced on 26 June 1902, the date originally set for the coronation of King Edward VII."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

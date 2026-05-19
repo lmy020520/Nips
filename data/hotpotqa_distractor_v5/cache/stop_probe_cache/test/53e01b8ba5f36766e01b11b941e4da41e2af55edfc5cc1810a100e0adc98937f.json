@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Berea College",
+  "pred_answer": "Berea College",
+  "normalized_gold": "berea college",
+  "normalized_pred": "berea college",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6ff3a5542991d3222372a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6ff3a5542991d3222372a::James Fieser::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6ff3a5542991d3222372a::Work college::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6ff3a5542991d3222372a::Berea College::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6ff3a5542991d3222372a::Macalester College::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6ff3a5542991d3222372a::James Fieser",
+        "5ab6ff3a5542991d3222372a::Berea College"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6ff3a5542991d3222372a::James Fieser::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6ff3a5542991d3222372a::Work college::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6ff3a5542991d3222372a::Berea College::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6ff3a5542991d3222372a::Macalester College::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6ff3a5542991d3222372a::Macalester College::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 2015, \"U.S. News & World Report\" ranked Macalester as tied for the 23rd best liberal arts college in the United States, 6th for undergraduate teaching at a national liberal arts college, and 19th for best value at a national liberal arts college.\n[2] Berea College is a liberal arts work college in the city of Berea, in the U.S. state of Kentucky.\n[3] Work colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service.\n[4] He received his B.A. from Berea College, and his M.A. and Ph.D. in philosophy from Purdue University."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

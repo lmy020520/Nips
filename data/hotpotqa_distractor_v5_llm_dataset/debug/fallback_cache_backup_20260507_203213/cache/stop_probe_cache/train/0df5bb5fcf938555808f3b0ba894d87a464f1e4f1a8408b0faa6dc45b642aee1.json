@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1998 and 1999",
+  "pred_answer": "1998 and 1999",
+  "normalized_gold": "1998 and 1999",
+  "normalized_pred": "1998 and 1999",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a905b205542995651fb5146",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a905b205542995651fb5146::Mika Häkkinen::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a905b205542995651fb5146::McLaren MP4/3::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a905b205542995651fb5146::McLaren MP4/13::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a905b205542995651fb5146::McLaren MP4/9::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a905b205542995651fb5146::Mika Häkkinen",
+        "5a905b205542995651fb5146::McLaren MP4/13"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a905b205542995651fb5146::Mika Häkkinen::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a905b205542995651fb5146::McLaren MP4/3::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a905b205542995651fb5146::McLaren MP4/13::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a905b205542995651fb5146::McLaren MP4/9::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a905b205542995651fb5146::McLaren MP4/9::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The McLaren MP4/9 was a Formula One car designed by Neil Oatley for the 1994 Formula One season and was run by the Marlboro McLaren Team.\n[2] The McLaren MP4/13 was a racing car that the McLaren Formula One team used during the 1998 Formula 1 season.\n[3] The McLaren MP4/3 is a Formula One racing car built and run by McLaren International during the 1987 Formula One World Championship.\n[4] He was the 1998 and 1999 Formula One World Champion, driving for McLaren and has been ranked among the greatest Formula One drivers in various motorsport polls."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

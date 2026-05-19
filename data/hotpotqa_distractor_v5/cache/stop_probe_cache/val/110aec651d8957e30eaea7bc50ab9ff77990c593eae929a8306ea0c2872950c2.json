@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "five",
+  "pred_answer": "five",
+  "normalized_gold": "five",
+  "normalized_pred": "five",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae606ca55429929b0807a69",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae606ca55429929b0807a69::Cuisine of Hawaii::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae606ca55429929b0807a69::Native cuisine of Hawaii::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae606ca55429929b0807a69::Cuisine of Hawaii::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae606ca55429929b0807a69::Polynesian navigation::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae606ca55429929b0807a69::Radiocarbon dating in Hawaii::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae606ca55429929b0807a69::Cuisine of Hawaii",
+        "5ae606ca55429929b0807a69::Polynesian navigation"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae606ca55429929b0807a69::Cuisine of Hawaii::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae606ca55429929b0807a69::Native cuisine of Hawaii::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae606ca55429929b0807a69::Cuisine of Hawaii::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae606ca55429929b0807a69::Polynesian navigation::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae606ca55429929b0807a69::Radiocarbon dating in Hawaii::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae606ca55429929b0807a69::Radiocarbon dating in Hawaii::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] However, with more testing and refined samples, including chronologically tracing settlements in Society Islands and the Marquesas, two archipelagoes which have long been considered to be the immediate source regions for the first Polynesian voyagers to Hawaii, it has been concluded that the settlement of the Hawaiian Islands took place around 1219 to 1266 AD, with the paleo-environmental evidence\n[2] Navigators travelled to small inhabited islands using wayfinding techniques and knowledge passed by oral tradition from master to apprentice, often in the form of song.\n[3] The cuisine of Hawaii incorporates five distinct styles of food reflecting the diverse food history of settlement and immigration in the Hawaiian Islands.\n[4] The earliest Polynesian seafarers are believed to have arrived on the Hawaiian Islands in 300–500 AD."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

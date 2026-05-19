@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Science of Sleep",
+  "pred_answer": "The Science of Sleep",
+  "normalized_gold": "the science of sleep",
+  "normalized_pred": "the science of sleep",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adfb06e55429942ec259af5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adfb06e55429942ec259af5::The Science of Sleep (soundtrack)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adfb06e55429942ec259af5::The Science of Sleep::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adfb06e55429942ec259af5::Jean-Michel Bernard::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adfb06e55429942ec259af5::Aurélia Petit::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adfb06e55429942ec259af5::The Science of Sleep",
+        "5adfb06e55429942ec259af5::Jean-Michel Bernard"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adfb06e55429942ec259af5::The Science of Sleep (soundtrack)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adfb06e55429942ec259af5::The Science of Sleep::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adfb06e55429942ec259af5::Jean-Michel Bernard::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adfb06e55429942ec259af5::Aurélia Petit::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adfb06e55429942ec259af5::Aurélia Petit::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 2006 she played the clerk \"Martine\" in the film The Science of Sleep by Michel Gondry.\n[2] He is well known for regularly writing, performing, and scoring for films, such as \"The Science of Sleep\", \"Hugo\", \"Paris-Manhattan\", \"Ca$h\", and \"Be Kind Rewind\".\n[3] The Science of Sleep (French: \"La Science des rêves\", literally \"The Science of Dreams\") is a 2006 surrealistic science fantasy comedy film written and directed by Michel Gondry.\n[4] The Science of Sleep is the soundtrack album to the Michel Gondry film of the same name."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Roger Avary",
+  "pred_answer": "Roger Avary",
+  "normalized_gold": "roger avary",
+  "normalized_pred": "roger avary",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf4bff5542995ec70e8fb8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf4bff5542995ec70e8fb8::The Rules of Attraction (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf4bff5542995ec70e8fb8::Sameer Iqbal Patel::7"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf4bff5542995ec70e8fb8::Ian Somerhalder::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf4bff5542995ec70e8fb8::Hu Bing::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf4bff5542995ec70e8fb8::The Rules of Attraction (film)",
+        "5adf4bff5542995ec70e8fb8::Ian Somerhalder"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf4bff5542995ec70e8fb8::The Rules of Attraction (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf4bff5542995ec70e8fb8::Sameer Iqbal Patel::7",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf4bff5542995ec70e8fb8::Ian Somerhalder::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf4bff5542995ec70e8fb8::Hu Bing::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf4bff5542995ec70e8fb8::Hu Bing::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Hu started his transition from the fashion runway to the TV screen in 1996 and became a household name after the success of the TV drama \"Love Talks\" (1999), in which he played the male leading role.\n[2] He is known for playing Boone Carlyle in the TV drama \"Lost\" and Damon Salvatore in The CW's supernatural drama \"The Vampire Diaries\".\n[3] After 'Hotel Beautifool', Sameer has started working on his next project, a Hindi feature film named Tata Goodbye, a black comedy.\n[4] The Rules of Attraction is a 2002 black comedy film written and directed by Roger Avary, based on the novel of the same name by Bret Easton Ellis."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

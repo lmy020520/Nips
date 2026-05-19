@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"Band of Brothers\"",
+  "pred_answer": "\"Band of Brothers\"",
+  "normalized_gold": "band of brothers",
+  "normalized_pred": "band of brothers",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8ad0de554299515336138a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8ad0de554299515336138a::Damian Lewis::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8ad0de554299515336138a::Norman Dike::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8ad0de554299515336138a::Richard Winters::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8ad0de554299515336138a::Ronald Speirs::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8ad0de554299515336138a::Damian Lewis",
+        "5a8ad0de554299515336138a::Richard Winters"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8ad0de554299515336138a::Damian Lewis::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8ad0de554299515336138a::Norman Dike::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8ad0de554299515336138a::Richard Winters::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8ad0de554299515336138a::Ronald Speirs::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8ad0de554299515336138a::Ronald Speirs::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He was initially assigned as a platoon leader in B Company of the 1st Battalion of the 506th Parachute Infantry Regiment.\n[2] He is best known for commanding Easy Company of the 2nd Battalion, 506th Parachute Infantry Regiment, part of the 101st Airborne Division, during World War II, eventually being promoted to major rising to command of the entire 2nd Battalion.\n[3] During World War II he was a lieutenant and captain in the 101st Airborne Division, where one assignment was company commander of Easy Company, 2nd Battalion, 506th Parachute Infantry Regiment.\n[4] He played U.S. Army Major Richard Winters in the HBO miniseries \"Band of Brothers\", which earned him a Golden Globe nomination, and also portrayed U.S. Marine Sergeant Nicholas Brody in the Showtime series \"Homeland\" (which earned him a Primetime Emmy Award and a Golden Globe Award)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

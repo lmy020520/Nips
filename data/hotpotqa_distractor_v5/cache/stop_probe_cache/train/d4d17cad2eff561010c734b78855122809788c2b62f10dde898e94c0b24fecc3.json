@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Hong Kong",
+  "pred_answer": "Hong Kong",
+  "normalized_gold": "hong kong",
+  "normalized_pred": "hong kong",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "yes_no_both_entities_supported",
+  "support_evidence_summary": "Evidence shows Hong Kong population ~7.2 million and Wuzhong population 1.3 million, so Hong Kong has larger population.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "yes_no_both_entities_supported",
+    "support_evidence_summary": "Evidence shows Hong Kong population ~7.2 million and Wuzhong population 1.3 million, so Hong Kong has larger population.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74821055429929fddd845e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74821055429929fddd845e::Wuzhong, Ningxia::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74821055429929fddd845e::Sha Tin District::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74821055429929fddd845e::Hong Kong::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74821055429929fddd845e::New Territories::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74821055429929fddd845e::Wuzhong, Ningxia",
+        "5a74821055429929fddd845e::Hong Kong"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74821055429929fddd845e::Wuzhong, Ningxia::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74821055429929fddd845e::Sha Tin District::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74821055429929fddd845e::Hong Kong::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74821055429929fddd845e::New Territories::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74821055429929fddd845e::New Territories::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It makes up 86.2% of Hong Kong's territory, and contains around half of the population of Hong Kong.\n[2] With around 7.2 million Hong Kongers of various nationalities in a territory of 1,104 km, Hong Kong is the world's fourth most densely populated country or territory.\n[3] The district is the most populous district in Hong Kong, with a population of 630,273, having a larger population than many countries or dependencies including Iceland, Macau, Montenegro and Brunei.\n[4] In 2010, Wuzhong had a population of 1.3 million."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

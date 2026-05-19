@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "author",
+  "pred_answer": "author",
+  "normalized_gold": "author",
+  "normalized_pred": "author",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89f6b65542992e4fca84b7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89f6b65542992e4fca84b7::Edith Hamilton::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89f6b65542992e4fca84b7::The Counterfeiters (novel)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89f6b65542992e4fca84b7::André Gide::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a89f6b65542992e4fca84b7::Strait is the Gate::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89f6b65542992e4fca84b7::Edith Hamilton",
+        "5a89f6b65542992e4fca84b7::André Gide"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89f6b65542992e4fca84b7::Edith Hamilton::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89f6b65542992e4fca84b7::The Counterfeiters (novel)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89f6b65542992e4fca84b7::André Gide::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a89f6b65542992e4fca84b7::Strait is the Gate::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a89f6b65542992e4fca84b7::Strait is the Gate::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Strait is the Gate (French: La Porte Étroite ) is a 1909 French novel written by André Gide.\n[2] André Paul Guillaume Gide (] ; 22 November 1869 – 19 February 1951) was a French author and winner of the Nobel Prize in Literature in 1947 \"for his comprehensive and artistically significant writings, in which human problems and conditions have been presented with a fearless love of truth and keen psychological insight\".\n[3] With many characters and crisscrossing plotlines, its main theme is that of the original and the copy, and what differentiates them – both in the external plot of the counterfeit gold coins and in the portrayal of the characters' feelings and their relationships.\n[4] Edith Hamilton (August 12, 1867 – May 31, 1963) was an American educator and internationally-known author who was the most renowned classicist of her era."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

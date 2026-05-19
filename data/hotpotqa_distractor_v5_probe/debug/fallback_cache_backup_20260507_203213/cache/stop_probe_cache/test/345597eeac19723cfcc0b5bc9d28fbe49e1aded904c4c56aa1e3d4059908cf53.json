@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mumbai",
+  "pred_answer": "Mumbai",
+  "normalized_gold": "mumbai",
+  "normalized_pred": "mumbai",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74106b55429979e288289e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74106b55429979e288289e::Alec Muffett::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74106b55429979e288289e::Sachin Warrier::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74106b55429979e288289e::Tata Consultancy Services::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74106b55429979e288289e::Wes McKinney::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74106b55429979e288289e::Sachin Warrier",
+        "5a74106b55429979e288289e::Tata Consultancy Services"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74106b55429979e288289e::Alec Muffett::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74106b55429979e288289e::Sachin Warrier::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74106b55429979e288289e::Tata Consultancy Services::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74106b55429979e288289e::Wes McKinney::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74106b55429979e288289e::Wes McKinney::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He worked as a software engineer for Cloudera following their acquisition of Datapad in 2014.\n[2] Tata Consultancy Services Limited (TCS) is an Indian multinational information technology (IT) service, consulting and business solutions company Headquartered in Mumbai, Maharashtra.\n[3] His latest work is as a composer for the movie Aanandam.\n[4] He worked as a Software Engineer for Facebook."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

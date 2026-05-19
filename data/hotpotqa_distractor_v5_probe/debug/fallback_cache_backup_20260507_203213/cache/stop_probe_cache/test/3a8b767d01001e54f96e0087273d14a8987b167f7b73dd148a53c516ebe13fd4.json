@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Margaret Thatcher",
+  "pred_answer": "Margaret Thatcher",
+  "normalized_gold": "margaret thatcher",
+  "normalized_pred": "margaret thatcher",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8e8bed5542990e94052b47",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8e8bed5542990e94052b47::Conservative Party (UK)::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8e8bed5542990e94052b47::John Major::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8e8bed5542990e94052b47::United Kingdom local elections, 1991::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8e8bed5542990e94052b47::Clement Attlee::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8e8bed5542990e94052b47::John Major",
+        "5a8e8bed5542990e94052b47::United Kingdom local elections, 1991"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8e8bed5542990e94052b47::Conservative Party (UK)::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8e8bed5542990e94052b47::John Major::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8e8bed5542990e94052b47::United Kingdom local elections, 1991::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8e8bed5542990e94052b47::Clement Attlee::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8e8bed5542990e94052b47::Clement Attlee::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Clement Richard Attlee, 1st Earl Attlee, {'1': \", '2': \", '3': \", '4': \"} (3 January 1883 – 8 October 1967) was a British Labour politician who served as Prime Minister of the United Kingdom from 1945 to 1951 and Leader of the Labour Party from 1935 to 1955.\n[2] The results were a setback for the governing Conservative Party, who were left with their lowest number of councillors since 1973 - though their popular vote was an improvement from the 1990 local elections (John Major had succeeded Margaret Thatcher as prime minister in November 1990), and the Conservatives would go on to win the general election in 1992.\n[3] Sir John Major, {'1': \", '2': \", '3': \", '4': \"} (born 29 March 1943) is a British politician who was Prime Minister of the United Kingdom and Leader of the Conservative Party from 1990 to 1997.\n[4] The party leader, Theresa May, has served as both Leader of the Conservative Party and Prime Minister since 13 July 2016."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1866 to 1868",
+  "pred_answer": "1866 to 1868",
+  "normalized_gold": "1866 to 1868",
+  "normalized_pred": "1866 to 1868",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8ae39655429951533613a1",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8ae39655429951533613a1::Arapaho::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8ae39655429951533613a1::Red Cloud's War::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8ae39655429951533613a1::Arapaho music::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8ae39655429951533613a1::Arapaho",
+        "5a8ae39655429951533613a1::Red Cloud's War"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8ae39655429951533613a1::Arapaho::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8ae39655429951533613a1::Red Cloud's War::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8ae39655429951533613a1::Arapaho music::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8ae39655429951533613a1::Arapaho music::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Arapaho are a tribe of Native Americans from the western Great Plains, in the area of eastern Colorado and Wyoming.\n[2] Red Cloud's War (also referred to as the Bozeman War or the Powder River War) was an armed conflict between the Lakota, Northern Cheyenne, and Northern Arapaho on one side and the United States in Wyoming and Montana territories from 1866 to 1868.\n[3] The Arapaho ( ; in French: \"Arapahos, Gens de Vache\") are a tribe of Native Americans historically living on the plains of Colorado and Wyoming."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

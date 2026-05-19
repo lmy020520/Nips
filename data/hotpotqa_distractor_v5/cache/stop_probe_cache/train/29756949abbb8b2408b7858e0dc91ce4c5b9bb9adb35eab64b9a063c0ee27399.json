@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "My Wife Is a Gangster 3",
+  "pred_answer": "My Wife Is a Gangster 3",
+  "normalized_gold": "my wife is a gangster 3",
+  "normalized_pred": "my wife is a gangster 3",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7ccd2a554299683c1c6385",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7ccd2a554299683c1c6385::My Wife Is a Gangster 3::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7ccd2a554299683c1c6385::Singh Is Bliing::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7ccd2a554299683c1c6385::Arfi Lamba::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7ccd2a554299683c1c6385::My Wife Is a Gangster 3",
+        "5a7ccd2a554299683c1c6385::Singh Is Bliing"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7ccd2a554299683c1c6385::My Wife Is a Gangster 3::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7ccd2a554299683c1c6385::Singh Is Bliing::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7ccd2a554299683c1c6385::Arfi Lamba::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7ccd2a554299683c1c6385::Arfi Lamba::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He is known for his role in the action-comedy film \"Singh Is Bliing\", directed by Prabhu Deva and co-starring Akshay Kumar, Amy Jackson, Lara Dutta and Kay Kay Menon.\n[2] The movie was a remake of the Korean movie \"My Wife Is a Gangster 3\" and the film features Akshay Kumar, Amy Jackson, Lara Dutta and Kay Kay Menon in leading roles.\n[3] It is a sequel to \"My Wife is a Gangster 2\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

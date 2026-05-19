@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Flashdance",
+  "pred_answer": "Flashdance",
+  "normalized_gold": "flashdance",
+  "normalized_pred": "flashdance",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abed76b5542990832d3a0f4",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abed76b5542990832d3a0f4::Flashdance::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abed76b5542990832d3a0f4::Don Simpson::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abed76b5542990832d3a0f4::Tom Cruise filmography::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abed76b5542990832d3a0f4::Flashdance",
+        "5abed76b5542990832d3a0f4::Don Simpson"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abed76b5542990832d3a0f4::Flashdance::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abed76b5542990832d3a0f4::Don Simpson::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abed76b5542990832d3a0f4::Tom Cruise filmography::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abed76b5542990832d3a0f4::Tom Cruise filmography::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Two years later he made his breakthrough by starring in the romantic comedy \"Risky Business\" (1983), which garnered Cruise his first nomination for the Golden Globe Award for Best Actor – Motion Picture Musical or Comedy.\n[2] Donald Clarence \"Don\" Simpson (October 29, 1943 – January 19, 1996) was an American film producer, screenwriter, and actor.\n[3] Flashdance is a 1983 American romantic drama film directed by Adrian Lyne."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

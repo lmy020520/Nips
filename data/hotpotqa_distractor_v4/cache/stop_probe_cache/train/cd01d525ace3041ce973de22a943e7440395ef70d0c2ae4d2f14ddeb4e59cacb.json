@@ -1,0 +1,94 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Kentucky",
+  "pred_answer": "Kentucky",
+  "normalized_gold": "kentucky",
+  "normalized_pred": "kentucky",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "The evidence explicitly states that Jim Garland was from eastern Kentucky and was involved in the Harlan County War, which took place in Harlan County, Kentucky. Both entities are linked to Kentucky through direct statements in the provided chunks.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "The evidence explicitly states that Jim Garland was from eastern Kentucky and was involved in the Harlan County War, which took place in Harlan County, Kentucky. Both entities are linked to Kentucky through direct statements in the provided chunks.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7d346554299366779400b",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7d346554299366779400b::Harlan County War::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7d346554299366779400b::Jim Garland::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7d346554299366779400b::Harlan County War::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab7d346554299366779400b::derived::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab7d346554299366779400b::Battle of Evarts::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7d346554299366779400b::Harlan County War::0",
+        "5ab7d346554299366779400b::Jim Garland::0",
+        "5ab7d346554299366779400b::Harlan County War"
+      ],
+      "k_br": 0.0,
+      "k_dis": 1.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7d346554299366779400b::Harlan County War::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7d346554299366779400b::Jim Garland::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7d346554299366779400b::Harlan County War::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab7d346554299366779400b::Battle of Evarts::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5ab7d346554299366779400b::derived::0",
+          "added_step": 3
+        }
+      ],
+      "last_added_unit_id": "5ab7d346554299366779400b::Battle of Evarts::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Before its conclusion, two acclaimed folk singers would emerge, state and federal troops would occupy the county more than half a dozen times, an indeterminate\n[2] The Battle of Evarts is the name given to a mining strike and ensuing violence that occurred in Harlan County, Kentucky, in 1931.\n[3] The question at hand: the rights of Harlan County coal miners to organize their workplaces and better their wages and working conditions.\n[4] Jim Garland (April 8, 1905 – September 6, 1978) was a songwriter from the coal mining country of eastern Kentucky, where he was involved with the communist-led\n\nNotes:\n[bridge] The Harlan County War involved events in Harlan County, Kentucky, as indicated by the mention of state and federal troops occupying the county."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

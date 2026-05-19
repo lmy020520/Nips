@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1952 to 1996",
+  "pred_answer": "1952 to 1996",
+  "normalized_gold": "1952 to 1996",
+  "normalized_pred": "1952 to 1996",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd289e5542993062266ba9",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd289e5542993062266ba9::Jack Entratter::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd289e5542993062266ba9::Sands Hotel and Casino::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd289e5542993062266ba9::Carl Cohen (businessman)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd289e5542993062266ba9::Jack Entratter",
+        "5abd289e5542993062266ba9::Sands Hotel and Casino"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd289e5542993062266ba9::Jack Entratter::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd289e5542993062266ba9::Sands Hotel and Casino::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd289e5542993062266ba9::Carl Cohen (businessman)::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd289e5542993062266ba9::Carl Cohen (businessman)::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Moving to Las Vegas, he became casino manager for the El Rancho Vegas in the 1940s and the Sands Hotel and Casino in the 1950s; he also had a controlling interest in both resorts.\n[2] The Sands Hotel and Casino was a historic hotel and casino on the Las Vegas Strip in Nevada, United States, that operated from 1952 to 1996.\n[3] He is best known for management positions at the Copacabana nightclub in New York City in the 1940s and early 1950s, and at the iconic Sands Hotel and Casino in Las Vegas from the early 1950s."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

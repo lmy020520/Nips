@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "A Bug's Life",
+  "pred_answer": "A Bug's Life",
+  "normalized_gold": "a bugs life",
+  "normalized_pred": "a bugs life",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc01ce55429931dba14611",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc01ce55429931dba14611::Davy Crockett and the River Pirates::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc01ce55429931dba14611::Davy Crockett (1910 film)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc01ce55429931dba14611::A Bug's Life::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abc01ce55429931dba14611::Davy Crockett and the River Pirates::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc01ce55429931dba14611::Davy Crockett and the River Pirates",
+        "5abc01ce55429931dba14611::A Bug's Life"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc01ce55429931dba14611::Davy Crockett and the River Pirates::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc01ce55429931dba14611::Davy Crockett (1910 film)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc01ce55429931dba14611::A Bug's Life::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abc01ce55429931dba14611::Davy Crockett and the River Pirates::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc01ce55429931dba14611::Davy Crockett and the River Pirates::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] This film acts as a prequel to 1955's \"Davy Crockett, King of the Wild Frontier\" and is an edited compilation of the fourth and fifth stories featuring the Disney television series \"Davy Crockett\":\n[2] A Bug's Life is a 1998 American computer-animated adventure comedy film produced by Pixar Animation Studios for Walt Disney Pictures.\n[3] With a storyline similar to the 1909 \"Davy Crockett – In Hearts United\", this fictional account of Crockett's life has him rescuing his lady love from marrying his rival.\n[4] Davy Crockett and the River Pirates is a 1956 live-action Walt Disney adventure film starring Fess Parker as Davy Crockett."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

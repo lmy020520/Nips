@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Grantham railway station",
+  "pred_answer": "Grantham railway station",
+  "normalized_gold": "grantham railway station",
+  "normalized_pred": "grantham railway station",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc3efc554299438c868d90",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc3efc554299438c868d90::Sedgebrook railway station::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc3efc554299438c868d90::Hilal railway station::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc3efc554299438c868d90::Grantham railway station::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc3efc554299438c868d90::Ashbourne railway station::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc3efc554299438c868d90::Sedgebrook railway station",
+        "5adc3efc554299438c868d90::Grantham railway station"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc3efc554299438c868d90::Sedgebrook railway station::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc3efc554299438c868d90::Hilal railway station::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc3efc554299438c868d90::Grantham railway station::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc3efc554299438c868d90::Ashbourne railway station::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc3efc554299438c868d90::Ashbourne railway station::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Ashbourne railway station formerly served the town of Ashbourne in Derbyshire.\n[2] Grantham railway station serves the town of Grantham in Lincolnshire, England and lies on the East Coast Main Line (ECML) 105.5 mi north of London King's Cross.\n[3] Hilal railway station formerly Istravoz railway station is a railway station located in İzmir, Turkey.\n[4] Sedgebrook railway station was formerly a station on the Nottingham to Grantham line, which opened as the Ambergate, Nottingham, Boston and Eastern Junction Railway on 15 July 1850."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

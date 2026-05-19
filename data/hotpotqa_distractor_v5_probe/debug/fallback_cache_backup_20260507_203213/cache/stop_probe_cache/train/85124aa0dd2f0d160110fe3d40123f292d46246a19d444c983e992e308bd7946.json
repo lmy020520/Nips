@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "April 1, 1929",
+  "pred_answer": "April 1, 1929",
+  "normalized_gold": "april 1 1929",
+  "normalized_pred": "april 1 1929",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6c4d3554299710c8d1f54",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6c4d3554299710c8d1f54::Tiffany Evans::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6c4d3554299710c8d1f54::Jane Powell::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6c4d3554299710c8d1f54::Rich, Young and Pretty::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6c4d3554299710c8d1f54::Tiffany Evans::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6c4d3554299710c8d1f54::Jane Powell",
+        "5ab6c4d3554299710c8d1f54::Rich, Young and Pretty"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6c4d3554299710c8d1f54::Tiffany Evans::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6c4d3554299710c8d1f54::Jane Powell::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6c4d3554299710c8d1f54::Rich, Young and Pretty::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6c4d3554299710c8d1f54::Tiffany Evans::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6c4d3554299710c8d1f54::Tiffany Evans::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Evans rose to fame in 2003 as a contestant on \"Star Search,\" hosted by Arsenio Hall.\n[2] Rich, Young and Pretty is a 1951 musical film produced by Joe Pasternak for Metro-Goldwyn-Mayer and directed by Norman Taurog.\n[3] Jane Powell (born Suzanne Lorraine Burce; April 1, 1929) is an American singer, dancer and actress who rose to fame in the mid-1940s with roles in various musicals as a contract player for Metro-Goldwyn-Mayer pictures.\n[4] Tiffany Evans (born August 4, 1992) is an American singer, songwriter, actress, dancer and entrepreneur."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

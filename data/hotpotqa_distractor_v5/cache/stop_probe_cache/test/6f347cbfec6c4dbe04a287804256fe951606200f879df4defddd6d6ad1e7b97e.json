@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "band",
+  "pred_answer": "band",
+  "normalized_gold": "band",
+  "normalized_pred": "band",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab72d925542993667793f6e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab72d925542993667793f6e::Josey Scott::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab72d925542993667793f6e::Love and Death: The Murder of Kurt Cobain::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab72d925542993667793f6e::Kurt Cobain::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab72d925542993667793f6e::Suicide of Kurt Cobain::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab72d925542993667793f6e::Josey Scott",
+        "5ab72d925542993667793f6e::Kurt Cobain"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab72d925542993667793f6e::Josey Scott::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab72d925542993667793f6e::Love and Death: The Murder of Kurt Cobain::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab72d925542993667793f6e::Kurt Cobain::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab72d925542993667793f6e::Suicide of Kurt Cobain::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab72d925542993667793f6e::Suicide of Kurt Cobain::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] On April 8, 1994, Kurt Cobain, the lead singer of the grunge band Nirvana, was found dead at his home, located at 171 Lake Washington Boulevard East in Seattle, Washington.\n[2] Born in Aberdeen, Washington, Cobain formed the band Nirvana with Krist Novoselic in 1987 and established it as part of the Seattle music scene and grunge genre.\n[3] Love and Death: The Murder of Kurt Cobain, published by Simon & Schuster, is a collaborative investigative journalism book written by Ian Halperin and Max Wallace purporting to show that rock star Kurt Cobain, believed to have committed suicide, was in fact murdered, possibly at the behest of his wife Courtney Love.\n[4] In addition to Saliva, Scott co-wrote and performed \"Hero\" (which was used as one of the theme songs to the 2002 film \"Spider-Man\") with Chad Kroeger of Nickelback."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

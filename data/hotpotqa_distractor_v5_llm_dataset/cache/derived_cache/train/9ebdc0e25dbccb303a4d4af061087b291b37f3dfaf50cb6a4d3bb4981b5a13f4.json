@@ -1,0 +1,31 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for a film where David Newman composed music based on a 1955 play by Marcelle Maurette. The gold answer is 'Anastasia'. We have evidence that David Newman composed the score for 'Anastasia' (unit 2) and that Marcelle Maurette wrote a screenplay (unit 3). A bridge note can connect these to the play, and a verification note can confirm the film's score composer.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "David Newman composed the score for the film Anastasia.",
+      "source_unit_ids": [
+        "5a83a070554299334474605c::Serenity (soundtrack)::1"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "Marcelle Maurette wrote the screenplay for The Strange Madame X.",
+      "source_unit_ids": [
+        "5a83a070554299334474605c::The Strange Madame X::1"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "The film Anastasia is based on a 1955 play by Marcelle Maurette.",
+      "source_unit_ids": [
+        "5a83a070554299334474605c::Serenity (soundtrack)::1",
+        "5a83a070554299334474605c::The Strange Madame X::1"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

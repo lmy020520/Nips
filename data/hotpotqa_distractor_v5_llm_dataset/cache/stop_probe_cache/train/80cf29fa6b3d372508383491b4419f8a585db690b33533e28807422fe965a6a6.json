@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Nantucket, Massachusetts",
+  "pred_answer": "Nantucket, Massachusetts",
+  "normalized_gold": "nantucket massachusetts",
+  "normalized_pred": "nantucket massachusetts",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae394c55542994393b9e716",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae394c55542994393b9e716::Henry Paddack::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae394c55542994393b9e716::Nantucket, Massachusetts::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae394c55542994393b9e716::Nashville Terminal Subdivision::10"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae394c55542994393b9e716::Henry Paddack",
+        "5ae394c55542994393b9e716::Nantucket, Massachusetts"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae394c55542994393b9e716::Henry Paddack::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae394c55542994393b9e716::Nantucket, Massachusetts::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae394c55542994393b9e716::Nashville Terminal Subdivision::10",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae394c55542994393b9e716::Nashville Terminal Subdivision::10",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Few more miles southward, the next major location appears.\n[2] Nantucket is an island about 30 mi by ferry south from Cape Cod, in the American state of Massachusetts.\n[3] Henry Paddack (April 2, 1838 – 1920) was an American businessman and politician who served as the Treasurer; a member of the Board of Selectmen of Nantucket, Massachusetts and as a member of the Massachusetts House of Representatives."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

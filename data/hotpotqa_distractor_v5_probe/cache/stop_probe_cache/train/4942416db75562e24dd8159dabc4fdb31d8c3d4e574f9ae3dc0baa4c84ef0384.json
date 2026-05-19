@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Missio",
+  "pred_answer": "Missio",
+  "normalized_gold": "missio",
+  "normalized_pred": "missio",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3b9d655429939154138ef",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3b9d655429939154138ef::List of electronic music genres::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3b9d655429939154138ef::The Wisdom of Harry::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3b9d655429939154138ef::Missio (duo)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3b9d655429939154138ef::The Cinematics::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac3b9d655429939154138ef::The Wisdom of Harry::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3b9d655429939154138ef::Missio (duo)",
+        "5ac3b9d655429939154138ef::The Cinematics"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3b9d655429939154138ef::List of electronic music genres::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3b9d655429939154138ef::The Wisdom of Harry::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3b9d655429939154138ef::Missio (duo)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3b9d655429939154138ef::The Cinematics::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac3b9d655429939154138ef::The Wisdom of Harry::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3b9d655429939154138ef::The Wisdom of Harry::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Wisdom of Harry was an experimental electronic music ensemble from London, England.\n[2] The Cinematics were an alternative rock band founded in 2003 in Glasgow, Scotland, and disbanded in 2011.\n[3] Missio (often stylized MISSIO) is an American electronic duo formed in 2014 in Austin, Texas.\n[4] The band made two further albums for Matador."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

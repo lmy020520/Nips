@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Discovery Mine",
+  "pred_answer": "Discovery Mine",
+  "normalized_gold": "discovery mine",
+  "normalized_pred": "discovery mine",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7544d45542993748c89805",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7544d45542993748c89805::Lupin the Third: The Woman Called Fujiko Mine::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7544d45542993748c89805::List of Lupin the Third Part I episodes::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7544d45542993748c89805::Discovery Mine::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7544d45542993748c89805::Lupin Mine::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7544d45542993748c89805::Penhalonga::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7544d45542993748c89805::Discovery Mine",
+        "5a7544d45542993748c89805::Lupin Mine"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7544d45542993748c89805::Lupin the Third: The Woman Called Fujiko Mine::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7544d45542993748c89805::List of Lupin the Third Part I episodes::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7544d45542993748c89805::Discovery Mine::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7544d45542993748c89805::Lupin Mine::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7544d45542993748c89805::Penhalonga::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7544d45542993748c89805::Penhalonga::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] In 1895 the Penhalonga Mine opened and the village grew around the gold mine.\n[2] Lupin Mine was a gold mine in Nunavut Territory, Canada.\n[3] The Discovery Mine was a gold mine 81 kilometers northeast (approx bearing of 15 degrees) of Yellowknife, Northwest Territories that operated between 1950 and 1969.\n[4] He is joined by Daisuke Jigen, Lupin's closest ally; Fujiko Mine, the \"femme fatale\" and Lupin's love interest who works against Lupin more often than with him; and Goemon Ishikawa XIII, a master swordsman and a descendant of Ishikawa Goemon, the legendary Japanese bandit."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

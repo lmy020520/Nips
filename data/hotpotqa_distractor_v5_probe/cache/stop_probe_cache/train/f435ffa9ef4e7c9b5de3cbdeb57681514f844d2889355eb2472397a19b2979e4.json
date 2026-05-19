@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Leucophyllum",
+  "pred_answer": "Leucophyllum",
+  "normalized_gold": "leucophyllum",
+  "normalized_pred": "leucophyllum",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add3a255542990dbb2f7dd9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add3a255542990dbb2f7dd9::Leucophyllum::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add3a255542990dbb2f7dd9::Leucophyllum frutescens::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add3a255542990dbb2f7dd9::Eryngium::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5add3a255542990dbb2f7dd9::Eryngium foetidum::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add3a255542990dbb2f7dd9::Leucophyllum",
+        "5add3a255542990dbb2f7dd9::Eryngium"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add3a255542990dbb2f7dd9::Leucophyllum::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add3a255542990dbb2f7dd9::Leucophyllum frutescens::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add3a255542990dbb2f7dd9::Eryngium::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5add3a255542990dbb2f7dd9::Eryngium foetidum::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add3a255542990dbb2f7dd9::Eryngium foetidum::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In the United States, where it is not well known outside Latino/Hispanic, Indo-Caribbean, and Caribbean communities, the common name \"culantro\" sometimes causes confusion with \"cilantro\", a common name for the leaves of \"Coriandrum sativum\" (also in Apiaceae), of which \"culantro\" is said to taste like a stronger version.\n[2] Eryngium is a genus of flowering plants in the family Apiaceae.\n[3] Leucophyllum frutescens is an evergreen shrub in the figwort family, Scrophulariaceae, native to the state of Texas in the southwestern United States and the states of Coahuila, Nuevo León, and Tamaulipas in northern Mexico.\n[4] Leucophyllum (barometer bush or barometerbush) is a genus of evergreen shrubs in the figwort family, Scrophulariaceae, native to the southwestern United States and Mexico."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

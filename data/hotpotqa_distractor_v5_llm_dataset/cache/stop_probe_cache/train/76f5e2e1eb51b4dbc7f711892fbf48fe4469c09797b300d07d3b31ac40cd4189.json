@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Saturday Night Live",
+  "pred_answer": "Saturday Night Live",
+  "normalized_gold": "saturday night live",
+  "normalized_pred": "saturday night live",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adecb6055429975fa854f96",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adecb6055429975fa854f96::Will Ferrell::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adecb6055429975fa854f96::Curious George (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adecb6055429975fa854f96::Michael McDonald (comedian)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adecb6055429975fa854f96::Will Ferrell",
+        "5adecb6055429975fa854f96::Curious George (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adecb6055429975fa854f96::Will Ferrell::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adecb6055429975fa854f96::Curious George (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adecb6055429975fa854f96::Michael McDonald (comedian)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adecb6055429975fa854f96::Michael McDonald (comedian)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He is best known for starring in the sketch comedy show \"MADtv\".\n[2] Curious George is a 2006 American German animated adventure comedy film based on the Curious George books by H.A. Rey and Margret Rey.\n[3] He first established himself in the mid-1990s as a cast member on the NBC sketch comedy show \"Saturday Night Live\", and has subsequently starred in comedy films such as \"\" (2004), \"\" (2006), \"Step Brothers\" (2008), \"The Other Guys\" (2010) and \"\" (2013), all but one of which he co-wrote with his comedy partner Adam McKay."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

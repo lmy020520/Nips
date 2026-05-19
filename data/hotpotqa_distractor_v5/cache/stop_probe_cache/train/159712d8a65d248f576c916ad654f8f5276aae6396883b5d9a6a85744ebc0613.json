@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Leslie Moonves",
+  "pred_answer": "Leslie Moonves",
+  "normalized_gold": "leslie moonves",
+  "normalized_pred": "leslie moonves",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab952a355429970cfb8ea5d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab952a355429970cfb8ea5d::CBS Corporation::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab952a355429970cfb8ea5d::Rudy A. Mazzocchi::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab952a355429970cfb8ea5d::KPIX-TV::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab952a355429970cfb8ea5d::News International phone hacking scandal::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab952a355429970cfb8ea5d::CBS Corporation",
+        "5ab952a355429970cfb8ea5d::KPIX-TV"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab952a355429970cfb8ea5d::CBS Corporation::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab952a355429970cfb8ea5d::Rudy A. Mazzocchi::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab952a355429970cfb8ea5d::KPIX-TV::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab952a355429970cfb8ea5d::News International phone hacking scandal::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab952a355429970cfb8ea5d::News International phone hacking scandal::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The News International phone-hacking scandal is a controversy involving the now defunct \"News of the World\" and other British newspapers published by News International, a subsidiary of News Corporation.\n[2] The station is owned by the CBS Television Stations subsidiary of CBS Corporation, and is part of a duopoly with CW owned-and-operated station KBCW (channel 44).\n[3] He is currently the CEO of Elenza, Executive Chairman of Establishment Labs Holdings, Inc. (ELHI), Executive Chairman of OptiStent, Inc. and Executive Chairman of LAFORGE Optical, Inc.\n[4] The president, chief executive and executive chairman of the company is Leslie Moonves."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

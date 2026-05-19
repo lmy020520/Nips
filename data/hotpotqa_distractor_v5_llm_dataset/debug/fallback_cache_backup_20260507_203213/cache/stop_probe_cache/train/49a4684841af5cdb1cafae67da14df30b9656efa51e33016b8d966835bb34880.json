@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Amboy Dukes",
+  "pred_answer": "Amboy Dukes",
+  "normalized_gold": "amboy dukes",
+  "normalized_pred": "amboy dukes",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abdbbeb5542993f32c2a031",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abdbbeb5542993f32c2a031::Eric Friedman::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abdbbeb5542993f32c2a031::Edge of Forever Tour::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abdbbeb5542993f32c2a031::Ted Nugent::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abdbbeb5542993f32c2a031::Psycho Circus World Tour::18"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abdbbeb5542993f32c2a031::Edge of Forever Tour",
+        "5abdbbeb5542993f32c2a031::Ted Nugent"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abdbbeb5542993f32c2a031::Eric Friedman::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abdbbeb5542993f32c2a031::Edge of Forever Tour::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abdbbeb5542993f32c2a031::Ted Nugent::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abdbbeb5542993f32c2a031::Psycho Circus World Tour::18",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abdbbeb5542993f32c2a031::Psycho Circus World Tour::18",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Ticket sales for this tour were notably slower than the previous Reunion Tour, with many of the smaller market shows underselling and a second North American leg for the summer of 1999 cancelled all together, the band ultimatly decided on embarking on a Farewell tour in the new millennium.\n[2] Nugent initially gained fame as the lead guitarist of the Amboy Dukes, a band formed in 1963 that played psychedelic rock and hard rock.\n[3] Edge of Forever Tour was a concert tour by Lynyrd Skynyrd in support of their album, Edge of Forever.\n[4] He is the former lead guitarist for the band Submersed and also the former lead guitarist for Daughters of Mara."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

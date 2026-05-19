@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Worcester Polytechnic Institute",
+  "pred_answer": "Worcester Polytechnic Institute",
+  "normalized_gold": "worcester polytechnic institute",
+  "normalized_pred": "worcester polytechnic institute",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac28ca05542990b17b153ea",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac28ca05542990b17b153ea::University of Southern California::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac28ca05542990b17b153ea::Worcester Polytechnic Institute::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac28ca05542990b17b153ea::Owlchemy Labs::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac28ca05542990b17b153ea::Snuggle Truck::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac28ca05542990b17b153ea::Worcester Polytechnic Institute",
+        "5ac28ca05542990b17b153ea::Owlchemy Labs"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac28ca05542990b17b153ea::University of Southern California::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac28ca05542990b17b153ea::Worcester Polytechnic Institute::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac28ca05542990b17b153ea::Owlchemy Labs::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac28ca05542990b17b153ea::Snuggle Truck::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac28ca05542990b17b153ea::Snuggle Truck::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Snuggle Truck is a driving/racing action game developed by Owlchemy Labs.\n[2] The company was founded in 2010 by Worcester Polytechnic Institute graduate Alex Schwartz.\n[3] Worcester Polytechnic Institute (WPI) is a private research university in Worcester, Massachusetts, focusing on the instruction and research of technical arts and applied sciences.\n[4] Founded in 1880, it is the oldest private research university in California."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

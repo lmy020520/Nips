@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "God's Angry Man",
+  "pred_answer": "God's Angry Man",
+  "normalized_gold": "gods angry man",
+  "normalized_pred": "gods angry man",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89c2715542993b751ca990",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89c2715542993b751ca990::The World's Best Prom::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89c2715542993b751ca990::Michael Flessas::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89c2715542993b751ca990::God's Angry Man::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a89c2715542993b751ca990::Angry Birds::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89c2715542993b751ca990::The World's Best Prom",
+        "5a89c2715542993b751ca990::God's Angry Man"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89c2715542993b751ca990::The World's Best Prom::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89c2715542993b751ca990::Michael Flessas::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89c2715542993b751ca990::God's Angry Man::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a89c2715542993b751ca990::Angry Birds::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a89c2715542993b751ca990::Angry Birds::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] An animated feature film based on the series was released by Columbia Pictures on 20 May 2016, and the first main-series sequel, \"Angry Birds 2\", was released on 30 July 2015.\n[2] God's Angry Man is a 1981 documentary film about Gene Scott, a U.S. pastor and Stanford PhD who served for almost fifty years as an ordained minister and religious broadcaster in Los Angeles, directed by Werner Herzog.\n[3] Flessas' most notable film role was \"Angry Man\" in the Cannes Film Festival 2000 Palme d'Or winning film \"Dancer in the Dark\" directed by Danish film director Lars von Trier.\n[4] The World's Best Prom is a 2006 documentary film about a high school prom in Racine, Wisconsin."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

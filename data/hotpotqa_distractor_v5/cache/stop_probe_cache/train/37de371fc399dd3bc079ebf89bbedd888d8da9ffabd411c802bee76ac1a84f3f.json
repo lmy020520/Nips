@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New England Small College Athletic Conference",
+  "pred_answer": "New England Small College Athletic Conference",
+  "normalized_gold": "new england small college athletic conference",
+  "normalized_pred": "new england small college athletic conference",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae72ee25542991e8301cbac",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae72ee25542991e8301cbac::Bob Ritter::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae72ee25542991e8301cbac::1989 Northeastern United States tornado outbreak::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae72ee25542991e8301cbac::New England Small College Athletic Conference::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae72ee25542991e8301cbac::Eastern Football Conference (1997–2000)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae72ee25542991e8301cbac::Bob Ritter",
+        "5ae72ee25542991e8301cbac::New England Small College Athletic Conference"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae72ee25542991e8301cbac::Bob Ritter::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae72ee25542991e8301cbac::1989 Northeastern United States tornado outbreak::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae72ee25542991e8301cbac::New England Small College Athletic Conference::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae72ee25542991e8301cbac::Eastern Football Conference (1997–2000)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae72ee25542991e8301cbac::Eastern Football Conference (1997–2000)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Eastern Football Conference (EFC) was an NCAA Division II intercollegiate athletic football conference that existed from 1997 to 2000 and was composed of member schools from the Northeastern United States.\n[2] The schools are all private, located in the Northeastern United States, and are often associated with the Little Ivies.\n[3] The 1989 Northeastern United States tornado outbreak was a series of tornadoes which caused more than $130 million (1989 USD) in damage across the Northeastern United States on July 10, 1989.\n[4] Through the 2015 season, Ritter has compiled a 75–45 record and won two New England Small College Athletic Conference (NESCAC) championships, in 2007 and 2013."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

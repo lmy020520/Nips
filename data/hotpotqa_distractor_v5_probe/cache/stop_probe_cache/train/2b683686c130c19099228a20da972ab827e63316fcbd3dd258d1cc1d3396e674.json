@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "William Lowndes Yancey",
+  "pred_answer": "William Lowndes Yancey",
+  "normalized_gold": "william lowndes yancey",
+  "normalized_pred": "william lowndes yancey",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac005dd554299012d1db577",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac005dd554299012d1db577::William Lowndes Yancey Law Office::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac005dd554299012d1db577::Abraham Lincoln::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac005dd554299012d1db577::William Lowndes Yancey Law Office::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac005dd554299012d1db577::William Lowndes Yancey Law Office",
+        "5ac005dd554299012d1db577::Abraham Lincoln"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac005dd554299012d1db577::William Lowndes Yancey Law Office::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac005dd554299012d1db577::Abraham Lincoln::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac005dd554299012d1db577::William Lowndes Yancey Law Office::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac005dd554299012d1db577::William Lowndes Yancey Law Office::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It served as the law offices for one of the South's leading advocates of secession from the United States, William Lowndes Yancey, from 1846 until his death in 1863.\n[2] Abraham Lincoln ( ; February 12, 1809 – April 15, 1865) was an American politician and lawyer who served as the 16th President of the United States from March 1861 until his assassination in April 1865.\n[3] Yancey wrote Alabama's Ordinance of Secession after the election of Abraham Lincoln and subsequently served as the Confederacy's Commissioner to England and France."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "First TransPennine Express",
+  "pred_answer": "First TransPennine Express",
+  "normalized_gold": "first transpennine express",
+  "normalized_pred": "first transpennine express",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8db3ae5542994ba4e3dd0e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8db3ae5542994ba4e3dd0e::First TransPennine Express::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8db3ae5542994ba4e3dd0e::Great Western Railway (train operating company)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8db3ae5542994ba4e3dd0e::Northern Hub::4"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8db3ae5542994ba4e3dd0e::Western Air::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8db3ae5542994ba4e3dd0e::First TransPennine Express",
+        "5a8db3ae5542994ba4e3dd0e::Northern Hub"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8db3ae5542994ba4e3dd0e::First TransPennine Express::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8db3ae5542994ba4e3dd0e::Great Western Railway (train operating company)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8db3ae5542994ba4e3dd0e::Northern Hub::4",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8db3ae5542994ba4e3dd0e::Western Air::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8db3ae5542994ba4e3dd0e::Western Air::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Which will serve as its main northern hub.\n[2] The project's steering partnership involves Network Rail, Deutsche Bahn, First TransPennine Express, Northern Rail, East Midlands Trains, CrossCountry, Freightliner, the Department for Transport, Transport for Greater Manchester and Merseytravel.\n[3] Great Western Railway (GWR) is a British train operating company owned by FirstGroup.\n[4] First TransPennine Express was a British train operating company jointly owned by FirstGroup and Keolis which operated the TransPennine Express franchise."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

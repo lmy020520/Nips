@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lev Ivanovich Yashin",
+  "pred_answer": "Lev Ivanovich Yashin",
+  "normalized_gold": "lev ivanovich yashin",
+  "normalized_pred": "lev ivanovich yashin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf38c95542992d7e9f92d8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf38c95542992d7e9f92d8::Dynamo Moscow::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf38c95542992d7e9f92d8::Lev Yashin Cup::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf38c95542992d7e9f92d8::Lev Yashin::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf38c95542992d7e9f92d8::Dynamo Moscow::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf38c95542992d7e9f92d8::Dynamo Moscow",
+        "5adf38c95542992d7e9f92d8::Lev Yashin"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf38c95542992d7e9f92d8::Dynamo Moscow::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf38c95542992d7e9f92d8::Lev Yashin Cup::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf38c95542992d7e9f92d8::Lev Yashin::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf38c95542992d7e9f92d8::Dynamo Moscow::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf38c95542992d7e9f92d8::Dynamo Moscow::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Dynamo Moscow (Russian: Дина́мо Москва́ ) is a Russian leading sports club based in Moscow.\n[2] Lev Ivanovich Yashin (Russian: Лев Ива́нович Я́шин , 22 October 1929 – 20 March 1990), nicknamed the \"Black Spider\" or the \"Black Panther\", was a Soviet-Russian football goalkeeper, considered by many in the sport to be the greatest goalkeeper in the history of the game.\n[3] Permanent member of the tournament is FC Dynamo Moscow, for which his entire career playing Lev Yashin.\n[4] Throughout its long history, the society has produced elite athletes like Galina Gorokhova, Lev Yashin, Mikhail Voronin, Vitaly Davydov, Maria Isakova and Ludmilla Tourischeva among others."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

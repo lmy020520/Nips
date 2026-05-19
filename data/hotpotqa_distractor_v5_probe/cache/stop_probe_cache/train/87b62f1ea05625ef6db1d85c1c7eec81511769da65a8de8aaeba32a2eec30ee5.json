@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "St. Louis Cardinals",
+  "pred_answer": "St. Louis Cardinals",
+  "normalized_gold": "st louis cardinals",
+  "normalized_pred": "st louis cardinals",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac282ee55429963665199f0",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac282ee55429963665199f0::Jack Buck::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac282ee55429963665199f0::Joe Buck::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac282ee55429963665199f0::2009 Major League Baseball All-Star Game::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac282ee55429963665199f0::Jack Buck",
+        "5ac282ee55429963665199f0::Joe Buck"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac282ee55429963665199f0::Jack Buck::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac282ee55429963665199f0::Joe Buck::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac282ee55429963665199f0::2009 Major League Baseball All-Star Game::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac282ee55429963665199f0::2009 Major League Baseball All-Star Game::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Fox televised the contest, with Joe Buck and Tim McCarver in the booth for the game broadcast, joined at the bottom of the 2nd inning by President Barack Obama.\n[2] He has won numerous Sports Emmy Awards for his work with Fox Sports, including his roles as lead play-by-play announcer for the network's National Football League and Major League Baseball coverage, and is a three-time recipient of the National Sportscaster of the Year award.\n[3] John Francis \"Jack\" Buck (August 21, 1924 – June 18, 2002) was an American sportscaster, best known for his work announcing Major League Baseball games of the St. Louis Cardinals."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

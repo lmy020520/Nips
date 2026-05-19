@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Afghanistan",
+  "pred_answer": "Afghanistan",
+  "normalized_gold": "afghanistan",
+  "normalized_pred": "afghanistan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a90da8355429916514e759a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a90da8355429916514e759a::Pashtunistan::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a90da8355429916514e759a::Aryan::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a90da8355429916514e759a::Name of Afghanistan::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a90da8355429916514e759a::Pashtunwali::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a90da8355429916514e759a::Pashtunistan",
+        "5a90da8355429916514e759a::Name of Afghanistan"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a90da8355429916514e759a::Pashtunistan::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a90da8355429916514e759a::Aryan::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a90da8355429916514e759a::Name of Afghanistan::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a90da8355429916514e759a::Pashtunwali::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a90da8355429916514e759a::Pashtunwali::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Pashtunwali (Pashto: پښتونوالی‎ ) or Pakhtunwali is a non-written ethical code and traditional lifestyle which the indigenous Pashtun people follow.\n[2] Historically, the name \"\"Afghan\"\" mainly designated the Pashtun people, the largest ethnic group of Afghanistan.\n[3] The word was used by the Indic people of the Vedic period in India as an ethnic label for themselves and to refer to the noble class as well as the geographic region known as \"Āryāvarta\", where Indo-Aryan culture was based.\n[4] \"homeland of the Pashtuns\") is the geographic region inhabited by the indigenous Pashtun people of modern-day Afghanistan and Pakistan, wherein Pashtun culture, language, and national identity have been based."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

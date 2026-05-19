@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Frank Russell Capra",
+  "pred_answer": "Frank Russell Capra",
+  "normalized_gold": "frank russell capra",
+  "normalized_pred": "frank russell capra",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7797f05542995d83181205",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7797f05542995d83181205::Manuel Argüello Mora::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7797f05542995d83181205::Ken Mora::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7797f05542995d83181205::Frank Capra::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7797f05542995d83181205::Lady for a Day::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7797f05542995d83181205::Ken Mora",
+        "5a7797f05542995d83181205::Frank Capra"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7797f05542995d83181205::Manuel Argüello Mora::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7797f05542995d83181205::Ken Mora::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7797f05542995d83181205::Frank Capra::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7797f05542995d83181205::Lady for a Day::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7797f05542995d83181205::Lady for a Day::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was the first film for which Capra received an Academy Award nomination for Best Director and the first Columbia Pictures release to be nominated for Best Picture.\n[2] Frank Russell Capra (born Francesco Rosario Capra; May 18, 1897September 3, 1991) was an Italian-American film director, producer and writer who became the creative force behind some of the major award-winning films of the 1930s and 1940s.\n[3] Kenneth Oscar \"Ken\" Mora (born December 17, 1960) is an American screenplay writer, director, producer, editor, and voice actor.\n[4] Manuel Argüello Mora was born in San José, Costa Rica in 1834."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

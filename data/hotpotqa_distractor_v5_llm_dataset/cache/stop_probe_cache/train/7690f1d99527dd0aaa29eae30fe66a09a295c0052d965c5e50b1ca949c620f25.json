@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "177,934",
+  "pred_answer": "177,934",
+  "normalized_gold": "177934",
+  "normalized_pred": "177934",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0011e554299025d62a3a8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0011e554299025d62a3a8::Auburn–Washburn School District::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0011e554299025d62a3a8::Elk Lake School District::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0011e554299025d62a3a8::Shawnee County, Kansas::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0011e554299025d62a3a8::Blue Mountain School District::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0011e554299025d62a3a8::Auburn–Washburn School District",
+        "5ae0011e554299025d62a3a8::Shawnee County, Kansas"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0011e554299025d62a3a8::Auburn–Washburn School District::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0011e554299025d62a3a8::Elk Lake School District::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0011e554299025d62a3a8::Shawnee County, Kansas::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0011e554299025d62a3a8::Blue Mountain School District::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0011e554299025d62a3a8::Blue Mountain School District::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] By 2010, the district's population was 20,463 people, making it a District of the Third Class.\n[2] As of the 2010 census, the population was 177,934 making it the third-most populous county in Kansas.\n[3] According to 2000 federal census data, Elk Lake School District serves a resident population of 7,735 people.\n[4] It serves Southern and Southwestern Shawnee County, as well as a small portion of extreme northern Osage County."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

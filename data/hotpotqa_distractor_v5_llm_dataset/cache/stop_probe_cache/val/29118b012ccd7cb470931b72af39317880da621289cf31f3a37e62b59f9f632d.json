@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Gaspar Noé",
+  "pred_answer": "Gaspar Noé",
+  "normalized_gold": "gaspar noé",
+  "normalized_pred": "gaspar noé",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7bb745542993210983f1a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7bb745542993210983f1a::Carne (film)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7bb745542993210983f1a::I Stand Alone (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7bb745542993210983f1a::Ghost in the Shell: Stand Alone Complex::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7bb745542993210983f1a::Carne (film)",
+        "5ae7bb745542993210983f1a::I Stand Alone (film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7bb745542993210983f1a::Carne (film)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7bb745542993210983f1a::I Stand Alone (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7bb745542993210983f1a::Ghost in the Shell: Stand Alone Complex::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7bb745542993210983f1a::Ghost in the Shell: Stand Alone Complex::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Ghost in the Shell: Stand Alone Complex, known in Japan as Mobile Armored Riot Police: Stand Alone Complex (Kōkaku Kidōtai Sutando Arōn Conpurekkusu ) , is a Japanese anime television series produced by Production I.G and based on Masamune Shirow's manga \"Ghost in the Shell\".\n[2] I Stand Alone is a 1998 French art film written and directed by Gaspar Noé, and starring Philippe Nahon, Blandine Lenoir, Frankye Pain, and Martine Audrain.\n[3] The narrative was continued in Noé's 1998 full-length debut, \"I Stand Alone\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

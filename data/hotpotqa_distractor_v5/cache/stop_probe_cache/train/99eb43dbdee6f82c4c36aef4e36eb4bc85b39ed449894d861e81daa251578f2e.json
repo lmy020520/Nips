@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Polish independence",
+  "pred_answer": "Polish independence",
+  "normalized_gold": "polish independence",
+  "normalized_pred": "polish independence",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2cb8a554299545a2cfa86",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2cb8a554299545a2cfa86::Symphony in B minor (Paderewski)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2cb8a554299545a2cfa86::Symphony No. 6 (Tchaikovsky)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2cb8a554299545a2cfa86::Ignacy Jan Paderewski::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab2cb8a554299545a2cfa86::Symphony in B minor (Paderewski)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2cb8a554299545a2cfa86::Symphony in B minor (Paderewski)",
+        "5ab2cb8a554299545a2cfa86::Ignacy Jan Paderewski"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2cb8a554299545a2cfa86::Symphony in B minor (Paderewski)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2cb8a554299545a2cfa86::Symphony No. 6 (Tchaikovsky)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2cb8a554299545a2cfa86::Ignacy Jan Paderewski::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab2cb8a554299545a2cfa86::Symphony in B minor (Paderewski)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2cb8a554299545a2cfa86::Symphony in B minor (Paderewski)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Although he lived for another 32 years, the symphony was virtually Paderewski's last composition; he wrote only one more work before his death in 1941 - a hymn for male chorus in 1917.\n[2] Ignacy Jan Paderewski, GBE (] ; 18 November [O.S. 6 November] 1860  – 29 June 1941) was a Polish pianist and composer, politician and spokesman for Polish independence.\n[3] The Symphony No. 6 in B minor, Op. 74, Pathétique is Pyotr Ilyich Tchaikovsky's final completed symphony, written between February and the end of August 1893.\n[4] The Symphony in B minor \"Polonia\", Op. 24, was written by Ignacy Jan Paderewski between 1903 and 1908, and first publicly performed in 1909."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

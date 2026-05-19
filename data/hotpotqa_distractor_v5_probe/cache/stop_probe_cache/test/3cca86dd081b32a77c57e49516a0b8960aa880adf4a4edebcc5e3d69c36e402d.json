@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "International Boxing Hall of Fame",
+  "pred_answer": "International Boxing Hall of Fame",
+  "normalized_gold": "international boxing hall of fame",
+  "normalized_pred": "international boxing hall of fame",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8361b65542992ef85e22a0",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8361b65542992ef85e22a0::Vince Phillips::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8361b65542992ef85e22a0::International Boxing Federation::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8361b65542992ef85e22a0::Jeff Malcolm::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8361b65542992ef85e22a0::Vince Phillips",
+        "5a8361b65542992ef85e22a0::International Boxing Federation"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8361b65542992ef85e22a0::Vince Phillips::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8361b65542992ef85e22a0::International Boxing Federation::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8361b65542992ef85e22a0::Jeff Malcolm::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8361b65542992ef85e22a0::Jeff Malcolm::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He was also a challenger for the South Seas light welterweight title against Pat Leglise, Australian welterweight title against Wilf Gentzen, and World Boxing Organization (WBO) welterweight title against Manning Galloway.\n[2] The International Boxing Federation (IBF) is one of four major organizations recognized by the International Boxing Hall of Fame (IBHOF) which sanction world championship boxing bouts, alongside the World Boxing Association (WBA), World Boxing Council (WBC) and World Boxing Organization (WBO).\n[3] He held the IBF junior welterweight title from 1997 to 1999, notably scoring an upset victory against then-undefeated Kostya Tszyu to become champion."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

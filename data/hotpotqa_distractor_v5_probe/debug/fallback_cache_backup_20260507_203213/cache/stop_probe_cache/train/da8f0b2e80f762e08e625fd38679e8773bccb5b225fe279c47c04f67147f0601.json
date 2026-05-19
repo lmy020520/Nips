@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jessica Day",
+  "pred_answer": "Jessica Day",
+  "normalized_gold": "jessica day",
+  "normalized_pred": "jessica day",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab59a5a554299637185c5c9",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab59a5a554299637185c5c9::Volume Two (She &amp; Him album)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab59a5a554299637185c5c9::Zooey Deschanel::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab59a5a554299637185c5c9::Zooey Deschanel::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab59a5a554299637185c5c9::Volume Two (She &amp; Him album)",
+        "5ab59a5a554299637185c5c9::Zooey Deschanel"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab59a5a554299637185c5c9::Volume Two (She &amp; Him album)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab59a5a554299637185c5c9::Zooey Deschanel::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab59a5a554299637185c5c9::Zooey Deschanel::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab59a5a554299637185c5c9::Zooey Deschanel::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Since 2011, she has played Jessica Day on the Fox sitcom \"New Girl\", for which she has received an Emmy Award nomination and three Golden Globe Award nominations.\n[2] Zooey Claire Deschanel ( ; born January 17, 1980) is an American actress and singer-songwriter.\n[3] Volume Two is the second studio album by She & Him, a collaboration between M. Ward and actress Zooey Deschanel."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Frankston, Victoria",
+  "pred_answer": "Frankston",
+  "normalized_gold": "frankston victoria",
+  "normalized_pred": "frankston",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "Evidence shows Lee Harding is from Frankston, Victoria, and Frankston is an outer-suburb of Melbourne.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "Evidence shows Lee Harding is from Frankston, Victoria, and Frankston is an outer-suburb of Melbourne.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab674cb55429954757d32c5",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab674cb55429954757d32c5::Frankston, Victoria::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab674cb55429954757d32c5::Lee Harding::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab674cb55429954757d32c5::Kate Alexa::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab674cb55429954757d32c5::Frankston, Victoria",
+        "5ab674cb55429954757d32c5::Lee Harding"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab674cb55429954757d32c5::Frankston, Victoria::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab674cb55429954757d32c5::Lee Harding::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab674cb55429954757d32c5::Kate Alexa::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab674cb55429954757d32c5::Kate Alexa::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Kate Alexa Gudinski (born 2 March 1988 in Melbourne, Victoria, Australia) is an Australian pop rock singer and the daughter of Australian music promoter Michael Gudinski, AM.\n[2] Lee Harding (born 8 June 1983) is an Australian pop singer.\n[3] Frankston is an outer-suburb of Melbourne in Victoria, Australia, in the local government area of the City of Frankston."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "HBO",
+  "pred_answer": "HBO",
+  "normalized_gold": "hbo",
+  "normalized_pred": "hbo",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac554ca5542993e66e82314",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac554ca5542993e66e82314::Band of Brothers (miniseries)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac554ca5542993e66e82314::Michael Cudlitz::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac554ca5542993e66e82314::Chris Tallman::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac554ca5542993e66e82314::Band of Brothers (miniseries)",
+        "5ac554ca5542993e66e82314::Michael Cudlitz"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac554ca5542993e66e82314::Band of Brothers (miniseries)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac554ca5542993e66e82314::Michael Cudlitz::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac554ca5542993e66e82314::Chris Tallman::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac554ca5542993e66e82314::Chris Tallman::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Christopher \"Chris\" Tallman (born September 22, 1970) is an American actor and comedian best known for his regular appearances on the Comedy Central programs \"\" and \"Reno 911!\n[2] Michael Cudlitz (born December 29, 1964) is an American actor, known for portraying John Cooper on the TNT drama series \"Southland\", Sergeant Denver \"Bull\" Randleman on the HBO miniseries \"Band of Brothers\", and Sergeant Abraham Ford on the AMC horror series \"The Walking Dead\".\n[3] Band of Brothers is a 2001 American war drama miniseries based on historian Stephen E. Ambrose's 1992 non-fiction book of the same name."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

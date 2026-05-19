@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Roger Rees",
+  "pred_answer": "Roger Rees",
+  "normalized_gold": "roger rees",
+  "normalized_pred": "roger rees",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9459d554299743d22eaa6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9459d554299743d22eaa6::Going Under (2004 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9459d554299743d22eaa6::Kevin Allen (actor)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9459d554299743d22eaa6::Roger Rees::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab9459d554299743d22eaa6::David Bower::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9459d554299743d22eaa6::Going Under (2004 film)",
+        "5ab9459d554299743d22eaa6::Roger Rees"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9459d554299743d22eaa6::Going Under (2004 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9459d554299743d22eaa6::Kevin Allen (actor)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9459d554299743d22eaa6::Roger Rees::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab9459d554299743d22eaa6::David Bower::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9459d554299743d22eaa6::David Bower::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] David Bower (born 1969) is a former Welsh actor, best known for his role as David in the hit romantic comedy \"Four Weddings and a Funeral\".\n[2] Roger Rees (5 May 1944 – 10 July 2015) was a Welsh actor and director, widely known for his stage work.\n[3] Kevin Allen (born 15 September 1959) is a Welsh actor, screenwriter, film director and film producer.\n[4] Going Under is a 2004 drama film about a married man and a partnered dominatrix who form a personal relationship and begin seeing each other outside her workplace."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

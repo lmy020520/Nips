@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "St. George",
+  "pred_answer": "St. George, Utah",
+  "normalized_gold": "st george",
+  "normalized_pred": "st george utah",
+  "exact_match": false,
+  "context_exact_match": true,
+  "answer_match_rule": "context_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "explicit_answer_in_evidence",
+  "support_evidence_summary": "The selected chunk from SkyWest Airlines explicitly states that SkyWest Airlines is headquartered in St. George, Utah, U.S.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "explicit_answer_in_evidence",
+    "support_evidence_summary": "The selected chunk from SkyWest Airlines explicitly states that SkyWest Airlines is headquartered in St. George, Utah, U.S.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a83c8d2554299123d8c21b7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a83c8d2554299123d8c21b7::SkyWest Airlines::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a83c8d2554299123d8c21b7::Alaska Airlines::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a83c8d2554299123d8c21b7::Atlantic Southeast Airlines::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a83c8d2554299123d8c21b7::SkyWest Airlines",
+        "5a83c8d2554299123d8c21b7::Alaska Airlines"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a83c8d2554299123d8c21b7::SkyWest Airlines::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a83c8d2554299123d8c21b7::Alaska Airlines::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a83c8d2554299123d8c21b7::Atlantic Southeast Airlines::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a83c8d2554299123d8c21b7::Atlantic Southeast Airlines::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Atlantic Southeast Airlines (ASA) was an American airline based in the A-Tech Center in College Park, Georgia, flying to 144 destinations as a Delta Connection carrier and, as of February 2010, commenced service as a United Express carrier.\n[2] Alaska Airlines is an American airline based in the Seattle metropolitan area of the state of Washington.\n[3] SkyWest Airlines is a North American airline owned by SkyWest, Inc. and headquartered in St. George, Utah, U.S.."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

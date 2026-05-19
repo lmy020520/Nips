@@ -1,0 +1,88 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm_failure",
+  "gold_answer": "Archbishop of Canterbury",
+  "pred_answer": null,
+  "normalized_gold": "archbishop of canterbury",
+  "normalized_pred": null,
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "",
+  "missing_support_reasons": [
+    "missing_pred_answer"
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "",
+    "missing_support_reasons": [
+      "missing_pred_answer"
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5ac3ae885542995ef918c1e7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3ae885542995ef918c1e7::Church of All Saints, Doddinghurst::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3ae885542995ef918c1e7::Religion in Iceland::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3ae885542995ef918c1e7::Church of England::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3ae885542995ef918c1e7::St. Luke's Church, Aarhus::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3ae885542995ef918c1e7::Church of All Saints, Doddinghurst",
+        "5ac3ae885542995ef918c1e7::Church of England"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3ae885542995ef918c1e7::Church of All Saints, Doddinghurst::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3ae885542995ef918c1e7::Religion in Iceland::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3ae885542995ef918c1e7::Church of England::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3ae885542995ef918c1e7::St. Luke's Church, Aarhus::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3ae885542995ef918c1e7::St. Luke's Church, Aarhus::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] St. Lukas Church is a parish church under the Church of Denmark, the Danish state church, under the Diocese of Aarhus.\n[2] The Church of England (C of E) is the state church of England.\n[3] The state church is supported by the government, but all registered religions received support from a church tax paid by taxpayers over the age of 16 years.\n[4] The Church of All Saints is a Church of England parish church in Doddinghurst, Essex."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

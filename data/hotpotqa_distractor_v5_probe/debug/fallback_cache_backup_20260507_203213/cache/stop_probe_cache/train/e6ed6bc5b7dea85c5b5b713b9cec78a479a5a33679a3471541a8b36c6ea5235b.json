@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Edwin Meese III",
+  "pred_answer": "Edwin Meese III",
+  "normalized_gold": "edwin meese iii",
+  "normalized_pred": "edwin meese iii",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7ea235542994a481bbe14",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7ea235542994a481bbe14::Mark Levin::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7ea235542994a481bbe14::Donald Regan::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7ea235542994a481bbe14::Edwin Meese::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae7ea235542994a481bbe14::Earth 2 (TV series)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7ea235542994a481bbe14::Mark Levin",
+        "5ae7ea235542994a481bbe14::Edwin Meese"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7ea235542994a481bbe14::Mark Levin::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7ea235542994a481bbe14::Donald Regan::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7ea235542994a481bbe14::Edwin Meese::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae7ea235542994a481bbe14::Earth 2 (TV series)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7ea235542994a481bbe14::Earth 2 (TV series)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Earth 2 is an American science fiction television series which aired on NBC from November 6, 1994 to June 4, 1995.\n[2] Edwin Meese III (born December 2, 1931) is an American attorney, law professor, author and member of the Republican Party who served in official capacities within the Ronald Reagan Gubernatorial Administration (1967–1974), the Reagan Presidential Transition Team (1980) and the Reagan White House (1981–1985), eventually rising to hold the position of the 75th Attorney General of the United States (\n[3] Donald Thomas \"Don\" Regan (December 21, 1918 – June 10, 2003) was the 66th United States Secretary of the Treasury from 1981 to 1985 and the White House Chief of Staff from 1985 to 1987 in the Ronald Reagan Administration.\n[4] Levin worked in the administration of President Ronald Reagan and was a chief of staff for Attorney General Edwin Meese."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

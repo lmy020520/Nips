@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Cable Guy",
+  "pred_answer": "The Cable Guy",
+  "normalized_gold": "the cable guy",
+  "normalized_pred": "the cable guy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8be29f5542995d1e6f145a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8be29f5542995d1e6f145a::Tropic Thunder::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8be29f5542995d1e6f145a::The Cable Guy::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8be29f5542995d1e6f145a::Leslie Mann::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8be29f5542995d1e6f145a::While We're Young (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8be29f5542995d1e6f145a::The Cable Guy",
+        "5a8be29f5542995d1e6f145a::Leslie Mann"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8be29f5542995d1e6f145a::Tropic Thunder::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8be29f5542995d1e6f145a::The Cable Guy::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8be29f5542995d1e6f145a::Leslie Mann::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8be29f5542995d1e6f145a::While We're Young (film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8be29f5542995d1e6f145a::While We're Young (film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] While We're Young is a 2014 American comedy film written, produced, and directed by Noah Baumbach.\n[2] Leslie Mann (born March 26, 1972) is an American actress and comedian known for her roles in comedic films such as \"The Cable Guy\" (1996), \"George of the Jungle\" (1997), \"Big Daddy\" (1999), \"Timecode\" (2000), \"Perfume\" (2001), \"Stealing Harvard\" (2002), \"The 40-Year-Old Virgin\" (2005), \"Knocked Up\" (2007), \"17 Again\" (2009), \"Funny People\" (2009), \"Rio\" (2011), \" The Change-Up\" (2011), \"This Is 40\n[3] The Cable Guy is a 1996 American comedy film directed by Ben Stiller, starring Jim Carrey and Matthew Broderick.\n[4] Tropic Thunder is a 2008 satirical action comedy film directed by Ben Stiller."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

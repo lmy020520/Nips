@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Earl Thomas",
+  "pred_answer": "Earl Thomas",
+  "normalized_gold": "earl thomas",
+  "normalized_pred": "earl thomas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7f8ae15542994857a76779",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7f8ae15542994857a76779::Earl Thomas (defensive back)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7f8ae15542994857a76779::Legion of Boom (Seattle Seahawks)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7f8ae15542994857a76779::Earl Thomas (defensive back)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7f8ae15542994857a76779::Earl Thomas (defensive back)",
+        "5a7f8ae15542994857a76779::Legion of Boom (Seattle Seahawks)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7f8ae15542994857a76779::Earl Thomas (defensive back)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7f8ae15542994857a76779::Legion of Boom (Seattle Seahawks)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7f8ae15542994857a76779::Earl Thomas (defensive back)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7f8ae15542994857a76779::Earl Thomas (defensive back)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Earl Thomas III (born May 7, 1989) is an American football free safety for the Seattle Seahawks of the National Football League (NFL).\n[2] Their earliest crowning achievement was their team's victory in Super Bowl XLVIII.\n[3] He was drafted by the Seahawks in the first round of the 2010 NFL Draft and would later assist with the team's first Super Bowl victory in Super Bowl XLVIII against the Denver Broncos."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

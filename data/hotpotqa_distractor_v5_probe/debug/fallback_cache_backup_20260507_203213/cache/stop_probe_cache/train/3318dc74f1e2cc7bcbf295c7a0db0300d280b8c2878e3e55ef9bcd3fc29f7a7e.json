@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "John H. Schnatter",
+  "pred_answer": "John H. Schnatter",
+  "normalized_gold": "john h schnatter",
+  "normalized_pred": "john h schnatter",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd6fb85542993062266c93",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd6fb85542993062266c93::Papa John's Pizza::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd6fb85542993062266c93::Donatos Pizza::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd6fb85542993062266c93::John Schnatter::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd6fb85542993062266c93::Peppes Pizza::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd6fb85542993062266c93::Papa John's Pizza",
+        "5abd6fb85542993062266c93::John Schnatter"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd6fb85542993062266c93::Papa John's Pizza::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd6fb85542993062266c93::Donatos Pizza::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd6fb85542993062266c93::John Schnatter::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd6fb85542993062266c93::Peppes Pizza::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd6fb85542993062266c93::Peppes Pizza::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Peppes is the largest pizza chain in Scandinavia.\n[2] John H. Schnatter (born November 22, 1961) is an American entrepreneur and the founder, CEO, and spokesman of Papa John's International, Inc.\n[3] Donatos Pizza is a pizza delivery restaurant chain headquartered in Columbus, Ohio.\n[4] It runs the third largest take-out and pizza delivery restaurant chain in the United States, with headquarters in Jeffersontown, Kentucky, a suburb of Louisville."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

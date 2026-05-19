@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Houston",
+  "pred_answer": "Houston",
+  "normalized_gold": "houston",
+  "normalized_pred": "houston",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7410dd5542993e948e87b5",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7410dd5542993e948e87b5::Greg Carter (filmmaker)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7410dd5542993e948e87b5::Harris County Transit::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7410dd5542993e948e87b5::Harris County Jail::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7410dd5542993e948e87b5::Houston::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7410dd5542993e948e87b5::Harris County Psychiatric Center::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7410dd5542993e948e87b5::Greg Carter (filmmaker)",
+        "5a7410dd5542993e948e87b5::Houston"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7410dd5542993e948e87b5::Greg Carter (filmmaker)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7410dd5542993e948e87b5::Harris County Transit::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7410dd5542993e948e87b5::Harris County Jail::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7410dd5542993e948e87b5::Houston::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7410dd5542993e948e87b5::Harris County Psychiatric Center::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7410dd5542993e948e87b5::Harris County Psychiatric Center::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The University of Texas Harris County Psychiatric Center (aka the UTHCPC, Harris County Psychiatric Center or HCPC is a psychiatric hospital in Harris County, Texas, that caters to the psychiatric and sometimes psychological needs of persons aged 3 and older, diagnosed with schizophrenia, bipolar disorder, depression, disruptive behavior disorders, anxiety disorders, dual diagnoses, anger, paranoi\n[2] With a census-estimated 2016 population of 2.303 million within an area of 667 sqmi , it is also the largest city in the southern United States and the seat of Harris County.\n[3] It is the main jail complex of the county and is located in the city of Houston.\n[4] The Harris County Transit Services Division is a transportation agency that serves areas of Harris County, Texas that do not have service from Metropolitan Transit Authority of Harris County, Texas (METRO)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "England",
+  "pred_answer": "England",
+  "normalized_gold": "england",
+  "normalized_pred": "england",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8fa5c95542995b4424207f",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8fa5c95542995b4424207f::Gen 5 Fibre Channel::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8fa5c95542995b4424207f::List of retired Philippine typhoon names::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8fa5c95542995b4424207f::Munkustrap::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8fa5c95542995b4424207f::T. S. Eliot::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8fa5c95542995b4424207f::VG Cats::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8fa5c95542995b4424207f::Munkustrap",
+        "5a8fa5c95542995b4424207f::T. S. Eliot"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8fa5c95542995b4424207f::Gen 5 Fibre Channel::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8fa5c95542995b4424207f::List of retired Philippine typhoon names::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8fa5c95542995b4424207f::Munkustrap::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8fa5c95542995b4424207f::T. S. Eliot::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8fa5c95542995b4424207f::VG Cats::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8fa5c95542995b4424207f::VG Cats::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The author generally set Mondays as days for updating the comic; however, the update schedule has a reputation of being incredibly sporadic; he frequently mocks his tardiness in updating in various strips due to personal reasons and frequent convention appearances.\n[2] He moved from his native United States to England in 1914 at the age of 25, settling, working, and marrying there.\n[3] Munkustrap is a Jellicle cat, named in T. S. Eliot's poem \"The Naming of Cats\".\n[4] From 1945 to 2000 the US Navy's Joint Typhoon Warning Center assigned names to tropical cyclones before the Japan Meteorological Agency (JMA), took over the naming of tropical cyclones in 2000."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

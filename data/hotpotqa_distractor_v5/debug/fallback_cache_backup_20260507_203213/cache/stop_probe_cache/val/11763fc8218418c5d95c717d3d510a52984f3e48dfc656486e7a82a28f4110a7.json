@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Craig Minowa",
+  "pred_answer": "Craig Minowa",
+  "normalized_gold": "craig minowa",
+  "normalized_pred": "craig minowa",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8bb7d45542997f31a41daa",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8bb7d45542997f31a41daa::Light Chasers::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8bb7d45542997f31a41daa::Cloud Cult::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8bb7d45542997f31a41daa::Craig Minowa::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8bb7d45542997f31a41daa::Light Chasers",
+        "5a8bb7d45542997f31a41daa::Cloud Cult"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8bb7d45542997f31a41daa::Light Chasers::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8bb7d45542997f31a41daa::Cloud Cult::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8bb7d45542997f31a41daa::Craig Minowa::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8bb7d45542997f31a41daa::Craig Minowa::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Craig Minowa is the singer/songwriter/frontman for the alternative rock band, Cloud Cult.\n[2] Cloud Cult is an experimental indie rock band from Duluth, Minnesota led by singer/songwriter Craig Minowa.\n[3] Light Chasers is the tenth studio album by the American indie rock group Cloud Cult that was released in stores on September 14, 2010."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

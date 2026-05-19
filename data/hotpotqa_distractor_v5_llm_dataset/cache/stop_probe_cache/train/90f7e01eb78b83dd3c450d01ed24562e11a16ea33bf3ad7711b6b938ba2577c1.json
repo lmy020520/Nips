@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "French",
+  "pred_answer": "French",
+  "normalized_gold": "french",
+  "normalized_pred": "french",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc222a55429959677d6a20",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc222a55429959677d6a20::2000–01 Olympique de Marseille season::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc222a55429959677d6a20::GS Consolat::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc222a55429959677d6a20::Robert Pirès::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abc222a55429959677d6a20::Choc des Olympiques::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc222a55429959677d6a20::2000–01 Olympique de Marseille season",
+        "5abc222a55429959677d6a20::Robert Pirès"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc222a55429959677d6a20::2000–01 Olympique de Marseille season::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc222a55429959677d6a20::GS Consolat::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc222a55429959677d6a20::Robert Pirès::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abc222a55429959677d6a20::Choc des Olympiques::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc222a55429959677d6a20::Choc des Olympiques::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Choc des Olympiques (\"Clash of the Olympics\") is the name of the football local derby between two major teams in French football with \"Olympique\" in its names – Olympique Lyonnais and Olympique de Marseille.\n[2] Robert Emmanuel Pirès (born 29 October 1973) is a former French footballer and footballing coach.\n[3] This promotion sparked new derbies with the reserve team of Olympique de Marseille and US Endoume.\n[4] Olympique de Marseille was once again forced to fight for its top-flight survival following a dire season, in which the club almost went bankrupt, despite the expensive sale of Robert Pirès to Arsenal."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

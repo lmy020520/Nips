@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The British Theatre Guide",
+  "pred_answer": "The British Theatre Guide",
+  "normalized_gold": "the british theatre guide",
+  "normalized_pred": "the british theatre guide",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8d428d5542994ba4e3dc42",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8d428d5542994ba4e3dc42::Richard Herring::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8d428d5542994ba4e3dc42::Fist of Fun::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8d428d5542994ba4e3dc42::Sean Lock::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8d428d5542994ba4e3dc42::Richard Herring",
+        "5a8d428d5542994ba4e3dc42::Fist of Fun"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8d428d5542994ba4e3dc42::Richard Herring::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8d428d5542994ba4e3dc42::Fist of Fun::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8d428d5542994ba4e3dc42::Sean Lock::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8d428d5542994ba4e3dc42::Sean Lock::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He began his comedy career as a stand-up comedian, and won the British Comedy Award in 2000 in the category of Best Live Comic, and was nominated for the Perrier Comedy Award.\n[2] Fist of Fun was a British comedy enterprise, initially a BBC Radio 1 series in 1993 and then a BBC2 television series in 1995.\n[3] He is described by \"The British Theatre Guide\" as \"one of the leading hidden masters of modern British comedy\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

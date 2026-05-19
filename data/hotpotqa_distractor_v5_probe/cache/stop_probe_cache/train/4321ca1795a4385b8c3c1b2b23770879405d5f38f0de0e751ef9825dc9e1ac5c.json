@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Romantic",
+  "pred_answer": "Romantic era",
+  "normalized_gold": "romantic",
+  "normalized_pred": "romantic era",
+  "exact_match": false,
+  "context_exact_match": true,
+  "answer_match_rule": "context_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "Suite algérienne is composed by Camille Saint-Saëns, who was a conductor of the Romantic era.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "Suite algérienne is composed by Camille Saint-Saëns, who was a conductor of the Romantic era.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84ff0c5542997175ce1f4b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84ff0c5542997175ce1f4b::Variation suite::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84ff0c5542997175ce1f4b::Camille Saint-Saëns::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84ff0c5542997175ce1f4b::Suite algérienne::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a84ff0c5542997175ce1f4b::Inner Mongolia Suite::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84ff0c5542997175ce1f4b::Camille Saint-Saëns",
+        "5a84ff0c5542997175ce1f4b::Suite algérienne"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84ff0c5542997175ce1f4b::Variation suite::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84ff0c5542997175ce1f4b::Camille Saint-Saëns::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84ff0c5542997175ce1f4b::Suite algérienne::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a84ff0c5542997175ce1f4b::Inner Mongolia Suite::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84ff0c5542997175ce1f4b::Inner Mongolia Suite::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Inner Mongolia Suite (内蒙组曲; Pinyin: Nèiměng Zǔqǔ), Op. 9, is a suite for violin and piano by Ma Sicong (1912-1987).\n[2] \"Suite algérienne\" in C major, Op. 60 is a composition by Camille Saint-Saëns in four movements.\n[3] Charles-Camille Saint-Saëns (] , traditionally pronounced ] in French; (9 October 183516 December 1921) was a French composer, organist, conductor and pianist of the Romantic era.\n[4] Variation suite is a musical genre most popular during the early Baroque era."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "In commercial aviation, buy on board (BoB) is a system where in-flight food or beverages are not included in the ticket price, but are either purchased on board",
+  "pred_answer": "In commercial aviation, buy on board (BoB) is a system where in-flight food or beverages are not included in the ticket price, but are either purchased on board",
+  "normalized_gold": "in commercial aviation buy on board bob is a system where in-flight food or beverages are not included in the ticket price but are either purchased on board",
+  "normalized_pred": "in commercial aviation buy on board bob is a system where in-flight food or beverages are not included in the ticket price but are either purchased on board",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f0a6f5542995b44241f37",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f0a6f5542995b44241f37::Buy on board::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f0a6f5542995b44241f37::Airline ticket::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f0a6f5542995b44241f37::FooDB::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f0a6f5542995b44241f37::Buy on board",
+        "5a8f0a6f5542995b44241f37::Airline ticket"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f0a6f5542995b44241f37::Buy on board::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f0a6f5542995b44241f37::Airline ticket::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f0a6f5542995b44241f37::FooDB::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f0a6f5542995b44241f37::FooDB::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Users are able to browse through the FooDB data by food source, name, descriptors or function.\n[2] An airline ticket is a document or electronic record, issued by an airline or a travel agency, that confirms that an individual is entitled to a seat on a flight on an aircraft.\n[3] In commercial aviation, buy on board (BoB) is a system where in-flight food or beverages are not included in the ticket price, but are either purchased on board, or ordered in advance as an optional extra during or after booking process."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

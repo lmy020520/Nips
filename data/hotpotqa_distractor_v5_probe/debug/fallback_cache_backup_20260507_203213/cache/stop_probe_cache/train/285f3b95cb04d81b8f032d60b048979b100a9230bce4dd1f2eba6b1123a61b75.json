@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1967",
+  "pred_answer": "1967",
+  "normalized_gold": "1967",
+  "normalized_pred": "1967",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc723655429944faac24d7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc723655429944faac24d7::Turnbull Government::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc723655429944faac24d7::Barnaby Joyce::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc723655429944faac24d7::Abbott Government::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc723655429944faac24d7::Turnbull Government",
+        "5adc723655429944faac24d7::Barnaby Joyce"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc723655429944faac24d7::Turnbull Government::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc723655429944faac24d7::Barnaby Joyce::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc723655429944faac24d7::Abbott Government::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc723655429944faac24d7::Abbott Government::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Leader of the Nationals, Warren Truss, served as Deputy Prime Minister.\n[2] Barnaby Thomas Gerard Joyce (born 17 April 1967) is an Australian politician who has served as the Deputy Prime Minister of Australia since 18 February 2016, as the Leader of the National Party of Australia since 11 February 2016, and as the Minister for Agriculture and Water Resources since 21 September 2015.\n[3] Warren Truss, the leader of the Nationals continued as Deputy Prime Minister, until he retired in 2016 and was replaced by Barnaby Joyce."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

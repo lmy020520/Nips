@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Miami Gardens",
+  "pred_answer": "Miami Gardens",
+  "normalized_gold": "miami gardens",
+  "normalized_pred": "miami gardens",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89307e554299669944a4f2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89307e554299669944a4f2::2015 Clemson Tigers football team::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89307e554299669944a4f2::2015 Clemson Tigers men's soccer team::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89307e554299669944a4f2::2015 Orange Bowl::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a89307e554299669944a4f2::1910 Clemson Tigers football team::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89307e554299669944a4f2::2015 Clemson Tigers football team",
+        "5a89307e554299669944a4f2::2015 Orange Bowl"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89307e554299669944a4f2::2015 Clemson Tigers football team::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89307e554299669944a4f2::2015 Clemson Tigers men's soccer team::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89307e554299669944a4f2::2015 Orange Bowl::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a89307e554299669944a4f2::1910 Clemson Tigers football team::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a89307e554299669944a4f2::1910 Clemson Tigers football team::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 1910 Clemson Tigers football team represented the Clemson Tigers of Clemson Agricultural College during the 1910 college football season.\n[2] The 2015 Capital One Orange Bowl was a college football bowl game that was played on December 31, 2015 at Sun Life Stadium in Miami Gardens, Florida.\n[3] The 2015 Clemson Tigers men's soccer team represents Clemson University during the 2015 NCAA Division I men's soccer season.\n[4] Ranked No. 1 throughout the College Football Playoff (CFP) rankings, Clemson defeated the No. 4 Oklahoma Sooners, 37–17, in the 2015 Orange Bowl to advance to the College Football Playoff National Championship."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

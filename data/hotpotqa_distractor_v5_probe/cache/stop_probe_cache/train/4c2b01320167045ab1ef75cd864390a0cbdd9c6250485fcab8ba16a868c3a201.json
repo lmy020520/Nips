@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Robin McKinley",
+  "pred_answer": "Robin McKinley",
+  "normalized_gold": "robin mckinley",
+  "normalized_pred": "robin mckinley",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab8d8f15542991b5579f017",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab8d8f15542991b5579f017::Robin McKinley::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab8d8f15542991b5579f017::The Blue Sword::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab8d8f15542991b5579f017::O. Henry::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab8d8f15542991b5579f017::The Hero and the Crown::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab8d8f15542991b5579f017::Robin McKinley",
+        "5ab8d8f15542991b5579f017::O. Henry"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab8d8f15542991b5579f017::Robin McKinley::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab8d8f15542991b5579f017::The Blue Sword::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab8d8f15542991b5579f017::O. Henry::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab8d8f15542991b5579f017::The Hero and the Crown::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab8d8f15542991b5579f017::The Hero and the Crown::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Hero and the Crown is a fantasy novel written by Robin McKinley and published by Greenwillow Books in 1984.\n[2] William Sydney Porter (September 11, 1862 – June 5, 1910), known by his pen name O. Henry, was an American short story writer.\n[3] The Blue Sword is a fantasy novel written by American author Robin McKinley and published by Greenwillow Books in 1982.\n[4] Jennifer Carolyn Robin McKinley (born November 16, 1952), known as Robin McKinley, is an American author of fantasy and children's books."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

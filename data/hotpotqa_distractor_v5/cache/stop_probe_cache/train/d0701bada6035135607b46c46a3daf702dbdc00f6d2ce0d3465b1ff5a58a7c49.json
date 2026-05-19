@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Sierra de Guadarrama National Park",
+  "pred_answer": "Sierra de Guadarrama National Park",
+  "normalized_gold": "sierra de guadarrama national park",
+  "normalized_pred": "sierra de guadarrama national park",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a1c535542990198eaf088",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a1c535542990198eaf088::Guadarrama National Park::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a1c535542990198eaf088::A Year in the Wild::9"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a1c535542990198eaf088::Teide National Park::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a1c535542990198eaf088::Protected areas of Vietnam::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a1c535542990198eaf088::Guadarrama National Park",
+        "5a7a1c535542990198eaf088::Teide National Park"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a1c535542990198eaf088::Guadarrama National Park::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a1c535542990198eaf088::A Year in the Wild::9",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a1c535542990198eaf088::Teide National Park::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a1c535542990198eaf088::Protected areas of Vietnam::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a1c535542990198eaf088::Protected areas of Vietnam::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The largest of the national parks initially covered were the Cúc Phương National Park, the Cát Tiên National Park, and the Côn Đảo National Park which to start with were forest areas cum reserves or prohibited areas.\n[2] Teide National Park (Spanish: \"Parque nacional del Teide\" , ] ) is a national park located in Tenerife (Canary Islands, Spain).\n[3] The Cairngorms National Park covers the Cairngorms mountain range in Scotland, and is Britain's largest national park, with an area of 4,528 km2.\n[4] Sierra de Guadarrama National Park (in Spanish: \"Parque Nacional de la Sierra de Guadarrama\") is a national park in Spain, covering nearly 34,000 hectares, the fifth largest in Spain's national parks system."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

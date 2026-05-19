@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Edward Zwick",
+  "pred_answer": "Edward Zwick",
+  "normalized_gold": "edward zwick",
+  "normalized_pred": "edward zwick",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84b3ce5542991dd0999d98",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84b3ce5542991dd0999d98::Djimon Hounsou::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84b3ce5542991dd0999d98::Barnyard (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84b3ce5542991dd0999d98::Blood Diamond::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a84b3ce5542991dd0999d98::Pulipaarvai::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84b3ce5542991dd0999d98::Djimon Hounsou",
+        "5a84b3ce5542991dd0999d98::Blood Diamond"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84b3ce5542991dd0999d98::Djimon Hounsou::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84b3ce5542991dd0999d98::Barnyard (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84b3ce5542991dd0999d98::Blood Diamond::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a84b3ce5542991dd0999d98::Pulipaarvai::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84b3ce5542991dd0999d98::Pulipaarvai::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Pulipaarvai (\"Sight of the Tiger\") is a 2014 Tamil-language film about Balachandran Prabhakaran directed by Praveen Gandhi who also co-produced, composed and written all the songs and handled editing and art respectively.\n[2] Blood Diamond is a 2006 German-American political war thriller film co-produced and directed by Edward Zwick, starring Leonardo DiCaprio, Jennifer Connelly and Djimon Hounsou.\n[3] Barnyard (also known as Barnyard: The Original Party Animals) is a 2006 German-American computer-animated comedy film, distributed by Paramount Pictures, co-produced by Nickelodeon Movies, O Entertainment and Omation Animation Studio, directed by Steve Oedekerk (who was also one of the producers and the main writer) with music by John Debney and co-produced by Paul Marshal.\n[4] He gained further recognition for his roles in \"Gladiator\" (2000), \"In America\" (2003), and \"Blood Diamond\" (2006), receiving Academy Award for Best Supporting Actor nominations for both the latter films."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

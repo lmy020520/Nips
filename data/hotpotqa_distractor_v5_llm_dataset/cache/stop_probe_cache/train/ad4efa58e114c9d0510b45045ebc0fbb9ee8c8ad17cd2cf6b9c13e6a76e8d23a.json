@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Josef Mengele",
+  "pred_answer": "Josef Mengele",
+  "normalized_gold": "josef mengele",
+  "normalized_pred": "josef mengele",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae46f6855429970de88d95a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae46f6855429970de88d95a::Josef Mengele::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae46f6855429970de88d95a::Hans Münch::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae46f6855429970de88d95a::Hans Wilhelm König::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae46f6855429970de88d95a::Miklós Nyiszli::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae46f6855429970de88d95a::Josef Mengele",
+        "5ae46f6855429970de88d95a::Hans Wilhelm König"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae46f6855429970de88d95a::Josef Mengele::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae46f6855429970de88d95a::Hans Münch::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae46f6855429970de88d95a::Hans Wilhelm König::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae46f6855429970de88d95a::Miklós Nyiszli::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae46f6855429970de88d95a::Miklós Nyiszli::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He was under the supervision of Josef Mengele, an SS officer and physician.\n[2] Hans Wilhelm König (born 13 May 1912 in Stuttgart — date of death unknown) was an SS doctor assigned to the Auschwitz concentration camp during World War II.\n[3] Hans Wilhelm Münch (14 May 1911 –  2001) was a German Nazi Party member who worked as an SS physician during World War II at the Auschwitz concentration camp from 1943 to 1945 in Nazi–occupied Poland.\n[4] Josef Mengele (] ; 16 March 19117 February 1979) was a German \"Schutzstaffel\" (SS) officer and physician in Auschwitz concentration camp during World War II."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

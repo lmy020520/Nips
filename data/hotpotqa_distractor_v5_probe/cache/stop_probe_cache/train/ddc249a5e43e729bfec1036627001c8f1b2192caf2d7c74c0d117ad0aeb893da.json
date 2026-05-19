@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Chemistry.",
+  "pred_answer": "Chemistry.",
+  "normalized_gold": "chemistry",
+  "normalized_pred": "chemistry",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1ff9c554299234fd04385",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1ff9c554299234fd04385::Department of Chemistry, University of Cambridge::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1ff9c554299234fd04385::Frederick Sanger::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1ff9c554299234fd04385::Alexander R. Todd::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae1ff9c554299234fd04385::Henk Buck::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1ff9c554299234fd04385::Department of Chemistry, University of Cambridge",
+        "5ae1ff9c554299234fd04385::Alexander R. Todd"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1ff9c554299234fd04385::Department of Chemistry, University of Cambridge::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1ff9c554299234fd04385::Frederick Sanger::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1ff9c554299234fd04385::Alexander R. Todd::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae1ff9c554299234fd04385::Henk Buck::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1ff9c554299234fd04385::Henk Buck::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He got a lectorship at the University in Theoretical Organic Chemistry in 1964.\n[2] Alexander Robertus Todd, Baron Todd (2 October 1907 – 10 January 1997) was a British biochemist whose research on the structure and synthesis of nucleotides, nucleosides, and nucleotide coenzymes gained him the Nobel Prize for Chemistry.\n[3] Frederick Sanger ( ; 13 August 1918 – 19 November 2013) was a British biochemist who twice won the Nobel Prize in Chemistry, one of only two people to have done so in the same category (the other is John Bardeen in physics), the fourth person overall with , and the third person overall with two Nobel Prizes in the sciences.\n[4] It was formed from a merger in the early 1980s of two separate departments that had moved into the Lensfield Road building decades earlier: the Department of Physical Chemistry (originally led by Professor Ronald Norrish FRS, Nobel Laureate; the department was previously located near the Old Cavendish in Free Street - see photo) and the Department of Chemistry (that included theoretical chemistry"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "John Leguizamo",
+  "pred_answer": "John Leguizamo",
+  "normalized_gold": "john leguizamo",
+  "normalized_pred": "john leguizamo",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2fc565542991a06ce9918",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2fc565542991a06ce9918::John Leguizamo::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2fc565542991a06ce9918::Brandon Oldenburg::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2fc565542991a06ce9918::Ice Age (franchise)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae2fc565542991a06ce9918::Blue Sky Studios::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2fc565542991a06ce9918::John Leguizamo",
+        "5ae2fc565542991a06ce9918::Ice Age (franchise)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2fc565542991a06ce9918::John Leguizamo::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2fc565542991a06ce9918::Brandon Oldenburg::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2fc565542991a06ce9918::Ice Age (franchise)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae2fc565542991a06ce9918::Blue Sky Studios::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2fc565542991a06ce9918::Blue Sky Studios::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Blue Sky Studios is an American computer animation film studio based in Greenwich, Connecticut that has been owned by 20th Century Fox since 1997.\n[2] It is produced by Blue Sky Studios, a division of 20th Century Fox, and featuring the voices of Ray Romano, John Leguizamo, Denis Leary, and Chris Wedge.\n[3] Serving as Senior Creative director for 15 years, he worked with such clients as Troublemaker Studios, Pixar, Disney, DreamWorks and Blue Sky Studios.\n[4] As of 2009, he has appeared in over 75 films, produced over 10 films, starred on Broadway in several productions (winning several awards), made over 12 television appearances, and has produced or starred in many other television shows."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

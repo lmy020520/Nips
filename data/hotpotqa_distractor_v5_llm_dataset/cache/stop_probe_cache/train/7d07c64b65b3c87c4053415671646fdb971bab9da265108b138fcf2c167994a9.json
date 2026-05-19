@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Office",
+  "pred_answer": "Office",
+  "normalized_gold": "office",
+  "normalized_pred": "office",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a800bee5542992bc0c4a68e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a800bee5542992bc0c4a68e::Office (2015 South Korean film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a800bee5542992bc0c4a68e::Go Ah-sung::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a800bee5542992bc0c4a68e::Park Min-ha (actress)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a800bee5542992bc0c4a68e::Office (2015 South Korean film)",
+        "5a800bee5542992bc0c4a68e::Go Ah-sung"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a800bee5542992bc0c4a68e::Office (2015 South Korean film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a800bee5542992bc0c4a68e::Go Ah-sung::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a800bee5542992bc0c4a68e::Park Min-ha (actress)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a800bee5542992bc0c4a68e::Park Min-ha (actress)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Park began her career as a child actress in 2011, and has appeared in such productions as the South Korean disaster film \"Flu\" (2013), the Korean drama television series \"King of Ambition\" (2013), and the music video for K.Will's song \"Love Blossom\" (2013).\n[2] Go Ah-sung (born 10 August 1992) is a South Korean actress.\n[3] Office (오피스 ) is 2015 South Korean slasher-thriller film directed by Hong Won-chan and starring Go Ah-sung and Park Sung-woong."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

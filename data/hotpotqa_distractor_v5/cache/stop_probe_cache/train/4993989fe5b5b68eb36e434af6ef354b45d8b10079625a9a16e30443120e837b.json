@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "James Arias",
+  "pred_answer": "James Arias",
+  "normalized_gold": "james arias",
+  "normalized_pred": "james arias",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a82767a55429940e5e1a8b7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a82767a55429940e5e1a8b7::Andrea Jaeger::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a82767a55429940e5e1a8b7::Jimmy Arias::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a82767a55429940e5e1a8b7::Andy Murray::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a82767a55429940e5e1a8b7::Àlex Corretja::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a82767a55429940e5e1a8b7::Jimmy Arias",
+        "5a82767a55429940e5e1a8b7::Andy Murray"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a82767a55429940e5e1a8b7::Andrea Jaeger::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a82767a55429940e5e1a8b7::Jimmy Arias::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a82767a55429940e5e1a8b7::Andy Murray::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a82767a55429940e5e1a8b7::Àlex Corretja::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a82767a55429940e5e1a8b7::Àlex Corretja::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Àlex Corretja i Verdegay (] ; born 11 April 1974) is a former professional tennis player from Spain.\n[2] Sir Andrew Barron Murray, {'1': \", '2': \", '3': \", '4': \"} (born 15 May 1987) is a British professional tennis player from Scotland currently ranked world no. 3 in men's singles.\n[3] James Arias (born August 16, 1964) is a former tennis touring professional player from the United States.\n[4] Andrea Jaeger ( ; born June 4, 1965) is a former World No. 2 professional tennis player from the United States whose brief but highly successful tennis career ended prematurely due to major shoulder injuries."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

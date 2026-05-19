@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "16,825",
+  "pred_answer": "16,825",
+  "normalized_gold": "16825",
+  "normalized_pred": "16825",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c9ead5542990527d554e4",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c9ead5542990527d554e4::Polk County, Tennessee::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c9ead5542990527d554e4::James K. Polk::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c9ead5542990527d554e4::G. Steven Rowe::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c9ead5542990527d554e4::Polk County, Tennessee",
+        "5a7c9ead5542990527d554e4::James K. Polk"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c9ead5542990527d554e4::Polk County, Tennessee::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c9ead5542990527d554e4::James K. Polk::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c9ead5542990527d554e4::G. Steven Rowe::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c9ead5542990527d554e4::G. Steven Rowe::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] In 1998, he became the 94th Speaker of the Maine House of Representatives, serving until he was term-limited from the House in 2000.\n[2] He previously served as the 13th Speaker of the House of Representatives and as Governor of Tennessee.\n[3] As of the 2010 census, the population was 16,825."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

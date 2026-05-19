@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "William Reibert Mapother Jr.",
+  "pred_answer": "William Reibert Mapother Jr.",
+  "normalized_gold": "william reibert mapother jr",
+  "normalized_pred": "william reibert mapother jr",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab5d3ac554299488d4d9a41",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab5d3ac554299488d4d9a41::Letters from the Earth::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab5d3ac554299488d4d9a41::Robin Lord Taylor::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab5d3ac554299488d4d9a41::William Mapother::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab5d3ac554299488d4d9a41::Another Earth::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab5d3ac554299488d4d9a41::Warrior of the Lost World::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab5d3ac554299488d4d9a41::William Mapother",
+        "5ab5d3ac554299488d4d9a41::Another Earth"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab5d3ac554299488d4d9a41::Letters from the Earth::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab5d3ac554299488d4d9a41::Robin Lord Taylor::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab5d3ac554299488d4d9a41::William Mapother::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab5d3ac554299488d4d9a41::Another Earth::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab5d3ac554299488d4d9a41::Warrior of the Lost World::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab5d3ac554299488d4d9a41::Warrior of the Lost World::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Warrior of the Lost World (also known as Mad Rider) is a 1983 Italian post-apocalyptic science fiction film written and directed by David Worth, starring Robert Ginty, Persis Khambatta, and Donald Pleasence.\n[2] Another Earth is a 2011 American independent science fiction-drama film directed by Mike Cahill.\n[3] William Reibert Mapother Jr. ( ; born April 17, 1965) is an American actor, best known for his role as Ethan Rom on the television series \"Lost\".\n[4] Robin Lord Taylor (born June 4, 1978) is an American film and television actor and director, known for \"Accepted\" (2006), \"Another Earth\" (2011) and \"Would You Rather\" (2012)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

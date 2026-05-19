@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Troy Aikman",
+  "pred_answer": "Troy Aikman",
+  "normalized_gold": "troy aikman",
+  "normalized_pred": "troy aikman",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a806f7a5542992bc0c4a70b",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a806f7a5542992bc0c4a70b::1985 Oklahoma Sooners football team::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a806f7a5542992bc0c4a70b::Troy Aikman::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a806f7a5542992bc0c4a70b::1985 Oklahoma Sooners football team::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a806f7a5542992bc0c4a70b::1985 Oklahoma Sooners football team",
+        "5a806f7a5542992bc0c4a70b::Troy Aikman"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a806f7a5542992bc0c4a70b::1985 Oklahoma Sooners football team::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a806f7a5542992bc0c4a70b::Troy Aikman::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a806f7a5542992bc0c4a70b::1985 Oklahoma Sooners football team::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a806f7a5542992bc0c4a70b::1985 Oklahoma Sooners football team::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Sooners ended this season with 11 wins and a sole loss coming to the Miami Hurricanes in Norman, in a game in which the Sooners lost starting quarterback Troy Aikman for the season.\n[2] The number one overall draft pick in 1989, Aikman played twelve consecutive seasons as quarterback with the Cowboys.\n[3] The 1985 Oklahoma Sooners football team represented the University of Oklahoma in the college football season of 1985–1986."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

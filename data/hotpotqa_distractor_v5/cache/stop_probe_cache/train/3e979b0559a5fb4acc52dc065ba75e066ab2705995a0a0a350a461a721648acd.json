@@ -1,0 +1,100 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Halestorm",
+  "pred_answer": "Halestorm",
+  "normalized_gold": "halestorm",
+  "normalized_pred": "halestorm",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6a2d5554299710c8d1f09",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6a2d5554299710c8d1f09::The Strange Case Of...::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6a2d5554299710c8d1f09::Evans Blue (dye)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6a2d5554299710c8d1f09::The Strange Case Of...::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6a2d5554299710c8d1f09::Halestorm::3"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab6a2d5554299710c8d1f09::Evans Blue::0"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5ab6a2d5554299710c8d1f09::Parabelle::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6a2d5554299710c8d1f09::Halestorm",
+        "5ab6a2d5554299710c8d1f09::Evans Blue"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6a2d5554299710c8d1f09::The Strange Case Of...::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6a2d5554299710c8d1f09::Evans Blue (dye)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6a2d5554299710c8d1f09::The Strange Case Of...::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6a2d5554299710c8d1f09::Halestorm::3",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab6a2d5554299710c8d1f09::Evans Blue::0",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5ab6a2d5554299710c8d1f09::Parabelle::0",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6a2d5554299710c8d1f09::Parabelle::0",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] Parabelle ('para' meaning 'to resemble; 'belle' meaning 'beauty' in French) is a Canadian rock band that initially formed in 2007 as a side project by Kevin Matisyn, the former lead singer of Evans Blue, and Kenneth Nixon of Framing Hanley.\n[2] Evans Blue is a Canadian rock band from Toronto, Ontario, Canada founded in 2005.\n[3] Its lead single \"Love Bites (So Do I)\" from that album won their first Grammy Award for Best Hard Rock/Metal Performance on February 10, 2013.\n[4] The Strange Case Of... is the second full-length studio album by the rock band Halestorm, released on April 10, 2012."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

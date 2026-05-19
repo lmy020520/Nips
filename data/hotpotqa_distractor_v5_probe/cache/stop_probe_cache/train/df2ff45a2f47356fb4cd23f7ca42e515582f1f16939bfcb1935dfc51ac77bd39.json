@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Michael Wolff",
+  "pred_answer": "Michael Wolff",
+  "normalized_gold": "michael wolff",
+  "normalized_pred": "michael wolff",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b499355429949d91db52d",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b499355429949d91db52d::The Bet (1992 film)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b499355429949d91db52d::Michael Wolff::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b499355429949d91db52d::Marty Napoleon::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b499355429949d91db52d::The Bet (1992 film)",
+        "5a8b499355429949d91db52d::Michael Wolff"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b499355429949d91db52d::The Bet (1992 film)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b499355429949d91db52d::Michael Wolff::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b499355429949d91db52d::Marty Napoleon::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b499355429949d91db52d::Marty Napoleon::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Marty Napoleon (June 2, 1921 – April 27, 2015) was an American jazz pianist born in Brooklyn, New York, perhaps best known for having replaced Earl Hines in Louis Armstrong's All Stars in 1952.\n[2] Michael Blieden Wolff (born July 31, 1952) is an American jazz pianist.\n[3] The soundtrack was composed by John Terelle of the Hawaiian Pups and Michael Wolff with Lou Marini."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Durham",
+  "pred_answer": "Durham",
+  "normalized_gold": "durham",
+  "normalized_pred": "durham",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2f06655429921a00ab0b2",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2f06655429921a00ab0b2::Elsie Marley::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2f06655429921a00ab0b2::Haste to the Wedding (jig)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2f06655429921a00ab0b2::Elsie Marley::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2f06655429921a00ab0b2::Alewife (trade)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac2f06655429921a00ab0b2::Haste to the Wedding (jig)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2f06655429921a00ab0b2::Elsie Marley",
+        "5ac2f06655429921a00ab0b2::Alewife (trade)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2f06655429921a00ab0b2::Elsie Marley::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2f06655429921a00ab0b2::Haste to the Wedding (jig)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2f06655429921a00ab0b2::Elsie Marley::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2f06655429921a00ab0b2::Alewife (trade)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac2f06655429921a00ab0b2::Haste to the Wedding (jig)::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2f06655429921a00ab0b2::Haste to the Wedding (jig)::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The tune has also been used as the basis for songs, and as musical accompaniment for ceili dances of the same name.\n[2] Alewife, also brewess or brewster, is a historical term for a woman who brewed ale for commercial sale.\n[3] Elsie Marley (c. 1713–1768) was an alewife (the wife of the landlord, or the licensee of an inn or public house) in Picktree, near Chester-le-Street, County Durham, England.\n[4] \"Haste to the Wedding\" is a jig tune in the Scottish and Irish musical traditions."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

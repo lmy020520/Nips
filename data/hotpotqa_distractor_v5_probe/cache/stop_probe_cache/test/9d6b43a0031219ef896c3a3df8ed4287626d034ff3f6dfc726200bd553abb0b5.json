@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Painter in Miniatures",
+  "pred_answer": "Painter in Miniatures",
+  "normalized_gold": "painter in miniatures",
+  "normalized_pred": "painter in miniatures",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a90503755429916514e7470",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a90503755429916514e7470::Jeremiah Meyer::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a90503755429916514e7470::Monarchy of Ireland::7"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a90503755429916514e7470::Charlotte of Mecklenburg-Strelitz::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a90503755429916514e7470::Governance of England::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a90503755429916514e7470::Jeremiah Meyer",
+        "5a90503755429916514e7470::Charlotte of Mecklenburg-Strelitz"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a90503755429916514e7470::Jeremiah Meyer::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a90503755429916514e7470::Monarchy of Ireland::7",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a90503755429916514e7470::Charlotte of Mecklenburg-Strelitz::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a90503755429916514e7470::Governance of England::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a90503755429916514e7470::Governance of England::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Kingdom of Great Britain continued from 1707 until 1801 when it merged with the Kingdom of Ireland to form the United Kingdom of Great Britain and Ireland, which itself became the United Kingdom of Great Britain and Northern Ireland (UK) in 1922 (in reality; in name in 1927) upon independence for most of the island of Ireland.\n[2] Charlotte of Mecklenburg-Strelitz (Sophia Charlotte; 19 May 1744 – 17 November 1818) was by marriage to King George III the Queen of Great Britain and Ireland from her wedding in 1761 until the union of the two kingdoms in 1801, after which she was Queen of the United Kingdom of Great Britain and Ireland until her death in 1818.\n[3] The crowns of Great Britain and Ireland remained in personal union until it was ended by the Acts of Union 1800, which united Ireland and Great Britain into the United Kingdom of Great Britain and Ireland from January 1801 until December 1922.\n[4] He was Painter in Miniatures to Queen Charlotte, Painter in Enamels to King George III and was one of the founder members of the Royal Academy."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

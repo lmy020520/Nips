@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "4145 ft above mean sea level",
+  "pred_answer": "4145 ft above mean sea level",
+  "normalized_gold": "4145 ft above mean sea level",
+  "normalized_pred": "4145 ft above mean sea level",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9828455429970cfb8eb2c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9828455429970cfb8eb2c::Virginia State Route 160::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9828455429970cfb8eb2c::U.S. Route 23 in Virginia::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9828455429970cfb8eb2c::Black Mountain (Kentucky)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab9828455429970cfb8eb2c::U.S. Route 421 in Virginia::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9828455429970cfb8eb2c::Virginia State Route 160",
+        "5ab9828455429970cfb8eb2c::Black Mountain (Kentucky)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9828455429970cfb8eb2c::Virginia State Route 160::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9828455429970cfb8eb2c::U.S. Route 23 in Virginia::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9828455429970cfb8eb2c::Black Mountain (Kentucky)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab9828455429970cfb8eb2c::U.S. Route 421 in Virginia::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9828455429970cfb8eb2c::U.S. Route 421 in Virginia::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In Virginia, the U.S. Highway runs 69.23 mi from the Tennessee state line between the twin cities of Bristol, Tennessee and Bristol, Virginia north and west to the Kentucky state line near St. Charles.\n[2] Black Mountain is the highest mountain peak in the Commonwealth of Kentucky, USA, with a summit elevation of 4145 ft above mean sea level and a top to bottom height of over 2500 ft .\n[3] In Virginia, the U.S. Highway runs 60.80 mi from the Tennessee state line near Weber City north to the Kentucky state line near Pound.\n[4] Known as the Trail of the Lonesome Pine, the state highway runs 8.02 mi from the Kentucky state line on top of Black Mountain, where the highway continues north as Kentucky Route 160 (KY 160), east to SR 68 in Appalachia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

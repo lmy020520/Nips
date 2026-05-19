@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Philippa Gregory's",
+  "pred_answer": "Philippa Gregory's",
+  "normalized_gold": "philippa gregorys",
+  "normalized_pred": "philippa gregorys",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae603a7554299546bf83017",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae603a7554299546bf83017::The White Princess (miniseries)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae603a7554299546bf83017::Essie Davis::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae603a7554299546bf83017::Voyage to the Bottom of the Sea (TV series)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae603a7554299546bf83017::The White Princess (miniseries)",
+        "5ae603a7554299546bf83017::Essie Davis"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae603a7554299546bf83017::The White Princess (miniseries)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae603a7554299546bf83017::Essie Davis::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae603a7554299546bf83017::Voyage to the Bottom of the Sea (TV series)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae603a7554299546bf83017::Voyage to the Bottom of the Sea (TV series)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Voyage to the Bottom of the Sea is a 1960s American science fiction television series based on the 1961 film of the same name.\n[2] Other major work has included a recurring role in season six of the TV series \"Game of Thrones\", and a role as Elizabeth Woodville in the TV series \"The White Princess\", an adaptation of Philippa Gregory's historical novel.\n[3] The White Princess is a British-American historical fiction television series for Starz, based on Philippa Gregory's 2013 novel of the same name."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

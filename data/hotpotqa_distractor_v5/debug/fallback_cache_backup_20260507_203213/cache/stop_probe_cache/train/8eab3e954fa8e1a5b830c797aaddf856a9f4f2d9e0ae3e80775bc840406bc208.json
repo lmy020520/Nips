@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jim Carrey.",
+  "pred_answer": "Jim Carrey.",
+  "normalized_gold": "jim carrey",
+  "normalized_pred": "jim carrey",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd5f7855429933744ab79c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd5f7855429933744ab79c::I Love You Phillip Morris::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd5f7855429933744ab79c::Steven Jay Russell::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd5f7855429933744ab79c::Rodrigo Santoro::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd5f7855429933744ab79c::Pournami (2006 film)::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd5f7855429933744ab79c::I Love You Phillip Morris",
+        "5abd5f7855429933744ab79c::Rodrigo Santoro"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd5f7855429933744ab79c::I Love You Phillip Morris::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd5f7855429933744ab79c::Steven Jay Russell::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd5f7855429933744ab79c::Rodrigo Santoro::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd5f7855429933744ab79c::Pournami (2006 film)::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd5f7855429933744ab79c::Pournami (2006 film)::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The film also dubbed into Malayalam as Pournami The film was inspired from the 2001 Brazilian film \"Behind the Sun\" starring Rodrigo Santoro which in itself was adapted from an Albanian novel by Ismail Kadare.\n[2] He has appeared in many successful movies, including \"Brainstorm\" (2001), \"Carandiru\" (2003), \"Love Actually\" (2003), \"Che\" (2008), \"I Love You Phillip Morris\" (2009), and \"Rio\" (2011).\n[3] Steven Jay Russell (born September 14, 1957) is an American con artist known for escaping from prison multiple times. \"\n[4] I Love You Phillip Morris is a 2009 black comedy drama film based on the 1980s and '90s real-life story of con artist, impostor, and multiple prison escapee Steven Jay Russell, as played by Jim Carrey."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

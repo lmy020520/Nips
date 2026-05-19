@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Port Adelaide Enfield",
+  "pred_answer": "Port Adelaide Enfield",
+  "normalized_gold": "port adelaide enfield",
+  "normalized_pred": "port adelaide enfield",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a82573755429966c78a69fd",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a82573755429966c78a69fd::South Australia Nomenclature Act of 1935::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a82573755429966c78a69fd::Harrison, Australian Capital Territory::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a82573755429966c78a69fd::Klemzig, South Australia::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a82573755429966c78a69fd::Names of Singapore::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a82573755429966c78a69fd::South Australia Nomenclature Act of 1935",
+        "5a82573755429966c78a69fd::Klemzig, South Australia"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a82573755429966c78a69fd::South Australia Nomenclature Act of 1935::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a82573755429966c78a69fd::Harrison, Australian Capital Territory::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a82573755429966c78a69fd::Klemzig, South Australia::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a82573755429966c78a69fd::Names of Singapore::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a82573755429966c78a69fd::Names of Singapore::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A number of different names have been given to the settlement or the island of Singapore all through history, the earliest record may have been from the 2nd century AD.\n[2] Klemzig is a suburb of Adelaide in the City of Port Adelaide Enfield.\n[3] The suburb is named after the former city planner Peter Harrison, who was instrumental in reviving Walter Burley Griffin's plan for the National Capital.\n[4] The Nomenclature Act of 1935 restored the former German names of the towns of Hahndorf and Lobethal as well as the Adelaide suburb of Klemzig, the names of which had been changed in 1917."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

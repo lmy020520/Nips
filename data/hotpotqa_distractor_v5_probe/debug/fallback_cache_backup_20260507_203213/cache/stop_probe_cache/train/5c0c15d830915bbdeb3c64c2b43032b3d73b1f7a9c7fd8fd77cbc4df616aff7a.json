@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Garner v. Louisiana",
+  "pred_answer": "Garner v. Louisiana",
+  "normalized_gold": "garner v louisiana",
+  "normalized_pred": "garner v louisiana",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab741585542992aa3b8c802",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab741585542992aa3b8c802::Canterbury v. Spence::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab741585542992aa3b8c802::Garner v. Louisiana::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab741585542992aa3b8c802::Commissioner v. Banks::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab741585542992aa3b8c802::Canterbury v. Spence",
+        "5ab741585542992aa3b8c802::Garner v. Louisiana"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab741585542992aa3b8c802::Canterbury v. Spence::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab741585542992aa3b8c802::Garner v. Louisiana::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab741585542992aa3b8c802::Commissioner v. Banks::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab741585542992aa3b8c802::Commissioner v. Banks::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Commissioner v. Banks, 543 U.S. 426 (2005), together with Commissioner v. Banaitis, was a case decided before the Supreme Court of the United States, dealing with the issue of whether the portion of a money judgment or settlement paid to a taxpayer's attorney under a contingent-fee agreement is income to the taxpayer for federal income tax purposes.\n[2] Garner v. Louisiana, 368 U.S. 157 (1961), was a pivotal civil rights case argued by Thurgood Marshall before the Supreme Court.\n[3] Canterbury v. Spence (464 F.2d."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

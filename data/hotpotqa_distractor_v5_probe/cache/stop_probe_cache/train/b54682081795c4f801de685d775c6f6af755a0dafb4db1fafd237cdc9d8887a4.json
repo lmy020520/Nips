@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "constant member",
+  "pred_answer": "constant member",
+  "normalized_gold": "constant member",
+  "normalized_pred": "constant member",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc490b5542993a06baf8c9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc490b5542993a06baf8c9::The Cure::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc490b5542993a06baf8c9::All of This::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc490b5542993a06baf8c9::Violet Scene::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abc490b5542993a06baf8c9::Sambandet::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc490b5542993a06baf8c9::The Cure",
+        "5abc490b5542993a06baf8c9::Violet Scene"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc490b5542993a06baf8c9::The Cure::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc490b5542993a06baf8c9::All of This::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc490b5542993a06baf8c9::Violet Scene::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abc490b5542993a06baf8c9::Sambandet::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc490b5542993a06baf8c9::Sambandet::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Sambandet is a Norwegian rock group and the backing band of Åge Aleksandersen.\n[2] Violet Scene was a Norwegian rock group whose key members included Kjetil Bergseth (vocals/guitar), Jo Espen Bergseth (bass), Ralf Lofstad (guitar), Arvid Nordstrand (drums) and Asbjørn Risøy (guitar) between 1995 and 2000.\n[3] The song is a collaboration with musician Robert Smith, frontman of the English rock band The Cure.\n[4] The band has experienced several line-up changes, with vocalist, guitarist, and principal songwriter Robert Smith being the only constant member."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

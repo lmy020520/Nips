@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2006",
+  "pred_answer": "2006",
+  "normalized_gold": "2006",
+  "normalized_pred": "2006",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a78e96b55429970f5fffdca",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a78e96b55429970f5fffdca::A Good Year::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a78e96b55429970f5fffdca::Funny Bones::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a78e96b55429970f5fffdca::Goh Nakamura::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a78e96b55429970f5fffdca::Mumon: The Land of Stealth::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a78e96b55429970f5fffdca::A Good Year",
+        "5a78e96b55429970f5fffdca::Goh Nakamura"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a78e96b55429970f5fffdca::A Good Year::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a78e96b55429970f5fffdca::Funny Bones::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a78e96b55429970f5fffdca::Goh Nakamura::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a78e96b55429970f5fffdca::Mumon: The Land of Stealth::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a78e96b55429970f5fffdca::Mumon: The Land of Stealth::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Mumon: The Land of Stealth\" was theatrically released in Japan by Toho on July 1, 2017.\n[2] His music has been featured in films directed by Ridley Scott such as \"A Good Year\", \"American Gangster\" and \"Body of Lies\".\n[3] Funny Bones is a 1995 British-American comedy-drama film from Hollywood Pictures.\n[4] A Good Year is a 2006 British-American comedy-drama film directed and produced by Ridley Scott."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

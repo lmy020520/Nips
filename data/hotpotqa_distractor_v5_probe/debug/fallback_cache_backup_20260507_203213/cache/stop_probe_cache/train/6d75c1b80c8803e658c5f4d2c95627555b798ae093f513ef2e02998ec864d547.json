@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "magazine",
+  "pred_answer": "magazine",
+  "normalized_gold": "magazine",
+  "normalized_pred": "magazine",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8628815542991e771815a1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8628815542991e771815a1::Tall Timber Short Lines::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8628815542991e771815a1::Official U.S. PlayStation Magazine::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8628815542991e771815a1::Electronic Gaming Monthly::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8628815542991e771815a1::GMR (magazine)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8628815542991e771815a1::Tall Timber Short Lines",
+        "5a8628815542991e771815a1::Electronic Gaming Monthly"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8628815542991e771815a1::Tall Timber Short Lines::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8628815542991e771815a1::Official U.S. PlayStation Magazine::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8628815542991e771815a1::Electronic Gaming Monthly::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8628815542991e771815a1::GMR (magazine)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8628815542991e771815a1::GMR (magazine)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] GMR was a monthly magazine on video games that was published by Ziff-Davis — the publisher of such magazines as \"PC Magazine\", \"Electronic Gaming Monthly\", and \"Computer Gaming World\" (later \"\").\n[2] Electronic Gaming Monthly (often abbreviated to EGM) was a monthly American video game magazine.\n[3] It was a sister publication of \"Electronic Gaming Monthly\".\n[4] Tall Timber Short Lines was a magazine dedicated to logging railroads and short line railroads, and was published by Oso Publications."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

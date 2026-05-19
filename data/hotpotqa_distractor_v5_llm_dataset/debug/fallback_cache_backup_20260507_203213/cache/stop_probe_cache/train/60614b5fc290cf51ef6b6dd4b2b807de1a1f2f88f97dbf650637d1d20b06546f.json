@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Alan Shearer",
+  "pred_answer": "Alan Shearer",
+  "normalized_gold": "alan shearer",
+  "normalized_pred": "alan shearer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adff1c555429925eb1afb61",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adff1c555429925eb1afb61::Shirley Parish Church::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adff1c555429925eb1afb61::Alan Shearer::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adff1c555429925eb1afb61::Church of Cosmas and Damian, Novgorod::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adff1c555429925eb1afb61::Shirley Parish Church",
+        "5adff1c555429925eb1afb61::Alan Shearer"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adff1c555429925eb1afb61::Shirley Parish Church::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adff1c555429925eb1afb61::Alan Shearer::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adff1c555429925eb1afb61::Church of Cosmas and Damian, Novgorod::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adff1c555429925eb1afb61::Church of Cosmas and Damian, Novgorod::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It is unclear if a new church was ever built on the site; there is no longer a church at that location, which is now a park north of the Novgorod Kremlin.\n[2] Alan Shearer, CBE, DL ( ; born 13 August 1970) is a retired English footballer.\n[3] St James' is the church in which footballer Alan Shearer was married, and is a Grade II listed building."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

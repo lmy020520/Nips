@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Soundgarden",
+  "pred_answer": "Soundgarden",
+  "normalized_gold": "soundgarden",
+  "normalized_pred": "soundgarden",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2cfd555429916697740e8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2cfd555429916697740e8::Uncle Tupelo::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2cfd555429916697740e8::Grandpa’s Ghost::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2cfd555429916697740e8::Soundgarden::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab2cfd555429916697740e8::Jeff Tweedy::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2cfd555429916697740e8::Uncle Tupelo",
+        "5ab2cfd555429916697740e8::Soundgarden"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2cfd555429916697740e8::Uncle Tupelo::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2cfd555429916697740e8::Grandpa’s Ghost::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2cfd555429916697740e8::Soundgarden::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab2cfd555429916697740e8::Jeff Tweedy::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2cfd555429916697740e8::Jeff Tweedy::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Tweedy, originally from Belleville, Illinois, started his music career in high school in his band The Plebes with Jay Farrar, which subsequently after several years formed into the alternative country band Uncle Tupelo.\n[2] Soundgarden is an American rock band formed in Seattle, Washington, in 1984 by singer and rhythm guitarist Chris Cornell, lead guitarist Kim Thayil, and bassist Hiro Yamamoto.\n[3] The group was founded by Ben Hanna and Bill Emerson in 1995 on the outskirts of St. Louis, Missouri, in Pocahontas & Pierron, Illinois and was initially associated with the second wave of alt-country music from the region that included Uncle Tupelo, The Bottle Rockets, Son Volt, and Wilco.\n[4] Uncle Tupelo was an alternative country music group from Belleville, Illinois, active between 1987 and 1994."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

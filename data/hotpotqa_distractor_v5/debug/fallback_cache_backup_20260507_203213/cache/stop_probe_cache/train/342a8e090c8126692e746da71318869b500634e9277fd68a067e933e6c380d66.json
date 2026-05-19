@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Susan Stroman",
+  "pred_answer": "Susan Stroman",
+  "normalized_gold": "susan stroman",
+  "normalized_pred": "susan stroman",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a82f4bb5542995ce29dcd18",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a82f4bb5542995ce29dcd18::The Producers (2005 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a82f4bb5542995ce29dcd18::The Producers (musical)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a82f4bb5542995ce29dcd18::Don Quixote (1947 film)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a82f4bb5542995ce29dcd18::The Producers (2005 film)",
+        "5a82f4bb5542995ce29dcd18::The Producers (musical)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a82f4bb5542995ce29dcd18::The Producers (2005 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a82f4bb5542995ce29dcd18::The Producers (musical)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a82f4bb5542995ce29dcd18::Don Quixote (1947 film)::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a82f4bb5542995ce29dcd18::Don Quixote (1947 film)::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] A huge undertaking for Spanish cinema in its day, it was the longest film version of the novel up to that time (two hours and twelve minutes, plus an intermission), and very likely the most faithful, reverently following the book in its dialogue and order of episodes, unlike G.W. Pabst's 1933 version and the later Russian film version, which scrambled up the order of the adventures as many film ve\n[2] As in the film, the story concerns two theatrical producers who scheme to get rich by overselling interests in a Broadway flop.\n[3] The Producers is a 2005 American musical comedy film directed by Susan Stroman and written by Mel Brooks and Thomas Meehan based on the eponymous 2001 Broadway musical, which in turn was based on Brooks's 1967 film of the same name starring Zero Mostel, Gene Wilder and Andreas Voutsinas."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

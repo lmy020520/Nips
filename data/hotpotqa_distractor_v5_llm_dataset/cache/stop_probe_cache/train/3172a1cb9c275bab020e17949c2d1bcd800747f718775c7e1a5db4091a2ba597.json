@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Miike Snow",
+  "pred_answer": "Miike Snow",
+  "normalized_gold": "miike snow",
+  "normalized_pred": "miike snow",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc0870554299114383a0db",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc0870554299114383a0db::Miike Snow::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc0870554299114383a0db::Andrew Wyatt::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc0870554299114383a0db::Miike Snow discography::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc0870554299114383a0db::Miike Snow",
+        "5abc0870554299114383a0db::Andrew Wyatt"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc0870554299114383a0db::Miike Snow::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc0870554299114383a0db::Andrew Wyatt::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc0870554299114383a0db::Miike Snow discography::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc0870554299114383a0db::Miike Snow discography::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Swedish indie pop band Miike Snow has released three studio albums, one extended play (EP), seven singles (including one as a featured artist), and nine music videos. Formed in Stockholm in 2007, the band consists of Christian Karlsson and Pontus Winnberg of production duo Bloodshy & Avant and American singer Andrew Wyatt.\n[2] He is currently the vocalist in the Swedish electronic pop band Miike Snow.\n[3] The band is often represented by a silhouette image of a jackalope."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

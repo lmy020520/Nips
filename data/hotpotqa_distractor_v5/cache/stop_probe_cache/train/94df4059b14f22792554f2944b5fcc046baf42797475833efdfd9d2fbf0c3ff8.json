@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "American Telephone and Telegraph Company",
+  "pred_answer": "American Telephone and Telegraph Company",
+  "normalized_gold": "american telephone and telegraph company",
+  "normalized_pred": "american telephone and telegraph company",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8833fa5542997e5c09a5a3",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8833fa5542997e5c09a5a3::Alexander Graham Bell::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8833fa5542997e5c09a5a3::AEA Cygnet::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8833fa5542997e5c09a5a3::Bell Oionus I::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8833fa5542997e5c09a5a3::Alexander Graham Bell",
+        "5a8833fa5542997e5c09a5a3::AEA Cygnet"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8833fa5542997e5c09a5a3::Alexander Graham Bell::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8833fa5542997e5c09a5a3::AEA Cygnet::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8833fa5542997e5c09a5a3::Bell Oionus I::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8833fa5542997e5c09a5a3::Bell Oionus I::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Oionus I was a tetrahedral triplane built for Alexander Graham Bell It was the culmination of Bell's experiments with kites built at Baddeck, Nova Scotia.\n[2] It was a powered version of the Cygnet tetrahedral kite designed by Dr Alexander Graham Bell in 1907 and built by the newly founded Aerial Experiment Association.\n[3] Alexander Graham Bell (March 3, 1847 – August 2, 1922) was a Scottish-born scientist, inventor, engineer, and innovator who is credited with patenting the first practical telephone and founding the American Telephone and Telegraph Company (AT&T) in 1885."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

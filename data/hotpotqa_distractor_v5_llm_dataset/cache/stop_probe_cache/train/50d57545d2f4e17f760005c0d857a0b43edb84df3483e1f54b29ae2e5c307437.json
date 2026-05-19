@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"Star Wars\"",
+  "pred_answer": "\"Star Wars\"",
+  "normalized_gold": "star wars",
+  "normalized_pred": "star wars",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae72793554299572ea5473c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae72793554299572ea5473c::Harrison Ford::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae72793554299572ea5473c::Han shot first::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae72793554299572ea5473c::The Conversation::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae72793554299572ea5473c::Fishing in Chile::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae72793554299572ea5473c::Harrison Ford",
+        "5ae72793554299572ea5473c::The Conversation"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae72793554299572ea5473c::Harrison Ford::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae72793554299572ea5473c::Han shot first::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae72793554299572ea5473c::The Conversation::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae72793554299572ea5473c::Fishing in Chile::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae72793554299572ea5473c::Fishing in Chile::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Recreational fishing tourism in southern Chile's rivers has recently gained worldwide fame attracting actors such as Harrison Ford, Michael Douglas, and Kevin Costner.\n[2] The Conversation is a 1974 American mystery thriller film written, produced and directed by Francis Ford Coppola and starring Gene Hackman with supporting roles by John Cazale, Allen Garfield, Cindy Williams, Frederic Forrest, Harrison Ford, Teri Garr and Robert Duvall.\n[3] \"Han shot first\" is a phrase referring to a controversial change made to a scene in the science fiction film \"Star Wars\" (1977), in which Han Solo (Harrison Ford) is confronted by the bounty hunter Greedo (Paul Blake) in the Mos Eisley cantina.\n[4] He gained worldwide fame for his starring roles as Han Solo in the \"Star Wars\" film series and as the title character of the \"Indiana Jones\" film series."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

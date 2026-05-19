@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "American singer-songwriter",
+  "pred_answer": "American singer-songwriter",
+  "normalized_gold": "american singer-songwriter",
+  "normalized_pred": "american singer-songwriter",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3d6255542992f92d8238d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3d6255542992f92d8238d::Lacey Sturm::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3d6255542992f92d8238d::Life Screams::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3d6255542992f92d8238d::Natalie Maines::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae3d6255542992f92d8238d::Dixie Chicks::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3d6255542992f92d8238d::Lacey Sturm",
+        "5ae3d6255542992f92d8238d::Natalie Maines"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3d6255542992f92d8238d::Lacey Sturm::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3d6255542992f92d8238d::Life Screams::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3d6255542992f92d8238d::Natalie Maines::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae3d6255542992f92d8238d::Dixie Chicks::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3d6255542992f92d8238d::Dixie Chicks::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The band is composed of founding members (and sisters) Martie Erwin Maguire and Emily Erwin Robison, and lead singer Natalie Maines.\n[2] Natalie Louise Maines (born October 14, 1974) is an American singer-songwriter and activist who achieved success as the lead vocalist for the female alternative country band the Dixie Chicks.\n[3] Life Screams is the debut solo studio album by the American singer Lacey Sturm.\n[4] Lacey Nicole Sturm (née Mosley, born September 4, 1981) is an American singer and songwriter from Homestead, Florida, raised in Arlington, Texas."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

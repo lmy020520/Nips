@@ -1,0 +1,85 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Nickelodeon",
+  "pred_answer": "Nickelodeon",
+  "normalized_gold": "nickelodeon",
+  "normalized_pred": "nickelodeon",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74f6fe5542993748c8975e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74f6fe5542993748c8975e::The Off-Beats::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74f6fe5542993748c8975e::24 Hour Rental::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74f6fe5542993748c8975e::derived::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74f6fe5542993748c8975e::KaBlam!::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74f6fe5542993748c8975e::The Off-Beats",
+        "5a74f6fe5542993748c8975e::KaBlam!"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74f6fe5542993748c8975e::The Off-Beats::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74f6fe5542993748c8975e::24 Hour Rental::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74f6fe5542993748c8975e::KaBlam!::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a74f6fe5542993748c8975e::derived::1",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a74f6fe5542993748c8975e::KaBlam!::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Off-Beats is a series of short animations that was created by Mo Willems, best known for the Cartoon Network television series \"Sheep in the Big City\").\n[2] The series was created by Robert Mittenthal, Will McRobb, and Chris Viscardi.\n[3] 24 Hour Rental is a Canadian television sitcom, created by Frank Massa and was originally optioned in 2008, which was finally picked up by the Canadian Super Channel Network In 2012.\n[4] after Mo Willems moved to the Cartoon Network to work on \"Sheep in the Big City\"; it too was canceled after two years on the air.\n\nNotes:\n[verification] The Off-Beats was created by Mo Willems, who worked on Cartoon Network's Sheep in the Big City, but the show itself aired on Nickelodeon."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

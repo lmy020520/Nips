@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Arizona Diamondbacks",
+  "pred_answer": "Arizona Diamondbacks",
+  "normalized_gold": "arizona diamondbacks",
+  "normalized_pred": "arizona diamondbacks",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7347915542994cef4bc500",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7347915542994cef4bc500::2011 Major League Baseball All-Star Game::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7347915542994cef4bc500::2011 Major League Baseball Home Run Derby::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7347915542994cef4bc500::2011 Major League Baseball season::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7347915542994cef4bc500::Chase Field::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7347915542994cef4bc500::List of professional baseball stadiums in Seattle::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7347915542994cef4bc500::2011 Major League Baseball season",
+        "5a7347915542994cef4bc500::Chase Field"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7347915542994cef4bc500::2011 Major League Baseball All-Star Game::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7347915542994cef4bc500::2011 Major League Baseball Home Run Derby::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7347915542994cef4bc500::2011 Major League Baseball season::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7347915542994cef4bc500::Chase Field::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7347915542994cef4bc500::List of professional baseball stadiums in Seattle::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7347915542994cef4bc500::List of professional baseball stadiums in Seattle::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The only current stadium is Safeco Field, the home of the Seattle Mariners, a Major League Baseball franchise.\n[2] It is the home of the Arizona Diamondbacks, the city's Major League Baseball (MLB) franchise.\n[3] The 82nd edition of the Major League Baseball All-Star Game was played at Chase Field in Phoenix, Arizona, on July 12 with the National League defeating the American League for the second straight year, by a score of 5–1.\n[4] The derby was held on July 11, 2011, at the site of the 2011 MLB All-Star Game, Chase Field in Phoenix, Arizona."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Edward Heath",
+  "pred_answer": "Edward Heath",
+  "normalized_gold": "edward heath",
+  "normalized_pred": "edward heath",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab8ecc05542991b5579f043",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab8ecc05542991b5579f043::Declaration of Perth::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab8ecc05542991b5579f043::Edward Heath::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab8ecc05542991b5579f043::Conservative Party (UK)::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab8ecc05542991b5579f043::Declaration of Perth",
+        "5ab8ecc05542991b5579f043::Edward Heath"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab8ecc05542991b5579f043::Declaration of Perth::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab8ecc05542991b5579f043::Edward Heath::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab8ecc05542991b5579f043::Conservative Party (UK)::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab8ecc05542991b5579f043::Conservative Party (UK)::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The party leader, Theresa May, has served as both Leader of the Conservative Party and Prime Minister since 13 July 2016.\n[2] Sir Edward Richard George Heath, (9 July 1916 – 17 July 2005), better known as Ted Heath, was a British politician who served as Prime Minister of the United Kingdom from 1970 to 1974 and Leader of the Conservative Party from 1965 to 1975.\n[3] The Declaration of Perth was a statement made by British Conservative Party leader Edward Heath on 18 May 1968, at the party conference in Perth, Scotland, which committed the party to supporting some form of Scottish devolution."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

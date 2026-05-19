@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "WestShore Plaza",
+  "pred_answer": "WestShore Plaza",
+  "normalized_gold": "westshore plaza",
+  "normalized_pred": "westshore plaza",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac237de55429964131be2cb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac237de55429964131be2cb::International Plaza and Bay Street::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac237de55429964131be2cb::WestShore Plaza::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac237de55429964131be2cb::Westshore (Tampa)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac237de55429964131be2cb::McCain Mall::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac237de55429964131be2cb::WestShore Plaza",
+        "5ac237de55429964131be2cb::Westshore (Tampa)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac237de55429964131be2cb::International Plaza and Bay Street::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac237de55429964131be2cb::WestShore Plaza::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac237de55429964131be2cb::Westshore (Tampa)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac237de55429964131be2cb::McCain Mall::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac237de55429964131be2cb::McCain Mall::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] McCain Mall is one of two enclosed shopping centers within Central Arkansas, with the other enclosed mall being the larger (by number of stores) Park Plaza Mall, located in Little Rock.\n[2] Westshore is a principal business district of Tampa, Florida, United States, with more than 11000000 sqft of commercial office space, 4,000 businesses with nearly 100,000 employees, 32 hotels, two major shopping malls (International Plaza and WestShore Plaza) and more than 200 restaurants and bars.\n[3] WestShore Plaza is an enclosed shopping mall located in the Westshore business district of Tampa, Florida, developed by Albert L. Manley of Boston, MA.\n[4] International Plaza and Bay Street is a shopping mall located in the Westshore business district of Tampa, Florida."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

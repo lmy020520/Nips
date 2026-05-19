@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Belfast Metropolitan Area",
+  "pred_answer": "Belfast Metropolitan Area",
+  "normalized_gold": "belfast metropolitan area",
+  "normalized_pred": "belfast metropolitan area",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7c78355429928e1fe38d6",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7c78355429928e1fe38d6::Las Vegas–Paradise, NV MSA::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7c78355429928e1fe38d6::Milwaukee metropolitan area::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7c78355429928e1fe38d6::Lisburn::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab7c78355429928e1fe38d6::Thiepval Barracks::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab7c78355429928e1fe38d6::HMS Hibernia (shore establishment)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7c78355429928e1fe38d6::Lisburn",
+        "5ab7c78355429928e1fe38d6::Thiepval Barracks"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7c78355429928e1fe38d6::Las Vegas–Paradise, NV MSA::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7c78355429928e1fe38d6::Milwaukee metropolitan area::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7c78355429928e1fe38d6::Lisburn::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab7c78355429928e1fe38d6::Thiepval Barracks::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab7c78355429928e1fe38d6::HMS Hibernia (shore establishment)::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7c78355429928e1fe38d6::HMS Hibernia (shore establishment)::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Commissioned in 2009 to replace the C-class cruiser HMS \"Caroline\" as the training establishment for the RNR in Northern Ireland, \"Hibernia\" is located as part of Thiepval Barracks in Lisburn, County Antrim.\n[2] Thiepval Barracks in Lisburn, County Antrim, is the headquarters of the British Army in Northern Ireland and its 38th (Irish) Brigade.\n[3] Lisburn is part of the Belfast Metropolitan Area.\n[4] The Milwaukee metropolitan area (also known as Metro Milwaukee or Greater Milwaukee) is a major metropolitan area located in Southeastern Wisconsin, consisting of the city of Milwaukee and the surrounding area."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

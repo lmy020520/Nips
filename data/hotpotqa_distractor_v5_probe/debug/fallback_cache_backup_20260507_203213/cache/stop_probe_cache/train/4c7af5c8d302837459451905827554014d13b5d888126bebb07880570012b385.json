@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "La Gioconda",
+  "pred_answer": "La Gioconda",
+  "normalized_gold": "la gioconda",
+  "normalized_pred": "la gioconda",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac31a64554299741d48a1e8",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac31a64554299741d48a1e8::Dance of the Hours::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac31a64554299741d48a1e8::Allan Sherman::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac31a64554299741d48a1e8::Now Until the Break of Day::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac31a64554299741d48a1e8::Dance of the Hours",
+        "5ac31a64554299741d48a1e8::Allan Sherman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac31a64554299741d48a1e8::Dance of the Hours::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac31a64554299741d48a1e8::Allan Sherman::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac31a64554299741d48a1e8::Now Until the Break of Day::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac31a64554299741d48a1e8::Now Until the Break of Day::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The song is an arrangement from the act 3 finale of Benjamin Britten's 1960 opera \"A Midsummer Night's Dream\".\n[2] His biggest hit single was \"Hello Muddah, Hello Fadduh\", a comic novelty in which a boy describes his summer camp experiences to the tune of Ponchielli's \"Dance of the Hours\".\n[3] Dance of the Hours (Italian: \"Danza delle ore \") is a short ballet and is the act 3 finale of the opera \"La Gioconda\" composed by Amilcare Ponchielli."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

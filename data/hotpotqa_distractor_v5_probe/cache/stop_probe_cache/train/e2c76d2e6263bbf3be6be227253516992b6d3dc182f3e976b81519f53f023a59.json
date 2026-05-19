@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Spencer Pettis",
+  "pred_answer": "Spencer Pettis",
+  "normalized_gold": "spencer pettis",
+  "normalized_pred": "spencer pettis",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6d90955429954757d3395",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6d90955429954757d3395::War of 1812::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6d90955429954757d3395::Thomas Baker (Royal Navy officer)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6d90955429954757d3395::Thomas Biddle::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6d90955429954757d3395::Thomas Biddle::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6d90955429954757d3395::War of 1812",
+        "5ab6d90955429954757d3395::Thomas Biddle"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6d90955429954757d3395::War of 1812::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6d90955429954757d3395::Thomas Baker (Royal Navy officer)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6d90955429954757d3395::Thomas Biddle::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6d90955429954757d3395::Thomas Biddle::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6d90955429954757d3395::Thomas Biddle::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Biddle is better known though for having been killed in a duel with Missouri Congressman Spencer Pettis.\n[2] Thomas Biddle (November 21, 1790 – August 29, 1831) was an American military hero, during the War of 1812.\n[3] Sir Thomas Baker KCB, KWN (1771 – 26 January 1845) was an officer of the Royal Navy, who saw service during the American War of Independence, and the French Revolutionary and Napoleonic Wars.\n[4] Historians in Britain often see it as a minor theater of the Napoleonic Wars; in the United States and Canada, it is seen as a war in its own right."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

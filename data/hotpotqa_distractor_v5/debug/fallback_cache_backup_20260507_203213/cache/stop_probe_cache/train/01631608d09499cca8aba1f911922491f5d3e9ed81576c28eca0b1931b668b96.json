@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "British-American",
+  "pred_answer": "British-American",
+  "normalized_gold": "british-american",
+  "normalized_pred": "british-american",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1e7915542997f29b3c190",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1e7915542997f29b3c190::What I Want (Daughtry song)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1e7915542997f29b3c190::Paloma Faith discography::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1e7915542997f29b3c190::Slash (musician)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae1e7915542997f29b3c190::Mike Einziger::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1e7915542997f29b3c190::What I Want (Daughtry song)",
+        "5ae1e7915542997f29b3c190::Slash (musician)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1e7915542997f29b3c190::What I Want (Daughtry song)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1e7915542997f29b3c190::Paloma Faith discography::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1e7915542997f29b3c190::Slash (musician)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae1e7915542997f29b3c190::Mike Einziger::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1e7915542997f29b3c190::Mike Einziger::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Michael Aaron \"Mike\" Einziger (born June 21, 1976) is an American musician, best known as the guitarist and co-songwriter of the rock band Incubus.\n[2] Saul Hudson (born July 23, 1965), better known by his stage name Slash, is a British-American musician and songwriter.\n[3] The discography of English singer and songwriter Paloma Faith consists of three studio albums, sixteen singles (plus seven as a featured artist) and eighteen music videos. Faith made her debut in September 2009 with the studio album \"Do You Want the Truth or Something Beautiful?\n[4] The song features Slash on guitar, earning him a featured artist credit on the single."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

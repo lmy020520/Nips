@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "poet",
+  "pred_answer": "poet",
+  "normalized_gold": "poet",
+  "normalized_pred": "poet",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4e54255429908b63264b1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4e54255429908b63264b1::Jean Toomer::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4e54255429908b63264b1::Urs Jaeggi::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4e54255429908b63264b1::Ingeborg Bachmann::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4e54255429908b63264b1::The Assignment (novella)::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4e54255429908b63264b1::Jean Toomer",
+        "5ae4e54255429908b63264b1::Ingeborg Bachmann"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4e54255429908b63264b1::Jean Toomer::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4e54255429908b63264b1::Urs Jaeggi::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4e54255429908b63264b1::Ingeborg Bachmann::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4e54255429908b63264b1::The Assignment (novella)::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4e54255429908b63264b1::The Assignment (novella)::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Inspiration for the plot came from the Austrian poet Ingeborg Bachmann's unfinished novel \"The Franza Case\", which Dürrenmatt's second wife, documentary filmmaker Charlotte Kerr, was attempting to turn into a film at the time of their meeting.\n[2] Ingeborg Bachmann (25 June 1926 – 17 October 1973) was an Austrian poet and author.\n[3] He won the Ingeborg Bachmann Prize in 1981.\n[4] Jean Toomer (December 26, 1894 – March 30, 1967) was an African American poet and novelist commonly associated with the Harlem Renaissance, though he actively resisted the association, and modernism."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

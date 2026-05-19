@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Wild and Wonderful Whites of West Virginia",
+  "pred_answer": "The Wild and Wonderful Whites of West Virginia",
+  "normalized_gold": "the wild and wonderful whites of west virginia",
+  "normalized_pred": "the wild and wonderful whites of west virginia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac31be3554299741d48a1fb",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac31be3554299741d48a1fb::Julien Nitzberg::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac31be3554299741d48a1fb::The Wild and Wonderful Whites of West Virginia::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac31be3554299741d48a1fb::Big Ugly Creek::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac31be3554299741d48a1fb::Julien Nitzberg",
+        "5ac31be3554299741d48a1fb::The Wild and Wonderful Whites of West Virginia"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac31be3554299741d48a1fb::Julien Nitzberg::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac31be3554299741d48a1fb::The Wild and Wonderful Whites of West Virginia::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac31be3554299741d48a1fb::Big Ugly Creek::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac31be3554299741d48a1fb::Big Ugly Creek::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Big Ugly Creek is a major tributary of the Guyandotte River in the Harts Creek District of Lincoln County, West Virginia, United States.\n[2] The Wild and Wonderful Whites of West Virginia is a 2009 documentary film directed by Julien Nitzberg, chronicling the White family of Boone County, West Virginia.\n[3] Julien Nitzberg (born 1965) is a US screenwriter, stage writer, lyricist, theater director and film director, best known in the film world as the director of the documentary \"The Wild and Wonderful Whites of West Virginia\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

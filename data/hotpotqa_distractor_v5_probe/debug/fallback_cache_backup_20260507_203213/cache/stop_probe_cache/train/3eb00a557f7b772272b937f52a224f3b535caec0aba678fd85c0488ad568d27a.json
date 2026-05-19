@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fireball Island",
+  "pred_answer": "Fireball Island",
+  "normalized_gold": "fireball island",
+  "normalized_pred": "fireball island",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac4377d554299204fd21f0d",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac4377d554299204fd21f0d::Fireball Island::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac4377d554299204fd21f0d::Villa Paletti::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac4377d554299204fd21f0d::Awithlaknannai Mosona::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac4377d554299204fd21f0d::Fireball Island",
+        "5ac4377d554299204fd21f0d::Villa Paletti"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac4377d554299204fd21f0d::Fireball Island::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac4377d554299204fd21f0d::Villa Paletti::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac4377d554299204fd21f0d::Awithlaknannai Mosona::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac4377d554299204fd21f0d::Awithlaknannai Mosona::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The game was described by Stewart Culin in his book \"Games of the North American Indians Volume 2: Games of Skill\" (1907).\n[2] Villa Paletti is a board game of physical skill designed by Bill Payne and published in 2001 by Zoch Verlag.\n[3] Fireball Island is a board game first published by Milton Bradley in 1986."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Fanboy Confessional",
+  "pred_answer": "Fanboy Confessional",
+  "normalized_gold": "fanboy confessional",
+  "normalized_pred": "fanboy confessional",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81d5b755429903bc27b9d7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81d5b755429903bc27b9d7::Cosplay::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81d5b755429903bc27b9d7::List of cosplayers::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81d5b755429903bc27b9d7::Fanboy Confessional::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81d5b755429903bc27b9d7::Renaissance fair::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81d5b755429903bc27b9d7::Cosplay",
+        "5a81d5b755429903bc27b9d7::Fanboy Confessional"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81d5b755429903bc27b9d7::Cosplay::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81d5b755429903bc27b9d7::List of cosplayers::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81d5b755429903bc27b9d7::Fanboy Confessional::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a81d5b755429903bc27b9d7::Renaissance fair::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a81d5b755429903bc27b9d7::Renaissance fair::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Some engage in deliberate \"time travel\" by encouraging participants to wear costumes representing several eras in a broad time period.\n[2] Fanboy Confessional is a Canadian documentary series exploring fan subcultures.\n[3] Short for \"costume play\", it is an activity in which participants wear costumes and accessories to represent a specific character or idea from a work of fiction.\n[4] Cosplay (コスプレ , kosupure ) , a contraction of the words costume play, is a hobby in which participants called cosplayers wear costumes and fashion accessories to represent a specific character."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

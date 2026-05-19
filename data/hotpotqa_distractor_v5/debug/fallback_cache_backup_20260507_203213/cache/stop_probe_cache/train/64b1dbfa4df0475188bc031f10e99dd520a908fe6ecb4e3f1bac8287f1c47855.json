@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "film",
+  "pred_answer": "film",
+  "normalized_gold": "film",
+  "normalized_pred": "film",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc347a55429959677d6a47",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc347a55429959677d6a47::White Christmas (weather)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc347a55429959677d6a47::Song of the South::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc347a55429959677d6a47::Snow Dogs::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abc347a55429959677d6a47::Painted Dog Conservation::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc347a55429959677d6a47::Song of the South",
+        "5abc347a55429959677d6a47::Snow Dogs"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc347a55429959677d6a47::White Christmas (weather)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc347a55429959677d6a47::Song of the South::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc347a55429959677d6a47::Snow Dogs::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abc347a55429959677d6a47::Painted Dog Conservation::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc347a55429959677d6a47::Painted Dog Conservation::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Painted Dog Conservation was founded in 1992 by Dr Greg Rasmussen, for the protection of the painted dogs (\"Lycaon pictus\") and their habitat.\n[2] Snow Dogs is a 2002 American Northern adventure comedy film directed by Brian Levant, and starring Cuba Gooding Jr. and James Coburn.\n[3] Song of the South is a 1946 American live-action animated musical film produced by Walt Disney and released by RKO Radio Pictures.\n[4] Because December is at the beginning of the Southern Hemisphere summer, white Christmases there are extremely rare, except in Antarctica, in the Southern Alps of New Zealand's South Island, and in parts of the Andes in South America."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

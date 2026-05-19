@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jeremy Bentham",
+  "pred_answer": "Jeremy Bentham",
+  "normalized_gold": "jeremy bentham",
+  "normalized_pred": "jeremy bentham",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae25c6c5542994d89d5b3f6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae25c6c5542994d89d5b3f6::Koepelgevangenis (Arnhem)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae25c6c5542994d89d5b3f6::Koepelgevangenis (Haarlem)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae25c6c5542994d89d5b3f6::Panopticon::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae25c6c5542994d89d5b3f6::Frits van Dongen::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae25c6c5542994d89d5b3f6::Koepelgevangenis (Haarlem)",
+        "5ae25c6c5542994d89d5b3f6::Panopticon"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae25c6c5542994d89d5b3f6::Koepelgevangenis (Arnhem)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae25c6c5542994d89d5b3f6::Koepelgevangenis (Haarlem)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae25c6c5542994d89d5b3f6::Panopticon::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae25c6c5542994d89d5b3f6::Frits van Dongen::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae25c6c5542994d89d5b3f6::Frits van Dongen::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He designed a canal-side municipal theatre for the city of Leeuwarden with his firm De Architecten Cie. The building he designed that is known as The Whale is in an area known as the Oostelijke Handelskade (Eastern Docklands area) that includes \"some of The Netherlands' most cutting-edge housing developments including Piraeus, designed by Hans Kollhoff and Christian Rappit, \"Hoop, Liefde en Fortui\n[2] The Panopticon is a type of institutional building designed by the English philosopher and social theorist Jeremy Bentham in the late 18th century.\n[3] It is one of three Panopticon-style buildings situated in the country.\n[4] It is one of three Panopticon-style buildings situated in the country."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lake Placid, New York",
+  "pred_answer": "Lake Placid, New York",
+  "normalized_gold": "lake placid new york",
+  "normalized_pred": "lake placid new york",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade98375542997c77adee7a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade98375542997c77adee7a::Paul Conlin::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade98375542997c77adee7a::Mike Eruzione::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade98375542997c77adee7a::Miracle on Ice::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade98375542997c77adee7a::Tom Carlon::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade98375542997c77adee7a::Mike Eruzione",
+        "5ade98375542997c77adee7a::Miracle on Ice"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade98375542997c77adee7a::Paul Conlin::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade98375542997c77adee7a::Mike Eruzione::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade98375542997c77adee7a::Miracle on Ice::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade98375542997c77adee7a::Tom Carlon::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade98375542997c77adee7a::Tom Carlon::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Carlon saw his name and stick go into the hall of fame in Canada when he scored the game-winning goal in the world championships to win the gold medal.\n[2] The \"Miracle on Ice\" refers to a medal-round game during the men's ice hockey tournament at the 1980 Winter Olympics in Lake Placid, New York, played between the hosting United States, and the defending gold medalists, the Soviet Union.\n[3] He is best known as the captain of the 1980 Winter Olympics United States national team that defeated the Soviet Union in the famous \"Miracle on Ice\" game, in which he scored the game-winning goal.\n[4] He scored the game-winning goal in the 1961 Memorial Cup for the St. Mike's Majors."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mike Leach",
+  "pred_answer": "Mike Leach",
+  "normalized_gold": "mike leach",
+  "normalized_pred": "mike leach",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf32585542992d7e9f92c7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf32585542992d7e9f92c7::2008 Texas vs. Texas Tech football game::7"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf32585542992d7e9f92c7::2005 Michigan Wolverines football team::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf32585542992d7e9f92c7::2008 Texas Tech Red Raiders football team::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf32585542992d7e9f92c7::2008 Texas vs. Texas Tech football game::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf32585542992d7e9f92c7::2008 Texas vs. Texas Tech football game",
+        "5adf32585542992d7e9f92c7::2008 Texas Tech Red Raiders football team"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf32585542992d7e9f92c7::2008 Texas vs. Texas Tech football game::7",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf32585542992d7e9f92c7::2005 Michigan Wolverines football team::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf32585542992d7e9f92c7::2008 Texas Tech Red Raiders football team::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf32585542992d7e9f92c7::2008 Texas vs. Texas Tech football game::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf32585542992d7e9f92c7::2008 Texas vs. Texas Tech football game::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 2008 Texas vs. Texas Tech football game was a Big 12 Conference game played between the Texas Longhorns and Texas Tech Red Raiders at Jones AT&T Stadium in Lubbock, Texas, United States.\n[2] The team was coached by Mike Leach.\n[3] Despite a disappointing 7–5 finish after being ranked as high as #2 early in the season, Michigan did not lose a game by more than a touchdown and upset Penn State, who finished #3 in the nation, on a last second touchdown pass from Chad Henne to Mario Manningham.\n[4] In the game, the Red Raiders stunned the Longhorns 39-33 on a last second touchdown pass."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

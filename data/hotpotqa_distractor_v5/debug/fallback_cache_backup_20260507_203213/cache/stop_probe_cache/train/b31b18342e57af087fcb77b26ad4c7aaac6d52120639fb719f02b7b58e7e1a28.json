@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Forest Hills, Queens",
+  "pred_answer": "Forest Hills, Queens",
+  "normalized_gold": "forest hills queens",
+  "normalized_pred": "forest hills queens",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe51da55429965af743ebe",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe51da55429965af743ebe::Arturo Cruz::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe51da55429965af743ebe::Arturo Vega::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe51da55429965af743ebe::Ramones::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe51da55429965af743ebe::Tin Machine::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe51da55429965af743ebe::Arturo Vega",
+        "5abe51da55429965af743ebe::Ramones"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe51da55429965af743ebe::Arturo Cruz::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe51da55429965af743ebe::Arturo Vega::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe51da55429965af743ebe::Ramones::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe51da55429965af743ebe::Tin Machine::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe51da55429965af743ebe::Tin Machine::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Tin Machine were an Anglo-American hard rock band formed in 1988, notable for being fronted by English singer-songwriter David Bowie.\n[2] The Ramones were an American punk rock band that formed in the New York City neighborhood of Forest Hills, Queens, in 1974.\n[3] He was sometimes called the fifth Ramone, and attended all but two of the more than 2,200 shows they played from their formation in 1974 to their disbanding in 1996.\n[4] Arturo José Cruz Porras (December 18, 1923 – July 9, 2013), sometimes called Arturo Cruz, Sr. to distinguish him from his son, was a Nicaraguan banker and technocrat."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

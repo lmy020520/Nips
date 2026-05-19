@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jean Sibelius",
+  "pred_answer": "Jean Sibelius",
+  "normalized_gold": "jean sibelius",
+  "normalized_pred": "jean sibelius",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a83ea025542992ef85e2388",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a83ea025542992ef85e2388::Leevi Madetoja::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a83ea025542992ef85e2388::Jean Sibelius::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a83ea025542992ef85e2388::Cecil Gray (composer)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a83ea025542992ef85e2388::Toivo Kuula::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a83ea025542992ef85e2388::Jean Sibelius",
+        "5a83ea025542992ef85e2388::Cecil Gray (composer)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a83ea025542992ef85e2388::Leevi Madetoja::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a83ea025542992ef85e2388::Jean Sibelius::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a83ea025542992ef85e2388::Cecil Gray (composer)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a83ea025542992ef85e2388::Toivo Kuula::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a83ea025542992ef85e2388::Toivo Kuula::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Toivo Timoteus Kuula (7 July 1883, Vaasa – 18 May 1918, Viipuri) was a Finnish composer and conductor of the late-Romantic and early-modern periods, who emerged in the wake of Jean Sibelius, under whom he studied privately from 1906 to 1908.\n[2] He published books on the composers Jean Sibelius, Peter Warlock and Carlo Gesualdo, the last of these co-authored by the same Warlock; also a history of music, collections of essays on music, a play about Gilles de Rais and an autobiography.\n[3] Jean Sibelius ( ;    ), born Johan Julius Christian Sibelius (8 December 186520 September 1957), was a Finnish composer and violinist of the late Romantic and early-modern periods.\n[4] Leevi Antti Madetoja (] ; 17 February 1887, Oulu – 6 October 1947, Helsinki) was a Finnish composer, music critic, conductor, and teacher of the late-Romantic and early-modern periods; he is generally considered to be among the most significant Finnish composers to emerge after Jean Sibelius, under whom he studied privately from 1908–10."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

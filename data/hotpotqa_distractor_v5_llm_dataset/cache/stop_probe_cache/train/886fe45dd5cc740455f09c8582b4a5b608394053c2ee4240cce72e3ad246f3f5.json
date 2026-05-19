@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "23 August 1942",
+  "pred_answer": "23 August 1942",
+  "normalized_gold": "23 august 1942",
+  "normalized_pred": "23 august 1942",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6bd895542995eadef0090",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6bd895542995eadef0090::Red Orchestra 2: Heroes of Stalingrad::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6bd895542995eadef0090::Bombing of Stalingrad::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6bd895542995eadef0090::Battle of Stalingrad::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6bd895542995eadef0090::Red Orchestra 2: Heroes of Stalingrad::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6bd895542995eadef0090::Red Orchestra 2: Heroes of Stalingrad",
+        "5ab6bd895542995eadef0090::Battle of Stalingrad"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6bd895542995eadef0090::Red Orchestra 2: Heroes of Stalingrad::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6bd895542995eadef0090::Bombing of Stalingrad::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6bd895542995eadef0090::Battle of Stalingrad::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6bd895542995eadef0090::Red Orchestra 2: Heroes of Stalingrad::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6bd895542995eadef0090::Red Orchestra 2: Heroes of Stalingrad::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Red Orchestra 2: Heroes of Stalingrad is a World War II-themed tactical first-person shooter video game developed and published by Tripwire Interactive.\n[2] The Battle of Stalingrad (23 August 1942 – 2 February 1943) was a major battle of World War II in which Nazi Germany and its allies fought the Soviet Union for control of the city of Stalingrad (now Volgograd) in Southern Russia.\n[3] Stalingrad, a Soviet city and industrial centre on the river Volga, was bombed heavily by the Luftwaffe during the Battle of Stalingrad in World War II.\n[4] The title focuses heavily on the Battle of Stalingrad."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

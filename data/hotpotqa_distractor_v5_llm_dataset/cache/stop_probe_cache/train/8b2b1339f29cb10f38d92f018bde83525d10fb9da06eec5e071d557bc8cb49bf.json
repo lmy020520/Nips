@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Shawty Lo",
+  "pred_answer": "Shawty Lo",
+  "normalized_gold": "shawty lo",
+  "normalized_pred": "shawty lo",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8a87505542996c9b8d5f1f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8a87505542996c9b8d5f1f::Units in the City::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8a87505542996c9b8d5f1f::McGruff (rapper)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8a87505542996c9b8d5f1f::Shawty Lo::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8a87505542996c9b8d5f1f::Ralo (rapper)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8a87505542996c9b8d5f1f::Units in the City",
+        "5a8a87505542996c9b8d5f1f::Shawty Lo"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8a87505542996c9b8d5f1f::Units in the City::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8a87505542996c9b8d5f1f::McGruff (rapper)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8a87505542996c9b8d5f1f::Shawty Lo::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8a87505542996c9b8d5f1f::Ralo (rapper)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8a87505542996c9b8d5f1f::Ralo (rapper)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Terrell Davis, known professionally as Ralo, is an American hip hop recording artist from Atlanta, Georgia.\n[2] Carlos Rico Walker (March 22, 1976 – September 21, 2016), known professionally as Shawty Lo, was an American rapper from Atlanta, Georgia.\n[3] Herbert Brown, better known by his stage name McGruff (also known as Herb McGruff) is an American Hip hop recording artist from Harlem, New York City, New York.\n[4] Units in the City is the debut and only studio album by American hip hop recording artist Shawty Lo."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

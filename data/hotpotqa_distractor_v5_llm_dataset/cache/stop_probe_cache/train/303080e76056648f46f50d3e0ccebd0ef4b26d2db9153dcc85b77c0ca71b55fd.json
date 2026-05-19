@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Nikita Gennadyevich Katsalapov",
+  "pred_answer": "Nikita Gennadyevich Katsalapov",
+  "normalized_gold": "nikita gennadyevich katsalapov",
+  "normalized_pred": "nikita gennadyevich katsalapov",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b7cea55429931da12cac8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b7cea55429931da12cac8::Victoria Sinitsina::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b7cea55429931da12cac8::Luciano Milo::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b7cea55429931da12cac8::Nikita Katsalapov::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7b7cea55429931da12cac8::Victoria Sinitsina::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b7cea55429931da12cac8::Victoria Sinitsina",
+        "5a7b7cea55429931da12cac8::Nikita Katsalapov"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b7cea55429931da12cac8::Victoria Sinitsina::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b7cea55429931da12cac8::Luciano Milo::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b7cea55429931da12cac8::Nikita Katsalapov::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7b7cea55429931da12cac8::Victoria Sinitsina::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b7cea55429931da12cac8::Victoria Sinitsina::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] With Nikita Katsalapov, she is the 2016 Russian national silver medalist.\n[2] Nikita Gennadyevich Katsalapov (Russian: Никита Геннадьевич Кацалапов ; born 10 July 1991) is a Russian ice dancer.\n[3] Luciano Milo (born 29 April 1980 in Rome) is an Italian former ice dancer.\n[4] Victoria Alexandrovna Sinitsina (Russian: Виктория Александровна Синицина ; born 29 April 1995) is a Russian ice dancer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

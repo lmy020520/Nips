@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Godalming, Surrey",
+  "pred_answer": "Godalming, Surrey",
+  "normalized_gold": "godalming surrey",
+  "normalized_pred": "godalming surrey",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8464705542990548d0b2a8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8464705542990548d0b2a8::Top Girls::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8464705542990548d0b2a8::Richard Manningham::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8464705542990548d0b2a8::Mary Toft::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8464705542990548d0b2a8::The Book of the City of Ladies::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8464705542990548d0b2a8::Richard Manningham",
+        "5a8464705542990548d0b2a8::Mary Toft"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8464705542990548d0b2a8::Top Girls::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8464705542990548d0b2a8::Richard Manningham::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8464705542990548d0b2a8::Mary Toft::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8464705542990548d0b2a8::The Book of the City of Ladies::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8464705542990548d0b2a8::The Book of the City of Ladies::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] As Pizan builds her city, she uses each famous woman as a building block for not only the walls and houses of the city, but also as building blocks for her thesis.\n[2] Mary Toft (née Denyer; c. 1701–1763), also spelled Tofts, was an English woman from Godalming, Surrey, who in 1726 became the subject of considerable controversy when she tricked doctors into believing that she had given birth to rabbits.\n[3] Sir Richard Manningham M.D. (1690–1759) was an English physician and man-midwife, now remembered for his involvement in the Mary Toft hoax.\n[4] In the famous opening scene, she hosts a dinner party for a group of famous women from history."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

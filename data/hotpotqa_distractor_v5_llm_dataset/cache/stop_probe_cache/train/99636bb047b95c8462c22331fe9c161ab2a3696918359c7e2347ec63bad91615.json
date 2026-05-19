@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Jesus",
+  "pred_answer": "Jesus",
+  "normalized_gold": "jesus",
+  "normalized_pred": "jesus",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7cae1a55429935c91b529a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7cae1a55429935c91b529a::Catherine of Siena::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7cae1a55429935c91b529a::St Catherine's School, Germiston::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7cae1a55429935c91b529a::History of Regent's Park College, Oxford::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7cae1a55429935c91b529a::Catherine of Siena",
+        "5a7cae1a55429935c91b529a::St Catherine's School, Germiston"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7cae1a55429935c91b529a::Catherine of Siena::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7cae1a55429935c91b529a::St Catherine's School, Germiston::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7cae1a55429935c91b529a::History of Regent's Park College, Oxford::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7cae1a55429935c91b529a::History of Regent's Park College, Oxford::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] After taking advantage of significant links with both St Catherine's Society and Mansfield College, Oxford to matriculate undergraduates for study within the University, the College became a full Permanent Private Hall of the University of Oxford in 1957.\n[2] St Catherine's School is a private, co-educational school in Germiston, Gauteng named after Saint Catherine of Siena.\n[3] She is believed, in Catholicism, to have had miraculous visions and felt herself to be united in marriage with Jesus, stating in her letters that she wore the wedding ring he gave her but that it was invisible."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

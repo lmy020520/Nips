@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "McLeod's Daughters",
+  "pred_answer": "McLeod's Daughters",
+  "normalized_gold": "mcleods daughters",
+  "normalized_pred": "mcleods daughters",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab61a45554299488d4d9ab4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab61a45554299488d4d9ab4::Bridie Carter::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab61a45554299488d4d9ab4::Tess Bateman::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab61a45554299488d4d9ab4::McLeod's Daughters::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab61a45554299488d4d9ab4::The Big Spell (TV series)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab61a45554299488d4d9ab4::Bridie Carter",
+        "5ab61a45554299488d4d9ab4::McLeod's Daughters"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab61a45554299488d4d9ab4::Bridie Carter::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab61a45554299488d4d9ab4::Tess Bateman::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab61a45554299488d4d9ab4::McLeod's Daughters::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab61a45554299488d4d9ab4::The Big Spell (TV series)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab61a45554299488d4d9ab4::The Big Spell (TV series)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The program is an adaptation of the Australian program \"The Great Australian Spelling Bee\" and features 20 children aged between 9 and 13 competing in a series of spelling-related challenges, and delves into both the spellings and the meanings of various words.\n[2] McLeod's Daughters is an Australian television drama program created by Posie Graeme-Evans and Caroline Stanton.\n[3] Tess Bateman is a fictional character from the BBC medical drama \"Casualty\", played by Suzanne Packer.\n[4] Bridie Carter (born 18 December 1970) is an Australian actress best known for her role as the main character of Tess Silverman McLeod on the television drama series \"McLeod's Daughters\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Little Women",
+  "pred_answer": "Little Women",
+  "normalized_gold": "little women",
+  "normalized_pred": "little women",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7da39f5542990b8f5039e5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7da39f5542990b8f5039e5::A Long Fatal Love Chase::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7da39f5542990b8f5039e5::Adria Locke Langley::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7da39f5542990b8f5039e5::Louisa May Alcott::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7da39f5542990b8f5039e5::The Exile (1947 film)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7da39f5542990b8f5039e5::A Long Fatal Love Chase",
+        "5a7da39f5542990b8f5039e5::Louisa May Alcott"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7da39f5542990b8f5039e5::A Long Fatal Love Chase::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7da39f5542990b8f5039e5::Adria Locke Langley::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7da39f5542990b8f5039e5::Louisa May Alcott::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7da39f5542990b8f5039e5::The Exile (1947 film)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7da39f5542990b8f5039e5::The Exile (1947 film)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The movie is based on the novel \"His Majesty, the King: A Romantic Love Chase of the Seventeenth Century\" by Cosmo Hamilton.\n[2] Louisa May Alcott ( ; November 29, 1832March 6, 1888) was an American novelist and poet best known as the author of the novel \"Little Women\" (1868) and its sequels \"Little Men\" (1871) and \"Jo's Boys\" (1886).\n[3] Adria Locke Langley (1899 – August 14, 1983) was an American author best known for her first novel, published in 1945, the best seller \"A Lion Is in the Streets\" based on the life of Huey Long.\n[4] A Long Fatal Love Chase is a suspense novel by Louisa May Alcott."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

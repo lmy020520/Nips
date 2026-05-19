@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "LNW-80",
+  "pred_answer": "LNW-80",
+  "normalized_gold": "lnw-80",
+  "normalized_pred": "lnw-80",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae226755542996483e64906",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae226755542996483e64906::LNW-80::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae226755542996483e64906::Jones v Kaney::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae226755542996483e64906::Gradiente Expert::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae226755542996483e64906::LNW-80::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae226755542996483e64906::LNW-80",
+        "5ae226755542996483e64906::Gradiente Expert"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae226755542996483e64906::LNW-80::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae226755542996483e64906::Jones v Kaney::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae226755542996483e64906::Gradiente Expert::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae226755542996483e64906::LNW-80::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae226755542996483e64906::LNW-80::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The LNW-80 was also sold as a kit.\n[2] The Expert, made by Gradiente Eletrônica (to date best known as a game console and Hi-Fi equipment company) was the second and last MSX home computer launched in the Brazilian market, in the mid-1980s.\n[3] To succeed in the claim, he had to overturn an earlier Court of Appeal decision that had decided that preparation of a joint statement with the other side's expert was covered by immunity from suit.\n[4] The LNW-80, released in 1982, is the first computer built by LNW Research."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

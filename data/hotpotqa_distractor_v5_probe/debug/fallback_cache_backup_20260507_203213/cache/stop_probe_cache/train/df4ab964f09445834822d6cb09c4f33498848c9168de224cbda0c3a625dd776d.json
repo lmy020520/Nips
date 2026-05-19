@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bernard Law Montgomery",
+  "pred_answer": "Bernard Law Montgomery",
+  "normalized_gold": "bernard law montgomery",
+  "normalized_pred": "bernard law montgomery",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7cac2d55429935c91b5290",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7cac2d55429935c91b5290::John Ashmead::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7cac2d55429935c91b5290::Hugh Toye::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7cac2d55429935c91b5290::Bernard Montgomery::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7cac2d55429935c91b5290::Derek Knee::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7cac2d55429935c91b5290::Kenneth Strong::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7cac2d55429935c91b5290::Bernard Montgomery",
+        "5a7cac2d55429935c91b5290::Derek Knee"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7cac2d55429935c91b5290::John Ashmead::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7cac2d55429935c91b5290::Hugh Toye::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7cac2d55429935c91b5290::Bernard Montgomery::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7cac2d55429935c91b5290::Derek Knee::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7cac2d55429935c91b5290::Kenneth Strong::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7cac2d55429935c91b5290::Kenneth Strong::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] After service as an Intelligence Officer with his battalion in Ireland from 1920 to 1922 during the Irish War of Independence, he volunteered for service as an interpreter and was posted to Germany with the British Army of the Rhine.\n[2] Derek Knee (22 October 1922 – 18 March 2014) was a British Army intelligence officer during World War II who was the interpreter and translator for Field Marshal Sir Bernard Montgomery, commander of the Anglo-Canadian 21st Army Group, at the German surrender at Lüneburg Heath in Germany on 3 May 1945.\n[3] Field Marshal Bernard Law Montgomery, 1st Viscount Montgomery of Alamein, ( ; 17 November 1887 – 24 March 1976), nicknamed \"Monty\" and the \"Spartan General\", was a senior British Army officer who fought in both the First World War and the Second World War.\n[4] Colonel Claude Hugh Toye MBE (29 March 1917- 15 April 2012) was a British Army intelligence officer who worked in India and Burma during World War II."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

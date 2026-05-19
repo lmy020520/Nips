@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "European Parliament (1984–1989)",
+  "pred_answer": "European Parliament (1984–1989)",
+  "normalized_gold": "european parliament 1984–1989",
+  "normalized_pred": "european parliament 1984–1989",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89aa4a5542992e4fca8365",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89aa4a5542992e4fca8365::List of accolades received by The Young Victoria::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89aa4a5542992e4fca8365::Alice Dudley, Duchess of Dudley::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89aa4a5542992e4fca8365::Charles Wellesley, 9th Duke of Wellington::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a89aa4a5542992e4fca8365::Princess Antonia, Duchess of Wellington::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a89aa4a5542992e4fca8365::List of accolades received by The Young Victoria::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89aa4a5542992e4fca8365::Charles Wellesley, 9th Duke of Wellington",
+        "5a89aa4a5542992e4fca8365::Princess Antonia, Duchess of Wellington"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89aa4a5542992e4fca8365::List of accolades received by The Young Victoria::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89aa4a5542992e4fca8365::Alice Dudley, Duchess of Dudley::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89aa4a5542992e4fca8365::Charles Wellesley, 9th Duke of Wellington::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a89aa4a5542992e4fca8365::Princess Antonia, Duchess of Wellington::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a89aa4a5542992e4fca8365::List of accolades received by The Young Victoria::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a89aa4a5542992e4fca8365::List of accolades received by The Young Victoria::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Martin Scorsese, Graham King, and Sarah, Duchess of York served as its producers.\n[2] Princess Antonia of Prussia, Duchess of Wellington, Duchess of Ciudad Rodrigo, Princess of Waterloo, Duchess of Victoria, (born 28 April 1955), is a great-granddaughter of Wilhelm II, German Emperor and the wife of Charles Wellesley, 9th Duke of Wellington.\n[3] He has served as Conservative Party Member of the European Parliament (1984–1989) for Surrey West and currently sits as a hereditary peer in the House of Lords since 2015.\n[4] In 1644, by way of reparation for her losses, King Charles I created Alice Dudley a duchess in her own right \"for her natural life\", the dukedom thus created not being heritable."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

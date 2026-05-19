@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Det. Frank Ochoa",
+  "pred_answer": "Det. Frank Ochoa",
+  "normalized_gold": "det frank ochoa",
+  "normalized_pred": "det frank ochoa",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7071f554299110f219a99",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7071f554299110f219a99::Vincent Gardenia::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7071f554299110f219a99::House of Pleasure for Women::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7071f554299110f219a99::Eli Roth::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7071f554299110f219a99::Vincent Gardenia",
+        "5ab7071f554299110f219a99::House of Pleasure for Women"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7071f554299110f219a99::Vincent Gardenia::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7071f554299110f219a99::House of Pleasure for Women::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7071f554299110f219a99::Eli Roth::6",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7071f554299110f219a99::Eli Roth::6",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] His next project is the vigilante action film \"Death Wish\", a remake of the 1974 original.\n[2] House of Pleasure for Women (Italian: Bordella ) is a 1976 satirical comedy film written and directed by Pupi Avati and starring Gigi Proietti, Christian De Sica, Al Lettieri, Gianni Cavina and Vincent Gardenia.\n[3] He also portrayed Det. Frank Ochoa in \"Death Wish\" (1974) and its 1982 sequel, as well as Mr. Mushnik in the musical film adaptation of \"Little Shop of Horrors\" (1986)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

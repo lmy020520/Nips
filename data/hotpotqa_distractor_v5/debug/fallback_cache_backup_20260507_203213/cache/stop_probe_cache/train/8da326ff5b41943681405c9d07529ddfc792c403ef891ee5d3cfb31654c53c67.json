@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Dynasty",
+  "pred_answer": "Dynasty",
+  "normalized_gold": "dynasty",
+  "normalized_pred": "dynasty",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84bfd15542991dd0999dd4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84bfd15542991dd0999dd4::Fallon Carrington Colby::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84bfd15542991dd0999dd4::Dynasty (2017 TV series)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84bfd15542991dd0999dd4::Elizabeth Gillies::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a84bfd15542991dd0999dd4::Josh Gillies::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84bfd15542991dd0999dd4::Fallon Carrington Colby",
+        "5a84bfd15542991dd0999dd4::Elizabeth Gillies"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84bfd15542991dd0999dd4::Fallon Carrington Colby::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84bfd15542991dd0999dd4::Dynasty (2017 TV series)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84bfd15542991dd0999dd4::Elizabeth Gillies::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a84bfd15542991dd0999dd4::Josh Gillies::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84bfd15542991dd0999dd4::Josh Gillies::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Joshua James Gillies (born 12 June 1990) is an English footballer who plays as a midfielder for Darlington.\n[2] Elizabeth Egan Gillies (born July 26, 1993), sometimes known as Liz Gillies, is an American actress and singer.\n[3] It stars Grant Show as Blake Carrington, Nathalie Kelley as Cristal Flores, Elizabeth Gillies as Blake's daughter Fallon, and James Mackay as his son Steven.\n[4] Elizabeth Gillies will play Fallon in the 2017 reboot series \"Dynasty\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

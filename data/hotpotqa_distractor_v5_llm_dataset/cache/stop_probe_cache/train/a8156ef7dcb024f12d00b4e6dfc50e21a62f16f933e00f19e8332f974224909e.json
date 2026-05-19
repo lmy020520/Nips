@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1919",
+  "pred_answer": "1919",
+  "normalized_gold": "1919",
+  "normalized_pred": "1919",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0f6545542997b2ef7d0b2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0f6545542997b2ef7d0b2::William Davis Ticknor, Sr.::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0f6545542997b2ef7d0b2::Icos::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0f6545542997b2ef7d0b2::Commercial Solvents Corporation::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0f6545542997b2ef7d0b2::Genzyme::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0f6545542997b2ef7d0b2::William Davis Ticknor, Sr.",
+        "5ae0f6545542997b2ef7d0b2::Commercial Solvents Corporation"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0f6545542997b2ef7d0b2::William Davis Ticknor, Sr.::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0f6545542997b2ef7d0b2::Icos::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0f6545542997b2ef7d0b2::Commercial Solvents Corporation::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0f6545542997b2ef7d0b2::Genzyme::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0f6545542997b2ef7d0b2::Genzyme::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Sanofi Genzyme is an American biotechnology company based in Cambridge, Massachusetts.\n[2] Commercial Solvents Corporation (CSC) was an American chemical and biotechnology company created in 1919.\n[3] Icos Corporation (trademark ICOS) was an American biotechnology company and the largest biotechnology company in the U.S. state of Washington, before it was sold to Eli Lilly and Company in 2007.\n[4] William Davis Ticknor, Sr. (January 11, 1881 – March 24, 1938) was president and chairman of the board of Commercial Solvents Corporation."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "breaststroke",
+  "pred_answer": "breaststroke",
+  "normalized_gold": "breaststroke",
+  "normalized_pred": "breaststroke",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae723815542992ae0d163b8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae723815542992ae0d163b8::Ross Murdoch::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae723815542992ae0d163b8::Evgeny Sedov::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae723815542992ae0d163b8::Adam Peaty::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae723815542992ae0d163b8::Anže Tavčar::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae723815542992ae0d163b8::Ross Murdoch",
+        "5ae723815542992ae0d163b8::Adam Peaty"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae723815542992ae0d163b8::Ross Murdoch::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae723815542992ae0d163b8::Evgeny Sedov::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae723815542992ae0d163b8::Adam Peaty::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae723815542992ae0d163b8::Anže Tavčar::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae723815542992ae0d163b8::Anže Tavčar::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Anže Tavčar (born 2 December 1994) is a Slovenian competitive swimmer, who specializes in sprint freestyle events.\n[2] Adam Peaty, MBE (born 28 December 1994) is a British competitive swimmer who specializes in the breaststroke.\n[3] Together with his teammates, he also broke the 4×50 meter medley relay world record in the heats, but this record was broken in the final by Brazil.\n[4] Ross Murdoch (born 14 January 1994) is a Scottish competitive swimmer who has represented Great Britain in the Summer Olympics, the FINA world championships and the LEN European championships, and Scotland in the Commonwealth Games."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

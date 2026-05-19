@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Maggie's List",
+  "pred_answer": "Maggie's List",
+  "normalized_gold": "maggies list",
+  "normalized_pred": "maggies list",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a83450455429954d2e2ec77",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a83450455429954d2e2ec77::Nancy Boyda::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a83450455429954d2e2ec77::United States India Political Action Committee::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a83450455429954d2e2ec77::Lynn Jenkins::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a83450455429954d2e2ec77::Sanjay Puri::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a83450455429954d2e2ec77::Nancy Boyda",
+        "5a83450455429954d2e2ec77::Lynn Jenkins"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a83450455429954d2e2ec77::Nancy Boyda::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a83450455429954d2e2ec77::United States India Political Action Committee::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a83450455429954d2e2ec77::Lynn Jenkins::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a83450455429954d2e2ec77::Sanjay Puri::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a83450455429954d2e2ec77::Sanjay Puri::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 2002 Puri became founder and chairman of the United States India Political Action Committee (USINPAC), a non-profit political action committee based in Washington, D.C. Puri founded the Alliance for US India Business (AUSIB) in 2005, and also serves as president and CEO.\n[2] She is a founder of Maggie's List, a political action committee designed to increase the number of conservative women elected to federal public office.\n[3] The United States India Political Action Committee is a political action committee based in Washington, D.C. Since its founding in 2002 by businessman Sanjay Puri, USINPAC has described its goal as \"working closely with other Indian-American organizations to promote fair and balanced policies, and create a platform to enable the entry of Indian Americans in the political process.\"\n[4] On November 4, 2008, Boyda was defeated for re-election by Kansas State Treasurer Lynn Jenkins, after serving one term."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "over six million",
+  "pred_answer": "over six million",
+  "normalized_gold": "over six million",
+  "normalized_pred": "over six million",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2094e55429964131be2be",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2094e55429964131be2be::Crow Creek (South Platte River)::6"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2094e55429964131be2be::Missouri::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2094e55429964131be2be::Brush Creek (Bourbeuse River)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2094e55429964131be2be::Lake Charles Trail::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2094e55429964131be2be::Missouri",
+        "5ac2094e55429964131be2be::Brush Creek (Bourbeuse River)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2094e55429964131be2be::Crow Creek (South Platte River)::6",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2094e55429964131be2be::Missouri::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2094e55429964131be2be::Brush Creek (Bourbeuse River)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2094e55429964131be2be::Lake Charles Trail::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2094e55429964131be2be::Lake Charles Trail::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Lake Charles Trail is in the northwestern Sawatch Range, part of the Rocky Mountains in the U.S. state of Colorado.\n[2] Brush Creek is a stream in Crawford and Gasconade counties in the U.S. state of Missouri.\n[3] With over six million residents, it is the 18th most populous state.\n[4] Other tributaries of Crow Creek below the reservoirs are Sand Creek, Spring Creek and Brush Creek, none of which flow year round."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

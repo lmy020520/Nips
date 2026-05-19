@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bentley Mark VI",
+  "pred_answer": "Bentley Mark VI",
+  "normalized_gold": "bentley mark vi",
+  "normalized_pred": "bentley mark vi",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac555e65542993e66e82318",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac555e65542993e66e82318::Rolls-Royce Silver Wraith::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac555e65542993e66e82318::Bentley Azure::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac555e65542993e66e82318::Bentley Crewe::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac555e65542993e66e82318::Bentley Turbo R::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac555e65542993e66e82318::Rolls-Royce Silver Wraith",
+        "5ac555e65542993e66e82318::Bentley Crewe"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac555e65542993e66e82318::Rolls-Royce Silver Wraith::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac555e65542993e66e82318::Bentley Azure::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac555e65542993e66e82318::Bentley Crewe::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac555e65542993e66e82318::Bentley Turbo R::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac555e65542993e66e82318::Bentley Turbo R::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Motor Trend\" called the Turbo R \"the first Bentley in decades deserving of the famous name\" in their review of the car on its introduction to the United States in 1989.\n[2] Bentley Crewe, located on the outskirts of Crewe, Cheshire, England, is the headquarters and design and manufacturing center of Bentley Motors Limited.\n[3] The Bentley Azure is a large, four seater convertible built by Bentley Motors Limited at its factory in Crewe, England.\n[4] It was made from 1946 to 1958 as only a chassis at Rolls-Royce's former Merlin engine plant, their Crewe factory, alongside the shorter Bentley Mark VI."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Active Duty",
+  "pred_answer": "Active Duty",
+  "normalized_gold": "active duty",
+  "normalized_pred": "active duty",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a738632554299623ed4abd4",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a738632554299623ed4abd4::MC Hammer::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a738632554299623ed4abd4::MC Hammer discography::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a738632554299623ed4abd4::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a738632554299623ed4abd4::Active Duty (album)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a738632554299623ed4abd4::You Belong to Me (Carly Simon song)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a738632554299623ed4abd4::MC Hammer",
+        "5a738632554299623ed4abd4::Active Duty (album)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a738632554299623ed4abd4::MC Hammer::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a738632554299623ed4abd4::MC Hammer discography::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a738632554299623ed4abd4::Active Duty (album)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a738632554299623ed4abd4::You Belong to Me (Carly Simon song)::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a738632554299623ed4abd4::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a738632554299623ed4abd4::You Belong to Me (Carly Simon song)::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] MC Hammer or simply Hammer (born Stanley Kirk Burrell) is known for hit records including \"U Can't Touch This\", \"Pray\" and \"2 Legit 2 Quit\" as well as his flashy dance movements, choreography and Hammer pants.\n[2] Originally recorded by McDonald's rock group The Doobie Brothers for their seventh studio album, \"Livin' on the Fault Line\" (1977), the song was made famous by Simon herself when she recorded it for her seventh studio album, \"Boys in the Trees\" (1978).\n[3] Active Duty is the eighth release by MC Hammer on November 20, 2001.\n[4] A multi-award winner, M.C. Hammer is considered a \"forefather/pioneer\" and innovator of pop rap (incorporating elements of ), and is the first hip hop artist to achieve diamond status for an album.\n\nNotes:\n[bridge] MC Hammer's seventh studio album is titled 'Active Duty'."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

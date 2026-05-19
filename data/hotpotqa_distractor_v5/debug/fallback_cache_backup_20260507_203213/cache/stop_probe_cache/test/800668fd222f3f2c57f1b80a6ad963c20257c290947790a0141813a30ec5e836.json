@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Milium",
+  "pred_answer": "Milium",
+  "normalized_gold": "milium",
+  "normalized_pred": "milium",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8bc1b85542997f31a41db8",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8bc1b85542997f31a41db8::The Women's Peace Crusade::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8bc1b85542997f31a41db8::Coris monspeliensis::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8bc1b85542997f31a41db8::Milium (plant)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8bc1b85542997f31a41db8::Eucommia::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8bc1b85542997f31a41db8::Al-Mutanabbi::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8bc1b85542997f31a41db8::Milium (plant)",
+        "5a8bc1b85542997f31a41db8::Eucommia"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8bc1b85542997f31a41db8::The Women's Peace Crusade::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8bc1b85542997f31a41db8::Coris monspeliensis::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8bc1b85542997f31a41db8::Milium (plant)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8bc1b85542997f31a41db8::Eucommia::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8bc1b85542997f31a41db8::Al-Mutanabbi::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8bc1b85542997f31a41db8::Al-Mutanabbi::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He is considered as one of the greatest poets in the Arabic language and is the most prominent and most influential poet in the Arab world and much of his work has been translated into over 20 languages worldwide.\n[2] The single living species, \"Eucommia ulmoides\", is near threatened in the wild, but is widely cultivated in China for its bark, and is highly valued in herbology such as traditional Chinese medicine.\n[3] Milium (vernacular name milletgrass) is a genus of Eurasian, North American, and North African plants in the grass family.\n[4] Each flower measures up to 12 mm across and has narrow, widely spread petals."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

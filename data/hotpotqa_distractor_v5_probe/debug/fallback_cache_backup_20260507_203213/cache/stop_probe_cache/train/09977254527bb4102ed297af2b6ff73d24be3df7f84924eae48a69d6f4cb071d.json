@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Pony",
+  "pred_answer": "Pony",
+  "normalized_gold": "pony",
+  "normalized_pred": "pony",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5addefab5542997dc79070ca",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5addefab5542997dc79070ca::Ralph Stanley::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5addefab5542997dc79070ca::Lonesome Pine Fiddlers::25"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5addefab5542997dc79070ca::Pony (Kasey Chambers song)::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5addefab5542997dc79070ca::Pony (Kasey Chambers song)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5addefab5542997dc79070ca::Ralph Stanley",
+        "5addefab5542997dc79070ca::Pony (Kasey Chambers song)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5addefab5542997dc79070ca::Ralph Stanley::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5addefab5542997dc79070ca::Lonesome Pine Fiddlers::25",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5addefab5542997dc79070ca::Pony (Kasey Chambers song)::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5addefab5542997dc79070ca::Pony (Kasey Chambers song)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5addefab5542997dc79070ca::Pony (Kasey Chambers song)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Pony\" is a country song performed and written by Kasey Chambers and produced by her brother, Nash Chambers for her third album \"Wayward Angel\" (2004).\n[2] It references Ralph Stanley, an American folk, bluegrass, and country music artist.\n[3] The final act of the evening at the IBMA Awards was the playing of \"Pain in my Heart\" by Osborne, Goins and Williams along with a Song from the Dillards, who were also inducted the same evening.\n[4] Stanley began playing music in 1946, originally with his brother Carter as part of The Stanley Brothers, and most often as the leader of his band, The Clinch Mountain Boys."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

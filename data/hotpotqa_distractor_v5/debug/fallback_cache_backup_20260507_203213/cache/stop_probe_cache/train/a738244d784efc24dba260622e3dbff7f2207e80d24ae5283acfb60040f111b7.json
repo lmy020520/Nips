@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Battle of Berlin",
+  "pred_answer": "Battle of Berlin",
+  "normalized_gold": "battle of berlin",
+  "normalized_pred": "battle of berlin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c36e255429935c91b5131",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c36e255429935c91b5131::Battle of Berlin (RAF campaign)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c36e255429935c91b5131::Big Week::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c36e255429935c91b5131::Battle of Berlin (RAF campaign)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7c36e255429935c91b5131::Sir Arthur Harris, 1st Baronet::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7c36e255429935c91b5131::RCAF Western Air Command::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c36e255429935c91b5131::Battle of Berlin (RAF campaign)",
+        "5a7c36e255429935c91b5131::Sir Arthur Harris, 1st Baronet"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c36e255429935c91b5131::Battle of Berlin (RAF campaign)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c36e255429935c91b5131::Big Week::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c36e255429935c91b5131::Battle of Berlin (RAF campaign)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7c36e255429935c91b5131::Sir Arthur Harris, 1st Baronet::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7c36e255429935c91b5131::RCAF Western Air Command::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c36e255429935c91b5131::RCAF Western Air Command::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Western Air Command was the part of the Royal Canadian Air Force's Home War Establishment responsible for air operations on the Pacific coast of Canada during the Second World War.\n[2] Marshal of the Royal Air Force Sir Arthur Travers Harris, 1st Baronet, {'1': \", '2': \", '3': \", '4': \"} (13 April 1892 – 5 April 1984), commonly known as \"Bomber\" Harris by the press and often within the RAF as \"Butcher\" Harris, was Air Officer Commanding-in-Chief (AOC-in-C) RAF Bomber Command during the height of the Anglo-American strategic bombing campaign against Nazi Germany in the Second Wor\n[3] The Battle of Berlin was the British bombing campaign on Berlin from November 1943 to March 1944.\n[4] The daylight bombing campaign was also supported by RAF Bomber Command, operating against the same targets at night."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Parent Trap",
+  "pred_answer": "The Parent Trap",
+  "normalized_gold": "the parent trap",
+  "normalized_pred": "the parent trap",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d0a7555429909bec76915",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d0a7555429909bec76915::Lindsay Lohan filmography::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d0a7555429909bec76915::Get a Clue::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d0a7555429909bec76915::Roshon Fegan::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d0a7555429909bec76915::Lindsay Lohan filmography",
+        "5a7d0a7555429909bec76915::Get a Clue"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d0a7555429909bec76915::Lindsay Lohan filmography::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d0a7555429909bec76915::Get a Clue::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d0a7555429909bec76915::Roshon Fegan::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d0a7555429909bec76915::Roshon Fegan::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He is best known for his role as Ty Blue on the Disney Channel original series \"Shake It Up\" and for his role as Sander Loyer in the Disney Channel movie franchise \"Camp Rock\" with the Jonas Brothers and Demi Lovato.\n[2] Get a Clue is a 2002 Disney Channel Original Movie starring Lindsay Lohan as Lexy Gold, a teenage high school student who investigates a mystery after one of her teachers goes missing.\n[3] At age 11, Lohan made her motion picture debut in Disney's commercially and critically successful 1998 remake of \"The Parent Trap\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

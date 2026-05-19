@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "in Paradise, Nevada",
+  "pred_answer": "in Paradise, Nevada",
+  "normalized_gold": "in paradise nevada",
+  "normalized_pred": "in paradise nevada",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7780e5542995dae37e92f",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7780e5542995dae37e92f::2007 World Series of Poker results::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7780e5542995dae37e92f::2009 World Series of Poker results::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7780e5542995dae37e92f::2014 World Series of Poker results::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab7780e5542995dae37e92f::Rio All Suite Hotel and Casino::4"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab7780e5542995dae37e92f::2011 World Series of Poker::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7780e5542995dae37e92f::2014 World Series of Poker results",
+        "5ab7780e5542995dae37e92f::Rio All Suite Hotel and Casino"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7780e5542995dae37e92f::2007 World Series of Poker results::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7780e5542995dae37e92f::2009 World Series of Poker results::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7780e5542995dae37e92f::2014 World Series of Poker results::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab7780e5542995dae37e92f::Rio All Suite Hotel and Casino::4",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab7780e5542995dae37e92f::2011 World Series of Poker::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7780e5542995dae37e92f::2011 World Series of Poker::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It was held at the Rio All Suite Hotel and Casino in Las Vegas, Nevada between May 31 – July 19, 2011.\n[2] It is the host casino for the World Series of Poker.\n[3] Below are the results of the 2014 World Series of Poker, held from May 27-July 14 at the Rio All Suite Hotel and Casino in Paradise, Nevada.\n[4] Held in Las Vegas at the Rio All Suite Hotel and Casino, the 2009 series began on May 27 and featured 57 poker championships in several variants."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

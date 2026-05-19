@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "People's Republic of China",
+  "pred_answer": "People's Republic of China",
+  "normalized_gold": "peoples republic of china",
+  "normalized_pred": "peoples republic of china",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0b14155429924de1b7129",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0b14155429924de1b7129::Henan::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0b14155429924de1b7129::Yuzhou, Henan::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0b14155429924de1b7129::Hailin::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0b14155429924de1b7129::Anhui::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0b14155429924de1b7129::Yuzhou, Henan",
+        "5ae0b14155429924de1b7129::Hailin"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0b14155429924de1b7129::Henan::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0b14155429924de1b7129::Yuzhou, Henan::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0b14155429924de1b7129::Hailin::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0b14155429924de1b7129::Anhui::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0b14155429924de1b7129::Anhui::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Located across the basins of the Yangtze River and the Huai River, it borders Jiangsu to the east, Zhejiang to the southeast, Jiangxi to the south, Hubei to the southwest, Henan to the northwest, and Shandong for a short section in the north.\n[2] Hailin () is a county-level city, part of Mudanjiang prefecture-level city, Heilongjiang province, northeast China.\n[3] Yuzhou () is a county-level city in Xuchang, central Henan province in the People's Republic of China.\n[4] Henan () is a province of the People's Republic of China, located in the central part of the country."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

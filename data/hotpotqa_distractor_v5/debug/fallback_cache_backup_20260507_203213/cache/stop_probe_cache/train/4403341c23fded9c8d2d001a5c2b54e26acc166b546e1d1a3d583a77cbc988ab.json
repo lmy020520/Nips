@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "human skin",
+  "pred_answer": "human skin",
+  "normalized_gold": "human skin",
+  "normalized_pred": "human skin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c649c5542996e8ac88a9e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c649c5542996e8ac88a9e::Leatherface::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c649c5542996e8ac88a9e::Bill Johnson (film and television actor)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c649c5542996e8ac88a9e::Leatherface::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c649c5542996e8ac88a9e::Leatherface",
+        "5a8c649c5542996e8ac88a9e::Bill Johnson (film and television actor)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c649c5542996e8ac88a9e::Leatherface::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c649c5542996e8ac88a9e::Bill Johnson (film and television actor)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c649c5542996e8ac88a9e::Leatherface::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c649c5542996e8ac88a9e::Leatherface::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Leatherface appeared in the first film in the series (1974) and in its six subsequent continuations and remakes. Wisconsin killer Ed Gein, who wore a mask made of human skin, was reportedly the inspiration for elements in the original film.\n[2] Bill Johnson (born December 16, 1951) is an American actor, known for his role as \"Leatherface\" in the 1986 horror film \"The Texas Chainsaw Massacre 2\".\n[3] Leatherface is a character in \"The Texas Chainsaw Massacre\" series of horror films and spin-offs."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

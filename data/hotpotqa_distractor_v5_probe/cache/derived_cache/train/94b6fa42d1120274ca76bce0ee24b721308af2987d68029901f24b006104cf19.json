@@ -1,0 +1,14 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the death year of the author of Facundo. The state summary has a note that Domingo Faustino Sarmiento died in 1888, but this note is not grounded in the provided raw candidates. The raw candidates mention Sarmiento as the author of Facundo (unit 1) and also mention him in relation to Amalia (unit 3). We need to bridge the entity 'author of Facundo' to the death year. A bridge note can connect Sarmiento to the death year, and a verification note can confirm the death year from external knowledge (but we must only use provided units). Since the provided units do not contain the death year, we can only create a bridge note linking Sarmiento to the author of Facundo, and then rely on the existing note. However, the existing note is not grounded. To improve grounding, we can create a bridge note that explicitly states Sarmiento wrote Facundo, using unit 1. Then we can create a verification note that states Sarmiento died in 1888, but this would be unsupported by provided units. Alternatively, we can create a bridge note that connects the question to the author, and then a verification note that checks if the death year is mentioned elsewhere. Since we cannot invent, we should only create notes grounded in provided units. The only grounded fact is that Sarmiento wrote Facundo. So we can create a bridge note: 'Domingo Faustino Sarmiento wrote Facundo.' using unit 1. That helps bridge the query entity to the answer candidate. We can also create a verification note that states the death year is not in the provided units, but that is not a note type. So we will produce one bridge note.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Domingo Faustino Sarmiento wrote Facundo.",
+      "source_unit_ids": [
+        "5a7cc78555429907fabef02f::Facundo::0"
+      ],
+      "coarse_priority": 1
+    }
+  ]
+}

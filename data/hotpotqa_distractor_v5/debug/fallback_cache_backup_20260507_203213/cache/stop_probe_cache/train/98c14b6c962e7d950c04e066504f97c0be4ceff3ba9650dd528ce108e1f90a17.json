@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "James Wan",
+  "pred_answer": "James Wan",
+  "normalized_gold": "james wan",
+  "normalized_pred": "james wan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abb36c05542996cc5e49fe4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abb36c05542996cc5e49fe4::Blast Off (David Guetta and Kaz James song)::6"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abb36c05542996cc5e49fe4::The Lion King (soundtrack)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abb36c05542996cc5e49fe4::Furious 7::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abb36c05542996cc5e49fe4::Beat Street (soundtrack)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abb36c05542996cc5e49fe4::Blast Off (David Guetta and Kaz James song)",
+        "5abb36c05542996cc5e49fe4::Furious 7"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abb36c05542996cc5e49fe4::Blast Off (David Guetta and Kaz James song)::6",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abb36c05542996cc5e49fe4::The Lion King (soundtrack)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abb36c05542996cc5e49fe4::Furious 7::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abb36c05542996cc5e49fe4::Beat Street (soundtrack)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abb36c05542996cc5e49fe4::Beat Street (soundtrack)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Beat Street (Original Motion Picture Soundtrack) - Volume 1 and Beat Street (Original Motion Picture Soundtrack) - Volume 2 are soundtrack albums for the 1984 drama film of the same name.\n[2] Furious 7 (alternatively known as Fast & Furious 7 and Fast 7) is a 2015 American action film directed by James Wan and written by Chris Morgan.\n[3] The Lion King: Original Motion Picture Soundtrack is the original motion picture soundtrack for the 1994 Disney animated film, \"The Lion King\".\n[4] The track was also featured on the original motion picture soundtrack of the 2015 film \"Furious 7\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1943",
+  "pred_answer": "1943",
+  "normalized_gold": "1943",
+  "normalized_pred": "1943",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac1689c55429964131be1d6",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac1689c55429964131be1d6::Paul D. Ginsberg::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac1689c55429964131be1d6::Janus Capital Group::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac1689c55429964131be1d6::The Fountainhead::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac1689c55429964131be1d6::Roark Capital Group::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac1689c55429964131be1d6::Cinnabon::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac1689c55429964131be1d6::The Fountainhead",
+        "5ac1689c55429964131be1d6::Roark Capital Group"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac1689c55429964131be1d6::Paul D. Ginsberg::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac1689c55429964131be1d6::Janus Capital Group::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac1689c55429964131be1d6::The Fountainhead::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac1689c55429964131be1d6::Roark Capital Group::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac1689c55429964131be1d6::Cinnabon::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac1689c55429964131be1d6::Cinnabon::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The company is owned by Focus Brands, an affiliate of private equity firm Roark Capital Group.\n[2] The firm is named for Howard Roark, the protagonist in Ayn Rand's novel, \"The Fountainhead\".\n[3] The Fountainhead is a 1943 novel by Russian-American author Ayn Rand, her first major literary success.\n[4] Janus Capital Group, Inc. was an American publicly owned investment firm headquartered in Denver, Colorado."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

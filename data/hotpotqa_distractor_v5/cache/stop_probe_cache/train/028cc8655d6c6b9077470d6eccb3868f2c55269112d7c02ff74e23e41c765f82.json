@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "HFS+",
+  "pred_answer": "HFS+",
+  "normalized_gold": "hfs+",
+  "normalized_pred": "hfs+",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adcfb785542990d50227d82",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adcfb785542990d50227d82::Drive Setup::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adcfb785542990d50227d82::Apple HD SC Setup::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adcfb785542990d50227d82::Apple File System::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adcfb785542990d50227d82::HFS Plus::5"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5adcfb785542990d50227d82::Fork (file system)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adcfb785542990d50227d82::Drive Setup",
+        "5adcfb785542990d50227d82::HFS Plus"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adcfb785542990d50227d82::Drive Setup::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adcfb785542990d50227d82::Apple HD SC Setup::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adcfb785542990d50227d82::Apple File System::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adcfb785542990d50227d82::HFS Plus::5",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5adcfb785542990d50227d82::Fork (file system)::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adcfb785542990d50227d82::Fork (file system)::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Every non-empty file must have at least one fork, often of default type, and depending on the file system, a file may have one or more other associated forks, which in turn may contain primary data integral to the file, or just metadata.\n[2] At WWDC 2017, Apple announced macOS High Sierra, in which the default file system of Mac is changed to APFS.\n[3] Apple File System (APFS) is a proprietary file system for macOS, iOS, tvOS and watchOS, developed and deployed by Apple Inc. It aims to fix core problems of HFS+ (also called Mac OS Extended), APFS's predecessor on these operating systems.\n[4] Introduced with Apple's first SCSI hard drive, the Hard Disk 20SC in September 1986, Apple HD SC Setup can update drivers and partition and initialize hard disks."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

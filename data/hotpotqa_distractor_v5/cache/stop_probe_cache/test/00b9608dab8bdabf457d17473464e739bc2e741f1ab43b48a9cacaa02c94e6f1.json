@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jena Malone",
+  "pred_answer": "Jena Malone",
+  "normalized_gold": "jena malone",
+  "normalized_pred": "jena malone",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adfbd4655429942ec259b31",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adfbd4655429942ec259b31::Bastard out of Carolina (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adfbd4655429942ec259b31::Jena Malone::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adfbd4655429942ec259b31::Jena Malone::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adfbd4655429942ec259b31::Bastard out of Carolina (film)",
+        "5adfbd4655429942ec259b31::Jena Malone"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adfbd4655429942ec259b31::Bastard out of Carolina (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adfbd4655429942ec259b31::Jena Malone::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adfbd4655429942ec259b31::Jena Malone::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adfbd4655429942ec259b31::Jena Malone::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Jena Malone ( ; born November 21, 1984) is an American actress, musician and photographer.\n[2] She made her acting debut in the television film \"Bastard Out of Carolina\" (1996); subsequently, Malone has starred in a number of mainstream and independent films including \"Ellen Foster\" (1997), \"Contact\" (1997), \"Stepmom\" (1998), \"Donnie Darko\" (2001), \"Life as a House\" (2001), \"\" (2003), \"Saved!\n[3] Bastard out of Carolina is a 1996 film made by Showtime Networks, directed by Anjelica Huston."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

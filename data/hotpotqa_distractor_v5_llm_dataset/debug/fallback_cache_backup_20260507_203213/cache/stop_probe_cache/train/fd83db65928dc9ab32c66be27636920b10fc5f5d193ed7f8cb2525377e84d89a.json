@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Marvin Lewis",
+  "pred_answer": "Marvin Lewis",
+  "normalized_gold": "marvin lewis",
+  "normalized_pred": "marvin lewis",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a73b4e955429908901be31c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a73b4e955429908901be31c::Marvin Lewis::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a73b4e955429908901be31c::Paul Guenther (American football)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a73b4e955429908901be31c::2013 Cincinnati Bengals season::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a73b4e955429908901be31c::Cincinnati Ben–Gals::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a73b4e955429908901be31c::Marvin Lewis",
+        "5a73b4e955429908901be31c::2013 Cincinnati Bengals season"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a73b4e955429908901be31c::Marvin Lewis::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a73b4e955429908901be31c::Paul Guenther (American football)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a73b4e955429908901be31c::2013 Cincinnati Bengals season::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a73b4e955429908901be31c::Cincinnati Ben–Gals::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a73b4e955429908901be31c::Cincinnati Ben–Gals::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The squad is one of the first NFL Cheerleading squads, having been created by Bengals founder Paul Brown in the 1968 Cincinnati Bengals season, during the team's time in the American Football League.\n[2] The Cincinnati Bengals season was the franchise's 44th season in the National Football League, the 46th overall, and the 11th under head coach Marvin Lewis.\n[3] Paul Guenther (born November 22, 1971) is an American football coach who is the defensive coordinator for the Cincinnati Bengals of the National Football League (NFL).\n[4] Marvin Ronald Lewis (born September 23, 1958) is an American football coach who is the head coach of the Cincinnati Bengals of the National Football League (NFL)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

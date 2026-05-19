@@ -1,0 +1,85 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Kels Nickell",
+  "pred_answer": "Kels Nickell",
+  "normalized_gold": "kels nickell",
+  "normalized_pred": "kels nickell",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a80b3665542992bc0c4a7b9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a80b3665542992bc0c4a7b9::Joe Lefors::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a80b3665542992bc0c4a7b9::William Brydges::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a80b3665542992bc0c4a7b9::Tom Horn::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a80b3665542992bc0c4a7b9::derived::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a80b3665542992bc0c4a7b9::Joe Lefors",
+        "5a80b3665542992bc0c4a7b9::Tom Horn"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a80b3665542992bc0c4a7b9::Joe Lefors::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a80b3665542992bc0c4a7b9::William Brydges::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a80b3665542992bc0c4a7b9::Tom Horn::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a80b3665542992bc0c4a7b9::derived::1",
+          "added_step": 3
+        }
+      ],
+      "last_added_unit_id": "5a80b3665542992bc0c4a7b9::derived::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Thomas Horn, Jr. (November 21, 1860 – November 20, 1903) was an American Old West scout, who carried out varied roles as hired gunman, Pinkerton, range detective, cowboy, and soldier.\n[2] Believed to have committed 17 killings as a hired gunman in the West, in 1902 Horn was convicted of the murder of 14-year-old Willie Nickell near Iron Mountain, Wyoming.\n[3] William Brydges was a Canadian man whose arrest for murder resulted in the leading Supreme Court of Canada case \"R v Brydges\" on the right of a detainee to access duty counsel.\n[4] He is best known for the arrest of gunman Tom Horn in 1903 for the alleged murder of 14‑year-old sheepherder Willie Nickell, which has since come into question, and it has long been believed that Lefors falsified evidence helping to convict the wrong man for the murder.\n\nNotes:\n[verification] Willie Nickell was the son of Kels Nickell, a sheep rancher in Wyoming."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

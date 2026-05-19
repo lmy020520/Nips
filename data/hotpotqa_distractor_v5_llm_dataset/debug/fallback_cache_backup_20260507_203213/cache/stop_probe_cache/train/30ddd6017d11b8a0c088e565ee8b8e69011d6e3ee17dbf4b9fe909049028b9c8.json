@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Royal College of Art",
+  "pred_answer": "The Royal College of Art",
+  "normalized_gold": "the royal college of art",
+  "normalized_pred": "the royal college of art",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85959d5542992a431d1b46",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85959d5542992a431d1b46::Royal College of Art::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85959d5542992a431d1b46::Joseph Emberton::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85959d5542992a431d1b46::Rae Featherstone::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85959d5542992a431d1b46::Royal College of Art",
+        "5a85959d5542992a431d1b46::Joseph Emberton"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85959d5542992a431d1b46::Royal College of Art::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85959d5542992a431d1b46::Joseph Emberton::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85959d5542992a431d1b46::Rae Featherstone::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85959d5542992a431d1b46::Rae Featherstone::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] His early work with the firm Oakley & Parkes influenced his later stylistic approach, which was firmly rooted in an early modernist style.\n[2] Joseph Emberton (1889–1956) was an English architect of the early modernist period.\n[3] The Royal College of Art or RCA is a public research university in London, in the United Kingdom."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

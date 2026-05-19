@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Barry Orton",
+  "pred_answer": "Barry Orton",
+  "normalized_gold": "barry orton",
+  "normalized_pred": "barry orton",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac507e655429924173fb569",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac507e655429924173fb569::Barry Orton::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac507e655429924173fb569::Tommie Earl Jenkins::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac507e655429924173fb569::Bob Orton Jr.::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac507e655429924173fb569::Bob Steele filmography::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac507e655429924173fb569::Barry Orton",
+        "5ac507e655429924173fb569::Bob Orton Jr."
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac507e655429924173fb569::Barry Orton::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac507e655429924173fb569::Tommie Earl Jenkins::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac507e655429924173fb569::Bob Orton Jr.::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac507e655429924173fb569::Bob Steele filmography::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac507e655429924173fb569::Bob Steele filmography::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Born Robert North Bradbury Jr. (January 23, 1907December 21, 1988), American actor Bob Steele and his twin brother Bill were the sons of film director Robert N. Bradbury.\n[2] Robert Keith Orton Jr. (born November 10, 1950), better known by the ring name \"Cowboy\" Bob Orton, is an American professional wrestler.\n[3] Tommie Earl Jenkins (born 13 November 1965) also credited in some productions as Tee Jaye or Tommie Jenkins, is an American actor, voice actor, musician and stage performer most noted for his work as Ubercorn from the television show Go Jetters.\n[4] Randal Barry Orton (born May 28, 1958), better known as Barry Orton, is an American actor, musician, and former professional wrestler."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

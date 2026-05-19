@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "battle",
+  "pred_answer": "battle",
+  "normalized_gold": "battle",
+  "normalized_pred": "battle",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab89d4d55429919ba4e2338",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab89d4d55429919ba4e2338::USS Chosin::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab89d4d55429919ba4e2338::The Battle of Chosin::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab89d4d55429919ba4e2338::Battle of Chosin Reservoir::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab89d4d55429919ba4e2338::Battle of Anzio::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab89d4d55429919ba4e2338::Alpha L. Bowser::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab89d4d55429919ba4e2338::Battle of Chosin Reservoir",
+        "5ab89d4d55429919ba4e2338::Battle of Anzio"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab89d4d55429919ba4e2338::USS Chosin::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab89d4d55429919ba4e2338::The Battle of Chosin::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab89d4d55429919ba4e2338::Battle of Chosin Reservoir::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab89d4d55429919ba4e2338::Battle of Anzio::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab89d4d55429919ba4e2338::Alpha L. Bowser::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab89d4d55429919ba4e2338::Alpha L. Bowser::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He was a combat veteran of World War II and the Korean War — decorated for his actions during the Battle of Iwo Jima and in the Battle of Chosin Reservoir.\n[2] The Battle of Anzio was a battle of the Italian Campaign of World War II that took place from January 22, 1944 (beginning with the Allied amphibious landing known as Operation \"Shingle\") to June 5, 1944 (ending with the capture of Rome).\n[3] The Battle of Chosin Reservoir, also known as the Chosin Reservoir Campaign or the Changjin Lake Campaign (Korean: 장진호 전투 ; hanja: 長津湖戰鬪; rr: \"Jangjin ho jeontu\"; ), was a decisive battle in the Korean War.\n[4] The Battle of Chosin is a 2016 American documentary film about the Battle of Chosin Reservoir during the Korean War."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Norway",
+  "pred_answer": "Norway",
+  "normalized_gold": "norway",
+  "normalized_pred": "norway",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5241d5542990ba0bbb1c8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5241d5542990ba0bbb1c8::Bodø Main Air Station::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5241d5542990ba0bbb1c8::No. 330 Squadron RNoAF::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5241d5542990ba0bbb1c8::NASAMS::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae5241d5542990ba0bbb1c8::Station Group Banak::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5241d5542990ba0bbb1c8::Bodø Main Air Station",
+        "5ae5241d5542990ba0bbb1c8::NASAMS"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5241d5542990ba0bbb1c8::Bodø Main Air Station::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5241d5542990ba0bbb1c8::No. 330 Squadron RNoAF::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5241d5542990ba0bbb1c8::NASAMS::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae5241d5542990ba0bbb1c8::Station Group Banak::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5241d5542990ba0bbb1c8::Station Group Banak::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Operated by the Royal Norwegian Air Force (RNoAF), it serves a detachment of the 330 Squadron, which operates two Westland Sea King helicopters used for search and rescue operations in Finnmark, Svalbard and surrounding Arctic sea areas (the northern Norwegian Sea, the Barents Sea and the Arctic Sea).\n[2] NASAMS (Norwegian Advanced Surface to Air Missile System) is a distributed and networked medium to long range air-defence system.\n[3] No. 330 Squadron RNoAF (Norwegian: \"330 skvadron\" ) is a helicopter unit of the Royal Norwegian Air Force (RNoAF) and is Norway's military search and rescue service.\n[4] Bodø Air Station (IATA: BOO, ICAO: ENBO ; Norwegian: \"Bodø hovedflystasjon\" ) is a military airbase of the Royal Norwegian Air Force (RNoAF) located at Bodø, Norway."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Coram",
+  "pred_answer": "Coram",
+  "normalized_gold": "coram",
+  "normalized_pred": "coram",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae693565542996d980e7c11",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae693565542996d980e7c11::North Bay Shore, New York::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae693565542996d980e7c11::Suffolk County Transit::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae693565542996d980e7c11::Coram, New York::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae693565542996d980e7c11::Patricia Eddington::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae693565542996d980e7c11::Brian X. Foley::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae693565542996d980e7c11::Coram, New York",
+        "5ae693565542996d980e7c11::Patricia Eddington"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae693565542996d980e7c11::North Bay Shore, New York::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae693565542996d980e7c11::Suffolk County Transit::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae693565542996d980e7c11::Coram, New York::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae693565542996d980e7c11::Patricia Eddington::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae693565542996d980e7c11::Brian X. Foley::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae693565542996d980e7c11::Brian X. Foley::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Brian X. Foley (born December 3, 1957) was a State Senator representing the 3rd District of the New York State Senate.\n[2] Patricia A. Eddington (born 1947/1948) served from 2001 through 2009 in the New York State Assembly, representing District 3 which comprises Patchogue, Medford, Coram and Yaphank, among other neighboring communities within Suffolk County, New York.\n[3] Coram is a hamlet (and census-designated place) in Suffolk County, New York, in the United States.\n[4] Suffolk County Transit is the provider of bus services in Suffolk County, New York on Long Island in the United States and is an agency of the Suffolk County government."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

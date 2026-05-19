@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "April 24, 1989",
+  "pred_answer": "April 24, 1989",
+  "normalized_gold": "april 24 1989",
+  "normalized_pred": "april 24 1989",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8e5fb35542995a26add4d7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8e5fb35542995a26add4d7::The Byrds' Greatest Hits::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8e5fb35542995a26add4d7::Greatest Hits (Tom Petty album)::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8e5fb35542995a26add4d7::Full Moon Fever::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8e5fb35542995a26add4d7::Dance Again... the Hits::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8e5fb35542995a26add4d7::Greatest Hits (Tom Petty album)",
+        "5a8e5fb35542995a26add4d7::Full Moon Fever"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8e5fb35542995a26add4d7::The Byrds' Greatest Hits::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8e5fb35542995a26add4d7::Greatest Hits (Tom Petty album)::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8e5fb35542995a26add4d7::Full Moon Fever::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8e5fb35542995a26add4d7::Dance Again... the Hits::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8e5fb35542995a26add4d7::Dance Again... the Hits::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \", which was released by Island Records in May 2011 after her departure from Epic Records in 2010.\n[2] Full Moon Fever is the debut solo studio album by Tom Petty, released on April 24, 1989 by MCA Records.\n[3] However, three songs from 1989's \"Full Moon Fever\" were included; despite the album's technical status as a Tom Petty solo album, it contained contributions from several members from the Heartbreakers, thus legitimizing its inclusion on this compilation.\n[4] The Byrds' Greatest Hits is the first greatest hits album by the American rock band The Byrds and was released in August 1967 on Columbia Records (\"see\" 1967 in music)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

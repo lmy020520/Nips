@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Nazi Germany",
+  "pred_answer": "Nazi Germany",
+  "normalized_gold": "nazi germany",
+  "normalized_pred": "nazi germany",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae173dd5542990adbacf799",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae173dd5542990adbacf799::Davara::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae173dd5542990adbacf799::HNLMS O 15::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae173dd5542990adbacf799::German submarine U-666::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae173dd5542990adbacf799::Nazi Germany::4"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae173dd5542990adbacf799::USS Enterprise (CV-6)::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae173dd5542990adbacf799::German submarine U-666",
+        "5ae173dd5542990adbacf799::Nazi Germany"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae173dd5542990adbacf799::Davara::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae173dd5542990adbacf799::HNLMS O 15::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae173dd5542990adbacf799::German submarine U-666::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae173dd5542990adbacf799::Nazi Germany::4",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae173dd5542990adbacf799::USS Enterprise (CV-6)::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae173dd5542990adbacf799::USS Enterprise (CV-6)::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] \"Enterprise\" earned 20 battle stars, the most for any U.S. warship in World War II, and was the most decorated U.S. ship of World War II, She is also the first American ship to sink an enemy vessel during the Pacific War, the sole surviving pilot of the six planes shot down over Pearl Harbor sank Japanese submarine I-70 on 10 December 1941.\n[2] The Nazi regime came to an end after the Allied Powers defeated Germany in May 1945, ending World War II in Europe.\n[3] German submarine \"U-666\" was a Type VIIC U-boat built for Nazi Germany's \"Kriegsmarine\" for service during World War II.\n[4] O 15 was a \"O 12\"-class submarine of the Royal Netherlands Navy that saw service during World War II."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

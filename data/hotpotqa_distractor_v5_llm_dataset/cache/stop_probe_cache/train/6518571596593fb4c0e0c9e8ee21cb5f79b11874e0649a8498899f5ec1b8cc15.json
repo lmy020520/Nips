@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ebenezer Baptist Church",
+  "pred_answer": "Ebenezer Baptist Church",
+  "normalized_gold": "ebenezer baptist church",
+  "normalized_pred": "ebenezer baptist church",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae71ed7554299572ea54707",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae71ed7554299572ea54707::Zhang Changpu::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae71ed7554299572ea54707::Alberta Williams King::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae71ed7554299572ea54707::In the Hour of Chaos::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae71ed7554299572ea54707::William Spade::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae71ed7554299572ea54707::Alberta Williams King",
+        "5ae71ed7554299572ea54707::In the Hour of Chaos"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae71ed7554299572ea54707::Zhang Changpu::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae71ed7554299572ea54707::Alberta Williams King::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae71ed7554299572ea54707::In the Hour of Chaos::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae71ed7554299572ea54707::William Spade::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae71ed7554299572ea54707::William Spade::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] His clients have included Corey Kemp, the former Treasurer of the City of Philadelphia, who was prosecuted by the United States Department of Justice for honest services fraud, Julius Murray, a private social worker, charged with involuntary manslaughter in the death of 14-year-old Danieal Kelly, who was allegedly starved to death by her mother, Andrea Kelly, and Kevin Felder, who was charged with\n[2] It details the life and various trials of the Reverend Martin Luther King Sr. (\"Daddy King\"), including his violent, poverty-stricken upbringing in rural Georgia, the assassination of his oldest son (civil rights leader Martin Luther King Jr.), the drowning of his younger son Alfred Daniel Williams King and the shooting death of his wife, Alberta Williams King.\n[3] Alberta Christine Williams King (September 13, 1904 – June 30, 1974) was Martin Luther King, Jr.'s mother and the wife of Martin Luther King, Sr. She played a significant role in the affairs of the Ebenezer Baptist Church.\n[4] She was also the mother of Zhong Hui, a prominent Wei general who played a significant role in the conquest of Wei's rival state, Shu Han, in 263."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

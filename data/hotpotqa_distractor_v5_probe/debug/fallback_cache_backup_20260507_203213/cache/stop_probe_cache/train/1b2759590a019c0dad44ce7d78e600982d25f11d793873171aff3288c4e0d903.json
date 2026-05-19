@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Crazy Heart",
+  "pred_answer": "Crazy Heart",
+  "normalized_gold": "crazy heart",
+  "normalized_pred": "crazy heart",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89dfc15542992e4fca8415",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89dfc15542992e4fca8415::The Men Who Stare at Goats::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89dfc15542992e4fca8415::Out of the Ordinary::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89dfc15542992e4fca8415::Jeff Bridges::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a89dfc15542992e4fca8415::The Men Who Stare at Goats (film)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a89dfc15542992e4fca8415::Stick It::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89dfc15542992e4fca8415::Jeff Bridges",
+        "5a89dfc15542992e4fca8415::The Men Who Stare at Goats (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89dfc15542992e4fca8415::The Men Who Stare at Goats::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89dfc15542992e4fca8415::Out of the Ordinary::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89dfc15542992e4fca8415::Jeff Bridges::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a89dfc15542992e4fca8415::The Men Who Stare at Goats (film)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a89dfc15542992e4fca8415::Stick It::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a89dfc15542992e4fca8415::Stick It::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Stick It is an American teen comedy-drama film starring Jeff Bridges, Missy Peregrym, and Vanessa Lengies.\n[2] The Men Who Stare at Goats is a 2009 British-American war parody comedy film directed by Grant Heslov.\n[3] He won the Academy Award for Best Actor for his role as Otis \"Bad\" Blake in the 2009 film \"Crazy Heart\", and earned Academy Award nominations for his roles in \"The Last Picture Show\" (1971), \"Thunderbolt and Lightfoot\" (1974), \"Starman\" (1984), \"The Contender\" (2000), \"True Grit\" (2010), and \"Hell or High Water\" (2016).\n[4] Ronson is known for his bestseller \"The Men Who Stare at Goats,\" which inspired the 2009 Hollywood film starring George Clooney and Jeff Bridges."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

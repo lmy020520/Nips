@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "U2",
+  "pred_answer": "U2",
+  "normalized_gold": "u2",
+  "normalized_pred": "u2",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b76aa55429971feec4710",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b76aa55429971feec4710::Larry Mullen Jr.::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b76aa55429971feec4710::DJ Dahi::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b76aa55429971feec4710::XXX (Kendrick Lamar song)::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8b76aa55429971feec4710::Love (Kendrick Lamar song)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b76aa55429971feec4710::Larry Mullen Jr.",
+        "5a8b76aa55429971feec4710::XXX (Kendrick Lamar song)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b76aa55429971feec4710::Larry Mullen Jr.::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b76aa55429971feec4710::DJ Dahi::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b76aa55429971feec4710::XXX (Kendrick Lamar song)::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8b76aa55429971feec4710::Love (Kendrick Lamar song)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b76aa55429971feec4710::Love (Kendrick Lamar song)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] is a song by American rapper Kendrick Lamar, from his fourth studio album \"Damn\", released on April 14, 2017.\n[2] The song features a sample of the yet-to-be released song \"American Soul\" by Irish rock band U2.\n[3] Dahi is perhaps best known for producing \"Worst Behavior\" by Canadian rapper Drake, as well as American rapper Kendrick Lamar's critically acclaimed album cut \"Money Trees\", which features Lamar's label-mate Jay Rock.\n[4] Laurence Joseph Mullen Jr. (born 31 October 1961) is an Irish musician and actor, best known as the drummer of the Irish rock band U2."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

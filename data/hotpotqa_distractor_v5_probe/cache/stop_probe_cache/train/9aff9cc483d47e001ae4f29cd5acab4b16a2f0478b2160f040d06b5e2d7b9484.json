@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Gaius Vipsanius Agrippa",
+  "pred_answer": "Gaius Vipsanius Agrippa",
+  "normalized_gold": "gaius vipsanius agrippa",
+  "normalized_pred": "gaius vipsanius agrippa",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81294e55429926c1cdacf9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81294e55429926c1cdacf9::Augustus::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81294e55429926c1cdacf9::Abdur-Razzaq Nurul-Ain::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81294e55429926c1cdacf9::Gaius Caesar::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81294e55429926c1cdacf9::Julii Caesares::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81294e55429926c1cdacf9::Augustus",
+        "5a81294e55429926c1cdacf9::Gaius Caesar"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81294e55429926c1cdacf9::Augustus::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81294e55429926c1cdacf9::Abdur-Razzaq Nurul-Ain::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81294e55429926c1cdacf9::Gaius Caesar::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a81294e55429926c1cdacf9::Julii Caesares::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a81294e55429926c1cdacf9::Julii Caesares::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] After overcoming several rivals, Caesar's adopted son and heir, Gaius Julius Caesar Octavianus, was proclaimed Augustus by the senate, inaugurating what became the Julio-Claudian line of Roman emperors.\n[2] His name at birth was Gaius Vipsanius Agrippa, but it later changed to Gaius Julius Caesar, following his adoption out of the \"Vipsanii\" and into the \"Julii\" by Augustus.\n[3] He adopted Syed Abdul Razzaq as his son and made him the heir and caretaker.\n[4] His maternal great-uncle Julius Caesar was assassinated in 44 BC, and Octavius was named in Caesar's will as his adopted son and heir, then known as Octavianus (Anglicized as Octavian)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

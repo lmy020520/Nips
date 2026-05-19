@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "1952",
+  "pred_answer": "1952",
+  "normalized_gold": "1952",
+  "normalized_pred": "1952",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7fbd185542995d8a8ddf0a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7fbd185542995d8a8ddf0a::GANEFO::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7fbd185542995d8a8ddf0a::Indonesia at the Olympics::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7fbd185542995d8a8ddf0a::Brazil at the Olympics::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7fbd185542995d8a8ddf0a::GANEFO",
+        "5a7fbd185542995d8a8ddf0a::Indonesia at the Olympics"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7fbd185542995d8a8ddf0a::GANEFO::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7fbd185542995d8a8ddf0a::Indonesia at the Olympics::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7fbd185542995d8a8ddf0a::Brazil at the Olympics::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7fbd185542995d8a8ddf0a::Brazil at the Olympics::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The country has sent athletes to compete in every Summer Olympic Games since then, except for the 1928 Games.\n[2] Indonesia first participated at the Olympic Games in 1952, and has sent athletes to compete in every Summer Olympic Games since then, except for 1964, due to controversy around the Games of the New Emerging Forces, and 1980, when they participated in the US-led boycott of the 1980 Summer Olympics.\n[3] The Games of the New Emerging Forces (GANEFO) were the games set up by Indonesia as a counter to the Olympic Games."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

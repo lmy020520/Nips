@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Big 12 Conference",
+  "pred_answer": "Big 12 Conference",
+  "normalized_gold": "big 12 conference",
+  "normalized_pred": "big 12 conference",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9278d554299131ca4228a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9278d554299131ca4228a::Stacey Totman::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9278d554299131ca4228a::Jan Dowling::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9278d554299131ca4228a::Texas Tech Red Raiders golf::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab9278d554299131ca4228a::Illinois Fighting Illini men's golf::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9278d554299131ca4228a::Stacey Totman",
+        "5ab9278d554299131ca4228a::Texas Tech Red Raiders golf"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9278d554299131ca4228a::Stacey Totman::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9278d554299131ca4228a::Jan Dowling::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9278d554299131ca4228a::Texas Tech Red Raiders golf::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab9278d554299131ca4228a::Illinois Fighting Illini men's golf::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9278d554299131ca4228a::Illinois Fighting Illini men's golf::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Fighting Illini compete in Division I of the National Collegiate Athletic Association (NCAA) and the Big Ten Conference (Big Ten).\n[2] The teams compete as members of the Big 12 Conference in the National Collegiate Athletic Association (NCAA).\n[3] Dowling is the head coach of the Michigan Wolverines women's golf team and previously served as the head coach of the Florida Gators women's golf team of the University of Florida.\n[4] Stacey Totman is the former head coach of the Texas Tech Red Raiders women's golf team."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

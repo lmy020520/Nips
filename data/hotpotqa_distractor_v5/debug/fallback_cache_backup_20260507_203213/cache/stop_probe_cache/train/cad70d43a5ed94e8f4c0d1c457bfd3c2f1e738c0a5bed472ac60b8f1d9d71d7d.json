@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Río de la Plata basin",
+  "pred_answer": "Río de la Plata basin",
+  "normalized_gold": "río de la plata basin",
+  "normalized_pred": "río de la plata basin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc6dc955429959677d6ab0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc6dc955429959677d6ab0::Mocoví::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc6dc955429959677d6ab0::Cyclone Lua::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc6dc955429959677d6ab0::Gran Chaco::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abc6dc955429959677d6ab0::Say Department::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc6dc955429959677d6ab0::Mocoví",
+        "5abc6dc955429959677d6ab0::Gran Chaco"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc6dc955429959677d6ab0::Mocoví::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc6dc955429959677d6ab0::Cyclone Lua::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc6dc955429959677d6ab0::Gran Chaco::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abc6dc955429959677d6ab0::Say Department::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc6dc955429959677d6ab0::Say Department::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Say area is today divided between the riverine valley in the east of the Department, and the more sparsely populated areas to the west, which are intercut with a series of eastward flowing tributaries.\n[2] The Gran Chaco (Quechua: \"chaku\", \"hunting land\") is a sparsely populated, hot and semi-arid lowland natural region of the Río de la Plata basin, divided among eastern\n[3] Severe Tropical Cyclone Lua affected a sparsely populated region of Western Australia during mid-March 2012.\n[4] The Mocoví are an indigenous tribe of the Gran Chaco."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

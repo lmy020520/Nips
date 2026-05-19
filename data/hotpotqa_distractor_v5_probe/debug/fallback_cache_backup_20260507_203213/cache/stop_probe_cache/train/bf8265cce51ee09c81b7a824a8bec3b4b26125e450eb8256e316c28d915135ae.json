@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "singer and musician",
+  "pred_answer": "singer and musician",
+  "normalized_gold": "singer and musician",
+  "normalized_pred": "singer and musician",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abf98ed5542994516f454ce",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abf98ed5542994516f454ce::Peter Murphy (musician)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abf98ed5542994516f454ce::Peter Murphy (footballer, born 1922)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abf98ed5542994516f454ce::John Lennon::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abf98ed5542994516f454ce::I'm Losing You (John Lennon song)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abf98ed5542994516f454ce::Peter Murphy (musician)",
+        "5abf98ed5542994516f454ce::John Lennon"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abf98ed5542994516f454ce::Peter Murphy (musician)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abf98ed5542994516f454ce::Peter Murphy (footballer, born 1922)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abf98ed5542994516f454ce::John Lennon::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abf98ed5542994516f454ce::I'm Losing You (John Lennon song)::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abf98ed5542994516f454ce::I'm Losing You (John Lennon song)::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The song is also available on the 1982 compilation \"The John Lennon Collection\", the 1998 boxset \"John Lennon Anthology\", the one disc compilation \"Wonsaponatime\", the 2005 two disc compilation \"\" and in 2010 for the \"Gimme Some Truth\" album.\n[2] John Winston Ono Lennon, {'1': \", '2': \", '3': \", '4': \"} (born John Winston Lennon; 9 October 19408 December 1980) was an English singer, songwriter, musician, and activist who co-founded the Beatles, the most commercially successful and musically influential band in the history of popular music.\n[3] Peter Murphy (7 March 1922 – 7 April 1975), often referred to as \"Spud\" Murphy, was an English footballer who played as an inside left.\n[4] Peter John Joseph Murphy (born 11 July 1957) is an English singer and musician."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

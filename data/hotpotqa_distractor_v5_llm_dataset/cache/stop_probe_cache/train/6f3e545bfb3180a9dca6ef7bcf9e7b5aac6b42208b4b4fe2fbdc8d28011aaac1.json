@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Gunner Palace",
+  "pred_answer": "Gunner Palace",
+  "normalized_gold": "gunner palace",
+  "normalized_pred": "gunner palace",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abbc83055429931dba14521",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abbc83055429931dba14521::High School Musical 2: Non-Stop Dance Party::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abbc83055429931dba14521::Gunner Palace::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abbc83055429931dba14521::War/Dance::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abbc83055429931dba14521::Steel Gunner::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abbc83055429931dba14521::Gunner Palace",
+        "5abbc83055429931dba14521::War/Dance"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abbc83055429931dba14521::High School Musical 2: Non-Stop Dance Party::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abbc83055429931dba14521::Gunner Palace::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abbc83055429931dba14521::War/Dance::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abbc83055429931dba14521::Steel Gunner::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abbc83055429931dba14521::Steel Gunner::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A sequel, Steel Gunner 2, was released in 1991 and the US version of it was also the second game from the company to feature the Federal Bureau of Investigation's \"Winners Don't Use Drugs\" screen in the attract sequence (the first was \"Tank Force\", which was released earlier in 1991) - and it would later go on to feature in five more US-released Namco titles.\n[2] It was nominated for the 2008 Academy Award for Best Documentary Feature and received the Emmy Award for Best Documentary and Best Cinematography in 2010.\n[3] Told first-hand by American troops stationed in the middle of Baghdad, \"Gunner Palace\" presents a portrait of a dangerous and chaotic war.\n[4] It was released first in the UK and Southeast Asia on December 24, 2007."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

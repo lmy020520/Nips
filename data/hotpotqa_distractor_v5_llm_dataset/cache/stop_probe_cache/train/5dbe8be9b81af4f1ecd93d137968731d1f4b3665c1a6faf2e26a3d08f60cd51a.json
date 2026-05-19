@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Patuxent River",
+  "pred_answer": "Patuxent River",
+  "normalized_gold": "patuxent river",
+  "normalized_pred": "patuxent river",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc493955429947ff173915",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc493955429947ff173915::Laurel, Maryland::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc493955429947ff173915::John Andrew and Sara Macumber Ice House::7"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc493955429947ff173915::The Gardens Ice House::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc493955429947ff173915::Seminole Valley Farmstead::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc493955429947ff173915::Laurel, Maryland",
+        "5adc493955429947ff173915::The Gardens Ice House"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc493955429947ff173915::Laurel, Maryland::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc493955429947ff173915::John Andrew and Sara Macumber Ice House::7",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc493955429947ff173915::The Gardens Ice House::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc493955429947ff173915::Seminole Valley Farmstead::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc493955429947ff173915::Seminole Valley Farmstead::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The nearby timber was a source of raw materials for the farm, the fertile bottomland on which it is located provided rich soil for grazing and cultivation, and the smoke house and ice house were used to preserve agricultural products for later consumption.\n[2] The Gardens Ice House is a privately operated skating and fitness facility in Laurel, Maryland.\n[3] The ice house is located next to the garage, behind the house.\n[4] Laurel is a city in northern Prince George's County, Maryland, in the United States, located almost midway between Washington, D.C., and Baltimore on the banks of the Patuxent River."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

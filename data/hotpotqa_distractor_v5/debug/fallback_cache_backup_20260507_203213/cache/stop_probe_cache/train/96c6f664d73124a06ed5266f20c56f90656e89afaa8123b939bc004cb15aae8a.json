@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Manchester City",
+  "pred_answer": "Manchester City",
+  "normalized_gold": "manchester city",
+  "normalized_pred": "manchester city",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a82a00055429940e5e1a8fb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a82a00055429940e5e1a8fb::2007 FIFA U-20 World Cup::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a82a00055429940e5e1a8fb::2004 FIFA U-19 Women's World Championship::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a82a00055429940e5e1a8fb::Sergio Agüero::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a82a00055429940e5e1a8fb::Leston Paul::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a82a00055429940e5e1a8fb::2007 FIFA U-20 World Cup",
+        "5a82a00055429940e5e1a8fb::Sergio Agüero"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a82a00055429940e5e1a8fb::2007 FIFA U-20 World Cup::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a82a00055429940e5e1a8fb::2004 FIFA U-19 Women's World Championship::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a82a00055429940e5e1a8fb::Sergio Agüero::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a82a00055429940e5e1a8fb::Leston Paul::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a82a00055429940e5e1a8fb::Leston Paul::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He was also the captain of the Trinidad and Tobago National U-17 and U-20 teams that featured in the 2007 FIFA U-17 World Cup and 2009 FIFA U-20 World Cup.\n[2] Sergio Leonel \"Kun\" Agüero (] ; born 2 June 1988) is an Argentine professional footballer who plays as a striker for Premier League club Manchester City and the Argentina national team.\n[3] It was the second edition of the youth tournament for women put together by FIFA, before being renamed FIFA U-20 Women's World Championship for the 2006 edition.\n[4] Argentine player Sergio Agüero was given the FIFA U-20 Golden Shoe (top scorer, with six goals) and the FIFA U-20 Golden Ball (best player of the tournament), while Japan earned the FIFA Fair Play Award."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

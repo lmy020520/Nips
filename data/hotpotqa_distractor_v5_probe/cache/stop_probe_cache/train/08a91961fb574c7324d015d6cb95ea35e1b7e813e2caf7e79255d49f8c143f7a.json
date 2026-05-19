@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "singer",
+  "pred_answer": "singer",
+  "normalized_gold": "singer",
+  "normalized_pred": "singer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a6f5b5542990783324f4a",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a6f5b5542990783324f4a::Download (song)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a6f5b5542990783324f4a::27 (Kim Sung-kyu EP)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a6f5b5542990783324f4a::Charlie Wilson (singer)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a6f5b5542990783324f4a::Kim Sung-kyu::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7a6f5b5542990783324f4a::Jason Wilson (politician)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a6f5b5542990783324f4a::Charlie Wilson (singer)",
+        "5a7a6f5b5542990783324f4a::Kim Sung-kyu"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a6f5b5542990783324f4a::Download (song)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a6f5b5542990783324f4a::27 (Kim Sung-kyu EP)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a6f5b5542990783324f4a::Charlie Wilson (singer)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a6f5b5542990783324f4a::Kim Sung-kyu::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7a6f5b5542990783324f4a::Jason Wilson (politician)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a6f5b5542990783324f4a::Jason Wilson (politician)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Jason Wilson (born August 12, 1968 in Martins Ferry, Ohio) is a Democratic politician who was a member of the Ohio Senate, representing the 30th District from his appointment in January 2007 to November 2011.\n[2] Kim Sung-kyu (born April 28, 1989), referred to as Sunggyu or Sungkyu, is a South Korean singer and actor.\n[3] Charles Kent \"Charlie\" Wilson (born January 29, 1953), also known as Uncle Charlie, is an American R&B singer, songwriter, producer and the former lead vocalist for The Gap Band.\n[4] 27 is the second extended play by South Korean singer, Kim Sung-kyu."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "$8.6 billion",
+  "pred_answer": "$8.6 billion",
+  "normalized_gold": "$86 billion",
+  "normalized_pred": "$86 billion",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a839b385542996488c2e476",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a839b385542996488c2e476::Caesars Entertainment Corporation::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a839b385542996488c2e476::Harrah's Lake Tahoe::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a839b385542996488c2e476::Tahoe Donner::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a839b385542996488c2e476::Caesars Entertainment Corporation",
+        "5a839b385542996488c2e476::Harrah's Lake Tahoe"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a839b385542996488c2e476::Caesars Entertainment Corporation::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a839b385542996488c2e476::Harrah's Lake Tahoe::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a839b385542996488c2e476::Tahoe Donner::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a839b385542996488c2e476::Tahoe Donner::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Tahoe Donner Downhill Ski Area is owned and operated by the Tahoe Donner Association, one of America’s largest homeowner’s associations, with nearly 5,800 properties and 25,000 members enjoying over 7,000 acres in the Sierra Nevada mountains.\n[2] Harrah's Lake Tahoe is a hotel and casino located in Stateline, Nevada.\n[3] It is the fourth-largest gaming company in the world, with annual revenues of $8.6 billion (2013)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

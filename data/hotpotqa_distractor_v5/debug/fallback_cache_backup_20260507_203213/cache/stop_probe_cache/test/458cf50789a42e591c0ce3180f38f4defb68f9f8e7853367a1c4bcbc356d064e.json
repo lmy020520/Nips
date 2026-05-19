@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "London",
+  "pred_answer": "London",
+  "normalized_gold": "london",
+  "normalized_pred": "london",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab682f85542995eadef001f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab682f85542995eadef001f::Old Bushmills Distillery::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab682f85542995eadef001f::Hangleton Manor Inn::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab682f85542995eadef001f::Diageo::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab682f85542995eadef001f::Sazerac Company::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab682f85542995eadef001f::Old Bushmills Distillery",
+        "5ab682f85542995eadef001f::Diageo"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab682f85542995eadef001f::Old Bushmills Distillery::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab682f85542995eadef001f::Hangleton Manor Inn::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab682f85542995eadef001f::Diageo::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab682f85542995eadef001f::Sazerac Company::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab682f85542995eadef001f::Sazerac Company::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Sazerac Company is a large privately held alcoholic beverages company with headquarters in Metairie, Louisiana (in the New Orleans metropolitan area).\n[2] Diageo plc ( or ) is a British multinational alcoholic beverages company, with its headquarters in London, England.\n[3] Hangleton Manor Inn, the adjoining Old Manor House and associated buildings form a bar and restaurant complex in Hangleton, an ancient village (and latterly a 20th-century housing estate) which is part of the English city of Brighton and Hove.\n[4] s of December 2014 , it was in the process of transitioning from ownership by Diageo plc to Jose Cuervo."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

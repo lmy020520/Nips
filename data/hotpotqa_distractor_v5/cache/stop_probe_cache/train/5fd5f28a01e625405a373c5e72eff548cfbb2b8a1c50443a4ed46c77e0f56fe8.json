@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Atlas Mountains",
+  "pred_answer": "Atlas Mountains",
+  "normalized_gold": "atlas mountains",
+  "normalized_pred": "atlas mountains",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae706195542995703ce8bbe",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae706195542995703ce8bbe::Abdelaziz al-Tebaa::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae706195542995703ce8bbe::Abdallah al-Ghazwani::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae706195542995703ce8bbe::Marrakesh::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae706195542995703ce8bbe::Pinal Mountains::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae706195542995703ce8bbe::Abdelaziz al-Tebaa",
+        "5ae706195542995703ce8bbe::Marrakesh"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae706195542995703ce8bbe::Abdelaziz al-Tebaa::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae706195542995703ce8bbe::Abdallah al-Ghazwani::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae706195542995703ce8bbe::Marrakesh::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae706195542995703ce8bbe::Pinal Mountains::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae706195542995703ce8bbe::Pinal Mountains::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The closest city is the Globe, Arizona/Miami, Arizona area, which is just a few miles north of the mountain range.\n[2] Located to the north of the foothills of the snow-capped Atlas Mountains, Marrakesh is situated 580 km southwest of Tangier, 327 km southwest of the Moroccan capital of Rabat, 239 km south of Casablanca, and 246 km northeast of Agadir.\n[3] Abu Mohammed Abdallah al-Ghazwani (died in 1529) was a Sufi saint from Morocco in the tradition of al-Jazuli and ash-Shadhili.\n[4] Abdelaziz al-Tebaa or Sidi Abdelaziz ibn Abdelhaq Tabbaa al-Hassani (died 1499) was the founder of the first sufi zawiyya of the Jazuli order in Marrakesh."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

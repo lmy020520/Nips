@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "House Majority Leader",
+  "pred_answer": "House Majority Leader",
+  "normalized_gold": "house majority leader",
+  "normalized_pred": "house majority leader",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9960d554299131ca42386",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9960d554299131ca42386::Texas's 26th congressional district::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9960d554299131ca42386::Texas's 13th congressional district::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9960d554299131ca42386::Texas's 26th congressional district::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab9960d554299131ca42386::Dick Armey::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab9960d554299131ca42386::Contract with America::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9960d554299131ca42386::Texas's 26th congressional district",
+        "5ab9960d554299131ca42386::Dick Armey"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9960d554299131ca42386::Texas's 26th congressional district::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9960d554299131ca42386::Texas's 13th congressional district::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9960d554299131ca42386::Texas's 26th congressional district::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab9960d554299131ca42386::Dick Armey::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab9960d554299131ca42386::Contract with America::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9960d554299131ca42386::Contract with America::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Written by Newt Gingrich and Dick Armey, and in part using text from former President Ronald Reagan's 1985 State of the Union Address, the Contract detailed the actions the Republicans promised to take if they became the majority party in the United States House of Representatives for the first time in 40 years.\n[2] He was a U.S. Representative from Texas'  (1985–2003) and House Majority Leader (1995–2003).\n[3] The District is best known as the seat of former House Majority Leader Dick Armey.\n[4] Texas District 13 of the United States House of Representatives is a Congressional District of the U.S. state of Texas that includes most of the Texas Panhandle, parts of Texoma and northeastern parts of North Texas."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

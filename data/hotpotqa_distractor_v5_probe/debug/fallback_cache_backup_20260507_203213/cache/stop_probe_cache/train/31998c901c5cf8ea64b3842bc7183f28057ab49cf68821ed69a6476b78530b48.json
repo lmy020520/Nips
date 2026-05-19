@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Volkswagen Karmann Ghia",
+  "pred_answer": "Volkswagen Karmann Ghia",
+  "normalized_gold": "volkswagen karmann ghia",
+  "normalized_pred": "volkswagen karmann ghia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3bf7b554299391541393e",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3bf7b554299391541393e::Volkswagen Karmann Ghia::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3bf7b554299391541393e::Final Lap 3::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3bf7b554299391541393e::Volkswagen Karmann Ghia::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3bf7b554299391541393e::Volkswagen Beetle::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac3bf7b554299391541393e::Final Lap 2::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3bf7b554299391541393e::Volkswagen Karmann Ghia",
+        "5ac3bf7b554299391541393e::Volkswagen Beetle"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3bf7b554299391541393e::Volkswagen Karmann Ghia::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3bf7b554299391541393e::Final Lap 3::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3bf7b554299391541393e::Volkswagen Karmann Ghia::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3bf7b554299391541393e::Volkswagen Beetle::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac3bf7b554299391541393e::Final Lap 2::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3bf7b554299391541393e::Final Lap 2::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] For a second time, the players must take control of either the Williams, McLaren, March or Lotus cars, which have been redesigned, in a Formula One race on one of the four tracks - and in the single player mode, the player's score shall again be based upon how far his car travels until the timer runs out or he completes four laps of the chosen circuit, and hitting another car or a billboard will a\n[2] The Volkswagen Beetle – officially the Volkswagen Type 1, informally in Germany the Käfer (German, \"beetle\") and in parts of the English-speaking world the Bug – is a two-door, four-passenger, rear-engine economy car that was manufactured and marketed by German automaker Volkswagen (VW) from 1938 until 2003.\n[3] The Volkswagen Karmann Ghia is a sports car marketed in 2+2 coupe (1955–1974) and convertible (1957–1974) body styles by Volkswagen.\n[4] In the single player mode, the player's score will again be based on how far his car travels until the timer runs out or he completes four laps of the chosen circuit, and hitting another car or a billboard will again not cause a player car to explode, like it did in the two \"Pole Position\" games, but it can still send it (or the other car) spinning off the track, costing valuable time; in the mult"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

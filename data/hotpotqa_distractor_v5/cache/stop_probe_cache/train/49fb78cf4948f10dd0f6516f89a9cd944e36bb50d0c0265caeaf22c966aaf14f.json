@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "City of Moreland",
+  "pred_answer": "City of Moreland",
+  "normalized_gold": "city of moreland",
+  "normalized_pred": "city of moreland",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8bc6c85542995e66a47509",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8bc6c85542995e66a47509::Luke McFadyen::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8bc6c85542995e66a47509::Ausenbaugh–McElhenny House::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8bc6c85542995e66a47509::Brunswick, Victoria::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8bc6c85542995e66a47509::Districts of England::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8bc6c85542995e66a47509::Luke McFadyen",
+        "5a8bc6c85542995e66a47509::Brunswick, Victoria"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8bc6c85542995e66a47509::Luke McFadyen::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8bc6c85542995e66a47509::Ausenbaugh–McElhenny House::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8bc6c85542995e66a47509::Brunswick, Victoria::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8bc6c85542995e66a47509::Districts of England::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8bc6c85542995e66a47509::Districts of England::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The districts of England (also known as local authority districts or local government districts to distinguish from unofficial city districts) are a level of subnational division of England used for the purposes of local government.\n[2] Its local government area is the City of Moreland.\n[3] The Ausenbaugh–McElhenny House is a historic house in the city of Huber Heights, a suburb of Dayton, Ohio, United States.\n[4] Luke Ours (born 1, September 1979, Melbourne, Brunswick) is an international rugby player."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

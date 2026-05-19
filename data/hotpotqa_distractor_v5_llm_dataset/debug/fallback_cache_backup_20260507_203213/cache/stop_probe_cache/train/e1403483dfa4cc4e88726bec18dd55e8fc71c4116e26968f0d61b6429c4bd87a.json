@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Michif",
+  "pred_answer": "Michif",
+  "normalized_gold": "michif",
+  "normalized_pred": "michif",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae05d535542993d6555eb0b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae05d535542993d6555eb0b::Michif::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae05d535542993d6555eb0b::Métis in Alberta::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae05d535542993d6555eb0b::Maria Campbell::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae05d535542993d6555eb0b::Subhro Bandopadhyay::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae05d535542993d6555eb0b::Michif",
+        "5ae05d535542993d6555eb0b::Maria Campbell"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae05d535542993d6555eb0b::Michif::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae05d535542993d6555eb0b::Métis in Alberta::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae05d535542993d6555eb0b::Maria Campbell::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae05d535542993d6555eb0b::Subhro Bandopadhyay::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae05d535542993d6555eb0b::Subhro Bandopadhyay::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He is a young polyglot writer who speaks four languages including Spanish and English.\n[2] Campbell is a fluent speaker of four languages: Cree, Michif, Saulteaux, and English.\n[3] Métis in Alberta are Métis people, descendants of mixed First Nations/native Indian and White/European families, who live in the Canadian province of Alberta.\n[4] Michif (also Mitchif, Mechif, Michif-Cree, Métif, Métchif, French Cree) is the language of the Métis people of Canada and the United States, who are the descendants of First Nations women (mainly Cree, Nakota and Ojibwe) and fur trade workers of European ancestry (mainly French and Scottish Canadians)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "rock band",
+  "pred_answer": "American rock band",
+  "normalized_gold": "rock band",
+  "normalized_pred": "american rock band",
+  "exact_match": false,
+  "context_exact_match": true,
+  "answer_match_rule": "context_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "explicit_answer_in_evidence",
+  "support_evidence_summary": "Green on Red is described as an 'American rock band' and Hollywood Undead as an 'American rap rock band'. Both are American rock bands, supporting the pred answer 'American rock band'.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "explicit_answer_in_evidence",
+    "support_evidence_summary": "Green on Red is described as an 'American rock band' and Hollywood Undead as an 'American rap rock band'. Both are American rock bands, supporting the pred answer 'American rock band'.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85d6575542997175ce2060",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85d6575542997175ce2060::Green on Red::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85d6575542997175ce2060::Hollywood Undead::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85d6575542997175ce2060::American Tragedy Redux::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85d6575542997175ce2060::Green on Red",
+        "5a85d6575542997175ce2060::Hollywood Undead"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85d6575542997175ce2060::Green on Red::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85d6575542997175ce2060::Hollywood Undead::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85d6575542997175ce2060::American Tragedy Redux::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85d6575542997175ce2060::American Tragedy Redux::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] American Tragedy Redux is the second remix album by American rap rock band Hollywood Undead, taking songs exclusively off the band's 2011 studio album, \"American Tragedy\", and remixing them.\n[2] Hollywood Undead is an American rap rock band from Los Angeles, California, formed in 2005.\n[3] Green on Red was an American rock band, formed in the Tucson, Arizona punk scene, but based for most of its career in Los Angeles, California, where it was loosely associated with the Paisley Underground."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

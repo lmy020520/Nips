@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The High and the Mighty",
+  "pred_answer": "The High and the Mighty",
+  "normalized_gold": "the high and the mighty",
+  "normalized_pred": "the high and the mighty",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0e1385542990adbacf6a6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0e1385542990adbacf6a6::The High and the Mighty (film)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0e1385542990adbacf6a6::Star Wars: The Clone Wars (film)::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0e1385542990adbacf6a6::Dimitri Tiomkin::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0e1385542990adbacf6a6::Coco (2009 film)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0e1385542990adbacf6a6::The High and the Mighty (film)",
+        "5ae0e1385542990adbacf6a6::Dimitri Tiomkin"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0e1385542990adbacf6a6::The High and the Mighty (film)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0e1385542990adbacf6a6::Star Wars: The Clone Wars (film)::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0e1385542990adbacf6a6::Dimitri Tiomkin::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0e1385542990adbacf6a6::Coco (2009 film)::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0e1385542990adbacf6a6::Coco (2009 film)::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The film earned $8.5 million in its opening weekend at the French box office, and went on to gross $11.7 million in the European market.\n[2] Tiomkin received twenty-two Academy Award nominations and won four Oscars, three for Best Original Score for \"High Noon\", \"The High and the Mighty\", and \"The Old Man and the Sea\", and one for Best Original Song for \"The Ballad of High Noon\" from the former film.\n[3] Though critical reception was negative, the film was a box office success, and grossed $68.3 million worldwide against an $8.5 million budget.\n[4] The film received mostly positive reviews and grossed $8.5 million in its theatrical release."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Universidade Positivo",
+  "pred_answer": "Universidade Positivo",
+  "normalized_gold": "universidade positivo",
+  "normalized_pred": "universidade positivo",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac0e499554299294b21903e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac0e499554299294b21903e::Universidade Positivo::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac0e499554299294b21903e::Centre for Newfoundland Studies::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac0e499554299294b21903e::Memorial University of Newfoundland::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac0e499554299294b21903e::Elizabeth Miller (academic)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac0e499554299294b21903e::Universidade Positivo",
+        "5ac0e499554299294b21903e::Memorial University of Newfoundland"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac0e499554299294b21903e::Universidade Positivo::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac0e499554299294b21903e::Centre for Newfoundland Studies::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac0e499554299294b21903e::Memorial University of Newfoundland::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac0e499554299294b21903e::Elizabeth Miller (academic)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac0e499554299294b21903e::Elizabeth Miller (academic)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Elizabeth Russell Miller (born February 26, 1939) is Professor Emerita at Memorial University of Newfoundland.\n[2] Memorial University of Newfoundland, colloquially known as Memorial University or MUN ( ), is a comprehensive university based in St. John's, Newfoundland and Labrador, Canada.\n[3] The Centre for Newfoundland Studies is a division of the Memorial University of Newfoundland Libraries, which is completely devoted to the collection and storage of Newfoundland and Labrador related books, documents, articles and maps.\n[4] The Universidade Positivo (abbreviated UP) is a private universities of the State of Paraná, Brazil."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

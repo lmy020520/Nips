@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Evanston, Illinois",
+  "pred_answer": "Evanston, Illinois",
+  "normalized_gold": "evanston illinois",
+  "normalized_pred": "evanston illinois",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a893934554299669944a511",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a893934554299669944a511::Richard Roth (journalist)::6"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a893934554299669944a511::New York Live Arts::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a893934554299669944a511::Northwestern University::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a893934554299669944a511::Arnie Roth::6"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a893934554299669944a511::Richard Roth (journalist)::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a893934554299669944a511::Northwestern University",
+        "5a893934554299669944a511::Arnie Roth"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a893934554299669944a511::Richard Roth (journalist)::6",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a893934554299669944a511::New York Live Arts::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a893934554299669944a511::Northwestern University::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a893934554299669944a511::Arnie Roth::6",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a893934554299669944a511::Richard Roth (journalist)::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a893934554299669944a511::Richard Roth (journalist)::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Before CNN, he was an anchor and reporter for AP Radio and a producer for WPIX-TV in New York City.\n[2] Roth graduated from Bienen School of Music, an undergraduate and graduate institution of Northwestern University in 1975.\n[3] Northwestern University (NU) is a private research university based in Evanston, Illinois, with other campuses located in Chicago and Doha, Qatar, and academic programs and facilities in Washington, D.C., and San Francisco, California.\n[4] New York Live Arts [Live Arts] is a movement-focused arts organization in New York City that serves as the home of the Bill T. Jones/Arnie Zane Dance Company."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

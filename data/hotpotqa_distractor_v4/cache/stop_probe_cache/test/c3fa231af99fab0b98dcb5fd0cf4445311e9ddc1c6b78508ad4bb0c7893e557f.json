@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Usher",
+  "pred_answer": "Usher",
+  "normalized_gold": "usher",
+  "normalized_pred": "usher",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "The evidence explicitly states that 'Yeah!' was released as the lead single from Usher's album 'Confessions' (chunk 3), and that 'I Don't Wanna Know' was stuck for eight consecutive weeks behind Usher singles 'Yeah' and 'Burn' (chunk 4), confirming Usher as the singer whose song meets both conditions.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "The evidence explicitly states that 'Yeah!' was released as the lead single from Usher's album 'Confessions' (chunk 3), and that 'I Don't Wanna Know' was stuck for eight consecutive weeks behind Usher singles 'Yeah' and 'Burn' (chunk 4), confirming Usher as the singer whose song meets both conditions.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7ba7a5542993210983f12",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7ba7a5542993210983f12::Feel Good Inc.::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7ba7a5542993210983f12::Can't Touch It::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7ba7a5542993210983f12::Yeah! (Usher song)::4"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae7ba7a5542993210983f12::I Don't Wanna Know::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae7ba7a5542993210983f12::Feel Good Inc.::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7ba7a5542993210983f12::Yeah! (Usher song)",
+        "5ae7ba7a5542993210983f12::I Don't Wanna Know"
+      ],
+      "k_br": 1.0,
+      "k_dis": 1.0,
+      "k_sup": 0.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7ba7a5542993210983f12::Feel Good Inc.::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7ba7a5542993210983f12::Can't Touch It::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7ba7a5542993210983f12::Yeah! (Usher song)::4",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae7ba7a5542993210983f12::I Don't Wanna Know::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae7ba7a5542993210983f12::Feel Good Inc.::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7ba7a5542993210983f12::Feel Good Inc.::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The single peaked at No. 2 in the United Kingdom and No. 14 in the United States.\n[2] It reached number 1 in the United Kingdom and in Netherlands, and number 2 in the United States, stuck for eight consecutive weeks behind the Usher singles \"Yeah\" and \"Burn\", respectively.\n[3] The song was released as the lead single from Usher's fourth studio album \"Confessions\" (2004) on January 27, 2004, after Usher was told by Arista Records, his label at the time, to record more tracks for the album.\n[4] \"Can't Touch It\" was released as the lead single from Coulter's second studio album \"Brand New Day\" on 4 August 2007."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

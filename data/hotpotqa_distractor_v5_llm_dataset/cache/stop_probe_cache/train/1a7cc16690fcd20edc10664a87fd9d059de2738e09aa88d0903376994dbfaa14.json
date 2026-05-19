@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1914",
+  "pred_answer": "1914",
+  "normalized_gold": "1914",
+  "normalized_pred": "1914",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade345f5542997c77adedaa",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade345f5542997c77adedaa::Centenary of the outbreak of World War I::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade345f5542997c77adedaa::July Crisis::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade345f5542997c77adedaa::Archduke Franz Ferdinand of Austria::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade345f5542997c77adedaa::Gräf &amp; Stift::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade345f5542997c77adedaa::July Crisis",
+        "5ade345f5542997c77adedaa::Archduke Franz Ferdinand of Austria"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade345f5542997c77adedaa::Centenary of the outbreak of World War I::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade345f5542997c77adedaa::July Crisis::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade345f5542997c77adedaa::Archduke Franz Ferdinand of Austria::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade345f5542997c77adedaa::Gräf &amp; Stift::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade345f5542997c77adedaa::Gräf &amp; Stift::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Before the Second World War, the company was a well-known manufacturer of luxury automobiles, including the Double Phaeton that carried Archduke Franz Ferdinand and his wife, Sophie, when they were assassinated in Sarajevo in June 1914.\n[2] Franz Ferdinand Carl Ludwig Joseph Maria (18 December 1863 – 28 June 1914) was an Archduke of Austria-Este, Austro-Hungarian and Royal Prince of Hungary and of Bohemia and, from 1896 until his death, heir presumptive to the Austro-Hungarian throne.\n[3] The July Crisis was a diplomatic crisis among the major powers of Europe in the summer of 1914 that led to World War I.\n[4] A century earlier, the July Crisis, which occurred after the assassination of Archduke Franz Ferdinand, had culminated in Austria-Hungary declaring war on the Kingdom of Serbia, which Austria-Hungary blamed for the assassination, on 28 July 1914."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1511",
+  "pred_answer": "1511",
+  "normalized_gold": "1511",
+  "normalized_pred": "1511",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85cf725542991dd0999ead",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85cf725542991dd0999ead::Rameswaram::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85cf725542991dd0999ead::Thuraiyur::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85cf725542991dd0999ead::Gurudwara Guru Nanak Dham::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85cf725542991dd0999ead::Gurudwara Guru Nanak Dham::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85cf725542991dd0999ead::Rameswaram",
+        "5a85cf725542991dd0999ead::Gurudwara Guru Nanak Dham"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85cf725542991dd0999ead::Rameswaram::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85cf725542991dd0999ead::Thuraiyur::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85cf725542991dd0999ead::Gurudwara Guru Nanak Dham::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85cf725542991dd0999ead::Gurudwara Guru Nanak Dham::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85cf725542991dd0999ead::Gurudwara Guru Nanak Dham::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The gurudwara was constructed to commemorate the visit of the first Sikh guru, Guru Nanak to Rameswaram in about 1511.\n[2] Gurudwara Guru Nanak Dham is a gurudwara situated in the town of Rameswaram in Tamil Nadu, India.\n[3] Thuraiyur is a town and a municipality in Tiruchirappalli district in the Indian state of Tamil Nadu.\n[4] Rameswaram, (also spelt as Ramesvaram, Rameshwaram) is a town and a second grade municipality in the Ramanathapuram district in the South Indian state of Tamil Nadu."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

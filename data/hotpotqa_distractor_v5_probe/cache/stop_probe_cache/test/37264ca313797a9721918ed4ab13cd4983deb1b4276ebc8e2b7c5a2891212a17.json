@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "East Lancashire Railway",
+  "pred_answer": "East Lancashire Railway",
+  "normalized_gold": "east lancashire railway",
+  "normalized_pred": "east lancashire railway",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3b04f55429939154138b7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3b04f55429939154138b7::Summerseat railway station::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3b04f55429939154138b7::East Lancashire Railway::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3b04f55429939154138b7::Southern Railway of British Columbia::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3b04f55429939154138b7::Summerseat railway station",
+        "5ac3b04f55429939154138b7::East Lancashire Railway"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3b04f55429939154138b7::Summerseat railway station::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3b04f55429939154138b7::East Lancashire Railway::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3b04f55429939154138b7::Southern Railway of British Columbia::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3b04f55429939154138b7::Southern Railway of British Columbia::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Canadian National Railway GMD-1 locomotives, and also runs 3 SD38-2 locomotives, and 1 SD38AC.\n[2] The East Lancashire Railway is a 12+1/2 mi heritage railway line in north west England which runs between Heywood and Rawtenstall with intermediate stations at Bury Bolton Street, Burrs Country Park , Summerseat, Ramsbottom and Irwell Vale.\n[3] It is part of the Heritage East Lancashire Railway (which runs for 12 miles from Heywood-Rawtenstall)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

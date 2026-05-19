@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Daddy Yankee",
+  "pred_answer": "Daddy Yankee",
+  "normalized_gold": "daddy yankee",
+  "normalized_pred": "daddy yankee",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adce2285542992c1e3a245b",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adce2285542992c1e3a245b::Daddy Yankee::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adce2285542992c1e3a245b::Mayor Que Yo::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adce2285542992c1e3a245b::Menor Que Yo::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adce2285542992c1e3a245b::Daddy Yankee",
+        "5adce2285542992c1e3a245b::Mayor Que Yo"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adce2285542992c1e3a245b::Daddy Yankee::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adce2285542992c1e3a245b::Mayor Que Yo::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adce2285542992c1e3a245b::Menor Que Yo::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adce2285542992c1e3a245b::Menor Que Yo::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] \"Menor Que Yo\" \"(English: Younger Than Me)\" is a song by Puerto Rican reggaetón recording artist Ivy Queen, from the platinum edition of her sixth studio album, \"Sentimiento\" (2007).\n[2] \"Mayor Que Yo\" (English: \"Older Than Me\") is a reggaeton single from the album \"Mas Flow 2\".\n[3] Ramón Luis Ayala Rodríguez (born February 3, 1977), known by his stage name Daddy Yankee, is a Puerto Rican singer, songwriter, rapper, actor and record producer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

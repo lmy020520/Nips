@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Space Ghost",
+  "pred_answer": "Space Ghost",
+  "normalized_gold": "space ghost",
+  "normalized_pred": "space ghost",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf0ee55542992d7e9f929a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf0ee55542992d7e9f929a::Brak (character)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf0ee55542992d7e9f929a::Zorak::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf0ee55542992d7e9f929a::The Brak Show::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf0ee55542992d7e9f929a::Brak (character)",
+        "5adf0ee55542992d7e9f929a::Zorak"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf0ee55542992d7e9f929a::Brak (character)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf0ee55542992d7e9f929a::Zorak::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf0ee55542992d7e9f929a::The Brak Show::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf0ee55542992d7e9f929a::The Brak Show::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] \"The Brak Show\" was created by Andy Merrill, Jim Fortier, and Pete Smith, serving as a spin-off of the animated television series, \"Space Ghost Coast to Coast\", and featured recurring characters from \"Space Ghost Coast to Coast\" and \"Cartoon Planet\".\n[2] Zorak appeared as a 7 ft green mantis and is a foe of the show's titular superhero.\n[3] Brak is a fictional character and supervillain on the 1966 Hanna-Barbera animated series \"Space Ghost\", portrayed as a catlike alien space pirate trying to conquer the galaxy."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

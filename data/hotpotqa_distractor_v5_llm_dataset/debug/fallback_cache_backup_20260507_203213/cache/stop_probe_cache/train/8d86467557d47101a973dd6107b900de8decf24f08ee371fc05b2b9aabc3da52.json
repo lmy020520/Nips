@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "ten months",
+  "pred_answer": "ten months",
+  "normalized_gold": "ten months",
+  "normalized_pred": "ten months",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae55f255542990ba0bbb290",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae55f255542990ba0bbb290::Burke &amp; Hare (2010 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae55f255542990ba0bbb290::Burke and Hare murders::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae55f255542990ba0bbb290::A Long Way Down (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae55f255542990ba0bbb290::Burke &amp; Hare (2010 film)",
+        "5ae55f255542990ba0bbb290::Burke and Hare murders"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae55f255542990ba0bbb290::Burke &amp; Hare (2010 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae55f255542990ba0bbb290::Burke and Hare murders::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae55f255542990ba0bbb290::A Long Way Down (film)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae55f255542990ba0bbb290::A Long Way Down (film)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] A Long Way Down is a 2014 British black comedy film directed by Pascal Chaumeil, loosely based on author Nick Hornby's 2005 novel, \"A Long Way Down\".\n[2] The Burke and Hare murders were a series of 16 murders committed over a period of about ten months in 1828 in Edinburgh, Scotland.\n[3] Burke & Hare is a 2010 British black comedy film, loosely based on the Burke and Hare murders."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Western countries",
+  "pred_answer": "Western countries",
+  "normalized_gold": "western countries",
+  "normalized_pred": "western countries",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81de80554299676cceb11a",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81de80554299676cceb11a::Beer and pretzels game::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81de80554299676cceb11a::1582::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81de80554299676cceb11a::Business casual::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81de80554299676cceb11a::Casual Friday::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a81de80554299676cceb11a::Potato skins::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81de80554299676cceb11a::Business casual",
+        "5a81de80554299676cceb11a::Casual Friday"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81de80554299676cceb11a::Beer and pretzels game::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81de80554299676cceb11a::1582::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81de80554299676cceb11a::Business casual::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a81de80554299676cceb11a::Casual Friday::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a81de80554299676cceb11a::Potato skins::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a81de80554299676cceb11a::Potato skins::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] They are commonly found on the menus of casual dining restaurants such as T.G.I. Friday's, which is known for serving them.\n[2] Casual Friday (also known as dress-down Friday or casual day) is a Western trend, which has spread to other parts of the world, in which some business offices relax their dress code on Fridays.\n[3] Business casual is an ambiguously-defined dress code that has been adopted by many professional and white-collar workplaces in Western countries.\n[4] Year 1582 (MDLXXXII) was a common year starting on Monday (link will display the full calendar) of the Julian calendar, and a common year starting on Friday (link will display the full calendar) of the Proleptic Gregorian calendar."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

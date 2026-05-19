@@ -1,0 +1,22 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the city in Utah where SkyWest Airlines is headquartered. The raw evidence shows 'SkyWest Airlines is a North American airline owned by SkyWest, Inc. and headquartered in S' (truncated). Candidate 1 mentions SkyWest Airlines partnership with Alaska Airlines but not headquarters. Candidate 3 mentions St. George-based SkyWest Airlines, suggesting St. George as the headquarters city. A bridge note can connect SkyWest Airlines to St. George, and a verification note can confirm the partnership with Alaska Airlines.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "SkyWest Airlines is headquartered in St. George, Utah.",
+      "source_unit_ids": [
+        "5a83c8d2554299123d8c21b7::St. George Municipal Airport::1"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "SkyWest Airlines flies in partnership with Alaska Airlines.",
+      "source_unit_ids": [
+        "5a83c8d2554299123d8c21b7::SkyWest Airlines::5"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

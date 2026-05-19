@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Simon Cowell",
+  "pred_answer": "Simon Cowell",
+  "normalized_gold": "simon cowell",
+  "normalized_pred": "simon cowell",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84e4785542997175ce1f29",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84e4785542997175ce1f29::Cinderella's Eyes::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84e4785542997175ce1f29::Cheryl: My Story::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84e4785542997175ce1f29::Ashley Cole::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a84e4785542997175ce1f29::Sarah Harding::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84e4785542997175ce1f29::Cheryl: My Story",
+        "5a84e4785542997175ce1f29::Ashley Cole"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84e4785542997175ce1f29::Cinderella's Eyes::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84e4785542997175ce1f29::Cheryl: My Story::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84e4785542997175ce1f29::Ashley Cole::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a84e4785542997175ce1f29::Sarah Harding::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84e4785542997175ce1f29::Sarah Harding::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The programme announced that Harding had won a place as a member of the girl group, Girls Aloud.\n[2] Cole is considered by many critics and fellow professional players as one of the best defenders of his generation, and by some, for the better part of his career, as the best left-back in the world.\n[3] In addition to dealing with her childhood and her rise to fame as a member of the girl group Girls Aloud, Cole also discusses her volatile marriage with the footballer Ashley Cole, her life-threatening battle with malaria and her relationship with \"The X Factor\" boss Simon Cowell.\n[4] A member of the British girl group Girls Aloud, Roberts drew inspiration from her time with the group."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

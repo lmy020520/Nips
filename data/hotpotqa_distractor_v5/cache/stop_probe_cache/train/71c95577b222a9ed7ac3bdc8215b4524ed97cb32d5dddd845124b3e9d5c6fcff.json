@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Claire Conner McCaskill",
+  "pred_answer": "Claire Conner McCaskill",
+  "normalized_gold": "claire conner mccaskill",
+  "normalized_pred": "claire conner mccaskill",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f68505542997ba9cb324d",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f68505542997ba9cb324d::Claire McCaskill::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f68505542997ba9cb324d::Missouri gubernatorial election, 2008::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f68505542997ba9cb324d::Montana gubernatorial election, 1996::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f68505542997ba9cb324d::Claire McCaskill",
+        "5a8f68505542997ba9cb324d::Missouri gubernatorial election, 2008"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f68505542997ba9cb324d::Claire McCaskill::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f68505542997ba9cb324d::Missouri gubernatorial election, 2008::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f68505542997ba9cb324d::Montana gubernatorial election, 1996::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f68505542997ba9cb324d::Montana gubernatorial election, 1996::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Incumbent Governor of Montana Marc Racicot, who was first elected in 1992, ran for re-election.\n[2] The incumbent governor, Matt Blunt, who had decided to retire, narrowly won the 2004 election by beating state auditor Claire McCaskill 51%-48%, and would likely have faced a strong challenger in 2008.\n[3] Claire Conner McCaskill ( ; born July 24, 1953) is an American politician and member of the Democratic Party who serves as the senior United States Senator from Missouri."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

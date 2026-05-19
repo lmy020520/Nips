@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Maya civilization",
+  "pred_answer": "Maya civilization",
+  "normalized_gold": "maya civilization",
+  "normalized_pred": "maya civilization",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac1c2835542994ab5c67e08",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac1c2835542994ab5c67e08::Ernst Förstemann::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac1c2835542994ab5c67e08::Maya script::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac1c2835542994ab5c67e08::Hyangchal::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac1c2835542994ab5c67e08::Ernst Förstemann",
+        "5ac1c2835542994ab5c67e08::Maya script"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac1c2835542994ab5c67e08::Ernst Förstemann::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac1c2835542994ab5c67e08::Maya script::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac1c2835542994ab5c67e08::Hyangchal::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac1c2835542994ab5c67e08::Hyangchal::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Hyangchal (literally \"vernacular letters\", \"local letters\" or \"corresponded sound\") is an archaic writing system of Korea and was used to transcribe the Korean language in hanja.\n[2] Mayan script, also known as Mayan glyphs or Mayan hieroglyphs, was the writing system of the Maya civilization of Mesoamerica and is the only Mesoamerican writing system that has been substantially deciphered.\n[3] Ernst Wilhelm Förstemann (Danzig, September 18, 1822 – Charlottenburg, November 4, 1906) was a German historian, mathematician, doctor of linguistics and librarian, director of the Saxon State Library (German: \"Sächsische Landesbibliothek\" ) in Dresden."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

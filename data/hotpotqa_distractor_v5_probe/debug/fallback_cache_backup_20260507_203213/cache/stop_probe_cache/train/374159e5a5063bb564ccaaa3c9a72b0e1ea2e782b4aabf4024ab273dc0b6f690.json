@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "film director",
+  "pred_answer": "film director",
+  "normalized_gold": "film director",
+  "normalized_pred": "film director",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add12345542992c1e3a2536",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add12345542992c1e3a2536::Donald Sawyer::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add12345542992c1e3a2536::Lunar Eclipse (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add12345542992c1e3a2536::Wang Quan'an::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5add12345542992c1e3a2536::60th Berlin International Film Festival::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add12345542992c1e3a2536::Donald Sawyer",
+        "5add12345542992c1e3a2536::Wang Quan'an"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add12345542992c1e3a2536::Donald Sawyer::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add12345542992c1e3a2536::Lunar Eclipse (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add12345542992c1e3a2536::Wang Quan'an::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5add12345542992c1e3a2536::60th Berlin International Film Festival::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add12345542992c1e3a2536::60th Berlin International Film Festival::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The opening film of the festival was Chinese director Wang Quan'an's romantic drama \"Apart Together\", in competition, while the closing film is Japanese director Yoji Yamada's \"About Her Brother\", which was screened out of competition.\n[2] Wang Quan'an () (b. 1965) is a Sixth Generation Chinese film director.\n[3] Lunar Eclipse is a 1999 Chinese film and the directorial debut from Sixth Generation director Wang Quan'an.\n[4] Donald Sawyer is a film director, currently residing in Westfield, New Jersey."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

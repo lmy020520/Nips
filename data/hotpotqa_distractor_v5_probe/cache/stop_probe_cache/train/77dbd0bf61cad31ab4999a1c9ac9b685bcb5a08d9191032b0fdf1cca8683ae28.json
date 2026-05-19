@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jeremy Thorpe",
+  "pred_answer": "Jeremy Thorpe",
+  "normalized_gold": "jeremy thorpe",
+  "normalized_pred": "jeremy thorpe",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae364c25542991a06ce99b5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae364c25542991a06ce99b5::Douglas v Hello! Ltd::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae364c25542991a06ce99b5::The Butler Arms Hotel::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae364c25542991a06ce99b5::Jeremy Thorpe::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae364c25542991a06ce99b5::Douglas v Hello! Ltd::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae364c25542991a06ce99b5::Douglas v Hello! Ltd",
+        "5ae364c25542991a06ce99b5::Jeremy Thorpe"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae364c25542991a06ce99b5::Douglas v Hello! Ltd::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae364c25542991a06ce99b5::The Butler Arms Hotel::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae364c25542991a06ce99b5::Jeremy Thorpe::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae364c25542991a06ce99b5::Douglas v Hello! Ltd::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae364c25542991a06ce99b5::Douglas v Hello! Ltd::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Michael Douglas and Catherine Zeta-Jones agreed a deal with OK! Magazine which would give the company exclusivity over their wedding which took place in 2000 at the Plaza Hotel in New York.\n[2] John Jeremy Thorpe, {'1': \", '2': \", '3': \", '4': \"} (29 April 1929 – 4 December 2014) was a British politician who served as Member of Parliament for North Devon from 1959 to 1979, and as leader of the Liberal Party between 1967 and 1976.\n[3] The Butler Arms Hotel in Waterville, County Kerry, Ireland is best known for its guests such as Charlie Chaplin, Walt Disney, Michael Douglas, Catherine Zeta-Jones and Michael Flatley.\n[4] However a freelance photographer Rupert Thorpe, son of the former British politician Jeremy Thorpe, managed to get into the wedding and take photographs of the couple."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

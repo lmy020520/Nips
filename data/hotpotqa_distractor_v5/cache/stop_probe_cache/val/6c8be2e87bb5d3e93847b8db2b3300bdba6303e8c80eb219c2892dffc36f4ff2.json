@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Manchester United",
+  "pred_answer": "Manchester United",
+  "normalized_gold": "manchester united",
+  "normalized_pred": "manchester united",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe21ef5542991f661060eb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe21ef5542991f661060eb::Michael Carrick::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe21ef5542991f661060eb::Paul Scholes::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe21ef5542991f661060eb::The Class of '92::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe21ef5542991f661060eb::Steve McManaman::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe21ef5542991f661060eb::Paul Scholes",
+        "5abe21ef5542991f661060eb::The Class of '92"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe21ef5542991f661060eb::Michael Carrick::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe21ef5542991f661060eb::Paul Scholes::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe21ef5542991f661060eb::The Class of '92::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe21ef5542991f661060eb::Steve McManaman::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe21ef5542991f661060eb::Steve McManaman::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] McManaman is the most decorated English footballer to have played for a club abroad, with the UEFA website stating that \"of all England's footballing exports in the modern era, none was as successful as McManaman\".\n[2] The film centres on the rise of six young Manchester United footballers – David Beckham, Nicky Butt, Ryan Giggs, Gary Neville, Phil Neville and Paul Scholes – and details their careers for Manchester United starting in 1992.\n[3] He is the most decorated English footballer of all time, and one of the most successful footballers in history, having won a total of 25 trophies, featuring 11 Premier League titles and two Champions League titles.\n[4] He is one of the most decorated English footballers of all time."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

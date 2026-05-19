@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bertalan Farkas",
+  "pred_answer": "Bertalan Farkas",
+  "normalized_gold": "bertalan farkas",
+  "normalized_pred": "bertalan farkas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a762cf0554299109176e6a4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a762cf0554299109176e6a4::Bertalan Farkas::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a762cf0554299109176e6a4::Gassenhauer::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a762cf0554299109176e6a4::Hans Schlegel::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a762cf0554299109176e6a4::Karl Wilhelm Friedrich Schlegel::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a762cf0554299109176e6a4::Bertalan Farkas",
+        "5a762cf0554299109176e6a4::Hans Schlegel"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a762cf0554299109176e6a4::Bertalan Farkas::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a762cf0554299109176e6a4::Gassenhauer::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a762cf0554299109176e6a4::Hans Schlegel::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a762cf0554299109176e6a4::Karl Wilhelm Friedrich Schlegel::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a762cf0554299109176e6a4::Karl Wilhelm Friedrich Schlegel::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] With his older brother, August Wilhelm Schlegel, he was one of the main figures of the Jena romantics.\n[2] Hans Wilhelm Schlegel (Überlingen, 3 August 1951) is a German physicist, an ESA astronaut, and a veteran of two NASA Space Shuttle missions.\n[3] As the full title indicates, it is either an arrangement of, or inspired by, a much older work by the lutenist Hans Neusiedler from 1536.\n[4] Bertalan Farkas (born August 2, 1949) is the first Hungarian cosmonaut and the first Esperantist in space."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

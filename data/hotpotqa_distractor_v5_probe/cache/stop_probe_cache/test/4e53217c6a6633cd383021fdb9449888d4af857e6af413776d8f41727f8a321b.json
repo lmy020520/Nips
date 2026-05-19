@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Life Is a Minestrone",
+  "pred_answer": "Life Is a Minestrone",
+  "normalized_gold": "life is a minestrone",
+  "normalized_pred": "life is a minestrone",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2fca555429928c423958a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2fca555429928c423958a::I'm Not in Love::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2fca555429928c423958a::Dreadlock Holiday::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2fca555429928c423958a::The Original Soundtrack::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae2fca555429928c423958a::Live and Let Live (10cc album)::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2fca555429928c423958a::I'm Not in Love",
+        "5ae2fca555429928c423958a::The Original Soundtrack"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2fca555429928c423958a::I'm Not in Love::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2fca555429928c423958a::Dreadlock Holiday::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2fca555429928c423958a::The Original Soundtrack::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae2fca555429928c423958a::Live and Let Live (10cc album)::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2fca555429928c423958a::Live and Let Live (10cc album)::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The main criticism at the time was that they only performed songs written by Stewart and Gouldman, missing out on big hits such as \"Rubber Bullets\", \"Donna\", \"Life Is a Minestrone\" and \"The Dean and I\".\n[2] \"The Original Soundtrack\" includes the singles \"Life Is a Minestrone\", and \"I'm Not in Love\", the band's most popular song.\n[3] Written by Eric Stewart and Graham Gouldman, it was the lead single from the band's 1978 album, \"Bloody Tourists\".\n[4] \"I'm Not in Love\" is a song by English group 10cc, written by band members Eric Stewart and Graham Gouldman."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

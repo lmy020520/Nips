@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Utah",
+  "pred_answer": "Utah",
+  "normalized_gold": "utah",
+  "normalized_pred": "utah",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7aab03554299042af8f688",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7aab03554299042af8f688::Quileute::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7aab03554299042af8f688::Pipil people::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7aab03554299042af8f688::Nicarao people::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7aab03554299042af8f688::Cavineña language::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7aab03554299042af8f688::Pipil people",
+        "5a7aab03554299042af8f688::Nicarao people"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7aab03554299042af8f688::Quileute::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7aab03554299042af8f688::Pipil people::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7aab03554299042af8f688::Nicarao people::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7aab03554299042af8f688::Cavineña language::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7aab03554299042af8f688::Cavineña language::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Guillaume (2004) states that about 1200 people speak the language, out of a population of around 1700.\n[2] Around 1200 AD, the Nicarao split from the Pipil people and moved into what is now Nicaragua.\n[3] The Pipil language is a Uto-Toltec or Uto-Nicarao dialect of the Nahuan languages branch, a dialect chain that stretches from Utah in the United States down through El Salvador to Nicaragua in Central America.\n[4] The Quileute , also known as the Quillayute , are a Native American people in western Washington state in the United States, currently numbering approximately 2000."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Google",
+  "pred_answer": "Google",
+  "normalized_gold": "google",
+  "normalized_pred": "google",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab3b33655429976abd1bcac",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab3b33655429976abd1bcac::Moffett Federal Airfield::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab3b33655429976abd1bcac::Mountain View Center for the Performing Arts::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab3b33655429976abd1bcac::Moffett Federal Airfield::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab3b33655429976abd1bcac::129th Rescue Squadron::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab3b33655429976abd1bcac::Mountain View, El Paso, Texas::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab3b33655429976abd1bcac::Moffett Federal Airfield",
+        "5ab3b33655429976abd1bcac::129th Rescue Squadron"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab3b33655429976abd1bcac::Moffett Federal Airfield::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab3b33655429976abd1bcac::Mountain View Center for the Performing Arts::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab3b33655429976abd1bcac::Moffett Federal Airfield::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab3b33655429976abd1bcac::129th Rescue Squadron::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab3b33655429976abd1bcac::Mountain View, El Paso, Texas::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab3b33655429976abd1bcac::Mountain View, El Paso, Texas::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Many of the streets in Mountain View are named for mountains or mountain ranges (Mount Everest, Mount Whitney, Mount Hood, Andes, Alps), except for the streets in the southeast corner, many of which are named for Army bases (Riley, Bragg, Benning).\n[2] The 129th Rescue Squadron (129 RQS) is a unit of the California Air National Guard 129th Rescue Wing located at Moffett Federal Airfield, Mountain View, California.\n[3] On November 10, 2014, NASA announced that it would be leasing the airfield to Google for 60 years.\n[4] The Mountain View Center for the Performing Arts is located in downtown Mountain View, California."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

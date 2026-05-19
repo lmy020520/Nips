@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Temple of Artemis",
+  "pred_answer": "Temple of Artemis",
+  "normalized_gold": "temple of artemis",
+  "normalized_pred": "temple of artemis",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7781fe55429949eeb29ea9",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7781fe55429949eeb29ea9::Seven Wonders of the Ancient World::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7781fe55429949eeb29ea9::Lighthouse of Alexandria::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7781fe55429949eeb29ea9::Phanes (coin issuer)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7781fe55429949eeb29ea9::Temple of Artemis::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7781fe55429949eeb29ea9::Colossus of Rhodes::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7781fe55429949eeb29ea9::Phanes (coin issuer)",
+        "5a7781fe55429949eeb29ea9::Temple of Artemis"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7781fe55429949eeb29ea9::Seven Wonders of the Ancient World::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7781fe55429949eeb29ea9::Lighthouse of Alexandria::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7781fe55429949eeb29ea9::Phanes (coin issuer)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7781fe55429949eeb29ea9::Temple of Artemis::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7781fe55429949eeb29ea9::Colossus of Rhodes::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7781fe55429949eeb29ea9::Colossus of Rhodes::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] One of the Seven Wonders of the Ancient World, it was constructed to celebrate Rhodes' victory over the ruler of Cyprus, Antigonus I Monophthalmus, whose son unsuccessfully besieged Rhodes in 305 BC.\n[2] One of the Seven Wonders of the Ancient World, it was completely rebuilt three times before its final destruction in 401 AD.\n[3] The celebrated coins of Phanes are known to be amongst the earliest of Greek coins, a hemihekte of the issue was found in the foundation deposit of the Temple of Artemis at Ephesus (this deposit is considered the oldest deposit of electrum coins discovered).\n[4] One of the Seven Wonders of the Ancient World, for many centuries it was one of the tallest man-made structures in the world."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hans Christian Andersen",
+  "pred_answer": "Hans Christian Andersen",
+  "normalized_gold": "hans christian andersen",
+  "normalized_pred": "hans christian andersen",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2319b5542994d89d5b38b",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2319b5542994d89d5b38b::Schneewittchen (opera)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2319b5542994d89d5b38b::Das Märchen von der schönen Lilie::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2319b5542994d89d5b38b::The Nightingale (opera)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae2319b5542994d89d5b38b::The Nightingale (fairy tale)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae2319b5542994d89d5b38b::New Fairy Tales (1844)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2319b5542994d89d5b38b::The Nightingale (opera)",
+        "5ae2319b5542994d89d5b38b::The Nightingale (fairy tale)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2319b5542994d89d5b38b::Schneewittchen (opera)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2319b5542994d89d5b38b::Das Märchen von der schönen Lilie::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2319b5542994d89d5b38b::The Nightingale (opera)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae2319b5542994d89d5b38b::The Nightingale (fairy tale)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae2319b5542994d89d5b38b::New Fairy Tales (1844)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2319b5542994d89d5b38b::New Fairy Tales (1844)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] New Fairy Tales (Danish: \"Nye Eventyr\" ) is a collection of four fairy tales written by Hans Christian Andersen and published by C. A. Reitzel in Copenhagen, Denmark on 10 November 1843.\n[2] \"The Nightingale\" (Danish: \"Nattergalen\") is a literary fairy tale written by Danish author Hans Christian Andersen about an emperor who prefers the tinkling of a bejeweled mechanical bird to the song of a real nightingale.\n[3] The libretto, based on the tale of \"The Nightingale\" by Hans Christian Andersen, was written by the composer and Stepan Mitussov.\n[4] Das Märchen von der schönen Lilie, Op. 55, (\"The Fairy Tale of the Beautiful Lily\") is an opera in two acts by Giselher Klebe; his wife, Lore Klebe, wrote the libretto based on the fairy tale, \"Das Märchen\", part of the novella \"Unterhaltungen deutscher Ausgewanderten\" by Johann Wolfgang von Goethe."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

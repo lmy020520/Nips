@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sly and the Family Stone",
+  "pred_answer": "Sly and the Family Stone",
+  "normalized_gold": "sly and the family stone",
+  "normalized_pred": "sly and the family stone",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6cf5055429954757d337a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6cf5055429954757d337a::Andy Newmark::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6cf5055429954757d337a::Sidewalk (album)::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6cf5055429954757d337a::Sly and the Family Stone::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6cf5055429954757d337a::U.K. (band)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6cf5055429954757d337a::Andy Newmark",
+        "5ab6cf5055429954757d337a::Sly and the Family Stone"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6cf5055429954757d337a::Andy Newmark::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6cf5055429954757d337a::Sidewalk (album)::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6cf5055429954757d337a::Sly and the Family Stone::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6cf5055429954757d337a::U.K. (band)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6cf5055429954757d337a::U.K. (band)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The band was composed of singer/bassist John Wetton (formerly of King Crimson, Roxy Music, Bryan Ferry's band and Uriah Heep), keyboardist/electric violinist Eddie Jobson (formerly of Curved Air, Roxy Music and Frank Zappa's band), guitarist Allan Holdsworth (formerly of Tempest, Soft Machine, The New Tony Williams Lifetime and Gong) and drummer Bill Bruford (formerly a full member of Yes and King\n[2] The band was the first major American rock group to have a racially-integrated, male and female lineup.\n[3] Pratt would later become a session musician, and go on to work with artists such as Pink Floyd, Roxy Music, David Bowie, Madonna and Michael Jackson.\n[4] Andrew \"Andy\" Newmark (born July 14, 1950) is an American session drummer who is well known as the onetime drummer for Sly and the Family Stone, and has also played with numerous other artists, particularly British acts such as John Lennon, Pink Floyd, David Bowie and Roxy Music."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

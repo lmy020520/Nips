@@ -1,0 +1,101 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Norman Conquest",
+  "pred_answer": "Norman Conquest of England",
+  "normalized_gold": "norman conquest",
+  "normalized_pred": "norman conquest of england",
+  "exact_match": false,
+  "context_exact_match": true,
+  "answer_match_rule": "context_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "Evidence shows Ralph de Gael led the Revolt of the Earls, which was the last serious act of resistance against William in the Norman Conquest.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "Evidence shows Ralph de Gael led the Revolt of the Earls, which was the last serious act of resistance against William in the Norman Conquest.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a812d3955429903bc27b939",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a812d3955429903bc27b939::Harelle::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a812d3955429903bc27b939::Rancho Cañada de Raymundo::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a812d3955429903bc27b939::Ralph de Gael::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a812d3955429903bc27b939::derived::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a812d3955429903bc27b939::Revolt of the Earls::0"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5a812d3955429903bc27b939::Harelle::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a812d3955429903bc27b939::Ralph de Gael",
+        "5a812d3955429903bc27b939::Revolt of the Earls"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a812d3955429903bc27b939::Harelle::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a812d3955429903bc27b939::Rancho Cañada de Raymundo::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a812d3955429903bc27b939::Ralph de Gael::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a812d3955429903bc27b939::Revolt of the Earls::0",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5a812d3955429903bc27b939::Harelle::0",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a812d3955429903bc27b939::derived::0",
+          "added_step": 3
+        }
+      ],
+      "last_added_unit_id": "5a812d3955429903bc27b939::Harelle::0",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] According to Camden: \"At the time of the General Survey made by King William the Conqueror, Ralph de Limesi had great possessions in this Realm; viz.\n[2] The Harelle (] ; from \"haro\") was a revolt that occurred in the French city of Rouen in 1382 and followed by the Maillotins Revolt a few days later in Paris, as well as numerous other revolts across France in the subsequent week.\n[3] The Revolt of the Earls in 1075 was a rebellion of three earls against William I of England (William the Conqueror).\n[4] Ralph de Gaël (otherwise Ralph de Guader, Radulf Waders or Ralph Wader) (before 1042 – c. 1096) was the Earl of East Anglia (Norfolk and Suffolk) and Lord of Gaël and Montfort (\"Seigneur de Gaël et Montfort\").\n\nNotes:\n[bridge] The revolt led by Ralph de Gael occurred in the context of the Norman Conquest of England."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

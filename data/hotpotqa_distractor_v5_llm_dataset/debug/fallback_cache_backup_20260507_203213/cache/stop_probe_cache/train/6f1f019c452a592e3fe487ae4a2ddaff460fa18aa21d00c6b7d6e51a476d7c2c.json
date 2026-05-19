@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Arundel Mills",
+  "pred_answer": "Arundel Mills",
+  "normalized_gold": "arundel mills",
+  "normalized_pred": "arundel mills",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a76a036554299373536011e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a76a036554299373536011e::Arundel Mills::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a76a036554299373536011e::Route 75 (MTA Maryland LocalLink)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a76a036554299373536011e::Route 35 (MTA Maryland)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a76a036554299373536011e::Arundel Mills",
+        "5a76a036554299373536011e::Route 75 (MTA Maryland LocalLink)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a76a036554299373536011e::Arundel Mills::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a76a036554299373536011e::Route 75 (MTA Maryland LocalLink)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a76a036554299373536011e::Route 35 (MTA Maryland)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a76a036554299373536011e::Route 35 (MTA Maryland)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Route 35 is a bus route operated by the Maryland Transit Administration in Baltimore and its suburbs.\n[2] Route 75 is a bus route operated by the Maryland Transit Administration in Baltimore and its suburbs.\n[3] Arundel Mills is a mall located in Hanover, Maryland (south of Baltimore, near BWI Airport) and is owned by Simon Property Group."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

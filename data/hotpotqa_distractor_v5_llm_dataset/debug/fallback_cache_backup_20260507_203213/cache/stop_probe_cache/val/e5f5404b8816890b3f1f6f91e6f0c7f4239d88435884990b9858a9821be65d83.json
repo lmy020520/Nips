@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Coreg",
+  "pred_answer": "Coreg",
+  "normalized_gold": "coreg",
+  "normalized_pred": "coreg",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab67b5755429954757d32ec",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab67b5755429954757d32ec::Carvedilol::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab67b5755429954757d32ec::Beta-2 adrenergic antagonist::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab67b5755429954757d32ec::Beta-3 adrenergic antagonist::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab67b5755429954757d32ec::Tolvaptan::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab67b5755429954757d32ec::Carvedilol",
+        "5ab67b5755429954757d32ec::Beta-3 adrenergic antagonist"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab67b5755429954757d32ec::Carvedilol::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab67b5755429954757d32ec::Beta-2 adrenergic antagonist::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab67b5755429954757d32ec::Beta-3 adrenergic antagonist::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab67b5755429954757d32ec::Tolvaptan::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab67b5755429954757d32ec::Tolvaptan::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Tolvaptan (INN, trade names Samsca and Jinarc) is a selective, competitive vasopressin receptor 2 antagonist used to treat hyponatremia (low blood sodium levels) associated with congestive heart failure, cirrhosis, and the syndrome of inappropriate antidiuretic hormone (SIADH).\n[2] A Beta-3 adrenergic antagonist (β-adrenoceptor antagonist) is an adrenergic antagonist which blocks the Beta-3 adrenergic receptors of cells, with either high specificity (an antagonist which is selective for β adrenoceptors) like L-748,328, L-748,337 and SR 59,230A or non-specifically (an antagonist for β and for β or β adrenoceptors) like the non-selective betablocker Carvedilol.\n[3] A Beta-2 adrenergic antagonist (β-adrenoceptor antagonist) is an adrenergic antagonist which blocks the beta-2 adrenergic receptors of cells, with either high specificity (an antagonist which is selective for β adrenoceptors) like Butaxamine and ICI-118,551, or non-specifically (an antagonist for β and for β or β adrenoceptors) like the non-selective betablocker Propranolol.\n[4] Carvedilol, sold under the brand name Coreg among others, is a beta blocker used for treating mild to severe congestive heart failure (CHF), left ventricular dysfunction (LVD) following heart attack in people who are otherwise stable, and for treating high blood pressure."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

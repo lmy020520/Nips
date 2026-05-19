@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1942",
+  "pred_answer": "1942",
+  "normalized_gold": "1942",
+  "normalized_pred": "1942",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8bdfdd5542995e66a47516",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8bdfdd5542995e66a47516::Delvin James::7"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8bdfdd5542995e66a47516::Anton LaVey::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8bdfdd5542995e66a47516::David Berlinski::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8bdfdd5542995e66a47516::The Devil's Delusion::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8bdfdd5542995e66a47516::Delvin James::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8bdfdd5542995e66a47516::David Berlinski",
+        "5a8bdfdd5542995e66a47516::The Devil's Delusion"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8bdfdd5542995e66a47516::Delvin James::7",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8bdfdd5542995e66a47516::Anton LaVey::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8bdfdd5542995e66a47516::David Berlinski::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8bdfdd5542995e66a47516::The Devil's Delusion::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8bdfdd5542995e66a47516::Delvin James::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8bdfdd5542995e66a47516::Delvin James::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He was drafted by the Devil Rays in the 14th round of the amateur draft,after going 9-2 with a 1.89 era for the Nacogdoches Dragons .\n[2] The Devil's Delusion: Atheism and Its Scientific Pretensions is a 2009 book by David Berlinski.\n[3] David Berlinski (born 1942) is an American author and academic who opposes the scientific consensus on the theory of evolution.\n[4] He was the founder of the Church of Satan and the religion of LaVeyan Satanism."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

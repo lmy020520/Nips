@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Pakistani",
+  "pred_answer": "Pakistani",
+  "normalized_gold": "pakistani",
+  "normalized_pred": "pakistani",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae20a195542997283cd2348",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae20a195542997283cd2348::Dekh Magar Pyaar Say::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae20a195542997283cd2348::Saba Imtiaz::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae20a195542997283cd2348::Humaima Malick::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae20a195542997283cd2348::Dekh Magar Pyaar Say::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae20a195542997283cd2348::Dekh Magar Pyaar Say",
+        "5ae20a195542997283cd2348::Humaima Malick"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae20a195542997283cd2348::Dekh Magar Pyaar Say::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae20a195542997283cd2348::Saba Imtiaz::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae20a195542997283cd2348::Humaima Malick::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae20a195542997283cd2348::Dekh Magar Pyaar Say::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae20a195542997283cd2348::Dekh Magar Pyaar Say::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The movie starred Humaima Malick and Sikander Rizvi in the lead roles.\n[2] Humaima Malick (Urdu: حمایمہ ملک) is a Pakistani actress and model who appears in Pakistani and Bollywood films and serials.\n[3] Imtiaz also wrote the script of the romantic comedy \"Dekh Magar Pyar Se\" (2015).\n[4] Dekh Magar Pyaar Say is a 2015 Pakistani romantic comedy film directed by Asad ul Haq and produced by Ali Murtaza under the production banner Shiny Toy Guns."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Ulster",
+  "pred_answer": "Ulster",
+  "normalized_gold": "ulster",
+  "normalized_pred": "ulster",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b3b9d554299042af8f72f",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b3b9d554299042af8f72f::Cathedral of the Sacred Heart (Pueblo, Colorado)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b3b9d554299042af8f72f::Sacred Heart Church (Phoenix, Arizona)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b3b9d554299042af8f72f::County Tyrone::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7b3b9d554299042af8f72f::Sacred Heart Church, Plumbridge::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7b3b9d554299042af8f72f::Sacred Heart Church (Raleigh, North Carolina)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b3b9d554299042af8f72f::County Tyrone",
+        "5a7b3b9d554299042af8f72f::Sacred Heart Church, Plumbridge"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b3b9d554299042af8f72f::Cathedral of the Sacred Heart (Pueblo, Colorado)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b3b9d554299042af8f72f::Sacred Heart Church (Phoenix, Arizona)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b3b9d554299042af8f72f::County Tyrone::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7b3b9d554299042af8f72f::Sacred Heart Church, Plumbridge::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7b3b9d554299042af8f72f::Sacred Heart Church (Raleigh, North Carolina)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b3b9d554299042af8f72f::Sacred Heart Church (Raleigh, North Carolina)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Sacred Heart Church is a Catholic church located on Hillsborough Street in downtown Raleigh, North Carolina, United States.\n[2] Sacred Heart Church is a Catholic church in the village of Plumbridge, County Tyrone, Northern Ireland.\n[3] It is also one of the 32 traditional counties of Ireland and lies within the historic province of Ulster.\n[4] Sacred Heart Church, or the Historic Sacred Heart Church, is an unoccupied church located at 16th St and Buckeye Roads, which was placed on the National Register of Historic Places by the US Department of Interior with the efforts of the Braun Sacred Heart Center Inc. in 2012."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Yakov Smirnoff",
+  "pred_answer": "Yakov Smirnoff",
+  "normalized_gold": "yakov smirnoff",
+  "normalized_pred": "yakov smirnoff",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac392a8554299741d48a29e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac392a8554299741d48a29e::Yakov Smirnoff::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac392a8554299741d48a29e::Mike Scully::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac392a8554299741d48a29e::Lisa's Rival::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac392a8554299741d48a29e::Yakov Smirnoff",
+        "5ac392a8554299741d48a29e::Mike Scully"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac392a8554299741d48a29e::Yakov Smirnoff::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac392a8554299741d48a29e::Mike Scully::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac392a8554299741d48a29e::Lisa's Rival::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac392a8554299741d48a29e::Lisa's Rival::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It originally aired on the Fox network in the United States on September 11, 1994.\n[2] Michael \"Mike\" Scully (born October 2, 1956) is an American television writer and producer.\n[3] Yakov Naumovich Pokhis, better known as Yakov Smirnoff (born 24 January 1951), is a Soviet-born American comedian, actor and writer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

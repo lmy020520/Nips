@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Wessex",
+  "pred_answer": "Wessex",
+  "normalized_gold": "wessex",
+  "normalized_pred": "wessex",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4bce255429960a22e0188",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4bce255429960a22e0188::Osferth::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4bce255429960a22e0188::Osburh::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4bce255429960a22e0188::Æthelberht, King of Wessex::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4bce255429960a22e0188::Osferth",
+        "5ae4bce255429960a22e0188::Osburh"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4bce255429960a22e0188::Osferth::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4bce255429960a22e0188::Osburh::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4bce255429960a22e0188::Æthelberht, King of Wessex::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4bce255429960a22e0188::Æthelberht, King of Wessex::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He was the third son of Æthelwulf of Wessex and his first wife, Osburh.\n[2] Osburh or Osburga was the first wife of King Æthelwulf of Wessex and mother of Alfred the Great.\n[3] Simon Keynes and Michael Lapidge suggest that he may have been a relative of Alfred's mother Osburh, or a son of Oswald \"filius regis\" (king's son), who may in turn have been a son of Alfred's elder brother and predecessor as king, Æthelred I."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

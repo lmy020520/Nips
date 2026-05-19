@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Asia",
+  "pred_answer": "Asia",
+  "normalized_gold": "asia",
+  "normalized_pred": "asia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab28ad55542993be8fa9940",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab28ad55542993be8fa9940::Hamamelis virginiana::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab28ad55542993be8fa9940::Broussonetia::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab28ad55542993be8fa9940::Witch-hazel::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab28ad55542993be8fa9940::Polistes::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab28ad55542993be8fa9940::Broussonetia",
+        "5ab28ad55542993be8fa9940::Witch-hazel"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab28ad55542993be8fa9940::Hamamelis virginiana::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab28ad55542993be8fa9940::Broussonetia::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab28ad55542993be8fa9940::Witch-hazel::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab28ad55542993be8fa9940::Polistes::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab28ad55542993be8fa9940::Polistes::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Wasps of the cosmopolitan genus Polistes (the only genus in the tribe Polistini) are the most familiar of the polistine wasps, and are the most common type of paper wasp in North America.\n[2] Witch-hazels (\"Hamamelis,\" ) are a genus of flowering plants in the family Hamamelidaceae, with four species in North America (\"H. mexicana\", \"H. ovalis\", \"H. virginiana\", and \"H. vernalis\"), and one each in Japan (\"H. japonica\") and China (\"H. mollis\").\n[3] Broussonetia is a genus of four species of trees in the family Moraceae, native to eastern Asia.\n[4] Hamamelis virginiana, known as common or American witch-hazel, is a species of witch-hazel native to eastern North America, from Nova Scotia west to Minnesota, and south to central Florida to eastern Texas."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

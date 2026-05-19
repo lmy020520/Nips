@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Strapping Young Lad",
+  "pred_answer": "Strapping Young Lad",
+  "normalized_gold": "strapping young lad",
+  "normalized_pred": "strapping young lad",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac044975542997d642959ef",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac044975542997d642959ef::Devin Townsend::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac044975542997d642959ef::Sir Millard Mulch::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac044975542997d642959ef::Devin Townsend::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac044975542997d642959ef::Devin Townsend",
+        "5ac044975542997d642959ef::Sir Millard Mulch"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac044975542997d642959ef::Devin Townsend::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac044975542997d642959ef::Sir Millard Mulch::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac044975542997d642959ef::Devin Townsend::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac044975542997d642959ef::Devin Townsend::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He founded extreme metal band Strapping Young Lad and was its primary songwriter, vocalist, and guitarist in from 1994 to 2007, and has an extensive career as a solo artist.\n[2] Sir Millard Mulch, real name Carl King (often incorrectly referred to as Paul Mavanu from a satirical e-book based on his album of the same name that used that alias), (born Willoughby, Ohio) is a musician who has worked with Virgil Donati and Devin Townsend.\n[3] Devin Garrett Townsend (born May 5, 1972) is a Canadian musician, songwriter and record producer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

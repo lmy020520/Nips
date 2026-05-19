@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1562 and 1642",
+  "pred_answer": "1562 and 1642",
+  "normalized_gold": "1562 and 1642",
+  "normalized_pred": "1562 and 1642",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c35885542996dd594b8d9",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c35885542996dd594b8d9::Memory of Mankind::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c35885542996dd594b8d9::The Bob Hope Theatre::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c35885542996dd594b8d9::English Renaissance theatre::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7c35885542996dd594b8d9::Hope Theatre::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7c35885542996dd594b8d9::Haymarket Theatre (Boston, Massachusetts)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c35885542996dd594b8d9::English Renaissance theatre",
+        "5a7c35885542996dd594b8d9::Hope Theatre"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c35885542996dd594b8d9::Memory of Mankind::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c35885542996dd594b8d9::The Bob Hope Theatre::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c35885542996dd594b8d9::English Renaissance theatre::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7c35885542996dd594b8d9::Hope Theatre::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7c35885542996dd594b8d9::Haymarket Theatre (Boston, Massachusetts)::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c35885542996dd594b8d9::Haymarket Theatre (Boston, Massachusetts)::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] In addition to dramatic plays, the theatre presented some 62 musical entertainments during its first 5 years.\n[2] The Hope Theatre was one of the theatres built in and around London for the presentation of plays in English Renaissance theatre, comparable to the Globe, the Curtain, the Swan, and other famous theatres of the era.\n[3] English Renaissance theatre, also known as early modern English theatre, or (commonly) as Elizabethan theatre, refers to the theatre of England between 1562 and 1642.\n[4] The Bob Hope Theatre is a community theatre in Eltham in the Royal Borough of Greenwich, England."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

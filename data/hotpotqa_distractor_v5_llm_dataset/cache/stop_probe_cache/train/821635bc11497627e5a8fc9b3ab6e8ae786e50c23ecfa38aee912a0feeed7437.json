@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Paul Anthony Sorrento",
+  "pred_answer": "Paul Anthony Sorrento",
+  "normalized_gold": "paul anthony sorrento",
+  "normalized_pred": "paul anthony sorrento",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74ad2b55429916b01641c2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74ad2b55429916b01641c2::1991 World Series::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74ad2b55429916b01641c2::Mule Shirley::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74ad2b55429916b01641c2::Paul Sorrento::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74ad2b55429916b01641c2::Chris James (baseball)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74ad2b55429916b01641c2::1991 World Series",
+        "5a74ad2b55429916b01641c2::Paul Sorrento"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74ad2b55429916b01641c2::1991 World Series::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74ad2b55429916b01641c2::Mule Shirley::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74ad2b55429916b01641c2::Paul Sorrento::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74ad2b55429916b01641c2::Chris James (baseball)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74ad2b55429916b01641c2::Chris James (baseball)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A 1981 graduate Stratford High School, he played for the Philadelphia Phillies, San Diego Padres, San Francisco Giants and Houston Astros all of the National League and the Cleveland Indians, Texas Rangers, Kansas City Royals and Boston Red Sox all of the American League.\n[2] Paul Anthony Sorrento (born November 17, 1965) is a former first baseman in Major League Baseball.\n[3] Ernest Raeford \"Mule\" Shirley (May 24, 1901 in Snow Hill, North Carolina – August 4, 1955 in Goldsboro, North Carolina), was a Major League Baseball player who played first base from 1924 -1925 .\n[4] ESPN selected it as the \"Greatest of All Time\" in their \"World Series 100th Anniversary\" countdown, with five of its games being decided by a single run, four games decided in the final at-bat and three games going into extra innings."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

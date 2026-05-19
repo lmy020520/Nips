@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "A Song of Ice and Fire",
+  "pred_answer": "A Song of Ice and Fire",
+  "normalized_gold": "a song of ice and fire",
+  "normalized_pred": "a song of ice and fire",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a80f5bb554299260e20a1db",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a80f5bb554299260e20a1db::Rosie Mac::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a80f5bb554299260e20a1db::List of The Devil Is a Part-Timer! episodes::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a80f5bb554299260e20a1db::Daenerys Targaryen::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a80f5bb554299260e20a1db::Jeannie Epper::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a80f5bb554299260e20a1db::Rosie Mac",
+        "5a80f5bb554299260e20a1db::Daenerys Targaryen"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a80f5bb554299260e20a1db::Rosie Mac::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a80f5bb554299260e20a1db::List of The Devil Is a Part-Timer! episodes::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a80f5bb554299260e20a1db::Daenerys Targaryen::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a80f5bb554299260e20a1db::Jeannie Epper::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a80f5bb554299260e20a1db::Jeannie Epper::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She has performed stunts in over 100 feature films and television series and is perhaps best known as Lynda Carter's body double on the 1970s television series \"Wonder Woman\".\n[2] Daenerys Targaryen is a fictional character in George R. R. Martin's \"A Song of Ice and Fire\" series of novels, as well as the television adaptation, \"Game of Thrones\", where she is portrayed by Emilia Clarke.\n[3] \" is 2013 fantasy, comedy Japanese anime series based on the light novels written by Satoshi Wagahara.\n[4] She was the body double for Emilia Clarke in her portrayal of Daenerys Targaryen in season five of the HBO series \"Game of Thrones\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

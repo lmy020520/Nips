@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "man-made treasures",
+  "pred_answer": "man-made treasures",
+  "normalized_gold": "man-made treasures",
+  "normalized_pred": "man-made treasures",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae8110e5542994a481bbea3",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae8110e5542994a481bbea3::St James' Hall, Sydney::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae8110e5542994a481bbea3::St James' Church, Sydney::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae8110e5542994a481bbea3::St Mary's Church, Acton::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae8110e5542994a481bbea3::St James' Hall, Sydney",
+        "5ae8110e5542994a481bbea3::St James' Church, Sydney"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae8110e5542994a481bbea3::St James' Hall, Sydney::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae8110e5542994a481bbea3::St James' Church, Sydney::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae8110e5542994a481bbea3::St Mary's Church, Acton::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae8110e5542994a481bbea3::St Mary's Church, Acton::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Since 1967 it has been designated a Grade I listed building.\n[2] It is listed on the Register of the National Estate, and has been described as one of the world's 80 greatest man-made treasures.\n[3] St James' Hall, sometimes written as St James's Hall, was a building which stood at 171 Phillip Street, Sydney, near King Street."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

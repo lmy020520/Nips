@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lerotholi Polytechnic Football Club",
+  "pred_answer": "Lerotholi Polytechnic Football Club",
+  "normalized_gold": "lerotholi polytechnic football club",
+  "normalized_pred": "lerotholi polytechnic football club",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a73073d55429901807daf69",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a73073d55429901807daf69::Lerotholi Polytechnic FC::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a73073d55429901807daf69::Linare FC::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a73073d55429901807daf69::Maseru::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a73073d55429901807daf69::Matlama FC::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a73073d55429901807daf69::Lerotholi Polytechnic FC",
+        "5a73073d55429901807daf69::Maseru"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a73073d55429901807daf69::Lerotholi Polytechnic FC::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a73073d55429901807daf69::Linare FC::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a73073d55429901807daf69::Maseru::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a73073d55429901807daf69::Matlama FC::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a73073d55429901807daf69::Matlama FC::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is based in the city of Maseru, capital of the Lesotho.\n[2] Maseru is Lesotho's capital city with a population of approximately 253,000.\n[3] Linare FC is a Lesotho football club based in Leribe.\n[4] Lerotholi Polytechnic Football Club is a Lesotho football club based in Maseru."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

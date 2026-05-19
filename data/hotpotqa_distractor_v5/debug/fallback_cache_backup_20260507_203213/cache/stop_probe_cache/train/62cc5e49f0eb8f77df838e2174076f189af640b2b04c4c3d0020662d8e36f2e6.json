@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Southern Reach",
+  "pred_answer": "Southern Reach",
+  "normalized_gold": "southern reach",
+  "normalized_pred": "southern reach",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac27d4755429963665199dd",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac27d4755429963665199dd::Cat Rambo::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac27d4755429963665199dd::Babi Dewet::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac27d4755429963665199dd::Jeff VanderMeer::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac27d4755429963665199dd::Fantasy Magazine::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac27d4755429963665199dd::Cat Rambo",
+        "5ac27d4755429963665199dd::Jeff VanderMeer"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac27d4755429963665199dd::Cat Rambo::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac27d4755429963665199dd::Babi Dewet::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac27d4755429963665199dd::Jeff VanderMeer::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac27d4755429963665199dd::Fantasy Magazine::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac27d4755429963665199dd::Fantasy Magazine::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The magazine has published, in the past, stories by Peter S. Beagle, Jeffrey Ford, Theodora Goss, Caitlin Kiernan, Joe R. Lansdale, Nick Mamatas, Tim Pratt, Cat Rambo, Ekaterina Sedia, Catherynne M. Valente, Jeff VanderMeer, and more.\n[2] Initially associated with the New Weird literary genre, VanderMeer crossed over into mainstream success with his bestselling \"Southern Reach\" trilogy.\n[3] Bárbara \"Babi\" Dewet (born December 30, 1986) is a Brazilian novelist and author of the Sábado à Noite Trilogy.\n[4] She collaborated with Jeff VanderMeer on \"The Surgeon's Tale and Other Stories\", published in 2007."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

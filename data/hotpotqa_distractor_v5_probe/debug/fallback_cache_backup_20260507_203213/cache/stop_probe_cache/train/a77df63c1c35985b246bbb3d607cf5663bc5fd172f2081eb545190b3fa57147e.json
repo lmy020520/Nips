@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Elissa Down",
+  "pred_answer": "Elissa Down",
+  "normalized_gold": "elissa down",
+  "normalized_pred": "elissa down",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae17e5a55429901ffe4aeaf",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae17e5a55429901ffe4aeaf::Rhys Wakefield::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae17e5a55429901ffe4aeaf::The Black Balloon (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae17e5a55429901ffe4aeaf::The Black Balloon (film)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae17e5a55429901ffe4aeaf::Rhys Wakefield",
+        "5ae17e5a55429901ffe4aeaf::The Black Balloon (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae17e5a55429901ffe4aeaf::Rhys Wakefield::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae17e5a55429901ffe4aeaf::The Black Balloon (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae17e5a55429901ffe4aeaf::The Black Balloon (film)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae17e5a55429901ffe4aeaf::The Black Balloon (film)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It is directed by first-time feature film director, Elissa Down.\n[2] The Black Balloon is a 2008 Australian comedy-drama film starring Toni Collette, Rhys Wakefield, Luke Ford, Erik Thomson, Gemma Ward as well as a cast of newcomers.\n[3] Rhys Wakefield (born 20 November 1988) is an Australian film/television actor and director, best known as Thomas Mollison in the 2008 film \"The Black Balloon\", as Lucas Holden on \"Home and Away\", the Polite Leader in \"The Purge\" and Josh McGuire in James Cameron's 2011 thriller/drama \"Sanctum\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

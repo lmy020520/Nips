@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lawrence Kasdan",
+  "pred_answer": "Lawrence Kasdan",
+  "normalized_gold": "lawrence kasdan",
+  "normalized_pred": "lawrence kasdan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab29522554299706120965f",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab29522554299706120965f::The Accidental Tourist (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab29522554299706120965f::Sara (1985 TV series)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab29522554299706120965f::The Accidental Tourist (film)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab29522554299706120965f::Geena Davis::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab29522554299706120965f::Bentonville Film Festival::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab29522554299706120965f::The Accidental Tourist (film)",
+        "5ab29522554299706120965f::Geena Davis"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab29522554299706120965f::The Accidental Tourist (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab29522554299706120965f::Sara (1985 TV series)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab29522554299706120965f::The Accidental Tourist (film)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab29522554299706120965f::Geena Davis::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab29522554299706120965f::Bentonville Film Festival::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab29522554299706120965f::Bentonville Film Festival::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] After Drinkwater learned Walmart was interested in supporting diversity initiatives, he brought in Davis, who he knew would be interested because of her work with the Geena Davis Institute on Gender in Media.\n[2] She is known for her roles in \"The Fly\" (1986), \"Beetlejuice\" (1988), \"Thelma & Louise\" (1991), \"A League of Their Own\" (1992), \"The Long Kiss Goodnight\" (1996), \"Stuart Little\" (1999), and \"The Accidental Tourist\", for which she won the 1988 Academy Award for Best Supporting Actress.\n[3] It was directed by Lawrence Kasdan and scored by John Williams.\n[4] Starring Geena Davis in the title role, the series features early performances from several actors who went on to greater acclaim, including Alfre Woodard, Bronson Pinchot and Bill Maher."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

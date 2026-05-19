@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "36.4",
+  "pred_answer": "36.4",
+  "normalized_gold": "364",
+  "normalized_pred": "364",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a80a04e5542996402f6a5bc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a80a04e5542996402f6a5bc::Cleland, South Australia::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a80a04e5542996402f6a5bc::Division of Kingston::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a80a04e5542996402f6a5bc::Moana, South Australia::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a80a04e5542996402f6a5bc::Fitzroy, South Australia::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a80a04e5542996402f6a5bc::Division of Kingston",
+        "5a80a04e5542996402f6a5bc::Moana, South Australia"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a80a04e5542996402f6a5bc::Cleland, South Australia::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a80a04e5542996402f6a5bc::Division of Kingston::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a80a04e5542996402f6a5bc::Moana, South Australia::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a80a04e5542996402f6a5bc::Fitzroy, South Australia::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a80a04e5542996402f6a5bc::Fitzroy, South Australia::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Fitzroy is an inner northern suburb of Adelaide 4 km from the Adelaide city centre, in the state of South Australia, Australia within the City of Prospect.\n[2] The suburb is approximately 36.4 km from the Adelaide city centre.\n[3] The Division of Kingston is an Australian Electoral Division in South Australia covering the outer southern suburbs of Adelaide.\n[4] Cleland is a suburb in South Australia located in the Adelaide metropolitan area about 10 km south-east of the Adelaide city centre."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Kim Novak",
+  "pred_answer": "Kim Novak",
+  "normalized_gold": "kim novak",
+  "normalized_pred": "kim novak",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae368955542992e3233c3e7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae368955542992e3233c3e7::Just a Gigolo (1978 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae368955542992e3233c3e7::Kim Novak::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae368955542992e3233c3e7::Follyfoot::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae368955542992e3233c3e7::Just a Gigolo (1978 film)",
+        "5ae368955542992e3233c3e7::Kim Novak"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae368955542992e3233c3e7::Just a Gigolo (1978 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae368955542992e3233c3e7::Kim Novak::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae368955542992e3233c3e7::Follyfoot::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae368955542992e3233c3e7::Follyfoot::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Follyfoot is a children's television series co-produced by the majority-partner British television company Yorkshire Television (for transmission on ITV) and the independent West German company \"TV Munich\" (for transmission on the ZDF channel).\n[2] Marilyn Pauline \"Kim\" Novak (born February 13, 1933) is a retired American film and television actress, currently engaged as a visual artist.\n[3] Just a Gigolo (Schöner Gigolo, armer Gigolo) is a West German 1978 film directed by David Hemmings and starring David Bowie."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

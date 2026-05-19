@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ladies",
+  "pred_answer": "Ladies",
+  "normalized_gold": "ladies",
+  "normalized_pred": "ladies",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2c7df554299657fa2904e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2c7df554299657fa2904e::Curzon Ashton L.F.C.::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2c7df554299657fa2904e::Curzon Ashton F.C.::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2c7df554299657fa2904e::Harry Davis (footballer, born 1991)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2c7df554299657fa2904e::Curzon Ashton L.F.C.",
+        "5ac2c7df554299657fa2904e::Curzon Ashton F.C."
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2c7df554299657fa2904e::Curzon Ashton L.F.C.::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2c7df554299657fa2904e::Curzon Ashton F.C.::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2c7df554299657fa2904e::Harry Davis (footballer, born 1991)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2c7df554299657fa2904e::Harry Davis (footballer, born 1991)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Harry Spencer Davis (born 24 September 1991) is an English professional footballer, who plays as a defender for Scottish Championship side St Mirren.\n[2] Curzon Ashton Football Club is a semi-professional football club based in the market town of Ashton-under-Lyne, Greater Manchester, England, that competes in the National League North, the sixth-highest division overall in the English football league system, and are members of the Manchester County Football Association.\n[3] Curzon Ashton Ladies Football Club is an English women's football club affiliated with Curzon Ashton F.C.."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

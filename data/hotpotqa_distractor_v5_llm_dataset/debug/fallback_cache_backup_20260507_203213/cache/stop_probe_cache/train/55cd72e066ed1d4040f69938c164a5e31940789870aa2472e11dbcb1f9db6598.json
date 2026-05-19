@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "professional tennis player",
+  "pred_answer": "professional tennis player",
+  "normalized_gold": "professional tennis player",
+  "normalized_pred": "professional tennis player",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae23b275542992decbdcc92",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae23b275542992decbdcc92::Billy Martin (tennis)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae23b275542992decbdcc92::1969 British Hard Court Championships::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae23b275542992decbdcc92::Frew McMillan::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae23b275542992decbdcc92::Billy Martin (tennis)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae23b275542992decbdcc92::Billy Martin (tennis)",
+        "5ae23b275542992decbdcc92::Frew McMillan"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae23b275542992decbdcc92::Billy Martin (tennis)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae23b275542992decbdcc92::1969 British Hard Court Championships::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae23b275542992decbdcc92::Frew McMillan::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae23b275542992decbdcc92::Billy Martin (tennis)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae23b275542992decbdcc92::Billy Martin (tennis)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Martin currently serves as the head coach for the UCLA Bruins men's tennis team, a position he has held for the past 24 years since 1994.\n[2] Frew Donald McMillan (born 20 May 1942) is a former professional male tennis player from South Africa who won five major doubles championships including three Wimbledons with Bob Hewitt.\n[3] John Newcombe, seeded first, and Margaret Court won the first open singles titles while the men's team of Bob Hewitt and Frew McMillan and the women's team of Margaret Court and Judy Tegart won the doubles titles.\n[4] Billy Martin (born December 25, 1956, in Evanston, Illinois, United States), is a right-handed former professional tennis player from the United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

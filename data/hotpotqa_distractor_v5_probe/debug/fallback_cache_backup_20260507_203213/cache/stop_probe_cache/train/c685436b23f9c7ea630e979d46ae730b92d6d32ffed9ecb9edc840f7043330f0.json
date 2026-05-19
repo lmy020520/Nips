@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Pennsylvania",
+  "pred_answer": "Pennsylvania",
+  "normalized_gold": "pennsylvania",
+  "normalized_pred": "pennsylvania",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8ec4a15542995a26add509",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8ec4a15542995a26add509::Ohio State Buckeyes::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8ec4a15542995a26add509::Brutus J. Clay::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8ec4a15542995a26add509::Jim Liberman::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8ec4a15542995a26add509::Brutus (Funny Car)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8ec4a15542995a26add509::Centreport Aqueduct::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8ec4a15542995a26add509::Jim Liberman",
+        "5a8ec4a15542995a26add509::Brutus (Funny Car)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8ec4a15542995a26add509::Ohio State Buckeyes::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8ec4a15542995a26add509::Brutus J. Clay::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8ec4a15542995a26add509::Jim Liberman::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8ec4a15542995a26add509::Brutus (Funny Car)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8ec4a15542995a26add509::Centreport Aqueduct::6",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8ec4a15542995a26add509::Centreport Aqueduct::6",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The aqueduct stone work is still intact and is the prime feature of a roadside park constructed by the New York State Department of Transportation in 1972 with the assistance of the Weedsport Lions Club.\n[2] Brutus is a pioneering funny car driven by Jim Liberman and prepared by crew chief Lew Arrington in the middle 1960s.\n[3] Russell James Liberman (September 12, 1945 - September 9, 1977) was a United States drag racer from Pennsylvania, known as \"Jungle Jim\".\n[4] His brother Cassius Marcellus Clay also was a politician in the state, and they both joined the Unionist Party at the time of the American Civil War."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

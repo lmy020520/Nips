@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "DAW Books",
+  "pred_answer": "DAW Books",
+  "normalized_gold": "daw books",
+  "normalized_pred": "daw books",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade0d585542995b365fabef",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade0d585542995b365fabef::The Chanur novels::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade0d585542995b365fabef::The Collected Short Fiction of C. J. Cherryh::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade0d585542995b365fabef::C. J. Cherryh::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade0d585542995b365fabef::Devil to the Belt::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade0d585542995b365fabef::The Chanur novels",
+        "5ade0d585542995b365fabef::C. J. Cherryh"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade0d585542995b365fabef::The Chanur novels::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade0d585542995b365fabef::The Collected Short Fiction of C. J. Cherryh::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade0d585542995b365fabef::C. J. Cherryh::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade0d585542995b365fabef::Devil to the Belt::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade0d585542995b365fabef::Devil to the Belt::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Devil to the Belt is an omnibus release from 2000 containing two science fiction novels by American writer C. J. Cherryh, Heavy Time (1991), and Hellburner (1992).\n[2] Carolyn Janice Cherry (born September 1, 1942), better known by the pen name C. J. Cherryh, is an American writer of speculative fiction.\n[3] The Collected Short Fiction of C. J. Cherryh is a collection of science fiction and fantasy short stories, novelettes and novella written by the United States author C. J. Cherryh between 1977 and 2004.\n[4] The Chanur novels is a series of five science fiction novels, forming three separate stories, written by American author C. J. Cherryh and published by DAW Books between 1981 and 1992."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

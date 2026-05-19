@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ernie Banks",
+  "pred_answer": "Ernie Banks",
+  "normalized_gold": "ernie banks",
+  "normalized_pred": "ernie banks",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abdc3b75542993062266ce4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abdc3b75542993062266ce4::Ray Dandridge::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abdc3b75542993062266ce4::Dallas Green Monarchs::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abdc3b75542993062266ce4::Ernie Banks::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abdc3b75542993062266ce4::Effa Manley::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abdc3b75542993062266ce4::Dallas Green Monarchs",
+        "5abdc3b75542993062266ce4::Ernie Banks"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abdc3b75542993062266ce4::Ray Dandridge::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abdc3b75542993062266ce4::Dallas Green Monarchs::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abdc3b75542993062266ce4::Ernie Banks::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abdc3b75542993062266ce4::Effa Manley::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abdc3b75542993062266ce4::Effa Manley::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Throughout that time, she served as the team's business manager and fulfilled many of her husband's duties as treasurer of the Negro National League.\n[2] He was inducted into the National Baseball Hall of Fame in 1977, and was named to the Major League Baseball All-Century Team in 1999.\n[3] Chicago Cubs' great Ernie Banks' was a bat boy for the Green Monarchs and his father Eddie Banks was its catcher.\n[4] In 1999, Dandridge was inducted into the Virginia Sports Hall of Fame and, late in his life, Dandridge was inducted into the Baseball Hall of Fame."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

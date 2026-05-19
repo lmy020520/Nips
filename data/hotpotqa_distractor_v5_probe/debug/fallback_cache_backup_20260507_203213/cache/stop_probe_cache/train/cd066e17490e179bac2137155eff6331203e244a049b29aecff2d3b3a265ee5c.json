@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "British",
+  "pred_answer": "British",
+  "normalized_gold": "british",
+  "normalized_pred": "british",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae22339554299234fd043e4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae22339554299234fd043e4::P. G. Wodehouse::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae22339554299234fd043e4::Failure to refer::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae22339554299234fd043e4::Bertrand Russell::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae22339554299234fd043e4::P. G. Wodehouse::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae22339554299234fd043e4::P. G. Wodehouse",
+        "5ae22339554299234fd043e4::Bertrand Russell"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae22339554299234fd043e4::P. G. Wodehouse::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae22339554299234fd043e4::Failure to refer::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae22339554299234fd043e4::Bertrand Russell::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae22339554299234fd043e4::P. G. Wodehouse::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae22339554299234fd043e4::P. G. Wodehouse::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Sir Pelham Grenville Wodehouse {'1': \", '2': \", '3': \", '4': \"} ( ; 15 October 188114 February 1975) was an English author and one of the most widely read humorists of the 20th century.\n[2] Bertrand Arthur William Russell, 3rd Earl Russell, ( ; 18 May 1872 – 2 February 1970) was a British philosopher, logician, mathematician, historian, writer, social critic, political activist and Nobel laureate.\n[3] According to Bertrand Russell's theory of truth, there is only one actual world, and a statement's truth value depends on whether the statement obtains in the actual world.\n[4] Born in Guildford, the son of a British magistrate based in Hong Kong, Wodehouse spent happy teenage years at Dulwich College, to which he remained devoted all his life."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

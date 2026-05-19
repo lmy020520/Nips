@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "San Diego County",
+  "pred_answer": "San Diego County",
+  "normalized_gold": "san diego county",
+  "normalized_pred": "san diego county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a83a3ee554299123d8c217c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a83a3ee554299123d8c217c::Interstate 15::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a83a3ee554299123d8c217c::Interstate 80 in New Jersey::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a83a3ee554299123d8c217c::Interstate 15::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a83a3ee554299123d8c217c::Lake Hodges::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a83a3ee554299123d8c217c::Interstate 87 (New York)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a83a3ee554299123d8c217c::Interstate 15",
+        "5a83a3ee554299123d8c217c::Lake Hodges"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a83a3ee554299123d8c217c::Interstate 15::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a83a3ee554299123d8c217c::Interstate 80 in New Jersey::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a83a3ee554299123d8c217c::Interstate 15::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a83a3ee554299123d8c217c::Lake Hodges::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a83a3ee554299123d8c217c::Interstate 87 (New York)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a83a3ee554299123d8c217c::Interstate 87 (New York)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Interstate 87 (I-87) is a 333.49 mi Interstate Highway located entirely within the U.S. state of New York, and is part of the main highway between New York City and Montreal.\n[2] Lake Hodges is a lake and reservoir located in Southern California, about 31 mi north of San Diego and just south of Escondido, California.\n[3] I-15 begins near the Mexico–US border in San Diego County and stretches north to Alberta, Canada, passing through the states of California, Nevada, Arizona, Utah, Idaho, and Montana.\n[4] Interstate 80 (I-80) is a major Interstate Highway in the United States, running from the New York City Metropolitan Area westward to San Francisco, California."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

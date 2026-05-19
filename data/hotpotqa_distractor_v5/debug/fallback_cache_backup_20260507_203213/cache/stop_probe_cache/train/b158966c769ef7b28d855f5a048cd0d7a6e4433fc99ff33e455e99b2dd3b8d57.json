@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Nassau County",
+  "pred_answer": "Nassau County",
+  "normalized_gold": "nassau county",
+  "normalized_pred": "nassau county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab702ee5542991d32223745",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab702ee5542991d32223745::1921 PGA Championship::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab702ee5542991d32223745::2016 PGA Championship::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab702ee5542991d32223745::Inwood, New York::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab702ee5542991d32223745::Long Island PGA Championship::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab702ee5542991d32223745::1921 PGA Championship",
+        "5ab702ee5542991d32223745::Inwood, New York"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab702ee5542991d32223745::1921 PGA Championship::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab702ee5542991d32223745::2016 PGA Championship::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab702ee5542991d32223745::Inwood, New York::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab702ee5542991d32223745::Long Island PGA Championship::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab702ee5542991d32223745::Long Island PGA Championship::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Long Island PGA Championship is a professional golf tournament played on Long Island, New York.\n[2] Inwood is a hamlet and census-designated place (CDP) in Nassau County, New York, United States.\n[3] The 2016 PGA Championship was the 98th PGA Championship which took place from July 28–31 at Baltusrol Golf Club on the Lower Course in Springfield Township, New Jersey, west of New York City.\n[4] The 1921 PGA Championship was the fourth PGA Championship, held September 27 to October 1 on Long Island at Inwood Country Club in Inwood, New York."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

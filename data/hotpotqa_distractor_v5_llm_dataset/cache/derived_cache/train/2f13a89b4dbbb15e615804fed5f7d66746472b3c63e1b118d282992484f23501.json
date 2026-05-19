@@ -1,0 +1,22 @@
+{
+  "should_derive": true,
+  "reason": "Current evidence lacks bed counts for both hospitals. A bridge note can connect the question to a candidate that mentions a children's hospital, and a verification note can check if any candidate provides bed counts for the hospitals in question.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Banner University Medical Center Tucson contains a children's hospital, but it is not Children's National Medical Center.",
+      "source_unit_ids": [
+        "5a76abd05542993569682c7c::Banner University Medical Center Tucson::4"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Providence Portland Medical Center has 483 beds, but it is not one of the hospitals in the question.",
+      "source_unit_ids": [
+        "5a76abd05542993569682c7c::Providence Portland Medical Center::1"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

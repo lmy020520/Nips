@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Samuel Francis Du Pont.",
+  "pred_answer": "Samuel Francis Du Pont.",
+  "normalized_gold": "samuel francis du pont",
+  "normalized_pred": "samuel francis du pont",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc93a4554299438c868e01",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc93a4554299438c868e01::The Phillips Collection::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc93a4554299438c868e01::Dupont Circle::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc93a4554299438c868e01::Byron Randall::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc93a4554299438c868e01::The Phillips Collection",
+        "5adc93a4554299438c868e01::Dupont Circle"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc93a4554299438c868e01::The Phillips Collection::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc93a4554299438c868e01::Dupont Circle::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc93a4554299438c868e01::Byron Randall::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc93a4554299438c868e01::Byron Randall::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] His work is held in permanent collections of the Phillips Collection, the California Palace of the Legion of Honour, the Montreal Museum of Fine Arts, the Hallie Ford Museum of Art, the Schneider Museum of Art, the Bolinas Art Museum, the Janet Turner Print Collection and Gallery, and the Oakland Museum of California.\n[2] The circle is named for Rear Admiral Samuel Francis Du Pont.\n[3] The Phillips Collection is an art museum founded by Duncan Phillips and Marjorie Acker Phillips in 1921 as the Phillips Memorial Gallery located in the Dupont Circle neighborhood of Washington, D.C. Phillips was the grandson of James H. Laughlin, a banker and co-founder of the Jones and Laughlin Steel Company."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

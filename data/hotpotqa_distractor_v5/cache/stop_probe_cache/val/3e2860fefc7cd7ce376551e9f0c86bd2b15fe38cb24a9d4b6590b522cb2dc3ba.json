@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Michael Faraday",
+  "pred_answer": "Michael Faraday",
+  "normalized_gold": "michael faraday",
+  "normalized_pred": "michael faraday",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e2b0655429934daa2fbdd",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e2b0655429934daa2fbdd::Thomas Royds::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e2b0655429934daa2fbdd::Ernest Rutherford::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e2b0655429934daa2fbdd::Ernest Rutherford::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e2b0655429934daa2fbdd::Thomas Royds",
+        "5a7e2b0655429934daa2fbdd::Ernest Rutherford"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e2b0655429934daa2fbdd::Thomas Royds::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e2b0655429934daa2fbdd::Ernest Rutherford::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e2b0655429934daa2fbdd::Ernest Rutherford::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e2b0655429934daa2fbdd::Ernest Rutherford::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Encyclopædia Britannica\" considers him to be the greatest experimentalist since Michael Faraday (1791–1867).\n[2] Ernest Rutherford, 1st Baron Rutherford of Nelson, (30 August 1871 – 19 October 1937) was a New Zealand-born British physicist who came to be known as the father of nuclear physics. \"\n[3] Thomas Royds (April 11, 1884 – May 1, 1955) was a Solar physicist who worked with Ernest Rutherford on the identification of alpha radiation as the nucleus of the helium atom, and who was Director of the Kodaikanal Solar Observatory."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

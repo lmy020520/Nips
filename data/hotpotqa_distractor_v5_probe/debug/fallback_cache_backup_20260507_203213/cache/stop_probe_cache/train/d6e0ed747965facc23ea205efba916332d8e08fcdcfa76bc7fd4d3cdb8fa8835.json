@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Africa",
+  "pred_answer": "Africa",
+  "normalized_gold": "africa",
+  "normalized_pred": "africa",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a90578c55429933b8a204ed",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a90578c55429933b8a204ed::Climate of Africa::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a90578c55429933b8a204ed::Jameson's red rock hare::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a90578c55429933b8a204ed::Satureja::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a90578c55429933b8a204ed::Aerangis::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a90578c55429933b8a204ed::Climate of Africa::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a90578c55429933b8a204ed::Satureja",
+        "5a90578c55429933b8a204ed::Aerangis"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a90578c55429933b8a204ed::Climate of Africa::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a90578c55429933b8a204ed::Jameson's red rock hare::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a90578c55429933b8a204ed::Satureja::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a90578c55429933b8a204ed::Aerangis::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a90578c55429933b8a204ed::Climate of Africa::7",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a90578c55429933b8a204ed::Climate of Africa::7",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] In fact, the climate of Africa is more dependent to rainfall amount than to temperatures as they are consistently high.\n[2] Aerangis, abbreviated as Aergs in horticultural trade, is a genus of the Orchid family (Orchidaceae).\n[3] Satureja is a genus of aromatic plants of the family Lamiaceae, related to rosemary and thyme.\n[4] Zimbabwe and Namibia are thought to have the largest populations of the red rock hare and it is said to be found throughout both countries."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

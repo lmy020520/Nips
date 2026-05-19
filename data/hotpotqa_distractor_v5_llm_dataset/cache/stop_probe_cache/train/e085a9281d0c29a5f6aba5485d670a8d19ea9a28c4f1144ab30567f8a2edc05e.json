@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Brian Yuzna",
+  "pred_answer": "Brian Yuzna",
+  "normalized_gold": "brian yuzna",
+  "normalized_pred": "brian yuzna",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7ada0b5542992d025e670b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7ada0b5542992d025e670b::Brian Yuzna::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7ada0b5542992d025e670b::Silent Night, Deadly Night 4: Initiation::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7ada0b5542992d025e670b::Uwe Boll::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7ada0b5542992d025e670b::Tunnel Rats: 1968::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7ada0b5542992d025e670b::Brian Yuzna",
+        "5a7ada0b5542992d025e670b::Uwe Boll"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7ada0b5542992d025e670b::Brian Yuzna::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7ada0b5542992d025e670b::Silent Night, Deadly Night 4: Initiation::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7ada0b5542992d025e670b::Uwe Boll::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7ada0b5542992d025e670b::Tunnel Rats: 1968::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7ada0b5542992d025e670b::Tunnel Rats: 1968::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Tunnel Rats: 1968 is a first-person shooter developed by Replay Studios as a tie-in for the Uwe Boll film \"1968 Tunnel Rats\".\n[2] Uwe Boll (] ; born June 22, 1965) is a retired German filmmaker and restaurateur, whose work includes several films adapted from video games.\n[3] Silent Night, Deadly Night 4: Initiation, released in the UK as Bugs, is a 1990 American horror film directed by Brian Yuzna and was written by Brian Yuzna, Woody Keith, and Arthur Gorson.\n[4] Brian Yuzna (born August 30, 1949) is a cult producer, director, and writer, known for \"Honey, I Shrunk the Kids\", \"Bride of Re-Animator\" and \"Beyond Re-Animator\" who has been active within the independent horror genre for over thirty years."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

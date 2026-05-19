@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Trey Parker and Matt Stone",
+  "pred_answer": "Trey Parker and Matt Stone",
+  "normalized_gold": "trey parker and matt stone",
+  "normalized_pred": "trey parker and matt stone",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae765035542995703ce8c0e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae765035542995703ce8c0e::Cartman Gets an Anal Probe::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae765035542995703ce8c0e::Ike's Wee Wee::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae765035542995703ce8c0e::Wendy Testaburger::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae765035542995703ce8c0e::Jacob Brussel::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae765035542995703ce8c0e::Cartman Gets an Anal Probe",
+        "5ae765035542995703ce8c0e::Wendy Testaburger"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae765035542995703ce8c0e::Cartman Gets an Anal Probe::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae765035542995703ce8c0e::Ike's Wee Wee::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae765035542995703ce8c0e::Wendy Testaburger::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae765035542995703ce8c0e::Jacob Brussel::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae765035542995703ce8c0e::Jacob Brussel::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The shop's book scout was Jake's brother Ike Brussel, later billed as \"the last of the great scouts\".\n[2] Wendy debuted as a nameless background character in Trey Parker and Matt Stone's 1995 college short film, \"The Spirit of Christmas\", and made her first appearance on television when \"South Park\" initially premiered on Comedy Central on August 13, 1997 with the episode \"Cartman Gets an Anal Probe\".\n[3] Meanwhile, the boys misconstrue what circumcision entails, and try to save Kyle's younger brother Ike from his upcoming bris.\n[4] The episode introduces child protagonists Eric Cartman, Kyle Broflovski, Stan Marsh and Kenny McCormick, who attempt to rescue Kyle's younger brother Ike from being abducted by aliens."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

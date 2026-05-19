@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hillary Rodham Clinton",
+  "pred_answer": "Hillary Rodham Clinton",
+  "normalized_gold": "hillary rodham clinton",
+  "normalized_pred": "hillary rodham clinton",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abb073f5542992ccd8e7ebf",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abb073f5542992ccd8e7ebf::Hard Choices::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abb073f5542992ccd8e7ebf::Hillary Clinton's tenure as Secretary of State::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abb073f5542992ccd8e7ebf::2011–15 Myanmar political reforms::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abb073f5542992ccd8e7ebf::Hard Choices",
+        "5abb073f5542992ccd8e7ebf::Hillary Clinton's tenure as Secretary of State"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abb073f5542992ccd8e7ebf::Hard Choices::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abb073f5542992ccd8e7ebf::Hillary Clinton's tenure as Secretary of State::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abb073f5542992ccd8e7ebf::2011–15 Myanmar political reforms::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abb073f5542992ccd8e7ebf::2011–15 Myanmar political reforms::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] United States Secretary of State Hillary Clinton visited Myanmar on 1 December 2011, to encourage further progress; it was the first visit by a Secretary of State in more than fifty years.\n[2] Hillary Clinton served as the 67th United States Secretary of State, under President Barack Obama, from 2009 to 2013, overseeing the department that conducted the Foreign policy of Barack Obama.\n[3] Hard Choices is a memoir of former United States Secretary of State Hillary Rodham Clinton, published by Simon & Schuster in 2014, giving her account of her tenure in that position from 2009 to 2013."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

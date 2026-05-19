@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Red Bull Arena",
+  "pred_answer": "Red Bull Arena",
+  "normalized_gold": "red bull arena",
+  "normalized_pred": "red bull arena",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8398325542990548d0b1f8",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8398325542990548d0b1f8::Joe Arenas::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8398325542990548d0b1f8::Gachibowli Indoor Stadium::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8398325542990548d0b1f8::FC Red Bull Salzburg::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8398325542990548d0b1f8::Marko Vujic::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8398325542990548d0b1f8::Polideportivo Municipal de San Rafael::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8398325542990548d0b1f8::FC Red Bull Salzburg",
+        "5a8398325542990548d0b1f8::Marko Vujic"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8398325542990548d0b1f8::Joe Arenas::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8398325542990548d0b1f8::Gachibowli Indoor Stadium::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8398325542990548d0b1f8::FC Red Bull Salzburg::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8398325542990548d0b1f8::Marko Vujic::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8398325542990548d0b1f8::Polideportivo Municipal de San Rafael::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8398325542990548d0b1f8::Polideportivo Municipal de San Rafael::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It is primarily used for basketball and is one of the home arenas of the Obras Sanitarias along with Arena Obras Sanitarias.\n[2] Marco Vujic (born 21 February 1984) is a retired Austrian footballer of Bosnian descent.\n[3] Their home ground is the Red Bull Arena.\n[4] It is one of the home arenas for the India's prime basketball league, the UBA Pro Basketball League."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

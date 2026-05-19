@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Book of Joshua",
+  "pred_answer": "Book of Joshua",
+  "normalized_gold": "book of joshua",
+  "normalized_pred": "book of joshua",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85f83e5542997b5ce4003c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85f83e5542997b5ce4003c::Battle of Jericho::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85f83e5542997b5ce4003c::The Manga Bible: From Genesis to Revelation::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85f83e5542997b5ce4003c::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85f83e5542997b5ce4003c::Tell es-Sultan::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a85f83e5542997b5ce4003c::Wall of Jericho::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85f83e5542997b5ce4003c::Battle of Jericho",
+        "5a85f83e5542997b5ce4003c::Tell es-Sultan"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85f83e5542997b5ce4003c::Battle of Jericho::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85f83e5542997b5ce4003c::The Manga Bible: From Genesis to Revelation::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85f83e5542997b5ce4003c::Tell es-Sultan::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a85f83e5542997b5ce4003c::Wall of Jericho::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a85f83e5542997b5ce4003c::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a85f83e5542997b5ce4003c::Wall of Jericho::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It is built of undressed stones and is located at the archaeological mound known as Tell es-Sultan, in the city of Jericho on the West Bank.\n[2] During the Younger Dryas period of cold and drought, permanent habitation of any one location was impossible.\n[3] With their work, they combine the Western and the Japanese culture to tell the Bible in a new way.\n[4] According to the Book of Joshua, the Battle of Jericho was the first battle of the Israelites in their conquest of Canaan.\n\nNotes:\n[bridge] Wall of Jericho is built of undressed stones and is located at the archaeological mound known as Tell es-Sultan, in the city of Jericho on the West Bank."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hummingbird",
+  "pred_answer": "Hummingbird",
+  "normalized_gold": "hummingbird",
+  "normalized_pred": "hummingbird",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4a73555429913cc2044bb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4a73555429913cc2044bb::Shane Hart::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4a73555429913cc2044bb::McConkey (film)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4a73555429913cc2044bb::Hummingbird (film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4a73555429913cc2044bb::The Forever Changes Concert::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4a73555429913cc2044bb::Shane Hart",
+        "5ae4a73555429913cc2044bb::Hummingbird (film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4a73555429913cc2044bb::Shane Hart::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4a73555429913cc2044bb::McConkey (film)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4a73555429913cc2044bb::Hummingbird (film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4a73555429913cc2044bb::The Forever Changes Concert::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4a73555429913cc2044bb::The Forever Changes Concert::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] There was a two-CD re-release in 2007 under the name of The Forever Changes Concert & More, which features extra songs, a live video of \"Alone Again Or\", band images and a screensaver.\n[2] Hummingbird (released as Redemption in the United States) is a 2013 British action drama film written and directed by Steven Knight and starring Jason Statham.\n[3] The film features interviews from notable athletes and friends of Shane such as JT Holmes, Tony Hawk and Travis Pastrana.\n[4] Shane Hart is an English extra."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

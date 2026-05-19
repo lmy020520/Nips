@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Yoga",
+  "pred_answer": "Yoga",
+  "normalized_gold": "yoga",
+  "normalized_pred": "yoga",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c4521554299240d9c20ff",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c4521554299240d9c20ff::Rajneesh::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c4521554299240d9c20ff::Mahasati meditation::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c4521554299240d9c20ff::Amit Ray::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8c4521554299240d9c20ff::Dynamic meditation::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8c4521554299240d9c20ff::Canadian Christian Meditation Community::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c4521554299240d9c20ff::Rajneesh",
+        "5a8c4521554299240d9c20ff::Dynamic meditation"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c4521554299240d9c20ff::Rajneesh::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c4521554299240d9c20ff::Mahasati meditation::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c4521554299240d9c20ff::Amit Ray::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8c4521554299240d9c20ff::Dynamic meditation::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8c4521554299240d9c20ff::Canadian Christian Meditation Community::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c4521554299240d9c20ff::Canadian Christian Meditation Community::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Canadian Christian Meditation Community (CCMC) is part of the World Community for Christian Meditation (WCCM), which was founded in 1991 to foster the teachings of Benedictine monk and priest, Fr.\n[2] Dynamic meditation is a form of meditation in which physical actions are involved.\n[3] He is known to the world for his teachings on meditation, yoga, peace and compassion.\n[4] Also known as \"Dynamic Meditation\", Mahasati Meditation is a form of mindfulness meditation."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

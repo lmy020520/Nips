@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Iran–Contra affair",
+  "pred_answer": "The Iran–Contra affair",
+  "normalized_gold": "the iran–contra affair",
+  "normalized_pred": "the iran–contra affair",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c4ab5554299653c1aa026",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c4ab5554299653c1aa026::KL-43::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c4ab5554299653c1aa026::Iran–Contra affair::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c4ab5554299653c1aa026::Timeline of the Iran–Contra affair::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c4ab5554299653c1aa026::KL-43",
+        "5a8c4ab5554299653c1aa026::Iran–Contra affair"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c4ab5554299653c1aa026::KL-43::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c4ab5554299653c1aa026::Iran–Contra affair::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c4ab5554299653c1aa026::Timeline of the Iran–Contra affair::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c4ab5554299653c1aa026::Timeline of the Iran–Contra affair::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Iran–Contra affair was a political scandal in the United States that came to light in November 1986.\n[2] The Iran–Contra affair (Persian: ماجراي ایران-کنترا‎ ‎ , Spanish: \"caso Irán-Contra\" ), also referred to as Irangate, Contragate or the Iran–Contra scandal, was a political scandal in the United States that occurred during the second term of the Reagan Administration.\n[3] The device was paraded in front of cameras during the Iran-Contra congressional hearings."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

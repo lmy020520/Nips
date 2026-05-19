@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "United States",
+  "pred_answer": "United States",
+  "normalized_gold": "united states",
+  "normalized_pred": "united states",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade529f5542997c77adedf9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade529f5542997c77adedf9::Board of Education v. Earls::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade529f5542997c77adedf9::Board of Education v. Walters::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade529f5542997c77adedf9::Illinois v. Gates::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade529f5542997c77adedf9::Aguilar v. Texas::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade529f5542997c77adedf9::Board of Education v. Earls",
+        "5ade529f5542997c77adedf9::Illinois v. Gates"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade529f5542997c77adedf9::Board of Education v. Earls::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade529f5542997c77adedf9::Board of Education v. Walters::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade529f5542997c77adedf9::Illinois v. Gates::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade529f5542997c77adedf9::Aguilar v. Texas::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade529f5542997c77adedf9::Aguilar v. Texas::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Aguilar v. Texas, 378 U.S. 108 (1964) , was a decision by the United States Supreme Court, which held that “[a]lthough an affidavit supporting a search warrant may be based on hearsay information and need not reflect the direct personal observations of the affiant, the magistrate must be informed of some of the underlying circumstances relied on by the person providing the information and some of\n[2] \"Gates\" overruled \"Aguilar v. Texas\", 378 U.S. 108 (1964) and \"Spinelli v. United States\", 393 U.S. 410 (1969) , thereby replacing the Aguilar–Spinelli test for probable cause with the \"totality of the circumstances\" test.\n[3] \"Board of Education v. Walters\" is one of the cases that played a role leading to \"DeRolph v. State of Ohio\" in 1997, which found the model of funding for public schools in Ohio to be unconstitutional.\n[4] Board of Education v. Earls, 536 U.S. 822 (2002) , was a United States Supreme Court case in which the Court upheld the constitutionality of mandatory drug testing by public schools of students participating in extracurricular activities."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

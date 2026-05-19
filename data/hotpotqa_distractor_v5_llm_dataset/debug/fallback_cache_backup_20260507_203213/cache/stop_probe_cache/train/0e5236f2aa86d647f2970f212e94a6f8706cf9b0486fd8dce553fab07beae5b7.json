@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Battle of Mogadishu",
+  "pred_answer": "The Battle of Mogadishu",
+  "normalized_gold": "the battle of mogadishu",
+  "normalized_pred": "the battle of mogadishu",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae33c835542992f92d82264",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae33c835542992f92d82264::Austin S. Miller::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae33c835542992f92d82264::Battle of Mogadishu (1993)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae33c835542992f92d82264::Serpent Column::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae33c835542992f92d82264::Austin S. Miller",
+        "5ae33c835542992f92d82264::Battle of Mogadishu (1993)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae33c835542992f92d82264::Austin S. Miller::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae33c835542992f92d82264::Battle of Mogadishu (1993)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae33c835542992f92d82264::Serpent Column::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae33c835542992f92d82264::Serpent Column::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Serpent Column (Ancient Greek: Τρικάρηνος Ὄφις \"Τrikarenos Οphis\" \"Three-headed Serpent\"; Turkish: \"Yılanlı Sütun\" \"Serpentine Column\"), also known as the Serpentine Column, Plataean Tripod or Delphi Tripod, is an ancient bronze column at the Hippodrome of Constantinople (known as \"Atmeydanı\" \"Horse Square\" in the Ottoman period) in what is now Istanbul, Turkey.\n[2] The Battle of Mogadishu or Day of the Rangers (Somali: \"Maalintii Rangers\" ), was part of Operation Gothic Serpent.\n[3] Austin S. Miller is a senior officer, Lieutenant General, in the United States Army and current commander of the Joint Special Operations Command."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

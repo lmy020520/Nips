@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Andrea Dworkin",
+  "pred_answer": "Andrea Dworkin",
+  "normalized_gold": "andrea dworkin",
+  "normalized_pred": "andrea dworkin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae223d3554299234fd043e7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae223d3554299234fd043e7::Andrea Dworkin::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae223d3554299234fd043e7::Ranjana Khanna::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae223d3554299234fd043e7::The Sadeian Woman and the Ideology of Pornography::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae223d3554299234fd043e7::Cynthia Enloe::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae223d3554299234fd043e7::Andrea Dworkin",
+        "5ae223d3554299234fd043e7::The Sadeian Woman and the Ideology of Pornography"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae223d3554299234fd043e7::Andrea Dworkin::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae223d3554299234fd043e7::Ranjana Khanna::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae223d3554299234fd043e7::The Sadeian Woman and the Ideology of Pornography::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae223d3554299234fd043e7::Cynthia Enloe::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae223d3554299234fd043e7::Cynthia Enloe::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She is best known for her work on gender and militarism and for her contributions to the field of feminist international relations.\n[2] The book is a feminist re-appraisal of the work of the Marquis de Sade, who had been criticized by earlier feminist theorists such as Andrea Dworkin.\n[3] Ranjana Khanna is a literary critic and theorist recognized for her interdisciplinary, feminist and internationalist contributions to the fields of post-colonial studies, feminist theory, literature and political philosophy.\n[4] Andrea Rita Dworkin (September 26, 1946 – April 9, 2005) was an American radical feminist and writer best known for her criticism of pornography, which she argued was linked to rape and other forms of violence against women."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

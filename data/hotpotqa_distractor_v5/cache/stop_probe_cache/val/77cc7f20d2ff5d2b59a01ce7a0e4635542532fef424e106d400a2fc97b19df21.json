@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2003",
+  "pred_answer": "2003",
+  "normalized_gold": "2003",
+  "normalized_pred": "2003",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a849b075542992a431d1a75",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a849b075542992a431d1a75::Clive Schlee::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a849b075542992a431d1a75::Burger King fish sandwiches::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a849b075542992a431d1a75::Pret a Manger::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a849b075542992a431d1a75::Quiznos::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a849b075542992a431d1a75::Clive Schlee",
+        "5a849b075542992a431d1a75::Pret a Manger"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a849b075542992a431d1a75::Clive Schlee::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a849b075542992a431d1a75::Burger King fish sandwiches::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a849b075542992a431d1a75::Pret a Manger::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a849b075542992a431d1a75::Quiznos::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a849b075542992a431d1a75::Quiznos::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Quiznos is the second-largest submarine sandwich shop chain in North America, behind Subway.\n[2] Pret a Manger is an international sandwich shop chain based in the United Kingdom, commonly referred to simply as \"Pret\".\n[3] International fast-food restaurant chain Burger King and its Australian franchise Hungry Jack's have had a variety of fish sandwiches in their product portfolio since 1975.\n[4] Clive Edward Benedict Schlee (born March 1959) is a British businessman, the CEO of the UK fast food chain Pret a Manger since 2003."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

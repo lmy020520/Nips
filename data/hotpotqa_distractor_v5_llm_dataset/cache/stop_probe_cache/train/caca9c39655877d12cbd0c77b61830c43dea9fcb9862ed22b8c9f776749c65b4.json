@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "68th Academy Awards",
+  "pred_answer": "68th Academy Awards",
+  "normalized_gold": "68th academy awards",
+  "normalized_pred": "68th academy awards",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5addd8b45542997dc790704f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5addd8b45542997dc790704f::Shuna Harwood::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5addd8b45542997dc790704f::April Ferry::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5addd8b45542997dc790704f::Richard III (1995 film)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5addd8b45542997dc790704f::Costume designer::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5addd8b45542997dc790704f::Shuna Harwood",
+        "5addd8b45542997dc790704f::Richard III (1995 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5addd8b45542997dc790704f::Shuna Harwood::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5addd8b45542997dc790704f::April Ferry::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5addd8b45542997dc790704f::Richard III (1995 film)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5addd8b45542997dc790704f::Costume designer::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5addd8b45542997dc790704f::Costume designer::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A costume designer is a person who designs costumes for a film, stage production or television.\n[2] The film sets the play in a fictional fascist version of 1930s Britain.\n[3] She was nominated at the 67th Academy Awards for the film \"Maverick\" in the category of Best Costumes.\n[4] She was nominated at the 68th Academy Awards for the film \"Richard III\" in the category of Best Costumes."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

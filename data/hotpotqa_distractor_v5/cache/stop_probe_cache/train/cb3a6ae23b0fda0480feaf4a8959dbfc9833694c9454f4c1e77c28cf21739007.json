@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "singer-songwriter",
+  "pred_answer": "singer-songwriter",
+  "normalized_gold": "singer-songwriter",
+  "normalized_pred": "singer-songwriter",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abb9e69554299642a094acc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abb9e69554299642a094acc::Sigurd Wongraven::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abb9e69554299642a094acc::Sigurd Haveland::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abb9e69554299642a094acc::Frankie Bridge::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abb9e69554299642a094acc::Simple suspension bridge::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abb9e69554299642a094acc::Sigurd Wongraven",
+        "5abb9e69554299642a094acc::Frankie Bridge"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abb9e69554299642a094acc::Sigurd Wongraven::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abb9e69554299642a094acc::Sigurd Haveland::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abb9e69554299642a094acc::Frankie Bridge::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abb9e69554299642a094acc::Simple suspension bridge::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abb9e69554299642a094acc::Simple suspension bridge::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Owing to practical limitation in the grade (i.e. the deck being an arc, not flat) and the response to dynamic loads of the bridge deck, this type is quite restricted in its load-carrying capacity relative to its span.\n[2] Francesca \"Frankie\" Bridge (née Sandford, born 14 January 1989) is an English singer-songwriter, formerly a member of S Club 8 and a member of girl group The Saturdays, signed to the Fascination and Polydor labels.\n[3] Sigurd Haveland (born 30 March 1964 in Gibraltar) is a Gibraltarian triathlete and cyclist.\n[4] Satyr (born Sigurd Wongraven on 28 November 1975) is the vocalist, lead and rhythm guitarist, bassist, and keyboardist for the Norwegian black metal band Satyricon."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

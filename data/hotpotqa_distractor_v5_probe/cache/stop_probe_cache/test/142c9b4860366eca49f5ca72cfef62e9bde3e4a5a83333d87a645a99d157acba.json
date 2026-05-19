@@ -1,0 +1,100 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Richard Nixon",
+  "pred_answer": "Richard Nixon",
+  "normalized_gold": "richard nixon",
+  "normalized_pred": "richard nixon",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf51595542993344016c52",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf51595542993344016c52::United States vice presidential selection, 1973::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf51595542993344016c52::Judy Agnew::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf51595542993344016c52::John F. Kennedy presidential campaign, 1960::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf51595542993344016c52::93rd United States Congress::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5adf51595542993344016c52::Spiro Agnew::0"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5adf51595542993344016c52::Timeline of the presidency of Gerald Ford::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf51595542993344016c52::93rd United States Congress",
+        "5adf51595542993344016c52::Spiro Agnew"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf51595542993344016c52::United States vice presidential selection, 1973::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf51595542993344016c52::Judy Agnew::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf51595542993344016c52::John F. Kennedy presidential campaign, 1960::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf51595542993344016c52::93rd United States Congress::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5adf51595542993344016c52::Spiro Agnew::0",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5adf51595542993344016c52::Timeline of the presidency of Gerald Ford::3",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf51595542993344016c52::Timeline of the presidency of Gerald Ford::3",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] He was the first person appointed to the vice presidency under the terms of the Twenty-fifth Amendment to the United States Constitution, following the resignation of Vice President Spiro Agnew on October 10, 1973.\n[2] Spiro Theodore \"Ted\" Agnew ( ; November 9, 1918 – September 17, 1996) was the 39th Vice President of the United States, serving from 1969 to 1973.\n[3] This Congress was the first (and, to date, only) Congress with more than two Senate Presidents (the Vice President of the United States), in this case, three.\n[4] Kennedy and Johnson won the election on November 8, 1960, defeating incumbent Vice President and Republican nominee Richard Nixon, who would later go on to be the 37th President of the United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

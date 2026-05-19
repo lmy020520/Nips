@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Home Alone",
+  "pred_answer": "Home Alone",
+  "normalized_gold": "home alone",
+  "normalized_pred": "home alone",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab5f4ef554299637185c63e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab5f4ef554299637185c63e::Home Alone (franchise)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab5f4ef554299637185c63e::Home Alone 3::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab5f4ef554299637185c63e::Home Alone 2: Lost in New York::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab5f4ef554299637185c63e::Richie Rich (film series)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab5f4ef554299637185c63e::Home Alone (franchise)",
+        "5ab5f4ef554299637185c63e::Home Alone 2: Lost in New York"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab5f4ef554299637185c63e::Home Alone (franchise)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab5f4ef554299637185c63e::Home Alone 3::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab5f4ef554299637185c63e::Home Alone 2: Lost in New York::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab5f4ef554299637185c63e::Richie Rich (film series)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab5f4ef554299637185c63e::Richie Rich (film series)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Richie Rich films is a series of American family films consist of two, based on the character of the same name, who was originally featured in Harvey Comics.\n[2] It is the second film in the \"Home Alone\" series and the sequel to \"Home Alone\".\n[3] The film is directed by Raja Gosnell (in his directorial debut), who served as the editor of both original films and stars Alex D. Linz as Alex Pruitt, an 8-year-old resourceful boy who is left home alone and has to defend his home from a band of criminals.\n[4] The third film, \"Home Alone 3\" (1997), has a similar plot but with a new protagonist, Alex Pruitt (Alex D. Linz), and more of a spy theme."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

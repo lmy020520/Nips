@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the electrical battery",
+  "pred_answer": "the electrical battery",
+  "normalized_gold": "the electrical battery",
+  "normalized_pred": "the electrical battery",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5294f5542990ba0bbb1db",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5294f5542990ba0bbb1db::Alessandro Volta::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5294f5542990ba0bbb1db::Electrophorus::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5294f5542990ba0bbb1db::Federico Faggin::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5294f5542990ba0bbb1db::Alessandro Volta",
+        "5ae5294f5542990ba0bbb1db::Electrophorus"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5294f5542990ba0bbb1db::Alessandro Volta::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5294f5542990ba0bbb1db::Electrophorus::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5294f5542990ba0bbb1db::Federico Faggin::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5294f5542990ba0bbb1db::Federico Faggin::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Federico Faggin (born December 1, 1941), is an Italian physicist, inventor and entrepreneur, widely known for designing the first commercial microprocessor.\n[2] A first version of it was invented in 1762 by Swedish professor Johan Carl Wilcke, but Italian scientist Alessandro Volta improved and popularized the device in 1775, and is sometimes erroneously credited with its invention.\n[3] Alessandro Giuseppe Antonio Anastasio Volta (] ; 18 February 1745 – 5 March 1827) was an Italian physicist, chemist, and a pioneer of electricity and power, who is credited as the inventor of the electrical battery and the discoverer of methane."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

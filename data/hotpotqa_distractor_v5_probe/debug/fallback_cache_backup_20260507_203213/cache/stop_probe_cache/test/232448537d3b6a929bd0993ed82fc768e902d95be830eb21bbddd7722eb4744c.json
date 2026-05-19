@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "July 8, 2014",
+  "pred_answer": "July 8, 2014",
+  "normalized_gold": "july 8 2014",
+  "normalized_pred": "july 8 2014",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae527945542993aec5ec167",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae527945542993aec5ec167::Lee Jong-suk::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae527945542993aec5ec167::Doctor Stranger::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae527945542993aec5ec167::Doctor Stranger::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae527945542993aec5ec167::Lee Jong-suk",
+        "5ae527945542993aec5ec167::Doctor Stranger"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae527945542993aec5ec167::Lee Jong-suk::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae527945542993aec5ec167::Doctor Stranger::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae527945542993aec5ec167::Doctor Stranger::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae527945542993aec5ec167::Doctor Stranger::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It aired on SBS from May 5 to July 8, 2014 on Mondays and Tuesdays at 21:55 for 20 episodes.\n[2] Doctor Stranger () is a 2014 South Korean television series starring Lee Jong-suk, Jin Se-yeon, Park Hae-jin and Kang So-ra.\n[3] He debuted in 2005 as a runway model, becoming the youngest male model ever to participate in Seoul Fashion Week."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

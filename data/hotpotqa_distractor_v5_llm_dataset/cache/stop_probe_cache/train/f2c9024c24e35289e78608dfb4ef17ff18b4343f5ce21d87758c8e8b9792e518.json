@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Washington, D.C.",
+  "pred_answer": "Washington, D.C.",
+  "normalized_gold": "washington dc",
+  "normalized_pred": "washington dc",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a72a8b25542992359bc3154",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a72a8b25542992359bc3154::Santa Rosa Memorial Hospital::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a72a8b25542992359bc3154::Memorial Hospital (Chattanooga)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a72a8b25542992359bc3154::Sibley Memorial Hospital::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a72a8b25542992359bc3154::Howard University Hospital::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a72a8b25542992359bc3154::University Hospital Limerick::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a72a8b25542992359bc3154::Sibley Memorial Hospital",
+        "5a72a8b25542992359bc3154::Howard University Hospital"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a72a8b25542992359bc3154::Santa Rosa Memorial Hospital::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a72a8b25542992359bc3154::Memorial Hospital (Chattanooga)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a72a8b25542992359bc3154::Sibley Memorial Hospital::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a72a8b25542992359bc3154::Howard University Hospital::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a72a8b25542992359bc3154::University Hospital Limerick::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a72a8b25542992359bc3154::University Hospital Limerick::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] University Hospital Limerick (formerly known as Limerick Regional Hospital or Mid-Western Regional Hospital, Limerick) is a hospital located in Dooradoyle, Limerick, Ireland.\n[2] Howard University Hospital, previously known as Freedmen's Hospital, is a major hospital lcated in Washington, D.C., built on the site of the previous Griffith Stadium.\n[3] Sibley Memorial Hospital is a non-profit hospital located in The Palisades neighborhood of Washington D.C. It is fully accredited by the Joint Commission on Accreditation of Healthcare Organizations, and is licensed by the District of Columbia Department of Health and Human Services.\n[4] Memorial Hospital is a hospital located in Chattanooga, Tennessee."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

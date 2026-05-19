@@ -1,0 +1,89 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm_failure",
+  "gold_answer": "Mike Tyson",
+  "pred_answer": null,
+  "normalized_gold": "mike tyson",
+  "normalized_pred": null,
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "",
+  "missing_support_reasons": [
+    "missing_pred_answer"
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "",
+    "missing_support_reasons": [
+      "missing_pred_answer"
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5ab2667755429970612095f4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2667755429970612095f4::La Noche del 10::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2667755429970612095f4::Mike Tyson::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2667755429970612095f4::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab2667755429970612095f4::Roque Gallart::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2667755429970612095f4::La Noche del 10",
+        "5ab2667755429970612095f4::Mike Tyson"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2667755429970612095f4::La Noche del 10::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2667755429970612095f4::Mike Tyson::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2667755429970612095f4::Roque Gallart::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5ab2667755429970612095f4::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5ab2667755429970612095f4::Roque Gallart::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Gallart was host of a Mega-TV television show named \"Descarao' Por La Noche\".\n[2] Michael Gerard Tyson ( ; born June 30, 1966) is an American former professional boxer who competed from 1985 to 2005.\n[3] La Noche del 10 was an Argentine television show hosted by football legend Diego Maradona.\n\nNotes:\n[bridge] Gallart was host of a Mega-TV television show named \"Descarao' Por La Noche\"."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

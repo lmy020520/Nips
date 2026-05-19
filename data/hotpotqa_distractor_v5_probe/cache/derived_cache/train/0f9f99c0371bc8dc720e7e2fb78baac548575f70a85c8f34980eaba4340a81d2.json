@@ -1,0 +1,30 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the director of a film that is a remake of a 1920 silent film of the same name, starring a popular supporting player of the late 1930s. The raw candidates mention two films that are remakes of 1920 silent films: 'Lovers (1927 film)' and 'Earthbound (1940 film)'. The gold answer is Irving Pichel, who directed 'Earthbound (1940 film)'. To connect the actor (popular supporting player of the late 1930s) to the film, we need a bridge note. Also, a verification note can confirm that 'Earthbound (1940 film)' is indeed a remake of the 1920 silent film.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "The film 'Earthbound (1940 film)' is a remake of the 1920 silent film of the same name.",
+      "source_unit_ids": [
+        "5a7b83715542997c3ec971e0::Earthbound (1940 film)::2"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "The film 'Lovers (1927 film)' is also a remake of a 1920 silent film of the same name.",
+      "source_unit_ids": [
+        "5a7b83715542997c3ec971e0::Lovers (1927 film)::3"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "The popular supporting player of the late 1930s, Leeds, was nominated for an Academy Award.",
+      "source_unit_ids": [
+        "5a7b83715542997c3ec971e0::Earthbound (1940 film)::2"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

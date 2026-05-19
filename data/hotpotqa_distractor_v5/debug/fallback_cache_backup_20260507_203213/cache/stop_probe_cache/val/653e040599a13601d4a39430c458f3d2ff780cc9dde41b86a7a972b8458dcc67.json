@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Pets at Home",
+  "pred_answer": "Pets at Home",
+  "normalized_gold": "pets at home",
+  "normalized_pred": "pets at home",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84d5c85542997b5ce3ff71",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84d5c85542997b5ce3ff71::Pets at Home::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84d5c85542997b5ce3ff71::Matthew Mahoney (New York)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84d5c85542997b5ce3ff71::Birstall Shopping Park::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a84d5c85542997b5ce3ff71::Castletown, Sunderland::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84d5c85542997b5ce3ff71::Pets at Home",
+        "5a84d5c85542997b5ce3ff71::Birstall Shopping Park"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84d5c85542997b5ce3ff71::Pets at Home::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84d5c85542997b5ce3ff71::Matthew Mahoney (New York)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84d5c85542997b5ce3ff71::Birstall Shopping Park::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a84d5c85542997b5ce3ff71::Castletown, Sunderland::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84d5c85542997b5ce3ff71::Castletown, Sunderland::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] At Hylton Riverside, on the eastern fringe of Castletown, there is a large retail park hosting stores such as Matalan, Costa Coffee, Aldi and Pets at Home, Premier Inn and a DW Sports Fitness gym.\n[2] The section of the park containing retailers Pets at Home and Homesense is known as Spring Ram Retail Park, and was built slightly later than the rest of the complex, however it is considered as a part of Birstall Shopping Park and is under common ownership.\n[3] Approximately 7,000 miles (11,000 km) of water mains, tunnels and aqueducts bring water to homes and businesses throughout the five boroughs, and 7,400 miles (11,900 km) of sewer lines take waste water to 14 in-City treatment plants. DEP is also one of the City’s largest agencies with 6,000 employees and over $11 billion in current construction projects.\n[4] Pets at Home is the United Kingdom's largest pet supplies retailer, with more than 370 stores and 6,000 employees."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

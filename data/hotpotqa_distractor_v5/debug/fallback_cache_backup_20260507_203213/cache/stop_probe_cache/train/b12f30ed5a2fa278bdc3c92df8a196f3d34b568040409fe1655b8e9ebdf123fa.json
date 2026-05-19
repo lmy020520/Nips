@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Parliament of India",
+  "pred_answer": "Parliament of India",
+  "normalized_gold": "parliament of india",
+  "normalized_pred": "parliament of india",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8469e8554299123d8c2247",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8469e8554299123d8c2247::Uttar Pradesh Legislature (Vidhan Bhawan)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8469e8554299123d8c2247::Government of Maharashtra::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8469e8554299123d8c2247::Penumalli Madhu::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8469e8554299123d8c2247::Parliament of India::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8469e8554299123d8c2247::Tamil Nadu Legislative Council::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8469e8554299123d8c2247::Penumalli Madhu",
+        "5a8469e8554299123d8c2247::Parliament of India"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8469e8554299123d8c2247::Uttar Pradesh Legislature (Vidhan Bhawan)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8469e8554299123d8c2247::Government of Maharashtra::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8469e8554299123d8c2247::Penumalli Madhu::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8469e8554299123d8c2247::Parliament of India::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8469e8554299123d8c2247::Tamil Nadu Legislative Council::6",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8469e8554299123d8c2247::Tamil Nadu Legislative Council::6",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Council became a unicameral legislative body in 1921 and eventually the upper chamber of a bicameral legislature in 1937.\n[2] The Parliament of India is the supreme legislative body of the Republic of India.\n[3] He was a Member of the Parliament of India representing Andhra Pradesh in the Rajya Sabha, the upper house of the Indian Parliament.\n[4] Maharashtra has a bicameral legislature i.e. it consists of two houses: Vidhan Sabha (legislative assembly) and Vidhan Parishad (legislative council)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

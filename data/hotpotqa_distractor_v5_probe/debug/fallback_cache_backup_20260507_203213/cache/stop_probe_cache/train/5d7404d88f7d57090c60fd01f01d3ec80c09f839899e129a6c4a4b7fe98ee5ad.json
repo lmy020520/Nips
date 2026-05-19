@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "screenwriter and producer",
+  "pred_answer": "screenwriter and producer",
+  "normalized_gold": "screenwriter and producer",
+  "normalized_pred": "screenwriter and producer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c14a655429907fabeef4a",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c14a655429907fabeef4a::Pushing Hands (film)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c14a655429907fabeef4a::Wasserman Award::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c14a655429907fabeef4a::Ang Lee::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7c14a655429907fabeef4a::Sean Bridgers::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7c14a655429907fabeef4a::Arkansas Traveler (web series)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c14a655429907fabeef4a::Ang Lee",
+        "5a7c14a655429907fabeef4a::Sean Bridgers"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c14a655429907fabeef4a::Pushing Hands (film)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c14a655429907fabeef4a::Wasserman Award::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c14a655429907fabeef4a::Ang Lee::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7c14a655429907fabeef4a::Sean Bridgers::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7c14a655429907fabeef4a::Arkansas Traveler (web series)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c14a655429907fabeef4a::Arkansas Traveler (web series)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Arkansas Traveler is an American indie western Web series, written by American actor and screenwriter, Sean Bridgers, and co-directed with Michael Hemschoot.\n[2] Sean MacKenzie Bridgers (born March 15, 1968) is an American actor, screenwriter, and producer, known for his role as Johnny Burns on the HBO series \"Deadwood\" and on the SundanceTV original series \"Rectify\" as Trey Willis.\n[3] Ang Lee  (; born October 23, 1954) is a Taiwanese film director, screenwriter and producer.\n[4] Past winners include Spike Lee, Ang Lee, and Nancy Savoca."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

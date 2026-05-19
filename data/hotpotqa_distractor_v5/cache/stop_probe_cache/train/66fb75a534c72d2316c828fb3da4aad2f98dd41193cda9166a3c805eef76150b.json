@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "film director",
+  "pred_answer": "film director",
+  "normalized_gold": "film director",
+  "normalized_pred": "film director",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac14c9d55429964131be1a8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac14c9d55429964131be1a8::Joseph H. Lewis::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac14c9d55429964131be1a8::If I Had a Million::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac14c9d55429964131be1a8::Ernst Lubitsch::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac14c9d55429964131be1a8::Shoe Palace Pinkus::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac14c9d55429964131be1a8::Joseph H. Lewis",
+        "5ac14c9d55429964131be1a8::Ernst Lubitsch"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac14c9d55429964131be1a8::Joseph H. Lewis::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac14c9d55429964131be1a8::If I Had a Million::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac14c9d55429964131be1a8::Ernst Lubitsch::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac14c9d55429964131be1a8::Shoe Palace Pinkus::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac14c9d55429964131be1a8::Shoe Palace Pinkus::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Shoe Palace Pinkus (German: Schuhpalast Pinkus) is a 1916 German silent comedy film directed by Ernst Lubitsch and starring Lubitsch, Else Kentner and Guido Herzfeld.\n[2] Ernst Lubitsch ( ; January 29, 1892November 30, 1947) was a German American film director, producer, writer, and actor.\n[3] There were seven directors: Ernst Lubitsch, Norman Taurog, Stephen Roberts, Norman Z. McLeod, James Cruze, William A. Seiter, and H. Bruce Humberstone.\n[4] Joseph H. Lewis (April 6, 1907 – August 30, 2000) was an American B-movie film director whose stylish flourishes came to be appreciated by auteur theory-espousing film critics in the years following his retirement in 1966."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

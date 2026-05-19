@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Isabella (Belle) Baumfree",
+  "pred_answer": "Isabella (Belle) Baumfree",
+  "normalized_gold": "isabella belle baumfree",
+  "normalized_pred": "isabella belle baumfree",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc035c554299438c868d04",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc035c554299438c868d04::List of women in the Heritage Floor::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc035c554299438c868d04::Liquid Shard::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc035c554299438c868d04::Sojourner Truth::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc035c554299438c868d04::The Dinner Party::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5adc035c554299438c868d04::Judy Chicago::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc035c554299438c868d04::Sojourner Truth",
+        "5adc035c554299438c868d04::The Dinner Party"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc035c554299438c868d04::List of women in the Heritage Floor::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc035c554299438c868d04::Liquid Shard::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc035c554299438c868d04::Sojourner Truth::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc035c554299438c868d04::The Dinner Party::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5adc035c554299438c868d04::Judy Chicago::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc035c554299438c868d04::Judy Chicago::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Judy Chicago (born Judith Sylvia Cohen, July 20, 1939) is an American feminist artist, art educator, and writer known for her large collaborative art installation pieces, which examine the role of women in history and culture.\n[2] The Dinner Party is an installation artwork by feminist artist Judy Chicago.\n[3] Sojourner Truth ( ; born Isabella (Belle) Baumfree;  1797 – November 26, 1883) was an African-American abolitionist and women's rights activist.\n[4] The installation was on display in Pershing Square in Los Angeles, California from July 28 through August 11, 2016."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

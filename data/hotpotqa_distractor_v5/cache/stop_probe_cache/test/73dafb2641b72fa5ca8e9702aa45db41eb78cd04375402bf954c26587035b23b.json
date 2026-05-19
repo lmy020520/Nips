@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Wojtek",
+  "pred_answer": "Wojtek",
+  "normalized_gold": "wojtek",
+  "normalized_pred": "wojtek",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74d92555429929fddd84fa",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74d92555429929fddd84fa::Wojtek (bear)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74d92555429929fddd84fa::Royal Free London NHS Foundation Trust::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74d92555429929fddd84fa::Wojtek Memorial Trust::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74d92555429929fddd84fa::Elżbieta Zawacka::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74d92555429929fddd84fa::Wojtek (bear)",
+        "5a74d92555429929fddd84fa::Wojtek Memorial Trust"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74d92555429929fddd84fa::Wojtek (bear)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74d92555429929fddd84fa::Royal Free London NHS Foundation Trust::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74d92555429929fddd84fa::Wojtek Memorial Trust::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74d92555429929fddd84fa::Elżbieta Zawacka::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74d92555429929fddd84fa::Elżbieta Zawacka::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She was also a Brigadier General of the Polish Army (the second and last woman in the history of the Polish Army to hold this rank), promoted by President Lech Kaczyński on 3 May 2006.\n[2] The Wojtek Memorial Trust is a Scottish Charity (SCO41057) established in 2009 to celebrate the life of Wojtek, \"the Soldier Bear\", the lives of those who knew him, and their stories during and after the Second World War.\n[3] On 1 July 2014 the Barnet and Chase Farm Hospitals NHS Trust was acquired by Royal Free London NHS Foundation Trust, making it one of the largest Trusts in the country, employing more than 9,000 staff and providing services to about a million patients.\n[4] In order to provide for his rations and transportation, he was eventually enlisted officially as a soldier with the rank of private, and was subsequently promoted to corporal."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Honus Wagner",
+  "pred_answer": "Honus Wagner",
+  "normalized_gold": "honus wagner",
+  "normalized_pred": "honus wagner",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a875bd55542996e4f308798",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a875bd55542996e4f308798::Honus Wagner::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a875bd55542996e4f308798::Voltigeur (horse)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a875bd55542996e4f308798::The Winning Season (2004 film)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a875bd55542996e4f308798::Honus Wagner::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a875bd55542996e4f308798::Honus Wagner",
+        "5a875bd55542996e4f308798::The Winning Season (2004 film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a875bd55542996e4f308798::Honus Wagner::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a875bd55542996e4f308798::Voltigeur (horse)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a875bd55542996e4f308798::The Winning Season (2004 film)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a875bd55542996e4f308798::Honus Wagner::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a875bd55542996e4f308798::Honus Wagner::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Johannes Peter \"Honus\" Wagner ( ; February 24, 1874 – December 6, 1955) was an American baseball shortstop who played 21 seasons in Major League Baseball from 1897 to 1917, almost entirely for the Pittsburgh Pirates.\n[2] The film follows the dream to the point where the boy is assisting Wagner in his 1909 World Series duel with fellow hall-of-famer Ty Cobb.\n[3] In May 1851 Voltigeur was beaten by The Flying Dutchman in what was probably the most celebrated match race in the history of British thoroughbred racing.\n[4] Wagner was nicknamed \"The Flying Dutchman\" due to his superb speed and German heritage (\"Dutch\" in this instance being an alteration of \"Deutsch\")."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

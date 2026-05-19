@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Nye County",
+  "pred_answer": "Nye County",
+  "normalized_gold": "nye county",
+  "normalized_pred": "nye county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8d4fbf5542994ba4e3dc68",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8d4fbf5542994ba4e3dc68::Operation Buster–Jangle::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8d4fbf5542994ba4e3dc68::Collins Archeological District::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8d4fbf5542994ba4e3dc68::Nevada Test Site::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8d4fbf5542994ba4e3dc68::Wilson Mounds and Village Site::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8d4fbf5542994ba4e3dc68::Operation Buster–Jangle",
+        "5a8d4fbf5542994ba4e3dc68::Nevada Test Site"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8d4fbf5542994ba4e3dc68::Operation Buster–Jangle::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8d4fbf5542994ba4e3dc68::Collins Archeological District::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8d4fbf5542994ba4e3dc68::Nevada Test Site::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8d4fbf5542994ba4e3dc68::Wilson Mounds and Village Site::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8d4fbf5542994ba4e3dc68::Wilson Mounds and Village Site::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Wilson Mounds and Village Site is a prehistoric archaeological site located in and around the Marshall Ferry Cemetery in Rising Sun, White County, Illinois.\n[2] The Nevada National Security Site (N2S2),(though the abbreviation NNSS is still used), previously the Nevada Test Site (NTS), is a United States Department of Energy reservation located in southeastern Nye County, Nevada, about 65 miles (105 km) northwest of the city of Las Vegas.\n[3] The Collins Archeological District is a pre-Columbian archaeological site located in Kennekuk County Park in Vermilion County, Illinois.\n[4] Operation Buster–Jangle was a series of seven (six atmospheric, one cratering) nuclear weapons tests conducted by the United States in late 1951 at the Nevada Test Site."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

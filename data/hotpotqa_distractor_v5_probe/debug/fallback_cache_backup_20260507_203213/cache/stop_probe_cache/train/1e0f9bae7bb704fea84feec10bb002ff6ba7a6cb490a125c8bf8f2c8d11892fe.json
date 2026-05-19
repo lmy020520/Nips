@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Count Olaf",
+  "pred_answer": "Count Olaf",
+  "normalized_gold": "count olaf",
+  "normalized_pred": "count olaf",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a845fe75542996488c2e53b",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a845fe75542996488c2e53b::Liam Aiken::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a845fe75542996488c2e53b::Who Could That Be at This Hour?::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a845fe75542996488c2e53b::Neil Patrick Harris::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a845fe75542996488c2e53b::My Antonia (film)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a845fe75542996488c2e53b::A Series of Unfortunate Events (TV series)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a845fe75542996488c2e53b::Neil Patrick Harris",
+        "5a845fe75542996488c2e53b::My Antonia (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a845fe75542996488c2e53b::Liam Aiken::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a845fe75542996488c2e53b::Who Could That Be at This Hour?::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a845fe75542996488c2e53b::Neil Patrick Harris::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a845fe75542996488c2e53b::My Antonia (film)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a845fe75542996488c2e53b::A Series of Unfortunate Events (TV series)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a845fe75542996488c2e53b::A Series of Unfortunate Events (TV series)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Lemony Snicket's A Series of Unfortunate Events, or simply A Series of Unfortunate Events, is an American black comedy-drama television series from Netflix, and developed by Mark Hudis and Barry Sonnenfeld, based on the children's novel series of the same name by Lemony Snicket.\n[2] My Antonia is a 1995 television film based on the novel of the same name written by Willa Cather.\n[3] On television, he is known for playing the title character on \"Doogie Howser, M.D.\" (1989–1993), Barney Stinson on \"How I Met Your Mother\" (2005–2014, for which he was nominated for four Emmy Awards), and Count Olaf on \"A Series of Unfortunate Events\" (2017 onward).\n[4] is the first novel of the children's novel series \"All the Wrong Questions\" by Lemony Snicket, a series set before the events of \"A Series of Unfortunate Events\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

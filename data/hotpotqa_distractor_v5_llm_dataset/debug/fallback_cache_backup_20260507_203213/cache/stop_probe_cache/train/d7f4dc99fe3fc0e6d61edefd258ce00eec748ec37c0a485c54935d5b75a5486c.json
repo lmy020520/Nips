@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "George Michael Dolenz, Jr.",
+  "pred_answer": "George Michael Dolenz, Jr.",
+  "normalized_gold": "george michael dolenz jr",
+  "normalized_pred": "george michael dolenz jr",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74a18c55429979e28829d3",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74a18c55429979e28829d3::I'm a Believer::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74a18c55429979e28829d3::Hollywood Vampires (band)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74a18c55429979e28829d3::Micky Dolenz::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74a18c55429979e28829d3::Jeff Lynne::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a74a18c55429979e28829d3::Dolenz, Jones, Boyce &amp; Hart::10"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74a18c55429979e28829d3::Micky Dolenz",
+        "5a74a18c55429979e28829d3::Jeff Lynne"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74a18c55429979e28829d3::I'm a Believer::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74a18c55429979e28829d3::Hollywood Vampires (band)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74a18c55429979e28829d3::Micky Dolenz::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74a18c55429979e28829d3::Jeff Lynne::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a74a18c55429979e28829d3::Dolenz, Jones, Boyce &amp; Hart::10",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74a18c55429979e28829d3::Dolenz, Jones, Boyce &amp; Hart::10",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Later that year he reunited with Jones and Dolenz in the studio for the recording of the single \"Christmas is My Time of the Year\" b/w \"White Christmas\", which saw a limited release for fan club members that holiday season.\n[2] Jeffrey Lynne (born 30 December 1947) is an English songwriter, composer, arranger, singer, multi-instrumentalist and record producer who gained fame in the 1970s as the lead singer and sole constant member of Electric Light Orchestra.\n[3] George Michael Dolenz, Jr. (born March 8, 1945) is an American actor, musician, television director, radio personality and theater director, best known as a vocalist and drummer of the 1960s pop/rock band the Monkees.\n[4] The band name derives from The Hollywood Vampires, a celebrity drinking club formed by Cooper in the 1970s which included but was not limited to: John Lennon and Ringo Starr of The Beatles, Keith Moon of The Who, and Micky Dolenz of The Monkees."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

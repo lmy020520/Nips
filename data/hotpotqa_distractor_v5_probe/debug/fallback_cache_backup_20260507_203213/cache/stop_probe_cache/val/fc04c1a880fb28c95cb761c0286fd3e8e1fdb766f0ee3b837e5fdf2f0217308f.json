@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mercury-Atlas 6",
+  "pred_answer": "Mercury-Atlas 6",
+  "normalized_gold": "mercury-atlas 6",
+  "normalized_pred": "mercury-atlas 6",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2b8d4554299495565db14",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2b8d4554299495565db14::T. J. O'Malley::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2b8d4554299495565db14::First Orbit::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2b8d4554299495565db14::John Glenn::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae2b8d4554299495565db14::Soviet space program::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2b8d4554299495565db14::T. J. O'Malley",
+        "5ae2b8d4554299495565db14::John Glenn"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2b8d4554299495565db14::T. J. O'Malley::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2b8d4554299495565db14::First Orbit::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2b8d4554299495565db14::John Glenn::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae2b8d4554299495565db14::Soviet space program::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2b8d4554299495565db14::Soviet space program::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Over its sixty-year history, this primarily classified military program was responsible for a number of pioneering accomplishments in space flight, including the first intercontinental ballistic missile (R-7), first satellite (Sputnik 1), first animal in Earth orbit (the dog Laika on Sputnik 2), first human in space and Earth orbit (cosmonaut Yuri Gagarin on Vostok 1), first woman in space and Ear\n[2] In 1962 he became the first American to orbit the Earth, circling it three times.\n[3] First Orbit is a feature-length, experimental documentary film about Vostok 1, the first manned space flight around the Earth.\n[4] Thomas Joseph O'Malley (October 15, 1915 – November 6, 2009), better known as T. J. O'Malley, was an Irish-American aerospace engineer who, as chief test conductor for the Convair division of General Dynamics, was responsible for pushing the button on February 20, 1962 launching the Mercury-Atlas 6 space flight carrying astronaut John Glenn, the first American in orbit."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

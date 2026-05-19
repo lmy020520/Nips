@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "JoS. A. Bank Clothiers",
+  "pred_answer": "JoS. A. Bank Clothiers",
+  "normalized_gold": "jos a bank clothiers",
+  "normalized_pred": "jos a bank clothiers",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8dc12355429941ae14e052",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8dc12355429941ae14e052::JoS. A. Bank Clothiers::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8dc12355429941ae14e052::Abercorn Walk::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8dc12355429941ae14e052::Abercorn Common::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8dc12355429941ae14e052::JoS. A. Bank Clothiers",
+        "5a8dc12355429941ae14e052::Abercorn Walk"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8dc12355429941ae14e052::JoS. A. Bank Clothiers::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8dc12355429941ae14e052::Abercorn Walk::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8dc12355429941ae14e052::Abercorn Common::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8dc12355429941ae14e052::Abercorn Common::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Abercorn Common is a 180000 sqft shopping center in Savannah, Georgia.\n[2] Abercorn Walk is an upscale shopping center that runs along Abercorn Street in midtown Savannah, Georgia.\n[3] Joseph A. Bank Clothiers, Inc., also known by the abbreviated name JoS. A. Bank Clothiers, is a retailer of men's clothing, particularly known for its often discounted men's suits. Established in 1905, it sells its products in over 500 stores throughout the United States, and by catalog and e-commerce."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

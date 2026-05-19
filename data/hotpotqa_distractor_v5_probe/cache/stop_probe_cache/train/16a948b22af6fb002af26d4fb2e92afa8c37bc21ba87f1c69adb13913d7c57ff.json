@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "St. John's water dog",
+  "pred_answer": "St. John's water dog",
+  "normalized_gold": "st johns water dog",
+  "normalized_pred": "st johns water dog",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac4414c5542997ea680ca55",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac4414c5542997ea680ca55::St. John's water dog::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac4414c5542997ea680ca55::Tweed Water Spaniel::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac4414c5542997ea680ca55::Polish Hunting Dog::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac4414c5542997ea680ca55::Finnish Spitz::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac4414c5542997ea680ca55::St. John's water dog",
+        "5ac4414c5542997ea680ca55::Polish Hunting Dog"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac4414c5542997ea680ca55::St. John's water dog::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac4414c5542997ea680ca55::Tweed Water Spaniel::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac4414c5542997ea680ca55::Polish Hunting Dog::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac4414c5542997ea680ca55::Finnish Spitz::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac4414c5542997ea680ca55::Finnish Spitz::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Its original game hunting purpose was to point to game that fled into trees, such as grouse, and capercaillies, but it also serves well for hunting elk.\n[2] The Polish Hunting Dog, or formerly Polish Scenthound (Polish: \"Gończy Polski\" ) is a breed of scent hound originating in Poland.\n[3] This breed may have been created by crossing local water dogs with imported St. John's water dog, another breed which is also now extinct.\n[4] The St. John's water dog, also known as the St. John’s dog or the lesser Newfoundland, was a landrace (a dog bred for a purpose, not pedigree or appearance) of domestic dog from Newfoundland."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "The Final Rip Off",
+  "pred_answer": "The Final Rip Off",
+  "normalized_gold": "the final rip off",
+  "normalized_pred": "the final rip off",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a729e455542991f9a20c536",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a729e455542991f9a20c536::The Final Rip Off::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a729e455542991f9a20c536::Noel Fielding's Luxury Comedy::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a729e455542991f9a20c536::Monty Python::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a729e455542991f9a20c536::Monty Python: Almost the Truth (Lawyers Cut)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a729e455542991f9a20c536::The Final Rip Off",
+        "5a729e455542991f9a20c536::Monty Python"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a729e455542991f9a20c536::The Final Rip Off::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a729e455542991f9a20c536::Noel Fielding's Luxury Comedy::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a729e455542991f9a20c536::Monty Python::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a729e455542991f9a20c536::Monty Python: Almost the Truth (Lawyers Cut)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a729e455542991f9a20c536::Monty Python: Almost the Truth (Lawyers Cut)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Monty Python: Almost the Truth (Lawyers Cut) is a 2009 television documentary series in six parts that covers 40 years of the surreal comedy group Monty Python, from \"Flying Circus\" to present day projects such as the musical \"Spamalot\".\n[2] Monty Python (also known as The Pythons) were a British surreal comedy group who created their sketch comedy show \"Monty Python's Flying Circus\", which first aired on the BBC in 1969.\n[3] Noel Fielding's Luxury Comedy, known as Luxury Comedy 2: Tales from Painted Hawaii for series two, is a British surreal comedy television series written and directed by Noel Fielding and Nigel Coan.\n[4] The Final Rip Off is a compilation double album by Monty Python, released in 1987."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lucien Carr",
+  "pred_answer": "Lucien Carr",
+  "normalized_gold": "lucien carr",
+  "normalized_pred": "lucien carr",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a871ce055429960ec39b749",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a871ce055429960ec39b749::Dane DeHaan::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a871ce055429960ec39b749::UPI Lineman of the Year::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a871ce055429960ec39b749::Lucien Carr::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a871ce055429960ec39b749::Norman Mac Lean::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a871ce055429960ec39b749::Dane DeHaan",
+        "5a871ce055429960ec39b749::Lucien Carr"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a871ce055429960ec39b749::Dane DeHaan::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a871ce055429960ec39b749::UPI Lineman of the Year::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a871ce055429960ec39b749::Lucien Carr::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a871ce055429960ec39b749::Norman Mac Lean::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a871ce055429960ec39b749::Norman Mac Lean::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Norman Mac Lean was a sportswriter who wrote for The Associated Press, Reuters and United Press International.\n[2] Lucien Carr (March 1, 1925 – January 28, 2005) was a key member of the original New York City circle of the Beat Generation in the 1940s; later he worked for many years as an editor for United Press International.\n[3] The United Press International Lineman of the Year award was given annually by United Press International (UPI) to the lineman of the year in college football.\n[4] Dane William DeHaan ( ; born February 6, 1986) is an American actor."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

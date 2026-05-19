@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Dick Wolf and Matt Olmstead",
+  "pred_answer": "Dick Wolf and Matt Olmstead",
+  "normalized_gold": "dick wolf and matt olmstead",
+  "normalized_pred": "dick wolf and matt olmstead",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac0e647554299294b21904a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac0e647554299294b21904a::No Offence::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac0e647554299294b21904a::Mick Betancourt::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac0e647554299294b21904a::Chicago P.D. (TV series)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac0e647554299294b21904a::The Cops (TV series)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac0e647554299294b21904a::Mick Betancourt",
+        "5ac0e647554299294b21904a::Chicago P.D. (TV series)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac0e647554299294b21904a::No Offence::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac0e647554299294b21904a::Mick Betancourt::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac0e647554299294b21904a::Chicago P.D. (TV series)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac0e647554299294b21904a::The Cops (TV series)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac0e647554299294b21904a::The Cops (TV series)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Cops is a British television police procedural drama series, made by World Productions, broadcast on BBC Two from 19 October 1998 to 11 April 2001.\n[2] Chicago P.D. is an American police procedural drama television series created by Dick Wolf and Matt Olmstead as the second installment of Dick Wolf's \"Chicago\" franchise.\n[3] Mick Betancourt (born April 13, 1974) is an American screenwriter, producer, comedian, actor, and director who has written scripts for several television series on major networks, including \"Chicago Fire\", \"The Mob Doctor\", \"Chicago P.D.\", and \"\".\n[4] No Offence is a British television police procedural drama on Channel 4, created by Paul Abbott."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

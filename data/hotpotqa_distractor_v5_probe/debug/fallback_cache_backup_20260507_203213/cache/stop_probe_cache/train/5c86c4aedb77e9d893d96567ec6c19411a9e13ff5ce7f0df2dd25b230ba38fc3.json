@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Holliday Street Theater",
+  "pred_answer": "Holliday Street Theater",
+  "normalized_gold": "holliday street theater",
+  "normalized_pred": "holliday street theater",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3a2a9554299391541384d",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3a2a9554299391541384d::Holliday Street Theater::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3a2a9554299391541384d::National Anthem of The Mali Federation::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3a2a9554299391541384d::Holliday Street Theater::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3a2a9554299391541384d::Francis Scott Key::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac3a2a9554299391541384d::National Anthem Project::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3a2a9554299391541384d::Holliday Street Theater",
+        "5ac3a2a9554299391541384d::Francis Scott Key"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3a2a9554299391541384d::Holliday Street Theater::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3a2a9554299391541384d::National Anthem of The Mali Federation::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3a2a9554299391541384d::Holliday Street Theater::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3a2a9554299391541384d::Francis Scott Key::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac3a2a9554299391541384d::National Anthem Project::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3a2a9554299391541384d::National Anthem Project::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The stated purpose of the project was originally \"to revive America's patriotism,\" but this was later modified to suggest that its purpose was merely to encourage more singing of the national anthem, or to bring more public attention to the role of music in American schools.\n[2] Francis Scott Key (August 1, 1779January 11, 1843) was an American lawyer, author, and amateur poet from Frederick, Maryland and later Georgetown, D.C., near Washington, D.C. who wrote the lyrics for a poem entitled at first \"The Defence of Fort McHenry\", which when set to an old English gentlemens' society tune, eventually became the United States' national anthem, \"The Star-Spangled Banner\".\n[3] The Holliday Street Theater also known as the New Theatre, New Holliday, Old Holliday, The Baltimore Theatre, and Old Drury, was a historical theatrical venue in colonial Baltimore, Maryland.\n[4] After separation of the two countries, Mali kept the music (because the composer was from this country) and Senegal retained the lyrics of the Federation (which was written by who would be the first Senegalese President) but removing the name \"Mali\" and others minor changes."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

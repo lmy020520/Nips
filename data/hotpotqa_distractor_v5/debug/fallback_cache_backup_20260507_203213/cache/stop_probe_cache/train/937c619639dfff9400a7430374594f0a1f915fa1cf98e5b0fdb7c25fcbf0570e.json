@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bury, Greater Manchester, England",
+  "pred_answer": "Bury, Greater Manchester, England",
+  "normalized_gold": "bury greater manchester england",
+  "normalized_pred": "bury greater manchester england",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8e0ed055429917b4a5bcfd",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8e0ed055429917b4a5bcfd::Team Bury F.C.::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8e0ed055429917b4a5bcfd::Harry Hardy::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8e0ed055429917b4a5bcfd::Bury F.C.::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8e0ed055429917b4a5bcfd::Dai Evans (footballer)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8e0ed055429917b4a5bcfd::History of Birmingham City F.C. (1875–1965)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8e0ed055429917b4a5bcfd::Bury F.C.",
+        "5a8e0ed055429917b4a5bcfd::Dai Evans (footballer)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8e0ed055429917b4a5bcfd::Team Bury F.C.::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8e0ed055429917b4a5bcfd::Harry Hardy::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8e0ed055429917b4a5bcfd::Bury F.C.::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8e0ed055429917b4a5bcfd::Dai Evans (footballer)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8e0ed055429917b4a5bcfd::History of Birmingham City F.C. (1875–1965)::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8e0ed055429917b4a5bcfd::History of Birmingham City F.C. (1875–1965)::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It adopted professionalism in 1885, and three years later, as Small Heath F.C., became a limited company with a board of directors, the first football club so to do.\n[2] He played for a number of teams in the Football League, including Reading, Huddersfield Town and Bury.\n[3] Bury Football Club is a professional association football club based in Bury, Greater Manchester, England.\n[4] He also played for Everton F.C. and Bury F.C.."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

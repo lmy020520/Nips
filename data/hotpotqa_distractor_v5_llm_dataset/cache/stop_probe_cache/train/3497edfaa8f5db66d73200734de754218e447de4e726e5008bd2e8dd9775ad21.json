@@ -1,0 +1,101 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Carla Garapedian",
+  "pred_answer": "Carla Garapedian",
+  "normalized_gold": "carla garapedian",
+  "normalized_pred": "carla garapedian",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d117055429909bec76935",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d117055429909bec76935::Carla Garapedian::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d117055429909bec76935::Ahn Chol::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d117055429909bec76935::derived::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7d117055429909bec76935::Tropic Thunder::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7d117055429909bec76935::Ben Stiller::1"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5a7d117055429909bec76935::Screamers (2006 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d117055429909bec76935::Carla Garapedian",
+        "5a7d117055429909bec76935::Ben Stiller"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d117055429909bec76935::Carla Garapedian::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d117055429909bec76935::Ahn Chol::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d117055429909bec76935::Tropic Thunder::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7d117055429909bec76935::Ben Stiller::1",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5a7d117055429909bec76935::Screamers (2006 film)::0",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a7d117055429909bec76935::derived::1",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a7d117055429909bec76935::Screamers (2006 film)::0",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] After leaving BBC World, she directed \"Dying for the President\"\" about Chechnya, \"Lifting the Veil,\" about women in Afghanistan, \"Iran Undercover\" (\"Forbidden Iran\" for PBS Frontline World) and \"My Friend the Mercenary\" about the coup in Equatorial Guinea.\n[2] Screamers is a 2006 documentary film directed by Carla Garapedian, conceived by Peter McAlevey and Garapedian and produced by McAlevey.\n[3] He is the son of veteran comedians and actors Jerry Stiller and Anne Meara.\n[4] Tropic Thunder is a 2008 satirical action comedy film directed by Ben Stiller.\n\nNotes:\n[bridge] The film 'Children of the Secret State' is about North Korea, and Carla Garapedian has directed documentaries on politically sensitive topics."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

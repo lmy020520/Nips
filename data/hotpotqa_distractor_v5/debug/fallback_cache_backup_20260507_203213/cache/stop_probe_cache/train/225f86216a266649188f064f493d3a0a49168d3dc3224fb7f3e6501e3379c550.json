@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Cassano's Pizza King",
+  "pred_answer": "Cassano's Pizza King",
+  "normalized_gold": "cassanos pizza king",
+  "normalized_pred": "cassanos pizza king",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a722f2b55429971e9dc933f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a722f2b55429971e9dc933f::Cassano's Pizza King::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a722f2b55429971e9dc933f::Rabbe Grönblom::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a722f2b55429971e9dc933f::Zpizza::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a722f2b55429971e9dc933f::Mr. Jim's Pizza::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a722f2b55429971e9dc933f::Cassano's Pizza King",
+        "5a722f2b55429971e9dc933f::Zpizza"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a722f2b55429971e9dc933f::Cassano's Pizza King::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a722f2b55429971e9dc933f::Rabbe Grönblom::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a722f2b55429971e9dc933f::Zpizza::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a722f2b55429971e9dc933f::Mr. Jim's Pizza::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a722f2b55429971e9dc933f::Mr. Jim's Pizza::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] MrJims.Pizza is widely known for their crust.\n[2] zpizza (originally called z pizza and commonly known as z) is a pizza franchise based in Newport Beach, California.\n[3] He was known as the \"Pizza-emperor\" (Pizzakeisari in Finnish), because he was the founder of a well known pizza franchise chain called Kotipizza which was the new name of \"Pizzeria N:o 1\" which expanded fast outside of Vaasa.\n[4] Established on June 4, 1953, by the Kettering grocer Victor \"Vic\" J. Cassano, Sr. (June 4, 1922 – January 1, 2002) and his mother-in-law Caroline \"Mom\" Donisi, the company currently (2005) operates 34 Cassano's Pizza King restaurants in the Dayton area, and has three other western Ohio franchises (in Russells Point, Fairfield and Sidney), plus a franchise in Quincy, Illinois, and another in Hannib"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

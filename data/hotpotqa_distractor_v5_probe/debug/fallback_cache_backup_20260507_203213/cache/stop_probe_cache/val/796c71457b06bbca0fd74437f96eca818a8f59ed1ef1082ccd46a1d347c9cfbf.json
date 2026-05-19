@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Professor Sprout",
+  "pred_answer": "Professor Sprout",
+  "normalized_gold": "professor sprout",
+  "normalized_pred": "professor sprout",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84dee05542994c784dda71",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84dee05542994c784dda71::A Kick Up the Eighties::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84dee05542994c784dda71::James Potter (series)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84dee05542994c784dda71::Miriam Margolyes::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a84dee05542994c784dda71::Harry Potter and the Deathly Hallows::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84dee05542994c784dda71::A Kick Up the Eighties",
+        "5a84dee05542994c784dda71::Miriam Margolyes"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84dee05542994c784dda71::A Kick Up the Eighties::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84dee05542994c784dda71::James Potter (series)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84dee05542994c784dda71::Miriam Margolyes::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a84dee05542994c784dda71::Harry Potter and the Deathly Hallows::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84dee05542994c784dda71::Harry Potter and the Deathly Hallows::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The title of the book refers to three mythical objects featured in the story, collectively known as the \"Deathly Hallows\"—an unbeatable wand, a stone to bring the dead to life, and a cloak of invisibility.\n[2] Her earliest roles were in theatre and after several supporting roles in film and television she won a BAFTA Award for her role in \"The Age of Innocence\" (1993) and went on to take the role of Professor Sprout in the \"Harry Potter\" film series.\n[3] The novel series centers around the character of James Sirius Potter, Harry Potter's son, a character who makes a fleeting appearance in the novel \"Harry Potter and the Deathly Hallows\".\n[4] A Kick Up the Eighties was a 1981-1984 BBC 2 sketch show starring Robbie Coltrane, Tracey Ullman, Richard Stilgoe, Miriam Margolyes, Rik Mayall, Ron Bain and Roger Sloman."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

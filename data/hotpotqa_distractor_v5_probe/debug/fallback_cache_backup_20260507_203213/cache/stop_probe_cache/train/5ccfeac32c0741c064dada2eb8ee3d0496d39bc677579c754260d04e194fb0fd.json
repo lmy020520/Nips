@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the third and final leg",
+  "pred_answer": "the third and final leg",
+  "normalized_gold": "the third and final leg",
+  "normalized_pred": "the third and final leg",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a774339554299373536022a",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a774339554299373536022a::Belmont Stakes::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a774339554299373536022a::Seattle Slew::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a774339554299373536022a::Belmont Stakes::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a774339554299373536022a::Summer Bird::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a774339554299373536022a::Alydar::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a774339554299373536022a::Belmont Stakes",
+        "5a774339554299373536022a::Summer Bird"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a774339554299373536022a::Belmont Stakes::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a774339554299373536022a::Seattle Slew::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a774339554299373536022a::Belmont Stakes::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a774339554299373536022a::Summer Bird::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a774339554299373536022a::Alydar::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a774339554299373536022a::Alydar::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Alydar (March 23, 1975 – November 15, 1990) was a chestnut colt and an American Thoroughbred race horse who was most famous for finishing a close second to Affirmed in all three races of the Triple Crown.\n[2] Summer Bird (April 7, 2006 – December 23, 2013) was a champion American Thoroughbred racehorse, son of 2004 Belmont Stakes winner Birdstone.\n[3] The race, nicknamed The Test of the Champion, and The Run for the Carnations, is the third and final leg of the Triple Crown and is held five weeks after the Kentucky Derby and three weeks after the Preakness Stakes.\n[4] Seattle Slew (February 15, 1974 – May 7, 2002) was an American Thoroughbred race horse who won the Triple Crown in 1977—the tenth of twelve horses to accomplish the feat."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

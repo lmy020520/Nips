@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "9 to 12 April 1917",
+  "pred_answer": "9 to 12 April 1917",
+  "normalized_gold": "9 to 12 april 1917",
+  "normalized_pred": "9 to 12 april 1917",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae174b35542990adbacf79b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae174b35542990adbacf79b::William Johnstone Milne::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae174b35542990adbacf79b::List of Australian Victoria Cross recipients::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae174b35542990adbacf79b::Battle of Vimy Ridge::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae174b35542990adbacf79b::William Johnstone (VC)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae174b35542990adbacf79b::William Johnstone Milne",
+        "5ae174b35542990adbacf79b::Battle of Vimy Ridge"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae174b35542990adbacf79b::William Johnstone Milne::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae174b35542990adbacf79b::List of Australian Victoria Cross recipients::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae174b35542990adbacf79b::Battle of Vimy Ridge::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae174b35542990adbacf79b::William Johnstone (VC)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae174b35542990adbacf79b::William Johnstone (VC)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] William Johnstone VC (6 August 1823 – 20 August 1857) was a Royal Navy sailor and a recipient of the Victoria Cross, the highest award for gallantry in the face of the enemy that can be awarded to British and Commonwealth forces.\n[2] The battle, which took place from 9 to 12 April 1917, was part of the opening phase of the British-led Battle of Arras, a diversionary attack for the French Nivelle Offensive.\n[3] Australians have received the Victoria Cross under the Imperial honours system and later under the Australian Honours System, when in 1991 a new but equivalent award was established by letters patent within the Commonwealth of Australia and its Territories, known as the Victoria Cross for Australia.\n[4] Milne was a recipient of the Victoria Cross, the highest and most prestigious award for gallantry in the face of the enemy that can be awarded to British and Commonwealth forces."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

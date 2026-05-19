@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Anne Hathaway",
+  "pred_answer": "Anne Hathaway",
+  "normalized_gold": "anne hathaway",
+  "normalized_pred": "anne hathaway",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7728f355429937353601fa",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7728f355429937353601fa::Becoming Jane::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7728f355429937353601fa::Sudden::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7728f355429937353601fa::Anne Hathaway on screen and stage::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7728f355429937353601fa::Becoming Jane::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7728f355429937353601fa::Becoming Jane",
+        "5a7728f355429937353601fa::Anne Hathaway on screen and stage"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7728f355429937353601fa::Becoming Jane::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7728f355429937353601fa::Sudden::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7728f355429937353601fa::Anne Hathaway on screen and stage::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7728f355429937353601fa::Becoming Jane::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7728f355429937353601fa::Becoming Jane::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] American actress Anne Hathaway stars as the title character, while her romantic interest is played by Scottish actor James McAvoy.\n[2] Anne Hathaway is an American actress who has appeared in film and stage.\n[3] James Green aka Sudden is a fictional character created by an English author Oliver Strange in the early 1930s as the hero of a series, originally published by George Newnes Books Ltd, set in the American Wild West era.\n[4] It depicts the early life of the English author Jane Austen and her lasting love for Thomas Langlois Lefroy."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

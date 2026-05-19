@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Eva Marie Saint",
+  "pred_answer": "Eva Marie Saint",
+  "normalized_gold": "eva marie saint",
+  "normalized_pred": "eva marie saint",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77aa375542995d83181261",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77aa375542995d83181261::Voyage of Terror: The Achille Lauro Affair::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77aa375542995d83181261::List of Amy Adams performances::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77aa375542995d83181261::Eva Marie Saint::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77aa375542995d83181261::Florence Hackett::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77aa375542995d83181261::Voyage of Terror: The Achille Lauro Affair",
+        "5a77aa375542995d83181261::Eva Marie Saint"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77aa375542995d83181261::Voyage of Terror: The Achille Lauro Affair::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77aa375542995d83181261::List of Amy Adams performances::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77aa375542995d83181261::Eva Marie Saint::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77aa375542995d83181261::Florence Hackett::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77aa375542995d83181261::Florence Hackett::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Her boys also appeared in some of the films making the work more of a family affair.\n[2] In a career spanning 70 years, she is known for starring in Elia Kazan's \"On the Waterfront\" (1954), for which she won an Academy Award for Best Supporting Actress, and Alfred Hitchcock's \"North by Northwest\" (1959).\n[3] She went on to guest star in a variety of television shows, including \"That '70s Show\", \"Charmed\", \"Buffy the Vampire Slayer\", and \"The Office\", and also appeared in minor film roles.\n[4] Voyage of Terror: The Achille Lauro Affair (1990) is a television action-drama film starring Burt Lancaster and Eva Marie Saint and is based on the 1985 Achille Lauro hijacking."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

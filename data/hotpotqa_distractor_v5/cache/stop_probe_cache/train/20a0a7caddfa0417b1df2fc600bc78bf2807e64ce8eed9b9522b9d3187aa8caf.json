@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Alain Tanner",
+  "pred_answer": "Alain Tanner",
+  "normalized_gold": "alain tanner",
+  "normalized_pred": "alain tanner",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae36ecb5542991a06ce99c4",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae36ecb5542991a06ce99c4::Requiem: A Hallucination::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae36ecb5542991a06ce99c4::Jonah Who Will Be 25 in the Year 2000::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae36ecb5542991a06ce99c4::Alain Tanner::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae36ecb5542991a06ce99c4::Hans Richter (artist)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae36ecb5542991a06ce99c4::Knall and Fall as Detectives::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae36ecb5542991a06ce99c4::Alain Tanner",
+        "5ae36ecb5542991a06ce99c4::Hans Richter (artist)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae36ecb5542991a06ce99c4::Requiem: A Hallucination::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae36ecb5542991a06ce99c4::Jonah Who Will Be 25 in the Year 2000::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae36ecb5542991a06ce99c4::Alain Tanner::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae36ecb5542991a06ce99c4::Hans Richter (artist)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae36ecb5542991a06ce99c4::Knall and Fall as Detectives::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae36ecb5542991a06ce99c4::Knall and Fall as Detectives::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Knall and Fall as Detectives (German: Knall und Fall als Detektive) is a 1953 Austrian-West German comedy film directed by Hans Heinrich and starring Hans Richter, Rudolf Carl and Ingrid Lutz.\n[2] Hans Richter (6 April 1888 – 1 February 1976) was a German painter, graphic artist, avant-gardist, film-experimenter and producer.\n[3] Alain Tanner (born 6 December 1929) is a Swiss film director.\n[4] Jonah Who Will Be 25 in the Year 2000 (French: \"Jonas qui aura 25 ans en l'an 2000\" ) is a 1976 Swiss film directed by Alain Tanner and written by Tanner and John Berger."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

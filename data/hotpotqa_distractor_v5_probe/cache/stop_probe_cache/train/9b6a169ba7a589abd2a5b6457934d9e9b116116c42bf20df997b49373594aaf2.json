@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "George IV",
+  "pred_answer": "George IV",
+  "normalized_gold": "george iv",
+  "normalized_pred": "george iv",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab56ea0554299637185c596",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab56ea0554299637185c596::James Stanier Clarke::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab56ea0554299637185c596::Ernest Augustus, King of Hanover::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab56ea0554299637185c596::James Stanier Clarke::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab56ea0554299637185c596::George IV of the United Kingdom::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab56ea0554299637185c596::Ernest Augustus, King of Hanover::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab56ea0554299637185c596::James Stanier Clarke",
+        "5ab56ea0554299637185c596::George IV of the United Kingdom"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab56ea0554299637185c596::James Stanier Clarke::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab56ea0554299637185c596::Ernest Augustus, King of Hanover::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab56ea0554299637185c596::James Stanier Clarke::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab56ea0554299637185c596::George IV of the United Kingdom::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab56ea0554299637185c596::Ernest Augustus, King of Hanover::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab56ea0554299637185c596::Ernest Augustus, King of Hanover::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Ernest Augustus (5 June 1771 – 18 November 1851) was King of Hanover from 20 June 1837 until his death.\n[2] George IV (George Augustus Frederick; 12 August 1762 – 26 June 1830) was King of the United Kingdom of Great Britain and Ireland and of Hanover following the death of his father, George III, on 29 January 1820, until his own death ten years later.\n[3] He became librarian in 1799 to George, Prince of Wales (later Prince Regent, then George IV).\n[4] The Salic Law, which barred succession to or through a female, prevailed in Hanover; therefore, when his elder brother King William IV died in 1837, Ernest succeeded him as King of Hanover."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

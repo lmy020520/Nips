@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Gothic",
+  "pred_answer": "Gothic",
+  "normalized_gold": "gothic",
+  "normalized_pred": "gothic",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac452605542995c82c4ad30",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac452605542995c82c4ad30::The Sleep of Death::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac452605542995c82c4ad30::The House by the Churchyard::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac452605542995c82c4ad30::Carmilla::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac452605542995c82c4ad30::Sheridan Le Fanu::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac452605542995c82c4ad30::Alicia Le Fanu::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac452605542995c82c4ad30::Carmilla",
+        "5ac452605542995c82c4ad30::Sheridan Le Fanu"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac452605542995c82c4ad30::The Sleep of Death::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac452605542995c82c4ad30::The House by the Churchyard::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac452605542995c82c4ad30::Carmilla::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac452605542995c82c4ad30::Sheridan Le Fanu::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac452605542995c82c4ad30::Alicia Le Fanu::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac452605542995c82c4ad30::Alicia Le Fanu::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] She was the daughter of Elizabeth Sheridan and Captain Henry Le Fanu, and a granddaughter of actor Thomas Sheridan and his wife, writer Frances Sheridan.\n[2] Joseph Thomas Sheridan Le Fanu ( ; 28 August 1814 – 7 February 1873) was an Irish writer of Gothic tales and mystery novels.\n[3] Carmilla is a Gothic novella by Joseph Sheridan Le Fanu and one of the early works of vampire fiction, predating Bram Stoker's \"Dracula\" (1897) by 26 years.\n[4] The House by the Churchyard (1863) is a novel by Sheridan Le Fanu that combines elements of the mystery novel and the historical novel."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

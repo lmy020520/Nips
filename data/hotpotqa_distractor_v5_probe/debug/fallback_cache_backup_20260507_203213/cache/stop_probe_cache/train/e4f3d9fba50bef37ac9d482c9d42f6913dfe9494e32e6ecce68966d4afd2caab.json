@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "video",
+  "pred_answer": "video",
+  "normalized_gold": "video",
+  "normalized_pred": "video",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8dcb36554299441c6ba08b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8dcb36554299441c6ba08b::Club Nintendo::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8dcb36554299441c6ba08b::Little Mac (Punch-Out!!)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8dcb36554299441c6ba08b::Punch-Out!!::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8dcb36554299441c6ba08b::Punch-Out!! (Wii)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8dcb36554299441c6ba08b::Club Nintendo",
+        "5a8dcb36554299441c6ba08b::Punch-Out!!"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8dcb36554299441c6ba08b::Club Nintendo::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8dcb36554299441c6ba08b::Little Mac (Punch-Out!!)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8dcb36554299441c6ba08b::Punch-Out!!::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8dcb36554299441c6ba08b::Punch-Out!! (Wii)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8dcb36554299441c6ba08b::Punch-Out!! (Wii)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] is a boxing video game developed by Next Level Games for the Wii and is the fifth main game in Nintendo's \"Punch-Out!!\n[2] is a series of boxing video games created by Nintendo's general manager Genyo Takeda, and his partner Makoto Wada.\n[3] Little Mac (リトル・マック , Ritoru Makku ) is the main protagonist in Nintendo's series of \"Punch-Out!!\n[4] Club Nintendo was the name of several publications and a better-known customer loyalty program provided by Nintendo."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

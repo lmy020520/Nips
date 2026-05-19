@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New York City",
+  "pred_answer": "New York City",
+  "normalized_gold": "new york city",
+  "normalized_pred": "new york city",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac471da554299204fd21f4f",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac471da554299204fd21f4f::MVP Baseball series::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac471da554299204fd21f4f::Take-Two Interactive::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac471da554299204fd21f4f::Pablo Sandoval::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac471da554299204fd21f4f::MVP Baseball series",
+        "5ac471da554299204fd21f4f::Take-Two Interactive"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac471da554299204fd21f4f::MVP Baseball series::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac471da554299204fd21f4f::Take-Two Interactive::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac471da554299204fd21f4f::Pablo Sandoval::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac471da554299204fd21f4f::Pablo Sandoval::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Sandoval hit three home runs in Game 1 of the 2012 World Series, becoming the fourth person to hit three home runs in a World Series game, and was named the World Series Most Valuable Player (MVP).\n[2] The company's headquarters are in New York City, with international headquarters in Windsor, United Kingdom.\n[3] However, an exclusive licensing deal between Major League Baseball and Take-Two Interactive in 2005 prohibited EA Sports from making another MLB game until 2012."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

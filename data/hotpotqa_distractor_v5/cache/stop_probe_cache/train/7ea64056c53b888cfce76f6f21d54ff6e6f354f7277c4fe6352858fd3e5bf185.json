@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "This Mortal Coil",
+  "pred_answer": "This Mortal Coil",
+  "normalized_gold": "this mortal coil",
+  "normalized_pred": "this mortal coil",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a876c1f5542996e4f3087e7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a876c1f5542996e4f3087e7::Hundred Reasons::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a876c1f5542996e4f3087e7::This Mortal Coil (Redemption album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a876c1f5542996e4f3087e7::This Mortal Coil::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a876c1f5542996e4f3087e7::It'll End in Tears::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a876c1f5542996e4f3087e7::Hundred Reasons",
+        "5a876c1f5542996e4f3087e7::This Mortal Coil"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a876c1f5542996e4f3087e7::Hundred Reasons::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a876c1f5542996e4f3087e7::This Mortal Coil (Redemption album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a876c1f5542996e4f3087e7::This Mortal Coil::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a876c1f5542996e4f3087e7::It'll End in Tears::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a876c1f5542996e4f3087e7::It'll End in Tears::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It'll End in Tears is the first album released by 4AD collective This Mortal Coil, an umbrella title for a loose grouping of guest musicians and vocalists brought together by label boss Ivo Watts-Russell.\n[2] This Mortal Coil was a music collective led by Ivo Watts-Russell, founder of the British record label 4AD.\n[3] This Mortal Coil is the fifth studio release of the progressive metal band Redemption.\n[4] Hundred Reasons are an English alternative rock band from Aldershot, Hampshire, formed in 1999."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

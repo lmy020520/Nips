@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "five decades",
+  "pred_answer": "five decades",
+  "normalized_gold": "five decades",
+  "normalized_pred": "five decades",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae158c955429901ffe4ae77",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae158c955429901ffe4ae77::The Black Angel's Death Song::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae158c955429901ffe4ae77::Lou Reed::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae158c955429901ffe4ae77::If You Were Still Around::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae158c955429901ffe4ae77::The Black Angel's Death Song",
+        "5ae158c955429901ffe4ae77::Lou Reed"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae158c955429901ffe4ae77::The Black Angel's Death Song::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae158c955429901ffe4ae77::Lou Reed::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae158c955429901ffe4ae77::If You Were Still Around::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae158c955429901ffe4ae77::If You Were Still Around::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] \"If You Were Still Around\" is a song by Welsh musician and composer John Cale.\n[2] He was the guitarist, vocalist, and principal songwriter of the Velvet Underground, and his solo career spanned five decades.\n[3] \"The Black Angel's Death Song\" is a song by the Velvet Underground, from their 1967 debut album \"The Velvet Underground & Nico\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

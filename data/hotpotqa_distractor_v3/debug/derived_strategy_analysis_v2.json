@@ -1,0 +1,2055 @@
+{
+  "build_meta": {
+    "run_id": "20260421_120911_hotpotqa_v2",
+    "source": "analyze_derived_strategy_v2.py"
+  },
+  "overall": {
+    "trajectory_count": 30,
+    "trajectories_with_derived_positive": 7,
+    "trajectories_triggered_but_no_positive_derived": 23,
+    "derived_positive_position_counts": {
+      "middle_late": 9,
+      "early": 1
+    },
+    "derived_positive_type_counts": {
+      "bridge_note": 4,
+      "verification_note": 6
+    },
+    "derived_positive_type_by_position": {
+      "middle_late": {
+        "bridge_note": 3,
+        "verification_note": 6
+      },
+      "early": {
+        "bridge_note": 1
+      }
+    },
+    "derived_followup_counts": {
+      "derived_then_immediate_raw": 5,
+      "derived_then_future_raw": 5,
+      "next_raw_already_visible_in_c_t": 3,
+      "next_raw_not_yet_visible_in_c_t": 7
+    }
+  },
+  "historical_failure_to_success": {
+    "qid_count": 10,
+    "derived_positive_position_counts": {
+      "middle_late": 3,
+      "early": 1
+    },
+    "derived_positive_type_counts": {
+      "verification_note": 3,
+      "bridge_note": 1
+    },
+    "derived_followup_counts": {
+      "next_raw_not_yet_visible_in_c_t": 3,
+      "derived_then_immediate_raw": 2,
+      "derived_then_future_raw": 2,
+      "next_raw_already_visible_in_c_t": 1
+    },
+    "case_records": [
+      {
+        "qid": "5a7630cb554299109176e6af",
+        "split": "train",
+        "question": "Ulf Merbold and Lodewijk van den Berg, both flew in ?",
+        "gold_answer": "space",
+        "terminal_t": 3,
+        "derived_positive_count": 0,
+        "derived_positive_ts": [],
+        "derived_positive_events": [],
+        "derived_trigger_step_count": 3,
+        "derived_trigger_steps": [
+          {
+            "t": 0,
+            "harvest_count": 3,
+            "derive_goal": "generic_bridge_or_verification",
+            "derive_mode": "normal",
+            "reason": "The question asks about Ulf Merbold and Lodewijk van den Berg flying in something, but current evidence lacks direct information about their flight activities. The top raw candidates provide information about various individuals named van den Berg, which could help identify the correct Lodewijk van den Berg and potentially bridge to the flight context."
+          },
+          {
+            "t": 1,
+            "harvest_count": 0,
+            "derive_goal": "generic_bridge_or_verification",
+            "derive_mode": "normal",
+            "reason": "The provided top raw candidates do not contain any information about Ulf Merbold or Lodewijk van den Berg's spaceflight activities, which is the focus of the question. The candidates are about unrelated individuals with similar names (e.g., Cássio van den Berg, Albert Jan van den Berg) or unrelated topics (De Speld), and thus cannot be used to ground notes that address the evidence need."
+          },
+          {
+            "t": 2,
+            "harvest_count": 1,
+            "derive_goal": "generic_bridge_or_verification",
+            "derive_mode": "normal",
+            "reason": "local_api_failure_fallback:normal:generic_bridge_or_verification"
+          }
+        ],
+        "final_answer_source": "context_gold_fallback",
+        "final_support_rule": "multi_hop_answer_in_evidence",
+        "final_k_t_has_derived": false,
+        "case_mechanism": "raw_or_stop_closure"
+      },
+      {
+        "qid": "5a7bbe76554299042af8f7d3",
+        "split": "val",
+        "question": "Did Manny Coto, a Cuban American writer or Lina Wertmüller, an Italian screenwriter get nominated for an Academy Award for Directing \"Seven Beauties\"?",
+        "gold_answer": "Lina Wertmüller",
+        "terminal_t": 5,
+        "derived_positive_count": 2,
+        "derived_positive_ts": [
+          3,
+          4
+        ],
+        "derived_positive_events": [
+          {
+            "qid": "5a7bbe76554299042af8f7d3",
+            "split": "val",
+            "t": 3,
+            "terminal_t": 5,
+            "position_bucket": "middle_late",
+            "positive_unit_id": "5a7bbe76554299042af8f7d3::derived::9",
+            "note_type": "verification_note",
+            "note_text": "The film 'Seven Beauties' is an Italian language film from 1975, but no direct nomination details are provided in the current raw evidence.",
+            "source_unit_ids": [
+              "5a7bbe76554299042af8f7d3::Swept Away (1974 film)::0"
+            ],
+            "derive_goal": "generic_bridge_or_verification",
+            "derive_mode": "repair_after_false_stop",
+            "proposer_reason": "The current evidence lacks direct information about Academy Award nominations for directing 'Seven Beauties'. Deriving bridge and verification notes can help organize the available raw evidence to clarify the roles and achievements of Manny Coto and Lina Wertmüller, focusing on answer-facing organization and target type clarification as per repair_after_false_stop mode.",
+            "harvest_count": 3,
+            "current_r_t_size": 7,
+            "current_c_t_size": 9,
+            "next_is_raw": false,
+            "next_raw_positive_id": null,
+            "next_raw_positive_in_current_c_t": false,
+            "next_raw_positive_in_current_r_t": false,
+            "future_raw_positive_ids": [],
+            "future_raw_positive_count": 0,
+            "next_delta_covered_targets": 0
+          },
+          {
+            "qid": "5a7bbe76554299042af8f7d3",
+            "split": "val",
+            "t": 4,
+            "terminal_t": 5,
+            "position_bucket": "middle_late",
+            "positive_unit_id": "5a7bbe76554299042af8f7d3::derived::10",
+            "note_type": "verification_note",
+            "note_text": "The film 'Seven Beauties' is an Italian language film from 1975, but no direct nomination details are provided in the current raw evidence.",
+            "source_unit_ids": [
+              "5a7bbe76554299042af8f7d3::Swept Away (1974 film)::0"
+            ],
+            "derive_goal": "generic_bridge_or_verification",
+            "derive_mode": "repair_after_false_stop",
+            "proposer_reason": "local_api_failure_fallback:repair_after_false_stop:generic_bridge_or_verification",
+            "harvest_count": 1,
+            "current_r_t_size": 7,
+            "current_c_t_size": 8,
+            "next_is_raw": false,
+            "next_raw_positive_id": null,
+            "next_raw_positive_in_current_c_t": false,
+            "next_raw_positive_in_current_r_t": false,
+            "future_raw_positive_ids": [],
+            "future_raw_positive_count": 0,
+            "next_delta_covered_targets": null
+          }
+        ],
+        "derived_trigger_step_count": 5,
+        "derived_trigger_steps": [
+          {
+            "t": 0,
+            "harvest_count": 1,
+            "derive_goal": "generic_bridge_or_verification",
+            "derive_mode": "normal",
+            "reason": "local_api_failure_fallback:normal:generic_bridge_or_verification"
+          },
+          {
+            "t": 1,
+            "harvest_count": 3,
+            "derive_goal": "generic_bridge_or_verification",
+            "derive_mode": "normal",
+            "reason": "The current evidence is insufficient to answer the question about Academy Award nominations for directing 'Seven Beauties'. The top raw candidates provide relevant information about Lina Wertmüller and Manny Coto, but none directly address the nomination. Deriving bridge and verification notes can help organize this evidence to clarify their roles and potential connections to the film."
+          },
+          {
+            "t": 2,
+            "harvest_count": 3,
+            "derive_goal": "generic_bridge_or_verification",
+            "derive_mode": "normal",
+            "reason": "The question requires determining which individual was nominated for an Academy Award for Directing 'Seven Beauties', but the current evidence lacks direct information about nominations or the director of 'Seven Beauties'. Deriving notes can help organize the available raw evidence to clarify roles and connections, such as verifying who directed 'Seven Beauties' and bridging to related works, which may support further investigation into nominations."
+          },
+          {
+            "t": 3,
+            "harvest_count": 3,
+            "derive_goal": "generic_bridge_or_verification",
+            "derive_mode": "repair_after_false_stop",
+            "reason": "The current evidence lacks direct information about Academy Award nominations for directing 'Seven Beauties'. Deriving bridge and verification notes can help organize the available raw evidence to clarify the roles and achievements of Manny Coto and Lina Wertmüller, focusing on answer-facing organization and target type clarification as per repair_after_false_stop mode."
+          },
+          {
+            "t": 4,
+            "harvest_count": 1,
+            "derive_goal": "generic_bridge_or_verification",
+            "derive_mode": "repair_after_false_stop",
+            "reason": "local_api_failure_fallback:repair_after_false_stop:generic_bridge_or_verification"
+          }
+        ],
+        "final_answer_source": "context_gold_fallback",
+        "final_support_rule": "explicit_answer_in_evidence",
+        "final_k_t_has_derived": true,
+        "case_mechanism": "late_verification_repair"
+      },
+      {
+        "qid": "5a82a36a55429954d2e2eb8d",
+        "split": "train",
+        "question": "How many hours did the storm which surpassed Typhoon Nora in 2015, grow from a tropical storm to a Category 5 hurricane?",
+        "gold_answer": "24",
+        "terminal_t": 3,
+        "derived_positive_count": 0,
+        "derived_positive_ts": [],
+        "derived_positive_events": [],
+        "derived_trigger_step_count": 3,
+        "derived_trigger_steps": [
+          {
+            "t": 0,
+            "harvest_count": 3,
+            "derive_goal": "target_type_disambiguation",
+            "derive_mode": "normal",
+            "reason": "The question requires identifying a specific storm that surpassed Typhoon Nora in 2015 and determining the hours it took to grow from a tropical storm to a Category 5 hurricane. The current evidence is insufficient, and the top raw candidates provide relevant information about Category 5 storms and intensification timelines, which can help bridge the gap and verify potential matches."
+          },
+          {
+            "t": 1,
+            "harvest_count": 3,
+            "derive_goal": "target_type_disambiguation",
+            "derive_mode": "normal",
+            "reason": "The question requires identifying a specific storm that surpassed Typhoon Nora in 2015 and determining the hours it took to grow from a tropical storm to a Category 5 hurricane. Current evidence is insufficient, and bridge notes can help organize raw candidates to clarify storm identification and rapid intensification timelines, aligning with the derive_goal of target_type_disambiguation."
+          },
+          {
+            "t": 2,
+            "harvest_count": 3,
+            "derive_goal": "target_type_disambiguation",
+            "derive_mode": "normal",
+            "reason": "The question asks about a specific storm's intensification timeline, but current evidence lacks details on the storm's name, its Category 5 status, and the time taken to reach it. Bridge notes can help organize the search by linking hurricane characteristics and intensification patterns."
+          }
+        ],
+        "final_answer_source": "context_gold_fallback",
+        "final_support_rule": "multi_hop_answer_in_evidence",
+        "final_k_t_has_derived": false,
+        "case_mechanism": "raw_or_stop_closure"
+      },
+      {
+        "qid": "5a8b42be55429949d91db515",
+        "split": "test",
+        "question": "What profession does John Lanchester and Alan Dean Foster have in common?",
+        "gold_answer": "novelist",
+        "terminal_t": 4,
+        "derived_positive_count": 1,
+        "derived_positive_ts": [
+          2
+        ],
+        "derived_positive_events": [
+          {
+            "qid": "5a8b42be55429949d91db515",
+            "split": "test",
+            "t": 2,
+            "terminal_t": 4,
+            "position_bucket": "middle_late",
+            "positive_unit_id": "5a8b42be55429949d91db515::derived::5",
+            "note_type": "verification_note",
+            "note_text": "Alan Dean Foster is an American writer of fantasy and science fiction, indicating he is a novelist.",
+            "source_unit_ids": [
+              "5a8b42be55429949d91db515::Alan Dean Foster::0"
+            ],
+            "derive_goal": "bridge_query_entity_to_answer_candidate",
+            "derive_mode": "normal",
+            "proposer_reason": "The current evidence only covers Alan Dean Foster's profession as a writer, but the question asks for a common profession with John Lanchester, requiring bridging to find John Lanchester's profession or linking both to a shared profession.",
+            "harvest_count": 2,
+            "current_r_t_size": 8,
+            "current_c_t_size": 10,
+            "next_is_raw": true,
+            "next_raw_positive_id": "5a8b42be55429949d91db515::Orphan Star::2",
+            "next_raw_positive_in_current_c_t": false,
+            "next_raw_positive_in_current_r_t": false,
+            "future_raw_positive_ids": [
+              "5a8b42be55429949d91db515::Orphan Star::2"
+            ],
+            "future_raw_positive_count": 1,
+            "next_delta_covered_targets": 0
+          }
+        ],
+        "derived_trigger_step_count": 4,
+        "derived_trigger_steps": [
+          {
+            "t": 0,
+            "harvest_count": 2,
+            "derive_goal": "bridge_query_entity_to_answer_candidate",
+            "derive_mode": "normal",
+            "reason": "The current evidence includes John Lanchester as a journalist and novelist, and Alan Dean Foster as a writer of fantasy and science fiction, but a direct bridge or verification note can help organize the information to identify their common profession as novelists, aligning with the gold answer hint."
+          },
+          {
+            "t": 1,
+            "harvest_count": 2,
+            "derive_goal": "bridge_query_entity_to_answer_candidate",
+            "derive_mode": "normal",
+            "reason": "The current evidence only covers Alan Dean Foster's profession, but the question asks for a common profession with John Lanchester. More evidence is needed to bridge to John Lanchester or verify the answer candidate 'novelist'."
+          },
+          {
+            "t": 2,
+            "harvest_count": 2,
+            "derive_goal": "bridge_query_entity_to_answer_candidate",
+            "derive_mode": "normal",
+            "reason": "The current evidence only covers Alan Dean Foster's profession as a writer, but the question asks for a common profession with John Lanchester, requiring bridging to find John Lanchester's profession or linking both to a shared profession."
+          },
+          {
+            "t": 3,
+            "harvest_count": 2,
+            "derive_goal": "bridge_query_entity_to_answer_candidate",
+            "derive_mode": "normal",
+            "reason": "The current evidence focuses on Alan Dean Foster's works and series, but the question asks about a common profession between him and John Lanchester. Bridge notes can help connect Foster's writing career to the broader profession, while verification notes can confirm his profession from the evidence."
+          }
+        ],
+        "final_answer_source": "context_gold_fallback",
+        "final_support_rule": "multi_hop_answer_in_evidence",
+        "final_k_t_has_derived": true,
+        "case_mechanism": "late_verification_repair"
+      },
+      {
+        "qid": "5ab678f455429954757d32d3",
+        "split": "test",
+        "question": "What river runs near the tidal island of Eilean Tioram?",
+        "gold_answer": "River Shiel",
+        "terminal_t": 4,
+        "derived_positive_count": 1,
+        "derived_positive_ts": [
+          0
+        ],
+        "derived_positive_events": [
+          {
+            "qid": "5ab678f455429954757d32d3",
+            "split": "test",
+            "t": 0,
+            "terminal_t": 4,
+            "position_bucket": "early",
+            "positive_unit_id": "5ab678f455429954757d32d3::derived::0",
+            "note_type": "bridge_note",
+            "note_text": "Castle Island is described as a small tidal island in the Firth of Clyde, which may help contextualize tidal island geography in Scotland.",
+            "source_unit_ids": [
+              "5ab678f455429954757d32d3::Castle Island, Scotland::0"
+            ],
+            "derive_goal": "target_type_disambiguation",
+            "derive_mode": "normal",
+            "proposer_reason": "The current evidence is insufficient to answer the question about the river near Eilean Tioram, and the top raw candidates provide relevant information about tidal islands in Scotland that can help organize and bridge to potential target identification.",
+            "harvest_count": 3,
+            "current_r_t_size": 8,
+            "current_c_t_size": 10,
+            "next_is_raw": true,
+            "next_raw_positive_id": "5ab678f455429954757d32d3::Loch Shiel::0",
+            "next_raw_positive_in_current_c_t": true,
+            "next_raw_positive_in_current_r_t": true,
+            "future_raw_positive_ids": [
+              "5ab678f455429954757d32d3::Loch Shiel::0",
+              "5ab678f455429954757d32d3::Castle Tioram::2",
+              "5ab678f455429954757d32d3::Castle Island, Scotland::0"
+            ],
+            "future_raw_positive_count": 3,
+            "next_delta_covered_targets": 1
+          }
+        ],
+        "derived_trigger_step_count": 4,
+        "derived_trigger_steps": [
+          {
+            "t": 0,
+            "harvest_count": 3,
+            "derive_goal": "target_type_disambiguation",
+            "derive_mode": "normal",
+            "reason": "The current evidence is insufficient to answer the question about the river near Eilean Tioram, and the top raw candidates provide relevant information about tidal islands in Scotland that can help organize and bridge to potential target identification."
+          },
+          {
+            "t": 1,
+            "harvest_count": 3,
+            "derive_goal": "target_type_disambiguation",
+            "derive_mode": "normal",
+            "reason": "The current evidence is insufficient to answer the question about the river near Eilean Tioram, and the top raw candidates provide relevant information about tidal islands in Scotland that can help organize and clarify the target type for further investigation."
+          },
+          {
+            "t": 2,
+            "harvest_count": 3,
+            "derive_goal": "target_type_disambiguation",
+            "derive_mode": "normal",
+            "reason": "The current evidence is insufficient to answer the question about the river near Eilean Tioram. The top raw candidates provide information about other tidal islands in Scotland, which can help organize and clarify the target type (tidal islands) and potentially bridge to relevant evidence about Eilean Tioram."
+          },
+          {
+            "t": 3,
+            "harvest_count": 3,
+            "derive_goal": "target_type_disambiguation",
+            "derive_mode": "normal",
+            "reason": "The current evidence includes Loch Shiel and a castle controlling access to it, but the question asks about a river near Eilean Tioram, which is not directly addressed. The top raw candidates provide information about tidal islands in Scotland, including Castle Island and Eilean Donan, which can help organize evidence by linking tidal islands to nearby water bodies, supporting target type disambiguation for rivers and islands."
+          }
+        ],
+        "final_answer_source": "context_gold_fallback",
+        "final_support_rule": "multi_hop_answer_in_evidence",
+        "final_k_t_has_derived": true,
+        "case_mechanism": "early_bridge_scaffold"
+      },
+      {
+        "qid": "5ac2e9c45542990b17b154a0",
+        "split": "test",
+        "question": "When was the federal US law made that was responsible for shutting down Braniff Airways?",
+        "gold_answer": "1978",
+        "terminal_t": 3,
+        "derived_positive_count": 0,
+        "derived_positive_ts": [],
+        "derived_positive_events": [],
+        "derived_trigger_step_count": 3,
+        "derived_trigger_steps": [
+          {
+            "t": 0,
+            "harvest_count": 3,
+            "derive_goal": "bridge_query_entity_to_answer_candidate",
+            "derive_mode": "normal",
+            "reason": "The current evidence is insufficient to answer the question about the federal US law that shut down Braniff Airways, and bridge notes can help organize the available raw evidence to guide further search towards relevant legal or historical contexts."
+          },
+          {
+            "t": 1,
+            "harvest_count": 2,
+            "derive_goal": "bridge_query_entity_to_answer_candidate",
+            "derive_mode": "normal",
+            "reason": "The current evidence includes a candidate linking Braniff's shutdown to the Airline Deregulation Act of 1978, which directly addresses the question about the federal law responsible for shutting down Braniff Airways. Deriving notes can help organize this evidence to bridge the query entity to the answer candidate."
+          },
+          {
+            "t": 2,
+            "harvest_count": 2,
+            "derive_goal": "bridge_query_entity_to_answer_candidate",
+            "derive_mode": "normal",
+            "reason": "The current evidence mentions the Airline Deregulation Act of 1978 and its role in Braniff's shutdown, but lacks direct connection between the law and Braniff Airways. Bridge notes can help organize the raw evidence to link Braniff Airways to the timeline and context of the Airline Deregulation Act."
+          }
+        ],
+        "final_answer_source": "context_gold_fallback",
+        "final_support_rule": "multi_hop_answer_in_evidence",
+        "final_k_t_has_derived": false,
+        "case_mechanism": "raw_or_stop_closure"
+      },
+      {
+        "qid": "5adbcbca5542996e6852523b",
+        "split": "val",
+        "question": "How long, originally, was Shakespeare’s play revolving around the murder of King Duncan performed?",
+        "gold_answer": "1603–1607",
+        "terminal_t": 3,
+        "derived_positive_count": 0,
+        "derived_positive_ts": [],
+        "derived_positive_events": [],
+        "derived_trigger_step_count": 2,
+        "derived_trigger_steps": [
+          {
+            "t": 1,
+            "harvest_count": 2,
+            "derive_goal": "bridge_query_entity_to_answer_candidate",
+            "derive_mode": "normal",
+            "reason": "The question asks about the original performance length of Shakespeare's play involving King Duncan's murder, which is 'Macbeth'. The state summary indicates a need for more evidence, and the bridge anchors include 'shakespeare', 'macbeth', and '1603'. The top raw candidates provide relevant information about 'Macbeth' and King Duncan, allowing for the creation of bridge notes to connect these entities to the answer candidate regarding the play's timeframe."
+          },
+          {
+            "t": 2,
+            "harvest_count": 2,
+            "derive_goal": "bridge_query_entity_to_answer_candidate",
+            "derive_mode": "normal",
+            "reason": "The state summary indicates a need for more evidence to answer the question about the original performance length of Shakespeare's play involving King Duncan's murder. The top raw candidates provide relevant information about King Duncan and characters in 'Macbeth', which can be bridged to the play's context and potentially its performance details, supporting the derive_goal of bridging query entities to answer candidates."
+          }
+        ],
+        "final_answer_source": "context_gold_fallback",
+        "final_support_rule": "multi_hop_answer_in_evidence",
+        "final_k_t_has_derived": false,
+        "case_mechanism": "raw_or_stop_closure"
+      },
+      {
+        "qid": "5ae0c9f355429906c02dab51",
+        "split": "val",
+        "question": "Vinci and Heroscape are both examples of what?",
+        "gold_answer": "board game",
+        "terminal_t": 3,
+        "derived_positive_count": 0,
+        "derived_positive_ts": [],
+        "derived_positive_events": [],
+        "derived_trigger_step_count": 3,
+        "derived_trigger_steps": [
+          {
+            "t": 0,
+            "harvest_count": 1,
+            "derive_goal": "generic_bridge_or_verification",
+            "derive_mode": "normal",
+            "reason": "The question asks for a category that Vinci and Heroscape both belong to, but current evidence only mentions Heroscape as a 'turn-based miniature w' (likely 'wargame' or similar) and Vinci in unrelated contexts. Derived notes can help organize these disparate mentions to potentially identify a common category like 'board game' or 'game'."
+          },
+          {
+            "t": 1,
+            "harvest_count": 0,
+            "derive_goal": "generic_bridge_or_verification",
+            "derive_mode": "normal",
+            "reason": "The provided top raw candidates do not contain relevant evidence about Vinci or Heroscape to support deriving grounded notes for the question. The candidates discuss unrelated topics like Ploteus, Blériot 165, and Visualization (graphics), which cannot be used to construct notes about board games or similar categories."
+          },
+          {
+            "t": 2,
+            "harvest_count": 1,
+            "derive_goal": "generic_bridge_or_verification",
+            "derive_mode": "normal",
+            "reason": "The question asks for a category that Vinci and Heroscape belong to. The provided raw evidence includes a unit about Vinci being a board game, which directly addresses part of the question. Deriving a note can help organize this evidence to support answering the question."
+          }
+        ],
+        "final_answer_source": "context_gold_conflict_fallback",
+        "final_support_rule": "multi_hop_answer_in_evidence",
+        "final_k_t_has_derived": false,
+        "case_mechanism": "raw_or_stop_closure"
+      },
+      {
+        "qid": "5ae536065542990ba0bbb227",
+        "split": "val",
+        "question": "The logarithmic spiral was investigated by the mathematician who was a proponent of which branch of mathematics?",
+        "gold_answer": "Leibnizian calculus",
+        "terminal_t": 3,
+        "derived_positive_count": 0,
+        "derived_positive_ts": [],
+        "derived_positive_events": [],
+        "derived_trigger_step_count": 3,
+        "derived_trigger_steps": [
+          {
+            "t": 0,
+            "harvest_count": 2,
+            "derive_goal": "bridge_query_entity_to_answer_candidate",
+            "derive_mode": "normal",
+            "reason": "The current evidence is insufficient to answer the question about which branch of mathematics the mathematician was a proponent of, and the top raw candidates provide relevant information that can be organized into bridge notes to connect the logarithmic spiral to Jakob Bernoulli and his mathematical contributions."
+          },
+          {
+            "t": 1,
+            "harvest_count": 3,
+            "derive_goal": "bridge_query_entity_to_answer_candidate",
+            "derive_mode": "normal",
+            "reason": "The current evidence is insufficient to answer the question directly. Deriving bridge notes can help connect the logarithmic spiral to the mathematician and the branch of mathematics, organizing the raw evidence to support the query."
+          },
+          {
+            "t": 2,
+            "harvest_count": 2,
+            "derive_goal": "target_type_disambiguation",
+            "derive_mode": "normal",
+            "reason": "The current evidence is insufficient to directly answer the question about the mathematician's branch of mathematics, and deriving bridge notes can help organize the raw evidence to clarify connections between the logarithmic spiral and the mathematician's advocacy."
+          }
+        ],
+        "final_answer_source": "llm",
+        "final_support_rule": "multi_hop_answer_in_evidence",
+        "final_k_t_has_derived": false,
+        "case_mechanism": "raw_or_stop_closure"
+      },
+      {
+        "qid": "5ae5fc345542993aec5ec1f8",
+        "split": "test",
+        "question": "Kiki Preston was the alleged mother of a child born out of wedlock with a prince born in which year ?",
+        "gold_answer": "1902",
+        "terminal_t": 3,
+        "derived_positive_count": 0,
+        "derived_positive_ts": [],
+        "derived_positive_events": [],
+        "derived_trigger_step_count": 3,
+        "derived_trigger_steps": [
+          {
+            "t": 0,
+            "harvest_count": 3,
+            "derive_goal": "bridge_query_entity_to_answer_candidate",
+            "derive_mode": "normal",
+            "reason": "The current evidence lacks direct information about the prince's birth year, and the top raw candidates provide relevant context on children born out of wedlock and American citizenship, which can help bridge the query entity (Kiki Preston as mother) to potential answer candidates."
+          },
+          {
+            "t": 1,
+            "harvest_count": 1,
+            "derive_goal": "bridge_query_entity_to_answer_candidate",
+            "derive_mode": "normal",
+            "reason": "local_api_failure_fallback:normal:bridge_query_entity_to_answer_candidate"
+          },
+          {
+            "t": 2,
+            "harvest_count": 1,
+            "derive_goal": "bridge_query_entity_to_answer_candidate",
+            "derive_mode": "normal",
+            "reason": "local_api_failure_fallback:normal:bridge_query_entity_to_answer_candidate"
+          }
+        ],
+        "final_answer_source": "llm",
+        "final_support_rule": "multi_hop_answer_in_evidence",
+        "final_k_t_has_derived": false,
+        "case_mechanism": "raw_or_stop_closure"
+      }
+    ]
+  },
+  "all_case_records": [
+    {
+      "qid": "5a7630cb554299109176e6af",
+      "split": "train",
+      "question": "Ulf Merbold and Lodewijk van den Berg, both flew in ?",
+      "gold_answer": "space",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 3,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 3,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The question asks about Ulf Merbold and Lodewijk van den Berg flying in something, but current evidence lacks direct information about their flight activities. The top raw candidates provide information about various individuals named van den Berg, which could help identify the correct Lodewijk van den Berg and potentially bridge to the flight context."
+        },
+        {
+          "t": 1,
+          "harvest_count": 0,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The provided top raw candidates do not contain any information about Ulf Merbold or Lodewijk van den Berg's spaceflight activities, which is the focus of the question. The candidates are about unrelated individuals with similar names (e.g., Cássio van den Berg, Albert Jan van den Berg) or unrelated topics (De Speld), and thus cannot be used to ground notes that address the evidence need."
+        },
+        {
+          "t": 2,
+          "harvest_count": 1,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "local_api_failure_fallback:normal:generic_bridge_or_verification"
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5a77a95d5542992a6e59df64",
+      "split": "train",
+      "question": "What actress born in 1967 stars in a 1997 film directed by Wes Craven?",
+      "gold_answer": "Liev Schreiber",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 2,
+      "derived_trigger_steps": [
+        {
+          "t": 1,
+          "harvest_count": 3,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question. The question asks for an actress born in 1967 starring in a 1997 Wes Craven film. The provided evidence mentions a 1997 Wes Craven film (Scream 2) and a person born in 1967 (Liev Schreiber), but Liev Schreiber is male, not an actress. The top raw candidates contain information about other Wes Craven films and actors, which could help bridge or verify connections to identify the correct actress."
+        },
+        {
+          "t": 2,
+          "harvest_count": 3,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about an actress born in 1967 starring in a 1997 Wes Craven film. The top raw candidates provide information about Wes Craven's films and actors, but none directly address the specific requirements. Deriving bridge and verification notes can help organize this evidence to identify relevant connections or gaps."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5a7a98de55429941d65f26e4",
+      "split": "train",
+      "question": "Who was born first Saul Metzstein or Edmund Goulding ?",
+      "gold_answer": "Edmund Goulding",
+      "terminal_t": 4,
+      "derived_positive_count": 1,
+      "derived_positive_ts": [
+        2
+      ],
+      "derived_positive_events": [
+        {
+          "qid": "5a7a98de55429941d65f26e4",
+          "split": "train",
+          "t": 2,
+          "terminal_t": 4,
+          "position_bucket": "middle_late",
+          "positive_unit_id": "5a7a98de55429941d65f26e4::derived::4",
+          "note_type": "bridge_note",
+          "note_text": "Edmund Goulding was active as an actor in the early 1920s, as seen in the 1922 film 'Three Live Ghosts'.",
+          "source_unit_ids": [
+            "5a7a98de55429941d65f26e4::Edmund Goulding::1"
+          ],
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "proposer_reason": "The current evidence is insufficient to answer the question about who was born first between Saul Metzstein and Edmund Goulding. Deriving bridge notes can help organize the available raw evidence to connect the query entities to potential answer candidates, such as by noting their career activities or timelines, which may support further investigation into their birth dates.",
+          "harvest_count": 2,
+          "current_r_t_size": 8,
+          "current_c_t_size": 10,
+          "next_is_raw": true,
+          "next_raw_positive_id": "5a7a98de55429941d65f26e4::Dinosaurs on a Spaceship::2",
+          "next_raw_positive_in_current_c_t": true,
+          "next_raw_positive_in_current_r_t": true,
+          "future_raw_positive_ids": [
+            "5a7a98de55429941d65f26e4::Dinosaurs on a Spaceship::2"
+          ],
+          "future_raw_positive_count": 1,
+          "next_delta_covered_targets": 0
+        }
+      ],
+      "derived_trigger_step_count": 4,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 2,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The current evidence includes birth years for both individuals, but the question requires comparing who was born first. Deriving bridge notes can help organize the evidence to support this comparison."
+        },
+        {
+          "t": 1,
+          "harvest_count": 2,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The question requires comparing birth dates of Saul Metzstein and Edmund Goulding, but current evidence lacks birth information for Edmund Goulding. Deriving bridge notes can help organize available evidence to connect entities and identify gaps for further search."
+        },
+        {
+          "t": 2,
+          "harvest_count": 2,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about who was born first between Saul Metzstein and Edmund Goulding. Deriving bridge notes can help organize the available raw evidence to connect the query entities to potential answer candidates, such as by noting their career activities or timelines, which may support further investigation into their birth dates."
+        },
+        {
+          "t": 3,
+          "harvest_count": 2,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about who was born first between Saul Metzstein and Edmund Goulding. The available raw candidates provide information about their careers but not their birth dates. Deriving bridge notes can help organize the evidence to identify what information is missing and guide further search for birth dates."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": true,
+      "case_mechanism": "mixed_with_stop_fallback"
+    },
+    {
+      "qid": "5a7bbe76554299042af8f7d3",
+      "split": "val",
+      "question": "Did Manny Coto, a Cuban American writer or Lina Wertmüller, an Italian screenwriter get nominated for an Academy Award for Directing \"Seven Beauties\"?",
+      "gold_answer": "Lina Wertmüller",
+      "terminal_t": 5,
+      "derived_positive_count": 2,
+      "derived_positive_ts": [
+        3,
+        4
+      ],
+      "derived_positive_events": [
+        {
+          "qid": "5a7bbe76554299042af8f7d3",
+          "split": "val",
+          "t": 3,
+          "terminal_t": 5,
+          "position_bucket": "middle_late",
+          "positive_unit_id": "5a7bbe76554299042af8f7d3::derived::9",
+          "note_type": "verification_note",
+          "note_text": "The film 'Seven Beauties' is an Italian language film from 1975, but no direct nomination details are provided in the current raw evidence.",
+          "source_unit_ids": [
+            "5a7bbe76554299042af8f7d3::Swept Away (1974 film)::0"
+          ],
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "repair_after_false_stop",
+          "proposer_reason": "The current evidence lacks direct information about Academy Award nominations for directing 'Seven Beauties'. Deriving bridge and verification notes can help organize the available raw evidence to clarify the roles and achievements of Manny Coto and Lina Wertmüller, focusing on answer-facing organization and target type clarification as per repair_after_false_stop mode.",
+          "harvest_count": 3,
+          "current_r_t_size": 7,
+          "current_c_t_size": 9,
+          "next_is_raw": false,
+          "next_raw_positive_id": null,
+          "next_raw_positive_in_current_c_t": false,
+          "next_raw_positive_in_current_r_t": false,
+          "future_raw_positive_ids": [],
+          "future_raw_positive_count": 0,
+          "next_delta_covered_targets": 0
+        },
+        {
+          "qid": "5a7bbe76554299042af8f7d3",
+          "split": "val",
+          "t": 4,
+          "terminal_t": 5,
+          "position_bucket": "middle_late",
+          "positive_unit_id": "5a7bbe76554299042af8f7d3::derived::10",
+          "note_type": "verification_note",
+          "note_text": "The film 'Seven Beauties' is an Italian language film from 1975, but no direct nomination details are provided in the current raw evidence.",
+          "source_unit_ids": [
+            "5a7bbe76554299042af8f7d3::Swept Away (1974 film)::0"
+          ],
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "repair_after_false_stop",
+          "proposer_reason": "local_api_failure_fallback:repair_after_false_stop:generic_bridge_or_verification",
+          "harvest_count": 1,
+          "current_r_t_size": 7,
+          "current_c_t_size": 8,
+          "next_is_raw": false,
+          "next_raw_positive_id": null,
+          "next_raw_positive_in_current_c_t": false,
+          "next_raw_positive_in_current_r_t": false,
+          "future_raw_positive_ids": [],
+          "future_raw_positive_count": 0,
+          "next_delta_covered_targets": null
+        }
+      ],
+      "derived_trigger_step_count": 5,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 1,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "local_api_failure_fallback:normal:generic_bridge_or_verification"
+        },
+        {
+          "t": 1,
+          "harvest_count": 3,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about Academy Award nominations for directing 'Seven Beauties'. The top raw candidates provide relevant information about Lina Wertmüller and Manny Coto, but none directly address the nomination. Deriving bridge and verification notes can help organize this evidence to clarify their roles and potential connections to the film."
+        },
+        {
+          "t": 2,
+          "harvest_count": 3,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The question requires determining which individual was nominated for an Academy Award for Directing 'Seven Beauties', but the current evidence lacks direct information about nominations or the director of 'Seven Beauties'. Deriving notes can help organize the available raw evidence to clarify roles and connections, such as verifying who directed 'Seven Beauties' and bridging to related works, which may support further investigation into nominations."
+        },
+        {
+          "t": 3,
+          "harvest_count": 3,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "repair_after_false_stop",
+          "reason": "The current evidence lacks direct information about Academy Award nominations for directing 'Seven Beauties'. Deriving bridge and verification notes can help organize the available raw evidence to clarify the roles and achievements of Manny Coto and Lina Wertmüller, focusing on answer-facing organization and target type clarification as per repair_after_false_stop mode."
+        },
+        {
+          "t": 4,
+          "harvest_count": 1,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "repair_after_false_stop",
+          "reason": "local_api_failure_fallback:repair_after_false_stop:generic_bridge_or_verification"
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "explicit_answer_in_evidence",
+      "final_k_t_has_derived": true,
+      "case_mechanism": "late_verification_repair"
+    },
+    {
+      "qid": "5a7e1b7155429965cec5ea6c",
+      "split": "test",
+      "question": "Saltillo Engine is an engine plant in Ramos Arizpe that belongs to the American subsidiary of what company?",
+      "gold_answer": "Fiat Chrysler Automobiles N.V.",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 2,
+      "derived_trigger_steps": [
+        {
+          "t": 1,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence lacks direct connection between Saltillo Engine, Ramos Arizpe, and the American subsidiary's parent company. Deriving bridge and verification notes can help organize raw evidence to link these elements."
+        },
+        {
+          "t": 2,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about Saltillo Engine's parent company. The top raw candidates mention GM and Ford plants, but none directly address the Saltillo Engine plant or its ownership. Deriving bridge notes could help connect the Ramos Arizpe location to potential parent companies, and verification notes could confirm or refute these connections based on the available evidence."
+        }
+      ],
+      "final_answer_source": "llm",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5a80b377554299485f5986cb",
+      "split": "train",
+      "question": "What is the name of the place that is on the west bank of the Missouri River 25 mi northwest of Kansas City, Missouri where Jack Killilay was born?",
+      "gold_answer": "Leavenworth, Kansas",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 3,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about Jack Killilay's birthplace, and the top raw candidates do not directly address the location described. Deriving bridge notes could help connect the geographical description to potential locations, and verification notes could confirm or refute candidate places, organizing the search for relevant evidence."
+        },
+        {
+          "t": 1,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence directly answers the question, but additional verification notes can strengthen the connection between the known answer and the geographical context provided in the raw candidates."
+        },
+        {
+          "t": 2,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The question asks for a place on the west bank of the Missouri River 25 mi northwest of Kansas City, Missouri where Jack Killilay was born. The state summary indicates he was born in Leavenworth, Kansas, but more evidence is needed to connect Leavenworth to the specific location described. The top raw candidates provide information about Kansas City, Missouri and North Kansas City, Missouri, which can help verify or bridge to the answer."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5a82a36a55429954d2e2eb8d",
+      "split": "train",
+      "question": "How many hours did the storm which surpassed Typhoon Nora in 2015, grow from a tropical storm to a Category 5 hurricane?",
+      "gold_answer": "24",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 3,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 3,
+          "derive_goal": "target_type_disambiguation",
+          "derive_mode": "normal",
+          "reason": "The question requires identifying a specific storm that surpassed Typhoon Nora in 2015 and determining the hours it took to grow from a tropical storm to a Category 5 hurricane. The current evidence is insufficient, and the top raw candidates provide relevant information about Category 5 storms and intensification timelines, which can help bridge the gap and verify potential matches."
+        },
+        {
+          "t": 1,
+          "harvest_count": 3,
+          "derive_goal": "target_type_disambiguation",
+          "derive_mode": "normal",
+          "reason": "The question requires identifying a specific storm that surpassed Typhoon Nora in 2015 and determining the hours it took to grow from a tropical storm to a Category 5 hurricane. Current evidence is insufficient, and bridge notes can help organize raw candidates to clarify storm identification and rapid intensification timelines, aligning with the derive_goal of target_type_disambiguation."
+        },
+        {
+          "t": 2,
+          "harvest_count": 3,
+          "derive_goal": "target_type_disambiguation",
+          "derive_mode": "normal",
+          "reason": "The question asks about a specific storm's intensification timeline, but current evidence lacks details on the storm's name, its Category 5 status, and the time taken to reach it. Bridge notes can help organize the search by linking hurricane characteristics and intensification patterns."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5a857cc05542991dd0999e59",
+      "split": "train",
+      "question": "The manuscript for Flute Sonata in C major, BWV 1033 is in the hand of a German musician whose godfather is whom?",
+      "gold_answer": "Georg Philipp Telemann",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 2,
+      "derived_trigger_steps": [
+        {
+          "t": 1,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about the godfather of the German musician who wrote the manuscript for Flute Sonata in C major, BWV 1033, as it only references Handel's works and his godfather Telemann, but not directly related to BWV 1033. Deriving notes can help organize and verify connections between the provided raw candidates and the question to potentially uncover relevant information."
+        },
+        {
+          "t": 2,
+          "harvest_count": 0,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The provided top raw candidates do not contain any evidence relevant to the question about the manuscript for Flute Sonata in C major, BWV 1033 or the godfather of the German musician who wrote it. The candidates discuss unrelated compositions by Bach, Handel, and Mozart, and none mention Telemann or the specific sonata in question. Therefore, no grounded notes can be derived from these sources."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5a8b42be55429949d91db515",
+      "split": "test",
+      "question": "What profession does John Lanchester and Alan Dean Foster have in common?",
+      "gold_answer": "novelist",
+      "terminal_t": 4,
+      "derived_positive_count": 1,
+      "derived_positive_ts": [
+        2
+      ],
+      "derived_positive_events": [
+        {
+          "qid": "5a8b42be55429949d91db515",
+          "split": "test",
+          "t": 2,
+          "terminal_t": 4,
+          "position_bucket": "middle_late",
+          "positive_unit_id": "5a8b42be55429949d91db515::derived::5",
+          "note_type": "verification_note",
+          "note_text": "Alan Dean Foster is an American writer of fantasy and science fiction, indicating he is a novelist.",
+          "source_unit_ids": [
+            "5a8b42be55429949d91db515::Alan Dean Foster::0"
+          ],
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "proposer_reason": "The current evidence only covers Alan Dean Foster's profession as a writer, but the question asks for a common profession with John Lanchester, requiring bridging to find John Lanchester's profession or linking both to a shared profession.",
+          "harvest_count": 2,
+          "current_r_t_size": 8,
+          "current_c_t_size": 10,
+          "next_is_raw": true,
+          "next_raw_positive_id": "5a8b42be55429949d91db515::Orphan Star::2",
+          "next_raw_positive_in_current_c_t": false,
+          "next_raw_positive_in_current_r_t": false,
+          "future_raw_positive_ids": [
+            "5a8b42be55429949d91db515::Orphan Star::2"
+          ],
+          "future_raw_positive_count": 1,
+          "next_delta_covered_targets": 0
+        }
+      ],
+      "derived_trigger_step_count": 4,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 2,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The current evidence includes John Lanchester as a journalist and novelist, and Alan Dean Foster as a writer of fantasy and science fiction, but a direct bridge or verification note can help organize the information to identify their common profession as novelists, aligning with the gold answer hint."
+        },
+        {
+          "t": 1,
+          "harvest_count": 2,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The current evidence only covers Alan Dean Foster's profession, but the question asks for a common profession with John Lanchester. More evidence is needed to bridge to John Lanchester or verify the answer candidate 'novelist'."
+        },
+        {
+          "t": 2,
+          "harvest_count": 2,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The current evidence only covers Alan Dean Foster's profession as a writer, but the question asks for a common profession with John Lanchester, requiring bridging to find John Lanchester's profession or linking both to a shared profession."
+        },
+        {
+          "t": 3,
+          "harvest_count": 2,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The current evidence focuses on Alan Dean Foster's works and series, but the question asks about a common profession between him and John Lanchester. Bridge notes can help connect Foster's writing career to the broader profession, while verification notes can confirm his profession from the evidence."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": true,
+      "case_mechanism": "late_verification_repair"
+    },
+    {
+      "qid": "5a8f4966554299458435d59c",
+      "split": "train",
+      "question": "How many counties are there on the Island where the 2009 United States Open Championship was held ?",
+      "gold_answer": "four",
+      "terminal_t": 2,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 2,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 0,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence does not directly address the question about the number of counties on the island where the 2009 U.S. Open was held. Deriving bridge and verification notes can help organize the search by identifying the location of the 2009 U.S. Open and verifying its island status, which are necessary steps to answer the question."
+        },
+        {
+          "t": 1,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about the number of counties on the island where the 2009 U.S. Open was held. The top raw candidates provide information about other U.S. Open years but not the 2009 event or its location. Grounded notes can help organize the search by bridging to relevant information about the 2009 U.S. Open and verifying the island's county structure."
+        }
+      ],
+      "final_answer_source": "llm",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5ab678f455429954757d32d3",
+      "split": "test",
+      "question": "What river runs near the tidal island of Eilean Tioram?",
+      "gold_answer": "River Shiel",
+      "terminal_t": 4,
+      "derived_positive_count": 1,
+      "derived_positive_ts": [
+        0
+      ],
+      "derived_positive_events": [
+        {
+          "qid": "5ab678f455429954757d32d3",
+          "split": "test",
+          "t": 0,
+          "terminal_t": 4,
+          "position_bucket": "early",
+          "positive_unit_id": "5ab678f455429954757d32d3::derived::0",
+          "note_type": "bridge_note",
+          "note_text": "Castle Island is described as a small tidal island in the Firth of Clyde, which may help contextualize tidal island geography in Scotland.",
+          "source_unit_ids": [
+            "5ab678f455429954757d32d3::Castle Island, Scotland::0"
+          ],
+          "derive_goal": "target_type_disambiguation",
+          "derive_mode": "normal",
+          "proposer_reason": "The current evidence is insufficient to answer the question about the river near Eilean Tioram, and the top raw candidates provide relevant information about tidal islands in Scotland that can help organize and bridge to potential target identification.",
+          "harvest_count": 3,
+          "current_r_t_size": 8,
+          "current_c_t_size": 10,
+          "next_is_raw": true,
+          "next_raw_positive_id": "5ab678f455429954757d32d3::Loch Shiel::0",
+          "next_raw_positive_in_current_c_t": true,
+          "next_raw_positive_in_current_r_t": true,
+          "future_raw_positive_ids": [
+            "5ab678f455429954757d32d3::Loch Shiel::0",
+            "5ab678f455429954757d32d3::Castle Tioram::2",
+            "5ab678f455429954757d32d3::Castle Island, Scotland::0"
+          ],
+          "future_raw_positive_count": 3,
+          "next_delta_covered_targets": 1
+        }
+      ],
+      "derived_trigger_step_count": 4,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 3,
+          "derive_goal": "target_type_disambiguation",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about the river near Eilean Tioram, and the top raw candidates provide relevant information about tidal islands in Scotland that can help organize and bridge to potential target identification."
+        },
+        {
+          "t": 1,
+          "harvest_count": 3,
+          "derive_goal": "target_type_disambiguation",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about the river near Eilean Tioram, and the top raw candidates provide relevant information about tidal islands in Scotland that can help organize and clarify the target type for further investigation."
+        },
+        {
+          "t": 2,
+          "harvest_count": 3,
+          "derive_goal": "target_type_disambiguation",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about the river near Eilean Tioram. The top raw candidates provide information about other tidal islands in Scotland, which can help organize and clarify the target type (tidal islands) and potentially bridge to relevant evidence about Eilean Tioram."
+        },
+        {
+          "t": 3,
+          "harvest_count": 3,
+          "derive_goal": "target_type_disambiguation",
+          "derive_mode": "normal",
+          "reason": "The current evidence includes Loch Shiel and a castle controlling access to it, but the question asks about a river near Eilean Tioram, which is not directly addressed. The top raw candidates provide information about tidal islands in Scotland, including Castle Island and Eilean Donan, which can help organize evidence by linking tidal islands to nearby water bodies, supporting target type disambiguation for rivers and islands."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": true,
+      "case_mechanism": "early_bridge_scaffold"
+    },
+    {
+      "qid": "5ab7d346554299366779400b",
+      "split": "train",
+      "question": "What state does Jim Garland and Harlan County War have in common?",
+      "gold_answer": "Kentucky",
+      "terminal_t": 3,
+      "derived_positive_count": 1,
+      "derived_positive_ts": [
+        1
+      ],
+      "derived_positive_events": [
+        {
+          "qid": "5ab7d346554299366779400b",
+          "split": "train",
+          "t": 1,
+          "terminal_t": 3,
+          "position_bucket": "middle_late",
+          "positive_unit_id": "5ab7d346554299366779400b::derived::0",
+          "note_type": "bridge_note",
+          "note_text": "Harry Simms was sent to Harlan County, Kentucky during the Harlan County War, linking the war to Kentucky.",
+          "source_unit_ids": [
+            "5ab7d346554299366779400b::Harry Simms (labor leader)::1"
+          ],
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "proposer_reason": "The query requires identifying a common state between Jim Garland and the Harlan County War, and the top raw candidates provide evidence linking Harlan County War to Kentucky, which can be bridged to Jim Garland's association with coal mining regions, potentially in Kentucky.",
+          "harvest_count": 3,
+          "current_r_t_size": 7,
+          "current_c_t_size": 9,
+          "next_is_raw": true,
+          "next_raw_positive_id": "5ab7d346554299366779400b::Battle of Evarts::0",
+          "next_raw_positive_in_current_c_t": false,
+          "next_raw_positive_in_current_r_t": false,
+          "future_raw_positive_ids": [
+            "5ab7d346554299366779400b::Battle of Evarts::0"
+          ],
+          "future_raw_positive_count": 1,
+          "next_delta_covered_targets": 0
+        }
+      ],
+      "derived_trigger_step_count": 2,
+      "derived_trigger_steps": [
+        {
+          "t": 1,
+          "harvest_count": 3,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The query requires identifying a common state between Jim Garland and the Harlan County War, and the top raw candidates provide evidence linking Harlan County War to Kentucky, which can be bridged to Jim Garland's association with coal mining regions, potentially in Kentucky."
+        },
+        {
+          "t": 2,
+          "harvest_count": 4,
+          "derive_goal": "target_type_disambiguation",
+          "derive_mode": "normal",
+          "reason": "The question requires identifying a common state between Jim Garland and the Harlan County War. Current evidence lacks explicit state information for Jim Garland, but the Harlan County War is linked to Kentucky in the provided raw candidates. Deriving notes can help organize this evidence to clarify the state connection."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": true,
+      "case_mechanism": "mixed_with_stop_fallback"
+    },
+    {
+      "qid": "5ab8c2465542991b5579effb",
+      "split": "val",
+      "question": "What position does the current holder of the Ligue 1 Young player of the year play?",
+      "gold_answer": "forward",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 2,
+      "derived_trigger_steps": [
+        {
+          "t": 1,
+          "harvest_count": 1,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "local_api_failure_fallback:normal:generic_bridge_or_verification"
+        },
+        {
+          "t": 2,
+          "harvest_count": 0,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The provided top raw candidates do not contain any evidence related to Ousmane Dembélé, the Ligue 1 Young Player of the Year, or his playing position. They only discuss other awards like PFA Young Player of the Year, Vietnamese Golden Ball, and SFWA Young Player of the Year, which are irrelevant to the question. Therefore, no grounded notes can be derived from these sources to support the current evidence."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5ab922ce554299753720f729",
+      "split": "val",
+      "question": "Jerry Stubbs wrestled as Mr. Olympia in what former professional wrestler, promoter, and WWE Hall of Fame Inductee’s wrestling area?",
+      "gold_answer": "Bill Watts",
+      "terminal_t": 6,
+      "derived_positive_count": 3,
+      "derived_positive_ts": [
+        2,
+        4,
+        5
+      ],
+      "derived_positive_events": [
+        {
+          "qid": "5ab922ce554299753720f729",
+          "split": "val",
+          "t": 2,
+          "terminal_t": 6,
+          "position_bucket": "middle_late",
+          "positive_unit_id": "5ab922ce554299753720f729::derived::0",
+          "note_type": "bridge_note",
+          "note_text": "The WWE Hall of Fame includes inductees from various wrestling organizations, such as WCW and NWA.",
+          "source_unit_ids": [
+            "5ab922ce554299753720f729::WCW Hall of Fame::8"
+          ],
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "proposer_reason": "The current evidence is insufficient to answer the question about Jerry Stubbs wrestling as Mr. Olympia in a specific wrestling area. The top raw candidates provide information about Hall of Fame inductees and wrestling organizations, which could help bridge or verify connections to potential answers like Bill Watts, but no direct evidence links Stubbs to Watts or a specific area. Deriving notes can organize this information to support further investigation.",
+          "harvest_count": 3,
+          "current_r_t_size": 7,
+          "current_c_t_size": 9,
+          "next_is_raw": true,
+          "next_raw_positive_id": "5ab922ce554299753720f729::Billy Sandow::4",
+          "next_raw_positive_in_current_c_t": true,
+          "next_raw_positive_in_current_r_t": true,
+          "future_raw_positive_ids": [
+            "5ab922ce554299753720f729::Billy Sandow::4"
+          ],
+          "future_raw_positive_count": 1,
+          "next_delta_covered_targets": 0
+        },
+        {
+          "qid": "5ab922ce554299753720f729",
+          "split": "val",
+          "t": 4,
+          "terminal_t": 6,
+          "position_bucket": "middle_late",
+          "positive_unit_id": "5ab922ce554299753720f729::derived::7",
+          "note_type": "verification_note",
+          "note_text": "Carlos Colón Sr. was inducted into the WWE Hall of Fame in 2014, indicating his recognition in professional wrestling.",
+          "source_unit_ids": [
+            "5ab922ce554299753720f729::Carlos Colón Sr.::3"
+          ],
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "repair_after_false_stop",
+          "proposer_reason": "The question asks about Jerry Stubbs wrestling as Mr. Olympia in a specific wrestling area belonging to a former wrestler, promoter, and WWE Hall of Fame inductee. Current evidence lacks direct connections between Jerry Stubbs, Mr. Olympia, and the target individual. Deriving bridge and verification notes can help organize raw evidence to clarify relationships and focus on identifying the correct person, such as Bill Watts, who is a former wrestler, promoter, and WWE Hall of Fame inductee, and may be linked to the wrestling area in question.",
+          "harvest_count": 4,
+          "current_r_t_size": 7,
+          "current_c_t_size": 9,
+          "next_is_raw": false,
+          "next_raw_positive_id": null,
+          "next_raw_positive_in_current_c_t": false,
+          "next_raw_positive_in_current_r_t": false,
+          "future_raw_positive_ids": [],
+          "future_raw_positive_count": 0,
+          "next_delta_covered_targets": 0
+        },
+        {
+          "qid": "5ab922ce554299753720f729",
+          "split": "val",
+          "t": 5,
+          "terminal_t": 6,
+          "position_bucket": "middle_late",
+          "positive_unit_id": "5ab922ce554299753720f729::derived::10",
+          "note_type": "verification_note",
+          "note_text": "Carlos Colón Sr. was inducted into the WWE Hall of Fame in 2014.",
+          "source_unit_ids": [
+            "5ab922ce554299753720f729::Carlos Colón Sr.::3"
+          ],
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "proposer_reason": "local_api_failure_fallback:normal:generic_bridge_or_verification",
+          "harvest_count": 1,
+          "current_r_t_size": 7,
+          "current_c_t_size": 8,
+          "next_is_raw": false,
+          "next_raw_positive_id": null,
+          "next_raw_positive_in_current_c_t": false,
+          "next_raw_positive_in_current_r_t": false,
+          "future_raw_positive_ids": [],
+          "future_raw_positive_count": 0,
+          "next_delta_covered_targets": null
+        }
+      ],
+      "derived_trigger_step_count": 6,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 0,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The provided top raw candidates do not contain relevant information about Jerry Stubbs, Mr. Olympia, Bill Watts, or Mid-South wrestling area. They discuss unrelated Hall of Fame inductees and institutions, so no grounded notes can be constructed from them to address the evidence gap."
+        },
+        {
+          "t": 1,
+          "harvest_count": 0,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The provided top raw candidates do not contain any information relevant to Jerry Stubbs, Mr. Olympia, or Bill Watts' wrestling area, so no grounded notes can be constructed from them."
+        },
+        {
+          "t": 2,
+          "harvest_count": 3,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about Jerry Stubbs wrestling as Mr. Olympia in a specific wrestling area. The top raw candidates provide information about Hall of Fame inductees and wrestling organizations, which could help bridge or verify connections to potential answers like Bill Watts, but no direct evidence links Stubbs to Watts or a specific area. Deriving notes can organize this information to support further investigation."
+        },
+        {
+          "t": 3,
+          "harvest_count": 3,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence lacks direct connections between Jerry Stubbs, Mr. Olympia, and the specific WWE Hall of Fame inductee's wrestling area. The top raw candidates provide information about WWE Hall of Fame inductees and their backgrounds, which can help bridge or verify relationships relevant to the question."
+        },
+        {
+          "t": 4,
+          "harvest_count": 4,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "repair_after_false_stop",
+          "reason": "The question asks about Jerry Stubbs wrestling as Mr. Olympia in a specific wrestling area belonging to a former wrestler, promoter, and WWE Hall of Fame inductee. Current evidence lacks direct connections between Jerry Stubbs, Mr. Olympia, and the target individual. Deriving bridge and verification notes can help organize raw evidence to clarify relationships and focus on identifying the correct person, such as Bill Watts, who is a former wrestler, promoter, and WWE Hall of Fame inductee, and may be linked to the wrestling area in question."
+        },
+        {
+          "t": 5,
+          "harvest_count": 1,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "local_api_failure_fallback:normal:generic_bridge_or_verification"
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": true,
+      "case_mechanism": "mixed_with_stop_fallback"
+    },
+    {
+      "qid": "5ab964ae5542996be20204c0",
+      "split": "train",
+      "question": "What New York county is Hartland Swamp Wildlife Management Area located in?",
+      "gold_answer": "Niagara County",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 2,
+      "derived_trigger_steps": [
+        {
+          "t": 1,
+          "harvest_count": 0,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The provided top raw candidates do not contain any information about Hartland Swamp Wildlife Management Area or its location in New York, so no grounded notes can be derived from them."
+        },
+        {
+          "t": 2,
+          "harvest_count": 1,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "local_api_failure_fallback:normal:generic_bridge_or_verification"
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5aba99b755429955dce3ee9c",
+      "split": "val",
+      "question": "What is the meaning of the acronym of the South Korean boy band, U-KISS, who is known for their album named \"Bring It Back 2 Old School\"?",
+      "gold_answer": "Ubiquitous Korean International Idol Super Star",
+      "terminal_t": 4,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 4,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence only mentions U-KISS albums and a member, but does not provide information about the meaning of the acronym. Deriving bridge notes can help organize the available evidence about U-KISS to potentially connect to the acronym meaning."
+        },
+        {
+          "t": 1,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence lacks direct information about the meaning of the acronym U-KISS, which is the core of the question. The top raw candidates provide information about U-KISS members and albums, but not the acronym's meaning. Deriving bridge notes can help organize this evidence to potentially connect to the needed information."
+        },
+        {
+          "t": 2,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The state summary indicates a need for more evidence about the acronym meaning, and the top raw candidates provide relevant information about U-KISS that can be organized into grounded notes to support answering the question."
+        },
+        {
+          "t": 3,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to fully answer the question about U-KISS's acronym meaning, and the top raw candidates provide relevant but unconnected information about the band's albums and members that could be organized into notes to support verification or bridging to the existing evidence."
+        }
+      ],
+      "final_answer_source": "llm",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5abd289e5542993062266ba9",
+      "split": "train",
+      "question": "What years did the hotel and casino operated that Jack Entratter manage positions for in Las Vegas?",
+      "gold_answer": "1952 to 1996",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 3,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 0,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The provided top raw candidates do not contain any information about Jack Entratter or the specific hotel and casino he managed in Las Vegas. The candidates mention other hotels and casinos (Westgate, Monte Carlo, Tropicana intersection) but none are relevant to the question about Jack Entratter's management years. Without evidence about Jack Entratter or his associated hotel/casino, no grounded notes can be derived from these sources."
+        },
+        {
+          "t": 1,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about Jack Entratter's management years at Las Vegas hotels and casinos. The top raw candidates provide relevant information about the Sands Hotel and Casino and other properties, which can be used to create bridge and verification notes to organize evidence for further investigation."
+        },
+        {
+          "t": 2,
+          "harvest_count": 1,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "local_api_failure_fallback:normal:generic_bridge_or_verification"
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5ac2e9c45542990b17b154a0",
+      "split": "test",
+      "question": "When was the federal US law made that was responsible for shutting down Braniff Airways?",
+      "gold_answer": "1978",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 3,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 3,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about the federal US law that shut down Braniff Airways, and bridge notes can help organize the available raw evidence to guide further search towards relevant legal or historical contexts."
+        },
+        {
+          "t": 1,
+          "harvest_count": 2,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The current evidence includes a candidate linking Braniff's shutdown to the Airline Deregulation Act of 1978, which directly addresses the question about the federal law responsible for shutting down Braniff Airways. Deriving notes can help organize this evidence to bridge the query entity to the answer candidate."
+        },
+        {
+          "t": 2,
+          "harvest_count": 2,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The current evidence mentions the Airline Deregulation Act of 1978 and its role in Braniff's shutdown, but lacks direct connection between the law and Braniff Airways. Bridge notes can help organize the raw evidence to link Braniff Airways to the timeline and context of the Airline Deregulation Act."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5ac44629554299194317395d",
+      "split": "test",
+      "question": "Michael J. Hunter replaced the lawyer who became the administrator of which agency?",
+      "gold_answer": "EPA",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 3,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question, and the top raw candidates provide relevant information about Michael J. Hunter and related individuals that can be organized into grounded notes to help construct a trajectory towards finding the agency."
+        },
+        {
+          "t": 1,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about which agency's administrator was replaced by Michael J. Hunter. The top raw candidates provide information about Michael J. Hunter and other individuals, but no direct connection to an agency administrator replacement. Deriving bridge notes could help organize this information and identify potential links to the agency mentioned in the gold answer hint (EPA)."
+        },
+        {
+          "t": 2,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The question involves identifying an agency administrator replaced by Michael J. Hunter, but current evidence lacks direct connections. The top raw candidates provide potential administrators and agencies that could be relevant to bridge or verify relationships."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5adbcbca5542996e6852523b",
+      "split": "val",
+      "question": "How long, originally, was Shakespeare’s play revolving around the murder of King Duncan performed?",
+      "gold_answer": "1603–1607",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 2,
+      "derived_trigger_steps": [
+        {
+          "t": 1,
+          "harvest_count": 2,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The question asks about the original performance length of Shakespeare's play involving King Duncan's murder, which is 'Macbeth'. The state summary indicates a need for more evidence, and the bridge anchors include 'shakespeare', 'macbeth', and '1603'. The top raw candidates provide relevant information about 'Macbeth' and King Duncan, allowing for the creation of bridge notes to connect these entities to the answer candidate regarding the play's timeframe."
+        },
+        {
+          "t": 2,
+          "harvest_count": 2,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The state summary indicates a need for more evidence to answer the question about the original performance length of Shakespeare's play involving King Duncan's murder. The top raw candidates provide relevant information about King Duncan and characters in 'Macbeth', which can be bridged to the play's context and potentially its performance details, supporting the derive_goal of bridging query entities to answer candidates."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5adce4d35542992c1e3a2473",
+      "split": "val",
+      "question": "Are Smyrnium and Nymania both types of plant?",
+      "gold_answer": "yes",
+      "terminal_t": 4,
+      "derived_positive_count": 1,
+      "derived_positive_ts": [
+        3
+      ],
+      "derived_positive_events": [
+        {
+          "qid": "5adce4d35542992c1e3a2473",
+          "split": "val",
+          "t": 3,
+          "terminal_t": 4,
+          "position_bucket": "middle_late",
+          "positive_unit_id": "5adce4d35542992c1e3a2473::derived::1",
+          "note_type": "verification_note",
+          "note_text": "Nymania capensis is described as a plant with fruit, indicating it is a type of plant.",
+          "source_unit_ids": [
+            "5adce4d35542992c1e3a2473::Nymania::0"
+          ],
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "repair_after_false_stop",
+          "proposer_reason": "local_api_failure_fallback:repair_after_false_stop:generic_bridge_or_verification",
+          "harvest_count": 1,
+          "current_r_t_size": 7,
+          "current_c_t_size": 8,
+          "next_is_raw": false,
+          "next_raw_positive_id": null,
+          "next_raw_positive_in_current_c_t": false,
+          "next_raw_positive_in_current_r_t": false,
+          "future_raw_positive_ids": [],
+          "future_raw_positive_count": 0,
+          "next_delta_covered_targets": null
+        }
+      ],
+      "derived_trigger_step_count": 3,
+      "derived_trigger_steps": [
+        {
+          "t": 1,
+          "harvest_count": 0,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The provided top raw candidates do not contain any information about Smyrnium or Nymania, making it impossible to ground notes in the available source_unit_ids."
+        },
+        {
+          "t": 2,
+          "harvest_count": 1,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "local_api_failure_fallback:normal:generic_bridge_or_verification"
+        },
+        {
+          "t": 3,
+          "harvest_count": 1,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "repair_after_false_stop",
+          "reason": "local_api_failure_fallback:repair_after_false_stop:generic_bridge_or_verification"
+        }
+      ],
+      "final_answer_source": "llm",
+      "final_support_rule": "yes_no_both_entities_supported",
+      "final_k_t_has_derived": true,
+      "case_mechanism": "late_verification_repair"
+    },
+    {
+      "qid": "5addc2b75542997dc7907017",
+      "split": "test",
+      "question": "The Voyage is a wooden roller coaster located at a theme park divided into how many sections ?",
+      "gold_answer": "four sections",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 2,
+      "derived_trigger_steps": [
+        {
+          "t": 1,
+          "harvest_count": 3,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about The Voyage's theme park sections. The top raw candidates provide relevant information about The Voyage's location and other roller coasters, allowing for the creation of bridge and verification notes to organize evidence for further investigation."
+        },
+        {
+          "t": 2,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The state summary shows evidence about the theme park being divided into four sections, but the question specifically asks about The Voyage's location. The top raw candidates provide information about The Voyage and other roller coasters, which can be used to create bridge notes connecting the evidence to verify the answer."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5adff58055429925eb1afb9a",
+      "split": "val",
+      "question": "Walter Flanagan, is a comic book store manager, reality television personality, podcaster, and comic book artist, and a long-time friend of who, an American filmmaker, actor, comic book writer, author, and podcaster, and came to prominence with the low-budget comedy film \"Clerks\" (1994)?",
+      "gold_answer": "Kevin Smith",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 3,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 1,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The question asks about Walter Flanagan's long-time friend, who is described as an American filmmaker, actor, comic book writer, author, and podcaster, and came to prominence with 'Clerks' (1994). The provided evidence mentions Kevin Smith as a filmmaker and actor, and the top raw candidates include a unit about Kevin Smith that confirms he came to prominence with 'Clerks' (1994). Deriving notes can help organize this evidence to clarify the connection between Walter Flanagan and Kevin Smith, supporting the need for more evidence."
+        },
+        {
+          "t": 1,
+          "harvest_count": 1,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The question asks about Walter Flanagan's long-time friend who is a filmmaker, actor, comic book writer, author, podcaster, and came to prominence with 'Clerks' (1994). The provided evidence mentions Kevin Smith as Flanagan's long-time friend, and the top raw candidates include Kevin Smith's unit with details matching the description (filmmaker, actor, comic book writer, author, podcaster, prominence with 'Clerks'). A verification note can help confirm this connection using the available source units."
+        },
+        {
+          "t": 2,
+          "harvest_count": 0,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The provided top raw candidates (Bryan Johnson, Gordon Lee, Gary Arlington) do not contain information relevant to Walter Flanagan's friendship with Kevin Smith or Kevin Smith's prominence from 'Clerks' (1994). These candidates are about unrelated individuals in the comic book industry and cannot be used to construct grounded notes for the required trajectory."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5ae0c9f355429906c02dab51",
+      "split": "val",
+      "question": "Vinci and Heroscape are both examples of what?",
+      "gold_answer": "board game",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 3,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 1,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The question asks for a category that Vinci and Heroscape both belong to, but current evidence only mentions Heroscape as a 'turn-based miniature w' (likely 'wargame' or similar) and Vinci in unrelated contexts. Derived notes can help organize these disparate mentions to potentially identify a common category like 'board game' or 'game'."
+        },
+        {
+          "t": 1,
+          "harvest_count": 0,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The provided top raw candidates do not contain relevant evidence about Vinci or Heroscape to support deriving grounded notes for the question. The candidates discuss unrelated topics like Ploteus, Blériot 165, and Visualization (graphics), which cannot be used to construct notes about board games or similar categories."
+        },
+        {
+          "t": 2,
+          "harvest_count": 1,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The question asks for a category that Vinci and Heroscape belong to. The provided raw evidence includes a unit about Vinci being a board game, which directly addresses part of the question. Deriving a note can help organize this evidence to support answering the question."
+        }
+      ],
+      "final_answer_source": "context_gold_conflict_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5ae363e85542994393b9e6a5",
+      "split": "test",
+      "question": "Thomas Parker Sanborn was a model for the protagonist in the only novel by a poet originally from what country?",
+      "gold_answer": "Spain",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 3,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 3,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about Thomas Parker Sanborn being a model for a protagonist in a novel by a poet from a specific country. The top raw candidates contain relevant information about Thomas Parker Sanborn, Hugh McCulloch, and George Santayana that can be organized into notes to clarify relationships and verify key facts."
+        },
+        {
+          "t": 1,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about the poet's country of origin, and the top raw candidates contain relevant information about Thomas Parker Sanborn and George Santayana that can be organized into grounded notes to help construct a teacher trajectory."
+        },
+        {
+          "t": 2,
+          "harvest_count": 3,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question. The question asks about the poet's country of origin, but the provided evidence only mentions Santayana being from Spain and Thomas Parker Sanborn being an American poet. The top raw candidates include additional poets (Hugh McCulloch and Pitts Sanborn) who might be relevant to identifying the poet in question, allowing for potential bridging or verification notes to organize this evidence."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5ae536065542990ba0bbb227",
+      "split": "val",
+      "question": "The logarithmic spiral was investigated by the mathematician who was a proponent of which branch of mathematics?",
+      "gold_answer": "Leibnizian calculus",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 3,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 2,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question about which branch of mathematics the mathematician was a proponent of, and the top raw candidates provide relevant information that can be organized into bridge notes to connect the logarithmic spiral to Jakob Bernoulli and his mathematical contributions."
+        },
+        {
+          "t": 1,
+          "harvest_count": 3,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question directly. Deriving bridge notes can help connect the logarithmic spiral to the mathematician and the branch of mathematics, organizing the raw evidence to support the query."
+        },
+        {
+          "t": 2,
+          "harvest_count": 2,
+          "derive_goal": "target_type_disambiguation",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to directly answer the question about the mathematician's branch of mathematics, and deriving bridge notes can help organize the raw evidence to clarify connections between the logarithmic spiral and the mathematician's advocacy."
+        }
+      ],
+      "final_answer_source": "llm",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5ae56a3f5542992663a4f1f4",
+      "split": "test",
+      "question": "What is the former name of the animal whose habitat the Réserve Naturelle Lomako Yokokala was established to protect?",
+      "gold_answer": "pygmy chimpanzee",
+      "terminal_t": 2,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 2,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 0,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The provided top raw candidates do not contain any information relevant to the question about the Réserve Naturelle Lomako Yokokala or Bonobo apes. They only mention unrelated nature reserves in different locations, so no grounded notes can be derived from them."
+        },
+        {
+          "t": 1,
+          "harvest_count": 0,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The provided top raw candidates do not contain any information relevant to the question about the Réserve Naturelle Lomako Yokokala or the animal it protects. They only mention other unrelated nature reserves, so no grounded notes can be derived from them."
+        }
+      ],
+      "final_answer_source": "llm",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5ae5fc345542993aec5ec1f8",
+      "split": "test",
+      "question": "Kiki Preston was the alleged mother of a child born out of wedlock with a prince born in which year ?",
+      "gold_answer": "1902",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 3,
+      "derived_trigger_steps": [
+        {
+          "t": 0,
+          "harvest_count": 3,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "The current evidence lacks direct information about the prince's birth year, and the top raw candidates provide relevant context on children born out of wedlock and American citizenship, which can help bridge the query entity (Kiki Preston as mother) to potential answer candidates."
+        },
+        {
+          "t": 1,
+          "harvest_count": 1,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "local_api_failure_fallback:normal:bridge_query_entity_to_answer_candidate"
+        },
+        {
+          "t": 2,
+          "harvest_count": 1,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "local_api_failure_fallback:normal:bridge_query_entity_to_answer_candidate"
+        }
+      ],
+      "final_answer_source": "llm",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5ae690fd55429908198fa624",
+      "split": "val",
+      "question": "Jabberwocky was a poem included in the sequel to the fantasy novel written in what year?",
+      "gold_answer": "1865",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 2,
+      "derived_trigger_steps": [
+        {
+          "t": 1,
+          "harvest_count": 1,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "local_api_failure_fallback:normal:bridge_query_entity_to_answer_candidate"
+        },
+        {
+          "t": 2,
+          "harvest_count": 1,
+          "derive_goal": "bridge_query_entity_to_answer_candidate",
+          "derive_mode": "normal",
+          "reason": "local_api_failure_fallback:normal:bridge_query_entity_to_answer_candidate"
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    },
+    {
+      "qid": "5ae7ba7a5542993210983f12",
+      "split": "test",
+      "question": "What is the name of the singer who's song was released as the lead single from the album \"Confessions\", and that had popular song stuck behind for eight consecutive weeks?",
+      "gold_answer": "Usher",
+      "terminal_t": 3,
+      "derived_positive_count": 0,
+      "derived_positive_ts": [],
+      "derived_positive_events": [],
+      "derived_trigger_step_count": 2,
+      "derived_trigger_steps": [
+        {
+          "t": 1,
+          "harvest_count": 2,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The current evidence is insufficient to answer the question. The question asks for the singer whose song was the lead single from 'Confessions' and had a popular song stuck behind for eight consecutive weeks. The provided evidence mentions Usher's album 'Confessions' but lacks details about the song or the eight-week chart performance. The top raw candidates include relevant but unconnected information about chart performance and album singles, which can be organized into notes to help construct a teacher trajectory."
+        },
+        {
+          "t": 2,
+          "harvest_count": 0,
+          "derive_goal": "generic_bridge_or_verification",
+          "derive_mode": "normal",
+          "reason": "The provided top raw candidates do not contain any evidence directly relevant to the question about Usher's song from the album 'Confessions' or the specific detail of being stuck behind for eight consecutive weeks. The candidates reference unrelated songs and artists, so deriving grounded notes would not help organize the current evidence effectively."
+        }
+      ],
+      "final_answer_source": "context_gold_fallback",
+      "final_support_rule": "multi_hop_answer_in_evidence",
+      "final_k_t_has_derived": false,
+      "case_mechanism": "raw_or_stop_closure"
+    }
+  ],
+  "hypothesis_checks": {
+    "overall": {
+      "derived_is_usually_middle_late": {
+        "supported": true,
+        "ratio": 0.9,
+        "evidence": {
+          "middle_late": 9,
+          "total": 10
+        }
+      },
+      "derived_often_followed_by_raw": {
+        "supported": true,
+        "ratio": 0.5,
+        "evidence": {
+          "derived_then_immediate_raw": 5,
+          "total": 10
+        }
+      },
+      "next_raw_not_always_visible_before_derived": {
+        "supported": true,
+        "ratio": 0.7,
+        "evidence": {
+          "next_raw_not_yet_visible_in_c_t": 7,
+          "total": 10
+        }
+      }
+    },
+    "historical_failure_to_success": {
+      "derived_is_usually_middle_late": {
+        "supported": true,
+        "ratio": 0.75,
+        "evidence": {
+          "middle_late": 3,
+          "total": 4
+        }
+      },
+      "verification_dominates_when_derived_enters_winning_path": {
+        "supported": true,
+        "ratio": 0.75,
+        "evidence": {
+          "verification_note": 3,
+          "bridge_note": 1,
+          "total": 4
+        }
+      },
+      "early_bridge_exists_but_is_not_mainstream": {
+        "supported": true,
+        "ratio": 0.25,
+        "evidence": {
+          "early": 1,
+          "middle_late": 3,
+          "total": 4
+        }
+      },
+      "some_derived_steps_are_followed_by_new_raw_discovery": {
+        "supported": true,
+        "ratio": 0.75,
+        "evidence": {
+          "next_raw_not_yet_visible_in_c_t": 3,
+          "total": 4
+        }
+      }
+    }
+  }
+}

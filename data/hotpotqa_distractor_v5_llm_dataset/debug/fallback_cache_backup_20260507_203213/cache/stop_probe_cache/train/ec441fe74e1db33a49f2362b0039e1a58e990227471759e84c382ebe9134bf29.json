@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Orson Scott Card",
+  "pred_answer": "Orson Scott Card",
+  "normalized_gold": "orson scott card",
+  "normalized_pred": "orson scott card",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a906b5f5542990a98493638",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a906b5f5542990a98493638::Patricia Highsmith::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a906b5f5542990a98493638::Tom Ripley::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a906b5f5542990a98493638::The Crystal City::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a906b5f5542990a98493638::Orson Scott Card::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a906b5f5542990a98493638::No Game No Life::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a906b5f5542990a98493638::The Crystal City",
+        "5a906b5f5542990a98493638::Orson Scott Card"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a906b5f5542990a98493638::Patricia Highsmith::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a906b5f5542990a98493638::Tom Ripley::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a906b5f5542990a98493638::The Crystal City::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a906b5f5542990a98493638::Orson Scott Card::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a906b5f5542990a98493638::No Game No Life::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a906b5f5542990a98493638::No Game No Life::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The author and his wife, Mashiro Hiiragi, adapted the novels into a manga series for \"Monthly Comic Alive\" in 2013.\n[2] Orson Scott Card (born August 24, 1951) is an American novelist, critic, public speaker, essayist, and columnist.\n[3] The Crystal City (2003) is an alternate history/fantasy novel by Orson Scott Card.\n[4] Thomas \"Tom\" Ripley is a fictional character in a series of crime novels by American novelist Patricia Highsmith, as well as several film adaptations."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

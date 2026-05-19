@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Motif",
+  "pred_answer": "Motif",
+  "normalized_gold": "motif",
+  "normalized_pred": "motif",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7331e65542992359bc327f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7331e65542992359bc327f::Palladio (Jenkins)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7331e65542992359bc327f::Sinfonia concertante::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7331e65542992359bc327f::Motif (music)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7331e65542992359bc327f::Horn Concerto (Jacob)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7331e65542992359bc327f::Palladio (Jenkins)",
+        "5a7331e65542992359bc327f::Motif (music)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7331e65542992359bc327f::Palladio (Jenkins)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7331e65542992359bc327f::Sinfonia concertante::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7331e65542992359bc327f::Motif (music)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7331e65542992359bc327f::Horn Concerto (Jacob)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7331e65542992359bc327f::Horn Concerto (Jacob)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Concerto for Horn and Strings is a concerto for horn and string orchestra in three movements by the English composer Gordon Jacob.\n[2] In music, a motif    or motive is a short musical idea, a salient recurring figure, musical fragment or succession of notes that has some special importance in or is characteristic of a composition: \"The motive is the smallest structural unit possessing thematic identity\".\n[3] Sinfonia concertante (] ; also called \"symphonie concertante\") is an orchestral work, normally in several movements, in which there are parts of solo instruments, generally two or more, contrasting of a group of soloists with the full orchestra.\n[4] The work in three movements is in the form of a concerto grosso."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

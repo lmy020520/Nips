@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "his starring role in the ABC television series \"The Rebel\" (1959).",
+  "pred_answer": "his starring role in the ABC television series \"The Rebel\" (1959).",
+  "normalized_gold": "his starring role in the abc television series the rebel 1959",
+  "normalized_pred": "his starring role in the abc television series the rebel 1959",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8febeb55429916514e73e5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8febeb55429916514e73e5::Dillinger (1973 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8febeb55429916514e73e5::Young Dillinger::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8febeb55429916514e73e5::Nick Adams (actor, born 1931)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8febeb55429916514e73e5::Sterling Beaumon::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8febeb55429916514e73e5::Young Dillinger",
+        "5a8febeb55429916514e73e5::Nick Adams (actor, born 1931)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8febeb55429916514e73e5::Dillinger (1973 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8febeb55429916514e73e5::Young Dillinger::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8febeb55429916514e73e5::Nick Adams (actor, born 1931)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8febeb55429916514e73e5::Sterling Beaumon::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8febeb55429916514e73e5::Sterling Beaumon::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He is known for his roles as Max Doyle in the 2008 film, \"Mostly Ghostly\", and as young Benjamin Linus in the ABC television series, \"Lost\".\n[2] He was noted for his roles in several Hollywood films during the 1950s and 1960s along with his starring role in the ABC television series \"The Rebel\" (1959).\n[3] It stars Nick Adams as the notorious criminal John Dillinger, and co-stars Robert Conrad, John Ashley and Mary Ann Mobley.\n[4] Dillinger is a 1973 American gangster film about the life and criminal exploits of notorious bank robber John Dillinger."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

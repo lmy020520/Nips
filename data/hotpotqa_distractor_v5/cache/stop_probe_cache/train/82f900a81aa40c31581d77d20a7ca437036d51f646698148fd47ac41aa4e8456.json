@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Charles Crichton",
+  "pred_answer": "Charles Crichton",
+  "normalized_gold": "charles crichton",
+  "normalized_pred": "charles crichton",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7f8ff055429969796c1ab4",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7f8ff055429969796c1ab4::A Fish Called Wanda::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7f8ff055429969796c1ab4::Geoffrey Palmer (actor)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7f8ff055429969796c1ab4::Risley Residential College::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7f8ff055429969796c1ab4::A Fish Called Wanda",
+        "5a7f8ff055429969796c1ab4::Geoffrey Palmer (actor)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7f8ff055429969796c1ab4::A Fish Called Wanda::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7f8ff055429969796c1ab4::Geoffrey Palmer (actor)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7f8ff055429969796c1ab4::Risley Residential College::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7f8ff055429969796c1ab4::Risley Residential College::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Many famous people have visited the house for intimate discussions with the Risleyites, such as Anthony Rapp, John Cleese, who hosted a question and answer session after the showing of his film \"A Fish Called Wanda\", and Samuel R. Delany who continues to collaborate with Risley alumnus Kenneth James.\n[2] His film appearances include \"A Fish Called Wanda\" (1988), \"The Madness of King George\" (1994), \"Mrs. Brown\" (1997), and \"Tomorrow Never Dies\" (1997).\n[3] A Fish Called Wanda is a 1988 British-American heist comedy film directed by Charles Crichton (his final film) and written by John Cleese."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

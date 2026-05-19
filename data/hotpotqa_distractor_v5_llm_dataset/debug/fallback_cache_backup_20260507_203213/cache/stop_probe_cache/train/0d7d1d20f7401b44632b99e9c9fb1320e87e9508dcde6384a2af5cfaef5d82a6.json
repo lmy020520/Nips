@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Richard Curtis",
+  "pred_answer": "Richard Curtis",
+  "normalized_gold": "richard curtis",
+  "normalized_pred": "richard curtis",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84c1a75542991dd0999ddf",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84c1a75542991dd0999ddf::Suicide Manual::7"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84c1a75542991dd0999ddf::Olivia Olson::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84c1a75542991dd0999ddf::Red Nose Day Actually::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a84c1a75542991dd0999ddf::Suicide Manual::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84c1a75542991dd0999ddf::Olivia Olson",
+        "5a84c1a75542991dd0999ddf::Red Nose Day Actually"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84c1a75542991dd0999ddf::Suicide Manual::7",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84c1a75542991dd0999ddf::Olivia Olson::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84c1a75542991dd0999ddf::Red Nose Day Actually::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a84c1a75542991dd0999ddf::Suicide Manual::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84c1a75542991dd0999ddf::Suicide Manual::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Suicide Manual (自殺マニュアル , Jisatsu Manyuaru ) is a 2003 film directed by Fukutani Osamu.\n[2] \"Love Actually\" writer and director Richard Curtis returns alongside cast members Hugh Grant, Liam Neeson, Colin Firth, Andrew Lincoln, Chiwetel Ejiofor, Keira Knightley, Martine McCutcheon, Bill Nighy, Thomas Sangster, Lúcia Moniz, Olivia Olson, Marcus Brigstocke, and Rowan Atkinson.\n[3] She also played the character of Joanna in the 2003 film \"Love Actually\" and its 2017 short sequel \"Red Nose Day Actually\".\n[4] In sequel \"The Suicide Manual: Intermediate Level\" (2003) the 'Suicide Manual' DVD produced by Yu and Rie about the case causes more people to commit suicide."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

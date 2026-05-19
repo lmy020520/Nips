@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "George Franklin Getty",
+  "pred_answer": "George Franklin Getty",
+  "normalized_gold": "george franklin getty",
+  "normalized_pred": "george franklin getty",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abcccc655429965836004a0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abcccc655429965836004a0::Getty family::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abcccc655429965836004a0::Jane Johnston Schoolcraft::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abcccc655429965836004a0::George Getty::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abcccc655429965836004a0::List of Pashtuns::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abcccc655429965836004a0::Getty family",
+        "5abcccc655429965836004a0::George Getty"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abcccc655429965836004a0::Getty family::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abcccc655429965836004a0::Jane Johnston Schoolcraft::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abcccc655429965836004a0::George Getty::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abcccc655429965836004a0::List of Pashtuns::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abcccc655429965836004a0::List of Pashtuns::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In several cases, patrilineal lineage is counted for Pashtun ancestry according to Pashtun culture regardless of the mother's line or mixed descent.\n[2] George Franklin Getty (October 17, 1855 – May 31, 1930) was an American lawyer, father of industrialist J. Paul Getty and patriarch of the Getty family.\n[3] She was of Ojibwa and Scots-Irish ancestry.\n[4] The Getty family is of Scots-Irish ancestry of the Methodist faith from the patrilineal lineage, their ancestors having migrated to North America from Cullavmor, in what is now County Londonderry."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

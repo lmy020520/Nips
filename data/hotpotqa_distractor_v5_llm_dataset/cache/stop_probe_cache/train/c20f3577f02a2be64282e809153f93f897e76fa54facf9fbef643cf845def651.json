@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Archie Shepp",
+  "pred_answer": "Archie Shepp",
+  "normalized_gold": "archie shepp",
+  "normalized_pred": "archie shepp",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2d2c4554299657fa29087",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2d2c4554299657fa29087::Archie Shepp::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2d2c4554299657fa29087::Carlos Santana::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2d2c4554299657fa29087::Archie Shepp::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2d2c4554299657fa29087::Imagine the Sound::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac2d2c4554299657fa29087::Progressive rock (radio format)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2d2c4554299657fa29087::Archie Shepp",
+        "5ac2d2c4554299657fa29087::Imagine the Sound"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2d2c4554299657fa29087::Archie Shepp::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2d2c4554299657fa29087::Carlos Santana::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2d2c4554299657fa29087::Archie Shepp::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2d2c4554299657fa29087::Imagine the Sound::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac2d2c4554299657fa29087::Progressive rock (radio format)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2d2c4554299657fa29087::Progressive rock (radio format)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Progressive rock is a radio station programming format that emerged in the late 1960s, in which disc jockeys are given wide latitude in what they may play, similar to the freeform format but with the proviso that some kind of rock music is almost always played.\n[2] Imagine the Sound is a 1981 Canadian documentary film about free jazz, directed by Ron Mann.\n[3] Archie Shepp (born May 24, 1937) is an American jazz saxophonist.\n[4] Carlos Santana    (born July 20, 1947) is a Mexican and American musician who first became famous in the late 1960s and early 1970s with his band, Santana, which pioneered a fusion of rock and Latin American music."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "May 20, 1913",
+  "pred_answer": "May 20, 1913",
+  "normalized_gold": "may 20 1913",
+  "normalized_pred": "may 20 1913",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7e3985542992aa3b8c877",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7e3985542992aa3b8c877::Robert Kennedy Memorial Presbyterian Church::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7e3985542992aa3b8c877::Memorial Presbyterian Church::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7e3985542992aa3b8c877::Henry Flagler::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab7e3985542992aa3b8c877::Robert Kennedy Memorial Presbyterian Church::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7e3985542992aa3b8c877::Memorial Presbyterian Church",
+        "5ab7e3985542992aa3b8c877::Henry Flagler"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7e3985542992aa3b8c877::Robert Kennedy Memorial Presbyterian Church::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7e3985542992aa3b8c877::Memorial Presbyterian Church::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7e3985542992aa3b8c877::Henry Flagler::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab7e3985542992aa3b8c877::Robert Kennedy Memorial Presbyterian Church::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7e3985542992aa3b8c877::Robert Kennedy Memorial Presbyterian Church::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was built in 1871, and is a 1 1/2-story, frame Italianate-style building.\n[2] Henry Morrison Flagler (January 2, 1830 – May 20, 1913) was an American industrialist and a founder of Standard Oil.\n[3] The church was built in 1889 by business tycoon and St. Augustine benefactor Henry Morrison Flagler and dedicated in honor of his daughter Jennie Louise Benedict, who died following complications from childbirth at sea the same year, hence the word \"Memorial\".\n[4] Robert Kennedy Memorial Presbyterian Church, also known as Welsh Run Presbyterian Church, is a historic Presbyterian church in Montgomery Township, Franklin County, Pennsylvania."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

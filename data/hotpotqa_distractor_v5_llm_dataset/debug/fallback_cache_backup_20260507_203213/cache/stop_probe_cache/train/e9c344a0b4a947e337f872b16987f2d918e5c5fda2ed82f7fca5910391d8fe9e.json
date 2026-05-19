@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Washington, D.C.",
+  "pred_answer": "Washington, D.C.",
+  "normalized_gold": "washington dc",
+  "normalized_pred": "washington dc",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abfc8ce5542993fe9a41e56",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abfc8ce5542993fe9a41e56::Adema::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abfc8ce5542993fe9a41e56::Kris Norris::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abfc8ce5542993fe9a41e56::Darkest Hour (band)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abfc8ce5542993fe9a41e56::Godless Prophets &amp; the Migrant Flora::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abfc8ce5542993fe9a41e56::Kris Norris",
+        "5abfc8ce5542993fe9a41e56::Darkest Hour (band)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abfc8ce5542993fe9a41e56::Adema::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abfc8ce5542993fe9a41e56::Kris Norris::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abfc8ce5542993fe9a41e56::Darkest Hour (band)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abfc8ce5542993fe9a41e56::Godless Prophets &amp; the Migrant Flora::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abfc8ce5542993fe9a41e56::Godless Prophets &amp; the Migrant Flora::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Godless Prophets & the Migrant Flora is the ninth studio album by American extreme metal band Darkest Hour.\n[2] Darkest Hour is an American heavy metal band from Washington, D.C., formed in 1995.\n[3] Kris released a solo record \"Icons of the Illogical\" with The Kris Norris Projekt on Magna Carta Records in early 2009.\n[4] The band formed in 2000 with members lead vocalist Mark Chavez, vocalist/guitarist Tim Fluckey, guitarist Mike Ransom, bassist Dave DeRoo, and drummer Kris Kohls."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

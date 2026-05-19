@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Boumediene v. Bush",
+  "pred_answer": "Boumediene v. Bush",
+  "normalized_gold": "boumediene v bush",
+  "normalized_pred": "boumediene v bush",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8925ca554299669944a4c8",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8925ca554299669944a4c8::Boumediene v. Bush::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8925ca554299669944a4c8::Ware v. Hylton::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8925ca554299669944a4c8::Algerian Six::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8925ca554299669944a4c8::Boumediene v. Bush",
+        "5a8925ca554299669944a4c8::Ware v. Hylton"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8925ca554299669944a4c8::Boumediene v. Bush::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8925ca554299669944a4c8::Ware v. Hylton::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8925ca554299669944a4c8::Algerian Six::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8925ca554299669944a4c8::Algerian Six::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] They filed for \"habeas\" corpus in United States federal court and their case reached the United States Supreme Court.\n[2] 199 (1796) is a United States Supreme Court case where a divided court ruled that an article in the Treaty of Paris, which provided that creditors on both sides should meet \"no lawful impediment\" when recovering \"bona fide\" debts, took precedence and overruled a Virginia law passed during the American Revolution which had nullified such debts.\n[3] Boumediene v. Bush, 553 U.S. 723 (2008) , was a writ of habeas corpus submission made in a civilian court of the United States on behalf of Lakhdar Boumediene, a naturalized citizen of Bosnia and Herzegovina, held in military detention by the United States at the Guantanamo Bay detention camps in Cuba."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

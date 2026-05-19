@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "at the United Center in Chicago, Illinois",
+  "pred_answer": "at the United Center in Chicago, Illinois",
+  "normalized_gold": "at the united center in chicago illinois",
+  "normalized_pred": "at the united center in chicago illinois",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8d55e655429941ae14dfa9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8d55e655429941ae14dfa9::Eeli Tolvanen::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8d55e655429941ae14dfa9::1987–88 Quebec Nordiques season::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8d55e655429941ae14dfa9::2017 NHL Entry Draft::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8d55e655429941ae14dfa9::2017 NHL Entry Draft::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8d55e655429941ae14dfa9::Eeli Tolvanen",
+        "5a8d55e655429941ae14dfa9::2017 NHL Entry Draft"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8d55e655429941ae14dfa9::Eeli Tolvanen::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8d55e655429941ae14dfa9::1987–88 Quebec Nordiques season::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8d55e655429941ae14dfa9::2017 NHL Entry Draft::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8d55e655429941ae14dfa9::2017 NHL Entry Draft::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8d55e655429941ae14dfa9::2017 NHL Entry Draft::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The draft was held from June 23–24, 2017, at the United Center in Chicago, Illinois.\n[2] The 2017 NHL Entry Draft was the 55th NHL Entry Draft.\n[3] Quebec made a huge trade during the 1987 NHL Entry Draft, as the Nordiques traded away Dale Hunter and Clint Malarchuk to the Washington Capitals for Gaetan Duchesne, Alan Haworth, and the Capitals first round draft pick in the 1987 NHL Entry Draft, in which the Nordiques selected Joe Sakic.\n[4] Tolvanen was selected by the Nashville Predators in the first round, 30th overall, in the 2017 NHL Entry Draft."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

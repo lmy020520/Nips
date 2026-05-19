@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "52nd floor of the \"Fantasy Tower\"",
+  "pred_answer": "52nd floor of the \"Fantasy Tower\"",
+  "normalized_gold": "52nd floor of the fantasy tower",
+  "normalized_pred": "52nd floor of the fantasy tower",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae10509554299422ee995ca",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae10509554299422ee995ca::Playboy Club (Las Vegas)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae10509554299422ee995ca::Playboy Club::9"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae10509554299422ee995ca::Palms Casino Resort::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae10509554299422ee995ca::Odawa Casino Resort::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae10509554299422ee995ca::Playboy Club (Las Vegas)",
+        "5ae10509554299422ee995ca::Palms Casino Resort"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae10509554299422ee995ca::Playboy Club (Las Vegas)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae10509554299422ee995ca::Playboy Club::9",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae10509554299422ee995ca::Palms Casino Resort::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae10509554299422ee995ca::Odawa Casino Resort::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae10509554299422ee995ca::Odawa Casino Resort::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Located in Resort Township near Petoskey, Michigan, the casino opened for business on June 20, 2007.\n[2] Palms Casino Resort is a hotel and casino located near the Las Vegas Strip in Paradise, Nevada.\n[3] In May 2014 the Commerce Casino in Los Angeles opened a Playboy themed lounge consisting of gaming tables and Playboy Bunny cocktail waitresses.\n[4] The Playboy Club was a nightclub formerly located on the 52nd floor of the \"Fantasy Tower\" at the Palms Casino Resort in Paradise, Nevada, which is located in the Las Vegas Valley."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

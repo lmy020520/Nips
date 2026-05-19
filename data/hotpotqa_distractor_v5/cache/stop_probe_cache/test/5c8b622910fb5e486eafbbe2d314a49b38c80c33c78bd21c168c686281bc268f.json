@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "E Street Band",
+  "pred_answer": "E Street Band",
+  "normalized_gold": "e street band",
+  "normalized_pred": "e street band",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adebc51554299728e26c799",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adebc51554299728e26c799::Roy Orbison and Friends: A Black and White Night::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adebc51554299728e26c799::Ginger Baker::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adebc51554299728e26c799::Garry Tallent::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adebc51554299728e26c799::Delores Holmes::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5adebc51554299728e26c799::Bill Pinkney::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adebc51554299728e26c799::Garry Tallent",
+        "5adebc51554299728e26c799::Delores Holmes"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adebc51554299728e26c799::Roy Orbison and Friends: A Black and White Night::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adebc51554299728e26c799::Ginger Baker::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adebc51554299728e26c799::Garry Tallent::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adebc51554299728e26c799::Delores Holmes::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5adebc51554299728e26c799::Bill Pinkney::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adebc51554299728e26c799::Bill Pinkney::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] As an original group member, Bill Pinkney was a 1988 inductee into the Rock & Roll Hall of Fame with The Drifters .\n[2] She was best known for her years as backup singer for the Bruce Springsteen Band during 1969 to 1972, the last grouping before the E Street Band.\n[3] Tallent was inducted as a member of the E Street Band into the Rock and Roll Hall of Fame.\n[4] Baker is an inductee of the Rock and Roll Hall of Fame as a member of Cream and is widely considered one of the most influential drummers of all time, recognised by his induction into the \"Modern Drummer\" Hall of Fame in 2008, and his induction into the Classic Drummer Hall of Fame in 2016."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

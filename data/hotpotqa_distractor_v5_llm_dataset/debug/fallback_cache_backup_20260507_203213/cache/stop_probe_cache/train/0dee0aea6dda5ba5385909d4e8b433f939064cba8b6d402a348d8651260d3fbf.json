@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "four counties",
+  "pred_answer": "four counties",
+  "normalized_gold": "four counties",
+  "normalized_pred": "four counties",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab672195542995eadeeffe1",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab672195542995eadeeffe1::List of counties in Kentucky::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab672195542995eadeeffe1::Long Island::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab672195542995eadeeffe1::Long Island::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab672195542995eadeeffe1::Donna Hylton::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab672195542995eadeeffe1::Flags of counties of the United States::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab672195542995eadeeffe1::Long Island",
+        "5ab672195542995eadeeffe1::Donna Hylton"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab672195542995eadeeffe1::List of counties in Kentucky::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab672195542995eadeeffe1::Long Island::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab672195542995eadeeffe1::Long Island::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab672195542995eadeeffe1::Donna Hylton::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab672195542995eadeeffe1::Flags of counties of the United States::6",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab672195542995eadeeffe1::Flags of counties of the United States::6",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Frederick County's example is typical of the flag adoption processes that many counties undertook with their flags.\n[2] Hylton served a 27 year prison sentence in Bedford Hills Correctional Facility for Women (Department Identification Number 86G0206) for her role in the kidnapping, torture, and murder of Thomas Vigliarolo, a Long Island businessman.\n[3] The island comprises four counties in the U.S. state of New York: Kings and Queens (which comprise the New York City boroughs of Brooklyn and Queens, respectively) to the west; and Nassau and Suffolk to the east.\n[4] The Long Island is a large, densely-populated island off the East Coast of the United States, beginning at New York Harbor just 0.35 miles (0.56 km) from Manhattan Island and extending eastward into the Atlantic Ocean."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hamlet",
+  "pred_answer": "Hamlet",
+  "normalized_gold": "hamlet",
+  "normalized_pred": "hamlet",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adcc897554299473435379b",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adcc897554299473435379b::Horatio (Hamlet)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adcc897554299473435379b::Fortinbras::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adcc897554299473435379b::Li Jiancheng::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adcc897554299473435379b::Horatio (Hamlet)",
+        "5adcc897554299473435379b::Fortinbras"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adcc897554299473435379b::Horatio (Hamlet)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adcc897554299473435379b::Fortinbras::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adcc897554299473435379b::Li Jiancheng::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adcc897554299473435379b::Li Jiancheng::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] However, although he himself was fairly capable as a general, he was overshadowed by the contributions of his younger brother Li Shimin the Prince of Qin, and the brothers contended for power for years, with Li Jiancheng aided by another younger brother, Li Yuanji the Prince of Qi.\n[2] The more notable is a Norwegian crown prince with a few brief scenes in the play, who delivers the final lines that represent a hopeful future for the monarchy of Denmark and its subjects.\n[3] Horatio is a character in William Shakespeare's tragedy \"Hamlet\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

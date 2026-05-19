@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Doom",
+  "pred_answer": "Doom",
+  "normalized_gold": "doom",
+  "normalized_pred": "doom",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a764234554299109176e6e6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a764234554299109176e6e6::BFG (weapon)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a764234554299109176e6e6::Quake 4::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a764234554299109176e6e6::Doom (series)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a764234554299109176e6e6::Rogue Entertainment::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a764234554299109176e6e6::BFG (weapon)",
+        "5a764234554299109176e6e6::Doom (series)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a764234554299109176e6e6::BFG (weapon)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a764234554299109176e6e6::Quake 4::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a764234554299109176e6e6::Doom (series)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a764234554299109176e6e6::Rogue Entertainment::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a764234554299109176e6e6::Rogue Entertainment::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Rogue Entertainment's office was in the same building as id Software, all of their games used game engines created by id Software, and two of their games were expansions for id Software's \"Quake\" series of games.\n[2] Doom (stylized as DOOM) is a series of first-person shooter video games developed by id Software.\n[3] The game was developed by Raven Software and published by Activision.\n[4] The BFG is a fictional weapon found in many video game titles, mostly in first-person shooter series such as \"Doom\" and \"Quake\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

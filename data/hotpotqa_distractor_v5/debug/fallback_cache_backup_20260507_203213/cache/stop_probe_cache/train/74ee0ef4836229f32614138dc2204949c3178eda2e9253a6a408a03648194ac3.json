@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sony Interactive Entertainment",
+  "pred_answer": "Sony Interactive Entertainment",
+  "normalized_gold": "sony interactive entertainment",
+  "normalized_pred": "sony interactive entertainment",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7629605542992d0ec06035",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7629605542992d0ec06035::Ellie (The Last of Us)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7629605542992d0ec06035::List of The Last of Us characters::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7629605542992d0ec06035::The Last of Us Part II::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7629605542992d0ec06035::Cold Fear::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7629605542992d0ec06035::Ellie (The Last of Us)",
+        "5a7629605542992d0ec06035::The Last of Us Part II"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7629605542992d0ec06035::Ellie (The Last of Us)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7629605542992d0ec06035::List of The Last of Us characters::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7629605542992d0ec06035::The Last of Us Part II::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7629605542992d0ec06035::Cold Fear::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7629605542992d0ec06035::Cold Fear::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Cold Fear is a 2005 survival horror third-person shooter video game developed by Darkworks and published by Ubisoft for PlayStation 2, Xbox and Microsoft Windows.\n[2] The Last of Us Part II is an upcoming action-adventure survival horror video game developed by Naughty Dog and published by Sony Interactive Entertainment for PlayStation 4.\n[3] \"The Last of Us\", an action-adventure survival horror video game developed by Naughty Dog, deals with the relationship between an older man, Joel, and a teenaged girl, Ellie.\n[4] Ellie is a fictional character in the 2013 video game \"The Last of Us\", and the main protagonist of the upcoming video game \"The Last of Us Part II\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

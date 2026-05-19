@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Chrétien was the first Frenchman and the first western European in space.",
+  "pred_answer": "Chrétien was the first Frenchman and the first western European in space.",
+  "normalized_gold": "chrétien was the first frenchman and the first western european in space",
+  "normalized_pred": "chrétien was the first frenchman and the first western european in space",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abbfa5b55429931dba14604",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abbfa5b55429931dba14604::Jean-Loup Chrétien::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abbfa5b55429931dba14604::Soyuz T-6::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abbfa5b55429931dba14604::Jean-Loup Chrétien::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abbfa5b55429931dba14604::Frank De Winne::3"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abbfa5b55429931dba14604::Soyuz TM-7::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abbfa5b55429931dba14604::Jean-Loup Chrétien",
+        "5abbfa5b55429931dba14604::Frank De Winne"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abbfa5b55429931dba14604::Jean-Loup Chrétien::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abbfa5b55429931dba14604::Soyuz T-6::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abbfa5b55429931dba14604::Jean-Loup Chrétien::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abbfa5b55429931dba14604::Frank De Winne::3",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abbfa5b55429931dba14604::Soyuz TM-7::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abbfa5b55429931dba14604::Soyuz TM-7::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Also launched by Soyuz TM-7 was French astronaut Jean-Loup Chrétien, who would take part in the 24-day French mission known as Mir Aragatz.\n[2] ESA astronaut de Winne serves currently as Head of the European Astronaut Centre of the European Space Agency in Cologne/Germany (Köln).\n[3] Chrétien was the first Frenchman and the first western European in space.\n[4] Along with two Soviet cosmonauts, the crew included a Frenchman, Jean-Loup Chrétien."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

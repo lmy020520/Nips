@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Samuel Schimizzi",
+  "pred_answer": "Samuel Schimizzi",
+  "normalized_gold": "samuel schimizzi",
+  "normalized_pred": "samuel schimizzi",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a78e91555429974737f78fc",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a78e91555429974737f78fc::2009 Indy Grand Prix of Sonoma::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a78e91555429974737f78fc::2010 Camping World Grand Prix at The Glen::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a78e91555429974737f78fc::Watkins Glen, New York::4"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a78e91555429974737f78fc::2009 Camping World Grand Prix at the Glen::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a78e91555429974737f78fc::2011 Indy Grand Prix of Sonoma::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a78e91555429974737f78fc::Watkins Glen, New York",
+        "5a78e91555429974737f78fc::2009 Camping World Grand Prix at the Glen"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a78e91555429974737f78fc::2009 Indy Grand Prix of Sonoma::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a78e91555429974737f78fc::2010 Camping World Grand Prix at The Glen::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a78e91555429974737f78fc::Watkins Glen, New York::4",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a78e91555429974737f78fc::2009 Camping World Grand Prix at the Glen::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a78e91555429974737f78fc::2011 Indy Grand Prix of Sonoma::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a78e91555429974737f78fc::2011 Indy Grand Prix of Sonoma::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The 2011 Indy Grand Prix of Sonoma was the seventh running of the Indy Grand Prix of Sonoma and the fourteenth round of the 2011 IndyCar Series season.\n[2] The 2009 Camping World Indy Grand Prix at the Glen was the ninth round of the 2009 IndyCar Series season.\n[3] The current mayor is Samuel Schimizzi.\n[4] The 2010 Camping World Watkins Glen Grand Prix was the eighth running of the Camping World Watkins Glen Grand Prix and the ninth round of the 2010 IndyCar Series season."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

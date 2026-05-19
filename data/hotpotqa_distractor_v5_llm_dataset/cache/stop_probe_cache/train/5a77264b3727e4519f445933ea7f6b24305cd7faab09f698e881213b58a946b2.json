@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1926",
+  "pred_answer": "1926",
+  "normalized_gold": "1926",
+  "normalized_pred": "1926",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe6ba055429965af743ef7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe6ba055429965af743ef7::The Overland::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe6ba055429965af743ef7::NZR H class::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe6ba055429965af743ef7::Victorian Railways H class::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe6ba055429965af743ef7::Victorian Railways S class::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe6ba055429965af743ef7::The Overland",
+        "5abe6ba055429965af743ef7::Victorian Railways H class"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe6ba055429965af743ef7::The Overland::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe6ba055429965af743ef7::NZR H class::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe6ba055429965af743ef7::Victorian Railways H class::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe6ba055429965af743ef7::Victorian Railways S class::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe6ba055429965af743ef7::Victorian Railways S class::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Victorian Railways S class was a class of 4-6-2 express passenger steam locomotive operated by the Victorian Railways (VR) in Australia between 1928 and 1954.\n[2] The Victorian Railways H class was an express passenger steam locomotive operated by the Victorian Railways from 1941 to 1958.\n[3] The NZR H class locomotive was a unique class of locomotive used by the New Zealand Railways Department on the famous Rimutaka Incline, the 3 mi section of 1 in 15 (6.67 %) gradient between Cross Creek and Summit, over the Rimutaka Ranges.\n[4] It was given its current name in 1926."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

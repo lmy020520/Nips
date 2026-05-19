@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Chicago",
+  "pred_answer": "Chicago",
+  "normalized_gold": "chicago",
+  "normalized_pred": "chicago",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89df0355429946c8d6e9ed",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89df0355429946c8d6e9ed::Harry James (entertainer)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89df0355429946c8d6e9ed::List of songs recorded by Gary Barlow::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89df0355429946c8d6e9ed::Lucki::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a89df0355429946c8d6e9ed::FKA Twigs::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a89df0355429946c8d6e9ed::Timbaland::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89df0355429946c8d6e9ed::Lucki",
+        "5a89df0355429946c8d6e9ed::FKA Twigs"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89df0355429946c8d6e9ed::Harry James (entertainer)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89df0355429946c8d6e9ed::List of songs recorded by Gary Barlow::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89df0355429946c8d6e9ed::Lucki::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a89df0355429946c8d6e9ed::FKA Twigs::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a89df0355429946c8d6e9ed::Timbaland::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a89df0355429946c8d6e9ed::Timbaland::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Timothy Zachery \"Tim\" Mosley (born March 10, 1972), known professionally as Timbaland, is an American record producer, rapper, singer, songwriter and DJ.\n[2] Tahliah Debrett Barnett (born 16 January 1988), known professionally as FKA Twigs (stylised as FKA twigs), is an English singer, songwriter, record producer, director and dancer.\n[3] Lucki Eck$ (born May 30, 1996), better known mononymously as Lucki, is an American rapper and record producer from Chicago, Illinois.\n[4] The English singer and songwriter Gary Barlow has recorded songs for three solo studio albums, a joint album and has also collaborated with other artists on their respective singles."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

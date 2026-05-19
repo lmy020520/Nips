@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1978",
+  "pred_answer": "1978",
+  "normalized_gold": "1978",
+  "normalized_pred": "1978",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf88c35542993344016cd5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf88c35542993344016cd5::Ivan Kaye::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf88c35542993344016cd5::The New Normal (TV series)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf88c35542993344016cd5::Andrew Rannells::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf88c35542993344016cd5::Elisha Yaffe::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf88c35542993344016cd5::The New Normal (TV series)",
+        "5adf88c35542993344016cd5::Andrew Rannells"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf88c35542993344016cd5::Ivan Kaye::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf88c35542993344016cd5::The New Normal (TV series)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf88c35542993344016cd5::Andrew Rannells::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf88c35542993344016cd5::Elisha Yaffe::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf88c35542993344016cd5::Elisha Yaffe::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Elisha Yaffe (born August 13, 1983) is a comedian, actor and writer.\n[2] Andrew Scott Rannells (born August 23, 1978) is an American actor, voice actor, and singer.\n[3] The storyline follows wealthy gay couple Bryan (Andrew Rannells) and David (Justin Bartha), who are living in Los Angeles.\n[4] Ivan Blakeley Kaye (born 1 July 1961 in Northampton, Northamptonshire) is an English actor."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

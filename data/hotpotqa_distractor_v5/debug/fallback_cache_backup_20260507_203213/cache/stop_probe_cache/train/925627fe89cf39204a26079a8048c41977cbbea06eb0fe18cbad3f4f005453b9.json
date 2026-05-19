@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Brooklyn",
+  "pred_answer": "Brooklyn",
+  "normalized_gold": "brooklyn",
+  "normalized_pred": "brooklyn",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a87b4355542994775f607f0",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a87b4355542994775f607f0::1981–82 Vancouver Canucks season::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a87b4355542994775f607f0::New York Islanders::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a87b4355542994775f607f0::2002 Stanley Cup Finals::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a87b4355542994775f607f0::1981–82 Vancouver Canucks season",
+        "5a87b4355542994775f607f0::New York Islanders"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a87b4355542994775f607f0::1981–82 Vancouver Canucks season::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a87b4355542994775f607f0::New York Islanders::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a87b4355542994775f607f0::2002 Stanley Cup Finals::6",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a87b4355542994775f607f0::2002 Stanley Cup Finals::6",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] After losing the first two games in the Conference Quarterfinals to the Vancouver Canucks, the Red Wings won 16 of their next 21 games en route to win their third Cup since for coach Scotty Bowman.\n[2] The team plays its home games at Barclays Center, located in the borough of Brooklyn.\n[3] The Vancouver Canucks made their first appearance in the Stanley Cup Finals, losing to the New York Islanders 4 games to 0."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

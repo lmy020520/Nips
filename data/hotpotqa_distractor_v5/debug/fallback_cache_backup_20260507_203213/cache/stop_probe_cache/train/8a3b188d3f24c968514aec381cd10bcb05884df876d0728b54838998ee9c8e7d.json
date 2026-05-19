@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Norwegian heavy water sabotage",
+  "pred_answer": "Norwegian heavy water sabotage",
+  "normalized_gold": "norwegian heavy water sabotage",
+  "normalized_pred": "norwegian heavy water sabotage",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8652e65542991e7718160c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8652e65542991e7718160c::Claus Helberg::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8652e65542991e7718160c::Norwegian heavy water sabotage::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8652e65542991e7718160c::Operation Freshman::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8652e65542991e7718160c::Claus Helberg",
+        "5a8652e65542991e7718160c::Norwegian heavy water sabotage"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8652e65542991e7718160c::Claus Helberg::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8652e65542991e7718160c::Norwegian heavy water sabotage::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8652e65542991e7718160c::Operation Freshman::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8652e65542991e7718160c::Operation Freshman::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The source of the heavy water was the Norsk Hydro plant, which had been occupied in 1940; when the British government learned of the German nuclear developments, it was decided that a raid would be launched to destroy the plant and deny the Germans the heavy water required to develop a nuclear weapon.\n[2] The Norwegian heavy water sabotage (Bokmål: \"Tungtvannsaksjonen\" , Nynorsk: \"Tungtvassaksjonen\" ) was a series of operations undertaken by Norwegian saboteurs during World War II to prevent the German nuclear weapon project from acquiring heavy water (deuterium oxide), which could have been used by the Germans to produce nuclear weapons.\n[3] He was a member of Company Linge, a resistance commando unit that was best known for carrying out Norwegian heavy water sabotage during World War II."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

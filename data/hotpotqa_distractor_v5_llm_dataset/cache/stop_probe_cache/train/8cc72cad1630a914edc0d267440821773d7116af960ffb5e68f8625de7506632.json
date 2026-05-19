@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Scotland",
+  "pred_answer": "Scotland",
+  "normalized_gold": "scotland",
+  "normalized_pred": "scotland",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abbc1dd5542992ccd8e7f89",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abbc1dd5542992ccd8e7f89::Nine castles of the Knuckle::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abbc1dd5542992ccd8e7f89::Cathar castles::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abbc1dd5542992ccd8e7f89::Taymouth Castle::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abbc1dd5542992ccd8e7f89::Kilchurn Castle::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abbc1dd5542992ccd8e7f89::List of castles in Spain::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abbc1dd5542992ccd8e7f89::Taymouth Castle",
+        "5abbc1dd5542992ccd8e7f89::Kilchurn Castle"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abbc1dd5542992ccd8e7f89::Nine castles of the Knuckle::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abbc1dd5542992ccd8e7f89::Cathar castles::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abbc1dd5542992ccd8e7f89::Taymouth Castle::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abbc1dd5542992ccd8e7f89::Kilchurn Castle::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abbc1dd5542992ccd8e7f89::List of castles in Spain::6",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abbc1dd5542992ccd8e7f89::List of castles in Spain::6",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] During the late Middle Ages, Christian kingdoms had secured and enriched themselves well enough to support a more courtly lifestyle, so more residential castles were built, such as the Alcázar of Segovia, which was used as the main residence of the kings of Castile, whereas the Castle of Olite, built in a luxurious gothic style, was the seat of the Kingdom of Navarre's royal court.\n[2] Kilchurn Castle is a ruined structure on a rocky peninsula at the northeastern end of Loch Awe, in Argyll and Bute, Scotland.\n[3] Taymouth Castle is situated to the north-east of the village of Kenmore, Perth and Kinross in the Highlands of Scotland, in an estate which encompasses 450 acres.\n[4] Many of these sites were replaced by new castles built by the victorious French Crusaders and the term is also applied to these fortifications despite having no connection with Cathars."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

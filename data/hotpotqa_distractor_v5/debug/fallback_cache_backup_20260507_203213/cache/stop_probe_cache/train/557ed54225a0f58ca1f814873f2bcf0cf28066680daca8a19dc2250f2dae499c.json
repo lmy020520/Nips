@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Predator",
+  "pred_answer": "Predator",
+  "normalized_gold": "predator",
+  "normalized_pred": "predator",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6c3dd55429953192ad382",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6c3dd55429953192ad382::Elpidia Carrillo::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6c3dd55429953192ad382::Duncan Renaldo filmography::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6c3dd55429953192ad382::Predator (film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6c3dd55429953192ad382::Eddie Tagoe::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6c3dd55429953192ad382::Elpidia Carrillo",
+        "5ab6c3dd55429953192ad382::Predator (film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6c3dd55429953192ad382::Elpidia Carrillo::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6c3dd55429953192ad382::Duncan Renaldo filmography::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6c3dd55429953192ad382::Predator (film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6c3dd55429953192ad382::Eddie Tagoe::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6c3dd55429953192ad382::Eddie Tagoe::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Eddie Tagoe is a Ghanaian actor best known in the U.K. for playing \"Presuming Ed\" in the 1987 film production of \"Withnail and I\", a role which he resumed in 2000 in a stage production of the same work.\n[2] Predator is a 1987 American science-fiction action horror film directed by John McTiernan.\n[3] He was best known in the 1950s United States for his lead role in the \"The Cisco Kid\", which co-starred Leo Carrillo as Pancho.\n[4] She is best known in the United States for her supporting role in the iconic action film \"Predator\", \"Bread and Roses\" and \"Nine Lives\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,101 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Julie Kavner",
+  "pred_answer": "Julie Kavner",
+  "normalized_gold": "julie kavner",
+  "normalized_pred": "julie kavner",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abfd5c45542994516f4550e",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abfd5c45542994516f4550e::Marge Simpson::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abfd5c45542994516f4550e::Politics in The Simpsons::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abfd5c45542994516f4550e::Good Night (The Simpsons short)::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abfd5c45542994516f4550e::Bart Simpson::4"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abfd5c45542994516f4550e::derived::2"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5abfd5c45542994516f4550e::Marge Simpson::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abfd5c45542994516f4550e::Marge Simpson",
+        "5abfd5c45542994516f4550e::Good Night (The Simpsons short)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abfd5c45542994516f4550e::Marge Simpson::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abfd5c45542994516f4550e::Politics in The Simpsons::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abfd5c45542994516f4550e::Good Night (The Simpsons short)::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abfd5c45542994516f4550e::Bart Simpson::4",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abfd5c45542994516f4550e::Marge Simpson::1",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5abfd5c45542994516f4550e::derived::2",
+          "added_step": 4
+        }
+      ],
+      "last_added_unit_id": "5abfd5c45542994516f4550e::Marge Simpson::1",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] The shorts first aired on April 19, 1987 starting with \"Good Night\".\n[2] She is voiced by Julie Kavner and first appeared on television in \"The Tracey Ullman Show\" short \"Good Night\" on April 19, 1987.\n[3] While the rest of the characters were named after Groening's family members, Bart's name is an anagram of the word \"brat\".\n[4] \"Good Night\" has since been aired on the show in the episode \"The Simpsons 138th Episode Spectacular\" (in its entirety), along with several other Ullman shorts, and is one of the few shorts to ever be released on DVD, being included in the Season 1 DVD set.\n\nNotes:\n[verification] The shorts first aired on April 19, 1987 starting with \"Good Night\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

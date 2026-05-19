@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Adam Silver",
+  "pred_answer": "Adam Silver",
+  "normalized_gold": "adam silver",
+  "normalized_pred": "adam silver",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a76cb9b55429966f1a36bf2",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a76cb9b55429966f1a36bf2::Jerry Sloan::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a76cb9b55429966f1a36bf2::Rob Manfred::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a76cb9b55429966f1a36bf2::Commissioner of the NBA::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a76cb9b55429966f1a36bf2::Adam Silver::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a76cb9b55429966f1a36bf2::David Falk::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a76cb9b55429966f1a36bf2::Commissioner of the NBA",
+        "5a76cb9b55429966f1a36bf2::Adam Silver"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a76cb9b55429966f1a36bf2::Jerry Sloan::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a76cb9b55429966f1a36bf2::Rob Manfred::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a76cb9b55429966f1a36bf2::Commissioner of the NBA::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a76cb9b55429966f1a36bf2::Adam Silver::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a76cb9b55429966f1a36bf2::David Falk::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a76cb9b55429966f1a36bf2::David Falk::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] David B. Falk (born 1950) is an American sports agent who primarily works with basketball players in the National Basketball Association.\n[2] Adam Silver (born April 25, 1962) is an American lawyer and businessman, who is currently the commissioner of the National Basketball Association (NBA).\n[3] The current commissioner is Adam Silver after he succeeded David Stern on February 1, 2014.\n[4] Robert D. Manfred Jr. (born September 28, 1958) is an American lawyer and business executive who is the tenth and current Commissioner of Baseball."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

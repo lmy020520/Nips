@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Swansea",
+  "pred_answer": "Swansea",
+  "normalized_gold": "swansea",
+  "normalized_pred": "swansea",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae37eac5542992f92d822e2",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae37eac5542992f92d822e2::Swansea::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae37eac5542992f92d822e2::The Electric Revelators::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae37eac5542992f92d822e2::Rick Estrin &amp; The Nightcats::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae37eac5542992f92d822e2::Swansea",
+        "5ae37eac5542992f92d822e2::The Electric Revelators"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae37eac5542992f92d822e2::Swansea::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae37eac5542992f92d822e2::The Electric Revelators::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae37eac5542992f92d822e2::Rick Estrin &amp; The Nightcats::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae37eac5542992f92d822e2::Rick Estrin &amp; The Nightcats::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Rick Estrin & the Nightcats are an American four-piece electric blues band (formed in 2008 after the dissolution of Little Charlie & The Nightcats, of which three of the band were members), and consisting of harmonicist/lead vocalist and songwriter Rick Estrin, guitarist Kid Andersen, bassist Lorenzo Farrell and drummer and songwriter J. Hansen.\n[2] The Electric Revelators are a blues band, formed in Swansea 2004, Wales, added Jerry Donahue ex-member of Fairport Convention and Chris Rea Band to the line-up in 2011.\n[3] It is the second largest city in Wales after Cardiff, and the twenty-fifth largest city in the United Kingdom."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

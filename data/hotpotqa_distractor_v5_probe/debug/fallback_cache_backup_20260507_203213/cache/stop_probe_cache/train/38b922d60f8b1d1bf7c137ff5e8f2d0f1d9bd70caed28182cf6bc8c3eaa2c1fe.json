@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Philip Michael Thomas",
+  "pred_answer": "Philip Michael Thomas",
+  "normalized_gold": "philip michael thomas",
+  "normalized_pred": "philip michael thomas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae70da0554299572ea54699",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae70da0554299572ea54699::Philip Michael Thomas::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae70da0554299572ea54699::Don Johnson::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae70da0554299572ea54699::Extralarge::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae70da0554299572ea54699::List of accolades received by Miami Vice::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae70da0554299572ea54699::Philip Michael Thomas",
+        "5ae70da0554299572ea54699::Extralarge"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae70da0554299572ea54699::Philip Michael Thomas::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae70da0554299572ea54699::Don Johnson::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae70da0554299572ea54699::Extralarge::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae70da0554299572ea54699::List of accolades received by Miami Vice::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae70da0554299572ea54699::List of accolades received by Miami Vice::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Miami Vice\" is an American police procedural television series which was broadcast for five seasons on the National Broadcasting Company (NBC) between 1984 and 1990.\n[2] Extralarge (original title: \"Detective Extralarge\", aka \"Zwei Supertypen in Miami\") is a television series starring Bud Spencer, Philip Michael Thomas, and Michael Winslow.\n[3] Johnson is a Golden Globe–winning actor for his role in \"Miami Vice\", the American Power Boat Association's 1988 World Champion of the Offshore World Cup, and has received a star on the Hollywood Walk of Fame.\n[4] Thomas' most famous role is that of detective Ricardo Tubbs on the hit 1980s TV series \"Miami Vice\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

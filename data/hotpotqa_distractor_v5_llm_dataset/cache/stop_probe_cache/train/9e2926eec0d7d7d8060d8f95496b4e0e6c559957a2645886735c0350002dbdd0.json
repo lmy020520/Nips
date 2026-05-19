@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Shay Mitchell",
+  "pred_answer": "Shay Mitchell",
+  "normalized_gold": "shay mitchell",
+  "normalized_pred": "shay mitchell",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a735cb755429901807daffc",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a735cb755429901807daffc::Help Me Help You (song)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a735cb755429901807daffc::Mary Drake::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a735cb755429901807daffc::Help Me Help You (song)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a735cb755429901807daffc::Shay Mitchell::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a735cb755429901807daffc::Aeriél Miranda::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a735cb755429901807daffc::Help Me Help You (song)",
+        "5a735cb755429901807daffc::Shay Mitchell"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a735cb755429901807daffc::Help Me Help You (song)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a735cb755429901807daffc::Mary Drake::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a735cb755429901807daffc::Help Me Help You (song)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a735cb755429901807daffc::Shay Mitchell::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a735cb755429901807daffc::Aeriél Miranda::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a735cb755429901807daffc::Aeriél Miranda::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] She is best known for her recurring role as Shana Fring on the ABC Family series, \"Pretty Little Liars\" (2013–2014).\n[2] She is best known for her role as Emily Fields in the Freeform series \"Pretty Little Liars\".\n[3] It was released on May 18, 2017, alongside a music video on YouTube starring Shay Mitchell.\n[4] \"Pretty Little Liars\" is a television adaptation of the novel series of the same name written by Sara Shepard, in which the antagonist Alison DiLaurentis has an identical twin sister, Courtney DiLaurentis."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

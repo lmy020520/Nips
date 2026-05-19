@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "John Ross Matheson",
+  "pred_answer": "John Ross Matheson",
+  "normalized_gold": "john ross matheson",
+  "normalized_pred": "john ross matheson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a753c1e55429916b01642a8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a753c1e55429916b01642a8::Flag of Canada::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a753c1e55429916b01642a8::Flag of Tonga::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a753c1e55429916b01642a8::John Matheson::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a753c1e55429916b01642a8::Flag of Manitoba::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a753c1e55429916b01642a8::Flag of Canada",
+        "5a753c1e55429916b01642a8::John Matheson"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a753c1e55429916b01642a8::Flag of Canada::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a753c1e55429916b01642a8::Flag of Tonga::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a753c1e55429916b01642a8::John Matheson::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a753c1e55429916b01642a8::Flag of Manitoba::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a753c1e55429916b01642a8::Flag of Manitoba::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The decision to adopt the flag was made after the federal government decided to replace the Canadian Red Ensign with the Maple Leaf flag, which was quite controversial at the time.\n[2] John Ross Matheson, {'1': \", '2': \", '3': \", '4': \"} (November 14, 1917 – December 27, 2013) was a Canadian lawyer, judge, and politician who helped develop both the maple leaf flag and the Order of Canada.\n[3] The flag of Tonga consists of a red field with a white canton charged with a red couped cross.\n[4] The flag of Canada, often referred to as the Canadian flag, or unofficially as the Maple Leaf and l'Unifolié (French for \"the one-leafed\"), is a national flag consisting of a red field with a white square at its centre in the ratio of 1:2:1, in the middle of which is featured a stylized, red, 11-pointed maple leaf charged in the centre."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

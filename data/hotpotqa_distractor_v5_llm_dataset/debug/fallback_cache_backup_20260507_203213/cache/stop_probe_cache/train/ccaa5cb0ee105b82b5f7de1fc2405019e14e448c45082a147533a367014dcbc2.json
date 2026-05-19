@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Joey DeMaio",
+  "pred_answer": "Joey DeMaio",
+  "normalized_gold": "joey demaio",
+  "normalized_pred": "joey demaio",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b53b75542997f31a41cdb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b53b75542997f31a41cdb::Gods of War Live::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b53b75542997f31a41cdb::Retrospect (Epica album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b53b75542997f31a41cdb::Manowar::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8b53b75542997f31a41cdb::Never Say Die: Live::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b53b75542997f31a41cdb::Gods of War Live",
+        "5a8b53b75542997f31a41cdb::Manowar"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b53b75542997f31a41cdb::Gods of War Live::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b53b75542997f31a41cdb::Retrospect (Epica album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b53b75542997f31a41cdb::Manowar::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8b53b75542997f31a41cdb::Never Say Die: Live::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b53b75542997f31a41cdb::Never Say Die: Live::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Never Say Die: Live is a live album by Waylon & The Waymore Blues Band, released on Sony Records through the Lucky Dog imprint in 2000.\n[2] In an interview for MTV in February 2007, bassist Joey DeMaio lamented that \"these days, there's a real lack of big, epic metal that is drenched with crushing guitars and choirs and orchestras... so it's nice to be one of the few bands that's actually doing that.\"\n[3] Retrospect is the third live album released by the Dutch symphonic metal band Epica in celebration of their tenth anniversary.\n[4] Gods of War Live is the third live album by heavy metal band Manowar."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

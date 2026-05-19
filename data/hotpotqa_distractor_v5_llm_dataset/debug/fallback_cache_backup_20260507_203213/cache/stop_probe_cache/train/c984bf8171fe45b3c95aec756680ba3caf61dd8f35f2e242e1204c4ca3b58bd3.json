@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1996 until 2010",
+  "pred_answer": "1996 until 2010",
+  "normalized_gold": "1996 until 2010",
+  "normalized_pred": "1996 until 2010",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd79e055429924427fcfe2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd79e055429924427fcfe2::2001 Colorado Buffaloes football team::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd79e055429924427fcfe2::List of Colorado Buffaloes head football coaches::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd79e055429924427fcfe2::Big 12 Championship Game::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd79e055429924427fcfe2::2005 Colorado Buffaloes football team::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd79e055429924427fcfe2::2001 Colorado Buffaloes football team",
+        "5abd79e055429924427fcfe2::Big 12 Championship Game"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd79e055429924427fcfe2::2001 Colorado Buffaloes football team::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd79e055429924427fcfe2::List of Colorado Buffaloes head football coaches::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd79e055429924427fcfe2::Big 12 Championship Game::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd79e055429924427fcfe2::2005 Colorado Buffaloes football team::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd79e055429924427fcfe2::2005 Colorado Buffaloes football team::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] That marked the third Big 12 North championship for the Buffaloes in four years.\n[2] The game was played each year since the conference's formation in 1996 until 2010 and will return starting with the 2017 season.\n[3] Colorado played without a head coach during their first four years.\n[4] The 2001 Colorado Buffaloes football team represented the University of Colorado at Boulder during the 2001 NCAA Division I-A football season."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

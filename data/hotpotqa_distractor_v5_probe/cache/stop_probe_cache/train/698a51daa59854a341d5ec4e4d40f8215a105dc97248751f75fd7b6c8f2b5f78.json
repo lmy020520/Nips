@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "film director and producer",
+  "pred_answer": "film director and producer",
+  "normalized_gold": "film director and producer",
+  "normalized_pred": "film director and producer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab8704d55429916710eb050",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab8704d55429916710eb050::Moon (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab8704d55429916710eb050::Duncan Jones::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab8704d55429916710eb050::Antoine Fuqua::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab8704d55429916710eb050::Brooklyn's Finest::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab8704d55429916710eb050::Duncan Jones",
+        "5ab8704d55429916710eb050::Antoine Fuqua"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab8704d55429916710eb050::Moon (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab8704d55429916710eb050::Duncan Jones::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab8704d55429916710eb050::Antoine Fuqua::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab8704d55429916710eb050::Brooklyn's Finest::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab8704d55429916710eb050::Brooklyn's Finest::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Brooklyn's Finest is a 2009 American crime film directed by Antoine Fuqua and written by Michael C. Martin.\n[2] Antoine Fuqua (born January 19, 1966) is an American film director and producer.\n[3] Duncan Zowie Jones ( ; born 30 May 1971) is an English film director, film producer, and screenwriter.\n[4] Moon is a 2009 British science fiction drama film co-written and directed by Duncan Jones."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

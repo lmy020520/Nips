@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Adidas",
+  "pred_answer": "Adidas",
+  "normalized_gold": "adidas",
+  "normalized_pred": "adidas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7298225542991f9a20c51d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7298225542991f9a20c51d::Puma (brand)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7298225542991f9a20c51d::Funda Önal::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7298225542991f9a20c51d::Adidas::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7298225542991f9a20c51d::Statue of Adolf Dassler::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7298225542991f9a20c51d::Funda Önal",
+        "5a7298225542991f9a20c51d::Adidas"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7298225542991f9a20c51d::Puma (brand)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7298225542991f9a20c51d::Funda Önal::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7298225542991f9a20c51d::Adidas::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7298225542991f9a20c51d::Statue of Adolf Dassler::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7298225542991f9a20c51d::Statue of Adolf Dassler::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The statue sits like a spectator on a stand within the stadium, which is located next to the main entrance of the Adidas headquarters in Herzogenaurach.\n[2] Adidas AG (] ) (stylised as adidas since 1949) is a German multinational corporation, headquartered in Herzogenaurach, Bavaria, that designs and manufactures shoes, clothing and accessories.\n[3] Funda Önal (born 28 November 1981 in Sheffield, England where she attended Silverdale School) is a British model and dancer.\n[4] PUMA SE, branded as PUMA, is a German multinational company that designs and manufactures athletic and casual footwear, apparel and accessories, headquartered in Herzogenaurach, Bavaria."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

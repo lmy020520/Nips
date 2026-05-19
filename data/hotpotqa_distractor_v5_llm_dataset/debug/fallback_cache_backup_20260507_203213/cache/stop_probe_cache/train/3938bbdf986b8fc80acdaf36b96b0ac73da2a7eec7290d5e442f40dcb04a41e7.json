@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Itasca County",
+  "pred_answer": "Itasca County",
+  "normalized_gold": "itasca county",
+  "normalized_pred": "itasca county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6db105542995eadef00cc",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6db105542995eadef00cc::Jeff Johnson (Minnesota politician)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6db105542995eadef00cc::Frank Clague::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6db105542995eadef00cc::Grand Rapids, Minnesota::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6db105542995eadef00cc::Jeff Nielsen::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab6db105542995eadef00cc::Jeff Johnson (Minnesota politician)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6db105542995eadef00cc::Grand Rapids, Minnesota",
+        "5ab6db105542995eadef00cc::Jeff Nielsen"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6db105542995eadef00cc::Jeff Johnson (Minnesota politician)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6db105542995eadef00cc::Frank Clague::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6db105542995eadef00cc::Grand Rapids, Minnesota::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6db105542995eadef00cc::Jeff Nielsen::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab6db105542995eadef00cc::Jeff Johnson (Minnesota politician)::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6db105542995eadef00cc::Jeff Johnson (Minnesota politician)::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Now the Hennepin County commissioner for the 7th district, he was elected as the national Committeeman from Minnesota in April 2011.\n[2] Jeffrey Michael Nielsen (born September 20, 1971 in Grand Rapids, Minnesota) is a retired American professional ice hockey player who played in the NHL with the New York Rangers, Anaheim Mighty Ducks, and Minnesota Wild.\n[3] Grand Rapids is a city in Itasca County, Minnesota, United States.\n[4] He was born in Warrensville, Cuyahoga County, Ohio; attended the common schools; moved to Minnesota in 1881; attended the State normal school at Mankato 1882 – 1885; taught school at Springfield, Minnesota, 1886 – 1890; studied law; was admitted to the bar in 1891 and commenced practice in Lamberton, Redwood County, Minnesota, the same year; prosecuting attorney of Redwood County, Minnesota, 1895"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

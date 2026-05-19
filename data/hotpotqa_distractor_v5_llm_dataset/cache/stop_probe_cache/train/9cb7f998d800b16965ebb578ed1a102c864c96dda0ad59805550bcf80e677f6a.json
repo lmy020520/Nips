@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "The Tudors",
+  "pred_answer": "The Tudors",
+  "normalized_gold": "the tudors",
+  "normalized_pred": "the tudors",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79ec395542994f819ef106",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79ec395542994f819ef106::Tristan &amp; Isolde (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79ec395542994f819ef106::Risen (2016 film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79ec395542994f819ef106::Henry Cavill::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a79ec395542994f819ef106::Tom Cruise filmography::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79ec395542994f819ef106::Tristan &amp; Isolde (film)",
+        "5a79ec395542994f819ef106::Henry Cavill"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79ec395542994f819ef106::Tristan &amp; Isolde (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79ec395542994f819ef106::Risen (2016 film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79ec395542994f819ef106::Henry Cavill::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a79ec395542994f819ef106::Tom Cruise filmography::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a79ec395542994f819ef106::Tom Cruise filmography::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Two years later he made his breakthrough by starring in the romantic comedy \"Risky Business\" (1983), which garnered Cruise his first nomination for the Golden Globe Award for Best Actor – Motion Picture Musical or Comedy.\n[2] He later appeared in minor and supporting roles in television shows such as BBC's \"The Inspector Lynley Mysteries\", ITV's \"Midsomer Murders\" and Showtime's \"The Tudors\", then crossed to mainstream Hollywood films such as \"Tristan & Isolde\" (2006), \"Stardust\" (2007), \"Blood Creek\" (2009) and \"Immortals\" (2011).\n[3] Risen is a 2016 American biblical drama film directed by Kevin Reynolds; it was conceived from a screenplay written by Reynolds and Paul Aiello.\n[4] Tristan & Isolde is a 2006 epic romantic drama film directed by Kevin Reynolds and written by Dean Georgaris based on the medieval romantic legend of Tristan and Isolde."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

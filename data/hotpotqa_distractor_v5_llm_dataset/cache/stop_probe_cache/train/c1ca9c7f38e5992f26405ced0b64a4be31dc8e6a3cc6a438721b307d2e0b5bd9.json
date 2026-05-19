@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "tabloid",
+  "pred_answer": "tabloid",
+  "normalized_gold": "tabloid",
+  "normalized_pred": "tabloid",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a877d2b5542993e715abf75",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a877d2b5542993e715abf75::David J. Pecker::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a877d2b5542993e715abf75::Tidal Wave of Blood::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a877d2b5542993e715abf75::Star (magazine)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a877d2b5542993e715abf75::Model Rocketry (magazine)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a877d2b5542993e715abf75::David J. Pecker",
+        "5a877d2b5542993e715abf75::Star (magazine)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a877d2b5542993e715abf75::David J. Pecker::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a877d2b5542993e715abf75::Tidal Wave of Blood::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a877d2b5542993e715abf75::Star (magazine)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a877d2b5542993e715abf75::Model Rocketry (magazine)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a877d2b5542993e715abf75::Model Rocketry (magazine)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Model Rocketry was an American hobbyist magazine published from October 1968 to February 1972.\n[2] Star is an American celebrity tabloid magazine founded in 1974.\n[3] \"Tidal Wave of Blood\" by David J (Bauhaus, Love And Rockets) and Shok (Zeitmahl, Red Light District) is a limited release single that came out in November 2010.\n[4] David J. Pecker is the Chairman and CEO of American Media (publisher)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

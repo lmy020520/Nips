@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Chōshū",
+  "pred_answer": "Chōshū",
+  "normalized_gold": "chōshū",
+  "normalized_pred": "chōshū",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a90c47955429916514e7566",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a90c47955429916514e7566::Iwakitaira Domain::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a90c47955429916514e7566::Kishū Domain::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a90c47955429916514e7566::Shimonoseki Campaign::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a90c47955429916514e7566::William Henry Harrison Seeley::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a90c47955429916514e7566::Rattlesnake Springs Historic District::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a90c47955429916514e7566::Shimonoseki Campaign",
+        "5a90c47955429916514e7566::William Henry Harrison Seeley"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a90c47955429916514e7566::Iwakitaira Domain::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a90c47955429916514e7566::Kishū Domain::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a90c47955429916514e7566::Shimonoseki Campaign::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a90c47955429916514e7566::William Henry Harrison Seeley::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a90c47955429916514e7566::Rattlesnake Springs Historic District::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a90c47955429916514e7566::Rattlesnake Springs Historic District::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The area was homesteaded and farmed in 1880 by William Henry Harrison.\n[2] William Henry Harrison Seeley, VC (1 May 1840 – 1 October 1914) was an American who fought with the British Royal Navy during the Shimonoseki Campaign in Japan and was a recipient of the Victoria Cross (VC), the highest award for gallantry in the face of the enemy that can be awarded to British and Commonwealth forces.\n[3] \"Shimonoseki War\") refers to a series of military engagements in 1863 and 1864, fought to control Shimonoseki Straits of Japan by joint naval forces from Great Britain, France, the Netherlands and the United States, against the Japanese feudal domain of Chōshū, which took place off and on the coast of Shimonoseki, Japan.\n[4] The Kishū Domain (紀州藩 , Kishū-han ) , also known as Kii Domain (紀伊藩 ) or Wakayama Domain (和歌山藩 ) , was a \"han\" or Japanese feudal domain in Kii Province."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

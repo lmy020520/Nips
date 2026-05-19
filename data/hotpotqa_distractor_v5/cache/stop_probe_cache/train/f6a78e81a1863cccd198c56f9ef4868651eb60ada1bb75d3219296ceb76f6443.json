@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Daniel Schechter",
+  "pred_answer": "Daniel Schechter",
+  "normalized_gold": "daniel schechter",
+  "normalized_pred": "daniel schechter",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a82f9ae55429966c78a6ac4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a82f9ae55429966c78a6ac4::Night Moves (2013 film)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a82f9ae55429966c78a6ac4::2013 Toronto International Film Festival::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a82f9ae55429966c78a6ac4::Life of Crime (film)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a82f9ae55429966c78a6ac4::Life of Crime (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a82f9ae55429966c78a6ac4::2013 Toronto International Film Festival",
+        "5a82f9ae55429966c78a6ac4::Life of Crime (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a82f9ae55429966c78a6ac4::Night Moves (2013 film)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a82f9ae55429966c78a6ac4::2013 Toronto International Film Festival::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a82f9ae55429966c78a6ac4::Life of Crime (film)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a82f9ae55429966c78a6ac4::Life of Crime (film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a82f9ae55429966c78a6ac4::Life of Crime (film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Life of Crime is a 2013 American crime comedy film written and directed by Daniel Schechter, based on Elmore Leonard's novel \"The Switch\" (1978), which includes characters later revisited in his novel \"Rum Punch\" (1992), which was adapted into the Quentin Tarantino film \"Jackie Brown\" (1997).\n[2] \"Life of Crime\" was screened on the closing night 2013 Toronto International Film Festival, on the opening day of the Abu Dhabi Film Festival, at the 2014 Traverse City Film Festival and released in theaters on August 29, 2014.\n[3] The 38th annual Toronto International Film Festival (TIFF) took place in Toronto, Ontario, Canada between September 5 and September 15, 2013. \"\n[4] It was shown in the main competition section of the 70th Venice International Film Festival, at the 2013 Toronto International Film Festival and at 2013 Deauville American Film Festival, where it won Grand Prix of the festival."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

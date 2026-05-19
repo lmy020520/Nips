@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Wawa Inc.",
+  "pred_answer": "Wawa Inc.",
+  "normalized_gold": "wawa inc",
+  "normalized_pred": "wawa inc",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8431dd5542996488c2e50b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8431dd5542996488c2e50b::Shooting of Stephen Ballard::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8431dd5542996488c2e50b::Gad Zeevi::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8431dd5542996488c2e50b::Wawa Inc.::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8431dd5542996488c2e50b::Horne's (restaurant)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8431dd5542996488c2e50b::Shooting of Stephen Ballard",
+        "5a8431dd5542996488c2e50b::Wawa Inc."
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8431dd5542996488c2e50b::Shooting of Stephen Ballard::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8431dd5542996488c2e50b::Gad Zeevi::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8431dd5542996488c2e50b::Wawa Inc.::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8431dd5542996488c2e50b::Horne's (restaurant)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8431dd5542996488c2e50b::Horne's (restaurant)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Horne's was a Southern-style restaurant chain located primarily in the Southeast and Southern United States along major highways.\n[2] Wawa Inc. is a chain of convenience store/gas stations located along the East Coast of the United States.\n[3] It manages petroleum refineries and a chain of gas stations in the United States.\n[4] Corporal Stephen J. Ballard (1985 – 26 April 2017) was a Delaware State Police Officer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

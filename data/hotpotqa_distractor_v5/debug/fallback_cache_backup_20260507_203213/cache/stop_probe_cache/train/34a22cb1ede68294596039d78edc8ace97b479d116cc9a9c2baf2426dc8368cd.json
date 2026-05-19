@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Spring city",
+  "pred_answer": "Spring city",
+  "normalized_gold": "spring city",
+  "normalized_pred": "spring city",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a5bb155429941d65f25d1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a5bb155429941d65f25d1::Kunming::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a5bb155429941d65f25d1::Konaseema::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a5bb155429941d65f25d1::Sino-Myanmar pipelines::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a5bb155429941d65f25d1::Hydrostatic test::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a5bb155429941d65f25d1::Kunming",
+        "5a7a5bb155429941d65f25d1::Sino-Myanmar pipelines"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a5bb155429941d65f25d1::Kunming::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a5bb155429941d65f25d1::Konaseema::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a5bb155429941d65f25d1::Sino-Myanmar pipelines::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a5bb155429941d65f25d1::Hydrostatic test::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a5bb155429941d65f25d1::Hydrostatic test::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A hydrostatic test is a way in which pressure vessels such as pipelines, plumbing, gas cylinders, boilers and fuel tanks can be tested for strength and leaks.\n[2] Sino-Myanmar pipelines refers to planned oil and natural gas pipelines linking Myanmar's deep-water port of Kyaukphyu (Sittwe) in the Bay of Bengal with Kunming in Yunnan province of China.\n[3] These four branches which join the Bay of Bengal at different places, are forming a delta of length 170 km (110 mi) along the coast of the Bay of Bengal and is called the Konaseema region.\n[4] Kunming is also called the Spring city due to its weather."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

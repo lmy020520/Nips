@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Northwest Territory",
+  "pred_answer": "Northwest Territory",
+  "normalized_gold": "northwest territory",
+  "normalized_pred": "northwest territory",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae744ee554299572ea547a4",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae744ee554299572ea547a4::Treaty of Fort Harmar::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae744ee554299572ea547a4::Northwest Territory::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae744ee554299572ea547a4::Northwest Ordinance::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae744ee554299572ea547a4::Treaty of Fort Harmar",
+        "5ae744ee554299572ea547a4::Northwest Territory"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae744ee554299572ea547a4::Treaty of Fort Harmar::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae744ee554299572ea547a4::Northwest Territory::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae744ee554299572ea547a4::Northwest Ordinance::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae744ee554299572ea547a4::Northwest Ordinance::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Northwest Ordinance (formally An Ordinance for the Government of the Territory of the United States, North-West of the River Ohio, and also known as The Ordinance of 1787) was an act of the Congress of the Confederation of the United States (the Confederation Congress), passed July 13, 1787.\n[2] It existed legally from July 13, 1787, until March 1, 1803, when the southeastern portion of the territory was admitted to the Union as the state of Ohio, and the remainder was reorganized by additional legislative actions.\n[3] The Treaty of Fort Harmar was an agreement between the United States government and numerous Native American tribes with claims to the Northwest Territory."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

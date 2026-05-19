@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Woman's Day",
+  "pred_answer": "Woman's Day",
+  "normalized_gold": "womans day",
+  "normalized_pred": "womans day",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc1eb05542993a06baf892",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc1eb05542993a06baf892::Woman's Day::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc1eb05542993a06baf892::JJ (magazine)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc1eb05542993a06baf892::Bis (magazine)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc1eb05542993a06baf892::Woman's Day",
+        "5abc1eb05542993a06baf892::JJ (magazine)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc1eb05542993a06baf892::Woman's Day::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc1eb05542993a06baf892::JJ (magazine)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc1eb05542993a06baf892::Bis (magazine)::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc1eb05542993a06baf892::Bis (magazine)::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] \"JJ Bis\", former title of \"Bis\", was established in 2001 as an extra issue of \"monthly JJ\", and \"JJ Bis\" was read by Japanese high-teen girls.\n[2] It was established in 1975 as an extra issue of \"Josei Jishin\", and was the first women's magazine for college students in Japan.\n[3] Woman's Day is an American women's magazine that covers such topics as homemaking, food, nutrition, physical fitness, physical attractiveness, and fashion."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

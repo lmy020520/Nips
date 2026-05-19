@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "C. H. Greenblatt",
+  "pred_answer": "C. H. Greenblatt",
+  "normalized_gold": "c h greenblatt",
+  "normalized_pred": "c h greenblatt",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f1adc554299458435d577",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f1adc554299458435d577::Right Now Kapow::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f1adc554299458435d577::List of Adventure Time episodes::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f1adc554299458435d577::Chowder (TV series)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8f1adc554299458435d577::John DiMaggio::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8f1adc554299458435d577::Adventure Time::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f1adc554299458435d577::Chowder (TV series)",
+        "5a8f1adc554299458435d577::John DiMaggio"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f1adc554299458435d577::Right Now Kapow::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f1adc554299458435d577::List of Adventure Time episodes::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f1adc554299458435d577::Chowder (TV series)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8f1adc554299458435d577::John DiMaggio::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8f1adc554299458435d577::Adventure Time::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f1adc554299458435d577::Adventure Time::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Adventure Time is an American animated television series created by Pendleton Ward for Cartoon Network.\n[2] John William DiMaggio (born September 4, 1968) is an American voice actor and comedian, known for his gruff voice and for his work as Bender from the television show \"Futurama\", Jake the Dog on \"Adventure Time\", and Marcus Fenix in the hit Xbox video game \"Gears Of War\".\n[3] Chowder is an American animated television series created by C. H. Greenblatt for Cartoon Network.\n[4] \"Adventure Time\" is an American animated television series created by Pendleton Ward for Cartoon Network."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

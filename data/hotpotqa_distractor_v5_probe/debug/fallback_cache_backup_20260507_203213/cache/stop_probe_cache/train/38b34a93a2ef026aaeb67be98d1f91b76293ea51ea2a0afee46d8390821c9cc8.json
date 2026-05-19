@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sushma Swaraj",
+  "pred_answer": "Sushma Swaraj",
+  "normalized_gold": "sushma swaraj",
+  "normalized_pred": "sushma swaraj",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a78c0955542990784727756",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a78c0955542990784727756::List of Indian state animals::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a78c0955542990784727756::List of Indian state flowers::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a78c0955542990784727756::Sushma Swaraj::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a78c0955542990784727756::States and union territories of India::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a78c0955542990784727756::List of Indian state birds::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a78c0955542990784727756::Sushma Swaraj",
+        "5a78c0955542990784727756::States and union territories of India"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a78c0955542990784727756::List of Indian state animals::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a78c0955542990784727756::List of Indian state flowers::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a78c0955542990784727756::Sushma Swaraj::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a78c0955542990784727756::States and union territories of India::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a78c0955542990784727756::List of Indian state birds::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a78c0955542990784727756::List of Indian state birds::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It is made up of 29 states and 7 union territories.\n[2] India is a federal union comprising twenty-nine states and seven union territories, for a total of 36 state and union territories.\n[3] Sushma Swaraj (   ) (born 14 February 1952) is an Indian politician, former Supreme Court lawyer and the current Minister of External Affairs of India, in office since 26 May 2014.\n[4] It is made up of 29 states and 7 union territories."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

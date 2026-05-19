@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "77th Governor of New Hampshire",
+  "pred_answer": "77th Governor of New Hampshire",
+  "normalized_gold": "77th governor of new hampshire",
+  "normalized_pred": "77th governor of new hampshire",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5aba978655429901930fa84c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5aba978655429901930fa84c::New Hampshire gubernatorial election, 2014::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5aba978655429901930fa84c::New Hampshire gubernatorial election, 1992::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5aba978655429901930fa84c::Steve Merrill::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5aba978655429901930fa84c::New Hampshire gubernatorial election, 2018::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5aba978655429901930fa84c::New Hampshire gubernatorial election, 1992",
+        "5aba978655429901930fa84c::Steve Merrill"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5aba978655429901930fa84c::New Hampshire gubernatorial election, 2014::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5aba978655429901930fa84c::New Hampshire gubernatorial election, 1992::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5aba978655429901930fa84c::Steve Merrill::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5aba978655429901930fa84c::New Hampshire gubernatorial election, 2018::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5aba978655429901930fa84c::New Hampshire gubernatorial election, 2018::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 2018 New Hampshire gubernatorial election will take place on November 6, 2018, in order to elect the Governor of New Hampshire.\n[2] He served as the 77th Governor of New Hampshire from 1993 to 1997.\n[3] The 1992 New Hampshire gubernatorial election took place on November 3, 1992.\n[4] The 2014 New Hampshire gubernatorial election was held on November 4, 2014, to elect the Governor of New Hampshire, concurrently with the election to New Hampshire's Class II U.S. Senate seat, as well as other elections to the United States Senate in other states and elections to the United States House of Representatives and various state and local elections."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

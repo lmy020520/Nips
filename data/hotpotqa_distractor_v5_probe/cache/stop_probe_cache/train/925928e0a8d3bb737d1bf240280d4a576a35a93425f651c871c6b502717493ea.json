@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Walt Disney Company,",
+  "pred_answer": "The Walt Disney Company,",
+  "normalized_gold": "the walt disney company",
+  "normalized_pred": "the walt disney company",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe78bf5542993f32c2a124",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe78bf5542993f32c2a124::Sterling Holloway::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe78bf5542993f32c2a124::Sioux City Sue::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe78bf5542993f32c2a124::Sioux City Sue (film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe78bf5542993f32c2a124::Ducky Holmes::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe78bf5542993f32c2a124::Sterling Holloway",
+        "5abe78bf5542993f32c2a124::Sioux City Sue (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe78bf5542993f32c2a124::Sterling Holloway::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe78bf5542993f32c2a124::Sioux City Sue::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe78bf5542993f32c2a124::Sioux City Sue (film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe78bf5542993f32c2a124::Ducky Holmes::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe78bf5542993f32c2a124::Ducky Holmes::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He was the player manager of the Western League Sioux City Packers playing alongside one time White Sox teammate Danny Green.\n[2] Sioux City Sue is a 1946 American Western film directed by Frank McDonald and written by Olive Cooper.\n[3] \"Sioux City Sue\" is a 1945 song and a 1946 movie.\n[4] He was also a voice actor for The Walt Disney Company, well known for his distinctive tenor voice, and served as the original voice of the title character in Walt Disney's \"Winnie the Pooh\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

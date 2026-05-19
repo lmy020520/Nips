@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Maroon 5",
+  "pred_answer": "Maroon 5",
+  "normalized_gold": "maroon 5",
+  "normalized_pred": "maroon 5",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85ede35542996432c57139",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85ede35542996432c57139::Maroon 5 videography::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85ede35542996432c57139::Wilshire Private School::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85ede35542996432c57139::Maroon 5::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85ede35542996432c57139::David Bash::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a85ede35542996432c57139::RT N' The 44s::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85ede35542996432c57139::Maroon 5",
+        "5a85ede35542996432c57139::David Bash"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85ede35542996432c57139::Maroon 5 videography::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85ede35542996432c57139::Wilshire Private School::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85ede35542996432c57139::Maroon 5::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85ede35542996432c57139::David Bash::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a85ede35542996432c57139::RT N' The 44s::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85ede35542996432c57139::RT N' The 44s::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Founded in 2009, the band originated in Los Angeles, CA alongside local bands Leslie and the Badgers, Spindrift, Gwendolyn (artist), and Ruthann Friedman.\n[2] Although the festival has over the years featured several major label acts, such as Phantom Planet, Maroon 5 (under their previous incarnation, Kara's Flowers), and The Click Five, Bash tries to maintain the grassroots feel of the festival by featuring primarily unsigned bands, and presenting them in a festival platform with similar minded artists, where they will be appreciated by both the festiv\n[3] Maroon 5 is an American pop rock band that originated in Los Angeles, California.\n[4] Wilshire Private School, previously called the Wilshire School, the Hankook School, and the Los Angeles Hankook Academy, is a primary and secondary school located in Koreatown, Los Angeles."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

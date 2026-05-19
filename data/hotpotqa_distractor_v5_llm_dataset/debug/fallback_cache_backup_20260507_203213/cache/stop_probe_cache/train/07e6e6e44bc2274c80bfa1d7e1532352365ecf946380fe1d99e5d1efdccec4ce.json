@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ant-Man and the Wasp",
+  "pred_answer": "Ant-Man and the Wasp",
+  "normalized_gold": "ant-man and the wasp",
+  "normalized_pred": "ant-man and the wasp",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4773a55429913cc204473",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4773a55429913cc204473::Divian Ladwa::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4773a55429913cc204473::Marvel Studios::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4773a55429913cc204473::Divian Ladwa::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4773a55429913cc204473::Divian Ladwa",
+        "5ae4773a55429913cc204473::Marvel Studios"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4773a55429913cc204473::Divian Ladwa::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4773a55429913cc204473::Marvel Studios::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4773a55429913cc204473::Divian Ladwa::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4773a55429913cc204473::Divian Ladwa::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He appears in the upcoming Marvel Studios film \"Ant-Man and the Wasp\".\n[2] Marvel Studios, LLC (originally known as Marvel Films from 1993 to 1996) is an American motion picture studio based at The Walt Disney Studios in Burbank, California and is a subsidiary of Walt Disney Studios, itself a wholly owned division of The Walt Disney Company, with film producer Kevin Feige serving as president.\n[3] Divian Ladwa is an English actor known for the Oscar nominated Best Picture Lion (2016 film), the BAFTA winning comedy series Detectorists and BBC Films' \"8 Minites Idle\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

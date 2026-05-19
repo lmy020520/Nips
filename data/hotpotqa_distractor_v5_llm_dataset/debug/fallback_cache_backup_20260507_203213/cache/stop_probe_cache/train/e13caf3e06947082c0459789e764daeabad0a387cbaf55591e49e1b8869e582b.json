@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "David Helfgott",
+  "pred_answer": "David Helfgott",
+  "normalized_gold": "david helfgott",
+  "normalized_pred": "david helfgott",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a891274554299669944a49e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a891274554299669944a49e::Shine (film)::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a891274554299669944a49e::Geoffrey Rush::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a891274554299669944a49e::Shine (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a891274554299669944a49e::Shine (film)",
+        "5a891274554299669944a49e::Geoffrey Rush"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a891274554299669944a49e::Shine (film)::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a891274554299669944a49e::Geoffrey Rush::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a891274554299669944a49e::Shine (film)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a891274554299669944a49e::Shine (film)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Shine is a 1996 Australian biographical drama film based on the life of pianist David Helfgott, who suffered a mental breakdown and spent years in institutions.\n[2] He is also the first actor to win the Academy Award, BAFTA Award, Critics' Choice Movie Award, Golden Globe Award, and Screen Actors Guild Award for a single performance in film for his performance in \"Shine\" (1996).\n[3] In 1997, Geoffrey Rush was awarded the Academy Award for Best Actor at the 69th Academy Awards for his performance in the lead role."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

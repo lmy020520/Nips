@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the western Mediterranean region",
+  "pred_answer": "the western Mediterranean region",
+  "normalized_gold": "the western mediterranean region",
+  "normalized_pred": "the western mediterranean region",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8d087c554299585d9e379d",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8d087c554299585d9e379d::Karzełek::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8d087c554299585d9e379d::Central European Blue Chip Index::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8d087c554299585d9e379d::Aphyllanthes::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8d087c554299585d9e379d::Rhoeo::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8d087c554299585d9e379d::Phelios::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8d087c554299585d9e379d::Aphyllanthes",
+        "5a8d087c554299585d9e379d::Rhoeo"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8d087c554299585d9e379d::Karzełek::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8d087c554299585d9e379d::Central European Blue Chip Index::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8d087c554299585d9e379d::Aphyllanthes::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8d087c554299585d9e379d::Rhoeo::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8d087c554299585d9e379d::Phelios::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8d087c554299585d9e379d::Phelios::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The game shows players an Artemis that acts as an stereotypical princess (but in Greek mythology, she was the goddess of the hunt, and took pride in never being with any man).\n[2] Parthenius relates that she once experienced a great jealosy of her sister Hemithea when Staphylus arranged for the latter to spend a night with Lyrcus, his guest, whom both Hemithea and Rhoeo fell in love with.\n[3] Aphyllanthes is a genus of flowering plants with only one species, Aphyllanthes monspeliensis, endemic to the western Mediterranean region.\n[4] CETOP (Central European Blue Chip Index) is a stock market index which reflects the performance of the companies with the biggest market value and turnover in the Central European region."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Cold War",
+  "pred_answer": "Cold War",
+  "normalized_gold": "cold war",
+  "normalized_pred": "cold war",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adcf8ac55429947343537e4",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adcf8ac55429947343537e4::Ray A. Robinson::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adcf8ac55429947343537e4::General Quarters (rules)::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adcf8ac55429947343537e4::Cold War::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adcf8ac55429947343537e4::Operation Speedy Express::3"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5adcf8ac55429947343537e4::Ray A. Robinson::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adcf8ac55429947343537e4::Cold War",
+        "5adcf8ac55429947343537e4::Operation Speedy Express"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adcf8ac55429947343537e4::Ray A. Robinson::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adcf8ac55429947343537e4::General Quarters (rules)::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adcf8ac55429947343537e4::Cold War::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adcf8ac55429947343537e4::Operation Speedy Express::3",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5adcf8ac55429947343537e4::Ray A. Robinson::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adcf8ac55429947343537e4::Ray A. Robinson::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Robinson twice earned the Legion of Merit with Combat \"V\" during World War II — the first for outstanding service in July and August 1944, as Chief of Staff of the 3d Marine Division during the planning and execution of the recapture of Guam; and the second for outstanding service from October 1944 to March 1945, as Chief of Staff of the 5th Marine Division during the preparation and combat phases\n[2] The broader context of the campaign was the effort to combat communism, under the Cold War-era Domino Theory.\n[3] The Cold War was a state of geopolitical tension after World War II between powers in the Eastern Bloc (the Soviet Union and its satellite states) and powers in the Western Bloc (the United States, its NATO allies and others).\n[4] GQ2 expanded coverage to World War I whilst also introducing new rules for World War II games; it also introduced a revised combat system that used a d10 in addition to d6."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

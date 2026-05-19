@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jim Cummings",
+  "pred_answer": "Jim Cummings",
+  "normalized_gold": "jim cummings",
+  "normalized_pred": "jim cummings",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab55d46554299637185c57a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab55d46554299637185c57a::Travis Oates::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab55d46554299637185c57a::Sterling Holloway::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab55d46554299637185c57a::Jim Cummings::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab55d46554299637185c57a::Winnie the Pooh (2011 film)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab55d46554299637185c57a::Travis Oates",
+        "5ab55d46554299637185c57a::Jim Cummings"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab55d46554299637185c57a::Travis Oates::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab55d46554299637185c57a::Sterling Holloway::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab55d46554299637185c57a::Jim Cummings::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab55d46554299637185c57a::Winnie the Pooh (2011 film)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab55d46554299637185c57a::Winnie the Pooh (2011 film)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Jim Cummings reprises his vocal roles as Winnie the Pooh and Tigger, while series newcomers Travis Oates, Tom Kenny, Craig Ferguson, Bud Luckey, and Kristen Anderson-Lopez provide the voices of Piglet, Rabbit, Owl, Eeyore, and Kanga, respectively.\n[2] His other characters include Winnie the Pooh, Tigger, and the Tasmanian Devil.\n[3] He was also a voice actor for The Walt Disney Company, well known for his distinctive tenor voice, and served as the original voice of the title character in Walt Disney's \"Winnie the Pooh\".\n[4] He and Jim Cummings were the only two original voice actors to return for the 2011 movie."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

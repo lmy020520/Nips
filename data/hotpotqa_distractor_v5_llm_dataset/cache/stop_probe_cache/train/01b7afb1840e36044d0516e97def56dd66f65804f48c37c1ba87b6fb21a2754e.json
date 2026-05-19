@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2004",
+  "pred_answer": "2004",
+  "normalized_gold": "2004",
+  "normalized_pred": "2004",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae011cc55429906c02daabe",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae011cc55429906c02daabe::Rain Over Me::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae011cc55429906c02daabe::The Explorers Club (band)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae011cc55429906c02daabe::Pitbull (rapper)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae011cc55429906c02daabe::Lil' Kim::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae011cc55429906c02daabe::Rain Over Me",
+        "5ae011cc55429906c02daabe::Pitbull (rapper)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae011cc55429906c02daabe::Rain Over Me::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae011cc55429906c02daabe::The Explorers Club (band)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae011cc55429906c02daabe::Pitbull (rapper)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae011cc55429906c02daabe::Lil' Kim::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae011cc55429906c02daabe::Lil' Kim::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Performing a freestyle rap for The Notorious B.I.G. got her music career start in 1995 with his group Junior M.A.F.I.A., whose debut album \"Conspiracy\" generated two top 20 singles in the United States.\n[2] In 2004, Pitbull released his debut album \"M.I.A.M.I.\" under TVT Records.\n[3] They are a 5-man band whose debut album was released by Dead Oceans.\n[4] \"Rain Over Me\" is a song by American rapper Pitbull from his sixth studio album, \"Planet Pit\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

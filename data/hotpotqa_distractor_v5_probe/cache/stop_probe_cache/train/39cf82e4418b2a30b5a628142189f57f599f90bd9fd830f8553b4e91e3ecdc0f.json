@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jean-Paul Belmondo",
+  "pred_answer": "Jean-Paul Belmondo",
+  "normalized_gold": "jean-paul belmondo",
+  "normalized_pred": "jean-paul belmondo",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae323f55542991a06ce9933",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae323f55542991a06ce9933::Richard Brody::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae323f55542991a06ce9933::Chagrin d'amour::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae323f55542991a06ce9933::Breathless (1960 film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae323f55542991a06ce9933::William Dewsbury::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae323f55542991a06ce9933::Richard Brody",
+        "5ae323f55542991a06ce9933::Breathless (1960 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae323f55542991a06ce9933::Richard Brody::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae323f55542991a06ce9933::Chagrin d'amour::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae323f55542991a06ce9933::Breathless (1960 film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae323f55542991a06ce9933::William Dewsbury::7",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae323f55542991a06ce9933::William Dewsbury::7",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Dewsbury travelled to Edinburgh, having become interested in Presbyterianism, but was disappointed by the formality of the Scottish faith.\n[2] Breathless (French: À bout de souffle; \"out of breath\") is a 1960 French film written and directed by Jean-Luc Godard about a wandering criminal (Jean-Paul Belmondo) and his American girlfriend (Jean Seberg).\n[3] Chagrin d’amour’s songs with simple rhymes and rap techniques caused many amateur music artists to become interested in the hip-hop style.\n[4] Richard Brody is an American film critic who has written for \"The New Yorker\" since 1999."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

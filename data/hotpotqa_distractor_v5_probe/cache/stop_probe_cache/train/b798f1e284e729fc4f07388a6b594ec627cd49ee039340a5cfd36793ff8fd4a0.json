@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Dreamworld",
+  "pred_answer": "Dreamworld",
+  "normalized_gold": "dreamworld",
+  "normalized_pred": "dreamworld",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc26285542994650320c91",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc26285542994650320c91::Ardent Leisure::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc26285542994650320c91::SkyPoint Observation Deck::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc26285542994650320c91::Alfred E. Smith Building::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc26285542994650320c91::Ardent Leisure",
+        "5adc26285542994650320c91::SkyPoint Observation Deck"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc26285542994650320c91::Ardent Leisure::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc26285542994650320c91::SkyPoint Observation Deck::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc26285542994650320c91::Alfred E. Smith Building::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc26285542994650320c91::Alfred E. Smith Building::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Built originally with an observation deck on the 31st floor, the 350 ft open-air deck was closed in 1976 when the 589 ft 42nd floor enclosed Corning Tower Observation Deck was opened.\n[2] SkyPoint (formerly Q1 Observation Deck and QDeck) is an observation deck located 230 m off the ground at the top of the Q1 on the Gold Coast, Australia.\n[3] It is most known for its operation of the Dreamworld theme park and the WhiteWater World water park on the Gold Coast, Queensland, Australia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

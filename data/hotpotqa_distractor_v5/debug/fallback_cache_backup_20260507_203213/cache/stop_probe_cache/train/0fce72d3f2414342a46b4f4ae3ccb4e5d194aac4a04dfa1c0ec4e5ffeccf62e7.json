@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1974",
+  "pred_answer": "1974",
+  "normalized_gold": "1974",
+  "normalized_pred": "1974",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2c30b554299218029db25",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2c30b554299218029db25::The Greenskeeper::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2c30b554299218029db25::Karl Best::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2c30b554299218029db25::John Rocker::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2c30b554299218029db25::Andrew Miller (baseball)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2c30b554299218029db25::The Greenskeeper",
+        "5ac2c30b554299218029db25::John Rocker"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2c30b554299218029db25::The Greenskeeper::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2c30b554299218029db25::Karl Best::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2c30b554299218029db25::John Rocker::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2c30b554299218029db25::Andrew Miller (baseball)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2c30b554299218029db25::Andrew Miller (baseball)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Andrew Mark Miller (born May 21, 1985) is an American professional baseball relief pitcher for the Cleveland Indians of Major League Baseball (MLB).\n[2] John Loy Rocker (born October 17, 1974) is a retired American Major League Baseball relief pitcher who played for the Atlanta Braves, the Cleveland Indians, the Texas Rangers, and the Tampa Bay Devil Rays as well as the Long Island Ducks of the independent Atlantic League of Professional Baseball.\n[3] Karl Jon Best (born March 6, 1959) is a former Major League Baseball relief pitcher for the Seattle Mariners and Minnesota Twins.\n[4] The Greenskeeper is a 2002 horror film starring former Major League Baseball relief pitcher John Rocker as the titular character."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

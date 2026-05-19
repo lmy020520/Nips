@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "George Washington University Hospital",
+  "pred_answer": "George Washington University Hospital",
+  "normalized_gold": "george washington university hospital",
+  "normalized_pred": "george washington university hospital",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a76abd05542993569682c7c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a76abd05542993569682c7c::Children's National Medical Center::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a76abd05542993569682c7c::George Washington University Hospital::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a76abd05542993569682c7c::Providence Portland Medical Center::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a76abd05542993569682c7c::Children's National Medical Center",
+        "5a76abd05542993569682c7c::George Washington University Hospital"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a76abd05542993569682c7c::Children's National Medical Center::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a76abd05542993569682c7c::George Washington University Hospital::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a76abd05542993569682c7c::Providence Portland Medical Center::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a76abd05542993569682c7c::Providence Portland Medical Center::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Opened in 1941, the hospital is licensed for 483 beds, and has over 3,000 employees.\n[2] The George Washington University Hospital is located in Washington, D.C. in the United States.\n[3] Located just north of the McMillan Reservoir and Howard University, it shares grounds with Washington Hospital Center, National Rehabilitation Hospital, and the DC Veterans Affairs Medical Center."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

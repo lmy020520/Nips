@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Toledo",
+  "pred_answer": "Toledo",
+  "normalized_gold": "toledo",
+  "normalized_pred": "toledo",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac24dd65542996366519968",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac24dd65542996366519968::Elbe Valley::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac24dd65542996366519968::Martin Luther's Death House::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac24dd65542996366519968::Toledo, Spain::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac24dd65542996366519968::Gerard of Cremona::3"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac24dd65542996366519968::Waldschlösschen Bridge::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac24dd65542996366519968::Toledo, Spain",
+        "5ac24dd65542996366519968::Gerard of Cremona"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac24dd65542996366519968::Elbe Valley::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac24dd65542996366519968::Martin Luther's Death House::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac24dd65542996366519968::Toledo, Spain::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac24dd65542996366519968::Gerard of Cremona::3",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac24dd65542996366519968::Waldschlösschen Bridge::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac24dd65542996366519968::Waldschlösschen Bridge::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] As a result of this project, the Dresden Elbe Valley was listed in 2006 as an \"Endangered World Heritage Site\" (one of two in Europe, the Medieval Monuments in Kosovo being the other one), and in 2009 became only the second World Heritage Site to be de-listed.\n[2] Gerard of Cremona is the most important translator among the Toledo School of Translators who invigorated medieval Europe in the twelfth century by transmitting the Arab's and ancient Greek's knowledge in astronomy, medicine and other sciences, by making the knowledge available in the Latin language.\n[3] Toledo (] ) is a city and municipality located in central Spain; it is the capital of the province of Toledo and the autonomous community of Castile–La Mancha.\n[4] The city of Eisleben, located in Saxony-Anhalt, is also where Martin Luther was born and baptised; his birth house is also a UNESCO world heritage site and museum."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

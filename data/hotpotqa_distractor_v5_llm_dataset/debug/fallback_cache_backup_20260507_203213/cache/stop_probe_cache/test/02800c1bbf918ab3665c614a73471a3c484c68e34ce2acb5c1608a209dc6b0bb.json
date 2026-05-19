@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "George I",
+  "pred_answer": "George I",
+  "normalized_gold": "george i",
+  "normalized_pred": "george i",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a9ed55542995eb53be87d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a9ed55542995eb53be87d::John Erskine, Earl of Mar (1675–1732)::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a9ed55542995eb53be87d::Mar's Wark::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a9ed55542995eb53be87d::George I of Great Britain::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a9ed55542995eb53be87d::John Erskine, Earl of Mar (1675–1732)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a9ed55542995eb53be87d::John Erskine, Earl of Mar (1675–1732)",
+        "5a7a9ed55542995eb53be87d::George I of Great Britain"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a9ed55542995eb53be87d::John Erskine, Earl of Mar (1675–1732)::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a9ed55542995eb53be87d::Mar's Wark::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a9ed55542995eb53be87d::George I of Great Britain::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a9ed55542995eb53be87d::John Erskine, Earl of Mar (1675–1732)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a9ed55542995eb53be87d::John Erskine, Earl of Mar (1675–1732)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] John Erskine, Earl of Mar, KT (1675 – May 1732), Scottish Jacobite, was the eldest son of Charles, Earl of Mar (who died in 1689), from whom he inherited estates that were heavily loaded with debt.\n[2] George I (George Louis; German: \"Georg Ludwig\" ; 28 May 1660 – 11 June 1727) was King of Great Britain and Ireland from 1 August 1714 until his death, and ruler of the Duchy and Electorate of Brunswick-Lüneburg (Hanover) in the Holy Roman Empire from 1698.\n[3] Mar's Wark is a ruined building in Stirling built 1570–1572 by John Erskine, Regent of Scotland and Earl of Mar, and now in the care of Historic Scotland.\n[4] Deprived of office by the new king in 1714, Mar raised the standard of rebellion against the Hanoverians; at the battle of Sheriffmuir in November 1715, Mar's forces outnumbered those of his opponent, but victory eluded him."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

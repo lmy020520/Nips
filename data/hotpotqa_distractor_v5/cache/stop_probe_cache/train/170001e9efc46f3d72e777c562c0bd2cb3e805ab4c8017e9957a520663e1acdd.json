@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Juilliard School",
+  "pred_answer": "Juilliard School",
+  "normalized_gold": "juilliard school",
+  "normalized_pred": "juilliard school",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a890a9b5542995153361275",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a890a9b5542995153361275::Rosina Lhévinne::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a890a9b5542995153361275::Daniel Pollack::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a890a9b5542995153361275::Nikolai Massalitinov::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a890a9b5542995153361275::Rosina Lhévinne",
+        "5a890a9b5542995153361275::Daniel Pollack"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a890a9b5542995153361275::Rosina Lhévinne::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a890a9b5542995153361275::Daniel Pollack::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a890a9b5542995153361275::Nikolai Massalitinov::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a890a9b5542995153361275::Nikolai Massalitinov::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Nikolai Osipovich Massalitinov (Russian: Николай Осипович Массалитинов , 24 February 1880, Yelets, Oryol Governorate, Russian Empire, — 22 March 1961, Sofia, Bulgaria) was a Russian (later Bulgarian) stage actor, theatre director and pedagogue, associated originally with the Moscow Art Theatre and, since 1925, with Ivan Vazov National Theatre in Bulgaria.\n[2] He is a graduate of the Juilliard School from the class of the legendary Rosina Lhévinne.\n[3] Rosina Lhévinne (née Bessie; March 29, 1880, Kiev, Ukraine, Russian EmpireNovember 9, 1976, Glendale, California) was a pianist and famed pedagogue."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

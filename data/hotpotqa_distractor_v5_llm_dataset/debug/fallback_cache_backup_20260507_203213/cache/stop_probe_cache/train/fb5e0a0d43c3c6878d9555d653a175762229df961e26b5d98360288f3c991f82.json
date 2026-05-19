@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Crazy Ex-Girlfriend",
+  "pred_answer": "Crazy Ex-Girlfriend",
+  "normalized_gold": "crazy ex-girlfriend",
+  "normalized_pred": "crazy ex-girlfriend",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae448615542995ad6573d2b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae448615542995ad6573d2b::Donna Lynne Champlin::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae448615542995ad6573d2b::Donna Lynne::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae448615542995ad6573d2b::Crazy Ex-Girlfriend (TV series)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae448615542995ad6573d2b::Donna Lynne Champlin::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae448615542995ad6573d2b::Donna Lynne Champlin",
+        "5ae448615542995ad6573d2b::Crazy Ex-Girlfriend (TV series)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae448615542995ad6573d2b::Donna Lynne Champlin::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae448615542995ad6573d2b::Donna Lynne::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae448615542995ad6573d2b::Crazy Ex-Girlfriend (TV series)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae448615542995ad6573d2b::Donna Lynne Champlin::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae448615542995ad6573d2b::Donna Lynne Champlin::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She is best known for playing Paula Proctor in The CW comedy-drama series Crazy Ex-Girlfriend.\n[2] Crazy Ex-Girlfriend is an American romantic musical comedy-drama television series which premiered on October 12, 2015, on The CW.\n[3] Donna Lynne (born October 27, 1953) is a member of the Democratic Party and the 49th lieutenant governor of the State of Colorado.\n[4] Donna Lynne Champlin (born January 21, 1971) is an American actress from New York City."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Gary Ross",
+  "pred_answer": "Gary Ross",
+  "normalized_gold": "gary ross",
+  "normalized_pred": "gary ross",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab73d795542992aa3b8c7e5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab73d795542992aa3b8c7e5::The Hunger Games: Catching Fire::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab73d795542992aa3b8c7e5::Catching Fire::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab73d795542992aa3b8c7e5::The Hunger Games (film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab73d795542992aa3b8c7e5::The Hunger Games: Mockingjay – Part 2::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab73d795542992aa3b8c7e5::The Hunger Games: Catching Fire",
+        "5ab73d795542992aa3b8c7e5::The Hunger Games (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab73d795542992aa3b8c7e5::The Hunger Games: Catching Fire::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab73d795542992aa3b8c7e5::Catching Fire::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab73d795542992aa3b8c7e5::The Hunger Games (film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab73d795542992aa3b8c7e5::The Hunger Games: Mockingjay – Part 2::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab73d795542992aa3b8c7e5::The Hunger Games: Mockingjay – Part 2::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Hunger Games: Mockingjay – Part 2 is a 2015 American dystopian science fiction adventure film directed by Francis Lawrence, with a screenplay by Peter Craig and Danny Strong.\n[2] The Hunger Games is a 2012 American dystopian science fiction adventure film directed by Gary Ross and based on the novel of the same name by Suzanne Collins.\n[3] Catching Fire is a 2009 science fiction young adult novel by the American novelist Suzanne Collins, the second book in \"The Hunger Games trilogy\".\n[4] The Hunger Games: Catching Fire is a 2013 American dystopian science fiction adventure film based on Suzanne Collins' dystopian novel, \"Catching Fire\" (2009), the second installment in \"The Hunger Games\" trilogy."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

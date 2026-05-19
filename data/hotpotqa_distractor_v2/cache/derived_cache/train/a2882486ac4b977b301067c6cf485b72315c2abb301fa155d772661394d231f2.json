@@ -1,0 +1,31 @@
+{
+  "should_derive": true,
+  "reason": "The question asks about a storm that surpassed Typhoon Nora in 2015, but the raw evidence includes Typhoon Nora from 1973 and other storms, causing target type disambiguation. Deriving bridge notes can help organize evidence by clarifying which storm is relevant and linking to Category 5 hurricane details, supporting answer-facing organization and target type clarification in repair_after_false_stop mode.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Typhoon Nora in the raw evidence is from 1973, not 2015, indicating the question likely refers to a different storm.",
+      "source_unit_ids": [
+        "5a82a36a55429954d2e2eb8d::Typhoon Nora (1973)::1"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "Hurricane Patricia in 2015 originated from a disturbance near Mexico and was first classified as a tropical depression on October 20.",
+      "source_unit_ids": [
+        "5a82a36a55429954d2e2eb8d::Hurricane Patricia::1"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "The question requires identifying a storm that grew from a tropical storm to a Category 5 hurricane, which involves tracking intensification timelines.",
+      "source_unit_ids": [
+        "5a82a36a55429954d2e2eb8d::Hurricane Patricia::1",
+        "5a82a36a55429954d2e2eb8d::2007 Atlantic hurricane season::6"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

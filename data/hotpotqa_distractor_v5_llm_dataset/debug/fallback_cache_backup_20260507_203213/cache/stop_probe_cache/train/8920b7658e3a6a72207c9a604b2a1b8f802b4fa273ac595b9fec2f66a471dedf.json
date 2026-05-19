@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the Milwaukee Cannibal",
+  "pred_answer": "the Milwaukee Cannibal",
+  "normalized_gold": "the milwaukee cannibal",
+  "normalized_pred": "the milwaukee cannibal",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab8f0cd5542991b5579f069",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab8f0cd5542991b5579f069::Jeffrey Dahmer::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab8f0cd5542991b5579f069::William Bonin::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab8f0cd5542991b5579f069::My Friend Dahmer (film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab8f0cd5542991b5579f069::Randy Steven Kraft::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab8f0cd5542991b5579f069::Jeffrey Dahmer",
+        "5ab8f0cd5542991b5579f069::My Friend Dahmer (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab8f0cd5542991b5579f069::Jeffrey Dahmer::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab8f0cd5542991b5579f069::William Bonin::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab8f0cd5542991b5579f069::My Friend Dahmer (film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab8f0cd5542991b5579f069::Randy Steven Kraft::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab8f0cd5542991b5579f069::Randy Steven Kraft::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Randy Steven Kraft (born March 19, 1945) is an American serial killer known as the \"Scorecard Killer\" and the \"Freeway Killer\" who committed the rape, torture, mutilation, and murder of a minimum of 16 young men in a series of killings spanning between 1972 and 1983, the majority of which had been committed in California.\n[2] My Friend Dahmer is a 2017 American biographical drama film written and directed by Marc Meyers about the American serial killer Jeffrey Dahmer.\n[3] William George Bonin (January 8, 1947 – February 23, 1996) was an American serial killer and twice-paroled sex offender, also known as the Freeway Killer, who committed the rape, torture and murder of a minimum of 21 boys and young men in a series of killings in 1979 and 1980 in southern California.\n[4] Jeffrey Lionel Dahmer (May 21, 1960 – November 28, 1994), also known as the Milwaukee Cannibal, was an American serial killer and sex offender, who committed the rape, murder, and dismemberment of seventeen men and boys between 1978 and 1991."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

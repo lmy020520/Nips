@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "four",
+  "pred_answer": "four",
+  "normalized_gold": "four",
+  "normalized_pred": "four",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5e5de55429929b0807a05",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5e5de55429929b0807a05::Francesco Meli::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5e5de55429929b0807a05::La traviata::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5e5de55429929b0807a05::Macbeth (opera)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae5e5de55429929b0807a05::Aida::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5e5de55429929b0807a05::Francesco Meli",
+        "5ae5e5de55429929b0807a05::Macbeth (opera)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5e5de55429929b0807a05::Francesco Meli::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5e5de55429929b0807a05::La traviata::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5e5de55429929b0807a05::Macbeth (opera)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae5e5de55429929b0807a05::Aida::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5e5de55429929b0807a05::Aida::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Aida (] ) is an opera in four acts by Giuseppe Verdi to an Italian libretto by Antonio Ghislanzoni.\n[2] Macbeth (] ) is an opera in four acts by Giuseppe Verdi, with an Italian libretto by Francesco Maria Piave and additions by Andrea Maffei, based on William Shakespeare's play of the same name.\n[3] La traviata (] , The Fallen Woman) is an opera in three acts by Giuseppe Verdi set to an Italian libretto by Francesco Maria Piave.\n[4] In 2002 he debuted in Verdi's \"Macbeth\" and as the tenor soloist in Rossini's \"Petite Messe Solennelle\" and Puccini's \"Messa di Gloria\", broadcast by RAI (the Italian state broadcasting company) from the Festival dei Due Mondi in Spoleto."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Giant Drag",
+  "pred_answer": "Giant Drag",
+  "normalized_gold": "giant drag",
+  "normalized_pred": "giant drag",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c5c4455429907fabeef6b",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c5c4455429907fabeef6b::Giant Drag::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c5c4455429907fabeef6b::The Clouds (Australian band)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c5c4455429907fabeef6b::Foreign Born::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c5c4455429907fabeef6b::Giant Drag",
+        "5a7c5c4455429907fabeef6b::The Clouds (Australian band)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c5c4455429907fabeef6b::Giant Drag::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c5c4455429907fabeef6b::The Clouds (Australian band)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c5c4455429907fabeef6b::Foreign Born::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c5c4455429907fabeef6b::Foreign Born::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] While touring the US and UK with Rogue Wave, Jason Collett, Cold War Kids, Giant Drag and We Are Scientists, they recorded their first full-length album, \"On the Wing Now\", in the fall/winter of 2005, self-released 500 or so copies that they sold on the previously mentioned tours, and officially released the album with Dim Mak on August 21, 2007.\n[2] The line-up of The Clouds has changed several times with different drummers and lead guitarists.\n[3] The band was founded in 2003 by Annie Hardy who continues to be the band's sole singer and songwriter."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

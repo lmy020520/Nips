@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "David Kirshenbaum",
+  "pred_answer": "David Kirshenbaum",
+  "normalized_gold": "david kirshenbaum",
+  "normalized_pred": "david kirshenbaum",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8451e3554299123d8c2201",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8451e3554299123d8c2201::Anneliese van der Pol::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8451e3554299123d8c2201::Vanities, A New Musical (album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8451e3554299123d8c2201::Elmopalooza! (soundtrack)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8451e3554299123d8c2201::Anneliese van der Pol",
+        "5a8451e3554299123d8c2201::Vanities, A New Musical (album)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8451e3554299123d8c2201::Anneliese van der Pol::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8451e3554299123d8c2201::Vanities, A New Musical (album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8451e3554299123d8c2201::Elmopalooza! (soundtrack)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8451e3554299123d8c2201::Elmopalooza! (soundtrack)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] is a 1998 children's album featuring songs performed by characters from Sesame Street with special musical guests.\n[2] Vanities, A New Musical contains the songs from the Off-Broadway musical, \"Vanities, A New Musical\", The album features music and lyrics by David Kirshenbaum, and a book by Jack Heifner.\n[3] Following her early career in musical theatre, she was best known for her role as Chelsea Daniels on \"That's So Raven\", a role she reprises on its sequel \"Raven's Home\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Canada",
+  "pred_answer": "Canada",
+  "normalized_gold": "canada",
+  "normalized_pred": "canada",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9fa7655429901930fa75c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9fa7655429901930fa75c::Frederick Valentine Atkinson::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9fa7655429901930fa75c::University of Toronto::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9fa7655429901930fa75c::University Health Network::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9fa7655429901930fa75c::Frederick Valentine Atkinson",
+        "5ab9fa7655429901930fa75c::University of Toronto"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9fa7655429901930fa75c::Frederick Valentine Atkinson::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9fa7655429901930fa75c::University of Toronto::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9fa7655429901930fa75c::University Health Network::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9fa7655429901930fa75c::University Health Network::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] University Health Network (UHN) is a healthcare and medical research organization in Toronto, Ontario, Canada.\n[2] The University of Toronto (U of T, UToronto, or Toronto) is a public research university in Toronto, Ontario, Canada on the grounds that surround Queen's Park.\n[3] Frederick Valentine Atkinson (Pinner, 25 January 1916 – Toronto, 13 November 2002) was a British mathematician, formerly of the University of Toronto, Canada, where he spent most of his career."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

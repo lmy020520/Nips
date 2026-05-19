@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "John Sullivan",
+  "pred_answer": "John Sullivan",
+  "normalized_gold": "john sullivan",
+  "normalized_pred": "john sullivan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a78dc1d55429970f5fffdb5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a78dc1d55429970f5fffdb5::The Class of '62::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a78dc1d55429970f5fffdb5::Early Tymes::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a78dc1d55429970f5fffdb5::Only Fools and Horses::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a78dc1d55429970f5fffdb5::Discovery (1960s TV series)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a78dc1d55429970f5fffdb5::The Class of '62",
+        "5a78dc1d55429970f5fffdb5::Only Fools and Horses"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a78dc1d55429970f5fffdb5::The Class of '62::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a78dc1d55429970f5fffdb5::Early Tymes::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a78dc1d55429970f5fffdb5::Only Fools and Horses::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a78dc1d55429970f5fffdb5::Discovery (1960s TV series)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a78dc1d55429970f5fffdb5::Discovery (1960s TV series)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Discovery was a television program geared towards children and teenagers, produced by ABC News.\n[2] Only Fools and Horses is a British television sitcom created and written by John Sullivan.\n[3] Early Tymes is an album consisting of demos (fifteenth album) by Harry Nilsson who recorded for Scott Turner in 1962, when he was still a struggling musician, whose regular job was working in a bank.\n[4] \"The Class of '62\" is an episode of the BBC sit-com \"Only Fools and Horses\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

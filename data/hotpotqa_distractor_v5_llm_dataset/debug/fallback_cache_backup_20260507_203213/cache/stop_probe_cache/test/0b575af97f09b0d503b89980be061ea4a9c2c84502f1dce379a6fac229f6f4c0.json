@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1985",
+  "pred_answer": "1985",
+  "normalized_gold": "1985",
+  "normalized_pred": "1985",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade4da055429939a52fe878",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade4da055429939a52fe878::My Neighbor Totoro::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade4da055429939a52fe878::List of Digimon Adventure 02 episodes::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade4da055429939a52fe878::Studio Ghibli::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade4da055429939a52fe878::Makiko Futaki::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade4da055429939a52fe878::My Neighbor Totoro",
+        "5ade4da055429939a52fe878::Studio Ghibli"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade4da055429939a52fe878::My Neighbor Totoro::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade4da055429939a52fe878::List of Digimon Adventure 02 episodes::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade4da055429939a52fe878::Studio Ghibli::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade4da055429939a52fe878::Makiko Futaki::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade4da055429939a52fe878::Makiko Futaki::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Futaki, who joined Studio Ghibli in 1981, worked on all of Hayao Miyazaki's animated feature films, beginning with \"Nausicaä of the Valley of the Wind\" in 1984.\n[2] It was founded on 15 June 1985, after the success of \"Nausicaä of the Valley of the Wind\" (1984), with funding by Tokuma Shoten.\n[3] In a 2001 survey published by Japanese anime and entertainment magazine \"Animage\" of its readers, \"Digimon Adventure 02\" placed 17th, tied with the 1988 film \"My Neighbor Totoro\", on the list of anime that should be most remembered in the 21st century.\n[4] My Neighbor Totoro (Japanese: となりのトトロ , Hepburn: Tonari no Totoro ) is a 1988 Japanese animated fantasy film written and directed by Hayao Miyazaki and produced by Studio Ghibli."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

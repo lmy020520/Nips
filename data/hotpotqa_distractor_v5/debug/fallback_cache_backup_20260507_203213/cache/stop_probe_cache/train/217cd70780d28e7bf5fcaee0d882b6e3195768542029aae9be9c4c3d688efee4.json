@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "North America",
+  "pred_answer": "North America",
+  "normalized_gold": "north america",
+  "normalized_pred": "north america",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7ebff35542994959419a6e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7ebff35542994959419a6e::Marie-Barbe de Boullongne::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7ebff35542994959419a6e::Jean-Antoine Chaptal::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7ebff35542994959419a6e::New France::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7ebff35542994959419a6e::Consequences of War::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7ebff35542994959419a6e::Marie-Barbe de Boullongne",
+        "5a7ebff35542994959419a6e::New France"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7ebff35542994959419a6e::Marie-Barbe de Boullongne::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7ebff35542994959419a6e::Jean-Antoine Chaptal::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7ebff35542994959419a6e::New France::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7ebff35542994959419a6e::Consequences of War::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7ebff35542994959419a6e::Consequences of War::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It serves as a commentary on a European continent ravaged by the Thirty Years' War, and the artist employed numerous symbols, both contemporary and ancient, to deplore the state of the continent.\n[2] New France (French: \"Nouvelle-France\" ) was the area colonized by France in North America during a period beginning with the exploration of the Gulf of Saint Lawrence by Jacques Cartier in 1534 and ending with the cession of New France to Great Britain and Spain in 1763.\n[3] Jean-Antoine Chaptal, comte de Chanteloup (5 June 1756 – 30 July 1832) was a distinguished French chemist, physician, agronomist, industrialist, statesman, educator and philanthropist.\n[4] Marie-Barbe de Boullongne (ca 1618 – June 7, 1685) was a philanthropist in New France (later Quebec)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

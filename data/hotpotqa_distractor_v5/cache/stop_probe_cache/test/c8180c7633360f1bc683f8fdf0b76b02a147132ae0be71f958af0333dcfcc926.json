@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "no. 3",
+  "pred_answer": "no. 3",
+  "normalized_gold": "no 3",
+  "normalized_pred": "no 3",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a88e2f35542993b751ca8ad",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a88e2f35542993b751ca8ad::Alien Autopsy (film)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a88e2f35542993b751ca8ad::Harum Scarum (film)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a88e2f35542993b751ca8ad::Alien Autopsy (film)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a88e2f35542993b751ca8ad::Ant &amp; Dec::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a88e2f35542993b751ca8ad::Vector 13::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a88e2f35542993b751ca8ad::Alien Autopsy (film)",
+        "5a88e2f35542993b751ca8ad::Ant &amp; Dec"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a88e2f35542993b751ca8ad::Alien Autopsy (film)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a88e2f35542993b751ca8ad::Harum Scarum (film)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a88e2f35542993b751ca8ad::Alien Autopsy (film)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a88e2f35542993b751ca8ad::Ant &amp; Dec::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a88e2f35542993b751ca8ad::Vector 13::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a88e2f35542993b751ca8ad::Vector 13::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It was influenced by American TV drama \"The X-Files\" (which was at the height of its popularity at the time) and other events like the 1995 release of the alien autopsy film; as the general interest in the paranormal and parapolitics waned, the series was wound up and replaced by \"Pulp Sci-Fi\" as a venue for single issue self-contained stories.\n[2] Anthony McPartlin, OBE (born 18 November 1975) and Declan Donnelly, OBE (born 25 September 1975), known collectively as Ant & Dec, are an English comedy TV presenting, television producing, acting and former music duo from Newcastle upon Tyne, England.\n[3] The film was a moderate commercial success domestically, making no. 3 on the British box office chart.\n[4] The film reached #11 on the \"Variety\" national weekly box office chart, earned $2 million at the box office, and finished #40 on the year end list of the top-grossing films of 1965."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

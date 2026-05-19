@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Around the World in Eighty Days",
+  "pred_answer": "Around the World in Eighty Days",
+  "normalized_gold": "around the world in eighty days",
+  "normalized_pred": "around the world in eighty days",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab1f4a4554299340b52543a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab1f4a4554299340b52543a::Around the World in 80 Days (game)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab1f4a4554299340b52543a::Around the World in Eighty Days::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab1f4a4554299340b52543a::Around the World in 80 Days (1988 film)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab1f4a4554299340b52543a::Around the World in 80 Days (game)",
+        "5ab1f4a4554299340b52543a::Around the World in Eighty Days"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab1f4a4554299340b52543a::Around the World in 80 Days (game)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab1f4a4554299340b52543a::Around the World in Eighty Days::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab1f4a4554299340b52543a::Around the World in 80 Days (1988 film)::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab1f4a4554299340b52543a::Around the World in 80 Days (1988 film)::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The film is based on Jules Verne's classic French novel, \"Around the World in 80 Days\", first published in 1873, and was adapted by Leonard Lee.\n[2] Around the World in Eighty Days (French: \"Le tour du monde en quatre-vingts jours\" ) is a classic adventure novel by the French writer Jules Verne, published in 1873.\n[3] Around the World in 80 Days is a 2004 designer board game by Michael Rieneck."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jack White",
+  "pred_answer": "Jack White",
+  "normalized_gold": "jack white",
+  "normalized_pred": "jack white",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab45a035542996a3a969f73",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab45a035542996a3a969f73::Jack White::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab45a035542996a3a969f73::Lil Tuffy::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab45a035542996a3a969f73::Vance Powell::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab45a035542996a3a969f73::Meg White::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab45a035542996a3a969f73::Jack White",
+        "5ab45a035542996a3a969f73::Vance Powell"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab45a035542996a3a969f73::Jack White::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab45a035542996a3a969f73::Lil Tuffy::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab45a035542996a3a969f73::Vance Powell::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab45a035542996a3a969f73::Meg White::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab45a035542996a3a969f73::Meg White::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Megan Martha \"Meg\" White (born December 10, 1974) is an American drummer and occasional singer known for her work with Jack White in the Detroit rock duo The White Stripes.\n[2] His credits include Chris Stapleton, Jack White, Tyler Bryant & The Shakedown, The Raconteurs, The Dead Weather, The White Stripes, Arctic Monkeys, Wolfmother, Seasick Steve, Black Prairie, The Revivalists, Tinariwen, JEFF the Brotherhood, Daniel Ellsworth & The Great Lakes, and Martina McBride, among many others.\n[3] As a member of the 2000s resurgence of the poster-art scene he has designed posters for a wide variety of musical acts, including Devo, Slayer, Pavement, Queens of the Stone Age, Faith No More, The White Stripes, The Black Keys, Morrissey and many others.\n[4] He is known as the lead singer and guitarist of duo The White Stripes."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

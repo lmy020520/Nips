@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mary Flora Bell",
+  "pred_answer": "Mary Flora Bell",
+  "normalized_gold": "mary flora bell",
+  "normalized_pred": "mary flora bell",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae611aa554299546bf83061",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae611aa554299546bf83061::Gitta Sereny::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae611aa554299546bf83061::Mary Bell::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae611aa554299546bf83061::Lady Mary Wroth::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae611aa554299546bf83061::Gitta Sereny",
+        "5ae611aa554299546bf83061::Mary Bell"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae611aa554299546bf83061::Gitta Sereny::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae611aa554299546bf83061::Mary Bell::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae611aa554299546bf83061::Lady Mary Wroth::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae611aa554299546bf83061::Lady Mary Wroth::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] She is perhaps best known for having written \"The Countess of Montgomery's Urania\", the first extant prose romance by an English woman, and for \"Pamphilia to Amphilanthus\", the second known sonnet sequence by an English woman.\n[2] Mary Flora Bell (born 26 May 1957) is an English woman who, in 1968, aged 10–11, strangled to death two younger boys in Scotswood, an inner-city suburb of Newcastle upon Tyne.\n[3] Gitta Sereny, CBE (13 March 192114 June 2012) was an Austrian-British biographer, historian, and investigative journalist who came to be known for her interviews and profiles of controversial figures, including Mary Bell, who was convicted in 1968 of killing two children when she herself was a child, and Franz Stangl, the commandant of the Treblinka extermination camp."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

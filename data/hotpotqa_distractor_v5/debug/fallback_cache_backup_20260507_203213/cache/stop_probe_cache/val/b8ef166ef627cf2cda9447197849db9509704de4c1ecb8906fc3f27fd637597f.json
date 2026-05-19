@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mazes and Monsters",
+  "pred_answer": "Mazes and Monsters",
+  "normalized_gold": "mazes and monsters",
+  "normalized_pred": "mazes and monsters",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae30ade55429928c42395c0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae30ade55429928c42395c0::Mazes and Monsters (novel)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae30ade55429928c42395c0::A League of Their Own (Ugly Betty)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae30ade55429928c42395c0::Rona Jaffe::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae30ade55429928c42395c0::Mazes and Monsters (novel)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae30ade55429928c42395c0::Mazes and Monsters (novel)",
+        "5ae30ade55429928c42395c0::Rona Jaffe"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae30ade55429928c42395c0::Mazes and Monsters (novel)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae30ade55429928c42395c0::A League of Their Own (Ugly Betty)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae30ade55429928c42395c0::Rona Jaffe::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae30ade55429928c42395c0::Mazes and Monsters (novel)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae30ade55429928c42395c0::Mazes and Monsters (novel)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Mazes and Monsters is a 1981 novel by Rona Jaffe.\n[2] She may have been best known for her controversial novel \"Mazes and Monsters\" (1981).\n[3] The title \"A League of Their Own\" refers to the 1992 movie with the same name starring Tom Hanks, Geena Davis and Madonna.\n[4] The book was adapted into a made-for-television movie by the same name in 1982 starring Tom Hanks."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Balázs Taróczy",
+  "pred_answer": "Balázs Taróczy",
+  "normalized_gold": "balázs taróczy",
+  "normalized_pred": "balázs taróczy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae17c8355429901ffe4aea1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae17c8355429901ffe4aea1::Balázs Taróczy::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae17c8355429901ffe4aea1::1978 Torneo Godó::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae17c8355429901ffe4aea1::Michael Venus (tennis)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae17c8355429901ffe4aea1::László Markovits::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae17c8355429901ffe4aea1::Balázs Taróczy",
+        "5ae17c8355429901ffe4aea1::Michael Venus (tennis)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae17c8355429901ffe4aea1::Balázs Taróczy::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae17c8355429901ffe4aea1::1978 Torneo Godó::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae17c8355429901ffe4aea1::Michael Venus (tennis)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae17c8355429901ffe4aea1::László Markovits::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae17c8355429901ffe4aea1::László Markovits::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Count László Markovits de Spizza et Kisterpest (born 4 April 1970) is a former tennis player from Hungary, son of water polo player and national team captain Kálmán Markovits and World champion handballer Márta Balogh.\n[2] Michael Venus (born 16 October 1987) is a New Zealand professional tennis player.\n[3] Balázs Taróczy won the singles title.\n[4] Balázs Taróczy (Hungarian: \"Taróczy Balázs\" ; born 9 May 1954) is a retired tennis player from Hungary, who won thirteen singles titles in his career."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

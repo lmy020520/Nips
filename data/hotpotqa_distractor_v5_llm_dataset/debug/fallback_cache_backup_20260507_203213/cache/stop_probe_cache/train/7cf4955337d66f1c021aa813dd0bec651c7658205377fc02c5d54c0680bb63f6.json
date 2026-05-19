@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Black September",
+  "pred_answer": "Black September",
+  "normalized_gold": "black september",
+  "normalized_pred": "black september",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc5f8f55429947ff17393b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc5f8f55429947ff17393b::Attack (2016 film)::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc5f8f55429947ff17393b::Amitzur Shapira::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc5f8f55429947ff17393b::Munich massacre::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc5f8f55429947ff17393b::December 2010 Bajaur bombing::8"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc5f8f55429947ff17393b::Amitzur Shapira",
+        "5adc5f8f55429947ff17393b::Munich massacre"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc5f8f55429947ff17393b::Attack (2016 film)::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc5f8f55429947ff17393b::Amitzur Shapira::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc5f8f55429947ff17393b::Munich massacre::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc5f8f55429947ff17393b::December 2010 Bajaur bombing::8",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc5f8f55429947ff17393b::December 2010 Bajaur bombing::8",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] No particular militant group has of yet claimed responsibility for this suicide attack, although the Pakistani Taliban are strong suspects.\n[2] The Munich massacre was an attack during the 1972 Summer Olympics in Munich, West Germany, at which eleven Israeli Olympic team members were taken hostage and eventually killed, along with a German police officer, by the Palestinian terrorist group Black September.\n[3] Amitzur Shapira (Hebrew: עמיצור שפירא‎ ‎ ; July 9, 1932 – September 6, 1972) was an Israeli sprinter and long jumper in the 1950s and a coach for the Israeli track and field team at the 1972 Summer Olympics in Munich, Germany.\n[4] Guru Raj was brutally killed by some unknown gangsters while visiting a temple, his family is completely upset this incident and makes them clueless about the motive behind this attack."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

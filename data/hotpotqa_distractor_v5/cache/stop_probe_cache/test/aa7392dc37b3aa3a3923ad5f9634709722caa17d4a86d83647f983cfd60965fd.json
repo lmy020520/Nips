@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Miracle of the White Stallions",
+  "pred_answer": "Miracle of the White Stallions",
+  "normalized_gold": "miracle of the white stallions",
+  "normalized_pred": "miracle of the white stallions",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c76275542990527d554b4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c76275542990527d554b4::Miracle of the White Stallions::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c76275542990527d554b4::The Hunchback of Notre Dame II::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c76275542990527d554b4::The Hunchback of Notre Dame (1996 film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7c76275542990527d554b4::1943 Notre Dame Fighting Irish football team::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c76275542990527d554b4::Miracle of the White Stallions",
+        "5a7c76275542990527d554b4::The Hunchback of Notre Dame (1996 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c76275542990527d554b4::Miracle of the White Stallions::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c76275542990527d554b4::The Hunchback of Notre Dame II::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c76275542990527d554b4::The Hunchback of Notre Dame (1996 film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7c76275542990527d554b4::1943 Notre Dame Fighting Irish football team::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c76275542990527d554b4::1943 Notre Dame Fighting Irish football team::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Despite a season ending loss to Great Lakes, Notre Dame was awarded its first national title by the Associated Press.\n[2] The Hunchback of Notre Dame is a 1996 American animated musical drama film produced by Walt Disney Feature Animation for Walt Disney Pictures.\n[3] The Hunchback of Notre Dame II is a 2002 American animated romantic musical comedy-drama film and direct-to-video sequel to the 1996 Disney animated film \"The Hunchback of Notre Dame\".\n[4] Miracle of the White Stallions is a 1963 film released by Walt Disney starring Robert Taylor (playing Alois Podhajsky), Lilli Palmer, and Eddie Albert."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

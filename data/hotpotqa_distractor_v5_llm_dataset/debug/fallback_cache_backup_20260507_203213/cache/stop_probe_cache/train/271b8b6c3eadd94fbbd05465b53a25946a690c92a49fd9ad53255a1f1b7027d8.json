@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1983",
+  "pred_answer": "1983",
+  "normalized_gold": "1983",
+  "normalized_pred": "1983",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adcc5585542990d50227d09",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adcc5585542990d50227d09::Dr. Lecter::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adcc5585542990d50227d09::Lilting (film)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adcc5585542990d50227d09::Action Bronson::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adcc5585542990d50227d09::Lil' Kim::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adcc5585542990d50227d09::Dr. Lecter",
+        "5adcc5585542990d50227d09::Action Bronson"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adcc5585542990d50227d09::Dr. Lecter::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adcc5585542990d50227d09::Lilting (film)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adcc5585542990d50227d09::Action Bronson::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adcc5585542990d50227d09::Lil' Kim::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adcc5585542990d50227d09::Lil' Kim::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Kimberly Denise Jones (born July 11, 1974 or July 11, 1975), known by her stage name Lil' Kim, is an American rapper, songwriter, record producer, model, and actress.\n[2] Arian Asllani (born December 2, 1983), better known by the stage name Action Bronson, is an American rapper and former chef.\n[3] It is produced by Dominic Buchanan, whose debut film \"Gimme The Loot\" had its World Premiere at SXSW in March 2012 and went on to win the Grand Jury Prize for Best Narrative Feature.\n[4] Dr. Lecter is the debut studio album by the American rapper Action Bronson."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

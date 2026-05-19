@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "comedian",
+  "pred_answer": "comedian",
+  "normalized_gold": "comedian",
+  "normalized_pred": "comedian",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79436e554299029c4b5f41",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79436e554299029c4b5f41::Kenny Warren::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79436e554299029c4b5f41::List of Seinfeld episodes::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79436e554299029c4b5f41::Jerry Seinfeld::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a79436e554299029c4b5f41::Kenny Warren::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79436e554299029c4b5f41::Kenny Warren",
+        "5a79436e554299029c4b5f41::Jerry Seinfeld"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79436e554299029c4b5f41::Kenny Warren::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79436e554299029c4b5f41::List of Seinfeld episodes::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79436e554299029c4b5f41::Jerry Seinfeld::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a79436e554299029c4b5f41::Kenny Warren::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a79436e554299029c4b5f41::Kenny Warren::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Kenny Warren (born April 1, 1946) is an American Ventriloquist, Comedian, Author.\n[2] Jerome Allen \"Jerry\" Seinfeld ( ; born April 29, 1954) is an American comedian, actor, writer, producer, and director.\n[3] Set predominantly in an apartment block on New York City's Upper West Side, the show features a host of Jerry's friends and acquaintances, which include George Costanza, Elaine Benes, and Cosmo Kramer, who are portrayed by Jason Alexander, Julia Louis-Dreyfus, and Michael Richards, respectively.\n[4] He has appeared on television shows such as What’s My Line and To Tell The Truth and also has performed with comedians such as Jerry Seinfeld and Rodney Dangerfield."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

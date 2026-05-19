@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Neapolitan Mastiff",
+  "pred_answer": "Neapolitan Mastiff",
+  "normalized_gold": "neapolitan mastiff",
+  "normalized_pred": "neapolitan mastiff",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7cb77a55429907fabef00f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7cb77a55429907fabef00f::Neapolitan Mastiff::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7cb77a55429907fabef00f::Cane da presa::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7cb77a55429907fabef00f::Bedlington Terrier::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7cb77a55429907fabef00f::Teddy Roosevelt Terrier::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7cb77a55429907fabef00f::Neapolitan Mastiff",
+        "5a7cb77a55429907fabef00f::Bedlington Terrier"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7cb77a55429907fabef00f::Neapolitan Mastiff::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7cb77a55429907fabef00f::Cane da presa::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7cb77a55429907fabef00f::Bedlington Terrier::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7cb77a55429907fabef00f::Teddy Roosevelt Terrier::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7cb77a55429907fabef00f::Teddy Roosevelt Terrier::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Teddy Roosevelt Terrier is a small to medium-sized American hunting terrier.\n[2] The Bedlington Terrier is a breed of small dog named after the mining town of Bedlington, Northumberland in North East England.\n[3] The modern Neapolitan Mastiff is unlike the original, a dog created by dog shows. Fans of the original Mastino have started an organisation which is trying to gather the remaining specimens which would fit the 1946 standard of the Neapolitan Mastiff.\n[4] The Neapolitan Mastiff or Mastino (Italian: \"Mastino Napoletano\" ) is a large, ancient dog breed."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

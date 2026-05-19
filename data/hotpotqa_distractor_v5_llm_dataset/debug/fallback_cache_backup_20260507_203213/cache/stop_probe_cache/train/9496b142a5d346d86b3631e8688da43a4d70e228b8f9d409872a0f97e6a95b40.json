@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Musterschule",
+  "pred_answer": "Musterschule",
+  "normalized_gold": "musterschule",
+  "normalized_pred": "musterschule",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abf9b525542997719eab69d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abf9b525542997719eab69d::Musterschule::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abf9b525542997719eab69d::Rothschild banking family of France::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abf9b525542997719eab69d::Mayer Amschel Rothschild::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abf9b525542997719eab69d::S. M. von Rothschild::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abf9b525542997719eab69d::Musterschule",
+        "5abf9b525542997719eab69d::Mayer Amschel Rothschild"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abf9b525542997719eab69d::Musterschule::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abf9b525542997719eab69d::Rothschild banking family of France::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abf9b525542997719eab69d::Mayer Amschel Rothschild::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abf9b525542997719eab69d::S. M. von Rothschild::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abf9b525542997719eab69d::S. M. von Rothschild::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] S M von Rothschild was a banking enterprise established in 1820 in Vienna, Austria-Hungary by Salomon Mayer Rothschild, the founder of the Rothschild banking family of Austria and a member of the Mayer Amschel Rothschild family of Frankfurt, Germany.\n[2] Mayer Amschel Rothschild, written also Anschel (23 February 1744 – 19 September 1812), was a German Jewish banker and the founder of the Rothschild banking dynasty.\n[3] The Rothschild banking family of France is a French banking dynasty founded in 1812 in Paris by James Mayer de Rothschild (1792–1868).\n[4] The Musterschule (\"model school\") is a gymnasium in Frankfurt am Main."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

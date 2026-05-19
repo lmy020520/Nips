@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "from 1989 to 1990",
+  "pred_answer": "from 1989 to 1990",
+  "normalized_gold": "from 1989 to 1990",
+  "normalized_pred": "from 1989 to 1990",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abeb4b65542993fe9a41d06",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abeb4b65542993fe9a41d06::John Mugabi::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abeb4b65542993fe9a41d06::Hasim Rahman::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abeb4b65542993fe9a41d06::John Mugabi::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abeb4b65542993fe9a41d06::George Francis (trainer)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abeb4b65542993fe9a41d06::Gerry Peñalosa::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abeb4b65542993fe9a41d06::John Mugabi",
+        "5abeb4b65542993fe9a41d06::George Francis (trainer)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abeb4b65542993fe9a41d06::John Mugabi::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abeb4b65542993fe9a41d06::Hasim Rahman::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abeb4b65542993fe9a41d06::John Mugabi::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abeb4b65542993fe9a41d06::George Francis (trainer)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abeb4b65542993fe9a41d06::Gerry Peñalosa::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abeb4b65542993fe9a41d06::Gerry Peñalosa::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He is a two-weight world champion, having held the WBC and lineal super flyweight titles from 1997 to 1998, and the WBO bantamweight title from 2007 to 2009.\n[2] George Francis (\"c.\" 1929–2002) was a British boxing athletic trainer who trained world champion boxers such as Frank Bruno, John Conteh, John Mugabi, and Cornelius Boza Edwards.\n[3] He held the WBC super-welterweight title from 1989 to 1990, and challenged twice for world titles at middleweight, including the undisputed championship.\n[4] Hasim Sharif Rahman (born November 7, 1972) is an American former professional boxer who competed from 1994 to 2014."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

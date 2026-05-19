@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Paul McCartney",
+  "pred_answer": "Paul McCartney",
+  "normalized_gold": "paul mccartney",
+  "normalized_pred": "paul mccartney",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae512bd5542993aec5ec12c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae512bd5542993aec5ec12c::A World Without Love::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae512bd5542993aec5ec12c::Nobody I Know::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae512bd5542993aec5ec12c::Gordon Waller::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae512bd5542993aec5ec12c::Peter and Gordon::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae512bd5542993aec5ec12c::A World Without Love",
+        "5ae512bd5542993aec5ec12c::Gordon Waller"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae512bd5542993aec5ec12c::A World Without Love::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae512bd5542993aec5ec12c::Nobody I Know::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae512bd5542993aec5ec12c::Gordon Waller::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae512bd5542993aec5ec12c::Peter and Gordon::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae512bd5542993aec5ec12c::Peter and Gordon::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Peter and Gordon were a British pop duo, composed of Peter Asher (b. 1944) and Gordon Waller (1945–2009), who achieved international fame in 1964 with their first single, the million-selling transatlantic No.1 smash \"A World Without Love\".\n[2] Gordon Trueman Riviere Waller (4 June 1945 – 17 July 2009) was a British singer–songwriter–guitarist, best known as Gordon of the 1960s pop music duo Peter and Gordon, whose biggest hit was the No. 1 million-selling classic \"A World Without Love\".\n[3] Nobody I Know is a song written by Paul McCartney (attributed to Lennon–McCartney) which Peter and Gordon recorded in an April 1964 Abbey Road Studio session: Peter and Gordon had had a UK/US #1 hit with the McCartney composition \"A World Without Love\" and McCartney wrote \"Nobody I Know\" with the specific intent of providing a follow-up hit for the duo.\n[4] \"A World Without Love\" is a song recorded by the English duo Peter and Gordon and released as their first single in February 1964."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

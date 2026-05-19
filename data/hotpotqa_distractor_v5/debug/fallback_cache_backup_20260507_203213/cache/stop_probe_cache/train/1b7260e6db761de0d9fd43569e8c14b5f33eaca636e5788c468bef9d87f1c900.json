@@ -1,0 +1,77 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "drink",
+  "pred_answer": "drink",
+  "normalized_gold": "drink",
+  "normalized_pred": "drink",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae22f5a554299234fd04420",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae22f5a554299234fd04420::Springbokkie::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae22f5a554299234fd04420::Punch (drink)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae22f5a554299234fd04420::derived::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae22f5a554299234fd04420::Springbokkie",
+        "5ae22f5a554299234fd04420::Punch (drink)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae22f5a554299234fd04420::Springbokkie::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae22f5a554299234fd04420::Punch (drink)::0",
+          "added_step": 1
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5ae22f5a554299234fd04420::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5ae22f5a554299234fd04420::derived::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The drink was introduced from India to the United Kingdom in the early seventeenth century, and from there its use spread to other countries.\n[2] The drink derives its name from the team jersey colours (green and gold) of the South Africa national rugby union team, which is known as \"The Springboks.\"\n[3] Punch is a wide assortment of drinks, both non-alcoholic and alcoholic, generally containing fruit or fruit juice.\n[4] The Springbokkie (\"little Springbok\" in the Afrikaans language), composed of creme de menthe (\"or substitutes\") and Amarula, is a cocktail shooter that is popular in South Africa.\n\nNotes:\n[verification] The drink was introduced from India to the United Kingdom in the early seventeenth century, and from there its use spread to other countries."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

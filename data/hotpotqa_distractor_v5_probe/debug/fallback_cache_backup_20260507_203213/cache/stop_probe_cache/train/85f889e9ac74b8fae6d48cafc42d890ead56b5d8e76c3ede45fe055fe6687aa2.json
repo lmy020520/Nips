@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Charles Dickens",
+  "pred_answer": "Charles Dickens",
+  "normalized_gold": "charles dickens",
+  "normalized_pred": "charles dickens",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae47e6555429970de88d98c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae47e6555429970de88d98c::Mr. Brownlow::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae47e6555429970de88d98c::Bottom's Dream::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae47e6555429970de88d98c::Oliver Twist::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae47e6555429970de88d98c::Myōjin Yahiko::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae47e6555429970de88d98c::Mr. Brownlow",
+        "5ae47e6555429970de88d98c::Oliver Twist"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae47e6555429970de88d98c::Mr. Brownlow::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae47e6555429970de88d98c::Bottom's Dream::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae47e6555429970de88d98c::Oliver Twist::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae47e6555429970de88d98c::Myōjin Yahiko::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae47e6555429970de88d98c::Myōjin Yahiko::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Myōjin Yahiko (明神 弥彦 ) , known as Yahiko Myojin in the Media Blasters English-language dub and Yoshi Myojin in the English Sony \"Samurai X\" dub, is a fictional character from the \"Rurouni Kenshin\" manga and anime series authored by Nobuhiro Watsuki.\n[2] Oliver Twist, or The Parish Boy's Progress, is the second novel by English author Charles Dickens and was first published as a serial 1837–39.\n[3] Bottom's Dream (German: \"Zettels Traum\" or \"ZETTEL’S TRAUM\" as the author wrote the title) is a novel published in 1970 by West German author Arno Schmidt.\n[4] Mr. Brownlow is a character from the novel \"Oliver Twist\" by Charles Dickens."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

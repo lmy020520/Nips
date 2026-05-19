@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bangladesh",
+  "pred_answer": "Bangladesh",
+  "normalized_gold": "bangladesh",
+  "normalized_pred": "bangladesh",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab5c9c5554299494045f065",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab5c9c5554299494045f065::Bhut jolokia::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab5c9c5554299494045f065::Naga Morich::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab5c9c5554299494045f065::Chocolate Bhutlah::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab5c9c5554299494045f065::Bhut jolokia",
+        "5ab5c9c5554299494045f065::Naga Morich"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab5c9c5554299494045f065::Bhut jolokia::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab5c9c5554299494045f065::Naga Morich::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab5c9c5554299494045f065::Chocolate Bhutlah::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab5c9c5554299494045f065::Chocolate Bhutlah::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The mother plant was the Red Bhutlah, which is a cross between the Trinidad Douglah (also known as the 7 pot/pod douglah or 7 pod brown), and Bhut Jolokia (ghost pepper).\n[2] The Naga Chili, closely related to the Bhut jolokia, is a chili pepper cultivated in Bangladesh and North East India.\n[3] The Bhut jolokia ( [ˈbʱʊt.zɔˌlɔkiˌja]), also known as ghost pepper, ghost chili, U-morok, red naga, naga jolokia and ghost jolokia, is an interspecific hybrid chili pepper cultivated in the Indian states of Arunachal Pradesh, Assam, Nagaland and Manipur."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

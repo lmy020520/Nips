@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Vanished Planet",
+  "pred_answer": "Vanished Planet",
+  "normalized_gold": "vanished planet",
+  "normalized_pred": "vanished planet",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a72ccb05542991f9a20c59d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a72ccb05542991f9a20c59d::Vanished Planet::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a72ccb05542991f9a20c59d::Atlanta (board game)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a72ccb05542991f9a20c59d::Battle Sheep::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a72ccb05542991f9a20c59d::Komikan::15"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a72ccb05542991f9a20c59d::Vanished Planet",
+        "5a72ccb05542991f9a20c59d::Battle Sheep"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a72ccb05542991f9a20c59d::Vanished Planet::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a72ccb05542991f9a20c59d::Atlanta (board game)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a72ccb05542991f9a20c59d::Battle Sheep::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a72ccb05542991f9a20c59d::Komikan::15",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a72ccb05542991f9a20c59d::Komikan::15",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The other player has twelve pieces (usually called a \"sheep\" or \"goat\" or \"dogs\"), or perros or perritos which is Spanish for \"dogs\" and \"little dogs\" respectively, that can only move one space at a time, but not capture, and attempts only to surround and immobilize the puma or jaguar.\n[2] Battle Sheep is a 2010 board game developed by Francesco Rotta.\n[3] Atlanta Civil War Campaign Game is an American Civil War board wargame which simulates the Battle of Atlanta.\n[4] Vanished Planet is a cooperative board game that debuted at the World Boardgaming Championships in 2003."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New England",
+  "pred_answer": "New England",
+  "normalized_gold": "new england",
+  "normalized_pred": "new england",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab95ddc554299753720f810",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab95ddc554299753720f810::History of New England::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab95ddc554299753720f810::Cotton Mather::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab95ddc554299753720f810::Cotton Mather (band)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab95ddc554299753720f810::History of New England",
+        "5ab95ddc554299753720f810::Cotton Mather"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab95ddc554299753720f810::History of New England::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab95ddc554299753720f810::Cotton Mather::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab95ddc554299753720f810::Cotton Mather (band)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab95ddc554299753720f810::Cotton Mather (band)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Cotton Mather are a band that was founded by Robert Harrison of Austin, Texas in 1990.\n[2] Cotton Mather, FRS (February 12, 1663 – February 13, 1728; A.B. 1678, Harvard College; A.M. 1681, honorary doctorate 1710, University of Glasgow) was a socially and politically influential New England Puritan minister, prolific author, and pamphleteer.\n[3] New England is the oldest clearly defined region of the United States, and it predates the history of the United States by over 150 years."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

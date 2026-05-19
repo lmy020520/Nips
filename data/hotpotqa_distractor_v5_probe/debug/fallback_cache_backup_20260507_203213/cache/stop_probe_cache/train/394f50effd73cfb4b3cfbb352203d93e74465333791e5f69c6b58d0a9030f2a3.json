@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jack Finney",
+  "pred_answer": "Jack Finney",
+  "normalized_gold": "jack finney",
+  "normalized_pred": "jack finney",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8d9f5a554299441c6ba019",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8d9f5a554299441c6ba019::Body Snatchers (1993 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8d9f5a554299441c6ba019::The Drone Virus::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8d9f5a554299441c6ba019::Body Snatchers (1993 film)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8d9f5a554299441c6ba019::Terry Kinney::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8d9f5a554299441c6ba019::Flying Virus::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8d9f5a554299441c6ba019::Body Snatchers (1993 film)",
+        "5a8d9f5a554299441c6ba019::Terry Kinney"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8d9f5a554299441c6ba019::Body Snatchers (1993 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8d9f5a554299441c6ba019::The Drone Virus::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8d9f5a554299441c6ba019::Body Snatchers (1993 film)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8d9f5a554299441c6ba019::Terry Kinney::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8d9f5a554299441c6ba019::Flying Virus::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8d9f5a554299441c6ba019::Flying Virus::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Flying Virus (also known as Killer Buzz) is a 2001 American-Brazilian horror film written and directed by Jeff Hare, which starred Gabrielle Anwar and Rutger Hauer.\n[2] Kinney is best known for his role as Emerald City creator Tim McManus on HBO's prison drama \"Oz\".\n[3] It is loosely based on the 1955 novel \"The Body Snatchers\" by Jack Finney.\n[4] The Drone Virus is a 2004 sci-fi thriller based on a novel by Gerald Clarke."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "in 1978",
+  "pred_answer": "in 1978",
+  "normalized_gold": "in 1978",
+  "normalized_pred": "in 1978",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a744eaf55429979e28828e2",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a744eaf55429979e28828e2::Motown::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a744eaf55429979e28828e2::Blue Monday (date)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a744eaf55429979e28828e2::Factory Records::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a744eaf55429979e28828e2::Blue Monday (New Order song)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a744eaf55429979e28828e2::Motown::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a744eaf55429979e28828e2::Factory Records",
+        "5a744eaf55429979e28828e2::Blue Monday (New Order song)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a744eaf55429979e28828e2::Motown::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a744eaf55429979e28828e2::Blue Monday (date)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a744eaf55429979e28828e2::Factory Records::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a744eaf55429979e28828e2::Blue Monday (New Order song)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a744eaf55429979e28828e2::Motown::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a744eaf55429979e28828e2::Motown::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] During the 1960s, Motown achieved spectacular success for a small record company: 79 records in the Top Ten of the \"Billboard\" Hot 100 record chart between 1960 and 1969.\n[2] It was released as a 12-inch single on 7 March 1983 through Factory Records and later remade by the band in 1988 and 1995.\n[3] Factory Records was a Manchester-based British independent record label, started in 1978 by Tony Wilson and Alan Erasmus, which featured several prominent musical acts on its roster such as Joy Division, New Order, A Certain Ratio, The Durutti Column, Happy Mondays, Northside, and (briefly) Orchestral Manoeuvres in the Dark and James.\n[4] Blue Monday is a name given to a day in January (typically the third Monday of the month) claimed to be the most depressing day of the year."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "December 2, 2013.",
+  "pred_answer": "December 2, 2013.",
+  "normalized_gold": "december 2 2013",
+  "normalized_pred": "december 2 2013",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac28dae5542996366519a06",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac28dae5542996366519a06::Great Minds with Dan Harmon::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac28dae5542996366519a06::Rick and Morty::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac28dae5542996366519a06::Rick and Morty::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac28dae5542996366519a06::Great Minds with Dan Harmon",
+        "5ac28dae5542996366519a06::Rick and Morty"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac28dae5542996366519a06::Great Minds with Dan Harmon::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac28dae5542996366519a06::Rick and Morty::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac28dae5542996366519a06::Rick and Morty::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac28dae5542996366519a06::Rick and Morty::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It premiered on December 2, 2013.\n[2] Rick and Morty is an American adult animated science-fiction sitcom created by Justin Roiland and Dan Harmon for Cartoon Network's late-night programming block Adult Swim.\n[3] Great Minds with Dan Harmon is an American comedy television series that premiered on February 25, 2016 on the History channel."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

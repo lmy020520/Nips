@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Snoop Dogg",
+  "pred_answer": "Snoop Dogg",
+  "normalized_gold": "snoop dogg",
+  "normalized_pred": "snoop dogg",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a87b71f5542996e4f3088dc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a87b71f5542996e4f3088dc::Forgot About Dre::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a87b71f5542996e4f3088dc::Bad Intentions (song)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a87b71f5542996e4f3088dc::Still D.R.E.::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a87b71f5542996e4f3088dc::Forgot About Dre::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a87b71f5542996e4f3088dc::Forgot About Dre",
+        "5a87b71f5542996e4f3088dc::Still D.R.E."
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a87b71f5542996e4f3088dc::Forgot About Dre::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a87b71f5542996e4f3088dc::Bad Intentions (song)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a87b71f5542996e4f3088dc::Still D.R.E.::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a87b71f5542996e4f3088dc::Forgot About Dre::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a87b71f5542996e4f3088dc::Forgot About Dre::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Released as the album's second single on January 29, 2000, like \"Still D.R.E.\", the song addresses Dre's critics in a defiant manner, as Dre announces his return to the hip-hop scene and reminds listeners of his significant influence on the genre.\n[2] \"Still D.R.E.\" is a song by American rapper Dr. Dre, featuring fellow American rapper Snoop Dogg.\n[3] \"Bad Intentions\" is a single by American rapper Dr. Dre, featuring vocals from fellow rapper Knoc-turn'al, recorded for and taken from the soundtrack to the film \"The Wash\".\n[4] \"Forgot About Dre\" is a Grammy Award-winning single from rapper Dr. Dre's \"2001\", featuring vocals from rapper Eminem."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

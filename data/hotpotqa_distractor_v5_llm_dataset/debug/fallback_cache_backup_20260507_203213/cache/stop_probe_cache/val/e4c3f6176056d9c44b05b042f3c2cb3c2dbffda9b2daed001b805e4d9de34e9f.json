@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Angelica",
+  "pred_answer": "Angelica",
+  "normalized_gold": "angelica",
+  "normalized_pred": "angelica",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a82947655429954d2e2eb6d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a82947655429954d2e2eb6d::Dryopteris expansa::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a82947655429954d2e2eb6d::Angelica::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a82947655429954d2e2eb6d::Parochetus::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a82947655429954d2e2eb6d::Psilocybe strictipes::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a82947655429954d2e2eb6d::Angelica",
+        "5a82947655429954d2e2eb6d::Parochetus"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a82947655429954d2e2eb6d::Dryopteris expansa::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a82947655429954d2e2eb6d::Angelica::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a82947655429954d2e2eb6d::Parochetus::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a82947655429954d2e2eb6d::Psilocybe strictipes::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a82947655429954d2e2eb6d::Psilocybe strictipes::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Psilocybe strictipes is a psilocybin mushroom that grows on grassy meadows and lawns; It is found throughout the cool temperate and subarctic regions of the Northern Hemisphere and it is most common in Europe, and the Pacific Northwest region of North America.\n[2] Parochetus communis, known in English as shamrock pea or blue oxalis, is a species of legume, and the only species in the genus Parochetus and in the subtribe Parochetinae.\n[3] Angelica is a genus of about 60 species of tall biennial and perennial herbs in the family Apiaceae, native to temperate and subarctic regions of the Northern Hemisphere, reaching as far north as Iceland and Lapland and Greenland.\n[4] Dryopteris expansa, the alpine buckler fern, northern buckler-fern or spreading wood fern, is a species of fern native to cool temperate and subarctic regions of the Northern Hemisphere, south at high altitudes in mountains to Spain and Greece in southern Europe, to Japan in eastern Asia, and to central California in North America."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

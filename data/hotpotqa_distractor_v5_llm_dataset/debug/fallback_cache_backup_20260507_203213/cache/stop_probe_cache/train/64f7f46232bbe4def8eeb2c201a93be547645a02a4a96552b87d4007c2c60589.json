@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Salesman",
+  "pred_answer": "Salesman",
+  "normalized_gold": "salesman",
+  "normalized_pred": "salesman",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade9f5655429939a52fe90c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade9f5655429939a52fe90c::Khashyar Darvich::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade9f5655429939a52fe90c::Dalai Lama Renaissance::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade9f5655429939a52fe90c::Salesman (1969 film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade9f5655429939a52fe90c::11th Panchen Lama controversy::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade9f5655429939a52fe90c::Dalai Lama Renaissance",
+        "5ade9f5655429939a52fe90c::Salesman (1969 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade9f5655429939a52fe90c::Khashyar Darvich::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade9f5655429939a52fe90c::Dalai Lama Renaissance::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade9f5655429939a52fe90c::Salesman (1969 film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade9f5655429939a52fe90c::11th Panchen Lama controversy::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade9f5655429939a52fe90c::11th Panchen Lama controversy::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 11th Panchen Lama controversy is a dispute about the current legitimate holder of the Panchen Lama title, a political and religious leadership position in Tibet and Tibetan Buddhism.\n[2] Salesman is a 1969 direct cinema documentary film about door-to-door Bible salesmen, directed by brothers Albert and David Maysles, and Charlotte Zwerin.\n[3] Dalai Lama Renaissance is a 2007 feature-length documentary film, produced and directed by Khashyar Darvich, and narrated by actor Harrison Ford.\n[4] Khashyar Darvich is a documentary film producer and director best known for directing a documentary film about the Dalai Lama, \"Dalai Lama Renaissance,\" which is narrated by actor Harrison Ford."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

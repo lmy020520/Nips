@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Apple Inc.",
+  "pred_answer": "Apple Inc.",
+  "normalized_gold": "apple inc",
+  "normalized_pred": "apple inc",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5addf3f35542990dbb2f7f0f",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5addf3f35542990dbb2f7f0f::Classic Mac OS::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5addf3f35542990dbb2f7f0f::FreeMIDI::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5addf3f35542990dbb2f7f0f::EROS (microkernel)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5addf3f35542990dbb2f7f0f::Classic Mac OS",
+        "5addf3f35542990dbb2f7f0f::FreeMIDI"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5addf3f35542990dbb2f7f0f::Classic Mac OS::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5addf3f35542990dbb2f7f0f::FreeMIDI::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5addf3f35542990dbb2f7f0f::EROS (microkernel)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5addf3f35542990dbb2f7f0f::EROS (microkernel)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] EROS (\"The Extremely Reliable Operating System\") is an operating system developed beginning in 1991 by The EROS Group, LLC., the Johns Hopkins University, and the University of Pennsylvania.\n[2] FreeMIDI was a popular and useful virtual studio management application by Mark of the Unicorn (MOTU) for the Classic Mac OS.\n[3] The \"Classic\" Mac OS is a graphical user interface-based operating system developed by Apple Inc. for its Macintosh family of personal computers from 1984 until 2001, the original member of the series of Macintosh operating systems."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

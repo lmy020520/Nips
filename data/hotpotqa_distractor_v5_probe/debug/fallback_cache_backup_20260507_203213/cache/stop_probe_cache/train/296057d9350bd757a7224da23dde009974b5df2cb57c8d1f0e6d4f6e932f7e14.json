@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Thomas Clayton Wolfe",
+  "pred_answer": "Thomas Clayton Wolfe",
+  "normalized_gold": "thomas clayton wolfe",
+  "normalized_pred": "thomas clayton wolfe",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7dae3c5542991319bc93e8",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7dae3c5542991319bc93e8::The Pagan Rabbi and Other Stories::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7dae3c5542991319bc93e8::Thomas Wolfe House::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7dae3c5542991319bc93e8::Thomas Wolfe::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7dae3c5542991319bc93e8::Cynthia Ozick::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7dae3c5542991319bc93e8::The Shawl (short story)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7dae3c5542991319bc93e8::Thomas Wolfe",
+        "5a7dae3c5542991319bc93e8::Cynthia Ozick"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7dae3c5542991319bc93e8::The Pagan Rabbi and Other Stories::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7dae3c5542991319bc93e8::Thomas Wolfe House::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7dae3c5542991319bc93e8::Thomas Wolfe::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7dae3c5542991319bc93e8::Cynthia Ozick::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7dae3c5542991319bc93e8::The Shawl (short story)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7dae3c5542991319bc93e8::The Shawl (short story)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Shawl is a short story first published by Cynthia Ozick in 1980 in \"The New Yorker\".\n[2] Cynthia Shoshana Ozick (born April 17, 1928) is an American short story writer, novelist, and essayist.\n[3] Thomas Clayton Wolfe (October 3, 1900 – September 15, 1938) was an American novelist of the early twentieth century.\n[4] The house was designated a National Historic Landmark in 1971 for its association with Wolfe."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

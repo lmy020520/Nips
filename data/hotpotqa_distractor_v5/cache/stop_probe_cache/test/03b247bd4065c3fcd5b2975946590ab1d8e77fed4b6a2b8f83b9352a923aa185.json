@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Finland's northernmost province, Lapland",
+  "pred_answer": "Finland's northernmost province, Lapland",
+  "normalized_gold": "finlands northernmost province lapland",
+  "normalized_pred": "finlands northernmost province lapland",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6c1da554299710c8d1f4c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6c1da554299710c8d1f4c::Matti Hoikka::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6c1da554299710c8d1f4c::Matti Poutiainen::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6c1da554299710c8d1f4c::Rovaniemi::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6c1da554299710c8d1f4c::Rovaniemi::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6c1da554299710c8d1f4c::Matti Hoikka",
+        "5ab6c1da554299710c8d1f4c::Rovaniemi"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6c1da554299710c8d1f4c::Matti Hoikka::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6c1da554299710c8d1f4c::Matti Poutiainen::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6c1da554299710c8d1f4c::Rovaniemi::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6c1da554299710c8d1f4c::Rovaniemi::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6c1da554299710c8d1f4c::Rovaniemi::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is the administrative capital and commercial centre of Finland's northernmost province, Lapland.\n[2] Rovaniemi (] ) is a city and municipality of Finland.\n[3] Matts (Matti) Poutiainen (7 March 1864 in Sortavalan maalaiskunta – 5 June 1929) was a Finnish farmer and politician.\n[4] Matts (Matti) Wiktor Hoikka (25 February 1859 in Rovaniemi – 15 July 1939) was a Finnish blacksmith and politician."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

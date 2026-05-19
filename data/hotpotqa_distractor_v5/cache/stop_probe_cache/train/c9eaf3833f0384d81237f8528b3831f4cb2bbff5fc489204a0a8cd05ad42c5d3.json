@@ -1,0 +1,100 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2010",
+  "pred_answer": "2010",
+  "normalized_gold": "2010",
+  "normalized_pred": "2010",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5e7f65542996de7b71a65",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5e7f65542996de7b71a65::CA-7 (software)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5e7f65542996de7b71a65::Russell Artzt::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5e7f65542996de7b71a65::3tera::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae5e7f65542996de7b71a65::3tera::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae5e7f65542996de7b71a65::CA Technologies::0"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5ae5e7f65542996de7b71a65::Stephen Richards (business executive)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5e7f65542996de7b71a65::3tera",
+        "5ae5e7f65542996de7b71a65::CA Technologies"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5e7f65542996de7b71a65::CA-7 (software)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5e7f65542996de7b71a65::Russell Artzt::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5e7f65542996de7b71a65::3tera::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae5e7f65542996de7b71a65::3tera::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae5e7f65542996de7b71a65::CA Technologies::0",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5ae5e7f65542996de7b71a65::Stephen Richards (business executive)::1",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5e7f65542996de7b71a65::Stephen Richards (business executive)::1",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] Rising through the ranks of Computer Associates International, beginning at the help desk in Sydney, Australia in 1988 and climbing to be the Executive Vice President responsible for Worldwide Sales in New York in 2000, where he remained until 2004.\n[2] CA Technologies, formerly known as Computer Associates International, Inc. and CA, Inc., is an American multinational publicly held corporation headquartered in New York City.\n[3] It was acquired by CA Technologies in 2010.\n[4] 3tera, Inc., (founded in 2004) is a developer of system software for utility computing and cloud computing."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

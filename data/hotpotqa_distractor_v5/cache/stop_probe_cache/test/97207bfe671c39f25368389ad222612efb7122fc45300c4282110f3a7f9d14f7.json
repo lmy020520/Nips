@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Euryanthe",
+  "pred_answer": "Euryanthe",
+  "normalized_gold": "euryanthe",
+  "normalized_pred": "euryanthe",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a865cac55429960ec39b675",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a865cac55429960ec39b675::Thaïs (opera)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a865cac55429960ec39b675::Euryanthe::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a865cac55429960ec39b675::Agnes von Hohenstaufen::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a865cac55429960ec39b675::Thaïs (opera)",
+        "5a865cac55429960ec39b675::Euryanthe"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a865cac55429960ec39b675::Thaïs (opera)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a865cac55429960ec39b675::Euryanthe::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a865cac55429960ec39b675::Agnes von Hohenstaufen::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a865cac55429960ec39b675::Agnes von Hohenstaufen::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Raupach categorised \"Agnes von Hohenstaufen\" as a \"historical-romantic\" opera and it is one of a number of German works of the time set in the Middle Ages (others include Weber's \"Euryanthe\", Wagner's \"Tannhäuser\" and \"Lohengrin\" and Schumann's \"Genoveva\").\n[2] Euryanthe is a German \"grand, heroic, romantic\" opera by Carl Maria von Weber, first performed at the Theater am Kärntnertor, Vienna on 25 October 1823.\n[3] Thaïs (] ) is an opera, a \"comédie lyrique\" in three acts and seven tableaux, by Jules Massenet to a French libretto by Louis Gallet, based on the novel \"Thaïs\" by Anatole France."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

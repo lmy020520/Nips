@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Khan Kluay",
+  "pred_answer": "Khan Kluay",
+  "normalized_gold": "khan kluay",
+  "normalized_pred": "khan kluay",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74f37455429974ef308cad",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74f37455429974ef308cad::Hero of the Rails::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74f37455429974ef308cad::Cavaletti::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74f37455429974ef308cad::Khan Kluay::4"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74f37455429974ef308cad::Thai traditional games::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74f37455429974ef308cad::Hero of the Rails",
+        "5a74f37455429974ef308cad::Khan Kluay"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74f37455429974ef308cad::Hero of the Rails::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74f37455429974ef308cad::Cavaletti::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74f37455429974ef308cad::Khan Kluay::4",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74f37455429974ef308cad::Thai traditional games::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74f37455429974ef308cad::Thai traditional games::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] For example, sand, mud balls, khan kluay (The stem of the banana tree) were components of games.\n[2] This movie is about Khan Kluay's two elephant children, another attack by the Hongsawadi (Burmese), and struggling whether to live with his wife or fight the Burmese.\n[3] They can be used both for ground training with the handler working a horse on a longe line or at liberty, or while a rider is mounted on the horse.\n[4] To promote the film a \"Day Out With Thomas 2010: The Hero of the Rails Tour\" was held at locations such as the Illinois Railway Museum, where guests could participate in activities such as arts and crafts or ride on a 15-ton replica of Thomas the Tank Engine."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

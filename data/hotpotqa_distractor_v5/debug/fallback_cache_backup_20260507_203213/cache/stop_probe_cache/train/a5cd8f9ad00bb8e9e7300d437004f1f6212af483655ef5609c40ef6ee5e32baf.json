@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hancock County",
+  "pred_answer": "Hancock County",
+  "normalized_gold": "hancock county",
+  "normalized_pred": "hancock county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8e48aa5542995a26add4c6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8e48aa5542995a26add4c6::Hollywood Casino Gulf Coast::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8e48aa5542995a26add4c6::Mississippi County, Arkansas::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8e48aa5542995a26add4c6::Bay St. Louis, Mississippi::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8e48aa5542995a26add4c6::NWA Gulf Coast Tag Team Championship::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8e48aa5542995a26add4c6::Hollywood Casino Gulf Coast",
+        "5a8e48aa5542995a26add4c6::Bay St. Louis, Mississippi"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8e48aa5542995a26add4c6::Hollywood Casino Gulf Coast::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8e48aa5542995a26add4c6::Mississippi County, Arkansas::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8e48aa5542995a26add4c6::Bay St. Louis, Mississippi::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8e48aa5542995a26add4c6::NWA Gulf Coast Tag Team Championship::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8e48aa5542995a26add4c6::NWA Gulf Coast Tag Team Championship::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Gulf Coast tag team championship is the successor for GCCW's version of the NWA Southern Tag Team Championship that was promoted in the Tennessee, Alabama, Florida and Mississippi region from 1955 until 1967 where it was replaced by the \"NWA Gulf Coast Tag Team Championship.\n[2] Bay Saint Louis is a city in and the county seat of Hancock County, Mississippi, in the United States.\n[3] Mississippi County is a county located in the U.S. state of Arkansas.\n[4] Hollywood Casino Gulf Coast is a hotel-casino complex located in Bay St. Louis, Mississippi, owned by Gaming and Leisure Properties and operated by Penn National Gaming."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

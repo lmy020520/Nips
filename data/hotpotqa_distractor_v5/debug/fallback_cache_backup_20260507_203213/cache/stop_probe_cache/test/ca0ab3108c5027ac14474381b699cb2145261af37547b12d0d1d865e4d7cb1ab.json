@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mineola, New York",
+  "pred_answer": "Mineola, New York",
+  "normalized_gold": "mineola new york",
+  "normalized_pred": "mineola new york",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae764a85542997b22f6a720",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae764a85542997b22f6a720::Chaminade High School::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae764a85542997b22f6a720::Glenn Hughes (Village People)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae764a85542997b22f6a720::Wallace L. W. Sargent::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae764a85542997b22f6a720::Chaminade High School",
+        "5ae764a85542997b22f6a720::Glenn Hughes (Village People)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae764a85542997b22f6a720::Chaminade High School::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae764a85542997b22f6a720::Glenn Hughes (Village People)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae764a85542997b22f6a720::Wallace L. W. Sargent::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae764a85542997b22f6a720::Wallace L. W. Sargent::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Sargent was the first person in his family to attend high school, and the first student from his high school to ever attend college.\n[2] Glenn Martin Hughes (July 18, 1950 – March 4, 2001) was the original \"Biker\" character in the disco group Village People from 1977 to 1996.\n[3] Chaminade High School is a Roman Catholic college preparatory high school for boys in Mineola, New York, United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

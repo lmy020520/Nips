@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Maskarade",
+  "pred_answer": "Maskarade",
+  "normalized_gold": "maskarade",
+  "normalized_pred": "maskarade",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab53214554299637185c4fe",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab53214554299637185c4fe::Maskarade::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab53214554299637185c4fe::Monumentum pro Gesualdo::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab53214554299637185c4fe::La sonnambula::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab53214554299637185c4fe::Loretta Di Franco::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab53214554299637185c4fe::Maskarade",
+        "5ab53214554299637185c4fe::La sonnambula"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab53214554299637185c4fe::Maskarade::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab53214554299637185c4fe::Monumentum pro Gesualdo::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab53214554299637185c4fe::La sonnambula::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab53214554299637185c4fe::Loretta Di Franco::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab53214554299637185c4fe::Loretta Di Franco::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Loretta Di Franco is an American operatic soprano who is chiefly known for her more than 900 performances at the Metropolitan Opera from 1961-1995.\n[2] La sonnambula (\"The Sleepwalker\") is an opera semiseria in two acts, with music in the \"bel canto\" tradition by Vincenzo Bellini set to an Italian libretto by Felice Romani, based on a scenario for a \"ballet-pantomime\" written by Eugène Scribe and choreographed by Jean-Pierre Aumer called \"La somnambule, ou L'arrivée d'un nouveau seigneur\".\n[3] The ballet premiere was part of a special Salute to Italy, which also included the premiere of \"Variations from Don Sebastian\", called the \"Donizetti Variations\" since 1961, and performances of Balanchine's \"La Sonnambula\" and Lew Christensen's \"Con Amore\".\n[4] \"Maskarade\" has enjoyed enduring popularity in Denmark where it is considered to be the country's national opera."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "23",
+  "pred_answer": "23",
+  "normalized_gold": "23",
+  "normalized_pred": "23",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7defcd5542990b8f503afb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7defcd5542990b8f503afb::Your Woman::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7defcd5542990b8f503afb::SPARS::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7defcd5542990b8f503afb::White Town::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7defcd5542990b8f503afb::Your Woman::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7defcd5542990b8f503afb::Your Woman",
+        "5a7defcd5542990b8f503afb::White Town"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7defcd5542990b8f503afb::Your Woman::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7defcd5542990b8f503afb::SPARS::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7defcd5542990b8f503afb::White Town::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7defcd5542990b8f503afb::Your Woman::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7defcd5542990b8f503afb::Your Woman::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Outside the United Kingdom, the single topped the charts in Spain, peaked within the top ten of the charts Australia, Canada, Denmark, Ireland and Finland and peaked within the top thirty of the charts in the United States.\n[2] It also peaked at number one in Spain, as well as number two in Australia, number four in Canada, Denmark and Finland and number 23 in the United States.\n[3] She had been the Dean of Women on leave from Purdue University, and an officer in The United States Naval Reserve (Women's Reserve), better known under the acronym WAVES for Women Accepted for Volunteer Emergency Service.\n[4] It was released on 13 January 1997 as the lead single from the album \"Women in Technology\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

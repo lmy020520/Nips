@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Charlie Hall",
+  "pred_answer": "Charlie Hall",
+  "normalized_gold": "charlie hall",
+  "normalized_pred": "charlie hall",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a852cb95542997b5ce3ffaf",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a852cb95542997b5ce3ffaf::Barrel of Batteries::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a852cb95542997b5ce3ffaf::Steve Honoshowsky::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a852cb95542997b5ce3ffaf::The War on Drugs (band)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a852cb95542997b5ce3ffaf::The Twilight Sad discography::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a852cb95542997b5ce3ffaf::Barrel of Batteries",
+        "5a852cb95542997b5ce3ffaf::The War on Drugs (band)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a852cb95542997b5ce3ffaf::Barrel of Batteries::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a852cb95542997b5ce3ffaf::Steve Honoshowsky::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a852cb95542997b5ce3ffaf::The War on Drugs (band)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a852cb95542997b5ce3ffaf::The Twilight Sad discography::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a852cb95542997b5ce3ffaf::The Twilight Sad discography::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The band currently consists of James Graham (vocals), Andy MacFarlane (guitar, producer), and Mark Devine (drums).\n[2] The band consists of Adam Granduciel (vocals, guitar), David Hartley (bass), Robbie Bennett (keyboards), Charlie Hall (drums), Jon Natchez (saxophone, keyboards) and Anthony LaMarca (guitar).\n[3] He is also featured in Billy's DVD entitled \"Life on Drums\", which was released on October 8, 2010.\n[4] Barrel of Batteries is the first EP released by American indie rock band The War on Drugs, released on March 4, 2008 on Secretly Canadian."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

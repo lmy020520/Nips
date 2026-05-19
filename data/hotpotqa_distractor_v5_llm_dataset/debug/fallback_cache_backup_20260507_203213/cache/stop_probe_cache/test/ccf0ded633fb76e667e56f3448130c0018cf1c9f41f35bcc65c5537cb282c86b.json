@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Broadcasting House in London",
+  "pred_answer": "Broadcasting House in London",
+  "normalized_gold": "broadcasting house in london",
+  "normalized_pred": "broadcasting house in london",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae526c455429908b6326529",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae526c455429908b6326529::The Late Late Show (Irish TV series)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae526c455429908b6326529::BBC::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae526c455429908b6326529::Tenko (TV series)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae526c455429908b6326529::Media of the United Kingdom::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae526c455429908b6326529::BBC",
+        "5ae526c455429908b6326529::Tenko (TV series)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae526c455429908b6326529::The Late Late Show (Irish TV series)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae526c455429908b6326529::BBC::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae526c455429908b6326529::Tenko (TV series)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae526c455429908b6326529::Media of the United Kingdom::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae526c455429908b6326529::Media of the United Kingdom::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Regional media is covered by local radio, television and print newspapers.\n[2] Tenko was a television drama, co-produced by the BBC and the ABC.\n[3] The British Broadcasting Corporation (BBC) is a British public service broadcaster with its headquarters at Broadcasting House in London.\n[4] Perceived as the official flagship television programme of Ireland's public service broadcaster Raidió Teilifís Éireann (RTÉ), it is regarded as an Irish television institution (even abroad) and is broadcast live across two hours plus in front of a studio audience on Friday nights between September and May at 21.30."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

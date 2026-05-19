@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Eugen Goldstein",
+  "pred_answer": "Eugen Goldstein",
+  "normalized_gold": "eugen goldstein",
+  "normalized_pred": "eugen goldstein",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd086c554299700f9d797d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd086c554299700f9d797d::Cathode ray::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd086c554299700f9d797d::Grenz rays::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd086c554299700f9d797d::Eugen Goldstein::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd086c554299700f9d797d::Philipp Lenard::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd086c554299700f9d797d::Cathode ray",
+        "5abd086c554299700f9d797d::Eugen Goldstein"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd086c554299700f9d797d::Cathode ray::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd086c554299700f9d797d::Grenz rays::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd086c554299700f9d797d::Eugen Goldstein::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd086c554299700f9d797d::Philipp Lenard::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd086c554299700f9d797d::Philipp Lenard::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Philipp Eduard Anton von Lenard (7 June 1862 – 20 May 1947) was a German physicist and the winner of the Nobel Prize for Physics in 1905 for his research on cathode rays and the discovery of many of their properties.\n[2] He was an early investigator of discharge tubes, the discoverer of anode rays, and is sometimes credited with the discovery of the proton.\n[3] These were first investigated by Gustav Bucky in 1923 using a cathode vacuum tube with a lithium borate glass window, which he labeled Grenz rays as he believed that the biological effects resembled those of UV light and traditional X-rays and hence were on the border between the two (\"Grenz\" = border in German).\n[4] They were first observed in 1869 by German physicist Johann Wilhelm Hittorf, and were named in 1876 by Eugen Goldstein \"Kathodenstrahlen\", or cathode rays."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Uhuru",
+  "pred_answer": "Uhuru",
+  "normalized_gold": "uhuru",
+  "normalized_pred": "uhuru",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab291505542993be8fa9953",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab291505542993be8fa9953::Cos-B::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab291505542993be8fa9953::Uhuru (satellite)::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab291505542993be8fa9953::Greg Mail::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab291505542993be8fa9953::Cos-B",
+        "5ab291505542993be8fa9953::Uhuru (satellite)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab291505542993be8fa9953::Cos-B::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab291505542993be8fa9953::Uhuru (satellite)::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab291505542993be8fa9953::Greg Mail::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab291505542993be8fa9953::Greg Mail::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Of the 12 occasions that a NSW player has carried their bat through a completed First Class innings and the 16 occasions that a player has scored a century in each innings of a First Class match, Mail is the only NSW player in history to have achieved both of these feats during his career.\n[2] Uhuru was a scanning mission, with a spin period of ~12 minutes.\n[3] COS-B was the first European Space Research Organisation mission to study cosmic gamma ray sources."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Married... with Children",
+  "pred_answer": "Married... with Children",
+  "normalized_gold": "married with children",
+  "normalized_pred": "married with children",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac265055542992f1f2b38a9",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac265055542992f1f2b38a9::Married... with Children::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac265055542992f1f2b38a9::Casado con hijos (Chile)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac265055542992f1f2b38a9::Nada más que la verdad::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac265055542992f1f2b38a9::Married... with Children",
+        "5ac265055542992f1f2b38a9::Casado con hijos (Chile)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac265055542992f1f2b38a9::Married... with Children::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac265055542992f1f2b38a9::Casado con hijos (Chile)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac265055542992f1f2b38a9::Nada más que la verdad::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac265055542992f1f2b38a9::Nada más que la verdad::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It was first aired in Colombia.\n[2] It aired on May 2, 2006, and ended on October 15, 2008.\n[3] Married... with Children is an American television sitcom that aired on Fox, created by Michael G. Moye and Ron Leavitt."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

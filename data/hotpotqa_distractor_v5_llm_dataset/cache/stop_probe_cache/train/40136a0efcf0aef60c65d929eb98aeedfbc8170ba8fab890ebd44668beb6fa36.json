@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Argentine",
+  "pred_answer": "Argentine",
+  "normalized_gold": "argentine",
+  "normalized_pred": "argentine",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81152b55429926c1cdaced",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81152b55429926c1cdaced::Crystal Palace F.C. Player of the Year::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81152b55429926c1cdaced::List of Crystal Palace F.C. seasons::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81152b55429926c1cdaced::Julián Speroni::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81152b55429926c1cdaced::Crystal Palace F.C. Player of the Year::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81152b55429926c1cdaced::Crystal Palace F.C. Player of the Year",
+        "5a81152b55429926c1cdaced::Julián Speroni"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81152b55429926c1cdaced::Crystal Palace F.C. Player of the Year::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81152b55429926c1cdaced::List of Crystal Palace F.C. seasons::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81152b55429926c1cdaced::Julián Speroni::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a81152b55429926c1cdaced::Crystal Palace F.C. Player of the Year::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a81152b55429926c1cdaced::Crystal Palace F.C. Player of the Year::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Two players have received the award on more than two occasions, Jim Cannon won it three times and Julián Speroni won it four times.\n[2] Julián Maria Speroni (] ; born 18 May 1979) is an Argentine footballer who plays as a goalkeeper for English club Crystal Palace.\n[3] This is a list of Crystal Palace F.C. seasons in English and European football, from 1905—when the club were formed—up to the 2016–17 season.\n[4] The Crystal Palace Football Club Player of the Year is awarded at the end of each season."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

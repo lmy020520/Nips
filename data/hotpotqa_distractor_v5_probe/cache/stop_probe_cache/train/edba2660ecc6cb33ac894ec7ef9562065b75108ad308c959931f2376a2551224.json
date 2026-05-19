@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Neil J. Welch",
+  "pred_answer": "Neil J. Welch",
+  "normalized_gold": "neil j welch",
+  "normalized_pred": "neil j welch",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac325ec5542995ef918c132",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac325ec5542995ef918c132::American Hustle::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac325ec5542995ef918c132::John F. Good::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac325ec5542995ef918c132::Abscam::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac325ec5542995ef918c132::Abscam::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac325ec5542995ef918c132::American Hustle",
+        "5ac325ec5542995ef918c132::Abscam"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac325ec5542995ef918c132::American Hustle::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac325ec5542995ef918c132::John F. Good::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac325ec5542995ef918c132::Abscam::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac325ec5542995ef918c132::Abscam::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac325ec5542995ef918c132::Abscam::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The two-year investigation was directed from the FBI's office in Hauppauge, New York, and was under the supervision of Assistant Director Neil J. Welch, who headed the bureau's New York division, and Thomas P. Puccio, head of the Justice Department's Organized Crime Strike Force for the Eastern District of New York.\n[2] Abscam—sometimes written ABSCAM—was a Federal Bureau of Investigation (FBI) sting operation that took place in the late 1970s and early 1980s.\n[3] The Abscam story was portrayed in the 2013 film \"American Hustle\"; in the movie, Bradley Cooper portrayed a composite character that was based on Good and two other FBI agents who worked on the case during the two-year-long operation.\n[4] It was written by Eric Warren Singer and Russell, inspired by the FBI ABSCAM operation of the late 1970s and early 1980s."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

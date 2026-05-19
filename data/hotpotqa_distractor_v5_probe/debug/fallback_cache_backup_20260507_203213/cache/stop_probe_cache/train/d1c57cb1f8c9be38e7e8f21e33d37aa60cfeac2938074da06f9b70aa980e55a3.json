@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jim Crow laws",
+  "pred_answer": "Jim Crow laws",
+  "normalized_gold": "jim crow laws",
+  "normalized_pred": "jim crow laws",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a82573555429940e5e1a85f",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a82573555429940e5e1a85f::Jim Crow laws::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a82573555429940e5e1a85f::Leon Walter Tillage::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a82573555429940e5e1a85f::List of Jim Crow law examples by state::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a82573555429940e5e1a85f::Jim Crow laws",
+        "5a82573555429940e5e1a85f::Leon Walter Tillage"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a82573555429940e5e1a85f::Jim Crow laws::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a82573555429940e5e1a85f::Leon Walter Tillage::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a82573555429940e5e1a85f::List of Jim Crow law examples by state::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a82573555429940e5e1a85f::List of Jim Crow law examples by state::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] This is a list of examples of Jim Crow laws, which were state and local laws in the United States enacted between 1876 and 1965.\n[2] Leon Walter Tillage (January 19, 1936 – October 5, 2011) was an African American whose autobiographical children's book \"Leon's Story\" (1997) features the effects of Jim Crow laws on the lives of African Americans during the 1930s and 1940s – and of the later Civil Rights Movement.\n[3] Enacted by white Democratic-dominated state legislatures in the late 19th century after the Reconstruction period, these laws continued to be enforced until 1965."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

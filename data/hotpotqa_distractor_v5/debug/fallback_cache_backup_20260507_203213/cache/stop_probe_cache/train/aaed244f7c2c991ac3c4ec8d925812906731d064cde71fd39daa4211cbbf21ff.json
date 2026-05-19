@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "World War II",
+  "pred_answer": "World War II",
+  "normalized_gold": "world war ii",
+  "normalized_pred": "world war ii",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae533ef55429908b6326578",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae533ef55429908b6326578::Akitsushima::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae533ef55429908b6326578::Séduisant-class ship of the line::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae533ef55429908b6326578::Imperial Japanese Navy::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae533ef55429908b6326578::Kirov-class cruiser::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae533ef55429908b6326578::Akitsushima",
+        "5ae533ef55429908b6326578::Imperial Japanese Navy"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae533ef55429908b6326578::Akitsushima::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae533ef55429908b6326578::Séduisant-class ship of the line::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae533ef55429908b6326578::Imperial Japanese Navy::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae533ef55429908b6326578::Kirov-class cruiser::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae533ef55429908b6326578::Kirov-class cruiser::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The \"Kirov\"-class (Project 26) cruisers were a class of six cruisers built in the late 1930s for the Soviet Navy.\n[2] The Imperial Japanese Navy (IJN; Kyūjitai: 大日本帝國海軍 Shinjitai: 大日本帝国海軍 \"   \" or 日本海軍 \"Nippon Kaigun\", \"Navy of the Greater Japanese Empire\") was the navy of the Empire of Japan from 1868 until 1945, when it was dissolved following Japan's defeat and surrender in World War II.\n[3] The \"Séduisant\" class was a \"sub\"-class of 74-gun ships of the line of the French Navy, comprising two ships built at Toulon Dockyard to a design by Joseph-Marie-Blaise Coulomb in the year immediately following the close of the American Revolutionary War.\n[4] Two ships of the Imperial Japanese Navy have been named Akitsushima, the ancient name for Japan:"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

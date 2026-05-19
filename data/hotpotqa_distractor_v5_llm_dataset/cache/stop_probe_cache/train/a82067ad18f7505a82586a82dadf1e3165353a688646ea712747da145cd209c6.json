@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mexican-American War",
+  "pred_answer": "Mexican-American War",
+  "normalized_gold": "mexican-american war",
+  "normalized_pred": "mexican-american war",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89f6815542992e4fca84b5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89f6815542992e4fca84b5::Fort Quitman::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89f6815542992e4fca84b5::Governor John Langdon House::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89f6815542992e4fca84b5::Zachary Taylor::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a89f6815542992e4fca84b5::Assassination of John F. Kennedy::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89f6815542992e4fca84b5::Fort Quitman",
+        "5a89f6815542992e4fca84b5::Zachary Taylor"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89f6815542992e4fca84b5::Fort Quitman::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89f6815542992e4fca84b5::Governor John Langdon House::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89f6815542992e4fca84b5::Zachary Taylor::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a89f6815542992e4fca84b5::Assassination of John F. Kennedy::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a89f6815542992e4fca84b5::Assassination of John F. Kennedy::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] John F. Kennedy, the 35th President of the United States, was assassinated on Friday, November 22, 1963 at 12:30 p.m. Central Standard Time in Dallas, Texas while riding in a motorcade in Dealey Plaza.\n[2] Zachary Taylor (November 24, 1784 – July 9, 1850) was the 12th President of the United States, serving from March 1849 until his death in July 1850.\n[3] It was built in 1784 by John Langdon (1741-1819), a merchant, shipbuilder, American Revolutionary War general, signer of the United States Constitution, and three-term President (now termed governor) of New Hampshire.\n[4] The fort, now a ghost town, was named for Mississippi Governor John A. Quitman, who served as a major general under Zachary Taylor during the Mexican-American War."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

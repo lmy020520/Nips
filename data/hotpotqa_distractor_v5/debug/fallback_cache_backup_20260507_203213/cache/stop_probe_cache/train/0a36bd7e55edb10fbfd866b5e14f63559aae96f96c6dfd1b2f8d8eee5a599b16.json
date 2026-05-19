@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2006",
+  "pred_answer": "2006",
+  "normalized_gold": "2006",
+  "normalized_pred": "2006",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc033755429947ff1738b8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc033755429947ff1738b8::Robert Nyce::21"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc033755429947ff1738b8::Bob Boetticher::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc033755429947ff1738b8::Gerald Ford::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc033755429947ff1738b8::Guy Georgias::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc033755429947ff1738b8::Bob Boetticher",
+        "5adc033755429947ff1738b8::Gerald Ford"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc033755429947ff1738b8::Robert Nyce::21",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc033755429947ff1738b8::Bob Boetticher::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc033755429947ff1738b8::Gerald Ford::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc033755429947ff1738b8::Guy Georgias::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc033755429947ff1738b8::Guy Georgias::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He was born in 1935 and died on 19 December 2015 in Harare.\n[2] Gerald Rudolph Ford Jr. (born Leslie Lynch King Jr.; July 14, 1913 – December 26, 2006) was an American politician who served as the 38th President of the United States from August 1974 to January 1977, following the resignation of Richard Nixon.\n[3] He was the lead funeral director and embalmer for the state funerals of Gerald Ford and Ronald Reagan, and has coordinated and directed some of the most visible funerals in recent history for a variety of well-known politicians, cabinet members, business leaders, entertainers and clergy.\n[4] While serving at Arlington, SSG Nyce participated in former President Dwight D. Eisenhower's funeral, President Nixon's Inauguration and Robert F. Kennedy's Funeral."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

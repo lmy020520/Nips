@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "David Ayer",
+  "pred_answer": "David Ayer",
+  "normalized_gold": "david ayer",
+  "normalized_pred": "david ayer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abec6755542994516f45434",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abec6755542994516f45434::Fury (2014 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abec6755542994516f45434::Ardennes Fury::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abec6755542994516f45434::Scott Eastwood::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abec6755542994516f45434::Overdrive (2017 film)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abec6755542994516f45434::Fury (2014 film)",
+        "5abec6755542994516f45434::Scott Eastwood"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abec6755542994516f45434::Fury (2014 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abec6755542994516f45434::Ardennes Fury::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abec6755542994516f45434::Scott Eastwood::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abec6755542994516f45434::Overdrive (2017 film)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abec6755542994516f45434::Overdrive (2017 film)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The film stars Scott Eastwood, Freddie Thorp, Ana de Armas, and Gaia Weiss.\n[2] Scott Eastwood (born Scott Clinton Reeves; March 21, 1986) is an American actor, model, and professional skydiver.\n[3] Ardennes Fury (a.k.a. \"Battle of the Ardennes: Fury\") is a 2014 direct-to-video war film directed by Joseph J. Lawson.\n[4] Fury is a 2014 American war film written and directed by David Ayer, and stars Brad Pitt, Shia LaBeouf, Logan Lerman, Michael Peña, Jon Bernthal and Jason Isaacs."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "research",
+  "pred_answer": "research",
+  "normalized_gold": "research",
+  "normalized_pred": "research",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a890cc855429946c8d6e8fb",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a890cc855429946c8d6e8fb::Robbie Caldwell::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a890cc855429946c8d6e8fb::UNC Health Care::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a890cc855429946c8d6e8fb::University of North Carolina at Chapel Hill::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a890cc855429946c8d6e8fb::Vanderbilt University::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a890cc855429946c8d6e8fb::Research Triangle::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a890cc855429946c8d6e8fb::University of North Carolina at Chapel Hill",
+        "5a890cc855429946c8d6e8fb::Vanderbilt University"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a890cc855429946c8d6e8fb::Robbie Caldwell::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a890cc855429946c8d6e8fb::UNC Health Care::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a890cc855429946c8d6e8fb::University of North Carolina at Chapel Hill::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a890cc855429946c8d6e8fb::Vanderbilt University::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a890cc855429946c8d6e8fb::Research Triangle::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a890cc855429946c8d6e8fb::Research Triangle::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Research Triangle, commonly referred to as simply The Triangle, is a region in the Piedmont of North Carolina in the United States, anchored by North Carolina State University, Duke University, University of North Carolina at Chapel Hill, and the cities of Raleigh and Durham and the town of Chapel Hill.\n[2] Vanderbilt University (also known informally as Vandy) is a private research university located in Nashville, Tennessee.\n[3] The University of North Carolina at Chapel Hill, also known as UNC, or simply Carolina, is a public research university located in Chapel Hill, North Carolina, United States.\n[4] UNC Health Care is a not-for-profit medical system owned by the State of North Carolina and based in Chapel Hill, North Carolina at the University of North Carolina at Chapel Hill."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

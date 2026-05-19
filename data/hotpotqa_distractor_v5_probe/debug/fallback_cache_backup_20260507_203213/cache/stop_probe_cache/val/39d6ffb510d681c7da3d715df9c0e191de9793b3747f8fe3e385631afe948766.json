@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Cape Air",
+  "pred_answer": "Cape Air",
+  "normalized_gold": "cape air",
+  "normalized_pred": "cape air",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7651375542992d0ec060a2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7651375542992d0ec060a2::Cape Air::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7651375542992d0ec060a2::Gogo Inflight Internet::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7651375542992d0ec060a2::Cape Girardeau Regional Airport::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7651375542992d0ec060a2::Barnstable Municipal Airport::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7651375542992d0ec060a2::Cape Air",
+        "5a7651375542992d0ec060a2::Cape Girardeau Regional Airport"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7651375542992d0ec060a2::Cape Air::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7651375542992d0ec060a2::Gogo Inflight Internet::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7651375542992d0ec060a2::Cape Girardeau Regional Airport::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7651375542992d0ec060a2::Barnstable Municipal Airport::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7651375542992d0ec060a2::Barnstable Municipal Airport::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The airport is served by scheduled commercial flights as well as charters and general aviation.\n[2] The airport is used for general aviation, and has scheduled service by American Airlines partner Cape Air with subsidized Essential Air Service program flights to Lambert-St.\n[3] 17 airlines partner with Gogo to provide in-flight WiFi, including British Airways, Aer Lingus, Iberia, Gol linhas aereas, Beijing Capital, Aeromexico, American Airlines, Air Canada, Alaska Airlines, Delta Air Lines, Japan Airlines, JTA, United Airlines, Hainan Airlines, Virgin America, Vietnam Airlines and Virgin Atlantic.\n[4] Hyannis Air Service, Inc., operating as Cape Air, is an airline headquartered at Barnstable Municipal Airport in Barnstable, Massachusetts, United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

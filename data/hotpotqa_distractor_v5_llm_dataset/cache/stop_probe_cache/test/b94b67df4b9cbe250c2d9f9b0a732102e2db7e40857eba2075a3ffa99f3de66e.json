@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "GNU GPLv3",
+  "pred_answer": "GNU GPLv3",
+  "normalized_gold": "gnu gplv3",
+  "normalized_pred": "gnu gplv3",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a87ed5b5542994846c1cdfc",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a87ed5b5542994846c1cdfc::Freemium::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a87ed5b5542994846c1cdfc::Tales of Maj'Eyal::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a87ed5b5542994846c1cdfc::Open-source license::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a87ed5b5542994846c1cdfc::Freemium",
+        "5a87ed5b5542994846c1cdfc::Tales of Maj'Eyal"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a87ed5b5542994846c1cdfc::Freemium::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a87ed5b5542994846c1cdfc::Tales of Maj'Eyal::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a87ed5b5542994846c1cdfc::Open-source license::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a87ed5b5542994846c1cdfc::Open-source license::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] <onlyinclude>An open-source license is a type of license for computer software and other products that allows the source code, blueprint or design to be used, modified and/or shared under defined terms and conditions.\n[2] The game's TE4 game engine source code is under a GNU GPLv3 license, the game's assets are licensed for use \"with the Tales of Maj'Eyal game only.\"\n[3] A subset of this model used by the video gaming industry is called free-to-play."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Coraline",
+  "pred_answer": "Coraline",
+  "normalized_gold": "coraline",
+  "normalized_pred": "coraline",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89b24c5542992e4fca837c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89b24c5542992e4fca837c::Coraline (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89b24c5542992e4fca837c::Oliver Jones (visual effects artist)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89b24c5542992e4fca837c::Richard Bluff::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89b24c5542992e4fca837c::Coraline (film)",
+        "5a89b24c5542992e4fca837c::Oliver Jones (visual effects artist)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89b24c5542992e4fca837c::Coraline (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89b24c5542992e4fca837c::Oliver Jones (visual effects artist)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89b24c5542992e4fca837c::Richard Bluff::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a89b24c5542992e4fca837c::Richard Bluff::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Known for his works in Disney's visual effects company Industrial Light & Magic (ILM) as a digital matte artist and visual effects supervisor in acclaimed films such as \"\" (2005), \"The Island\" (2005), \"Transformers\" (2007-11), \"Indiana Jones and the Kingdom of the Crystal Skull\" (2008), \"Star Trek\" (2009), \"Avatar\" (2009), \"The Avengers\" (2012), \"Cloud Atlas\" (2012) \"Pacific Rim\" (2013), \"The Big\n[2] Oliver Jones is a British special effects supervisor.\n[3] Coraline is a 2009 American 3D dark fantasy stop-motion horror film based on Neil Gaiman's 2002 novel of the same name."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

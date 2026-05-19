@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1943",
+  "pred_answer": "1943",
+  "normalized_gold": "1943",
+  "normalized_pred": "1943",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade436c5542992fa25da719",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade436c5542992fa25da719::Tove Jansson::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade436c5542992fa25da719::Hong Lei (artist)::8"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade436c5542992fa25da719::Comet in Moominland::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade436c5542992fa25da719::New Painting of Common Objects::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade436c5542992fa25da719::Tove Jansson",
+        "5ade436c5542992fa25da719::Comet in Moominland"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade436c5542992fa25da719::Tove Jansson::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade436c5542992fa25da719::Hong Lei (artist)::8",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade436c5542992fa25da719::Comet in Moominland::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade436c5542992fa25da719::New Painting of Common Objects::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade436c5542992fa25da719::New Painting of Common Objects::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The exhibition \"New Painting of Common Objects\" at the Pasadena Art Museum in 1962 was the first museum survey of American pop art.\n[2] Comet in Moominland (Swedish: \"Kometjakten\" / \"Mumintrollet på kometjakt\" / \"Kometen kommer\") is the second in Tove Jansson's series of Moomin books.\n[3] , Chinese Contemporary Art Exhibition\" (Pompidou Centre, Paris, 2003), \"Seven Worthies\" (solo exhibition, Beijing, 2007), \"Seasons\" (solo exhibition, Beijing, New York, 2008), 2011 Chengdu Biennale, \"Mi Lou\" (solo exhibition, Beijing, 2012) and \"Perfume This is Not\" (solo exhibition, Shanghai, 2012).\n[4] Her first solo art exhibition was in 1943."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

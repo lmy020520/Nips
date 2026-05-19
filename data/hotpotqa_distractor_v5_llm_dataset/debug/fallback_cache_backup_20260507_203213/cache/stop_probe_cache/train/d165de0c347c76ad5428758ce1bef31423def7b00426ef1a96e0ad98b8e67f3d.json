@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Istanbul, Turkey",
+  "pred_answer": "Istanbul, Turkey",
+  "normalized_gold": "istanbul turkey",
+  "normalized_pred": "istanbul turkey",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd91405542992ac4f382cc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd91405542992ac4f382cc::Khedive Palace::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd91405542992ac4f382cc::National Baptist Memorial Church::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd91405542992ac4f382cc::Crimea Memorial Church::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd91405542992ac4f382cc::Bethel Memorial Church::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd91405542992ac4f382cc::Khedive Palace",
+        "5abd91405542992ac4f382cc::Crimea Memorial Church"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd91405542992ac4f382cc::Khedive Palace::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd91405542992ac4f382cc::National Baptist Memorial Church::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd91405542992ac4f382cc::Crimea Memorial Church::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd91405542992ac4f382cc::Bethel Memorial Church::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd91405542992ac4f382cc::Bethel Memorial Church::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Bethel Memorial Church, also known as Bethel Baptist Memorial Church, is a historic Baptist church building located at White Post, Clarke County, Virginia.\n[2] The Crimea Memorial Church, also known as \"Christ Church\", is a Church of England church in the Beyoglu - Taksim district of Istanbul, Turkey.\n[3] National Baptist Memorial Church is a Baptist church in Washington, D.C. It is located at the intersection of 16th Street NW and Columbia Road, where the Mt. Pleasant, Columbia Heights and Adams Morgan neighborhoods meet.\n[4] The Khedive Palace (Turkish: \"Hıdiv Kasrı\" ) or Çubuklu Palace (\"Çubuklu Sarayı\"), located on the Asian side of the Bosphorus in Istanbul, Turkey, was a former residence of Khedive Abbas II of Egypt and Sudan."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

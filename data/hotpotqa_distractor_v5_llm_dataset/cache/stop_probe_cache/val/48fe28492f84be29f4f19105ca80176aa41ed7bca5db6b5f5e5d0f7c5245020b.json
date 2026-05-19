@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1967",
+  "pred_answer": "1967",
+  "normalized_gold": "1967",
+  "normalized_pred": "1967",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab678ca5542995eadeeffff",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab678ca5542995eadeeffff::Papa Dee::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab678ca5542995eadeeffff::The Junkie and the Juicehead Minus Me::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab678ca5542995eadeeffff::The First Cut Is the Deepest::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab678ca5542995eadeeffff::The Very Best of Cat Stevens::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab678ca5542995eadeeffff::Papa Dee",
+        "5ab678ca5542995eadeeffff::The First Cut Is the Deepest"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab678ca5542995eadeeffff::Papa Dee::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab678ca5542995eadeeffff::The Junkie and the Juicehead Minus Me::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab678ca5542995eadeeffff::The First Cut Is the Deepest::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab678ca5542995eadeeffff::The Very Best of Cat Stevens::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab678ca5542995eadeeffff::The Very Best of Cat Stevens::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Very Best of Cat Stevens is the title of a compilation album by Cat Stevens.\n[2] \"The First Cut Is the Deepest\" is a 1967 song written by Cat Stevens, originally released by P. P. Arnold in May 1967.\n[3] \"Father and Daughter (Father and Son)\" is a cover version of a well-known Cat Stevens song and a duet with Cash's stepdaughter, Rosie Nix Adams, with slight changes in lyrics; a version of the same song would be released in 2003 on \"Unearthed\", as a duet with Fiona Apple.\n[4] His most commercially successful track is his version of the Cat Stevens song \"The First Cut Is the Deepest\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

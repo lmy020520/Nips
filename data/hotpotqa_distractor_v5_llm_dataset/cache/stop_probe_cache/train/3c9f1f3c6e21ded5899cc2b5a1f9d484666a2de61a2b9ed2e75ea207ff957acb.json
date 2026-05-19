@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "6,986",
+  "pred_answer": "6,986",
+  "normalized_gold": "6986",
+  "normalized_pred": "6986",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8e6c0b5542990e94052b02",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8e6c0b5542990e94052b02::Woodenbong::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8e6c0b5542990e94052b02::Baidul::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8e6c0b5542990e94052b02::Tenterfield, New South Wales::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8e6c0b5542990e94052b02::Tenterfield, New South Wales::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8e6c0b5542990e94052b02::Woodenbong",
+        "5a8e6c0b5542990e94052b02::Tenterfield, New South Wales"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8e6c0b5542990e94052b02::Woodenbong::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8e6c0b5542990e94052b02::Baidul::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8e6c0b5542990e94052b02::Tenterfield, New South Wales::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8e6c0b5542990e94052b02::Tenterfield, New South Wales::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8e6c0b5542990e94052b02::Tenterfield, New South Wales::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] At the 2015 census , Tenterfield had a population of 6,986.\n[2] The town is situated on the north-western part of the Northern Tableland plateau, nestled in a valley, astride the Great Dividing Range and beneath the imposing Mount MacKenzie (1,287m elevation).\n[3] The road eventually leads to Nazirpur village and thence to Patiram.\n[4] It is situated 10 km south of the Queensland border and five kilometres south of the junction of the Summerland Way and the Mount Lindesay Road, which leads to Legume and eventually Tenterfield."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

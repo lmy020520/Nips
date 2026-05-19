@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1978",
+  "pred_answer": "1978",
+  "normalized_gold": "1978",
+  "normalized_pred": "1978",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abcee275542993a06baf9af",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abcee275542993a06baf9af::Shin Sang-ok::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abcee275542993a06baf9af::Pulgasari::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abcee275542993a06baf9af::Cinema of North Korea::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abcee275542993a06baf9af::Shin Sang-ok::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abcee275542993a06baf9af::Pulgasari",
+        "5abcee275542993a06baf9af::Cinema of North Korea"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abcee275542993a06baf9af::Shin Sang-ok::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abcee275542993a06baf9af::Pulgasari::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abcee275542993a06baf9af::Cinema of North Korea::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abcee275542993a06baf9af::Shin Sang-ok::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abcee275542993a06baf9af::Shin Sang-ok::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He is also known for having been kidnapped by the previous North Korean leader, Kim Jong-il, for the purpose of producing critically acclaimed films.\n[2] Outsider appraisal of North Korean cinema is often condescending, while statements from official North Korean sources include claims like, \"In recent years our film art has created an unprecedented sensation in the world's filmdom... The revolutionary people of the world are unstinting in their praise of this feature film and other monumental works, calling them 'the first-class films by internati\n[3] Director Shin had been kidnapped in 1978 by North Korean intelligence on the orders of Kim Jong-il, son of the then-ruling Kim Il-sung.\n[4] Shin Sang-ok (October 11, 1926 – April 11, 2006) was a prolific South Korean film producer and director with more than 100 producer and 70 director credits to his name."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

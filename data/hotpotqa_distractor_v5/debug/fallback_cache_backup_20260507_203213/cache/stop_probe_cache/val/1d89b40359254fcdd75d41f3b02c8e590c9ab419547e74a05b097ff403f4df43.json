@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ogden Nash",
+  "pred_answer": "Ogden Nash",
+  "normalized_gold": "ogden nash",
+  "normalized_pred": "ogden nash",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77eb0655429967ab1052e6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77eb0655429967ab1052e6::Patrick White::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77eb0655429967ab1052e6::The Night the Prowler::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77eb0655429967ab1052e6::Ogden Nash::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77eb0655429967ab1052e6::Line-Up for Yesterday::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77eb0655429967ab1052e6::Patrick White",
+        "5a77eb0655429967ab1052e6::Ogden Nash"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77eb0655429967ab1052e6::Patrick White::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77eb0655429967ab1052e6::The Night the Prowler::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77eb0655429967ab1052e6::Ogden Nash::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77eb0655429967ab1052e6::Line-Up for Yesterday::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77eb0655429967ab1052e6::Line-Up for Yesterday::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Line-Up for Yesterday: An ABC of Baseball Immortals\" is a poem written by Ogden Nash for the January 1949 issue of \"SPORT Magazine\".\n[2] Frederic Ogden Nash (August 19, 1902 – May 19, 1971) was an American poet well known for his light verse, of which he wrote over 500 pieces.\n[3] The Night the Prowler (also known as \"Patrick White's The Night the Prowler\") is a 1978 Australian film written by Patrick White, produced by Anthony Buckley and directed by Jim Sharman.\n[4] Patrick Victor Martindale White (28 May 191230 September 1990) was an Australian writer who is widely regarded as one of the most important English-language novelists of the 20th century."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

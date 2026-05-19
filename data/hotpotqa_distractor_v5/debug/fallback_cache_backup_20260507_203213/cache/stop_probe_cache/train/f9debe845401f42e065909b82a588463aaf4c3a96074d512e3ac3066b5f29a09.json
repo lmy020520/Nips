@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "D.W. Kann",
+  "pred_answer": "D.W. Kann",
+  "normalized_gold": "dw kann",
+  "normalized_pred": "dw kann",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6e4b255429954757d33ad",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6e4b255429954757d33ad::D.W. Kann::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6e4b255429954757d33ad::Gerold, Prefect of Bavaria::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6e4b255429954757d33ad::Kenny Ortega::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6e4b255429954757d33ad::Josann McGibbon::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6e4b255429954757d33ad::D.W. Kann",
+        "5ab6e4b255429954757d33ad::Kenny Ortega"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6e4b255429954757d33ad::D.W. Kann::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6e4b255429954757d33ad::Gerold, Prefect of Bavaria::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6e4b255429954757d33ad::Kenny Ortega::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6e4b255429954757d33ad::Josann McGibbon::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6e4b255429954757d33ad::Josann McGibbon::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Josann McGibbon is an American screenwriter working in partnership with Sara Parriott.\n[2] Kenneth John \"Kenny\" Ortega (born April 18, 1950) is an American producer, director, and choreographer.\n[3] Gerold both aided the continuity of Agilofing rule of Bavaria, as well as took steps to integrate Bavarians into the wider scope of the Frankish Kingdom.\n[4] D.W. Kann is a film maker who has been working in the film industry for nearly 20 years."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

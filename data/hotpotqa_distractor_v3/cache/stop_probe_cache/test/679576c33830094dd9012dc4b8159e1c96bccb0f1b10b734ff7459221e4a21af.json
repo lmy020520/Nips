@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1978",
+  "pred_answer": "1978",
+  "normalized_gold": "1978",
+  "normalized_pred": "1978",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2e9c45542990b17b154a0",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2e9c45542990b17b154a0::Center for Computer-Assisted Legal Instruction::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2e9c45542990b17b154a0::Braniff International Airways::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2e9c45542990b17b154a0::Airline Deregulation Act::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2e9c45542990b17b154a0::Braniff International Airways::3"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac2e9c45542990b17b154a0::Willy O. Rossel::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2e9c45542990b17b154a0::Braniff International Airways::0",
+        "5ac2e9c45542990b17b154a0::Airline Deregulation Act",
+        "5ac2e9c45542990b17b154a0::Braniff International Airways"
+      ],
+      "k_br": 2.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2e9c45542990b17b154a0::Center for Computer-Assisted Legal Instruction::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2e9c45542990b17b154a0::Braniff International Airways::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2e9c45542990b17b154a0::Airline Deregulation Act::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2e9c45542990b17b154a0::Braniff International Airways::3",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac2e9c45542990b17b154a0::Willy O. Rossel::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2e9c45542990b17b154a0::Willy O. Rossel::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] In 1965, he was hired by the progressive Dallas-based Braniff Airways, Inc., to administer the airline's commitment to providing its passengers with the finest food aloft.\n[2] The airline ceased operations in May 1982 because high fuel prices and the Airline Deregulation Act of December 1978 rendered it uncompetitive.\n[3] The Airline Deregulation Act is a 1978 United States federal law that deregulated the airline industry in the United States, removing U.S. Federal Government control over such areas as fares, routes and market entry of new airlines, introducing a free market in the commercial airline industry and leading to a great increase in the number of flights, a decrease in fares, and an increase in the numb\n[4] Braniff Airways, Inc., doing business as Braniff International Airways, from 1948 until 1965, and then Braniff International from 1965 until 1983, was an American airline that operated from 1928 until 1982."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

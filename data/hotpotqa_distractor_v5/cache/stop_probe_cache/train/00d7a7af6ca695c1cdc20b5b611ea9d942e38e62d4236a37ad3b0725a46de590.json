@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the United States",
+  "pred_answer": "the United States",
+  "normalized_gold": "the united states",
+  "normalized_pred": "the united states",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2b6265542992decbdcd7a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2b6265542992decbdcd7a::And Your Bird Can Sing::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2b6265542992decbdcd7a::Doctor Robert::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2b6265542992decbdcd7a::Yesterday and Today::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae2b6265542992decbdcd7a::If I Needed Someone::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2b6265542992decbdcd7a::Doctor Robert",
+        "5ae2b6265542992decbdcd7a::Yesterday and Today"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2b6265542992decbdcd7a::And Your Bird Can Sing::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2b6265542992decbdcd7a::Doctor Robert::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2b6265542992decbdcd7a::Yesterday and Today::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae2b6265542992decbdcd7a::If I Needed Someone::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2b6265542992decbdcd7a::If I Needed Someone::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was released in December 1965 on their album \"Rubber Soul\", except for in North America, where it appeared on the 1966 release \"Yesterday and Today\".\n[2] Yesterday and Today is a studio album by the Beatles, their ninth album released on Capitol Records and eleventh overall American release.\n[3] \"Doctor Robert\" is a song by the Beatles released on the album \"Revolver\" in the United Kingdom and on \"Yesterday and Today\" in the United States.\n[4] \"And Your Bird Can Sing\" is a song by the Beatles, released on their 1966 album \"Revolver\" in the United Kingdom and on \"Yesterday and Today\" in the United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

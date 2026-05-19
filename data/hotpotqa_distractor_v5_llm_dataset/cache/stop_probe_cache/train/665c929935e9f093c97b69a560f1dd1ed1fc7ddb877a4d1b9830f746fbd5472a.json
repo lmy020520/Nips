@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Splash Mountain",
+  "pred_answer": "Splash Mountain",
+  "normalized_gold": "splash mountain",
+  "normalized_pred": "splash mountain",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c6c6155429907fabeef80",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c6c6155429907fabeef80::Splash Mountain::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c6c6155429907fabeef80::Guardians of the Galaxy (Epcot Attraction)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c6c6155429907fabeef80::Tony Baxter::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7c6c6155429907fabeef80::Lo Manthang::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c6c6155429907fabeef80::Splash Mountain",
+        "5a7c6c6155429907fabeef80::Tony Baxter"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c6c6155429907fabeef80::Splash Mountain::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c6c6155429907fabeef80::Guardians of the Galaxy (Epcot Attraction)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c6c6155429907fabeef80::Tony Baxter::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7c6c6155429907fabeef80::Lo Manthang::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c6c6155429907fabeef80::Lo Manthang::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Lo Manthang was the walled capital of \"the Kingdom of Lo\" from its founding in 1380 by \"Ame Pal\" who oversaw construction of the city wall and many of the still-standing structures.\n[2] During his 47-year tenure with the company, he oversaw the construction of multiple contemporary Disney theme park attractions, including Big Thunder Mountain Railroad, Star Tours, Splash Mountain, The Indiana Jones Adventure, and Journey Into Imagination.\n[3] It will be the second attraction based on Marvel's \"Guardians of the Galaxy\" to be built at a Disney theme park and is also the first Marvel-themed attraction to be built at Walt Disney World.\n[4] Splash Mountain is a log flume dark ride at Disneyland, Tokyo Disneyland, and the Magic Kingdom at the Walt Disney World Resort, based on the characters, stories, and songs from the 1946 Disney film \"Song of the South\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

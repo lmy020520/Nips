@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Brewton Millers",
+  "pred_answer": "Brewton Millers",
+  "normalized_gold": "brewton millers",
+  "normalized_pred": "brewton millers",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae63e8a55429908198fa53f",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae63e8a55429908198fa53f::UC Riverside Highlanders baseball::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae63e8a55429908198fa53f::Independent baseball league::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae63e8a55429908198fa53f::Brewton Millers::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae63e8a55429908198fa53f::Minor League Baseball::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae63e8a55429908198fa53f::UC Riverside Highlanders baseball::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae63e8a55429908198fa53f::Brewton Millers",
+        "5ae63e8a55429908198fa53f::Minor League Baseball"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae63e8a55429908198fa53f::UC Riverside Highlanders baseball::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae63e8a55429908198fa53f::Independent baseball league::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae63e8a55429908198fa53f::Brewton Millers::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae63e8a55429908198fa53f::Minor League Baseball::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae63e8a55429908198fa53f::UC Riverside Highlanders baseball::7",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae63e8a55429908198fa53f::UC Riverside Highlanders baseball::7",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] As of the start of the 2013 Major League Baseball season, 16 former Highlanders have appeared in Major League Baseball.\n[2] Minor League Baseball is a hierarchy of professional baseball leagues in the Americas that compete at levels below Major League Baseball (MLB) and provide opportunities for player development and a way to prepare for the major leagues.\n[3] The Brewton Millers were a Minor League Baseball team that represented the city of Brewton, Alabama.\n[4] An independent baseball league is a professional baseball organization located in the United States and Canada that is not operated in conjunction with either a Major League Baseball team or an affiliated Minor League Baseball team."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

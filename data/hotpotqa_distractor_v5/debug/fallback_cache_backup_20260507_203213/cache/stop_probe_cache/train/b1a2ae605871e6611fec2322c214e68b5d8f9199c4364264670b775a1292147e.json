@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Crystal Method",
+  "pred_answer": "The Crystal Method",
+  "normalized_gold": "the crystal method",
+  "normalized_pred": "the crystal method",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adbf7af55429947ff173877",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adbf7af55429947ff173877::The Crystal Method::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adbf7af55429947ff173877::Electric Daisy Carnival::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adbf7af55429947ff173877::Anthony Marinelli::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adbf7af55429947ff173877::Poppermost::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adbf7af55429947ff173877::The Crystal Method",
+        "5adbf7af55429947ff173877::Anthony Marinelli"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adbf7af55429947ff173877::The Crystal Method::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adbf7af55429947ff173877::Electric Daisy Carnival::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adbf7af55429947ff173877::Anthony Marinelli::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adbf7af55429947ff173877::Poppermost::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adbf7af55429947ff173877::Poppermost::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Poppermost has been listed as one of \"Our picks for the best bands\" by the \"Las Vegas Weekly\" entertainment magazine, and also received a \"Best of Las Vegas 2007\" award from the \"Las Vegas Review-Journal\" newspaper.\n[2] Marinelli has also recorded with Lionel Richie, Kenny Loggins, Herb Alpert, Supertramp, The Crystal Method, Billy Childs and James Brown.\n[3] Electric Daisy Carnival, commonly known as EDC, is one of the biggest electronic dance music festivals in the world , with its flagship held annually in Las Vegas, Nevada.\n[4] The Crystal Method is an American electronic music and keyboardist duo formed in Las Vegas, Nevada by Ken Jordan and Scott Kirkland in the early 1990s."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

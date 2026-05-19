@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Alan Marshall",
+  "pred_answer": "Alan Marshall",
+  "normalized_gold": "alan marshall",
+  "normalized_pred": "alan marshall",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a80f2d355429938b6142268",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a80f2d355429938b6142268::Flashdance::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a80f2d355429938b6142268::Jacob's Ladder (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a80f2d355429938b6142268::Patricia Kalember::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a80f2d355429938b6142268::9½ Weeks::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a80f2d355429938b6142268::Jacob's Ladder (film)",
+        "5a80f2d355429938b6142268::Patricia Kalember"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a80f2d355429938b6142268::Flashdance::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a80f2d355429938b6142268::Jacob's Ladder (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a80f2d355429938b6142268::Patricia Kalember::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a80f2d355429938b6142268::9½ Weeks::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a80f2d355429938b6142268::9½ Weeks::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] 9½ Weeks (originally titled Nine ½ Weeks) is a 1986 American erotic romantic drama film directed by Adrian Lyne with a screenplay by Sarah Kernochan, Zalman King, and Patricia Louisanna Knop.\n[2] Patricia Kathryn Kalember (born December 30, 1956) is an American actress, best known for her role as Georgiana \"Georgie\" Reed Whitsig in the NBC drama series, \"Sisters\" (1991–1996).\n[3] Jacob's Ladder is a 1990 American psychological horror film directed by Adrian Lyne, produced by Alan Marshall, written by Bruce Joel Rubin and starring Tim Robbins, Elizabeth Peña, and Danny Aiello.\n[4] Flashdance is a 1983 American romantic drama film directed by Adrian Lyne."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "rock band",
+  "pred_answer": "rock band",
+  "normalized_gold": "rock band",
+  "normalized_pred": "rock band",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abaaaf955429901930fa885",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abaaaf955429901930fa885::Supergrass::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abaaaf955429901930fa885::Valerie Agnew::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abaaaf955429901930fa885::7 Year Bitch::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abaaaf955429901930fa885::Elizabeth Davis (bassist)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abaaaf955429901930fa885::Supergrass",
+        "5abaaaf955429901930fa885::7 Year Bitch"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abaaaf955429901930fa885::Supergrass::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abaaaf955429901930fa885::Valerie Agnew::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abaaaf955429901930fa885::7 Year Bitch::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abaaaf955429901930fa885::Elizabeth Davis (bassist)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abaaaf955429901930fa885::Elizabeth Davis (bassist)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Elizabeth Davis-Simpson was born December 18, 1965 in the United States, best known for being the songwriter as well as the bassist of the punk rock band 7 Year Bitch.\n[2] 7 Year Bitch was an American punk rock band from Seattle, Washington that was active for 7 years, between 1990 and 1997.\n[3] Valerie Agnew is best known for her relationship with the band called the Gits and as the drummer of 7 Year Bitch.\n[4] The band consisted of brothers Gaz (guitar and lead vocals) and Rob Coombes (keyboards and backing vocals), Mick Quinn (bass and backing vocals) and Danny Goffey (drums and backing vocals)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

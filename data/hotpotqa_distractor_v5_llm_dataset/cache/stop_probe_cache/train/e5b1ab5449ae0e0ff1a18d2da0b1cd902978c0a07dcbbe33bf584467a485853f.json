@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Yaki Kadafi",
+  "pred_answer": "Yaki Kadafi",
+  "normalized_gold": "yaki kadafi",
+  "normalized_pred": "yaki kadafi",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a734e5a5542992359bc32f2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a734e5a5542992359bc32f2::Hail Mary (2Pac song)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a734e5a5542992359bc32f2::Kastro (Outlawz)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a734e5a5542992359bc32f2::Yaki Kadafi::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a734e5a5542992359bc32f2::Tupac Shakur discography::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a734e5a5542992359bc32f2::Hail Mary (2Pac song)",
+        "5a734e5a5542992359bc32f2::Yaki Kadafi"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a734e5a5542992359bc32f2::Hail Mary (2Pac song)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a734e5a5542992359bc32f2::Kastro (Outlawz)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a734e5a5542992359bc32f2::Yaki Kadafi::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a734e5a5542992359bc32f2::Tupac Shakur discography::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a734e5a5542992359bc32f2::Tupac Shakur discography::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The discography of Tupac Shakur, an American rapper consists of eleven studio albums. Four were released before Shakur's death on September 13, 1996 and seven were posthumously released, the first being \"The Don Killuminati: The 7 Day Theory\" released on November 5, 1996 (although the album was finished before Shakur's death).\n[2] Yafeu Akiyele Fula (October 9, 1977 – November 10, 1996), better known by his stage name Yaki Kadafi, was an American rapper who was best known as a founder and member of the rap groups Outlawz and Dramacydal.\n[3] He was also blood cousins with Shakur and is featured on many of the late rapper's songs such as \"Made Niggaz\", & \"Hail Mary\".\n[4] \"Hail Mary\" is a single by American rapper Tupac Shakur from his final album \"\", under the new stage name, Makaveli."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

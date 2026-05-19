@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1885",
+  "pred_answer": "1885",
+  "normalized_gold": "1885",
+  "normalized_pred": "1885",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3ad225542992f92d82337",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3ad225542992f92d82337::WPRK::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3ad225542992f92d82337::Saint Joseph Seminary College::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3ad225542992f92d82337::Rollins College::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae3ad225542992f92d82337::Hampden–Sydney College::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3ad225542992f92d82337::WPRK",
+        "5ae3ad225542992f92d82337::Rollins College"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3ad225542992f92d82337::WPRK::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3ad225542992f92d82337::Saint Joseph Seminary College::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3ad225542992f92d82337::Rollins College::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae3ad225542992f92d82337::Hampden–Sydney College::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3ad225542992f92d82337::Hampden–Sydney College::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Founded in 1775, Hampden–Sydney is the oldest private charter college in the Southern U.S., the 10th oldest college in the U.S., the last college founded before the American Revolution, and one of only three four-year, all-men's liberal arts colleges in the United States.\n[2] Rollins College is a private, coeducational liberal arts college, founded in 1885 and located in Winter Park, Florida along the shores of Lake Virginia.\n[3] Saint Joseph Seminary College, also known as St. Ben or St. Ben's, is a private four-year seminary college founded in 1891.\n[4] It is owned and operated by Rollins College."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

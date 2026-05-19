@@ -1,0 +1,22 @@
+{
+  "should_derive": true,
+  "reason": "The recent probe feedback indicates a false stop with an incorrect answer 'December 1978', and the gold answer hint is '1978'. The top raw candidates include evidence linking Braniff's shutdown to the Airline Deregulation Act of December 1978, which is relevant to the question about the federal US law responsible for shutting down Braniff Airways. Deriving bridge and verification notes can help organize this evidence to correct the answer focus and clarify the target type, aligning with repair_after_false_stop mode priorities.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "The Airline Deregulation Act of December 1978 is cited as a factor in Braniff International Airways ceasing operations.",
+      "source_unit_ids": [
+        "5ac2e9c45542990b17b154a0::Braniff International Airways::3"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Braniff International Airways ceased operations in May 1982 due to high fuel prices and the Airline Deregulation Act of December 1978.",
+      "source_unit_ids": [
+        "5ac2e9c45542990b17b154a0::Braniff International Airways::3"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

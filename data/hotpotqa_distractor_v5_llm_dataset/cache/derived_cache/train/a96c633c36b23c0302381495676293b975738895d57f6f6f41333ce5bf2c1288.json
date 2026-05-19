@@ -1,0 +1,22 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for a movie filmed in Canada starring an English actor and dancer. The state summary mentions Thomas Holland as an English actor and dancer, and the gold answer is 'Edge of Winter'. However, the top raw candidates do not directly link Holland to that movie. A bridge note connecting Holland to 'Edge of Winter' would help, but no such evidence is present. Instead, we can derive a verification note to check if any candidate is an English actor and dancer, or a bridge note to link an English actor to a movie filmed in Canada. Since the candidates include English actors but no dancer info, we can note that.",
+  "derived_candidates": [
+    {
+      "type": "verification_note",
+      "text": "Gregg Sulkin is an English actor but not identified as a dancer.",
+      "source_unit_ids": [
+        "5a72fc425542991f9a20c5e8::Gregg Sulkin::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "William Hunter Kendal is an English actor and theatre manager, not a dancer.",
+      "source_unit_ids": [
+        "5a72fc425542991f9a20c5e8::William Hunter Kendal::0"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

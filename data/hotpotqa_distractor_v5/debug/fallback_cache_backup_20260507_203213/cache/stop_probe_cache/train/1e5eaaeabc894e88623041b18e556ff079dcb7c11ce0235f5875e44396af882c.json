@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "that was active in the United States",
+  "pred_answer": "that was active in the United States",
+  "normalized_gold": "that was active in the united states",
+  "normalized_pred": "that was active in the united states",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f0c5e5542995b44241f3b",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f0c5e5542995b44241f3b::James Ellison (polygamist)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f0c5e5542995b44241f3b::The Covenant, The Sword, and the Arm of the Lord::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f0c5e5542995b44241f3b::Ulster Covenant::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f0c5e5542995b44241f3b::James Ellison (polygamist)",
+        "5a8f0c5e5542995b44241f3b::The Covenant, The Sword, and the Arm of the Lord"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f0c5e5542995b44241f3b::James Ellison (polygamist)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f0c5e5542995b44241f3b::The Covenant, The Sword, and the Arm of the Lord::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f0c5e5542995b44241f3b::Ulster Covenant::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f0c5e5542995b44241f3b::Ulster Covenant::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Sir Edward Carson was the first person to sign the Covenant at Belfast City Hall with a silver pen, followed by Lord Londonderry (the former viceroy of Ireland), representatives of the Protestant churches, and then by Sir James Craig.\n[2] The Covenant, the Sword, and the Arm of the Lord (initialized CSA) was a far right terrorist cell dedicated to Christian Identity and survivalism that was active in the United States during the 1970s and early 1980s.\n[3] In 1971, he founded the radical organization The Covenant, The Sword, and the Arm of the Lord (CSA)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

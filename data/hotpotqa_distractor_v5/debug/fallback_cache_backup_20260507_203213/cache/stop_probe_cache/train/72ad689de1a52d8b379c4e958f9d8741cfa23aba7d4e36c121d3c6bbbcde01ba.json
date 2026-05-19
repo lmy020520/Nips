@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Plow That Broke the Plains",
+  "pred_answer": "The Plow That Broke the Plains",
+  "normalized_gold": "the plow that broke the plains",
+  "normalized_pred": "the plow that broke the plains",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abcecd7554299114383a198",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abcecd7554299114383a198::The Plow That Broke the Plains::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abcecd7554299114383a198::Deathconsciousness::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abcecd7554299114383a198::Cinerama Adventure::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abcecd7554299114383a198::Cinderella (sports)::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abcecd7554299114383a198::The Plow That Broke the Plains",
+        "5abcecd7554299114383a198::Cinerama Adventure"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abcecd7554299114383a198::The Plow That Broke the Plains::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abcecd7554299114383a198::Deathconsciousness::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abcecd7554299114383a198::Cinerama Adventure::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abcecd7554299114383a198::Cinderella (sports)::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abcecd7554299114383a198::Cinderella (sports)::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In a sporting context the term has been used at least since 1939, but came into widespread usage in 1950, when the Disney movie came out that year, and in reference to City College of New York, the unexpected winners of the NCAA Men's Basketball championship also that year.\n[2] Cinerama Adventure is a 2002 documentary about the history of the Cinerama widescreen film process.\n[3] The album is a double album; the first disc is entitled \"The Plow That Broke the Plains\", the second one entitled \"The Future\".\n[4] The Plow That Broke the Plains is a 1936 short documentary film which shows what happened to the Great Plains region of the United States and Canada when uncontrolled agricultural farming led to the Dust Bowl."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

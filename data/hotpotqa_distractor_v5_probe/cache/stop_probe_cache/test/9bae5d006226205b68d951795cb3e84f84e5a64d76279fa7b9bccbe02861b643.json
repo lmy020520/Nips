@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Drifting",
+  "pred_answer": "Drifting",
+  "normalized_gold": "drifting",
+  "normalized_pred": "drifting",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae73acb5542991e8301cc07",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae73acb5542991e8301cc07::D1NZ::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae73acb5542991e8301cc07::Rising Star (France)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae73acb5542991e8301cc07::Drifting (motorsport)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae73acb5542991e8301cc07::Ripley's Believe It or Not! (TV series)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae73acb5542991e8301cc07::D1NZ",
+        "5ae73acb5542991e8301cc07::Drifting (motorsport)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae73acb5542991e8301cc07::D1NZ::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae73acb5542991e8301cc07::Rising Star (France)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae73acb5542991e8301cc07::Drifting (motorsport)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae73acb5542991e8301cc07::Ripley's Believe It or Not! (TV series)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae73acb5542991e8301cc07::Ripley's Believe It or Not! (TV series)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] is the name of several documentary television series based on the newspaper feature.\n[2] Drifting is a driving technique where the driver intentionally oversteers, with loss of traction in the rear wheels or all tires, while maintaining control and driving the car through the entirety of a corner.\n[3] Rising Star is a French musical television competition series based on the Rising Star contest series based on the Israeli programme \"HaKokhav HaBa\".\n[4] D1NZ is a production car drifting series in New Zealand."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

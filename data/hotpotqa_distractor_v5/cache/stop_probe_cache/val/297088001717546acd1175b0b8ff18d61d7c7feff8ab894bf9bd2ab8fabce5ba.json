@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "director",
+  "pred_answer": "director",
+  "normalized_gold": "director",
+  "normalized_pred": "director",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abadfac5542996cc5e49ec0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abadfac5542996cc5e49ec0::Paul Schattel::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abadfac5542996cc5e49ec0::Smith (surname)::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abadfac5542996cc5e49ec0::Nicola Black::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abadfac5542996cc5e49ec0::Brown-necked raven::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abadfac5542996cc5e49ec0::Paul Schattel",
+        "5abadfac5542996cc5e49ec0::Nicola Black"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abadfac5542996cc5e49ec0::Paul Schattel::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abadfac5542996cc5e49ec0::Smith (surname)::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abadfac5542996cc5e49ec0::Nicola Black::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abadfac5542996cc5e49ec0::Brown-necked raven::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abadfac5542996cc5e49ec0::Brown-necked raven::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It has similar proportions to the common raven but the bill is not so large or deep and the wings tend to be a little more pointed in profile.\n[2] Nicola Jane Black (born in Glasgow) is a Scottish film and television producer and director.\n[3] At the turn of the 20th century, the surname was sufficiently prevalent in England to have prompted the statement: \"Common to every village in England, north, south, east and west\"; and sufficiently common on the (European) continent (in various forms) to be \"common in most countries of Europe\".\n[4] Paul Schattel is an American film director and screenwriter based in North Carolina."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New York Knicks",
+  "pred_answer": "New York Knicks",
+  "normalized_gold": "new york knicks",
+  "normalized_pred": "new york knicks",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5aba8c2c5542994dbf019937",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5aba8c2c5542994dbf019937::2014 NBA Development League Expansion Draft::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5aba8c2c5542994dbf019937::2000 NBA draft::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5aba8c2c5542994dbf019937::Westchester Knicks::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5aba8c2c5542994dbf019937::Windy City Bulls::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5aba8c2c5542994dbf019937::2014 NBA Development League Expansion Draft",
+        "5aba8c2c5542994dbf019937::Westchester Knicks"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5aba8c2c5542994dbf019937::2014 NBA Development League Expansion Draft::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5aba8c2c5542994dbf019937::2000 NBA draft::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5aba8c2c5542994dbf019937::Westchester Knicks::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5aba8c2c5542994dbf019937::Windy City Bulls::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5aba8c2c5542994dbf019937::Windy City Bulls::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Windy City Bulls are an American professional basketball team of the NBA G League and an affiliate of the Chicago Bulls of the National Basketball Association.\n[2] The Westchester Knicks are an American professional basketball team of the NBA G League and is an affiliate of the New York Knicks in the National Basketball Association (NBA).\n[3] The 2000 NBA draft was held on June 28, 2000 at the Target Center in Minneapolis.\n[4] The draft was held on September 2, 2014 so that the newly founded Westchester Knicks could acquire players for the upcoming 2014–15 season."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

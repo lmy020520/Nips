@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "African American",
+  "pred_answer": "African American",
+  "normalized_gold": "african american",
+  "normalized_pred": "african american",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab8729555429916710eb054",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab8729555429916710eb054::Alabama Joe::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab8729555429916710eb054::Multiple Jeopardy::8"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab8729555429916710eb054::Minstrel show::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab8729555429916710eb054::Association of Alabama Camps::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab8729555429916710eb054::Alabama Joe",
+        "5ab8729555429916710eb054::Minstrel show"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab8729555429916710eb054::Alabama Joe::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab8729555429916710eb054::Multiple Jeopardy::8",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab8729555429916710eb054::Minstrel show::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab8729555429916710eb054::Association of Alabama Camps::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab8729555429916710eb054::Association of Alabama Camps::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] AAC recognizes that every camp is different, each with a different purpose and serving different people for different reasons.\n[2] Each show consisted of comic skits, variety acts, dancing, and music performances that mocked people specifically of African American descent.\n[3] “Not only are colored women . . . handicapped on account of their sex, but they are almost everywhere baffled and mocked because of their race.\n[4] Alabama Joe was a popular minstrel song of the 19th century (US)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

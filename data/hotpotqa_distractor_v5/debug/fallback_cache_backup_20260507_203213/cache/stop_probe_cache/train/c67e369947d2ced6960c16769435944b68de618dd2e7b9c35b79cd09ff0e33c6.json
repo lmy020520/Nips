@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fox",
+  "pred_answer": "Fox",
+  "normalized_gold": "fox",
+  "normalized_pred": "fox",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab32a70554299753aec5952",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab32a70554299753aec5952::One Fish, Two Fish, Blowfish, Blue Fish::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab32a70554299753aec5952::The War of the Simpsons::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab32a70554299753aec5952::Joey Miyashima::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab32a70554299753aec5952::Dr. Seuss bibliography::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab32a70554299753aec5952::One Fish, Two Fish, Blowfish, Blue Fish",
+        "5ab32a70554299753aec5952::Joey Miyashima"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab32a70554299753aec5952::One Fish, Two Fish, Blowfish, Blue Fish::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab32a70554299753aec5952::The War of the Simpsons::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab32a70554299753aec5952::Joey Miyashima::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab32a70554299753aec5952::Dr. Seuss bibliography::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab32a70554299753aec5952::Dr. Seuss bibliography::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 2000, when \"Publishers Weekly\" compiled their list of the best-selling children's books of all time; 16 of the top 100 hardcover books were written by Geisel, including \"Green Eggs and Ham\", at number 4, \"The Cat in the Hat\", at number 9, and \"One Fish Two Fish Red Fish Blue Fish\", at number 13, and \"Dr. Seuss's ABC\".\n[2] He had a role in an episode (\"9 Minutes and 52 Seconds Over Tokyo\") of \"The Tracey Ullman Show\", and another in its spin-off, \"The Simpsons\", as the voice of Toshiro, the apprentice chef, in the episode called \"One Fish, Two Fish, Blowfish, Blue Fish\".\n[3] It originally aired on the Fox network in the United States on May 2, 1991.\n[4] It originally aired on Fox network in the United States on January 24, 1991."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

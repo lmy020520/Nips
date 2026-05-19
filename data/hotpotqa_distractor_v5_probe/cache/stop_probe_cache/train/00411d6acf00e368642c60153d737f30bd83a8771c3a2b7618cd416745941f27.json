@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1955",
+  "pred_answer": "1955",
+  "normalized_gold": "1955",
+  "normalized_pred": "1955",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab4ef775542996a3a969fef",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab4ef775542996a3a969fef::Google Santa Tracker::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab4ef775542996a3a969fef::NORAD Tracks Santa::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab4ef775542996a3a969fef::Cake Wars::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab4ef775542996a3a969fef::Google Santa Tracker",
+        "5ab4ef775542996a3a969fef::NORAD Tracks Santa"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab4ef775542996a3a969fef::Google Santa Tracker::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab4ef775542996a3a969fef::NORAD Tracks Santa::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab4ef775542996a3a969fef::Cake Wars::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab4ef775542996a3a969fef::Cake Wars::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] There was also an annual Christmas-themed spin-off of the show called \"Cake Wars: Christmas\" which made its debut the same year as \"Cake Wars\" and is identical and similar to another annual holiday-themed show called \"Halloween Wars\" which is for Halloween instead of Christmas.\n[2] NORAD Tracks Santa is an annual Christmas-themed entertainment program, which has existed since 1955, produced under the auspices of the North American Aerospace Defense Command (NORAD).\n[3] Google Santa Tracker is an annual Christmas-themed entertainment program by Google, Inc. that allows users to track Santa during Christmas Eve and before that allows users to play, watch, and learn through little activities that are added daily from the start of December."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

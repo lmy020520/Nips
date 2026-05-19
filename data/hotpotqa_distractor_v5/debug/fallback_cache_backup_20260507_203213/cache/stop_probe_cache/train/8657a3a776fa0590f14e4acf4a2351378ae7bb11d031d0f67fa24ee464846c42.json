@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Patriarca crime family",
+  "pred_answer": "Patriarca crime family",
+  "normalized_gold": "patriarca crime family",
+  "normalized_pred": "patriarca crime family",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac152bd55429964131be1ba",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac152bd55429964131be1ba::Enrico Tameleo::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac152bd55429964131be1ba::Vincent Gigante::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac152bd55429964131be1ba::Patriarca crime family::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac152bd55429964131be1ba::William Grasso::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac152bd55429964131be1ba::Enrico Tameleo",
+        "5ac152bd55429964131be1ba::Patriarca crime family"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac152bd55429964131be1ba::Enrico Tameleo::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac152bd55429964131be1ba::Vincent Gigante::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac152bd55429964131be1ba::Patriarca crime family::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac152bd55429964131be1ba::William Grasso::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac152bd55429964131be1ba::William Grasso::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] William \"Wild Guy\" Grasso was an Italian-American gangster from East Haven, Connecticut who served as underboss to Raymond Patriarca, Jr. (a.k.a. \"Junior\") in the Patriarca crime family, also known as the New England crime family, the Providence crime family or the Boston crime family.\n[2] The Patriarca crime family (pronounced ] ) is also known as the New England crime family, the Providence crime family, the Boston crime family, the Boston Mafia, the Providence Mafia, the New England Mafia, or The Office and is an Italian-American Mafia crime family based in New England.\n[3] Vincent Louis Gigante ( ; March 29, 1928 – December 19, 2005), also known as \"Chin\", was a New York Italian-American mobster in the American Mafia who was boss of the Genovese crime family from 1981 to 2005.\n[4] Enrico \"Henry\" Tameleo (died 1985), also known as \"The Referee,\" was an Italian-American mobster from Boston, Massachusetts and underboss in the New England-based Patriarca crime family and was also a member of the New York-based Bonanno crime family of La Cosa Nostra from 1952 to 1968."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

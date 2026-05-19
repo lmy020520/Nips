@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lithuania",
+  "pred_answer": "Lithuania",
+  "normalized_gold": "lithuania",
+  "normalized_pred": "lithuania",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae72741554299572ea5473b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae72741554299572ea5473b::Adam Sztaba::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae72741554299572ea5473b::Romuald Twardowski::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae72741554299572ea5473b::Vilnius::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae72741554299572ea5473b::Polish Requiem::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae72741554299572ea5473b::Romuald Twardowski",
+        "5ae72741554299572ea5473b::Vilnius"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae72741554299572ea5473b::Adam Sztaba::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae72741554299572ea5473b::Romuald Twardowski::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae72741554299572ea5473b::Vilnius::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae72741554299572ea5473b::Polish Requiem::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae72741554299572ea5473b::Polish Requiem::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Polish Requiem (original Polish title: Polskie Requiem; German: \"\" ), also A Polish Requiem, is a large-scale requiem mass for soloists, mixed choir and orchestra by the Polish composer Krzysztof Penderecki.\n[2] Vilnius (] , see also other names) is the capital of Lithuania and its largest city, with a population of 542,664 as of 2015 .\n[3] Romuald Twardowski (born 17 June 1930 in Wilno / Vilnius) - Polish composer.\n[4] Adam Sztaba (born 15 February 1975) is a Polish composer, music producer, conductor, arranger and pianist."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

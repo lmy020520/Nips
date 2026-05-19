@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "John Wesley Harding",
+  "pred_answer": "John Wesley Harding",
+  "normalized_gold": "john wesley harding",
+  "normalized_pred": "john wesley harding",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8594265542992a431d1b37",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8594265542992a431d1b37::Prospect Park Water Tower::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8594265542992a431d1b37::All Along the Watchtower::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8594265542992a431d1b37::Park Slope::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8594265542992a431d1b37::Prospect Park Water Tower",
+        "5a8594265542992a431d1b37::All Along the Watchtower"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8594265542992a431d1b37::Prospect Park Water Tower::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8594265542992a431d1b37::All Along the Watchtower::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8594265542992a431d1b37::Park Slope::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8594265542992a431d1b37::Park Slope::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Park Slope is roughly bounded by Prospect Park and Prospect Park West to the east, Fourth Avenue to the west, Flatbush Avenue to the north, and Prospect Expressway to the south.\n[2] The song initially appeared on his 1967 album \"John Wesley Harding\", and it has been included on most of Dylan's subsequent greatest hits compilations.\n[3] The Prospect Park Water Tower, sometimes referred to as the \"Witch's Hat Water Tower\" or just \"The Tower\", is a historic water tower in the Prospect Park neighborhood of Minneapolis, Minnesota, United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

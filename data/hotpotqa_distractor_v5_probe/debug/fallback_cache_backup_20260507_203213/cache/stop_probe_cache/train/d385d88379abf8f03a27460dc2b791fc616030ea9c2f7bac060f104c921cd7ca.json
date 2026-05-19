@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "ten weeks",
+  "pred_answer": "ten weeks",
+  "normalized_gold": "ten weeks",
+  "normalized_pred": "ten weeks",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae79c2b5542993210983eae",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae79c2b5542993210983eae::Mr. Vain::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae79c2b5542993210983eae::No Deeper Meaning::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae79c2b5542993210983eae::Serenity (Culture Beat album)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae79c2b5542993210983eae::Stand and Deliver (Adam and the Ants song)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae79c2b5542993210983eae::Mr. Vain",
+        "5ae79c2b5542993210983eae::Serenity (Culture Beat album)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae79c2b5542993210983eae::Mr. Vain::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae79c2b5542993210983eae::No Deeper Meaning::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae79c2b5542993210983eae::Serenity (Culture Beat album)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae79c2b5542993210983eae::Stand and Deliver (Adam and the Ants song)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae79c2b5542993210983eae::Stand and Deliver (Adam and the Ants song)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Stand and Deliver\" is a song by English new wave band Adam and the Ants, released as the lead single from their third studio album, \"Prince Charming\" (1981).\n[2] Serenity is the second studio album by German Eurodance band Culture Beat, released in 1993.\n[3] The song reached number 5 in the Netherlands and peaked at number 3 on the \"RPM\" Dance Chart in Canada.\n[4] It also spent ten weeks at number one on the \"RPM\" Dance chart in Canada."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

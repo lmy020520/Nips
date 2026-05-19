@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "guidance systems",
+  "pred_answer": "guidance systems",
+  "normalized_gold": "guidance systems",
+  "normalized_pred": "guidance systems",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac0b6c15542992a796ded6c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac0b6c15542992a796ded6c::Ernst Stuhlinger::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac0b6c15542992a796ded6c::Super V-2::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac0b6c15542992a796ded6c::Wernher von Braun::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac0b6c15542992a796ded6c::Redl-Zipf::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac0b6c15542992a796ded6c::Ernst Stuhlinger",
+        "5ac0b6c15542992a796ded6c::Wernher von Braun"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac0b6c15542992a796ded6c::Ernst Stuhlinger::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac0b6c15542992a796ded6c::Super V-2::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac0b6c15542992a796ded6c::Wernher von Braun::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac0b6c15542992a796ded6c::Redl-Zipf::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac0b6c15542992a796ded6c::Redl-Zipf::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The facility tested V-2 combustion chambers' compatibility with turbopumps since the rocket did not have a controller for reducing the turbopumping of propellant into the chamber if pressure became too high.\n[2] Wernher Magnus Maximilian Freiherr von Braun (March 23, 1912 – June 16, 1977) was a German, later American, aerospace engineer and space architect credited with inventing the V-2 rocket for Nazi Germany and the Saturn V for the United States.\n[3] It was the creation of German engineers who had worked on the original V-2 rocket.\n[4] After being brought to the United States as part of Operation Paperclip, he developed guidance systems with Wernher von Braun's team for the US Army, and later was a scientist with NASA."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

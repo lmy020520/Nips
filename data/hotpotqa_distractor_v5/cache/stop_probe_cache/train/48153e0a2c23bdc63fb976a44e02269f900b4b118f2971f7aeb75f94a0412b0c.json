@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "2009",
+  "pred_answer": "2009",
+  "normalized_gold": "2009",
+  "normalized_pred": "2009",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a83a1a0554299123d8c2174",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a83a1a0554299123d8c2174::Edwina Currie::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a83a1a0554299123d8c2174::Beyond a Joke (2009 TV series)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a83a1a0554299123d8c2174::David L. Williams (film director)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a83a1a0554299123d8c2174::Edwina Currie",
+        "5a83a1a0554299123d8c2174::Beyond a Joke (2009 TV series)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a83a1a0554299123d8c2174::Edwina Currie::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a83a1a0554299123d8c2174::Beyond a Joke (2009 TV series)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a83a1a0554299123d8c2174::David L. Williams (film director)::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a83a1a0554299123d8c2174::David L. Williams (film director)::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] His debut cinema feature, the arctic comedy Beyond the Pole, was his first attempt to fuse comedy with his campaigning work and was supported by Friends of the Earth.\n[2] Beyond a Joke was a 2009 ITV3 documentary series exploring the social context of classic and contemporary British sitcoms.\n[3] She was a Junior Health Minister for two years, resigning in 1988 during the salmonella in eggs controversy."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

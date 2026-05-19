@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "In the Electric Mist",
+  "pred_answer": "In the Electric Mist",
+  "normalized_gold": "in the electric mist",
+  "normalized_pred": "in the electric mist",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abde17355429976d4830a17",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abde17355429976d4830a17::Clint Eastwood in the 2000s::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abde17355429976d4830a17::The Good Old Boys (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abde17355429976d4830a17::James Lee Burke::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abde17355429976d4830a17::In the Electric Mist::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abde17355429976d4830a17::Clint Eastwood in the 2000s::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abde17355429976d4830a17::James Lee Burke",
+        "5abde17355429976d4830a17::In the Electric Mist"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abde17355429976d4830a17::Clint Eastwood in the 2000s::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abde17355429976d4830a17::The Good Old Boys (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abde17355429976d4830a17::James Lee Burke::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abde17355429976d4830a17::In the Electric Mist::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abde17355429976d4830a17::Clint Eastwood in the 2000s::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abde17355429976d4830a17::Clint Eastwood in the 2000s::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] We leave the theater with grave doubts that the scene depicted in the final feel-good shot is even remotely possible, but what the hell; it makes us smile.\"\n[2] In the Electric Mist (French title: Dans la brume électrique) is a 2009 Franco-American mystical drama film directed by Bertrand Tavernier, written by Jerzy Kromolowski and Mary Olson-Kromolowski based on the novel \"In the Electric Mist with Confederate Dead\" by James Lee Burke, and stars Tommy Lee Jones in the lead role of Louisiana police detective Dave Robicheaux.\n[3] The Robicheaux character has been portrayed twice on screen, first by Alec Baldwin (\"Heaven's Prisoners\") and then Tommy Lee Jones (\"In the Electric Mist\").\n[4] The Good Old Boys is a 1995 American western adventure TV movie that was the directorial debut of Tommy Lee Jones."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

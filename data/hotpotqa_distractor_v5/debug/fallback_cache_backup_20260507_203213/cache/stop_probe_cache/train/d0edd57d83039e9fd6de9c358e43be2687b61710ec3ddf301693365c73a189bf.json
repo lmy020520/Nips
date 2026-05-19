@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Steven Seagal",
+  "pred_answer": "Steven Seagal",
+  "normalized_gold": "steven seagal",
+  "normalized_pred": "steven seagal",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adfe31c55429925eb1afaf8",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adfe31c55429925eb1afaf8::Born to Raise Hell (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adfe31c55429925eb1afaf8::Steven Seagal::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adfe31c55429925eb1afaf8::Machete (2010 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adfe31c55429925eb1afaf8::Born to Raise Hell (film)",
+        "5adfe31c55429925eb1afaf8::Steven Seagal"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adfe31c55429925eb1afaf8::Born to Raise Hell (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adfe31c55429925eb1afaf8::Steven Seagal::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adfe31c55429925eb1afaf8::Machete (2010 film)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adfe31c55429925eb1afaf8::Machete (2010 film)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Machete is a 2010 American action film written, produced, and directed by Robert Rodriguez and Ethan Maniquis.\n[2] Steven Frederic Seagal (born April 10, 1952) is an actor, producer, screenwriter, director, martial artist, and musician who holds American, Russian, and Serbian citizenship.\n[3] Born to Raise Hell is a 2010 American action film directed by Lauro Chartrand, and also written and produced by Steven Seagal, who also starred in the film."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

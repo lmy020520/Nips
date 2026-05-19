@@ -1,0 +1,100 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "BBC1",
+  "pred_answer": "BBC1",
+  "normalized_gold": "bbc1",
+  "normalized_pred": "bbc1",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abcf3ed554299700f9d7941",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abcf3ed554299700f9d7941::KYTV (TV series)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abcf3ed554299700f9d7941::Jabardasth (comedy show)::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abcf3ed554299700f9d7941::Mr. Humphries::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abcf3ed554299700f9d7941::Mr. Humphries::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abcf3ed554299700f9d7941::John Inman::0"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5abcf3ed554299700f9d7941::Horne &amp; Corden::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abcf3ed554299700f9d7941::Mr. Humphries",
+        "5abcf3ed554299700f9d7941::John Inman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abcf3ed554299700f9d7941::KYTV (TV series)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abcf3ed554299700f9d7941::Jabardasth (comedy show)::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abcf3ed554299700f9d7941::Mr. Humphries::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abcf3ed554299700f9d7941::Mr. Humphries::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abcf3ed554299700f9d7941::John Inman::0",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5abcf3ed554299700f9d7941::Horne &amp; Corden::5",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abcf3ed554299700f9d7941::Horne &amp; Corden::5",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] The first episode attracted the highest ratings for a comedy show debut on BBC Three.\n[2] Frederick John Inman (28 June 1935 – 8 March 2007) was an English actor and singer best known for his role as Mr. Humphries in \"Are You Being Served?\n[3] Mr. Wilberforce Clayborne Humphries is a fictional character from the BBC1 comedy show, \"Are You Being Served?\n[4] He was played by John Inman from 1972 to 1985."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

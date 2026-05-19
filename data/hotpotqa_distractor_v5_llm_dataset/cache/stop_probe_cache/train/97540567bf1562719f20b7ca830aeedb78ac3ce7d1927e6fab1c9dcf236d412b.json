@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Handlebars",
+  "pred_answer": "Handlebars",
+  "normalized_gold": "handlebars",
+  "normalized_pred": "handlebars",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77d31555429967ab1052bf",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77d31555429967ab1052bf::Flobots::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77d31555429967ab1052bf::Prophecy (Remy Zero song)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77d31555429967ab1052bf::Flobots::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77d31555429967ab1052bf::Handlebars (song)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a77d31555429967ab1052bf::Prayer (song)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77d31555429967ab1052bf::Flobots",
+        "5a77d31555429967ab1052bf::Handlebars (song)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77d31555429967ab1052bf::Flobots::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77d31555429967ab1052bf::Prophecy (Remy Zero song)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77d31555429967ab1052bf::Flobots::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77d31555429967ab1052bf::Handlebars (song)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a77d31555429967ab1052bf::Prayer (song)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77d31555429967ab1052bf::Prayer (song)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] \"Prayer\" is a song released on August 14, 2002 by the American heavy metal band Disturbed as the first single from their second album, \"Believe\".\n[2] It was released as the first single from their debut album, \"Fight with Tools\", and is the group's largest success, peaking at #3 on the Billboard Modern Rock Tracks.\n[3] Flobots found mainstream success with their major label debut \"Fight with Tools\" (2007), featuring the single \"Handlebars\", which became a popular hit on Modern Rock radio in April 2008.\n[4] \"Prophecy\" is a song by rock band Remy Zero."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

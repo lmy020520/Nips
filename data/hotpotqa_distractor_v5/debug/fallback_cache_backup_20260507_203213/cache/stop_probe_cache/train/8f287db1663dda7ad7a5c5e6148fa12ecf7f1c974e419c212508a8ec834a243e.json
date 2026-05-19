@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "James Lawrence Brooks",
+  "pred_answer": "James Lawrence Brooks",
+  "normalized_gold": "james lawrence brooks",
+  "normalized_pred": "james lawrence brooks",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77bfbe5542995d8318129c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77bfbe5542995d8318129c::James L. Brooks::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77bfbe5542995d8318129c::Garden State (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77bfbe5542995d8318129c::Spanglish (film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77bfbe5542995d8318129c::Stephen J. Lawrence::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77bfbe5542995d8318129c::James L. Brooks",
+        "5a77bfbe5542995d8318129c::Spanglish (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77bfbe5542995d8318129c::James L. Brooks::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77bfbe5542995d8318129c::Garden State (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77bfbe5542995d8318129c::Spanglish (film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77bfbe5542995d8318129c::Stephen J. Lawrence::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77bfbe5542995d8318129c::Stephen J. Lawrence::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He has composed more than 300 songs and scores for \"Sesame Street\", resulting in three Emmy Awards for Outstanding Achievement in Music Direction and Composition; composed the title song and four others for Marlo Thomas's \"Free to Be... You and Me\", the landmark million-selling record, book and Emmy Award- and Peabody Award-winning ABC television special; composed the million-selling Gold Record \"\n[2] Spanglish is a 2004 American romantic comedy-drama film written and directed by James L. Brooks and starring Adam Sandler, Téa Leoni, Paz Vega, and Cloris Leachman.\n[3] Garden State is a 2004 American romantic comedy-drama film, written and directed by Zach Braff and starring Braff, Natalie Portman, Peter Sarsgaard, and Ian Holm.\n[4] James Lawrence Brooks (born May 9, 1940) is an Academy Award-, Emmy- and Peabody Award-winning American television and movie director, producer and screenwriter."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

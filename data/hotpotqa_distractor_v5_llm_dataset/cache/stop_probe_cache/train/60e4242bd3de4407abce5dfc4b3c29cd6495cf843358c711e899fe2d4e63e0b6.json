@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Stevie Wonder",
+  "pred_answer": "Stevie Wonder",
+  "normalized_gold": "stevie wonder",
+  "normalized_pred": "stevie wonder",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab5d16a5542997d4ad1f1ee",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab5d16a5542997d4ad1f1ee::The Best Man (1999 film)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab5d16a5542997d4ad1f1ee::Jungle Fever (soundtrack)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab5d16a5542997d4ad1f1ee::Spike Lee::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab5d16a5542997d4ad1f1ee::Gotta Have You (Stevie Wonder song)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab5d16a5542997d4ad1f1ee::Jungle Fever (soundtrack)",
+        "5ab5d16a5542997d4ad1f1ee::Spike Lee"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab5d16a5542997d4ad1f1ee::The Best Man (1999 film)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab5d16a5542997d4ad1f1ee::Jungle Fever (soundtrack)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab5d16a5542997d4ad1f1ee::Spike Lee::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab5d16a5542997d4ad1f1ee::Gotta Have You (Stevie Wonder song)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab5d16a5542997d4ad1f1ee::Gotta Have You (Stevie Wonder song)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The song was the first release from the 1991 soundtrack to the film \"Jungle Fever\".\n[2] His production company, 40 Acres and a Mule Filmworks, has produced over 35 films since 1983.\n[3] Jungle Fever is the 1991 soundtrack album by American R&B musician Stevie Wonder to Spike Lee's movie \"Jungle Fever\".\n[4] It was produced by 40 Acres and a Mule Filmworks, with Lee's cousin, Spike Lee, serving as producer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

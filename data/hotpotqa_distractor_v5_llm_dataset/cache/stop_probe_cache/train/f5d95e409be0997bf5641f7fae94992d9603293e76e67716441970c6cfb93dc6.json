@@ -1,0 +1,85 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "England cricket team",
+  "pred_answer": "England cricket team",
+  "normalized_gold": "england cricket team",
+  "normalized_pred": "england cricket team",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a75e02155429976ec32bc5d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a75e02155429976ec32bc5d::England cricket team::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a75e02155429976ec32bc5d::Colin Milburn::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a75e02155429976ec32bc5d::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a75e02155429976ec32bc5d::Harry Butt::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a75e02155429976ec32bc5d::England cricket team",
+        "5a75e02155429976ec32bc5d::Colin Milburn"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a75e02155429976ec32bc5d::England cricket team::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a75e02155429976ec32bc5d::Colin Milburn::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a75e02155429976ec32bc5d::Harry Butt::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a75e02155429976ec32bc5d::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a75e02155429976ec32bc5d::Harry Butt::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] His popularity was such that when he retired as an umpire due to ill-health, the County captains wrote to the Secretary of the Marylebone Cricket Club asking him to write to Butt to express their regret at the cause.\n[2] Henry (\"Harry\") Rigden Butt (27 December 1865 in Sands End, Fulham, Middlesex, England – 21 December 1928 in West Hill, Hastings, Sussex, England) was a cricketer who played first-class cricket for Sussex County Cricket Club and the Marylebone Cricket Club between 1890 and 1912.\n[3] Colin Milburn (nicknamed Ollie; 23 October 1941 – 28 February 1990) was an English cricketer, who played in nine Test matches for England, before an accident led to the loss of much of his sight and prompted his retirement.\n[4] Since 1 January 1997 it has been governed by the England and Wales Cricket Board (ECB), having been previously governed by Marylebone Cricket Club (MCC) from 1903 until the end of 1996.\n\nNotes:\n[bridge] Colin Milburn played for the England cricket team."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

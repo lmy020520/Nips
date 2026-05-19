@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Leicester City Football Club",
+  "pred_answer": "Leicester City Football Club",
+  "normalized_gold": "leicester city football club",
+  "normalized_pred": "leicester city football club",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac14dee5542991316484ae6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac14dee5542991316484ae6::Den Dreef::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac14dee5542991316484ae6::Leicester City F.C.::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac14dee5542991316484ae6::George Hebden::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac14dee5542991316484ae6::Leicester Nirvana F.C.::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac14dee5542991316484ae6::Leicester City F.C.",
+        "5ac14dee5542991316484ae6::George Hebden"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac14dee5542991316484ae6::Den Dreef::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac14dee5542991316484ae6::Leicester City F.C.::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac14dee5542991316484ae6::George Hebden::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac14dee5542991316484ae6::Leicester Nirvana F.C.::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac14dee5542991316484ae6::Leicester Nirvana F.C.::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Leicester Nirvana F.C. is an English football club based in Hamilton, near Leicester in Leicestershire.\n[2] George Horace Robert Hebden (2 June 1900 – 18 August 1973) was an English professional footballer.\n[3] Leicester City Football Club is an English professional football club based at the King Power Stadium in Leicester.\n[4] Den Dreef, also known as King Power at Den Dreef Stadium for sponsorship reasons, is a football stadium situated on Kardinaal Mercierlaan in the Heverlee suburb of Leuven in Belgium."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

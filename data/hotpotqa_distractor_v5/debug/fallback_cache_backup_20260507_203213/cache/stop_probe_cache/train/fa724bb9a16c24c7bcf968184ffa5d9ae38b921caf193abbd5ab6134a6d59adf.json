@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Vanessa Ray",
+  "pred_answer": "Vanessa Ray",
+  "normalized_gold": "vanessa ray",
+  "normalized_pred": "vanessa ray",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8637e55542991e771815c4",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8637e55542991e771815c4::Vanessa Ray::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8637e55542991e771815c4::Aeriél Miranda::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8637e55542991e771815c4::Vanessa Ray::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8637e55542991e771815c4::The Rumperbutts::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8637e55542991e771815c4::Mary Drake::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8637e55542991e771815c4::Vanessa Ray",
+        "5a8637e55542991e771815c4::The Rumperbutts"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8637e55542991e771815c4::Vanessa Ray::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8637e55542991e771815c4::Aeriél Miranda::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8637e55542991e771815c4::Vanessa Ray::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8637e55542991e771815c4::The Rumperbutts::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8637e55542991e771815c4::Mary Drake::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8637e55542991e771815c4::Mary Drake::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Mary Drake is a fictional character created by I. Marlene King and portrayed by Andrea Parker in the American television series \"Pretty Little Liars\".\n[2] The Rumperbutts is a 2015 American musical comedy written and directed by Marc Brener, starring Kori Gardner and Jason Hammel of the indie pop duo Mates of State, as well as Vanessa Ray, Josh Brener and Arian Moayed.\n[3] Vanessa Ray (née Liptak; born June 24, 1981) is an American actress and singer.\n[4] She is best known for her recurring role as Shana Fring on the ABC Family series, \"Pretty Little Liars\" (2013–2014)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

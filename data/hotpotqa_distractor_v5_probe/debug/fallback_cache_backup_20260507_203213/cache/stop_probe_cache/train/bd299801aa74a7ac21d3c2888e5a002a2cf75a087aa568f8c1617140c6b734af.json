@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "82nd Airborne Division",
+  "pred_answer": "82nd Airborne Division",
+  "normalized_gold": "82nd airborne division",
+  "normalized_pred": "82nd airborne division",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae20cd15542994d89d5b322",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae20cd15542994d89d5b322::82nd Airborne Division::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae20cd15542994d89d5b322::20th Engineer Brigade (United States)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae20cd15542994d89d5b322::First Allied Airborne Army::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae20cd15542994d89d5b322::Fort Bragg::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae20cd15542994d89d5b322::82nd Airborne Division",
+        "5ae20cd15542994d89d5b322::First Allied Airborne Army"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae20cd15542994d89d5b322::82nd Airborne Division::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae20cd15542994d89d5b322::20th Engineer Brigade (United States)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae20cd15542994d89d5b322::First Allied Airborne Army::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae20cd15542994d89d5b322::Fort Bragg::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae20cd15542994d89d5b322::Fort Bragg::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is the home of the Army's XVIII Airborne Corps and is the headquarters of the United States Army Special Operations Command, which oversees the U.S. Army 1st Special Forces Command (Airborne) (Provisional) and 75th Ranger Regiment.\n[2] These included the U.S. IX Troop Carrier Command, the U.S. XVIII Airborne Corps, which controlled the 17th, 82nd and 101st Airborne Divisions and a number of independent airborne units, all British airborne forces including the 1st and 6th Airborne Divisions plus the Polish 1st Parachute Brigade.\n[3] The 20th Engineer Brigade is a combat engineer brigade assigned to the XVIII Airborne Corps of the United States Army stationed at Fort Bragg, North Carolina.\n[4] Based at Fort Bragg, North Carolina, the 82nd Airborne Division is part of the XVIII Airborne Corps."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

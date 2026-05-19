@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Texas Longhorns men's basketball",
+  "pred_answer": "Texas Longhorns men's basketball",
+  "normalized_gold": "texas longhorns mens basketball",
+  "normalized_pred": "texas longhorns mens basketball",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7198f5542991d3222377a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7198f5542991d3222377a::Myles Turner (basketball)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7198f5542991d3222377a::2016–17 Kansas Jayhawks men's basketball team::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7198f5542991d3222377a::Texas Longhorns men's basketball::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab7198f5542991d3222377a::2012–13 Texas Longhorns men's basketball team::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7198f5542991d3222377a::Myles Turner (basketball)",
+        "5ab7198f5542991d3222377a::Texas Longhorns men's basketball"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7198f5542991d3222377a::Myles Turner (basketball)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7198f5542991d3222377a::2016–17 Kansas Jayhawks men's basketball team::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7198f5542991d3222377a::Texas Longhorns men's basketball::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab7198f5542991d3222377a::2012–13 Texas Longhorns men's basketball team::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7198f5542991d3222377a::2012–13 Texas Longhorns men's basketball team::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 2012–13 Texas Longhorns men's basketball team represented the University of Texas at Austin in the 2012–13 NCAA Division I men's basketball season.\n[2] The Longhorns currently compete in the Big 12 Conference.\n[3] They finished the season 31–5, 16–2 in Big 12 play to win their 13th consecutive Big 12 regular season title, tying UCLA's record for consecutive regular season conference titles.\n[4] Myles Christian Turner (born March 24, 1996) is an American professional basketball player for the Indiana Pacers of the National Basketball Association (NBA)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

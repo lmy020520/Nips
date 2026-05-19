@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Dingwall",
+  "pred_answer": "Dingwall",
+  "normalized_gold": "dingwall",
+  "normalized_pred": "dingwall",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5aba73605542994dbf019917",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5aba73605542994dbf019917::Battle of Linlithgow Bridge::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5aba73605542994dbf019917::Tulloch Castle::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5aba73605542994dbf019917::Battle of Logiebride::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5aba73605542994dbf019917::Inverness::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5aba73605542994dbf019917::Tulloch Castle",
+        "5aba73605542994dbf019917::Battle of Logiebride"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5aba73605542994dbf019917::Battle of Linlithgow Bridge::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5aba73605542994dbf019917::Tulloch Castle::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5aba73605542994dbf019917::Battle of Logiebride::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5aba73605542994dbf019917::Inverness::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5aba73605542994dbf019917::Inverness::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Inverness lies near two important battle sites: the 11th-century battle of Blàr nam Fèinne against Norway which took place on The Aird and the 18th-century Battle of Culloden which took place on Culloden Moor.\n[2] The disturbance is said to have taken place on 4 February 1597 at the Logie Candlemas market near Conan House (a mile south-west of Conon Bridge) between men of the Clan Mackenzie against men of the Clan Munro and the Bain family of Tulloch Castle.\n[3] Tulloch Castle is located in the town of Dingwall in the Highlands of Scotland.\n[4] The Battle of Linlithgow Bridge is a battle that took place on 4 September 1526 in the village of Linlithgow Bridge, outside the Scottish town of Linlithgow."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

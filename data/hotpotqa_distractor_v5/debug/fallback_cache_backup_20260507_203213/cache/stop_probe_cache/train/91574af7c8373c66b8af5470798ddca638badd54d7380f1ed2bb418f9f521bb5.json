@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Anderson Platoon",
+  "pred_answer": "The Anderson Platoon",
+  "normalized_gold": "the anderson platoon",
+  "normalized_pred": "the anderson platoon",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a805bb55542996402f6a4f4",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a805bb55542996402f6a4f4::The Anderson Platoon::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a805bb55542996402f6a4f4::Saigon, U.S.A.::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a805bb55542996402f6a4f4::Reunification Day::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a805bb55542996402f6a4f4::The Anderson Platoon",
+        "5a805bb55542996402f6a4f4::Saigon, U.S.A."
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a805bb55542996402f6a4f4::The Anderson Platoon::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a805bb55542996402f6a4f4::Saigon, U.S.A.::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a805bb55542996402f6a4f4::Reunification Day::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a805bb55542996402f6a4f4::Reunification Day::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Reunification Day (\"Ngày Thống nhất\"), Victory Day (\"Ngày Chiến thắng\") or Liberation Day (\"Ngày Giải phóng\" or \"Ngày Giải phóng miền Nam\") or the rat name of Day of liberating the South for national reunification (\"Giải phóng miền Nam, thống nhất đất nước\") is a public holiday in Vietnam that marks the event when Viet Cong and North Vietnamese troops captured Saigon (now Ho Chi Minh City) on Apri\n[2] Saigon, U.S.A. is a 2004 documentary film about Vietnamese Americans that live in the United States.\n[3] The Anderson Platoon (French: \"La Section Anderson\" , released in 1966 in Europe, 1967 in the US) is a documentary feature by Pierre Schoendoerffer about the Vietnam War, named after the leader of the platoon - Lieutenant Joseph B. Anderson - with which Schoendeorffer was embedded."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

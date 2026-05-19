@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Wings of Life",
+  "pred_answer": "Wings of Life",
+  "normalized_gold": "wings of life",
+  "normalized_pred": "wings of life",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8106cb55429938b6142296",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8106cb55429938b6142296::Wings of Life::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8106cb55429938b6142296::Million Dollar Arm (soundtrack)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8106cb55429938b6142296::Million Dollar Arm::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8106cb55429938b6142296::Mark Ciardi::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8106cb55429938b6142296::Wings of Life",
+        "5a8106cb55429938b6142296::Million Dollar Arm"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8106cb55429938b6142296::Wings of Life::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8106cb55429938b6142296::Million Dollar Arm (soundtrack)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8106cb55429938b6142296::Million Dollar Arm::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8106cb55429938b6142296::Mark Ciardi::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8106cb55429938b6142296::Mark Ciardi::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] At Mayhem, Ciardi produced films including \"The Rookie\", \"Miracle\", Invincible, The Game Plan, Secretariat, and Million Dollar Arm and Kevin Costner's McFarland USA.\n[2] The film is based on the true story of baseball pitchers Rinku Singh and Dinesh Patel who were discovered by sports agent J. B. Bernstein after winning a reality show competition.\n[3] Million Dollar Arm (Original Motion Picture Soundtrack) is the soundtrack album of the American biographical drama film of the same name, directed by Craig Gillespie.\n[4] Wings of Life (known as Pollen in France and Hidden Beauty: A Love Story That Feeds the Earth in the United Kingdom) is a 2011 French-American nature documentary film directed by Louis Schwartzberg and released by Disneynature."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

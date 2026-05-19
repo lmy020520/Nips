@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Heathrow Airport",
+  "pred_answer": "Heathrow Airport",
+  "normalized_gold": "heathrow airport",
+  "normalized_pred": "heathrow airport",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf960b5542995534e8c7fb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf960b5542995534e8c7fb::Heathrow Airport::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf960b5542995534e8c7fb::International air travel from the United Kingdom::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf960b5542995534e8c7fb::Samina Malik::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf960b5542995534e8c7fb::Sofia Airport::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf960b5542995534e8c7fb::Heathrow Airport",
+        "5adf960b5542995534e8c7fb::Samina Malik"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf960b5542995534e8c7fb::Heathrow Airport::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf960b5542995534e8c7fb::International air travel from the United Kingdom::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf960b5542995534e8c7fb::Samina Malik::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf960b5542995534e8c7fb::Sofia Airport::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf960b5542995534e8c7fb::Sofia Airport::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 2015 the airport surpassed 4 million passengers for the first time and handled a total of 4,088,943 passengers, a 7.2% increase compared to 3,815,158 passengers handled in 2014.\n[2] Malik, then a 23-year-old Heathrow Airport shop clerk from Southall, west London, was found guilty of \"possessing a document or a record of information of a kind likely to be useful to a person committing or preparing an act of terrorism\", but was earlier acquitted on the more serious charge of \"possessing an article for terrorist purposes\".\n[3] The 20 busiest airports in the UK handled close to 230 million passengers in 2008 (185 million of whom were international passengers).\n[4] In 2016, it handled a record 75.7 million passengers, a 1.0% increase from 2015."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

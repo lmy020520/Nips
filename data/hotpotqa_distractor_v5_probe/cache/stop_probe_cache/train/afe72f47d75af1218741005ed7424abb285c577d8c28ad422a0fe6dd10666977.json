@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jacques Demy",
+  "pred_answer": "Jacques Demy",
+  "normalized_gold": "jacques demy",
+  "normalized_pred": "jacques demy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab22f28554299722f9b4cc5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab22f28554299722f9b4cc5::Parampara (1993 film)::8"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab22f28554299722f9b4cc5::Mireille Perrey::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab22f28554299722f9b4cc5::The Umbrellas of Cherbourg::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab22f28554299722f9b4cc5::Parampara (1993 film)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab22f28554299722f9b4cc5::Mireille Perrey",
+        "5ab22f28554299722f9b4cc5::The Umbrellas of Cherbourg"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab22f28554299722f9b4cc5::Parampara (1993 film)::8",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab22f28554299722f9b4cc5::Mireille Perrey::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab22f28554299722f9b4cc5::The Umbrellas of Cherbourg::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab22f28554299722f9b4cc5::Parampara (1993 film)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab22f28554299722f9b4cc5::Parampara (1993 film)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The film is produced by Firoz A. Nadiadwala and directed by Yash Chopra.\n[2] The Umbrellas of Cherbourg (French: Les Parapluies de Cherbourg ) is a 1964 French-German romantic musical film directed by Jacques Demy, starring Catherine Deneuve and Nino Castelnuovo.\n[3] In 1964 she featured in \"The Umbrellas of Cherbourg\".\n[4] Sunil Dutt, Vinod Khanna and Raveena Tandon were the only actors who featured in both the movies."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

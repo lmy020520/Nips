@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "American Gigolo",
+  "pred_answer": "American Gigolo",
+  "normalized_gold": "american gigolo",
+  "normalized_pred": "american gigolo",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac115f7554299294b21909c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac115f7554299294b21909c::Call Me (Blondie song)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac115f7554299294b21909c::Tori no Uta::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac115f7554299294b21909c::Blondie (band)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac115f7554299294b21909c::Feel the Spin::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac115f7554299294b21909c::Call Me (Blondie song)",
+        "5ac115f7554299294b21909c::Blondie (band)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac115f7554299294b21909c::Call Me (Blondie song)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac115f7554299294b21909c::Tori no Uta::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac115f7554299294b21909c::Blondie (band)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac115f7554299294b21909c::Feel the Spin::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac115f7554299294b21909c::Feel the Spin::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Feel the Spin\" is a 1985 song by the American vocalist Debbie Harry, featured on the soundtrack album for the film \"Krush Groove\" (1985).\n[2] Blondie is an American rock band founded by singer Debbie Harry and guitarist Chris Stein.\n[3] \"Bird's Poem\") is a Japanese trance song sung by Lia, written by Jun Maeda, composed by Shinji Orito, and arranged by Kazuya Takase.\n[4] \"Call Me\" is a song by the American new wave band Blondie and the theme to the 1980 film \"American Gigolo\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

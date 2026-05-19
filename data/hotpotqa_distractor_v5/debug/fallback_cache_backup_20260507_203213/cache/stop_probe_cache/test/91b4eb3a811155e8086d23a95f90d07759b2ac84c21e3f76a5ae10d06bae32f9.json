@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bayern Munich",
+  "pred_answer": "Bayern Munich",
+  "normalized_gold": "bayern munich",
+  "normalized_pred": "bayern munich",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab97c0255429970cfb8eb1f",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab97c0255429970cfb8eb1f::Tate Forcier::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab97c0255429970cfb8eb1f::2012 FIU Panthers football team::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab97c0255429970cfb8eb1f::Javi Martínez::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab97c0255429970cfb8eb1f::Mario Gómez::3"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab97c0255429970cfb8eb1f::Tate Forcier::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab97c0255429970cfb8eb1f::Javi Martínez",
+        "5ab97c0255429970cfb8eb1f::Mario Gómez"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab97c0255429970cfb8eb1f::Tate Forcier::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab97c0255429970cfb8eb1f::2012 FIU Panthers football team::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab97c0255429970cfb8eb1f::Javi Martínez::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab97c0255429970cfb8eb1f::Mario Gómez::3",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab97c0255429970cfb8eb1f::Tate Forcier::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab97c0255429970cfb8eb1f::Tate Forcier::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Robert Patrick (\"Tate\") Forcier (born August 7, 1990) is a former American football quarterback.\n[2] The fee is currently the third highest, after former Bayern teammates Mario Götze and Javi Martínez, respectively.\n[3] Javier \"Javi\" Martínez Aginaga (] ; born 2 September 1988) is a Spanish footballer who plays for German club FC Bayern Munich as a defensive midfielder or a central defender.\n[4] The 2012 FIU Panthers football team represented Florida International University during the 2012 NCAA Division I FBS football season."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

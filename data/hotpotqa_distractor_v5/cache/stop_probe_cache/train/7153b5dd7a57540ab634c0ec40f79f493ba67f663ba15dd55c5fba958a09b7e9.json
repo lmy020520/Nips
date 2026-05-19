@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Nanping",
+  "pred_answer": "Nanping",
+  "normalized_gold": "nanping",
+  "normalized_pred": "nanping",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4968e5542995dadf2435e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4968e5542995dadf2435e::Nanping::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4968e5542995dadf2435e::Xiangyang::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4968e5542995dadf2435e::Wuhan::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4968e5542995dadf2435e::Wuhan Optics Valley F.C.::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4968e5542995dadf2435e::Nanping",
+        "5ae4968e5542995dadf2435e::Wuhan"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4968e5542995dadf2435e::Nanping::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4968e5542995dadf2435e::Xiangyang::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4968e5542995dadf2435e::Wuhan::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4968e5542995dadf2435e::Wuhan Optics Valley F.C.::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4968e5542995dadf2435e::Wuhan Optics Valley F.C.::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Wuhan Optics Valley Football Club () is a defunct football club which was located in the city of Wuhan, Hubei province, China.\n[2] Arising out of the conglomeration of three cities, Wuchang, Hankou, and Hanyang, Wuhan is known as \"Jiusheng Tongqu (the nine provinces' leading thoroughfare)\"; it is a major transportation hub, with dozens of railways, roads and expressways passing through the city and connecting to other major cities.\n[3] Xiangyang () is a prefecture-level city in northwestern Hubei province, People's Republic of China.\n[4] Nanping () is a third-tier prefecture-level city in northwestern Fujian Province, China."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

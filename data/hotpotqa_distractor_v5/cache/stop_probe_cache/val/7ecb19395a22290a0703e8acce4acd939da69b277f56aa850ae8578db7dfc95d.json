@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Red Bull Ring",
+  "pred_answer": "Red Bull Ring",
+  "normalized_gold": "red bull ring",
+  "normalized_pred": "red bull ring",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a76ab625542993735360147",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a76ab625542993735360147::2000 Austrian Grand Prix::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a76ab625542993735360147::2014 Austrian Grand Prix::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a76ab625542993735360147::Red Bull Ring::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a76ab625542993735360147::2003 Austrian Grand Prix::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a76ab625542993735360147::2000 Austrian Grand Prix",
+        "5a76ab625542993735360147::Red Bull Ring"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a76ab625542993735360147::2000 Austrian Grand Prix::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a76ab625542993735360147::2014 Austrian Grand Prix::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a76ab625542993735360147::Red Bull Ring::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a76ab625542993735360147::2003 Austrian Grand Prix::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a76ab625542993735360147::2003 Austrian Grand Prix::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 2003 Austrian Grand Prix (formally known as A1 Grand Prix von Österreich) was a Formula One motor race held on 18 May 2003 at the A1-Ring.\n[2] The Red Bull Ring is a motorsport circuit in Spielberg, Styria, Austria.\n[3] The 2014 Austrian Grand Prix (formally the Formula 1 Grosser Preis Von Österreich 2014) was a Formula One motor race held on 22 June 2014 at the Red Bull Ring in Spielberg, Austria.\n[4] The 2000 Austrian Grand Prix (formally the XXIV Großer A1 Preis von Österreich) was a Formula One motor race held on 16 July 2000 at the A1-Ring near Spielberg, Styria, Austria."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

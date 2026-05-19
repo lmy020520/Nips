@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Dunluce Castle",
+  "pred_answer": "Dunluce Castle",
+  "normalized_gold": "dunluce castle",
+  "normalized_pred": "dunluce castle",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7638785542994ccc918722",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7638785542994ccc918722::Glenarm::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7638785542994ccc918722::Dunluce Castle::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7638785542994ccc918722::Blackwater Castle::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7638785542994ccc918722::Glenarm",
+        "5a7638785542994ccc918722::Dunluce Castle"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7638785542994ccc918722::Glenarm::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7638785542994ccc918722::Dunluce Castle::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7638785542994ccc918722::Blackwater Castle::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7638785542994ccc918722::Blackwater Castle::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Blackwater Castle (Castle Widenham) is a privately owned estate located in the village of Castletownroche between the towns of Mallow and Fermoy in North Cork, Ireland, and since 2005 is available to rent as a private hire venue for castle weddings and private parties along with castle rentals for vacations.\n[2] It is located on the edge of a basalt outcropping in County Antrim (between Portballintrae and Portrush), and is accessible via a bridge connecting it to the mainland.\n[3] Dating back to Norman times, the village is the family seat of the MacDonnells, who once occupied Dunluce Castle on the north coast."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

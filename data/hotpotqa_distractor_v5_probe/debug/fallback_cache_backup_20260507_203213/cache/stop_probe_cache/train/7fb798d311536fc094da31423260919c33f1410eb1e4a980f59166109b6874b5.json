@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Las Vegas Locomotives",
+  "pred_answer": "Las Vegas Locomotives",
+  "normalized_gold": "las vegas locomotives",
+  "normalized_pred": "las vegas locomotives",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae07b9655429945ae959363",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae07b9655429945ae959363::Las Vegas Locomotives::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae07b9655429945ae959363::Drew Willy::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae07b9655429945ae959363::Omaha Mammoths::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae07b9655429945ae959363::Las Vegas Locomotives",
+        "5ae07b9655429945ae959363::Drew Willy"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae07b9655429945ae959363::Las Vegas Locomotives::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae07b9655429945ae959363::Drew Willy::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae07b9655429945ae959363::Omaha Mammoths::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae07b9655429945ae959363::Omaha Mammoths::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] They were a charter member of the Fall Experimental Football League, which is trying to become the developmental league for the National Football League.\n[2] Drew Willy (born November 13, 1986) is a professional Canadian football quarterback for the Montreal Alouettes of the Canadian Football League (CFL).\n[3] The Las Vegas Locomotives (called the Locos for short) were a professional American football team based in Las Vegas, Nevada that played in the United Football League."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

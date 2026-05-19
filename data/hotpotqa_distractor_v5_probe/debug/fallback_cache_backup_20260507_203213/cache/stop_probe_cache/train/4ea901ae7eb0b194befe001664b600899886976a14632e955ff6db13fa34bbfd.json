@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Virginia (Ginny) Stikeman (born 1941)",
+  "pred_answer": "Virginia (Ginny) Stikeman (born 1941)",
+  "normalized_gold": "virginia ginny stikeman born 1941",
+  "normalized_pred": "virginia ginny stikeman born 1941",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79d2c25542994f819ef0c1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79d2c25542994f819ef0c1::Ginny Stikeman::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79d2c25542994f819ef0c1::¿Quién es el señor López?::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79d2c25542994f819ef0c1::Luis Mandoki::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a79d2c25542994f819ef0c1::Angel Eyes (film)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79d2c25542994f819ef0c1::Ginny Stikeman",
+        "5a79d2c25542994f819ef0c1::Luis Mandoki"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79d2c25542994f819ef0c1::Ginny Stikeman::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79d2c25542994f819ef0c1::¿Quién es el señor López?::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79d2c25542994f819ef0c1::Luis Mandoki::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a79d2c25542994f819ef0c1::Angel Eyes (film)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a79d2c25542994f819ef0c1::Angel Eyes (film)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The film received ALMA Award Nominations for Outstanding Actress (Jennifer Lopez) and Outstanding Director (Luis Mandoki).\n[2] Luis Mandoki (born August 17, 1954 in Mexico City) is a Mexican film director working in Mexico and Hollywood.\n[3] is a 2006 film made by film director Luis Mandoki.\n[4] Virginia (Ginny) Stikeman (born 1941) is a Canadian filmmaker."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

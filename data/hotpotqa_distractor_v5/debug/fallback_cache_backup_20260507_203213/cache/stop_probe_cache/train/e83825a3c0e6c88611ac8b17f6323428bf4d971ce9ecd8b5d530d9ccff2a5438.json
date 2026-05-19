@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Harriet Beecher Stowe",
+  "pred_answer": "Harriet Beecher Stowe",
+  "normalized_gold": "harriet beecher stowe",
+  "normalized_pred": "harriet beecher stowe",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0ffc2554299422ee995b1",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0ffc2554299422ee995b1::Uncle Tom's Children::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0ffc2554299422ee995b1::Uncle Tom's Cabin (1910 Thanhouser film)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0ffc2554299422ee995b1::Uncle Tom::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0ffc2554299422ee995b1::Tom show::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae0ffc2554299422ee995b1::Uncle Tom syndrome::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0ffc2554299422ee995b1::Uncle Tom",
+        "5ae0ffc2554299422ee995b1::Tom show"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0ffc2554299422ee995b1::Uncle Tom's Children::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0ffc2554299422ee995b1::Uncle Tom's Cabin (1910 Thanhouser film)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0ffc2554299422ee995b1::Uncle Tom::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0ffc2554299422ee995b1::Tom show::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae0ffc2554299422ee995b1::Uncle Tom syndrome::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0ffc2554299422ee995b1::Uncle Tom syndrome::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The term \"Uncle Tom\" comes from the title character of Harriet Beecher Stowe's novel \"Uncle Tom's Cabin\", where the African American slave Tom is beaten to death by a cruel white master for refusing to betray the whereabouts of two other slaves.\n[2] Tom show is a general term for any play or musical based (often only loosely) on the 1852 novel \"Uncle Tom's Cabin\" by Harriet Beecher Stowe.\n[3] The use of the epithet is the result of later works derived from the original novel.\n[4] The film was adapted by from the 1852 novel \"Uncle Tom's Cabin\" by Harriet Beecher Stowe."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

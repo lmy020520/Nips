@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Spanish Revolution",
+  "pred_answer": "The Spanish Revolution",
+  "normalized_gold": "the spanish revolution",
+  "normalized_pred": "the spanish revolution",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b56fb5542992d025e680e",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b56fb5542992d025e680e::Spanish Civil War::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b56fb5542992d025e680e::Final offensive of the Spanish Civil War::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b56fb5542992d025e680e::Spanish Revolution of 1936::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7b56fb5542992d025e680e::Anarcho-Syndicalism (book)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7b56fb5542992d025e680e::Asociación Continental Americana de Trabajadores::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b56fb5542992d025e680e::Spanish Revolution of 1936",
+        "5a7b56fb5542992d025e680e::Anarcho-Syndicalism (book)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b56fb5542992d025e680e::Spanish Civil War::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b56fb5542992d025e680e::Final offensive of the Spanish Civil War::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b56fb5542992d025e680e::Spanish Revolution of 1936::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7b56fb5542992d025e680e::Anarcho-Syndicalism (book)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7b56fb5542992d025e680e::Asociación Continental Americana de Trabajadores::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b56fb5542992d025e680e::Asociación Continental Americana de Trabajadores::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The organization failed to make a significant impact as anarcho-syndicalism lost terrain in the Latin American labour movement during the 1930s, a trend that could not be reversed even after the arrival of exiled Spanish FAI members after their defeat in the Spanish Civil War.\n[2] An Introduction to a Subject Which the Spanish War Has Brought into Overwhelming Prominence is a book written by the German anarchist Rudolf Rocker.\n[3] The Spanish Revolution was a workers' social revolution that began during the outbreak of the Spanish Civil War in 1936 and resulted in the widespread implementation of anarchist and more broadly libertarian socialist organizational principles throughout various portions of the country for two to three years, primarily Catalonia, Aragon, Andalusia, and parts of the Valencian Community.\n[4] The final offensive of the Spanish Civil War took place between 26 March and 1 April 1939, towards the end of the Spanish Civil War."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

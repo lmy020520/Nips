@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Shelbyville Road",
+  "pred_answer": "Shelbyville Road",
+  "normalized_gold": "shelbyville road",
+  "normalized_pred": "shelbyville road",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac42864554299076e296d75",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac42864554299076e296d75::Kentucky Oaks Mall::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac42864554299076e296d75::Fayette Mall::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac42864554299076e296d75::Mall St. Matthews::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac42864554299076e296d75::Eastern Hills Mall::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac42864554299076e296d75::Kentucky Oaks Mall",
+        "5ac42864554299076e296d75::Mall St. Matthews"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac42864554299076e296d75::Kentucky Oaks Mall::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac42864554299076e296d75::Fayette Mall::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac42864554299076e296d75::Mall St. Matthews::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac42864554299076e296d75::Eastern Hills Mall::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac42864554299076e296d75::Eastern Hills Mall::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Eastern Hills Mall is a shopping mall located at the western border of the Town of Clarence in Erie County, New York, United States.\n[2] Mall St. Matthews is a Louisville, Kentucky shopping mall located at 5000 Shelbyville Road (US 60) in the eastern suburb of St. Matthews.\n[3] Fayette Mall is a regional shopping mall in Lexington, Kentucky, located at 3401 Nicholasville Road in southern Lexington.\n[4] It was the largest mall in Kentucky by gross leasable area when it opened, and remains the state's third-largest, behind Fayette Mall in Lexington and Mall St. Matthews in Louisville."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

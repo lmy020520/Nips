@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fugees",
+  "pred_answer": "Fugees",
+  "normalized_gold": "fugees",
+  "normalized_pred": "fugees",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf3b4f5542992d7e9f92f7",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf3b4f5542992d7e9f92f7::Uptown 3000::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf3b4f5542992d7e9f92f7::Neurotic Society (Compulsory Mix)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf3b4f5542992d7e9f92f7::Lauryn Hill::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf3b4f5542992d7e9f92f7::Fugees::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5adf3b4f5542992d7e9f92f7::MTV Unplugged No. 2.0::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf3b4f5542992d7e9f92f7::Lauryn Hill",
+        "5adf3b4f5542992d7e9f92f7::Fugees"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf3b4f5542992d7e9f92f7::Uptown 3000::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf3b4f5542992d7e9f92f7::Neurotic Society (Compulsory Mix)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf3b4f5542992d7e9f92f7::Lauryn Hill::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf3b4f5542992d7e9f92f7::Fugees::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5adf3b4f5542992d7e9f92f7::MTV Unplugged No. 2.0::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf3b4f5542992d7e9f92f7::MTV Unplugged No. 2.0::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Hill abandoned the hip hop sounds of her debut album \"The Miseducation of Lauryn Hill\" (1998) in favor of folk and soul songs she performed with an acoustic guitar.\n[2] Fugees (sometimes The Fugees; formerly Tranzlator Crew) were an American hip hop group who rose to fame in the early-1990s.\n[3] She is best known for being a member of the Fugees and for her critically acclaimed solo album \"The Miseducation of Lauryn Hill\", which won numerous awards and broke several sales records.\n[4] \"Neurotic Society (Compulsory Mix)\" is a single from American hip hop artist Ms. Lauryn Hill."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

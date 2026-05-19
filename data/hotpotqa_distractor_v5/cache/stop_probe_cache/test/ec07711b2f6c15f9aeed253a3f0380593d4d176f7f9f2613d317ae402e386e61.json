@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sedgwick County, Kansas",
+  "pred_answer": "Sedgwick County, Kansas",
+  "normalized_gold": "sedgwick county kansas",
+  "normalized_pred": "sedgwick county kansas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f44135542992414482a24",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f44135542992414482a24::Wichita Force::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f44135542992414482a24::Wichita Wild::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f44135542992414482a24::Park City, Kansas::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8f44135542992414482a24::2011 Wichita Wild season::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8f44135542992414482a24::2012 Indoor Football League season::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f44135542992414482a24::Park City, Kansas",
+        "5a8f44135542992414482a24::2011 Wichita Wild season"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f44135542992414482a24::Wichita Force::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f44135542992414482a24::Wichita Wild::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f44135542992414482a24::Park City, Kansas::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8f44135542992414482a24::2011 Wichita Wild season::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8f44135542992414482a24::2012 Indoor Football League season::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f44135542992414482a24::2012 Indoor Football League season::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] For the 2012 season, the IFL switched to a two-conference format with no divisions, due, in large part, to the loss of all the Texas-based teams (except the Allen Wranglers) to the newly formed Lone Star Football League.\n[2] One of twenty-two teams competing in the IFL for the 2011 season, the Park City, Kansas-based Wichita Wild were members of the Great Plains Division of the Intense Conference.\n[3] Park City is a city in Sedgwick County, Kansas, United States, and a suburb of Wichita.\n[4] The Wichita Wild were a professional indoor football team based in Wichita, Kansas."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

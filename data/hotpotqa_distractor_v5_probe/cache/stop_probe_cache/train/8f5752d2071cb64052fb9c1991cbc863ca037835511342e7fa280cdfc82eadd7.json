@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ninotchka",
+  "pred_answer": "Ninotchka",
+  "normalized_gold": "ninotchka",
+  "normalized_pred": "ninotchka",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae05e1455429924de1b70be",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae05e1455429924de1b70be::A Woman's Secret::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae05e1455429924de1b70be::Melvyn Douglas::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae05e1455429924de1b70be::Two-Faced Woman::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae05e1455429924de1b70be::A Woman's Secret",
+        "5ae05e1455429924de1b70be::Melvyn Douglas"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae05e1455429924de1b70be::A Woman's Secret::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae05e1455429924de1b70be::Melvyn Douglas::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae05e1455429924de1b70be::Two-Faced Woman::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae05e1455429924de1b70be::Two-Faced Woman::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Garbo plays a wife who pretends to be her own fictitious twin sister in order to recapture the affections of her estranged husband (Douglas), who has left her for a former girlfriend (Bennett).\n[2] Douglas came to prominence in the 1930s as a suave leading man, perhaps best typified by his performance in the 1939 romantic comedy \"Ninotchka\" with Greta Garbo.\n[3] A Woman's Secret is a 1949 film noir directed by Nicholas Ray, and starred Maureen O'Hara, Gloria Grahame and Melvyn Douglas."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

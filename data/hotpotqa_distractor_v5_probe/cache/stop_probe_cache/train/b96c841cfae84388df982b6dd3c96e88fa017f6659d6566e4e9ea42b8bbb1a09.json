@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1 July 1981",
+  "pred_answer": "1 July 1981",
+  "normalized_gold": "1 july 1981",
+  "normalized_pred": "1 july 1981",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2fcc7554299657fa290d1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2fcc7554299657fa290d1::Noel Kennelly::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2fcc7554299657fa290d1::Listowel Emmets GAA::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2fcc7554299657fa290d1::Tadhg Kennelly::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2fcc7554299657fa290d1::Brendan Kennelly::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2fcc7554299657fa290d1::Listowel Emmets GAA",
+        "5ac2fcc7554299657fa290d1::Tadhg Kennelly"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2fcc7554299657fa290d1::Noel Kennelly::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2fcc7554299657fa290d1::Listowel Emmets GAA::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2fcc7554299657fa290d1::Tadhg Kennelly::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2fcc7554299657fa290d1::Brendan Kennelly::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2fcc7554299657fa290d1::Brendan Kennelly::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Brendan Kennelly (born 1936) is an Irish poet and novelist.\n[2] Tadhg Kennelly (born 1 July 1981) is an Irish sportsperson known for his top level careers in both Gaelic football and Australian rules football.\n[3] Famous players from the club include Tim Kennelly, and his 2 sons Tadhg and Noel and his famous brother Eamon.\n[4] He is a son of former Kerry great Tim Kennelly and older brother of Tadhg Kennelly."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

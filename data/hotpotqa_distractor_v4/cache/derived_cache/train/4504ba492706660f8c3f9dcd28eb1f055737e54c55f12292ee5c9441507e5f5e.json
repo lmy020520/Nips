@@ -1,0 +1,31 @@
+{
+  "should_derive": true,
+  "reason": "The current evidence includes birth years for both individuals, but additional notes can help organize and verify the information to support answering the question about who was born first.",
+  "derived_candidates": [
+    {
+      "type": "verification_note",
+      "text": "Edmund Goulding was born on 20 March 1891.",
+      "source_unit_ids": [
+        "5a7a98de55429941d65f26e4::Dinosaurs on a Spaceship::2"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Saul Metzstein was born on 30 December 1970.",
+      "source_unit_ids": [
+        "5a7a98de55429941d65f26e4::The Snowmen::2"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "bridge_note",
+      "text": "The birth years indicate that Edmund Goulding was born before Saul Metzstein.",
+      "source_unit_ids": [
+        "5a7a98de55429941d65f26e4::Dinosaurs on a Spaceship::2",
+        "5a7a98de55429941d65f26e4::The Snowmen::2"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

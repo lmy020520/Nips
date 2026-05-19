@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Delta blues",
+  "pred_answer": "Delta blues",
+  "normalized_gold": "delta blues",
+  "normalized_pred": "delta blues",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abbf94655429965836003c9",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abbf94655429965836003c9::Dockery Plantation::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abbf94655429965836003c9::Will Dockery::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abbf94655429965836003c9::Ely-Criglar House::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abbf94655429965836003c9::Dockery Plantation",
+        "5abbf94655429965836003c9::Will Dockery"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abbf94655429965836003c9::Dockery Plantation::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abbf94655429965836003c9::Will Dockery::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abbf94655429965836003c9::Ely-Criglar House::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abbf94655429965836003c9::Ely-Criglar House::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Built by slaves from native limestone, the Greek Revival structure was completed c. 1840, as the Manor House for Francis R. Ely's 1629 acre cotton plantation.\n[2] Will Dockery (1865–1936) built from scratch the Dockery Plantation, the famous home of such original Delta blues musicians as Charley Patton, Robert Johnson, Son House, Howlin' Wolf, Willie Brown, Tommy Johnson, and Pops Staples.\n[3] Dockery Plantation was a 25600 acre cotton plantation and sawmill in Dockery, Mississippi, on the Sunflower River between Ruleville and Cleveland, Mississippi."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "American Boeing B-17 Flying Fortress",
+  "pred_answer": "American Boeing B-17 Flying Fortress",
+  "normalized_gold": "american boeing b-17 flying fortress",
+  "normalized_pred": "american boeing b-17 flying fortress",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d41425542997cc2c4743b",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d41425542997cc2c4743b::Texas Raiders::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d41425542997cc2c4743b::Boeing B-17 Flying Fortress::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d41425542997cc2c4743b::Texas Raiders::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d41425542997cc2c4743b::Texas Raiders",
+        "5a7d41425542997cc2c4743b::Boeing B-17 Flying Fortress"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d41425542997cc2c4743b::Texas Raiders::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d41425542997cc2c4743b::Boeing B-17 Flying Fortress::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d41425542997cc2c4743b::Texas Raiders::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d41425542997cc2c4743b::Texas Raiders::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Texas Raiders is an American Boeing B-17 Flying Fortress, a Douglas-Long Beach built B-17G-95-DL.\n[2] The Boeing B-17 Flying Fortress is a four-engine heavy bomber developed in the 1930s for the United States Army Air Corps (USAAC).\n[3] She is hangared at General Aviation Services, which is located at Conroe North Houston Regional Airport in Conroe, Texas."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

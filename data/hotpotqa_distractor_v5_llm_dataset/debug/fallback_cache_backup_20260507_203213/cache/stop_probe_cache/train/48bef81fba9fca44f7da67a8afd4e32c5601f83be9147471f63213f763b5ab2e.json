@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Aimee Chan",
+  "pred_answer": "Aimee Chan",
+  "normalized_gold": "aimee chan",
+  "normalized_pred": "aimee chan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b43b15542995eb53be8da",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b43b15542995eb53be8da::Slow Boat Home::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b43b15542995eb53be8da::Lee San-san::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b43b15542995eb53be8da::Aimee Chan::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7b43b15542995eb53be8da::Hoyan Mok::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b43b15542995eb53be8da::Slow Boat Home",
+        "5a7b43b15542995eb53be8da::Aimee Chan"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b43b15542995eb53be8da::Slow Boat Home::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b43b15542995eb53be8da::Lee San-san::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b43b15542995eb53be8da::Aimee Chan::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7b43b15542995eb53be8da::Hoyan Mok::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b43b15542995eb53be8da::Hoyan Mok::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Hoyan Mok (莫可欣) was the winner of the 1993 Miss Hong Kong Pageant and a TVB Hong Kong actress.\n[2] She was the winner of Miss Hong Kong 2006 and was offered a TVB contract shortly after.\n[3] She signed with TVB, and starred in various Hong Kong television dramas, before leaving the network.\n[4] Slow Boat Home (Chinese: 情越海岸線; literally \"love exceeds the coastline\") is a 2013 Hong Kong romantic comedy television drama produced by Leung Choi-yuen and TVB, starring Raymond Wong Ho-yin, Ruco Chan and Aimee Chan."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

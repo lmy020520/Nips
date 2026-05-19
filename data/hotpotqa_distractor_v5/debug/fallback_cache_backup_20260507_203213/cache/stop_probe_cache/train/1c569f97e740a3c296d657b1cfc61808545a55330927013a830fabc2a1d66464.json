@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Afghan Girl",
+  "pred_answer": "Afghan Girl",
+  "normalized_gold": "afghan girl",
+  "normalized_pred": "afghan girl",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a764d735542992db9473751",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a764d735542992db9473751::Afghan Girl::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a764d735542992db9473751::Why I Live at the P.O.::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a764d735542992db9473751::Steve McCurry::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a764d735542992db9473751::Barbara Carrasco::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a764d735542992db9473751::Afghan Girl",
+        "5a764d735542992db9473751::Steve McCurry"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a764d735542992db9473751::Afghan Girl::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a764d735542992db9473751::Why I Live at the P.O.::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a764d735542992db9473751::Steve McCurry::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a764d735542992db9473751::Barbara Carrasco::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a764d735542992db9473751::Barbara Carrasco::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Carrasco's childhood growing up in the predominantly Mexican-American and African-American community of Mar Vista Gardens was sometimes painful, because she was teased for having lighter skin than her peers and stood out for her green eyes; being called \"white girl,\" \"green eyes\" and \"\"güera\".\"\n[2] He is best known for his 1984 photograph \"Afghan Girl\", which originally appeared in \"\"National Geographic\"\" magazine.\n[3] The work was inspired by a photograph taken by Welty that depicts a woman ironing at the back of a post office.\n[4] The image is of an adolescent girl with green eyes in a red headscarf looking intensely at the camera."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Donalbain",
+  "pred_answer": "Donalbain",
+  "normalized_gold": "donalbain",
+  "normalized_pred": "donalbain",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc1ee5554299700f9d77e8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc1ee5554299700f9d77e8::Donalbain (Macbeth)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc1ee5554299700f9d77e8::Banquo::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc1ee5554299700f9d77e8::King Duncan::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abc1ee5554299700f9d77e8::Inverness::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc1ee5554299700f9d77e8::Donalbain (Macbeth)",
+        "5abc1ee5554299700f9d77e8::King Duncan"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc1ee5554299700f9d77e8::Donalbain (Macbeth)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc1ee5554299700f9d77e8::Banquo::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc1ee5554299700f9d77e8::King Duncan::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abc1ee5554299700f9d77e8::Inverness::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc1ee5554299700f9d77e8::Inverness::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Gaelic king Mac Bethad Mac Findláich (MacBeth) whose 11th-century killing of King Duncan was immortalised in Shakespeare's largely fictionalized play \"Macbeth\", held a castle within the city where he ruled as Mormaer of Moray and Ross.\n[2] King Duncan is a fictional character in Shakespeare's \"Macbeth.\"\n[3] Lord Banquo , the Thane of Lochaber, is a character in William Shakespeare's 1606 play \"Macbeth\".\n[4] Donalbain is a character in William Shakespeare's \"Macbeth\" (c. 1603–1607)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "That Darn Cat",
+  "pred_answer": "That Darn Cat",
+  "normalized_gold": "that darn cat",
+  "normalized_pred": "that darn cat",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7f948655429969796c1ac3",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7f948655429969796c1ac3::That Darn Cat (1997 film)::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7f948655429969796c1ac3::Spice World (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7f948655429969796c1ac3::That Darn Cat!::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7f948655429969796c1ac3::Inspector Gadget (film)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7f948655429969796c1ac3::Kevin of the North::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7f948655429969796c1ac3::That Darn Cat (1997 film)",
+        "5a7f948655429969796c1ac3::Inspector Gadget (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7f948655429969796c1ac3::That Darn Cat (1997 film)::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7f948655429969796c1ac3::Spice World (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7f948655429969796c1ac3::That Darn Cat!::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7f948655429969796c1ac3::Inspector Gadget (film)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7f948655429969796c1ac3::Kevin of the North::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7f948655429969796c1ac3::Kevin of the North::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Kevin of the North is a 2001 Canadian comedy film directed by Bob Spiers.\n[2] Inspector Gadget is a 1999 American action-comedy film directed by David Kellogg, written by Kerry Ehrin and Zak Penn from a story by Ehrin and Dana Olsen.\n[3] That Darn Cat!\n[4] Spice World is a 1997 British musical comedy film directed by Bob Spiers and written by Kim Fuller and Jamie Curtis."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

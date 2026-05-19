@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sir George Strickland",
+  "pred_answer": "Sir George Strickland",
+  "normalized_gold": "sir george strickland",
+  "normalized_pred": "sir george strickland",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae44a7b5542995ad6573d37",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae44a7b5542995ad6573d37::William Strickland (farmer)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae44a7b5542995ad6573d37::Baron Stanley of Alderley::10"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae44a7b5542995ad6573d37::Sizergh Castle and Garden::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae44a7b5542995ad6573d37::Baron Rolle::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae44a7b5542995ad6573d37::William Strickland (farmer)",
+        "5ae44a7b5542995ad6573d37::Sizergh Castle and Garden"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae44a7b5542995ad6573d37::William Strickland (farmer)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae44a7b5542995ad6573d37::Baron Stanley of Alderley::10",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae44a7b5542995ad6573d37::Sizergh Castle and Garden::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae44a7b5542995ad6573d37::Baron Rolle::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae44a7b5542995ad6573d37::Baron Rolle::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Baron Rolle was a title created twice in the Peerage of Great Britain for members of the Rolle family, related as uncle and nephew.\n[2] It is the home of the Hornyold-Strickland family.\n[3] His eldest son, the 6th Baron Stanley of Alderley, sold the family seat of Alderley Hall in 1938.\n[4] He was the eldest son of Sir George Strickland of York, England, from the ancient English Strickland family of Sizergh."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

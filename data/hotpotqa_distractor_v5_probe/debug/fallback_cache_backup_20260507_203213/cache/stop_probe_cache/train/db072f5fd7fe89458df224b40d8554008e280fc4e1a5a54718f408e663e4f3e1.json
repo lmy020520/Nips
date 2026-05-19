@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Liberal Party",
+  "pred_answer": "Liberal Party",
+  "normalized_gold": "liberal party",
+  "normalized_pred": "liberal party",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abfdef35542997ec76fd464",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abfdef35542997ec76fd464::MaryAnn Mihychuk::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abfdef35542997ec76fd464::Justin Trudeau::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abfdef35542997ec76fd464::Christian Paradis::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abfdef35542997ec76fd464::MaryAnn Mihychuk",
+        "5abfdef35542997ec76fd464::Justin Trudeau"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abfdef35542997ec76fd464::MaryAnn Mihychuk::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abfdef35542997ec76fd464::Justin Trudeau::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abfdef35542997ec76fd464::Christian Paradis::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abfdef35542997ec76fd464::Christian Paradis::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He was first elected in the 2006 federal election and served as parliamentary secretary to the Minister of Natural Resources until January 4, 2007, when he was appointed Secretary of State for Agriculture and Agri-Food Canada and the Rural Secretariat.\n[2] He is the 23rd and current Prime Minister of Canada and leader of the Liberal Party.\n[3] Paul for the Liberal Party of Canada, and served as Minister of Employment, Workforce and Labour in the federal Cabinet until the January 10, 2017 cabinet shuffle by Justin Trudeau."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

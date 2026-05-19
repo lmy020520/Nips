@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Los Angeles Dodgers",
+  "pred_answer": "Los Angeles Dodgers",
+  "normalized_gold": "los angeles dodgers",
+  "normalized_pred": "los angeles dodgers",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a80f05d554299260e20a1d1",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a80f05d554299260e20a1d1::Stephen McKeever::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a80f05d554299260e20a1d1::Brooklyn Cyclones::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a80f05d554299260e20a1d1::Walker Buehler::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a80f05d554299260e20a1d1::Los Angeles Dodgers::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a80f05d554299260e20a1d1::Toledo Blue Stockings::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a80f05d554299260e20a1d1::Walker Buehler",
+        "5a80f05d554299260e20a1d1::Los Angeles Dodgers"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a80f05d554299260e20a1d1::Stephen McKeever::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a80f05d554299260e20a1d1::Brooklyn Cyclones::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a80f05d554299260e20a1d1::Walker Buehler::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a80f05d554299260e20a1d1::Los Angeles Dodgers::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a80f05d554299260e20a1d1::Toledo Blue Stockings::6",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a80f05d554299260e20a1d1::Toledo Blue Stockings::6",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Historically, the team is best known for being the only major league team with black players (Moses Fleetwood Walker and his brother, Weldy Walker) prior to Jackie Robinson's appearance with the Brooklyn Dodgers in 1947.\n[2] Established in 1883 in Brooklyn, New York, the team moved to Los Angeles before the 1958 season.\n[3] Walker Anthony Buehler (born July 28, 1994) is an American professional baseball pitcher for the Los Angeles Dodgers of Major League Baseball (MLB).\n[4] The Brooklyn Cyclones are a minor league baseball team based in Brooklyn, New York that plays in the Short-Season A classification New York–Penn League, affiliated with the New York Mets."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

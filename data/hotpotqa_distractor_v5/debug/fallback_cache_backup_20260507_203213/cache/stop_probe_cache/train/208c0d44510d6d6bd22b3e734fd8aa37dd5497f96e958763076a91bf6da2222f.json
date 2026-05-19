@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "In 1949",
+  "pred_answer": "In 1949",
+  "normalized_gold": "in 1949",
+  "normalized_pred": "in 1949",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adfd5d055429906c02daa5f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adfd5d055429906c02daa5f::West Area Computers::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adfd5d055429906c02daa5f::Dorothy Vaughan::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adfd5d055429906c02daa5f::Hidden Figures::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adfd5d055429906c02daa5f::List of accolades received by Hidden Figures::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adfd5d055429906c02daa5f::Dorothy Vaughan",
+        "5adfd5d055429906c02daa5f::Hidden Figures"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adfd5d055429906c02daa5f::West Area Computers::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adfd5d055429906c02daa5f::Dorothy Vaughan::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adfd5d055429906c02daa5f::Hidden Figures::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adfd5d055429906c02daa5f::List of accolades received by Hidden Figures::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adfd5d055429906c02daa5f::List of accolades received by Hidden Figures::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The film's plot focuses on female African-American mathematicians at NASA, specifically Katherine Johnson (played by Taraji P. Henson), who calculated flight trajectories for Project Mercury and the 1969 Apollo 11 flight to the Moon, Dorothy Vaughan (Octavia Spencer), and engineer Mary Jackson (Janelle Monáe).\n[2] The film also features Octavia Spencer as NASA supervisor Dorothy Vaughan and Janelle Monáe as NASA engineer Mary Jackson, with Kevin Costner, Kirsten Dunst, Jim Parsons, Glen Powell, and Mahershala Ali in supporting roles.\n[3] In 1949, she became acting supervisor of the West Area Computers, the first African-American woman to supervise a group of staff at the center.\n[4] The West Area Computing Unit (West Area Computers) was an all-African American group of female mathematicians who worked as human computers at the Langley Research Center of NACA (predecessor of NASA) from 1943 through 1958."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

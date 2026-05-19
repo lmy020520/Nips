@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ryen Russillo",
+  "pred_answer": "Ryen Russillo",
+  "normalized_gold": "ryen russillo",
+  "normalized_pred": "ryen russillo",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac171b05542994ab5c67d3b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac171b05542994ab5c67d3b::Scott Van Pelt::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac171b05542994ab5c67d3b::ESPN Radio::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac171b05542994ab5c67d3b::Ryen Russillo::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac171b05542994ab5c67d3b::Old Mill (West Tisbury, Massachusetts)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac171b05542994ab5c67d3b::Scott Van Pelt",
+        "5ac171b05542994ab5c67d3b::Ryen Russillo"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac171b05542994ab5c67d3b::Scott Van Pelt::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac171b05542994ab5c67d3b::ESPN Radio::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac171b05542994ab5c67d3b::Ryen Russillo::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac171b05542994ab5c67d3b::Old Mill (West Tisbury, Massachusetts)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac171b05542994ab5c67d3b::Old Mill (West Tisbury, Massachusetts)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Old Mill is an historic mill building at 690 Edgartown-West Tisbury Road in West Tisbury, Massachusetts, on the island of Martha's Vineyard.\n[2] Ryen Russillo (born August 5, 1975, in West Tisbury, Massachusetts) is an American sports journalist currently employed by ESPN.\n[3] It was launched on January 1, 1992 under the original banner of \"SportsRadio ESPN.\"\n[4] He co-anchored the 11 p.m. edition of \"SportsCenter\" on ESPN, served as the co-host of \"SVP & Russillo\" alongside Ryen Russillo on ESPN Radio, and hosts various golf events for the network."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

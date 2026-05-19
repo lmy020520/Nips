@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Wimbledon F.C.",
+  "pred_answer": "Wimbledon F.C.",
+  "normalized_gold": "wimbledon fc",
+  "normalized_pred": "wimbledon fc",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add58455542992ae4cec518",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add58455542992ae4cec518::John Fashanu::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add58455542992ae4cec518::Fash FC::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add58455542992ae4cec518::Fabian Frei::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add58455542992ae4cec518::John Fashanu",
+        "5add58455542992ae4cec518::Fash FC"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add58455542992ae4cec518::John Fashanu::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add58455542992ae4cec518::Fash FC::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add58455542992ae4cec518::Fabian Frei::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add58455542992ae4cec518::Fabian Frei::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] FSV Mainz 05 in the German Bundesliga, after an eight-year spell at FC Basel.\n[2] Fash FC was a weekly UK television programme: a reality/documentary show following ex-professional footballer John Fashanu as he goes back to the grassroots of football, managing a team of amateur players in a Sunday League.\n[3] In his former career, he was a centre-forward from 1978 until 1995, most notably in an eight-year spell at Wimbledon F.C. in which he won the FA Cup in 1988 and scored over 100 goals in all competitions."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

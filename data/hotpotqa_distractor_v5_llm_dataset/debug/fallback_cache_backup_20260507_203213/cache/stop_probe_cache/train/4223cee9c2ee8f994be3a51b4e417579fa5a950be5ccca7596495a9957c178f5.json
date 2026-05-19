@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Hatfield–McCoy feud",
+  "pred_answer": "The Hatfield–McCoy feud",
+  "normalized_gold": "the hatfield–mccoy feud",
+  "normalized_pred": "the hatfield–mccoy feud",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b6f7a55429931da12cab5",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b6f7a55429931da12cab5::Hatfield–McCoy feud::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b6f7a55429931da12cab5::Randolph McCoy::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b6f7a55429931da12cab5::Tudor's Biscuit World::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b6f7a55429931da12cab5::Hatfield–McCoy feud",
+        "5a7b6f7a55429931da12cab5::Randolph McCoy"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b6f7a55429931da12cab5::Hatfield–McCoy feud::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b6f7a55429931da12cab5::Randolph McCoy::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b6f7a55429931da12cab5::Tudor's Biscuit World::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b6f7a55429931da12cab5::Tudor's Biscuit World::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The chain was originally based in Charleston, West Virginia and many of the biscuit sandwiches are named for sports teams of interest in that area, including teams at Marshall University, West Virginia University, and The University of Charleston.\n[2] Randolph \"Randall\" or \"Ole Ran'l\" McCoy (October 30, 1825 – March 28, 1914) was the patriarch of the McCoy clan involved in the infamous American Hatfield–McCoy feud.\n[3] The Hatfield–McCoy feud, or the McCoy-Hatfield feud or the Hatfield–McCoy war as some papers at the time called it, involved two rural families of the West Virginia–Kentucky area along the Tug Fork of the Big Sandy River in the years 1863–1891."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

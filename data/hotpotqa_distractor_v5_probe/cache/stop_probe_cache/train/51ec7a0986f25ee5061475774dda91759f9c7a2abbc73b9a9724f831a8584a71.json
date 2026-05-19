@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "swastika",
+  "pred_answer": "swastika",
+  "normalized_gold": "swastika",
+  "normalized_pred": "swastika",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7b9e555429928e1fe38af",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7b9e555429928e1fe38af::Strafgesetzbuch section 86a::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7b9e555429928e1fe38af::Nazi symbolism::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7b9e555429928e1fe38af::Flags of counties of the United States::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7b9e555429928e1fe38af::Strafgesetzbuch section 86a",
+        "5ab7b9e555429928e1fe38af::Nazi symbolism"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7b9e555429928e1fe38af::Strafgesetzbuch section 86a::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7b9e555429928e1fe38af::Nazi symbolism::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7b9e555429928e1fe38af::Flags of counties of the United States::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7b9e555429928e1fe38af::Flags of counties of the United States::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] For example, some Floridian and Alabamian municipality flags feature a saltire, due to saltires being used on their state flags.\n[2] The 20th century German Nazi Party made extensive use of graphic symbolism, especially the \"Hakenkreuz\" (swastika), which was used as its principal symbol and, in the form of the swastika flag, became the state flag of Nazi Germany.\n[3] The German \"Strafgesetzbuch\" (Criminal Code) in § 86a outlaws \"use of symbols of unconstitutional organizations\" outside of the contexts of \"art or science, research or teaching\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

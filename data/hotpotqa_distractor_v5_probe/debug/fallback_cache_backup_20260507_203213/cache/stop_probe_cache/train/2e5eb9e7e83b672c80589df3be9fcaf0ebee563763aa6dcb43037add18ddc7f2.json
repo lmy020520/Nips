@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "My Bonnie Lies over the Ocean",
+  "pred_answer": "My Bonnie Lies over the Ocean",
+  "normalized_gold": "my bonnie lies over the ocean",
+  "normalized_pred": "my bonnie lies over the ocean",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae71e05554299572ea54700",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae71e05554299572ea54700::Laura Smith::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae71e05554299572ea54700::I Saw the Light (Hank Williams song)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae71e05554299572ea54700::My Bonnie Lies over the Ocean::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae71e05554299572ea54700::Wild Mountain Thyme::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae71e05554299572ea54700::Laura Smith",
+        "5ae71e05554299572ea54700::My Bonnie Lies over the Ocean"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae71e05554299572ea54700::Laura Smith::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae71e05554299572ea54700::I Saw the Light (Hank Williams song)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae71e05554299572ea54700::My Bonnie Lies over the Ocean::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae71e05554299572ea54700::Wild Mountain Thyme::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae71e05554299572ea54700::Wild Mountain Thyme::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] is a Scottish folk song that was collected by Francis McPeake 1st, who wrote the song himself for his wife.\n[2] \"My Bonnie Lies over the Ocean\" is a traditional Scottish folk song\n[3] The song is set to the tune of the traditional Scottish folk tune \"Bonnie Charlie\", also commonly known as \"Will ye no come back again?\"\n[4] She is best known for her 1995 single \"Shade of Your Love\", one of the year's biggest hits on adult contemporary radio stations in Canada, and for her adaptation of the Scottish folk song \"My Bonnie Lies over the Ocean\" which she entitled \"My Bonny\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

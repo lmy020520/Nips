@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "trucks and trolley buses",
+  "pred_answer": "trucks and trolley buses",
+  "normalized_gold": "trucks and trolley buses",
+  "normalized_pred": "trucks and trolley buses",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abeb9455542993fe9a41d2c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abeb9455542993fe9a41d2c::Marmon-Herrington::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abeb9455542993fe9a41d2c::M22 Locust::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abeb9455542993fe9a41d2c::General Aircraft Hamilcar::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abeb9455542993fe9a41d2c::Marmon-Herrington",
+        "5abeb9455542993fe9a41d2c::M22 Locust"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abeb9455542993fe9a41d2c::Marmon-Herrington::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abeb9455542993fe9a41d2c::M22 Locust::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abeb9455542993fe9a41d2c::General Aircraft Hamilcar::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abeb9455542993fe9a41d2c::General Aircraft Hamilcar::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] 49 Hamilcar or Hamilcar Mark I was a large British military glider produced during the Second World War, which was designed to carry heavy cargo, such as the Tetrarch or M22 Locust light tank.\n[2] The M22 Locust, officially Light Tank (Airborne), M22, was an American-designed airborne light tank which was produced during World War II.\n[3] Earlier, the company built military vehicles and some tanks during World War II, and until the late 1950s or early 1960s was a manufacturer of trucks and trolley buses."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

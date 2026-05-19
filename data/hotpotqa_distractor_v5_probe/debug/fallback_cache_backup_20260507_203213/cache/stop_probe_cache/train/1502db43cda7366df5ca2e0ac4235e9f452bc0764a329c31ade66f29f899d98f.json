@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "dog",
+  "pred_answer": "dog",
+  "normalized_gold": "dog",
+  "normalized_pred": "dog",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae245195542996483e6494f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae245195542996483e6494f::Irish Wolfhound::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae245195542996483e6494f::Shih-poo::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae245195542996483e6494f::Shih Tzu::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae245195542996483e6494f::Mal-shi::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae245195542996483e6494f::Irish Wolfhound",
+        "5ae245195542996483e6494f::Shih Tzu"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae245195542996483e6494f::Irish Wolfhound::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae245195542996483e6494f::Shih-poo::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae245195542996483e6494f::Shih Tzu::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae245195542996483e6494f::Mal-shi::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae245195542996483e6494f::Mal-shi::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Mal-shi, also known as Malshi, Malt-tzu, Maltzu, and Malti-zu, are a type of designer dog resulting from a cross between a purebred Maltese and a purebred Shih Tzu.\n[2] A Shih Tzu (English: ; ), also known as the Chrysanthemum Dog, is a toy dog breed, weighing 10–19 pounds (4.5–8.6kg) when fully grown.\n[3] It is a crossbreed between a Poodle and a Shih Tzu.\n[4] The Irish Wolfhound (Irish: \"Cú Faoil\" , ] ) is a breed of domestic dog (\"Canis lupus familiaris\"), specifically a very large sighthound from Ireland."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,94 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Fiat Chrysler Automobiles N.V.",
+  "pred_answer": "Fiat Chrysler Automobiles N.V.",
+  "normalized_gold": "fiat chrysler automobiles nv",
+  "normalized_pred": "fiat chrysler automobiles nv",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "The evidence supports both hops: (1) Saltillo Engine Plant is a Chrysler engine plant in Ramos Arizpe, and (2) FCA US (also called Fiat Chrysler or Chrysler) is the American subsidiary of Fiat Chrysler Automobiles N.V.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "The evidence supports both hops: (1) Saltillo Engine Plant is a Chrysler engine plant in Ramos Arizpe, and (2) FCA US (also called Fiat Chrysler or Chrysler) is the American subsidiary of Fiat Chrysler Automobiles N.V.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e1b7155429965cec5ea6c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e1b7155429965cec5ea6c::Saltillo Engine Plant::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e1b7155429965cec5ea6c::Chrysler::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e1b7155429965cec5ea6c::Chrysler::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7e1b7155429965cec5ea6c::Saltillo Engine Plant::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7e1b7155429965cec5ea6c::GM High Value engine::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e1b7155429965cec5ea6c::Saltillo Engine Plant::0",
+        "5a7e1b7155429965cec5ea6c::Chrysler::0",
+        "5a7e1b7155429965cec5ea6c::Chrysler",
+        "5a7e1b7155429965cec5ea6c::Saltillo Engine Plant"
+      ],
+      "k_br": 2.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e1b7155429965cec5ea6c::Saltillo Engine Plant::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e1b7155429965cec5ea6c::Chrysler::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e1b7155429965cec5ea6c::Chrysler::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7e1b7155429965cec5ea6c::Saltillo Engine Plant::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7e1b7155429965cec5ea6c::GM High Value engine::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e1b7155429965cec5ea6c::GM High Value engine::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] These engines were produced primarily at the GM factory in Tonawanda, New York and at the Ramos Arizpe engine plant in Mexico.\n[2] It was built as a scale model of the plant at Trenton, Michigan, United States, but with more work flexibility, having only 20 job classifications rather than the 70 at Trenton.\n[3] FCA US is one of the \"Big Three\" American automobile manufacturers.\n[4] FCA US LLC (also called Fiat Chrysler or Chrysler) ( ) is the American subsidiary of Fiat Chrysler Automobiles N.V., an Italian controlled automobile manufacturer registered in the Netherlands with headquarters in London, U.K., for tax purposes."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

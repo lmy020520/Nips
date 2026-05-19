@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1996",
+  "pred_answer": "1996",
+  "normalized_gold": "1996",
+  "normalized_pred": "1996",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae6135d5542996de7b71b27",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae6135d5542996de7b71b27::Showbox::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae6135d5542996de7b71b27::Next Entertainment World::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae6135d5542996de7b71b27::Le Vision Pictures::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae6135d5542996de7b71b27::Showbox",
+        "5ae6135d5542996de7b71b27::Next Entertainment World"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae6135d5542996de7b71b27::Showbox::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae6135d5542996de7b71b27::Next Entertainment World::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae6135d5542996de7b71b27::Le Vision Pictures::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae6135d5542996de7b71b27::Le Vision Pictures::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Le Vision Pictures (Levp), a subsidiary of LeEco, is one of the largest film production and distribution companies in China.\n[2] Next Entertainment World Co.,Ltd (Hangul:㈜넥스트엔터테인먼트월드, Acronym:NEW) is a South Korean film production and distribution company.\n[3] Showbox Mediaplex Co., Inc. () is one of the largest film distribution companies in South Korea, founded in 1996."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

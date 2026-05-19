@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Curse of Oak Island",
+  "pred_answer": "The Curse of Oak Island",
+  "normalized_gold": "the curse of oak island",
+  "normalized_pred": "the curse of oak island",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae728b0554299572ea54741",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae728b0554299572ea54741::The Curse of Oak Island::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae728b0554299572ea54741::Frederick G. Nolan::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae728b0554299572ea54741::Oak Island::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae728b0554299572ea54741::The Curse of Oak Island",
+        "5ae728b0554299572ea54741::Frederick G. Nolan"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae728b0554299572ea54741::The Curse of Oak Island::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae728b0554299572ea54741::Frederick G. Nolan::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae728b0554299572ea54741::Oak Island::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae728b0554299572ea54741::Oak Island::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Oak Island is a 57 hectare privately owned island in Lunenburg County on the south shore of Nova Scotia, Canada.\n[2] He has appeared on the History Channel's TV series about the Island, The Curse of Oak Island, in episode 7 of season 3.\n[3] Using modern technology and independent researchers , they seek the treasure or historical artifacts believed to be buried on Oak Island off the coast of Nova Scotia, Canada\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

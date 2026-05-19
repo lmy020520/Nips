@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "John Boyega, Nick Frost, Jodie Whittaker and Luke Treadaway",
+  "pred_answer": "John Boyega, Nick Frost, Jodie Whittaker and Luke Treadaway",
+  "normalized_gold": "john boyega nick frost jodie whittaker and luke treadaway",
+  "normalized_pred": "john boyega nick frost jodie whittaker and luke treadaway",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae087c65542993d6555eb9d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae087c65542993d6555eb9d::Joe Cornish::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae087c65542993d6555eb9d::Leeon Jones::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae087c65542993d6555eb9d::Attack the Block::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae087c65542993d6555eb9d::Nick Frost::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae087c65542993d6555eb9d::Joe Cornish",
+        "5ae087c65542993d6555eb9d::Attack the Block"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae087c65542993d6555eb9d::Joe Cornish::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae087c65542993d6555eb9d::Leeon Jones::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae087c65542993d6555eb9d::Attack the Block::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae087c65542993d6555eb9d::Nick Frost::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae087c65542993d6555eb9d::Nick Frost::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He also appeared in Joe Cornish's film \"Attack the Block\" (2011).\n[2] Attack the Block is a 2011 British science fiction horror comedy film written and directed by Joe Cornish and starring John Boyega, Nick Frost, Jodie Whittaker and Luke Treadaway.\n[3] His debut was in Joe Cornish's creature feature \"Attack the Block\".\n[4] In 2011, Cornish released his directorial debut \"Attack the Block\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

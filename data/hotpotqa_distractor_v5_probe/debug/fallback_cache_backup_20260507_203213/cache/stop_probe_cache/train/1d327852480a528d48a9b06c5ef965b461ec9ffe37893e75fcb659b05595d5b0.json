@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The University of Michigan",
+  "pred_answer": "The University of Michigan",
+  "normalized_gold": "the university of michigan",
+  "normalized_pred": "the university of michigan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8e24815542990e94052a6f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8e24815542990e94052a6f::University of Michigan::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8e24815542990e94052a6f::Osgoode Hall Law School::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8e24815542990e94052a6f::New York University::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8e24815542990e94052a6f::Nasir Memon::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8e24815542990e94052a6f::University of Michigan",
+        "5a8e24815542990e94052a6f::New York University"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8e24815542990e94052a6f::University of Michigan::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8e24815542990e94052a6f::Osgoode Hall Law School::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8e24815542990e94052a6f::New York University::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8e24815542990e94052a6f::Nasir Memon::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8e24815542990e94052a6f::Nasir Memon::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Memon is a professor and chair of the New York University Tandon School of Engineering computer science and engineering department and affiliate faculty at the computer science department in the Courant Institute of Mathematical Sciences at New York University.\n[2] New York University (NYU) is a private nonprofit research university based in New York City.\n[3] While it was founded by the Law Society of Upper Canada, it now serves as the faculty of law of York University.\n[4] Founded in 1817 in Detroit as the \"Catholepistemiad\", or University of Michigania, 20 years before the Michigan Territory became a state, the University of Michigan is the state's oldest university."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

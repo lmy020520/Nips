@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Leon Redbone",
+  "pred_answer": "Leon Redbone",
+  "normalized_gold": "leon redbone",
+  "normalized_pred": "leon redbone",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a713cbd5542994082a3e6cb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a713cbd5542994082a3e6cb::Leon Redbone::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a713cbd5542994082a3e6cb::Raiders of the Lost Ark::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a713cbd5542994082a3e6cb::Howard Kazanjian::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a713cbd5542994082a3e6cb::Return of the Jedi::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a713cbd5542994082a3e6cb::Leon Redbone",
+        "5a713cbd5542994082a3e6cb::Howard Kazanjian"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a713cbd5542994082a3e6cb::Leon Redbone::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a713cbd5542994082a3e6cb::Raiders of the Lost Ark::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a713cbd5542994082a3e6cb::Howard Kazanjian::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a713cbd5542994082a3e6cb::Return of the Jedi::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a713cbd5542994082a3e6cb::Return of the Jedi::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The film is set one year after \"The Empire Strikes Back\" and was produced by Howard Kazanjian for Lucasfilm Ltd.\n[2] Howard G. Kazanjian (born July 26, 1942) is an American film producer known for \"Raiders of the Lost Ark\" and \"Return of the Jedi\".\n[3] It was produced by Frank Marshall for Lucasfilm Ltd., with Lucas and Howard Kazanjian as executive producers.\n[4] Leon Redbone (True name and date of birth are unsubstantiated) is a singer-songwriter and guitarist specializing in jazz, blues, and Tin Pan Alley classics."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Punica granatum,",
+  "pred_answer": "Punica granatum,",
+  "normalized_gold": "punica granatum",
+  "normalized_pred": "punica granatum",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae622185542992663a4f269",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae622185542992663a4f269::NAR 2::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae622185542992663a4f269::Harris Farm Markets::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae622185542992663a4f269::Pomegranate::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae622185542992663a4f269::NAR 2::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae622185542992663a4f269::NAR 2",
+        "5ae622185542992663a4f269::Pomegranate"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae622185542992663a4f269::NAR 2::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae622185542992663a4f269::Harris Farm Markets::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae622185542992663a4f269::Pomegranate::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae622185542992663a4f269::NAR 2::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae622185542992663a4f269::NAR 2::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Educational Computer\" 2) is a theoretical model of a 32-bit word computer created by Faculty of Mathematics of University of Belgrade professor Nedeljko Parezanović as an enhancement to its predecessor, NAR 1.\n[2] The pomegranate, botanical name Punica granatum, is a fruit-bearing deciduous shrub or small tree in the family Lythraceae that grows between 5 and tall.\n[3] They are Australia’s biggest individual retailer of fruit and vegetables and promote 'odd-shaped' fruit called \"Imperfect Picks\".\n[4] The word \"nar\" means Pomegranate in Serbian."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

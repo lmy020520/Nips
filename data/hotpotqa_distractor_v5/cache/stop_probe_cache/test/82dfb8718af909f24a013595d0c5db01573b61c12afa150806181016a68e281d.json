@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Estadio Victoria",
+  "pred_answer": "Estadio Victoria",
+  "normalized_gold": "estadio victoria",
+  "normalized_pred": "estadio victoria",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab833ad5542990e739ec86f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab833ad5542990e739ec86f::Carlos Alberto Hurtado::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab833ad5542990e739ec86f::Carlos Morban::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab833ad5542990e739ec86f::Club Necaxa::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab833ad5542990e739ec86f::Alberto Hurtado::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab833ad5542990e739ec86f::Carlos Alberto Hurtado",
+        "5ab833ad5542990e739ec86f::Club Necaxa"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab833ad5542990e739ec86f::Carlos Alberto Hurtado::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab833ad5542990e739ec86f::Carlos Morban::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab833ad5542990e739ec86f::Club Necaxa::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab833ad5542990e739ec86f::Alberto Hurtado::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab833ad5542990e739ec86f::Alberto Hurtado::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Saint Alberto Hurtado Cruchaga, S.J. (born Luis Alberto Hurtado Cruchaga on January 22, 1901 in Viña del Mar, Chile – August 18, 1952 in Santiago, Chile), popularly known in Chile as Padre Hurtado (Spanish: \"Father Hurtado\" ), was a Chilean Jesuit priest, lawyer, social worker and writer of Basque origin, founder of the \"Hogar de Cristo\" foundation.\n[2] It plays in the Estadio Victoria.\n[3] Carlos Alberto Morban Rivera (born April 25, 1982 in Santo Domingo) is a professional basketball player from the Dominican Republic.\n[4] Carlos Alberto Hurtado Arteaga (born January 22, 1984 in Zacatepec, Morelos) is a professional Mexican footballer who currently plays for Correcaminos UAT on loan from Necaxa."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

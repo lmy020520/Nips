@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "B. Kevin Turner",
+  "pred_answer": "B. Kevin Turner",
+  "normalized_gold": "b kevin turner",
+  "normalized_pred": "b kevin turner",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77790255429967ab1051af",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77790255429967ab1051af::B. Kevin Turner::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77790255429967ab1051af::Nordstrom::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77790255429967ab1051af::B. Kevin Turner::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77790255429967ab1051af::B. Kevin Turner",
+        "5a77790255429967ab1051af::Nordstrom"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77790255429967ab1051af::B. Kevin Turner::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77790255429967ab1051af::Nordstrom::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77790255429967ab1051af::B. Kevin Turner::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77790255429967ab1051af::B. Kevin Turner::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] B. Kevin Turner (born April 3, 1965) is an American businessman known for his executive leadership roles at Wal-Mart, Microsoft and Citadel LLC.\n[2] Founded in 1901 by John W. Nordstrom and Carl F. Wallin, the company began as a shoe retailer and expanded its inventory to include clothing, accessories, handbags, jewelry, cosmetics, and fragrances. Select Nordstrom stores also include wedding and home furnishings departments.\n[3] He is currently the Vice Chairman of Albertsons and a member of the Board of Directors at Nordstrom."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

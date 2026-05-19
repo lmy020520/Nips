@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "January 8, 1965",
+  "pred_answer": "January 8, 1965",
+  "normalized_gold": "january 8 1965",
+  "normalized_pred": "january 8 1965",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7cb77355429907fabef00e",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7cb77355429907fabef00e::HCL Technologies::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7cb77355429907fabef00e::Bob Keiller::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7cb77355429907fabef00e::State Bank of India::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7cb77355429907fabef00e::derived::4"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7cb77355429907fabef00e::Anant Gupta::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7cb77355429907fabef00e::HCL Technologies",
+        "5a7cb77355429907fabef00e::Anant Gupta"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7cb77355429907fabef00e::HCL Technologies::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7cb77355429907fabef00e::Bob Keiller::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7cb77355429907fabef00e::State Bank of India::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7cb77355429907fabef00e::Anant Gupta::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a7cb77355429907fabef00e::derived::4",
+          "added_step": 3
+        }
+      ],
+      "last_added_unit_id": "5a7cb77355429907fabef00e::Anant Gupta::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Nadar founded HCL in the mid-1970s and transformed the IT hardware company into an IT enterprise over the next three decades by constantly reinventing his company's focus.\n[2] He is also former President & Chief Executive Officer of HCL Technologies, a US $6.2 billion global Information Technology services company\n[3] State Bank of India (SBI) is an Indian multinational, public sector banking and financial services company.\n[4] He is the former chief executive of Wood Group, a British multinational oil and gas services company headquartered in Aberdeen, Scotland.\n\nNotes:\n[verification] Shiv Nadar was born on January 8, 1965."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

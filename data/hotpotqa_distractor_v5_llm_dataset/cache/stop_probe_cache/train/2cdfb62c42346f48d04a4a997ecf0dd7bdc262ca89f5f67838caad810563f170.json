@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "garland or wreath",
+  "pred_answer": "wreath",
+  "normalized_gold": "garland or wreath",
+  "normalized_pred": "wreath",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": true,
+  "support_rule": "explicit_answer_in_evidence",
+  "support_evidence_summary": "Selected chunk 2 explicitly states 'Lei (/leɪ/ ) is a garland or wreath.' This directly supports that a lei is a type of wreath, matching the predicted answer 'wreath'.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "explicit_answer_in_evidence",
+    "support_evidence_summary": "Selected chunk 2 explicitly states 'Lei (/leɪ/ ) is a garland or wreath.' This directly supports that a lei is a type of wreath, matching the predicted answer 'wreath'.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85eb0a5542996432c57125",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85eb0a5542996432c57125::Lei Day::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85eb0a5542996432c57125::Lei (garland)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85eb0a5542996432c57125::Finnish Swedish Heritage Day::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85eb0a5542996432c57125::Lei Day",
+        "5a85eb0a5542996432c57125::Lei (garland)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85eb0a5542996432c57125::Lei Day::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85eb0a5542996432c57125::Lei (garland)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85eb0a5542996432c57125::Finnish Swedish Heritage Day::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85eb0a5542996432c57125::Finnish Swedish Heritage Day::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The day celebrates the Swedish-speaking population of Finland, their culture, and the bilinguality of Finland.\n[2] The most popular concept of a \"lei\" in Hawaiian culture is a wreath of flowers presented upon arriving or leaving as a symbol of affection.\n[3] Each Hawaiian island has a different type of lei that is used for the celebration and for its people to wear."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

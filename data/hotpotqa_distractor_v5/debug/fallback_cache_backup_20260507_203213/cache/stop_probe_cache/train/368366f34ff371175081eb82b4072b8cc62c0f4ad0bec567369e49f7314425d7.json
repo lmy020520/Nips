@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Diane Kruger",
+  "pred_answer": "Diane Kruger",
+  "normalized_gold": "diane kruger",
+  "normalized_pred": "diane kruger",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae565e55542992663a4f1f1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae565e55542992663a4f1f1::The Women of Marwen::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae565e55542992663a4f1f1::Rescue Dawn::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae565e55542992663a4f1f1::Diane Kruger::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae565e55542992663a4f1f1::Gina Pareño::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae565e55542992663a4f1f1::The Women of Marwen",
+        "5ae565e55542992663a4f1f1::Diane Kruger"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae565e55542992663a4f1f1::The Women of Marwen::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae565e55542992663a4f1f1::Rescue Dawn::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae565e55542992663a4f1f1::Diane Kruger::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae565e55542992663a4f1f1::Gina Pareño::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae565e55542992663a4f1f1::Gina Pareño::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Gina Pareño (born \"Geraldine Acthley\", October 20, 1949) is a Filipino actress born to a German-American father and a Filipina mother.\n[2] Diane Kruger (] ; born Diane Heidkrüger; 15 July 1976) is a German-American actress and former fashion model.\n[3] The film stars Christian Bale, and is based on the true story of German-American pilot Dieter Dengler, who was shot down and captured by villagers sympathetic to the Pathet Lao during an American military campaign in the Vietnam War.\n[4] The Women of Marwen is an upcoming American fantasy drama film will be directed by Robert Zemeckis and written by Zemeckis and Caroline Thompson."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

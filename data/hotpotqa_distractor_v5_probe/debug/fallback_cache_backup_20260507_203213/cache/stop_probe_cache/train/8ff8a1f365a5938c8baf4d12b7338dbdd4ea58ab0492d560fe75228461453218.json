@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mittagong",
+  "pred_answer": "Mittagong",
+  "normalized_gold": "mittagong",
+  "normalized_pred": "mittagong",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7f5cba5542995d8a8dde46",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7f5cba5542995d8a8dde46::Whitfield, Derbyshire::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7f5cba5542995d8a8dde46::Willow Vale, New South Wales (Wingecarribee)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7f5cba5542995d8a8dde46::Mittagong::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7f5cba5542995d8a8dde46::Balaclava, New South Wales::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7f5cba5542995d8a8dde46::Willow Vale, New South Wales (Wingecarribee)",
+        "5a7f5cba5542995d8a8dde46::Mittagong"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7f5cba5542995d8a8dde46::Whitfield, Derbyshire::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7f5cba5542995d8a8dde46::Willow Vale, New South Wales (Wingecarribee)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7f5cba5542995d8a8dde46::Mittagong::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7f5cba5542995d8a8dde46::Balaclava, New South Wales::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7f5cba5542995d8a8dde46::Balaclava, New South Wales::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Balaclava is a Northern Village of the Southern Highlands of New South Wales, Australia in Wingecarribee Shire.\n[2] Mittagong is a town located in the Southern Highlands of New South Wales, Australia, in Wingecarribee Shire.\n[3] It is located 1 km north of Mittagong and is often considered part of Braemar along with its neighbour Balaclava.\n[4] It is located 1 km south of Glossop town hall, south of Glossop Brook between Bray Clough and Hurst Brook."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Tundra Mine",
+  "pred_answer": "Tundra Mine",
+  "normalized_gold": "tundra mine",
+  "normalized_pred": "tundra mine",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a75daf75542994ccc91863d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a75daf75542994ccc91863d::Thompson-Lundmark Mine::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a75daf75542994ccc91863d::Colomac Mine::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a75daf75542994ccc91863d::Tundra Mine::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a75daf75542994ccc91863d::Salmita Mine::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a75daf75542994ccc91863d::Thompson-Lundmark Mine",
+        "5a75daf75542994ccc91863d::Tundra Mine"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a75daf75542994ccc91863d::Thompson-Lundmark Mine::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a75daf75542994ccc91863d::Colomac Mine::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a75daf75542994ccc91863d::Tundra Mine::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a75daf75542994ccc91863d::Salmita Mine::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a75daf75542994ccc91863d::Salmita Mine::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Salmita Mine was a gold producer in the Northwest Territories, Canada during 1983 to 1987.\n[2] The Tundra Mines was a gold producer in the Northwest Territories, Canada between 1964 and 1968, producing 104,476 troy ounces (3250 kg) of gold from 187,714 tons of ore.\n[3] The Colomac Mine was a privately owned and operated open pit gold mine located 220 km northwest of Yellowknife in the Northwest Territories in Canada .\n[4] The Thompson-Lundmark Mine was a gold producer in the periods 1941–1943 and 1947–1949, near Yellowknife, Northwest Territories."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

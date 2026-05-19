@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The January Uprising",
+  "pred_answer": "The January Uprising",
+  "normalized_gold": "the january uprising",
+  "normalized_pred": "the january uprising",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adbd79d5542994650320c00",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adbd79d5542994650320c00::Ludwik Żychliński::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adbd79d5542994650320c00::Teodor Żychliński::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adbd79d5542994650320c00::January Uprising::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adbd79d5542994650320c00::Stefan Bobrowski::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adbd79d5542994650320c00::Teodor Żychliński",
+        "5adbd79d5542994650320c00::January Uprising"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adbd79d5542994650320c00::Ludwik Żychliński::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adbd79d5542994650320c00::Teodor Żychliński::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adbd79d5542994650320c00::January Uprising::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adbd79d5542994650320c00::Stefan Bobrowski::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adbd79d5542994650320c00::Stefan Bobrowski::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He participated in the January 1863 Uprising as one of the leaders of its \"Red\" faction and as a member of that faction's Central National Committee (\"Komitet Centralny Narodowy\"), and of the Provisional National Government (\"Tymczasowy Rząd Narodowy\").\n[2] It began on 22 January 1863 and lasted until the last insurgents were captured in 1864.\n[3] Teodor Żychliński (25 June 1830, Grzymisław – 26 August 1909, Poznań) was a Polish heraldic, diarist and journalist, editor of \"Dziennik Poznański\" (1864-1870) and \"Kurier Poznański\" (1872-1876), author of 31-volumed \"Złota księga szlachty polskiej\" (Golden Book of Polish Nobility) and memoirs from January Uprising.\n[4] He was a pułkownik at the January Uprising of 1863–1864."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

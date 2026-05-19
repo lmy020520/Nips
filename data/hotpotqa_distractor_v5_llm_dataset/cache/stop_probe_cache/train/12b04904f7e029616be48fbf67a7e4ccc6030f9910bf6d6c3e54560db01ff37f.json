@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Patrick Sean Payton",
+  "pred_answer": "Patrick Sean Payton",
+  "normalized_gold": "patrick sean payton",
+  "normalized_pred": "patrick sean payton",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8232d255429903bc27ba40",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8232d255429903bc27ba40::Sean Payton::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8232d255429903bc27ba40::2008 Buffalo Bulls football team::7"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8232d255429903bc27ba40::2009 New Orleans Saints season::4"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8232d255429903bc27ba40::Sean Payton::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8232d255429903bc27ba40::Sean Payton",
+        "5a8232d255429903bc27ba40::2009 New Orleans Saints season"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8232d255429903bc27ba40::Sean Payton::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8232d255429903bc27ba40::2008 Buffalo Bulls football team::7",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8232d255429903bc27ba40::2009 New Orleans Saints season::4",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8232d255429903bc27ba40::Sean Payton::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8232d255429903bc27ba40::Sean Payton::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Patrick Sean Payton (born December 29, 1963) is an American football coach and former player who is the current head coach of the New Orleans Saints of the National Football League (NFL).\n[2] For head coach Sean Payton, this was his fourth season with the franchise, commanding a club overall record of 36–24.\n[3] On December 16, Buffalo announced head coach Turner Gill agreed to a contract extension and a raise.\n[4] On March 23, 2016, Payton agreed to a 5 years contract extension with the Saints."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

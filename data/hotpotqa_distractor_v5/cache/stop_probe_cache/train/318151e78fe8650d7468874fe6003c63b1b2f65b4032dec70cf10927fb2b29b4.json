@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Knockin' on Heaven's Door",
+  "pred_answer": "Knockin' on Heaven's Door",
+  "normalized_gold": "knockin on heavens door",
+  "normalized_pred": "knockin on heavens door",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab5f46d5542992aa134a3f3",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab5f46d5542992aa134a3f3::Knockin' on Heaven's Door::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab5f46d5542992aa134a3f3::Pat Garrett &amp; Billy the Kid (album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab5f46d5542992aa134a3f3::Zé Ramalho Canta Bob Dylan – Tá Tudo Mudando::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab5f46d5542992aa134a3f3::Zé Ramalho Canta Raul Seixas::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab5f46d5542992aa134a3f3::Knockin' on Heaven's Door",
+        "5ab5f46d5542992aa134a3f3::Zé Ramalho Canta Bob Dylan – Tá Tudo Mudando"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab5f46d5542992aa134a3f3::Knockin' on Heaven's Door::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab5f46d5542992aa134a3f3::Pat Garrett &amp; Billy the Kid (album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab5f46d5542992aa134a3f3::Zé Ramalho Canta Bob Dylan – Tá Tudo Mudando::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab5f46d5542992aa134a3f3::Zé Ramalho Canta Raul Seixas::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab5f46d5542992aa134a3f3::Zé Ramalho Canta Raul Seixas::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] More than a decade after his death, he decided to record this tribute album, but he faced opposition from the writer Paulo Coelho, who refused to grant permission for Zé Ramalho to record the songs he had composed with Raul.\n[2] This time, he pays an homage to Bob Dylan, whose \"Knockin' on Heaven's Door\" had already been covered by him.\n[3] Pat Garrett & Billy the Kid is the twelfth studio album and first soundtrack album by American singer-songwriter Bob Dylan, released on July 13, 1973 by Columbia Records for the Sam Peckinpah film, \"Pat Garrett and Billy the Kid\".\n[4] \"Knockin' on Heaven's Door\" is a song written and sung by Bob Dylan, for the soundtrack of the 1973 film \"Pat Garrett and Billy the Kid\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "SmackDown",
+  "pred_answer": "SmackDown",
+  "normalized_gold": "smackdown",
+  "normalized_pred": "smackdown",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade9566554299728e26c742",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade9566554299728e26c742::Enzo and Cass::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade9566554299728e26c742::WWE Cruiserweight Championship::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade9566554299728e26c742::Carmella (wrestler)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade9566554299728e26c742::Simon Gotch::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade9566554299728e26c742::Enzo and Cass",
+        "5ade9566554299728e26c742::Carmella (wrestler)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade9566554299728e26c742::Enzo and Cass::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade9566554299728e26c742::WWE Cruiserweight Championship::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade9566554299728e26c742::Carmella (wrestler)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade9566554299728e26c742::Simon Gotch::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade9566554299728e26c742::Simon Gotch::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Seth Lesser (born October 18, 1982) is an American professional wrestler currently performing under the ring name Simon Grimm.\n[2] Leah Van Dale (born October 23, 1987) is an American professional wrestler, professional wrestling manager, dancer, and model, currently signed to WWE under the ring name Carmella, performing on the SmackDown brand.\n[3] The WWE Cruiserweight Championship is a professional wrestling championship created and promoted by the American professional wrestling promotion WWE on the Raw brand.\n[4] The team was at one point managed by Cass' real life girlfriend, Carmella."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

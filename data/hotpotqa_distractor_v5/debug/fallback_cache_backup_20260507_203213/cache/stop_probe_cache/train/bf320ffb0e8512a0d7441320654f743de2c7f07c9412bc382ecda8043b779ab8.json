@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Time Warner",
+  "pred_answer": "Time Warner",
+  "normalized_gold": "time warner",
+  "normalized_pred": "time warner",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d2c935542995ed0d16625",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d2c935542995ed0d16625::Elise Gatien::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d2c935542995ed0d16625::Cartoon Network::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d2c935542995ed0d16625::Boomerang (TV channel)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d2c935542995ed0d16625::Elise Gatien",
+        "5a7d2c935542995ed0d16625::Cartoon Network"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d2c935542995ed0d16625::Elise Gatien::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d2c935542995ed0d16625::Cartoon Network::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d2c935542995ed0d16625::Boomerang (TV channel)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d2c935542995ed0d16625::Boomerang (TV channel)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Boomerang is an American digital cable and satellite television network that is owned by The Cartoon Network, Inc., a subsidiary of Turner Broadcasting System, itself being a subsidiary of Time Warner.\n[2] Cartoon Network is an American basic cable and satellite television channel that is owned by The Cartoon Network, Inc., a subsidiary of Turner Broadcasting System, itself being a subsidiary of Time Warner.\n[3] She is known for her role as Candice \"CJ\" Ward in the Cartoon Network live-action series \"Tower Prep\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

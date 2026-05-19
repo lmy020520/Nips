@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "150",
+  "pred_answer": "150",
+  "normalized_gold": "150",
+  "normalized_pred": "150",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe834455429976d4830b4c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe834455429976d4830b4c::Satsop River::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe834455429976d4830b4c::Feather River::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe834455429976d4830b4c::Salt River (Kentucky)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe834455429976d4830b4c::Floyds Fork::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abe834455429976d4830b4c::East Branch South Fork Eel River::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe834455429976d4830b4c::Salt River (Kentucky)",
+        "5abe834455429976d4830b4c::Floyds Fork"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe834455429976d4830b4c::Satsop River::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe834455429976d4830b4c::Feather River::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe834455429976d4830b4c::Salt River (Kentucky)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe834455429976d4830b4c::Floyds Fork::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abe834455429976d4830b4c::East Branch South Fork Eel River::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe834455429976d4830b4c::East Branch South Fork Eel River::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The East Branch South Fork Eel River, a tributary of the South Fork Eel River, is formed by the confluence of Cruso Cabin Creek and Elkhorn Creek, in Mendocino County in the U.S. state of California.\n[2] Floyds Fork is a 62 mi tributary of the Salt River in Kentucky, directly south and east of Louisville.\n[3] The Salt River is a 150 mi river in the U.S. state of Kentucky that drains 2920 sqmi .\n[4] The main stem Feather River begins in Lake Oroville, where its four long tributary forks join together—the South Fork, Middle Fork, North Fork, and West Branch Feather Rivers."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

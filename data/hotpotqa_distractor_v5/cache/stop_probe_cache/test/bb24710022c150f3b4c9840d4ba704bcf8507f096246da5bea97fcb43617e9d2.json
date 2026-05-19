@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hennepin County",
+  "pred_answer": "Hennepin County",
+  "normalized_gold": "hennepin county",
+  "normalized_pred": "hennepin county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9625e55429970cfb8eaa9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9625e55429970cfb8eaa9::History of Minneapolis::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9625e55429970cfb8eaa9::Fort Snelling::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9625e55429970cfb8eaa9::History of Saint Paul, Minnesota::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab9625e55429970cfb8eaa9::Pike Island::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9625e55429970cfb8eaa9::Fort Snelling",
+        "5ab9625e55429970cfb8eaa9::History of Saint Paul, Minnesota"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9625e55429970cfb8eaa9::History of Minneapolis::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9625e55429970cfb8eaa9::Fort Snelling::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9625e55429970cfb8eaa9::History of Saint Paul, Minnesota::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab9625e55429970cfb8eaa9::Pike Island::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9625e55429970cfb8eaa9::Pike Island::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Pike's Purchase was later to become Fort Snelling, Minneapolis, and Saint Paul.\n[2] The origin and growth of the city was spurred by the proximity of Fort Snelling, the first major United States military presence in the area, and by its location on the Upper Mississippi River, with the northernmost natural navigable port on the mighty river.\n[3] Fort Snelling, originally known as Fort Saint Anthony, was a military fortification located at the confluence of Minnesota and Mississippi Rivers in Hennepin County, Minnesota.\n[4] The origin and growth of the city was spurred by the proximity of Fort Snelling, the first major United States military presence in the area, and by its location on Saint Anthony Falls, which provided power for sawmills and flour mills."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

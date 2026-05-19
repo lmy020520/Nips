@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Gorky",
+  "pred_answer": "Gorky",
+  "normalized_gold": "gorky",
+  "normalized_pred": "gorky",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0318055429924de1b7053",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0318055429924de1b7053::Nizhny Novgorod::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0318055429924de1b7053::Chavalit Yongchaiyudh::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0318055429924de1b7053::Mikhail Tetyaev::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0318055429924de1b7053::Tver Oblast::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0318055429924de1b7053::Nizhny Novgorod",
+        "5ae0318055429924de1b7053::Mikhail Tetyaev"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0318055429924de1b7053::Nizhny Novgorod::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0318055429924de1b7053::Chavalit Yongchaiyudh::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0318055429924de1b7053::Mikhail Tetyaev::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0318055429924de1b7053::Tver Oblast::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0318055429924de1b7053::Tver Oblast::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] From 1935 to 1990, it was known as Kalinin Oblast (Кали́нинская о́бласть ), named after Mikhail Kalinin.\n[2] Mikhail Mikhailovich Tetyaev (Russian: Михаил Михайлович Тетяев; September 11(23), 1882, Nizhny Novgorod – October 11, 1956, Leningrad) was a Soviet tectonic geologist.\n[3] Chavalit Yongchaiyudh (Thai: ชวลิต ยงใจยุทธ , rtgs: Chawalit Yongchaiyut ,  ] , born 15 May 1932), also known as \"Big Jiew\" (บิ๊กจิ๋ว ), is a Thai politician and retired army officer.\n[4] From 1932 to 1990, it was known as Gorky (Горький , ] ), after the writer Maxim Gorky, who was born there."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

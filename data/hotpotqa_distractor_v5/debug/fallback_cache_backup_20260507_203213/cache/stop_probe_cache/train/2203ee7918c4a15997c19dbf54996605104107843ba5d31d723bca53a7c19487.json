@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Warrington",
+  "pred_answer": "Warrington",
+  "normalized_gold": "warrington",
+  "normalized_pred": "warrington",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3761d5542990afbd1e160",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3761d5542990afbd1e160::Bewsey::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3761d5542990afbd1e160::Beamont Collegiate Academy::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3761d5542990afbd1e160::Newark Collegiate Academy::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3761d5542990afbd1e160::Bewsey",
+        "5ae3761d5542990afbd1e160::Beamont Collegiate Academy"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3761d5542990afbd1e160::Bewsey::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3761d5542990afbd1e160::Beamont Collegiate Academy::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3761d5542990afbd1e160::Newark Collegiate Academy::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3761d5542990afbd1e160::Newark Collegiate Academy::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Newark Collegiate Academy (NCA) is a four-year charter public high school located in Newark in Essex County, New Jersey, United States, operating as part of the TEAM Academy Charter School network of charter schools in Newark run by the Knowledge Is Power Program (KIPP) which serves students in kindergarten through twelfth grade.\n[2] Beamont Collegiate Academy (formerly William Beamont Community High School) is a mixed secondary school located in the Orford area of Warrington in the English county of Cheshire.\n[3] There are five primary schools, while the nearest high schools are Beamont Collegiate Academy in the Orford area, Great Sankey High School in Great Sankey, and St Gregory's RC High School."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

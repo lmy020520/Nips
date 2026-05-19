@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mick Mashbir",
+  "pred_answer": "Mick Mashbir",
+  "normalized_gold": "mick mashbir",
+  "normalized_pred": "mick mashbir",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b533f55429950cd6afca7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b533f55429950cd6afca7::Billion Dollar Babies::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b533f55429950cd6afca7::Mick Mashbir::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b533f55429950cd6afca7::Pretties for You::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b533f55429950cd6afca7::Billion Dollar Babies",
+        "5a8b533f55429950cd6afca7::Mick Mashbir"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b533f55429950cd6afca7::Billion Dollar Babies::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b533f55429950cd6afca7::Mick Mashbir::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b533f55429950cd6afca7::Pretties for You::6",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b533f55429950cd6afca7::Pretties for You::6",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Too bizarre and avant-garde for its time, \"Pretties for You\" was a critical and commercial failure, only briefly denting the \"Billboard\" Top 200, and none of its songs have ever been played live by Cooper since the release of the band's breakthrough album \"Love It to Death\".\n[2] Mick Mashbir is a guitarist who played on Alice Cooper's \"Billion Dollar Babies\" and \"Muscle of Love\" albums.\n[3] The album became the best selling Alice Cooper record at the time of its release, hit number one on the album charts in both the United States and the United Kingdom, and went on to be certified platinum by the Recording Industry Association of America."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "England",
+  "pred_answer": "England",
+  "normalized_gold": "england",
+  "normalized_pred": "england",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab3115855429976abd1bc4b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab3115855429976abd1bc4b::River Lea::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab3115855429976abd1bc4b::Spital Brook::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab3115855429976abd1bc4b::Woollens Brook::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab3115855429976abd1bc4b::Rags Brook::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab3115855429976abd1bc4b::River Lea",
+        "5ab3115855429976abd1bc4b::Woollens Brook"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab3115855429976abd1bc4b::River Lea::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab3115855429976abd1bc4b::Spital Brook::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab3115855429976abd1bc4b::Woollens Brook::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab3115855429976abd1bc4b::Rags Brook::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab3115855429976abd1bc4b::Rags Brook::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Rags Brook is a tributary of the Small River Lea, which is a tributary of the River Lea.\n[2] Woollens Brook, a minor tributary of the River Lea, rises close to Ermine Street, south of Hertford Heath ( ) and flows through Box Wood in Hertfordshire.\n[3] Spital Brook is a minor tributary of the River Lea which rises in Hoddesdonpark Wood in the county of Hertfordshire, England.\n[4] The River Lea in England originates in Marsh Farm, Leagrave, Luton in the Chiltern Hills and flows generally southeast, east, and then south through east London where it meets the River Thames, the last section being known as Bow Creek."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

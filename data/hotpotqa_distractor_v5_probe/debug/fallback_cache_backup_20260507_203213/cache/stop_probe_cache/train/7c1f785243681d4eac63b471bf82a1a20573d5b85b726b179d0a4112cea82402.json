@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "released three albums",
+  "pred_answer": "released three albums",
+  "normalized_gold": "released three albums",
+  "normalized_pred": "released three albums",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf19fc5542993344016bd1",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf19fc5542993344016bd1::The Sundays::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf19fc5542993344016bd1::List of U.S. State Dinners::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf19fc5542993344016bd1::The Sundays::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adf19fc5542993344016bd1::The White Tie Affair::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5adf19fc5542993344016bd1::Chris Wallace (musician)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf19fc5542993344016bd1::The Sundays",
+        "5adf19fc5542993344016bd1::The White Tie Affair"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf19fc5542993344016bd1::The Sundays::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf19fc5542993344016bd1::List of U.S. State Dinners::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf19fc5542993344016bd1::The Sundays::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adf19fc5542993344016bd1::The White Tie Affair::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5adf19fc5542993344016bd1::Chris Wallace (musician)::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf19fc5542993344016bd1::Chris Wallace (musician)::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He was prominently known as the former lead vocalist and front man of the American pop rock band The White Tie Affair.\n[2] The White Tie Affair (also known as TWTA) was a pop band from Chicago, Illinois consisting of Chris Wallace (vocals), Sean-P (guitar), Tim McLaughlin (drums) and Ryan McLain (keyboards).\n[3] The band formed in the late 1980s and released three albums in the 1990s.\n[4] Nowadays these dinners are more often black tie rather than white tie (see formal wear)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "March 14, 1932",
+  "pred_answer": "March 14, 1932",
+  "normalized_gold": "march 14 1932",
+  "normalized_pred": "march 14 1932",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4f3c25542990ba0bbb1ac",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4f3c25542990ba0bbb1ac::Center for Governmental Research::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4f3c25542990ba0bbb1ac::Bob Citron::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4f3c25542990ba0bbb1ac::George Eastman::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4f3c25542990ba0bbb1ac::Center for Governmental Research::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4f3c25542990ba0bbb1ac::Center for Governmental Research",
+        "5ae4f3c25542990ba0bbb1ac::George Eastman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4f3c25542990ba0bbb1ac::Center for Governmental Research::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4f3c25542990ba0bbb1ac::Bob Citron::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4f3c25542990ba0bbb1ac::George Eastman::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4f3c25542990ba0bbb1ac::Center for Governmental Research::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4f3c25542990ba0bbb1ac::Center for Governmental Research::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Headquartered in Rochester, New York, it was founded by George Eastman in 1915 as the Rochester Bureau of Municipal Research to provide research and guidance to its home city's government and community institutions.\n[2] George Eastman (July 12, 1854 – March 14, 1932) was an American entrepreneur who founded the Eastman Kodak Company and popularized the use of roll film, helping to bring photography to the mainstream.\n[3] Robert A. Citron, often called Bob Citron (September 14, 1932 – January 31, 2012) was an American entrepreneur and aerospace engineer who was born in Brooklyn, New York, and educated at the University of the Philippines (liberal arts) and aeronautical engineering from Northrop University (1953–1959).\n[4] The Center for Governmental Research, Inc. (CGR) is a non-profit corporation delivering data support, management consulting and implementation assistance to governments, educational institutions, foundations and non-profit organizations."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Real Men of Genius",
+  "pred_answer": "Real Men of Genius",
+  "normalized_gold": "real men of genius",
+  "normalized_pred": "real men of genius",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2f568554299545a2cfae7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2f568554299545a2cfae7::Real Men of Genius::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2f568554299545a2cfae7::Dave Bickler::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2f568554299545a2cfae7::Eye of the Tiger::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2f568554299545a2cfae7::Real Men of Genius",
+        "5ab2f568554299545a2cfae7::Dave Bickler"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2f568554299545a2cfae7::Real Men of Genius::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2f568554299545a2cfae7::Dave Bickler::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2f568554299545a2cfae7::Eye of the Tiger::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2f568554299545a2cfae7::Eye of the Tiger::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It features original Survivor singer Dave Bickler on lead vocals.\n[2] Bickler would go on to provide the vocals in advertisements, including the \"Real Men of Genius\" Bud Light TV and radio commercials.\n[3] Real Men of Genius is a series of advertisements, primarily 60-second American radio spots, for Bud Light beer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,22 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the school where John Howe was a chaplain. The raw candidate unit_id=5a8124f45542995ce29dcbc4::John Howe (bishop)::2 states 'He was Chaplain at Adisadel College Gold Coast', which directly answers the question. However, the state summary shows two separate pieces of evidence: one about John Howe (illustrator) and one about Adisadel College. The candidate about John Howe (bishop) is not yet in the state summary. A verification note can confirm that the John Howe in the candidate is the same as the one in the question, and a bridge note can connect the two pieces of evidence.",
+  "derived_candidates": [
+    {
+      "type": "verification_note",
+      "text": "The John Howe who was chaplain at Adisadel College is likely the same John Howe referenced in the question.",
+      "source_unit_ids": [
+        "5a8124f45542995ce29dcbc4::John Howe (bishop)::2"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "Adisadel College is an Anglican boys school in Cape Coast, Ghana, matching the description in the state summary.",
+      "source_unit_ids": [
+        "5a8124f45542995ce29dcbc4::Adisadel College::3"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

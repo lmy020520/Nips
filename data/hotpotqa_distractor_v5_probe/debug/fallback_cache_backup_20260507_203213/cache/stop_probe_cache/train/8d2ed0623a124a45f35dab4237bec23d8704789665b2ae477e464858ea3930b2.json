@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "third-most populous",
+  "pred_answer": "third-most populous",
+  "normalized_gold": "third-most populous",
+  "normalized_pred": "third-most populous",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9bb135542996be2020599",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9bb135542996be2020599::San Pedro, Laguna::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9bb135542996be2020599::San Pedro prison::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9bb135542996be2020599::La Paz::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab9bb135542996be2020599::San Pedro, Laguna::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9bb135542996be2020599::San Pedro prison",
+        "5ab9bb135542996be2020599::La Paz"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9bb135542996be2020599::San Pedro, Laguna::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9bb135542996be2020599::San Pedro prison::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9bb135542996be2020599::La Paz::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab9bb135542996be2020599::San Pedro, Laguna::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9bb135542996be2020599::San Pedro, Laguna::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Despite being the third smallest in the entire province, with a total land surface area of only 24.05 km, San Pedro is the fourth largest city in terms of population after the cities of Calamba, Biñan, and Santa Rosa.\n[2] With an estimated 789,541 residents as of 2015, La Paz is the third-most populous city in Bolivia (after Santa Cruz de la Sierra and El Alto).\n[3] San Pedro prison or El penal de San Pedro (Saint Peter's Prison) is the largest prison in La Paz, Bolivia renowned for being a society within itself.\n[4] San Pedro is a first class city in the province of Laguna, Philippines, officially City of San Pedro (Filipino: \"Lungsod ng San Pedro\") and often referred to as San Pedro City."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "16 seasons",
+  "pred_answer": "16",
+  "normalized_gold": "16 seasons",
+  "normalized_pred": "16",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d8b065542991319bc93ce",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d8b065542991319bc93ce::Tom Tsuchiya::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d8b065542991319bc93ce::Robin Ventura::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d8b065542991319bc93ce::Mike Piazza::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7d8b065542991319bc93ce::Tom Seaver::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d8b065542991319bc93ce::Tom Tsuchiya",
+        "5a7d8b065542991319bc93ce::Mike Piazza"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d8b065542991319bc93ce::Tom Tsuchiya::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d8b065542991319bc93ce::Robin Ventura::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d8b065542991319bc93ce::Mike Piazza::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7d8b065542991319bc93ce::Tom Seaver::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d8b065542991319bc93ce::Tom Seaver::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 1992 , he was inducted into the National Baseball Hall of Fame by the highest percentage of votes ever recorded at the time (98.84%; subsequently surpassed in 2016 by Ken Griffey Jr. with 99.32%), and is one of two players (with Mike Piazza) wearing a New York Mets hat on his plaque at Cooperstown.\n[2] He played most notably for the New York Mets and Los Angeles Dodgers, while also having brief stints with the Florida Marlins, San Diego Padres, and Oakland Athletics.\n[3] Ventura played 16 seasons in Major League Baseball (MLB) for the Chicago White Sox, New York Mets, New York Yankees and Los Angeles Dodgers.\n[4] In 2016, Tom was commissioned by Josh Rooney, the Director of Sports & Entertainment at Matthews International to produce the National Baseball Hall of Fame and Museum plaque bas-reliefs for Ken Griffey Jr. and Mike Piazza"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

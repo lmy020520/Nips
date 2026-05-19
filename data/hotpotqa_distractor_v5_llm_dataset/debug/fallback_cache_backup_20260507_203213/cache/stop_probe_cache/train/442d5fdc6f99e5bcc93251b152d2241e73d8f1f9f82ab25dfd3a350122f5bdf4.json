@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "British",
+  "pred_answer": "British",
+  "normalized_gold": "british",
+  "normalized_pred": "british",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adec9aa5542992fa25da84f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adec9aa5542992fa25da84f::Characteristic X-ray::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adec9aa5542992fa25da84f::Philipp Lenard::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adec9aa5542992fa25da84f::Charles Glover Barkla::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adec9aa5542992fa25da84f::Aage Bohr::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adec9aa5542992fa25da84f::Characteristic X-ray",
+        "5adec9aa5542992fa25da84f::Charles Glover Barkla"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adec9aa5542992fa25da84f::Characteristic X-ray::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adec9aa5542992fa25da84f::Philipp Lenard::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adec9aa5542992fa25da84f::Charles Glover Barkla::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adec9aa5542992fa25da84f::Aage Bohr::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adec9aa5542992fa25da84f::Aage Bohr::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Aage Niels Bohr (] ; 19 June 1922 – 8 September 2009) was a Danish nuclear physicist who shared the Nobel Prize in Physics in 1975 with Ben Mottelson and James Rainwater \"for the discovery of the connection between collective motion and particle motion in atomic nuclei and the development of the theory of the structure of the atomic nucleus based on this connection\".\n[2] Charles Glover Barkla FRS FRSE (7 June 1877 – 23 October 1944) was a British physicist, and the winner of the Nobel Prize in Physics in 1917 for his work in X-ray spectroscopy and related areas in the study of X-rays (Roentgen rays).\n[3] Philipp Eduard Anton von Lenard (7 June 1862 – 20 May 1947) was a German physicist and the winner of the Nobel Prize for Physics in 1905 for his research on cathode rays and the discovery of many of their properties.\n[4] Characteristic X-rays were discovered by Charles Glover Barkla in 1909, who later won the Nobel Prize in Physics for his discovery in 1917."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

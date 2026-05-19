@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mitcham",
+  "pred_answer": "Mitcham",
+  "normalized_gold": "mitcham",
+  "normalized_pred": "mitcham",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae69fcb5542996d980e7c66",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae69fcb5542996d980e7c66::Electoral district of Elder::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae69fcb5542996d980e7c66::Colonel Light Gardens, South Australia::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae69fcb5542996d980e7c66::Batticaloa Electoral District (1947–1989)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae69fcb5542996d980e7c66::Electoral district of Elder",
+        "5ae69fcb5542996d980e7c66::Colonel Light Gardens, South Australia"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae69fcb5542996d980e7c66::Electoral district of Elder::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae69fcb5542996d980e7c66::Colonel Light Gardens, South Australia::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae69fcb5542996d980e7c66::Batticaloa Electoral District (1947–1989)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae69fcb5542996d980e7c66::Batticaloa Electoral District (1947–1989)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The district was named after the city of Batticaloa in Batticaloa District, Eastern Province.\n[2] Colonel Light Gardens is a suburb located within the City of Mitcham in the greater Adelaide region.\n[3] Elder is an electoral district of the House of Assembly in the Australian state of South Australia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

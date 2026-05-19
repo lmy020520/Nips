@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "The University of Texas System",
+  "pred_answer": "The University of Texas System",
+  "normalized_gold": "the university of texas system",
+  "normalized_pred": "the university of texas system",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7125365542994082a3e5d1",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7125365542994082a3e5d1::University of Texas System::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7125365542994082a3e5d1::Texas State University System::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7125365542994082a3e5d1::Berea College::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7125365542994082a3e5d1::Lincoln Hall, Berea College::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7125365542994082a3e5d1::University of Texas System",
+        "5a7125365542994082a3e5d1::Berea College"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7125365542994082a3e5d1::University of Texas System::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7125365542994082a3e5d1::Texas State University System::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7125365542994082a3e5d1::Berea College::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7125365542994082a3e5d1::Lincoln Hall, Berea College::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7125365542994082a3e5d1::Lincoln Hall, Berea College::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Lincoln Hall, on the campus of Berea College in Berea, Kentucky is a three-story building built in 1887.\n[2] Founded in 1855, Berea College is distinctive among post-secondary institutions for providing free education to students and for having been the first college in the Southern United States to be coeducational and racially integrated.\n[3] The other systems of state universities are the Texas A&M System, the Texas Tech System, the University of Houston System, the University of North Texas System, and the University of Texas System.\n[4] The University of Texas System (UT System) encompasses 14 educational institutions in the U.S. state of Texas, of which eight are academic universities and six are health institutions."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

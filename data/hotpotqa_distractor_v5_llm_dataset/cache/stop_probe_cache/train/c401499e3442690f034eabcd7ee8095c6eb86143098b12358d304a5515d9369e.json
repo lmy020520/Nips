@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Chelsea",
+  "pred_answer": "Chelsea",
+  "normalized_gold": "chelsea",
+  "normalized_pred": "chelsea",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7c42e45542990527d5547d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c42e45542990527d5547d::2014–15 Arsenal F.C. season::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c42e45542990527d5547d::2005 FA Community Shield::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c42e45542990527d5547d::2004–05 FA Premier League::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7c42e45542990527d5547d::2017 FA Community Shield::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c42e45542990527d5547d::2005 FA Community Shield",
+        "5a7c42e45542990527d5547d::2004–05 FA Premier League"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c42e45542990527d5547d::2014–15 Arsenal F.C. season::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c42e45542990527d5547d::2005 FA Community Shield::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c42e45542990527d5547d::2004–05 FA Premier League::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7c42e45542990527d5547d::2017 FA Community Shield::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c42e45542990527d5547d::2017 FA Community Shield::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The match was played between Chelsea, champions of the 2016–17 Premier League and Arsenal, who beat their opponents to win the 2017 FA Cup Final.\n[2] Chelsea also broke a number of other records during their campaign, most notably breaking the record of most games won in a single Premier League campaign, securing 29 wins in the league in home and away matches.\n[3] The 2005 FA Community Shield was the 83rd staging of the FA Community Shield, an annual football match contested by the reigning champions of the Premier League and the holders of the FA Cup.\n[4] This season Arsenal participated in the Premier League, FA Cup, League Cup, Community Shield and the UEFA Champions League."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

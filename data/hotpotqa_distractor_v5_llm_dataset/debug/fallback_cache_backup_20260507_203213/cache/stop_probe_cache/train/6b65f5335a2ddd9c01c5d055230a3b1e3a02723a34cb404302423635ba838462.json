@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Los Angeles, California",
+  "pred_answer": "Los Angeles, California",
+  "normalized_gold": "los angeles california",
+  "normalized_pred": "los angeles california",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae467fe55429970de88d94b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae467fe55429970de88d94b::E! Hollywood Hold'em::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae467fe55429970de88d94b::Greek hold 'em::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae467fe55429970de88d94b::Phil Laak::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae467fe55429970de88d94b::E! Hollywood Hold'em::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae467fe55429970de88d94b::E! Hollywood Hold'em",
+        "5ae467fe55429970de88d94b::Phil Laak"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae467fe55429970de88d94b::E! Hollywood Hold'em::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae467fe55429970de88d94b::Greek hold 'em::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae467fe55429970de88d94b::Phil Laak::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae467fe55429970de88d94b::E! Hollywood Hold'em::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae467fe55429970de88d94b::E! Hollywood Hold'em::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] E! Hollywood Hold'em is a poker television program.\n[2] Philip \"Phil\" Courtney Laak is an Irish professional poker player and a poker commentator, now residing in Los Angeles, California.\n[3] In professional poker player Doyle Brunson's book, \"Super/System\", this version of poker was referred to as tight hold 'em.\n[4] Professional poker player Phil Laak served as host and dealer, offering occasional tips to the players and home viewers."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

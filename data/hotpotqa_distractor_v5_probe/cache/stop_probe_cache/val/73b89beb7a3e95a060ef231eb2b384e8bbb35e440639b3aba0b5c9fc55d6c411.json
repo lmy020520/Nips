@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ribble Steam Railway",
+  "pred_answer": "Ribble Steam Railway",
+  "normalized_gold": "ribble steam railway",
+  "normalized_pred": "ribble steam railway",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a88f3c855429938390d3ffc",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a88f3c855429938390d3ffc::Ribble Steam Railway::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a88f3c855429938390d3ffc::Strand Road Crossing::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a88f3c855429938390d3ffc::List of Fairbourne Railway rolling stock::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a88f3c855429938390d3ffc::Ribble Steam Railway",
+        "5a88f3c855429938390d3ffc::Strand Road Crossing"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a88f3c855429938390d3ffc::Ribble Steam Railway::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a88f3c855429938390d3ffc::Strand Road Crossing::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a88f3c855429938390d3ffc::List of Fairbourne Railway rolling stock::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a88f3c855429938390d3ffc::List of Fairbourne Railway rolling stock::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] This is a list of past and present rolling stock used on the Fairbourne Railway, a narrow gauge preserved railway line running for 2 mi from Fairbourne on the Mid-Wales coast to Barmouth Ferry on a spit of sand in the Mawddach Esturay opposite the town of Barmouth Welsh: \"Abermaw\" .\n[2] The Ribble Steam Railway terminates adjacent to the level crossing and it is proposed that a station should be built on the site.\n[3] The Ribble Steam Railway is a standard gauge preserved railway in Lancashire, in the United Kingdom."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

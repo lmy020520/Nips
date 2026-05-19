@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Bangles",
+  "pred_answer": "The Bangles",
+  "normalized_gold": "the bangles",
+  "normalized_pred": "the bangles",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d0b44554299683c1c6419",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d0b44554299683c1c6419::Liam Sternberg::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d0b44554299683c1c6419::The Bangles::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d0b44554299683c1c6419::The Tuesdays::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7d0b44554299683c1c6419::Ripple (band)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d0b44554299683c1c6419::The Bangles",
+        "5a7d0b44554299683c1c6419::The Tuesdays"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d0b44554299683c1c6419::Liam Sternberg::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d0b44554299683c1c6419::The Bangles::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d0b44554299683c1c6419::The Tuesdays::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7d0b44554299683c1c6419::Ripple (band)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d0b44554299683c1c6419::Ripple (band)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The group was signed to GRC Records and Salsoul Records in the 1970s, and scored several hit singles, the biggest of which were \"I Don't Know What It Is, But It Sure Is Funky\" and \"The Beat Goes On And On,\" the latter on Salsoul Records, joined by the Salsoul Orchestra.\n[2] The Tuesdays were a Norwegian rock group formed in 1990 in Larvik, Norway.\n[3] They scored several hit singles as that decade continued.\n[4] Liam Sternberg (born c. 1949) is an American songwriter and producer best known for writing the Bangles hit \"Walk Like an Egyptian\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

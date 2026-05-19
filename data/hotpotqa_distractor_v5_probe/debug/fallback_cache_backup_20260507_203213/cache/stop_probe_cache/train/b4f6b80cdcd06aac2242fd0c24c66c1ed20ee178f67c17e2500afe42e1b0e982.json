@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1981",
+  "pred_answer": "1981",
+  "normalized_gold": "1981",
+  "normalized_pred": "1981",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae75ff95542991e8301cc74",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae75ff95542991e8301cc74::Love You I Do::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae75ff95542991e8301cc74::Do You Want It Right Now::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae75ff95542991e8301cc74::Jennifer Hudson::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae75ff95542991e8301cc74::Siedah Garrett::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae75ff95542991e8301cc74::Love You I Do::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae75ff95542991e8301cc74::Jennifer Hudson",
+        "5ae75ff95542991e8301cc74::Siedah Garrett"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae75ff95542991e8301cc74::Love You I Do::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae75ff95542991e8301cc74::Do You Want It Right Now::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae75ff95542991e8301cc74::Jennifer Hudson::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae75ff95542991e8301cc74::Siedah Garrett::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae75ff95542991e8301cc74::Love You I Do::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae75ff95542991e8301cc74::Love You I Do::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It was nominated for the 2007 Academy Award for Best Original Song, and won the 2008 Grammy Award for Best Song Written for a Motion Picture, Television or Other Visual Media.\n[2] Garrett has been nominated for two Academy Awards for Best Original Song, and won the Grammy Award for Best Song Written for Visual Media at the 50th Grammy Awards for co-writing \"Love You I Do\" (performed by Jennifer Hudson) for the 2006 musical film, \"Dreamgirls\".\n[3] Jennifer Kate Hudson (born September 12, 1981) is an American singer, actress and spokesperson.\n[4] \"Do You Want It Right Now\" is a 1985 song by singer Siedah Garrett for the film \"Fast Forward\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

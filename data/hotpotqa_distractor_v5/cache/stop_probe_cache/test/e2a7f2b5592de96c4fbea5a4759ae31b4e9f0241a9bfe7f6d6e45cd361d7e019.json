@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Soloist",
+  "pred_answer": "The Soloist",
+  "normalized_gold": "the soloist",
+  "normalized_pred": "the soloist",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a76e88555429972597f13f4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a76e88555429972597f13f4::The Soloist::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a76e88555429972597f13f4::Third and Indiana::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a76e88555429972597f13f4::Patrick Tatten::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a76e88555429972597f13f4::The Three Lives of Thomasina::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a76e88555429972597f13f4::The Soloist",
+        "5a76e88555429972597f13f4::Patrick Tatten"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a76e88555429972597f13f4::The Soloist::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a76e88555429972597f13f4::Third and Indiana::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a76e88555429972597f13f4::Patrick Tatten::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a76e88555429972597f13f4::The Three Lives of Thomasina::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a76e88555429972597f13f4::The Three Lives of Thomasina::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Three Lives of Thomasina is a 1963 British fantasy film starring Patrick McGoohan, Susan Hampshire, child actor Matthew Garber and child actress Karen Dotrice in a story about a cat and her influence on a family.\n[2] He is best known for roles in films such as: \"Dirty Deeds\", \"The Good German\", \"The Soloist\" , \"Lucky Bastard\" & the t.v. series Boystown on \"OutTV\".\n[3] Third and Indiana is a novel written by Steve Lopez.\n[4] The screenplay by Susannah Grant is based on the book, \"The Soloist\" by Steve Lopez."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

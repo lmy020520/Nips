@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Byte",
+  "pred_answer": "Byte",
+  "normalized_gold": "byte",
+  "normalized_pred": "byte",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a067b5542990783324df7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a067b5542990783324df7::Byte (magazine)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a067b5542990783324df7::The Christian Century::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a067b5542990783324df7::Intel 4004::15"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a067b5542990783324df7::Byte (magazine)",
+        "5a7a067b5542990783324df7::The Christian Century"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a067b5542990783324df7::Byte (magazine)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a067b5542990783324df7::The Christian Century::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a067b5542990783324df7::Intel 4004::15",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a067b5542990783324df7::Intel 4004::15",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The MCS-4 family of 4 chips developed by Intel, of which the 4004 is the CPU or microprocessor, is far more versatile and powerful than the single chip TMS1000, allowing the creation of a variety of small computers for various applications.\n[2] The Christian Century is a Christian magazine based in Chicago, Illinois.\n[3] Whereas many magazines from the mid-1980s had been dedicated to the MS-DOS (PC) platform or the Mac, mostly from a business or home user's perspective, \"Byte\" covered developments in the entire field of \"small computers and software\", and sometimes other computing fields such as supercomputers and high-reliability computing."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

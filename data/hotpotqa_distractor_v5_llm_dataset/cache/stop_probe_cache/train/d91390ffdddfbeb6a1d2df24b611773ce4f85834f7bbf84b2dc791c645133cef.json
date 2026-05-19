@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Morrison v. Olson, 487 U.S. 654 (1988)",
+  "pred_answer": "Morrison v. Olson, 487 U.S. 654 (1988)",
+  "normalized_gold": "morrison v olson 487 us 654 1988",
+  "normalized_pred": "morrison v olson 487 us 654 1988",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac034c25542996f0d89cb5c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac034c25542996f0d89cb5c::Clark v. Arizona::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac034c25542996f0d89cb5c::Special Division::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac034c25542996f0d89cb5c::Morrison v. Olson::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac034c25542996f0d89cb5c::Bank Markazi v. Peterson::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac034c25542996f0d89cb5c::Special Division",
+        "5ac034c25542996f0d89cb5c::Morrison v. Olson"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac034c25542996f0d89cb5c::Clark v. Arizona::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac034c25542996f0d89cb5c::Special Division::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac034c25542996f0d89cb5c::Morrison v. Olson::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac034c25542996f0d89cb5c::Bank Markazi v. Peterson::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac034c25542996f0d89cb5c::Bank Markazi v. Peterson::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Bank Markazi v. Peterson, 578 U.S. ___ (2016), was a United States Supreme Court case that found that a law which only applied to a specific case, identified by docket number, and eliminated all of the defenses one party had raised does not violate the separation of powers in the United States Constitution between the legislative (Congress) and judicial branches of government.\n[2] Morrison v. Olson, 487 U.S. 654 (1988) , is a United States federal court case in which the Supreme Court of the United States decided that the Independent Counsel Act was constitutional.\n[3] Its constitutionality was upheld in Morrison v. Olson.\n[4] Clark v. Arizona, 548 U.S. 735 (2006) , is a United States Supreme Court case in which the Court upheld the constitutionality of the insanity defense used by the State of Arizona."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

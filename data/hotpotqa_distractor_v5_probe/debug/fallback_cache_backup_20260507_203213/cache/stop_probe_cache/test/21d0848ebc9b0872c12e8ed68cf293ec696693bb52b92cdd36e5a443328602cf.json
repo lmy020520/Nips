@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Son Ye-jin",
+  "pred_answer": "Son Ye-jin",
+  "normalized_gold": "son ye-jin",
+  "normalized_pred": "son ye-jin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e694a5542997cc2c4753d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e694a5542997cc2c4753d::Dancing Queen (2012 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e694a5542997cc2c4753d::Spellbound (2011 film)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e694a5542997cc2c4753d::Hwang In-ho::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7e694a5542997cc2c4753d::Hwang Bo-ra::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e694a5542997cc2c4753d::Spellbound (2011 film)",
+        "5a7e694a5542997cc2c4753d::Hwang In-ho"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e694a5542997cc2c4753d::Dancing Queen (2012 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e694a5542997cc2c4753d::Spellbound (2011 film)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e694a5542997cc2c4753d::Hwang In-ho::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7e694a5542997cc2c4753d::Hwang Bo-ra::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e694a5542997cc2c4753d::Hwang Bo-ra::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 2007, Hwang played the daughter/narrator in black comedy \"Skeletons in the Closet\" (also known as \"Shim's Family\"), for which she won Best New Actress at the Busan Film Critics Awards and Director's Cut Awards.\n[2] Hwang In-ho is a South Korean film director and screenwriter.\n[3] \"Chilling Romance\") is a 2011 South Korean horror romantic comedy film, starring Son Ye-jin and Lee Min-ki.\n[4] Dancing Queen (Hangul: 댄싱퀸 ; RR: \"Daensing Kwin \" ) is 2012 South Korean romantic comedy film starring Uhm Jung-hwa and Hwang Jung-min."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

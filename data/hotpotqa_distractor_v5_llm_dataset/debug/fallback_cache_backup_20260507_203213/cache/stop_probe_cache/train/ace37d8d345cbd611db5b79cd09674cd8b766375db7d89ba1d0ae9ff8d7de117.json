@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "4 hour-long specials",
+  "pred_answer": "4 hour-long specials",
+  "normalized_gold": "4 hour-long specials",
+  "normalized_pred": "4 hour-long specials",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f75de5542997ba9cb3275",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f75de5542997ba9cb3275::Buddy Van Horn::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f75de5542997ba9cb3275::Zorro (1957 TV series)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f75de5542997ba9cb3275::Van Horn Mansion::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f75de5542997ba9cb3275::Buddy Van Horn",
+        "5a8f75de5542997ba9cb3275::Zorro (1957 TV series)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f75de5542997ba9cb3275::Buddy Van Horn::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f75de5542997ba9cb3275::Zorro (1957 TV series)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f75de5542997ba9cb3275::Van Horn Mansion::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f75de5542997ba9cb3275::Van Horn Mansion::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Van Horn Mansion was built by Judge James Van Horn in 1823.\n[2] Seventy-eight episodes were produced, and 4 hour-long specials were aired on the Walt Disney anthology series between October 30, 1960 and April 2, 1961.\n[3] He earlier doubled for Guy Williams on Disney's \"Zorro\", and Gregory Peck."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jacobean",
+  "pred_answer": "Jacobean",
+  "normalized_gold": "jacobean",
+  "normalized_pred": "jacobean",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc09a855429947ff1738c2",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc09a855429947ff1738c2::Belton House::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc09a855429947ff1738c2::Gerard Johnson (sculptor)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc09a855429947ff1738c2::Gerard Johnson the elder::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc09a855429947ff1738c2::Hatfield House::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5adc09a855429947ff1738c2::Jan Ruhtenberg::11"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc09a855429947ff1738c2::Gerard Johnson (sculptor)",
+        "5adc09a855429947ff1738c2::Hatfield House"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc09a855429947ff1738c2::Belton House::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc09a855429947ff1738c2::Gerard Johnson (sculptor)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc09a855429947ff1738c2::Gerard Johnson the elder::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc09a855429947ff1738c2::Hatfield House::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5adc09a855429947ff1738c2::Jan Ruhtenberg::11",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc09a855429947ff1738c2::Jan Ruhtenberg::11",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He was active in many areas of country such as New York City with both his architectural skills (the renovation of 57 East 93rd Street that was reviewed by \"Architectural Forum\" in 1937); He is \"credited\" with the interior design of Nelson Rockefeller's Penthouse at 810 Fifth Avenue (62nd Street) by the New York Times;  and his opinions on the progressive housing movement which were recorded for t\n[2] Hatfield House is a country house set in a large park, the Great Park, on the eastern side of the town of Hatfield, Hertfordshire, England.\n[3] Gerard Johnson the elder (d. 1611) is the Anglicised form of Gheerart Janssen, a Dutch sculptor who operated a monument workshop in Elizabethan and Jacobean England and the father of Gerard Johnson the younger, who is thought to have created Shakespeare's funerary monument.\n[4] In May 1612 he was paid for making part of a fountain for the east garden at Hatfield House, Hertfordshire."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

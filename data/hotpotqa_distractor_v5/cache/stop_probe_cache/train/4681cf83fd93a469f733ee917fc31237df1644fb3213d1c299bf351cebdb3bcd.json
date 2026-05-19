@@ -1,0 +1,85 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "June 26, 2012",
+  "pred_answer": "June 26, 2012",
+  "normalized_gold": "june 26 2012",
+  "normalized_pred": "june 26 2012",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2389855429970612095c2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2389855429970612095c2::Ted (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2389855429970612095c2::Ted 2::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2389855429970612095c2::derived::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab2389855429970612095c2::Everybody Needs a Best Friend::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2389855429970612095c2::Ted (film)",
+        "5ab2389855429970612095c2::Everybody Needs a Best Friend"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2389855429970612095c2::Ted (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2389855429970612095c2::Ted 2::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2389855429970612095c2::Everybody Needs a Best Friend::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5ab2389855429970612095c2::derived::1",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5ab2389855429970612095c2::Everybody Needs a Best Friend::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Flintstones is a 1994 American buddy comedy film directed by Brian Levant and written by Tom S. Parker, Jim Jennewein, and Steven E. de Souza.\n[2] It was released by Universal Republic Records on June 26, 2012.\n[3] Ted 2 is a 2015 American comedy film directed by Seth MacFarlane and is a sequel to the 2012 film \"Ted\".\n[4] Ted is a 2012 American buddy comedy film directed by Seth MacFarlane in his feature film directorial debut.\n\nNotes:\n[verification] The main theme of Ted was released on June 26, 2012."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

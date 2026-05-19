@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Gary Gilmore",
+  "pred_answer": "Gary Gilmore",
+  "normalized_gold": "gary gilmore",
+  "normalized_pred": "gary gilmore",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85d0ed5542996432c570eb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85d0ed5542996432c570eb::Noall Wootton::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85d0ed5542996432c570eb::Charles Coleman (murderer)::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85d0ed5542996432c570eb::Gary Gilmore::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85d0ed5542996432c570eb::Harold Lamont Otey::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85d0ed5542996432c570eb::Noall Wootton",
+        "5a85d0ed5542996432c570eb::Gary Gilmore"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85d0ed5542996432c570eb::Noall Wootton::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85d0ed5542996432c570eb::Charles Coleman (murderer)::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85d0ed5542996432c570eb::Gary Gilmore::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85d0ed5542996432c570eb::Harold Lamont Otey::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85d0ed5542996432c570eb::Harold Lamont Otey::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Despite recanting his confession and maintaining his innocence for more than 15 years, Otey became the first person to be executed in Nebraska since 1976 when the death penalty was reinstated.\n[2] After the U.S. Supreme Court upheld a new series of death penalty statutes in the 1976 decision \"Gregg v. Georgia\", he became the first person in almost ten years to be executed in the United States.\n[3] He became the first person to be executed in Oklahoma since the 1966 electrocution of James Donald French after the United States Supreme Court reinstated the death penalty in 1976 and the first person in Oklahoma to be executed by lethal injection.\n[4] During his time in that role, he is most famous for being the lead prosecutor of Gary Gilmore, the first person to be executed after the 1976 reinstatement of the death penalty."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

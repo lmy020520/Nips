@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The 8.8 cm Flak",
+  "pred_answer": "The 8.8 cm Flak",
+  "normalized_gold": "the 88 cm flak",
+  "normalized_pred": "the 88 cm flak",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac290555542990b17b153f5",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac290555542990b17b153f5::8.8 cm Flak 18/36/37/41::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac290555542990b17b153f5::Spreewerk::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac290555542990b17b153f5::QF 3.7-inch AA gun::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac290555542990b17b153f5::8.8 cm Flak 18/36/37/41",
+        "5ac290555542990b17b153f5::Spreewerk"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac290555542990b17b153f5::8.8 cm Flak 18/36/37/41::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac290555542990b17b153f5::Spreewerk::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac290555542990b17b153f5::QF 3.7-inch AA gun::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac290555542990b17b153f5::QF 3.7-inch AA gun::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It was roughly the equivalent of the German 88 mm FlaK and American 90 mm, but with a slightly larger calibre of 94 mm.\n[2] Spreewerk produced a number of important weapons and components before and during World War II including 280,880 of the Walther P.38 pistol which was the standard service pistol of the German \"Heer\", and the famous 8.8 cm Flak anti-aircraft gun.\n[3] The 8.8 cm Flak 18/36/37/41 (commonly called the eighty-eight) was a German 88 mm anti-aircraft and anti-tank artillery gun from World War II."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

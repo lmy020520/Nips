@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Munich",
+  "pred_answer": "Munich",
+  "normalized_gold": "munich",
+  "normalized_pred": "munich",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2ab565542996483e64a2f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2ab565542996483e64a2f::National Beer Festival::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2ab565542996483e64a2f::Bockfest::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2ab565542996483e64a2f::Oktoberfest::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae2ab565542996483e64a2f::Oktoberfest::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2ab565542996483e64a2f::National Beer Festival",
+        "5ae2ab565542996483e64a2f::Oktoberfest"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2ab565542996483e64a2f::National Beer Festival::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2ab565542996483e64a2f::Bockfest::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2ab565542996483e64a2f::Oktoberfest::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae2ab565542996483e64a2f::Oktoberfest::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2ab565542996483e64a2f::Oktoberfest::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Held annually in Munich, Bavaria, Germany, it is a 16- to 18-day folk festival running from mid or late September to the first weekend in October, with more than 6 million people from around the world attending the event every year.\n[2] Oktoberfest (] ) is the world's largest Volksfest (beer festival and travelling funfair).\n[3] It is the oldest German-style bock beer festival in the United States.\n[4] The National Beer Festival is Argentina's version of the German Oktoberfest."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

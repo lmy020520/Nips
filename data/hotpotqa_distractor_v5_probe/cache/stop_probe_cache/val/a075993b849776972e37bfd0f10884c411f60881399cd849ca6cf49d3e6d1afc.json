@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "China",
+  "pred_answer": "China",
+  "normalized_gold": "china",
+  "normalized_pred": "china",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae18f005542997283cd222c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae18f005542997283cd222c::List of woodlice of the British Isles::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae18f005542997283cd222c::Siege of Caizhou::8"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae18f005542997283cd222c::Huozhou::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae18f005542997283cd222c::Runan County::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae18f005542997283cd222c::Dao (state)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae18f005542997283cd222c::Huozhou",
+        "5ae18f005542997283cd222c::Runan County"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae18f005542997283cd222c::List of woodlice of the British Isles::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae18f005542997283cd222c::Siege of Caizhou::8",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae18f005542997283cd222c::Huozhou::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae18f005542997283cd222c::Runan County::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae18f005542997283cd222c::Dao (state)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae18f005542997283cd222c::Dao (state)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Dao () was a Chinese vassal state during the Zhou Dynasty (1046 – 221 BCE) located in the southern part of Runan County, Henan.\n[2] Runan County (Traditional: 汝南縣; Simplified: 汝南县; Pinyin: Rǔnán Xiàn) is a county in Zhumadian, Henan, China.\n[3] Huozhou (), formerly Huo County or Huoxian, is a county-level city in Linfen, Shanxi Province, China.\n[4] On February 26, 1233, he reached Guide (present-day Shangqiu, Henan Province), and then moved on to Caizhou (present-day Runan County, Henan Province), on August 3."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

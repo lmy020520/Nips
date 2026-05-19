@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "John Lasseter",
+  "pred_answer": "John Lasseter",
+  "normalized_gold": "john lasseter",
+  "normalized_pred": "john lasseter",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae32dcb5542990afbd1e0c5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae32dcb5542990afbd1e0c5::A Bug's Land::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae32dcb5542990afbd1e0c5::Peter de Sève::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae32dcb5542990afbd1e0c5::A Bug's Life::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae32dcb5542990afbd1e0c5::Kumali::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae32dcb5542990afbd1e0c5::A Bug's Land",
+        "5ae32dcb5542990afbd1e0c5::A Bug's Life"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae32dcb5542990afbd1e0c5::A Bug's Land::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae32dcb5542990afbd1e0c5::Peter de Sève::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae32dcb5542990afbd1e0c5::A Bug's Life::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae32dcb5542990afbd1e0c5::Kumali::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae32dcb5542990afbd1e0c5::Kumali::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The themed Kumali ride music was written and produced by ElectricStreetPolice, a British TV composer by the name of Paul Bickerdike who has credits on TV and in film at Cannes.\n[2] Directed by John Lasseter, the film involves a misfit ant named Flik that is looking for \"tough warriors\" to save his colony from greedy grasshoppers, only to recruit a group of bugs that turn out to be an inept circus troupe.\n[3] As a character designer, he worked on the characters of \"A Bug's Life\", \"Finding Nemo\", \"Robots\", the four \"Ice Age\" films (including Scrat), and on the main animal character E.B. (voiced by Russell Brand) in the 2011 Easter themed comedy film \"Hop\".\n[4] \"A Bug's Land\" (stylized a bug's land) is an area of Disney California Adventure themed after the 1998 Disney·Pixar film \"A Bug's Life\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

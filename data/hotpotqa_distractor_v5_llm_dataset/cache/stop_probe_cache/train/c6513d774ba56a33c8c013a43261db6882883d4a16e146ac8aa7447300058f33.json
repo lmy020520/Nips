@@ -1,0 +1,80 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Chandler Jones",
+  "pred_answer": "He",
+  "normalized_gold": "chandler jones",
+  "normalized_pred": "he",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "Evidence shows Chandler Jones is Arthur Jones' brother and played college football at Syracuse, but the question asks for 'which of Arthur Jones' brothers' and the pred answer is 'He', which does not identify a specific brother.",
+  "missing_support_reasons": [
+    "Pred answer 'He' is not a specific name; expected answer is 'Chandler Jones'."
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "Evidence shows Chandler Jones is Arthur Jones' brother and played college football at Syracuse, but the question asks for 'which of Arthur Jones' brothers' and the pred answer is 'He', which does not identify a specific brother.",
+    "missing_support_reasons": [
+      "Pred answer 'He' is not a specific name; expected answer is 'Chandler Jones'."
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5a7c64c05542990527d55495",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7c64c05542990527d55495::Arthur Jones (American football)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7c64c05542990527d55495::Chandler Jones::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7c64c05542990527d55495::Fred Mautino::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7c64c05542990527d55495::Arthur Jones (American football)",
+        "5a7c64c05542990527d55495::Chandler Jones"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7c64c05542990527d55495::Arthur Jones (American football)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7c64c05542990527d55495::Chandler Jones::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7c64c05542990527d55495::Fred Mautino::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7c64c05542990527d55495::Fred Mautino::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He then played college football at the end position for Syracuse.\n[2] He played college football at Syracuse.\n[3] He played college football at Syracuse, and was drafted by the Baltimore Ravens in the fifth round of the 2010 NFL Draft."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

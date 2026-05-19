@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "1969",
+  "pred_answer": "December 1969",
+  "normalized_gold": "1969",
+  "normalized_pred": "december 1969",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7cf3fb55429909bec768c0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7cf3fb55429909bec768c0::Martin O'Hagan::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7cf3fb55429909bec768c0::Mike Stevens (Ohio politician)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7cf3fb55429909bec768c0::Official Irish Republican Army::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7cf3fb55429909bec768c0::League of Communists in the Netherlands::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7cf3fb55429909bec768c0::Martin O'Hagan",
+        "5a7cf3fb55429909bec768c0::Official Irish Republican Army"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7cf3fb55429909bec768c0::Martin O'Hagan::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7cf3fb55429909bec768c0::Mike Stevens (Ohio politician)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7cf3fb55429909bec768c0::Official Irish Republican Army::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7cf3fb55429909bec768c0::League of Communists in the Netherlands::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7cf3fb55429909bec768c0::League of Communists in the Netherlands::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Former member of parliament Fré Meis was one of its more prominent members.\n[2] It emerged in December 1969, shortly after the beginning of the Troubles, when the Irish Republican Army split into two factions.\n[3] Mike Stevens is an Ohio Democratic Party politician and a former member of the Ohio General Assembly.\n[4] Owen Martin O'Hagan, (23 June 1950 – 28 September 2001) was an Irish investigative journalist from Lurgan, Northern Ireland and a former member of the Official Irish Republican Army who spent much of the 1970s in prison."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

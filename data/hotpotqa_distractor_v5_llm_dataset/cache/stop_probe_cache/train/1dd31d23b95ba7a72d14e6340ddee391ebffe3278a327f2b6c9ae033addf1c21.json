@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "George Washington",
+  "pred_answer": "George Washington",
+  "normalized_gold": "george washington",
+  "normalized_pred": "george washington",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7957ce5542994bb9457006",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7957ce5542994bb9457006::Tirey L. Ford::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7957ce5542994bb9457006::Hugh J. Glenn::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7957ce5542994bb9457006::George Washington::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7957ce5542994bb9457006::William Windom::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7957ce5542994bb9457006::Tirey L. Ford",
+        "5a7957ce5542994bb9457006::George Washington"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7957ce5542994bb9457006::Tirey L. Ford::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7957ce5542994bb9457006::Hugh J. Glenn::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7957ce5542994bb9457006::George Washington::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7957ce5542994bb9457006::William Windom::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7957ce5542994bb9457006::William Windom::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He was the great-grandfather of actor William Windom, who was named for him.\n[2] George Washington (February 22, 1732 [O.S. February 11, 1731]  – December 14 , 1799) was an American politician and soldier who served as the first President of the United States from 1789 to 1797 and was one of the Founding Fathers of the United States.\n[3] Glenn served with Colonel Alexander William Doniphan's Missouri Volunteers in the Mexican-American War, returning to St. Louis afterwards to marry Nancy Harrison Abernathy, a relative of Tirey L. Ford, on March 15, 1849.\n[4] His great-grandfather, Jacob Ford, was with General George Washington at Yorktown, Virginia when the surrender of Lord Cornwallis occurred."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

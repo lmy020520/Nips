@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "magazine",
+  "pred_answer": "magazine",
+  "normalized_gold": "magazine",
+  "normalized_pred": "magazine",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8391f55542996488c2e45c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8391f55542996488c2e45c::Wentworth Lear Historic Houses::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8391f55542996488c2e45c::OH Ranch::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8391f55542996488c2e45c::Lear's::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8391f55542996488c2e45c::Oh Comely (magazine)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8391f55542996488c2e45c::Act III Communications::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8391f55542996488c2e45c::Lear's",
+        "5a8391f55542996488c2e45c::Oh Comely (magazine)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8391f55542996488c2e45c::Wentworth Lear Historic Houses::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8391f55542996488c2e45c::OH Ranch::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8391f55542996488c2e45c::Lear's::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8391f55542996488c2e45c::Oh Comely (magazine)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8391f55542996488c2e45c::Act III Communications::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8391f55542996488c2e45c::Act III Communications::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] In a Wall St. Journal interview in 1988, Lear explained the name by noting that in a Shakespeare play there are always more than three acts and that he expects there to be an Act IV and V. Act III is Lear's business vehicle and is unconnected to his other activities as a political activist and philanthropist.\n[2] Oh Comely magazine is a bi-monthly British magazine published by Pirates Ahoy!\n[3] Lear's was a monthly women's magazine, intended for women over 50.\n[4] Both parcels of land include both private and public land with the public land leased to OH Ranch Ltd. (the corporation that manages the ranch) for grazing."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

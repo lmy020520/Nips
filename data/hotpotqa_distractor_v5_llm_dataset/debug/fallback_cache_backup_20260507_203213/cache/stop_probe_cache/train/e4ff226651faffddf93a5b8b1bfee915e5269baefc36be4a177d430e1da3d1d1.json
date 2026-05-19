@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Nazi",
+  "pred_answer": "Nazi",
+  "normalized_gold": "nazi",
+  "normalized_pred": "nazi",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc76f45542994650320d14",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc76f45542994650320d14::DFS Sperber Junior::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc76f45542994650320d14::Madrid autonomous football team::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc76f45542994650320d14::Hanna Reitsch::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc76f45542994650320d14::Hans Jacobs::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc76f45542994650320d14::DFS Sperber Junior",
+        "5adc76f45542994650320d14::Hanna Reitsch"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc76f45542994650320d14::DFS Sperber Junior::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc76f45542994650320d14::Madrid autonomous football team::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc76f45542994650320d14::Hanna Reitsch::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc76f45542994650320d14::Hans Jacobs::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc76f45542994650320d14::Hans Jacobs::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] As the head of the \"Deutsche Forschungsanstalt für Segelflug\" (DFS - German Research Institute for Sailplane Flight) at Darmstadt in the years before World War II, he was responsible for a number of highly successful designs, including the DFS Rhönsperber, DFS Rhönadler, DFS Habicht, DFS Weihe, DFS Kranich, and the DFS 230 assault glider.\n[2] During the Nazi era, she served as an international representative for the regime.\n[3] They are not affiliated with FIFA or UEFA, because the Community of Madrid is represented internationally by the Spanish national football team.\n[4] The DFS Sperber Junior (English: Hawk Junior ) was a competition sailplane designed for Hanna Reitsch and built in Germany in 1936."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

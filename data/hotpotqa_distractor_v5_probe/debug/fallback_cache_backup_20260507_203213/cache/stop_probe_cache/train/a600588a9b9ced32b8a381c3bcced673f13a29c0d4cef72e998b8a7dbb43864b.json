@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "no-kill shelter",
+  "pred_answer": "no-kill shelter",
+  "normalized_gold": "no-kill shelter",
+  "normalized_pred": "no-kill shelter",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc8b065542994d58a2f644",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc8b065542994d58a2f644::North Shore Animal League America::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc8b065542994d58a2f644::Animal House: A Dog's Life::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc8b065542994d58a2f644::No-kill shelter::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc8b065542994d58a2f644::Animal shelter::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc8b065542994d58a2f644::North Shore Animal League America",
+        "5adc8b065542994d58a2f644::No-kill shelter"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc8b065542994d58a2f644::North Shore Animal League America::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc8b065542994d58a2f644::Animal House: A Dog's Life::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc8b065542994d58a2f644::No-kill shelter::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc8b065542994d58a2f644::Animal shelter::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc8b065542994d58a2f644::Animal shelter::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] While no-kill shelters exist, it is sometimes policy to euthanize sick animals, and any animal that is not claimed quickly enough by a previous or new owner.\n[2] A \"no-kill\" shelter is an animal shelter that does not kill healthy or treatable animals even when the shelter is full, reserving euthanasia for terminally ill animals or those considered dangerous to public safety.\n[3] Animal House: A Dog's Life is a United States of America documentary television series about shelter, rescue, and stray dogs. Each half-hour episode consists of two to three segments on individual dogs from the New York animal rescue group, North Shore Animal League.\n[4] North Shore Animal League America, headquartered in Port Washington, New York, is the largest no-kill animal rescue and adoption organization in the world."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

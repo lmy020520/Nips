@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "documentary film",
+  "pred_answer": "documentary film",
+  "normalized_gold": "documentary film",
+  "normalized_pred": "documentary film",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c792a5542995e66a4760e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c792a5542995e66a4760e::In the Basement (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c792a5542995e66a4760e::Recreation room::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c792a5542995e66a4760e::(T)error::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8c792a5542995e66a4760e::Pittsburgh toilet::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c792a5542995e66a4760e::In the Basement (film)",
+        "5a8c792a5542995e66a4760e::(T)error"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c792a5542995e66a4760e::In the Basement (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c792a5542995e66a4760e::Recreation room::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c792a5542995e66a4760e::(T)error::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8c792a5542995e66a4760e::Pittsburgh toilet::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c792a5542995e66a4760e::Pittsburgh toilet::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] As Pittsburgh was historically an industrial town, still called \"The Steel City,\" toilets such as these could be used by steelworkers and miners: grimy from the day's labor, they could use an exterior door to enter the basement directly from outside and use the basement's shower and toilet before heading upstairs.\n[2] (T)ERROR is an American 2015 documentary film directed by Lyric R. Cabral and David Felix Sutcliffe.\n[3] The term is common in the United States, Australia, New Zealand and Canada, but is less common in the United Kingdom where the preferred term is games room.\n[4] In the Basement (\"Im Keller\") is a 2014 Austrian documentary film directed by Ulrich Seidl about people and their obsessions, and what they do in their basements in their free time."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "PetSmart",
+  "pred_answer": "PetSmart",
+  "normalized_gold": "petsmart",
+  "normalized_pred": "petsmart",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81bb6455429926c1cdad70",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81bb6455429926c1cdad70::Distribution center::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81bb6455429926c1cdad70::Dollar General::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81bb6455429926c1cdad70::Bethel, Berks County, Pennsylvania::6"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81bb6455429926c1cdad70::Distribution center::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81bb6455429926c1cdad70::Dollar General",
+        "5a81bb6455429926c1cdad70::Bethel, Berks County, Pennsylvania"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81bb6455429926c1cdad70::Distribution center::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81bb6455429926c1cdad70::Dollar General::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81bb6455429926c1cdad70::Bethel, Berks County, Pennsylvania::6",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a81bb6455429926c1cdad70::Distribution center::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a81bb6455429926c1cdad70::Distribution center::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] For example, a \"retail distribution center\" normally distributes goods to retail stores, an \"order fulfillment center\" commonly distributes goods directly to consumers, and a cross-dock facility stores little or no product but distributes goods to other destinations.\n[2] It is the home to the international headquarters of the Assemblies of Yahweh, to several small town business shops, and to a large distribution center for Dollar General and PetSmart which can be seen while driving down Interstate 78.\n[3] As of August 2017, Dollar General operated over 13,000 stores in all U.S. states except: Alaska, Hawaii, Idaho, Montana, Washington, and Wyoming.\n[4] A distribution center for a set of products is a warehouse or other specialized building, often with refrigeration or air conditioning, which is stocked with products (goods) to be redistributed to retailers, to wholesalers, or directly to consumers."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

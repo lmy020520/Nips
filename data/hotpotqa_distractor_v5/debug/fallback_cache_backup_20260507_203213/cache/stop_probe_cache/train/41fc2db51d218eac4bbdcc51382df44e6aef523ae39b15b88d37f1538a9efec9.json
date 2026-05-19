@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1950",
+  "pred_answer": "1950",
+  "normalized_gold": "1950",
+  "normalized_pred": "1950",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac15bd25542994ab5c67cf5",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac15bd25542994ab5c67cf5::The Shotgun Boogie::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac15bd25542994ab5c67cf5::Johnny Cash Is Coming to Town::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac15bd25542994ab5c67cf5::The Shotgun Boogie::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac15bd25542994ab5c67cf5::Tennessee Ernie Ford::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac15bd25542994ab5c67cf5::Rebel-'Rouser::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac15bd25542994ab5c67cf5::The Shotgun Boogie",
+        "5ac15bd25542994ab5c67cf5::Tennessee Ernie Ford"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac15bd25542994ab5c67cf5::The Shotgun Boogie::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac15bd25542994ab5c67cf5::Johnny Cash Is Coming to Town::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac15bd25542994ab5c67cf5::The Shotgun Boogie::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac15bd25542994ab5c67cf5::Tennessee Ernie Ford::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac15bd25542994ab5c67cf5::Rebel-'Rouser::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac15bd25542994ab5c67cf5::Rebel-'Rouser::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Eddy has spoken of listening to Tennessee Ernie Ford's recording for inspiration on the morning of the recording session for \"Rebel-'Rouser\".\n[2] Noted for his rich bass-baritone voice and down-home humor, he is remembered for his hit recordings of \"The Shotgun Boogie\" and \"Sixteen Tons\".\n[3] \"The Shotgun Boogie\" is a 1950 song by Tennessee Ernie Ford.\n[4] Sixteen Tons\" was previously a hit for Tennessee Ernie Ford, \"The Big Light\" is an Elvis Costello song from his album \"King of America\", released the previous year and \"Let Him Roll\" is from Guy Clark's debut, \"Old No. 1\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

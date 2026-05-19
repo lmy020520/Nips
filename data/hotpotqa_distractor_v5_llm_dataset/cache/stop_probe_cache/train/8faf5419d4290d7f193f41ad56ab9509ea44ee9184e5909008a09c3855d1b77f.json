@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Mike Tyson",
+  "pred_answer": "Mike Tyson",
+  "normalized_gold": "mike tyson",
+  "normalized_pred": "mike tyson",
+  "exact_match": true,
+  "context_exact_match": false,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2667755429970612095f4",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2667755429970612095f4::La Noche del 10::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2667755429970612095f4::Mike Tyson::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2667755429970612095f4::Carlos Mastronardi::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2667755429970612095f4::La Noche del 10",
+        "5ab2667755429970612095f4::Mike Tyson"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2667755429970612095f4::La Noche del 10::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2667755429970612095f4::Mike Tyson::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2667755429970612095f4::Carlos Mastronardi::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2667755429970612095f4::Carlos Mastronardi::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Carlos Mastronardi (1901 - June 5, 1976) was an Argentine journalist, poet, and translator.\n[2] Michael Gerard Tyson ( ; born June 30, 1966) is an American former professional boxer who competed from 1985 to 2005.\n[3] La Noche del 10 was an Argentine television show hosted by football legend Diego Maradona."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

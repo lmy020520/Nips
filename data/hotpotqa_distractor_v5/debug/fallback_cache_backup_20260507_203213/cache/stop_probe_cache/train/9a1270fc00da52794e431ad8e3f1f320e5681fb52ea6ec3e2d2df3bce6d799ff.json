@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "car",
+  "pred_answer": "car",
+  "normalized_gold": "car",
+  "normalized_pred": "car",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae21e31554299234fd043dd",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae21e31554299234fd043dd::Renault RE30::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae21e31554299234fd043dd::Renault in Formula One::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae21e31554299234fd043dd::Renault R29::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae21e31554299234fd043dd::Renault RE30",
+        "5ae21e31554299234fd043dd::Renault in Formula One"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae21e31554299234fd043dd::Renault RE30::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae21e31554299234fd043dd::Renault in Formula One::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae21e31554299234fd043dd::Renault R29::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae21e31554299234fd043dd::Renault R29::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Renault R29 is a Formula One racing car designed by the Renault F1 Team, with which they contested the 2009 Formula One World Championship (originally as ING Renault F1 Team, then, following loss of title sponsorship from the ING Group after \"Crashgate\", Renault F1 Team).\n[2] They have been associated with Formula One as both constructor and engine supplier for various periods since 1977.\n[3] The Renault RE30 was a Formula One car designed by Michel Tétu and Gérard Larrousse for use by the Renault team in the 1981 Formula One season."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

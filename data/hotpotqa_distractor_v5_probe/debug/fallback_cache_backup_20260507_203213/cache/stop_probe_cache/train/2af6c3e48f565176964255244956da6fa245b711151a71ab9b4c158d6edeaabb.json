@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Carl Barks",
+  "pred_answer": "Carl Barks",
+  "normalized_gold": "carl barks",
+  "normalized_pred": "carl barks",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8da3bb5542994ba4e3dcde",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8da3bb5542994ba4e3dcde::The Terror of the Transvaal::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8da3bb5542994ba4e3dcde::Horsing Around with History::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8da3bb5542994ba4e3dcde::Scrooge McDuck::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8da3bb5542994ba4e3dcde::Weatherman (short story)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8da3bb5542994ba4e3dcde::The Terror of the Transvaal",
+        "5a8da3bb5542994ba4e3dcde::Scrooge McDuck"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8da3bb5542994ba4e3dcde::The Terror of the Transvaal::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8da3bb5542994ba4e3dcde::Horsing Around with History::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8da3bb5542994ba4e3dcde::Scrooge McDuck::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8da3bb5542994ba4e3dcde::Weatherman (short story)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8da3bb5542994ba4e3dcde::Weatherman (short story)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was written by Lois McMaster Bujold and was first published in the February 1990 issue of \"Analog Science Fiction and Fact\" and is a prelude story starring a character she also used in the Vorkosigan Saga.\n[2] Scrooge McDuck is a fictional character created in 1947 by Carl Barks during his time as a work-for-hire for The Walt Disney Company.\n[3] \"Horsing Around with History\" is a 32-page comic book story starring Scrooge McDuck, written by Carl Barks and William Van Horn.\n[4] \"The Terror of the Transvaal\" is a Scrooge McDuck comic story by Don Rosa."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

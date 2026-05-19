@@ -1,0 +1,85 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "John Berends",
+  "pred_answer": "John Berends",
+  "normalized_gold": "john berends",
+  "normalized_pred": "john berends",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89077b554299515336126c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89077b554299515336126c::Uddel::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89077b554299515336126c::Jason L. McCoy::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89077b554299515336126c::derived::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a89077b554299515336126c::Apeldoorn::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89077b554299515336126c::Uddel",
+        "5a89077b554299515336126c::Apeldoorn"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89077b554299515336126c::Uddel::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89077b554299515336126c::Jason L. McCoy::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89077b554299515336126c::Apeldoorn::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a89077b554299515336126c::derived::1",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a89077b554299515336126c::Apeldoorn::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Stevns is a municipality (Danish, \"kommune\") in Region Sjælland on the southeast coast of the island of Zealand (\"Sjælland\") in south Denmark.\n[2] John Berends of the CDA is the mayor of Apeldoorn.\n[3] McCoy served as mayor of a municipality that holds town meetings to pass the mayor's yearly proposed municipal budget, which can then be sent to referendum for approval by privately cast ballot.\n[4] Uddel is a village in the Netherlands, on the Veluwe, in the municipality of Apeldoorn, Gelderland, Netherlands.\n\nNotes:\n[verification] The mayor of Apeldoorn is John Berends."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "November 11, 2008",
+  "pred_answer": "November 11, 2008",
+  "normalized_gold": "november 11 2008",
+  "normalized_pred": "november 11 2008",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe942155429965af743f36",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe942155429965af743f36::You Belong with Me::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe942155429965af743f36::I Like It Like That (album)::7"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe942155429965af743f36::Fearless (Taylor Swift album)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe942155429965af743f36::You Belong with Me::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe942155429965af743f36::You Belong with Me",
+        "5abe942155429965af743f36::Fearless (Taylor Swift album)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe942155429965af743f36::You Belong with Me::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe942155429965af743f36::I Like It Like That (album)::7",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe942155429965af743f36::Fearless (Taylor Swift album)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe942155429965af743f36::You Belong with Me::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe942155429965af743f36::You Belong with Me::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was released on April 18, 2009, by Big Machine Records as the third single from Swift's second studio album, \"Fearless\" (2008).\n[2] The album was released on November 11, 2008, by Big Machine Records.\n[3] The new 1964 recordings \"I Like It Like That\", \"Would I love You\" and \"That's What Love Is Made Of\" were included on the only US Miracles 1964 album release \"Miracles Greatest Hits From The Beginning\" which was the first double album released by Motown Records.\n[4] \"You Belong with Me\" is a song performed by American singer-songwriter Taylor Swift."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

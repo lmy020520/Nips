@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Rinko Kikuchi",
+  "pred_answer": "Rinko Kikuchi",
+  "normalized_gold": "rinko kikuchi",
+  "normalized_pred": "rinko kikuchi",
+  "exact_match": true,
+  "context_exact_match": false,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7629ca554299109176e68f",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7629ca554299109176e68f::Norwegian Wood (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7629ca554299109176e68f::Rinko Kikuchi::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7629ca554299109176e68f::Wash West::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7629ca554299109176e68f::Norwegian Wood (film)",
+        "5a7629ca554299109176e68f::Rinko Kikuchi"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7629ca554299109176e68f::Norwegian Wood (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7629ca554299109176e68f::Rinko Kikuchi::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7629ca554299109176e68f::Wash West::6",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7629ca554299109176e68f::Wash West::6",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It went on to win many awards, especially for leading actress Julianne Moore, who won the SAG Award, the Independent Spirit Award, the BAFTA and the Academy Award for Best Actress.\n[2] For her role in the drama film \"Kumiko, the Treasure Hunter\" (2014), Kikuchi received an Independent Spirit Award nomination for Best Female Lead.\n[3] Norwegian Wood (ノルウェイの森 , Noruwei no mori ) is a 2010 Japanese romantic drama film directed by Tran Anh Hung, based on Haruki Murakami's novel of the same name."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

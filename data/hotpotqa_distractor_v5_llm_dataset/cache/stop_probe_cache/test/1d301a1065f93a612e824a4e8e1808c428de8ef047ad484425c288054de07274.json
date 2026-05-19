@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Eddie \"The Eagle\" Edwards",
+  "pred_answer": "Eddie \"The Eagle\" Edwards",
+  "normalized_gold": "eddie the eagle edwards",
+  "normalized_pred": "eddie the eagle edwards",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab28e2a5542993be8fa9947",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab28e2a5542993be8fa9947::Eddie &quot;The Eagle&quot; Edwards::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab28e2a5542993be8fa9947::The Jump::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab28e2a5542993be8fa9947::The Jump::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab28e2a5542993be8fa9947::Eddie &quot;The Eagle&quot; Edwards",
+        "5ab28e2a5542993be8fa9947::The Jump"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab28e2a5542993be8fa9947::Eddie &quot;The Eagle&quot; Edwards::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab28e2a5542993be8fa9947::The Jump::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab28e2a5542993be8fa9947::The Jump::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab28e2a5542993be8fa9947::The Jump::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Britain's first Olympic ski jumper, Eddie \"The Eagle\" Edwards, appears live on the show to demonstrate the ski jump.\n[2] The Jump is a British television series that follows celebrities as they try to master various winter sports including skeleton, bobsleigh, snowskates, ski cross, and giant slalom.\n[3] He became the British ski jumping record holder, ninth in amateur speed skiing (106.8 mph ), and a stunt jumping world record holder for jumping over 6 buses."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

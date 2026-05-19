@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "March 16, 1976",
+  "pred_answer": "March 16, 1976",
+  "normalized_gold": "march 16 1976",
+  "normalized_pred": "march 16 1976",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a990955429941d65f26e6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a990955429941d65f26e6::Hit 'Em Up Style (Oops!)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a990955429941d65f26e6::Hell on Earth (Mobb Deep album)::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a990955429941d65f26e6::Blu Cantrell::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a990955429941d65f26e6::Let the Beat Hit 'Em::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a990955429941d65f26e6::Hit 'Em Up Style (Oops!)",
+        "5a7a990955429941d65f26e6::Blu Cantrell"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a990955429941d65f26e6::Hit 'Em Up Style (Oops!)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a990955429941d65f26e6::Hell on Earth (Mobb Deep album)::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a990955429941d65f26e6::Blu Cantrell::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a990955429941d65f26e6::Let the Beat Hit 'Em::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a990955429941d65f26e6::Let the Beat Hit 'Em::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] On the US dance charts, \"Let the Beat Hit 'Em\" was the third and final number one for the group.\n[2] Blu Cantrell (born Tiffany Cobb; March 16, 1976) is an American R&B and soul singer-songwriter.\n[3] III\" and \"Hell on Earth (Front Lines),\" as well as \"Drop a Gem on 'Em,\" a response to 2Pac's diss track \"Hit 'Em Up.\"\n[4] \"Hit 'Em Up Style (Oops!)\""
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

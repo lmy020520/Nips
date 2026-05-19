@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Bugsy Siegel",
+  "pred_answer": "Bugsy Siegel",
+  "normalized_gold": "bugsy siegel",
+  "normalized_pred": "bugsy siegel",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab96cfc55429970cfb8eadc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab96cfc55429970cfb8eadc::The Bugs and Meyer Mob::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab96cfc55429970cfb8eadc::Morris Kessler::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab96cfc55429970cfb8eadc::Bugsy Siegel::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab96cfc55429970cfb8eadc::Cohen crime family::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab96cfc55429970cfb8eadc::The Bugs and Meyer Mob",
+        "5ab96cfc55429970cfb8eadc::Bugsy Siegel"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab96cfc55429970cfb8eadc::The Bugs and Meyer Mob::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab96cfc55429970cfb8eadc::Morris Kessler::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab96cfc55429970cfb8eadc::Bugsy Siegel::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab96cfc55429970cfb8eadc::Cohen crime family::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab96cfc55429970cfb8eadc::Cohen crime family::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Cohen crime family, or the Siegel crime syndicate, was an Italian-American Mafia / Jewish Mafia crime family created by New York Jewish American mobster Benjamin \"Bugsy\" Siegel in the early 1930s.\n[2] Benjamin \"Bugsy\" Siegel (February 28, 1906 – June 20, 1947) was a Jewish American mobster.\n[3] Morris L. Kessler (January 6, 1912 – September 30, 1935) was an American mobster and member of Joseph Amberg's gang in Brooklyn during the early 1930s.\n[4] The Bugs and Meyer mob acted as a predecessor to Murder, Inc."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

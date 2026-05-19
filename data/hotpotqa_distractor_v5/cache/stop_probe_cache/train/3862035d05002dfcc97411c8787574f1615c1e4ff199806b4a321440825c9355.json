@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Amélie",
+  "pred_answer": "Amélie",
+  "normalized_gold": "amélie",
+  "normalized_pred": "amélie",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8727f95542991e771816f9",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8727f95542991e771816f9::My Big Fat Independent Movie::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8727f95542991e771816f9::My Big Fat Greek Wedding 2::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8727f95542991e771816f9::My Big Fat Independent Movie::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8727f95542991e771816f9::Amélie::4"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8727f95542991e771816f9::Lainie Kazan::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8727f95542991e771816f9::My Big Fat Independent Movie",
+        "5a8727f95542991e771816f9::Amélie"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8727f95542991e771816f9::My Big Fat Independent Movie::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8727f95542991e771816f9::My Big Fat Greek Wedding 2::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8727f95542991e771816f9::My Big Fat Independent Movie::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8727f95542991e771816f9::Amélie::4",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8727f95542991e771816f9::Lainie Kazan::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8727f95542991e771816f9::Lainie Kazan::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] She was nominated for the 1988 Primetime Emmy Award for Outstanding Guest Actress in a Drama Series for \"St. Elsewhere\", and the 1993 Tony Award for Best Featured Actress in a Musical for \"My Favorite Year\".\n[2] Taking in over $33 million in a limited theatrical release, it is to date the highest-grossing French-language film released in the United States, and one of the biggest international successes for a French movie.\n[3] My Big Fat Independent Movie is a 2005 independent film produced, written and directed by former film critic Chris Gore spoofing well-known independent films, such as \"My Big Fat Greek Wedding\", \"Memento\", \"Swingers\", \"Pulp Fiction\", \"Magnolia\", \"Amélie\", \"Reservoir Dogs\", \"Pi\", \"The Good Girl\", \"Run Lola Run\", \"Clerks\" and \"El Mariachi\".\n[4] It is the sequel to \"My Big Fat Greek Wedding\", which was released in 2002."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

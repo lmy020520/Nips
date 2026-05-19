@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Eric Morecambe",
+  "pred_answer": "Eric Morecambe",
+  "normalized_gold": "eric morecambe",
+  "normalized_pred": "eric morecambe",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adea7b455429975fa854f4d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adea7b455429975fa854f4d::Jack Bartholomew::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adea7b455429975fa854f4d::Beaton (surname)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adea7b455429975fa854f4d::Eric Morecambe::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adea7b455429975fa854f4d::A Thanksgiving Surprise::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adea7b455429975fa854f4d::Jack Bartholomew",
+        "5adea7b455429975fa854f4d::Eric Morecambe"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adea7b455429975fa854f4d::Jack Bartholomew::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adea7b455429975fa854f4d::Beaton (surname)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adea7b455429975fa854f4d::Eric Morecambe::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adea7b455429975fa854f4d::A Thanksgiving Surprise::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adea7b455429975fa854f4d::A Thanksgiving Surprise::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] When Jack learns of his death, he is left penniless and is shunned by his friends, but assisted by the poor.\n[2] John Eric Bartholomew, OBE (14 May 1926 – 28 May 1984), known by his stage name Eric Morecambe, was an English comedian who together with Ernie Wise formed the award-winning double act Morecambe and Wise.\n[3] Beaton is a Scottish surname in the English language, which has multiple origins.\n[4] Jack Bartholomew was the uncle of the comedian Eric Morecambe (real name John Eric Bartholomew)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

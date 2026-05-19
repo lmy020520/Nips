@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1991",
+  "pred_answer": "1991",
+  "normalized_gold": "1991",
+  "normalized_pred": "1991",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac5201b5542994611c8b3bd",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac5201b5542994611c8b3bd::The Fault in Our Stars (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac5201b5542994611c8b3bd::The Fault in Our Stars::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac5201b5542994611c8b3bd::Shailene Woodley::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac5201b5542994611c8b3bd::Debby Boone::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac5201b5542994611c8b3bd::The Fault in Our Stars (film)",
+        "5ac5201b5542994611c8b3bd::Shailene Woodley"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac5201b5542994611c8b3bd::The Fault in Our Stars (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac5201b5542994611c8b3bd::The Fault in Our Stars::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac5201b5542994611c8b3bd::Shailene Woodley::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac5201b5542994611c8b3bd::Debby Boone::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac5201b5542994611c8b3bd::Debby Boone::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Deborah Anne \"Debby\" Boone (born September 22, 1956), is an American singer, author, and actress.\n[2] Shailene Diann Woodley (born November 15, 1991) is an American actress and activist.\n[3] The Fault in Our Stars is the sixth novel by author John Green, published in January 2012.\n[4] The Fault in Our Stars is a 2014 American romantic drama film directed by Josh Boone, based on the novel of the same name by John Green."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

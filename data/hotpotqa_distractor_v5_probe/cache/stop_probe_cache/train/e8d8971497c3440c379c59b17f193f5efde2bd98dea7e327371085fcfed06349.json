@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Thomas Ward Custer",
+  "pred_answer": "Thomas Ward Custer",
+  "normalized_gold": "thomas ward custer",
+  "normalized_pred": "thomas ward custer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac4c0ac5542997ea680cab0",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac4c0ac5542997ea680cab0::Boston Custer::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac4c0ac5542997ea680cab0::Thomas Custer::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac4c0ac5542997ea680cab0::John William Finn::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac4c0ac5542997ea680cab0::Boston Custer",
+        "5ac4c0ac5542997ea680cab0::Thomas Custer"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac4c0ac5542997ea680cab0::Boston Custer::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac4c0ac5542997ea680cab0::Thomas Custer::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac4c0ac5542997ea680cab0::John William Finn::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac4c0ac5542997ea680cab0::John William Finn::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] At the time of his death, Finn was the oldest living Medal of Honor recipient, the last living recipient from the attack on Pearl Harbor, and the last United States Navy recipient of World War II.\n[2] Thomas Ward Custer (March 15, 1845 – June 25, 1876) was a United States Army officer and two-time recipient of the Medal of Honor for bravery during the American Civil War.\n[3] Boston Custer (October 31, 1848 – June 25, 1876) was the youngest brother of U.S. Army Lt Colonel George Armstrong Custer and two-time Medal of Honor recipient Captain Thomas Custer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Girl of the Golden West",
+  "pred_answer": "The Girl of the Golden West",
+  "normalized_gold": "the girl of the golden west",
+  "normalized_pred": "the girl of the golden west",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7127ba5542994082a3e5e7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7127ba5542994082a3e5e7::La fanciulla del West::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7127ba5542994082a3e5e7::The Girl of the Golden West (1938 film)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7127ba5542994082a3e5e7::Louis Payne::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7127ba5542994082a3e5e7::La fanciulla del West",
+        "5a7127ba5542994082a3e5e7::The Girl of the Golden West (1938 film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7127ba5542994082a3e5e7::La fanciulla del West::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7127ba5542994082a3e5e7::The Girl of the Golden West (1938 film)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7127ba5542994082a3e5e7::Louis Payne::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7127ba5542994082a3e5e7::Louis Payne::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Belasco wrote the stage play of the same name on which the film is based, and in which Carter starred on Broadway.\n[2] It was adapted from the play of the same name by David Belasco, better known for providing the plot of the opera \"La fanciulla del West\" by Giacomo Puccini.\n[3] La fanciulla del West (\"The Girl of the West\") is an opera in three acts by Giacomo Puccini to an Italian libretto by and , based on the play \"The Girl of the Golden West\" by the American author David Belasco."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Darren Lynn Bousman",
+  "pred_answer": "Darren Lynn Bousman",
+  "normalized_gold": "darren lynn bousman",
+  "normalized_pred": "darren lynn bousman",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f95ff5542997ba9cb32dd",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f95ff5542997ba9cb32dd::Eric Matthews (Saw)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f95ff5542997ba9cb32dd::Saw IV::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f95ff5542997ba9cb32dd::Saw IV::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f95ff5542997ba9cb32dd::Eric Matthews (Saw)",
+        "5a8f95ff5542997ba9cb32dd::Saw IV"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f95ff5542997ba9cb32dd::Eric Matthews (Saw)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f95ff5542997ba9cb32dd::Saw IV::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f95ff5542997ba9cb32dd::Saw IV::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f95ff5542997ba9cb32dd::Saw IV::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It was directed by Darren Lynn Bousman and written by newcomers Marcus Dunstan, Patrick Melton, and Thomas Fenton.\n[2] Saw IV is a 2007 American-Canadian horror film and the fourth installment in the \"Saw\" franchise.\n[3] Detective Eric Matthews (originally scripted to be named Eric Mason) is a fictional character from the \"Saw\" franchise."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

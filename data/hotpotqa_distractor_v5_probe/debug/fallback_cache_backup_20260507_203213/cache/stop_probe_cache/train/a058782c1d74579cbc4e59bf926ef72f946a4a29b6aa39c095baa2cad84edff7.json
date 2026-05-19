@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "American",
+  "pred_answer": "American",
+  "normalized_gold": "american",
+  "normalized_pred": "american",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac00829554299012d1db57d",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac00829554299012d1db57d::Stephen F. Austin Lumberjacks football::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac00829554299012d1db57d::Reuben Hornsby::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac00829554299012d1db57d::Stephen F. Cohen::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac00829554299012d1db57d::Katrina vanden Heuvel::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac00829554299012d1db57d::Stephen F. Austin Lumberjacks football::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac00829554299012d1db57d::Stephen F. Cohen",
+        "5ac00829554299012d1db57d::Katrina vanden Heuvel"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac00829554299012d1db57d::Stephen F. Austin Lumberjacks football::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac00829554299012d1db57d::Reuben Hornsby::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac00829554299012d1db57d::Stephen F. Cohen::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac00829554299012d1db57d::Katrina vanden Heuvel::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac00829554299012d1db57d::Stephen F. Austin Lumberjacks football::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac00829554299012d1db57d::Stephen F. Austin Lumberjacks football::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] SFA's football team earned a berth into the FCS playoffs in 2009, which was the first for the university since 1995.\n[2] She has been the magazine's editor since 1995.\n[3] Cohen is also the founding director of the reestablished American Committee for East-West Accord.\n[4] Hornsby Bend was Stephen F. Austin's payment to Hornsby for his surveying contribution."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

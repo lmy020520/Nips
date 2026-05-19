@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Manitowoc County, Wisconsin",
+  "pred_answer": "Manitowoc County, Wisconsin",
+  "normalized_gold": "manitowoc county wisconsin",
+  "normalized_pred": "manitowoc county wisconsin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7dd8cb5542995f4f4022d0",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7dd8cb5542995f4f4022d0::Making a Murderer::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7dd8cb5542995f4f4022d0::Steven Avery::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7dd8cb5542995f4f4022d0::Juan Rivera (wrongful conviction)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7dd8cb5542995f4f4022d0::Making a Murderer",
+        "5a7dd8cb5542995f4f4022d0::Steven Avery"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7dd8cb5542995f4f4022d0::Making a Murderer::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7dd8cb5542995f4f4022d0::Steven Avery::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7dd8cb5542995f4f4022d0::Juan Rivera (wrongful conviction)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7dd8cb5542995f4f4022d0::Juan Rivera (wrongful conviction)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Juan A. Rivera, Jr. (born October 31, 1972) is an American man who was wrongfully convicted three times for the 1992 rape and murder of 11-year-old Holly Staker in Waukegan, Illinois.\n[2] Steven Avery (born July 9, 1962) is a man from Manitowoc County, Wisconsin, who was wrongfully convicted of sexual assault and attempted murder in 1985.\n[3] Making a Murderer is an American documentary television series that premiered on Netflix on December 18, 2015."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

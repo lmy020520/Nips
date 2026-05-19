@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "no",
+  "pred_answer": "no",
+  "normalized_gold": "no",
+  "normalized_pred": "no",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "yes_no_both_entities_supported",
+  "support_evidence_summary": "Sparta is from El Paso, Texas; Sister Hazel is from Gainesville, Florida. They are from different states.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "yes_no_both_entities_supported",
+    "support_evidence_summary": "Sparta is from El Paso, Texas; Sister Hazel is from Gainesville, Florida. They are from different states.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a80b75e5542992bc0c4a7d1",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a80b75e5542992bc0c4a7d1::Sister Hazel (album)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a80b75e5542992bc0c4a7d1::Sparta (band)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a80b75e5542992bc0c4a7d1::derived::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a80b75e5542992bc0c4a7d1::Sister Hazel::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a80b75e5542992bc0c4a7d1::...Somewhere More Familiar::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a80b75e5542992bc0c4a7d1::Sparta (band)",
+        "5a80b75e5542992bc0c4a7d1::Sister Hazel"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a80b75e5542992bc0c4a7d1::Sister Hazel (album)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a80b75e5542992bc0c4a7d1::Sparta (band)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a80b75e5542992bc0c4a7d1::Sister Hazel::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a80b75e5542992bc0c4a7d1::...Somewhere More Familiar::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a80b75e5542992bc0c4a7d1::derived::1",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a80b75e5542992bc0c4a7d1::...Somewhere More Familiar::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Sister Hazel is an alternative rock band from Gainesville, Florida, whose style also blends elements of jangle pop, folk rock, classic rock 'n' roll and southern rock.\n[2] ...Somewhere More Familiar is the second studio album by the American alternative rock band Sister Hazel, released in 1997 by Universal Records.\n[3] Sparta is an American rock band from El Paso, Texas, formed in 2001.\n[4] Sister Hazel is the self-titled and debut studio album by Sister Hazel.\n\nNotes:\n[bridge] Sister Hazel is an alternative rock band from Gainesville, Florida."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

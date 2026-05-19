@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Egypt",
+  "pred_answer": "Egypt",
+  "normalized_gold": "egypt",
+  "normalized_pred": "egypt",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7f41655542992e7d278ccb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7f41655542992e7d278ccb::Tahseen Bashir::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7f41655542992e7d278ccb::Ismail Fahmy::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7f41655542992e7d278ccb::Anwar Sadat::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7f41655542992e7d278ccb::Assassination of Anwar Sadat::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7f41655542992e7d278ccb::Tahseen Bashir",
+        "5a7f41655542992e7d278ccb::Anwar Sadat"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7f41655542992e7d278ccb::Tahseen Bashir::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7f41655542992e7d278ccb::Ismail Fahmy::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7f41655542992e7d278ccb::Anwar Sadat::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7f41655542992e7d278ccb::Assassination of Anwar Sadat::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7f41655542992e7d278ccb::Assassination of Anwar Sadat::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Anwar Sadat, the President of Egypt, was assassinated during the annual victory parade held in Cairo to celebrate Operation Badr, during which the Egyptian Army had crossed the Suez Canal and taken back a small part of the Sinai Peninsula from Israel at the beginning of the Yom Kippur War.\n[2] Sadat was a senior member of the Free Officers who overthrew King Farouk in the Egyptian Revolution of 1952, and a close confidant of President Gamal Abdel Nasser, under whom he served as Vice President twice and whom he succeeded as President in 1970.\n[3] He resigned from the government in 1977 to protest Anwar Sadat's visit to Jerusalem.\n[4] Tahseen Bashir, or Tahsin Basheer, (April 1925 – June 11, 2002) was an Egyptian diplomat who served as both a confidant and spokesman for several Egyptian presidents, including Gamal Nasser and Anwar Sadat."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

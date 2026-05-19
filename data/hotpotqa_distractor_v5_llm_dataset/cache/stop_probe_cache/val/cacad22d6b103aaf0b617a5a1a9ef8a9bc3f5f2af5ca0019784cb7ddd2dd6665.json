@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1939",
+  "pred_answer": "1939",
+  "normalized_gold": "1939",
+  "normalized_pred": "1939",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a793d6a554299029c4b5f34",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a793d6a554299029c4b5f34::Guggenheim Museum SoHo::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a793d6a554299029c4b5f34::Fulcrum Gallery::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a793d6a554299029c4b5f34::Solomon R. Guggenheim Museum::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a793d6a554299029c4b5f34::Terry Fugate-Wilcox::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a793d6a554299029c4b5f34::Guggenheim Museum SoHo",
+        "5a793d6a554299029c4b5f34::Solomon R. Guggenheim Museum"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a793d6a554299029c4b5f34::Guggenheim Museum SoHo::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a793d6a554299029c4b5f34::Fulcrum Gallery::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a793d6a554299029c4b5f34::Solomon R. Guggenheim Museum::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a793d6a554299029c4b5f34::Terry Fugate-Wilcox::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a793d6a554299029c4b5f34::Terry Fugate-Wilcox::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He was co-organizer of the Fulcrum Gallery (AKA Fvlcrvm Gallery, AKA Shakespeare's Fvlcrvm) located in the basement of the SoHo Branch of the Guggenheim Museum until both sites closed in 2002 in part due to the economic effects arising from the September 11 attacks on SoHo and TriBeCa.\n[2] The museum was established by the Solomon R. Guggenheim Foundation in 1939 as the Museum of Non-Objective Painting, under the guidance of its first director, the artist Hilla von Rebay.\n[3] Fulcrum Gallery (also known as \"Shakespeare's Fvlcrvm\" or \"Fvlcrvm\") was an American art gallery that opened underneath the Guggenheim Museum SoHo in New York City in January 1993, by Valerie Monroe Shakespeare.\n[4] The Guggenheim Museum SoHo was a branch of the Guggenheim Museum designed by Arata Isozaki that was located at the corner of Broadway and Prince Street in Manhattan's SoHo neighborhood, New York City."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

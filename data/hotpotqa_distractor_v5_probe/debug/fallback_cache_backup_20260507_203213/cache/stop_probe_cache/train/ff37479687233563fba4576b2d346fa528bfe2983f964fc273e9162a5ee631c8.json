@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "115 miles",
+  "pred_answer": "115 miles",
+  "normalized_gold": "115 miles",
+  "normalized_pred": "115 miles",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab82e075542990e739ec859",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab82e075542990e739ec859::329th Combat Crew Training Squadron::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab82e075542990e739ec859::84th Combat Sustainment Group::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab82e075542990e739ec859::Castle Air Force Base::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab82e075542990e739ec859::338th Combat Crew Training Squadron::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab82e075542990e739ec859::329th Combat Crew Training Squadron",
+        "5ab82e075542990e739ec859::Castle Air Force Base"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab82e075542990e739ec859::329th Combat Crew Training Squadron::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab82e075542990e739ec859::84th Combat Sustainment Group::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab82e075542990e739ec859::Castle Air Force Base::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab82e075542990e739ec859::338th Combat Crew Training Squadron::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab82e075542990e739ec859::338th Combat Crew Training Squadron::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 338th Combat Crew Training Squadron is a currently inactive United States Air Force unit.\n[2] Castle Air Force Base (1941–1995) is a former United States Air Force Strategic Air Command base located northeast of Atwater, northwest of Merced and about 115 miles (185 km) south of Sacramento, California.\n[3] The 84th Combat Sustainment Group is an inactive United States Air Force (USAF) group last assigned to the 84th Combat Sustainment Wing at Hill Air Force Base, Utah, where it was inactivated in 2010.\n[4] The 329th Combat Crew Training Squadron is an inactive United States Air Force unit."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

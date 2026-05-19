@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Dartmouth",
+  "pred_answer": "Dartmouth",
+  "normalized_gold": "dartmouth",
+  "normalized_pred": "dartmouth",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a87209e5542996432c57224",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a87209e5542996432c57224::A Yellow Raft in Blue Water::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a87209e5542996432c57224::Michael Dorris::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a87209e5542996432c57224::Tiya Alicia Miles::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a87209e5542996432c57224::A Yellow Raft in Blue Water",
+        "5a87209e5542996432c57224::Michael Dorris"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a87209e5542996432c57224::A Yellow Raft in Blue Water::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a87209e5542996432c57224::Michael Dorris::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a87209e5542996432c57224::Tiya Alicia Miles::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a87209e5542996432c57224::Tiya Alicia Miles::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] She is a professor at the University of Michigan in the Program in American Culture, Center for Afro-American and African Studies, Department of History, and Native American Studies Program.\n[2] Michael Anthony Dorris (January 30, 1945 – April 10, 1997) was an American novelist and scholar who was the first Chair of the Native American Studies program at Dartmouth.\n[3] A Yellow Raft in Blue Water is the debut novel of author Michael Dorris, published in 1987."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

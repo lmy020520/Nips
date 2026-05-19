@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Albus Dumbledore",
+  "pred_answer": "Albus Dumbledore",
+  "normalized_gold": "albus dumbledore",
+  "normalized_pred": "albus dumbledore",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1ce1e5542997f29b3c118",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1ce1e5542997f29b3c118::Severus Snape::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1ce1e5542997f29b3c118::Korean Patriotic Organization::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1ce1e5542997f29b3c118::Order of the Phoenix (fictional organisation)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae1ce1e5542997f29b3c118::Severus Snape::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1ce1e5542997f29b3c118::Severus Snape",
+        "5ae1ce1e5542997f29b3c118::Order of the Phoenix (fictional organisation)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1ce1e5542997f29b3c118::Severus Snape::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1ce1e5542997f29b3c118::Korean Patriotic Organization::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1ce1e5542997f29b3c118::Order of the Phoenix (fictional organisation)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae1ce1e5542997f29b3c118::Severus Snape::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1ce1e5542997f29b3c118::Severus Snape::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Though philosophically attracted to the Dark Arts and Lord Voldemort's ideology of wizard supremacy, Snape's love for Muggle-born Lily Evans, Harry's mother, eventually compels him to defect from the Death Eaters.\n[2] Founded by Albus Dumbledore to fight Lord Voldemort and his followers, the Death Eaters, the Order lends its name to the fifth book of the series, \"Harry Potter and the Order of the Phoenix\".\n[3] The Korean Patriotic Organization was founded by Kim Gu, president of the Provisional Government of the Republic of Korea.\n[4] Snape becomes a double-agent on behalf of Albus Dumbledore and the Order of the Phoenix, and protects Harry throughout the series."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

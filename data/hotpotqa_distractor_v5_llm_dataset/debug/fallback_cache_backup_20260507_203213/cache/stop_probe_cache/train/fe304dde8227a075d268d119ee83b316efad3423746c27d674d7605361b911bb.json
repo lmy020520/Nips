@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": ".50 BMG",
+  "pred_answer": ".50 BMG",
+  "normalized_gold": "50 bmg",
+  "normalized_pred": "50 bmg",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1d7135542997283cd228b",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1d7135542997283cd228b::M2 Browning::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1d7135542997283cd228b::.50 BMG::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1d7135542997283cd228b::7.62×45mm::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1d7135542997283cd228b::M2 Browning",
+        "5ae1d7135542997283cd228b::.50 BMG"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1d7135542997283cd228b::M2 Browning::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1d7135542997283cd228b::.50 BMG::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1d7135542997283cd228b::7.62×45mm::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1d7135542997283cd228b::7.62×45mm::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The 7.62×45mm (designated as the 7,62 × 45 by the C.I.P.) is a rimless bottlenecked intermediate rifle cartridge developed in Czechoslovakia.\n[2] The .50 Browning Machine Gun (.50 BMG, 12.7×99mm NATO and designated as the 50 Browning by the C.I.P.) is a cartridge developed for the Browning .50 caliber machine gun in the late 1910s.\n[3] The M2 uses the much larger and much more powerful .50 BMG cartridge, which was developed alongside and takes its name from the gun itself (BMG standing for \"Browning Machine Gun\")."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "George Archainbaud",
+  "pred_answer": "George Archainbaud",
+  "normalized_gold": "george archainbaud",
+  "normalized_pred": "george archainbaud",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a455c5542994f819ef1a7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a455c5542994f819ef1a7::Ralph Murphy::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a455c5542994f819ef1a7::Arthur Roberts (editor)::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a455c5542994f819ef1a7::George Archainbaud::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a455c5542994f819ef1a7::Criminal Lawyer::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a455c5542994f819ef1a7::Ralph Murphy",
+        "5a7a455c5542994f819ef1a7::George Archainbaud"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a455c5542994f819ef1a7::Ralph Murphy::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a455c5542994f819ef1a7::Arthur Roberts (editor)::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a455c5542994f819ef1a7::George Archainbaud::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a455c5542994f819ef1a7::Criminal Lawyer::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a455c5542994f819ef1a7::Criminal Lawyer::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was the second time Stevens' story had been used for a film, the first being 1932's State's Attorney, starring John Barrymore and Helen Twelvetrees, directed by George Archainbaud, and also produced and released by RKO.\n[2] George Archainbaud (May 7, 1890 – February 20, 1959) was a French-born American film and television director.\n[3] During his career he would work with many famous directors, including Frank Capra (on several films, including \"The Donovan Affair\"), Lowell Sherman (on \"The Royal Bed\"), William Seiter (on several films, including \"Way Back Home\"), Edward Cline (on \"Cracked Nuts\"), George Cukor (\"A Bill of Divorcement\"), Dorothy Arzner (the first female member of the DGA, on \"Christopher Strong\"), Anthony Mann (\"\n[4] Ralph Murphy (May 1, 1895 – February 10, 1967) was an American film director."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

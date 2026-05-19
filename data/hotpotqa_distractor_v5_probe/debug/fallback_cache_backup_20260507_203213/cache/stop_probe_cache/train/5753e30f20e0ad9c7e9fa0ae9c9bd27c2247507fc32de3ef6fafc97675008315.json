@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Melbourne City Centre",
+  "pred_answer": "Melbourne City Centre",
+  "normalized_gold": "melbourne city centre",
+  "normalized_pred": "melbourne city centre",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4bd1955429960a22e018a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4bd1955429960a22e018a::Roy Shepherd (pianist)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4bd1955429960a22e018a::University of Melbourne Faculty of VCA and MCM::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4bd1955429960a22e018a::Lynn Freeman Olson::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4bd1955429960a22e018a::Roy Shepherd (pianist)",
+        "5ae4bd1955429960a22e018a::University of Melbourne Faculty of VCA and MCM"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4bd1955429960a22e018a::Roy Shepherd (pianist)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4bd1955429960a22e018a::University of Melbourne Faculty of VCA and MCM::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4bd1955429960a22e018a::Lynn Freeman Olson::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4bd1955429960a22e018a::Lynn Freeman Olson::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He was himself a piano teacher and had many students over the years.\n[2] VCAMCM is located near the Melbourne City Centre, on two campuses: one – the Melbourne Conservatorium of Music (MCM) – on the Parkville campus of the University of Melbourne, and the other – the Victorian College of the Arts (VCA) – on St Kilda Road, at Southbank.\n[3] Roy Shepherd MBE (190720 June 1986) was an Australian pianist who is most renowned as a piano teacher at the University of Melbourne Conservatorium."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

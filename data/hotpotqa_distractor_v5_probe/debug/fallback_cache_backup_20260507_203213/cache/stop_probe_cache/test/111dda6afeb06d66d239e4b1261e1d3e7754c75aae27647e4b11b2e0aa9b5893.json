@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Oracle Corporation",
+  "pred_answer": "Oracle Corporation",
+  "normalized_gold": "oracle corporation",
+  "normalized_pred": "oracle corporation",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0111e55429906c02daabc",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0111e55429906c02daabc::Sapho (software)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0111e55429906c02daabc::Kyle York (entrepreneur)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0111e55429906c02daabc::Dyn (company)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0111e55429906c02daabc::Aditya Julka::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0111e55429906c02daabc::Kyle York (entrepreneur)",
+        "5ae0111e55429906c02daabc::Dyn (company)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0111e55429906c02daabc::Sapho (software)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0111e55429906c02daabc::Kyle York (entrepreneur)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0111e55429906c02daabc::Dyn (company)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0111e55429906c02daabc::Aditya Julka::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0111e55429906c02daabc::Aditya Julka::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In July 2016, Paddle8 announced a merger with Auctionata, with Julka serving as the Chief Strategy Officer for the joint company.\n[2] The company was acquired by Oracle Corporation in 2016.\n[3] York is an executive at Dyn, currently serving as Chief Strategy Officer.\n[4] Sapho is a venture-backed enterprise application infrastructure company based in San Francisco, California, that was founded in 2014 by Fouad ElNaggar, the former of Chief Strategy Officer of CBS Interactive, Peter Yared, the former Chief Technology Officer and Chief Information Officer at CBS Interactive, and Charles Christolini, the former VP Architecture of CBS Interactive."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

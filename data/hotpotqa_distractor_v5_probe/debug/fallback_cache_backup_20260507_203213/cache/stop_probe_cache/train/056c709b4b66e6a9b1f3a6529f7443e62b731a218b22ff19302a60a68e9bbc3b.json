@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "enemy aircraft",
+  "pred_answer": "enemy aircraft",
+  "normalized_gold": "enemy aircraft",
+  "normalized_pred": "enemy aircraft",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abc7b8f5542993a06baf8ee",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abc7b8f5542993a06baf8ee::Interceptor aircraft::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abc7b8f5542993a06baf8ee::Nakajima Ki-87::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abc7b8f5542993a06baf8ee::Nakajima Ki-84::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abc7b8f5542993a06baf8ee::Interceptor aircraft",
+        "5abc7b8f5542993a06baf8ee::Nakajima Ki-87"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abc7b8f5542993a06baf8ee::Interceptor aircraft::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abc7b8f5542993a06baf8ee::Nakajima Ki-87::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abc7b8f5542993a06baf8ee::Nakajima Ki-84::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abc7b8f5542993a06baf8ee::Nakajima Ki-84::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Nakajima Ki-84 \"Hayate\" (キ84 疾風\"Gale\" ) was a single-seat fighter flown by the Imperial Japanese Army Air Service in the last three years of World War II.\n[2] The Nakajima Ki-87 was a Japanese high-altitude fighter-interceptor of World War II.\n[3] An interceptor aircraft, or simply interceptor, is a type of fighter aircraft designed specifically to attack enemy aircraft, particularly bombers and reconnaissance aircraft, as they approach."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

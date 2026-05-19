@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "George Raft",
+  "pred_answer": "George Raft",
+  "normalized_gold": "george raft",
+  "normalized_pred": "george raft",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b678b55429931da12ca8e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b678b55429931da12ca8e::Jet Over the Atlantic::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b678b55429931da12ca8e::George Raft::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b678b55429931da12ca8e::Michael Ande::11"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b678b55429931da12ca8e::Jet Over the Atlantic",
+        "5a7b678b55429931da12ca8e::George Raft"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b678b55429931da12ca8e::Jet Over the Atlantic::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b678b55429931da12ca8e::George Raft::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b678b55429931da12ca8e::Michael Ande::11",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b678b55429931da12ca8e::Michael Ande::11",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Michael also played in two German films about the Trapp family: \"Die Trapp-Familie\" (1956) and \"Die Trapp-Familie in Amerika\" (1958).\n[2] A stylish leading man in dozens of movies, today Raft is mostly known for his gangster roles in the original \"Scarface\" (1932), \"Each Dawn I Die\" (1939), and Billy Wilder's 1959 comedy \"Some Like it Hot\", as a dancer in \"Bolero\" (1934), and a truck driver in \"They Drive by Night\" (1940).\n[3] Jet Over the Atlantic (also known as High Over the Atlantic) is a 1959 drama film directed by Byron Haskin and stars Guy Madison, Virginia Mayo, and George Raft."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

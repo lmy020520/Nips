@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Transbay Tower",
+  "pred_answer": "Transbay Tower",
+  "normalized_gold": "transbay tower",
+  "normalized_pred": "transbay tower",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae8147f55429952e35ea9fd",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae8147f55429952e35ea9fd::Wilshire Grand Center::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae8147f55429952e35ea9fd::U.S. Bank Tower (Los Angeles)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae8147f55429952e35ea9fd::Salesforce Tower::5"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae8147f55429952e35ea9fd::Salesforce Tower::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae8147f55429952e35ea9fd::Wilshire Grand Center",
+        "5ae8147f55429952e35ea9fd::Salesforce Tower"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae8147f55429952e35ea9fd::Wilshire Grand Center::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae8147f55429952e35ea9fd::U.S. Bank Tower (Los Angeles)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae8147f55429952e35ea9fd::Salesforce Tower::5",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae8147f55429952e35ea9fd::Salesforce Tower::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae8147f55429952e35ea9fd::Salesforce Tower::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Salesforce Tower, formerly known as the Transbay Tower, is a 1070 ft office skyscraper under construction in the South of Market district of downtown San Francisco.\n[2] With a top roof height of 970 ft and an overall height of 1070 ft , it will be the second-tallest building west of the Mississippi River after the Wilshire Grand Center in Los Angeles.\n[3] It is the third tallest building in California, the second tallest building in LA, the fifteenth tallest in the United States, the third tallest west of the Mississippi River after the Salesforce Tower and the Wilshire Grand Center, and the 92nd tallest building in the world, after being surpassed by the Wilshire Grand Center.\n[4] It is the tallest building in Los Angeles, the tallest building in California, the tallest building west of the Mississippi River and outside of New York City and Chicago and the 9th tallest building in the United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Glacier County",
+  "pred_answer": "Glacier County",
+  "normalized_gold": "glacier county",
+  "normalized_pred": "glacier county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1086b554299422ee995d8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1086b554299422ee995d8::Albert Racine::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1086b554299422ee995d8::Montana County, Kansas Territory::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1086b554299422ee995d8::Browning, Montana::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae1086b554299422ee995d8::Racine County Sheriff::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1086b554299422ee995d8::Albert Racine",
+        "5ae1086b554299422ee995d8::Browning, Montana"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1086b554299422ee995d8::Albert Racine::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1086b554299422ee995d8::Montana County, Kansas Territory::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1086b554299422ee995d8::Browning, Montana::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae1086b554299422ee995d8::Racine County Sheriff::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1086b554299422ee995d8::Racine County Sheriff::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The current sheriff is Christopher Schmaling, a Republican who was first elected in 2010.\n[2] Browning (originally Browning Indian Agency) is a town in Glacier County, Montana.\n[3] Montana County was a county of the United States Territory of Kansas that existed from February 2, 1859 to January 29, 1861, when Kansas joined the Union as a state.\n[4] Albert Batiste (Apowmuckon or \"Running Weasel\") Racine (April 19, 1907 – 1984) was a Blackfoot artist from Browning, Montana in the United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

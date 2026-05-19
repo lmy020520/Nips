@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Emile Ardolino",
+  "pred_answer": "Emile Ardolino",
+  "normalized_gold": "emile ardolino",
+  "normalized_pred": "emile ardolino",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abccee255429959677d6aeb",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abccee255429959677d6aeb::Isle of Forgotten Sins::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abccee255429959677d6aeb::Bluebeard (1944 film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abccee255429959677d6aeb::Emile Ardolino::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abccee255429959677d6aeb::Edgar G. Ulmer::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abccee255429959677d6aeb::Hannibal (1959 film)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abccee255429959677d6aeb::Emile Ardolino",
+        "5abccee255429959677d6aeb::Edgar G. Ulmer"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abccee255429959677d6aeb::Isle of Forgotten Sins::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abccee255429959677d6aeb::Bluebeard (1944 film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abccee255429959677d6aeb::Emile Ardolino::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abccee255429959677d6aeb::Edgar G. Ulmer::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abccee255429959677d6aeb::Hannibal (1959 film)::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abccee255429959677d6aeb::Hannibal (1959 film)::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The film was directed by Edgar G. Ulmer and Carlo Ludovico Bragaglia.\n[2] Edgar Georg Ulmer () (September 17, 1904 – September 30, 1972) was a Jewish-Moravian, Austrian-American film director who mainly worked on Hollywood B movies and other low-budget productions.\n[3] Emile Ardolino (May 9, 1943 – November 20, 1993) was an American film director, choreographer, and producer, best known for his films \"Dirty Dancing\" (1987) and \"Sister Act\" (1992).\n[4] Bluebeard is a 1944 film noir directed by Edgar G. Ulmer, starring John Carradine in the title role."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

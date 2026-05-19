@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "east of Warrington",
+  "pred_answer": "east of Warrington",
+  "normalized_gold": "east of warrington",
+  "normalized_pred": "east of warrington",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a90228455429933b8a20484",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a90228455429933b8a20484::City Line (Merseyrail)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a90228455429933b8a20484::Rainhill railway station::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a90228455429933b8a20484::Liverpool–Manchester lines::4"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a90228455429933b8a20484::Strategic Training Route Complex::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a90228455429933b8a20484::City Line (Merseyrail)",
+        "5a90228455429933b8a20484::Liverpool–Manchester lines"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a90228455429933b8a20484::City Line (Merseyrail)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a90228455429933b8a20484::Rainhill railway station::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a90228455429933b8a20484::Liverpool–Manchester lines::4",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a90228455429933b8a20484::Strategic Training Route Complex::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a90228455429933b8a20484::Strategic Training Route Complex::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Strategic Training Route Complex is a series of training routes operated by the United States Strategic Command where bomber aircraft are able to train using tactics for low-level flight.\n[2] The fourth route, the most southerly, is largely abandoned east of Warrington with the remaining section mostly catering for freight trains.\n[3] The station, and all trains serving it, are operated by Northern on behalf of Merseytravel and are branded as Merseyrail services.\n[4] Although it is branded under the Merseyrail name, the routes are operated by Northern on behalf of Merseytravel rather than by the Merseyrail franchise."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

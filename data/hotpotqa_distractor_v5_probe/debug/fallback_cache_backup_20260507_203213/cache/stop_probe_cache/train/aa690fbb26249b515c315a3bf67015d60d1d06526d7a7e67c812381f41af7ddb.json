@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Anaconda",
+  "pred_answer": "Anaconda",
+  "normalized_gold": "anaconda",
+  "normalized_pred": "anaconda",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81ea785542995ce29dcc7a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81ea785542995ce29dcc7a::The Milk of Sorrow::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81ea785542995ce29dcc7a::Anaconda (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81ea785542995ce29dcc7a::Jon Voight::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81ea785542995ce29dcc7a::Angelina Jolie filmography::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81ea785542995ce29dcc7a::Anaconda (film)",
+        "5a81ea785542995ce29dcc7a::Jon Voight"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81ea785542995ce29dcc7a::The Milk of Sorrow::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81ea785542995ce29dcc7a::Anaconda (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81ea785542995ce29dcc7a::Jon Voight::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a81ea785542995ce29dcc7a::Angelina Jolie filmography::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a81ea785542995ce29dcc7a::Angelina Jolie filmography::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Angelina Jolie is an American actress and filmmaker.\n[2] He is the father of actress Angelina Jolie and actor James Haven.\n[3] Anaconda is a 1997 adventure horror film by Peruvian director Luis Llosa, starring Jennifer Lopez, Ice Cube, Jon Voight, Eric Stoltz, Jonathan Hyde and Owen Wilson.\n[4] The Milk of Sorrow (Spanish: \"La Teta Asustada\" , The frightened teat) is a 2009 film by Peruvian director Claudia Llosa and co-produced by Peru and Spain."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

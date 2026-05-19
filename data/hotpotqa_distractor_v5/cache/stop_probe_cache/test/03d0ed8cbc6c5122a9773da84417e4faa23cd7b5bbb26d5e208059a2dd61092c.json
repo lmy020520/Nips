@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Gender and Social Issues",
+  "pred_answer": "Gender and Social Issues",
+  "normalized_gold": "gender and social issues",
+  "normalized_pred": "gender and social issues",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adf94e05542995534e8c7f7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adf94e05542995534e8c7f7::Mary Karooro Okurut::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adf94e05542995534e8c7f7::Gender::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adf94e05542995534e8c7f7::Gender &amp; History::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adf94e05542995534e8c7f7::Mary Karooro Okurut",
+        "5adf94e05542995534e8c7f7::Gender"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adf94e05542995534e8c7f7::Mary Karooro Okurut::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adf94e05542995534e8c7f7::Gender::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adf94e05542995534e8c7f7::Gender &amp; History::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adf94e05542995534e8c7f7::Gender &amp; History::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It is an important academic journal for articles relating to the history of femininity, masculinity, and gender relations.\n[2] Gender is the range of characteristics pertaining to, and differentiating between, masculinity and femininity.\n[3] Between 2012 and 2015, she served as the Minister of Gender and Social Issues in the Cabinet of Uganda."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

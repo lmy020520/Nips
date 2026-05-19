@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fred Smoot",
+  "pred_answer": "Fred Smoot",
+  "normalized_gold": "fred smoot",
+  "normalized_pred": "fred smoot",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add6d385542995b365fab2b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add6d385542995b365fab2b::Minnesota Vikings boat party scandal::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add6d385542995b365fab2b::Buddy Elrod::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add6d385542995b365fab2b::Fred Smoot::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5add6d385542995b365fab2b::Scott Suber::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add6d385542995b365fab2b::Minnesota Vikings boat party scandal",
+        "5add6d385542995b365fab2b::Fred Smoot"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add6d385542995b365fab2b::Minnesota Vikings boat party scandal::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add6d385542995b365fab2b::Buddy Elrod::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add6d385542995b365fab2b::Fred Smoot::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5add6d385542995b365fab2b::Scott Suber::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add6d385542995b365fab2b::Scott Suber::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He attended Mississippi State University and played college football at the guard position for the Mississippi State Bulldogs football team under head coach Darrell Royal.\n[2] He played college football for Mississippi State University, and was recognized as an All-American.\n[3] He attended the Mississippi State University and played college football for the Mississippi State Bulldogs football team.\n[4] On October 6, 2005, an alleged sex party occurred on Lake Minnetonka with seventeen key members of the Minnesota Vikings football team; including quarterback Daunte Culpepper, Fred Smoot, Mewelde Moore, Pat Williams, Bryant McKinnie, Nate Burleson, Ralph Brown, Jermaine Wiggins, Troy Williamson (who was then beginning his rookie season), Travis Taylor, Kevin Williams, Lance Johnstone, Moe Williams"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

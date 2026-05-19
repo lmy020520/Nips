@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Citizens for a Sound Economy",
+  "pred_answer": "Citizens for a Sound Economy",
+  "normalized_gold": "citizens for a sound economy",
+  "normalized_pred": "citizens for a sound economy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab266b5554299340b5254b4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab266b5554299340b5254b4::Moneybomb::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab266b5554299340b5254b4::Finnish presidential election, 1978::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab266b5554299340b5254b4::Ron Paul::6"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab266b5554299340b5254b4::Finnish presidential election, 1931::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab266b5554299340b5254b4::Moneybomb",
+        "5ab266b5554299340b5254b4::Ron Paul"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab266b5554299340b5254b4::Moneybomb::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab266b5554299340b5254b4::Finnish presidential election, 1978::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab266b5554299340b5254b4::Ron Paul::6",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab266b5554299340b5254b4::Finnish presidential election, 1931::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab266b5554299340b5254b4::Finnish presidential election, 1931::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The result was a victory for Pehr Evind Svinhufvud, who won on the third ballot by just two votes.\n[2] Paul was the first chairman of the conservative PAC Citizens for a Sound Economy and has been characterized as the \"intellectual godfather\" of the Tea Party movement.\n[3] Two-stage presidential elections were held in Finland in 1978, the first since 1968 after Urho Kekkonen's term was extended by four years by Parliament.\n[4] The term was coined by Trevor Lyman to describe a massive coordinated online donation drive on behalf of presidential candidate Ron Paul, in which context the \"San Jose Mercury News\" described a moneybomb as being \"a one-day fundraising frenzy\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

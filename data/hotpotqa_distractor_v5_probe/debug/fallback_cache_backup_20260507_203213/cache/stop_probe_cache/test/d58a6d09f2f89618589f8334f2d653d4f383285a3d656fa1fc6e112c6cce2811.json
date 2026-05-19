@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1000 Elm Street",
+  "pred_answer": "1000 Elm Street",
+  "normalized_gold": "1000 elm street",
+  "normalized_pred": "1000 elm street",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a860d09554299211dda2a53",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a860d09554299211dda2a53::Pittsburg-Chartierville Border Crossing::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a860d09554299211dda2a53::Brady Sullivan Plaza::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a860d09554299211dda2a53::Brady Sullivan Plaza::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a860d09554299211dda2a53::City Hall Plaza (Manchester)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a860d09554299211dda2a53::U.S. Bank Tower (Los Angeles)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a860d09554299211dda2a53::Brady Sullivan Plaza",
+        "5a860d09554299211dda2a53::City Hall Plaza (Manchester)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a860d09554299211dda2a53::Pittsburg-Chartierville Border Crossing::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a860d09554299211dda2a53::Brady Sullivan Plaza::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a860d09554299211dda2a53::Brady Sullivan Plaza::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a860d09554299211dda2a53::City Hall Plaza (Manchester)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a860d09554299211dda2a53::U.S. Bank Tower (Los Angeles)::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a860d09554299211dda2a53::U.S. Bank Tower (Los Angeles)::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It is also the third tallest building in a major active seismic region; its structure was designed to resist an earthquake of 8.3 on the Richter scale.\n[2] City Hall Plaza, City Hall Plaza Tower or 900 Elm Street (U.S. Route 3), is a prominent 275 ft office tower in Manchester, New Hampshire.\n[3] Brady Sullivan Plaza, formerly known as the Hampshire Plaza, is a 259 ft , 20-story high-rise located at 1000 Elm Street, Manchester, New Hampshire.\n[4] For 20 years, from its completion in 1972 until the completion of the 275 ft One City Hall Plaza at 900 Elm Street in 1992, it was the tallest building in the U.S. state of New Hampshire and in northern New England."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

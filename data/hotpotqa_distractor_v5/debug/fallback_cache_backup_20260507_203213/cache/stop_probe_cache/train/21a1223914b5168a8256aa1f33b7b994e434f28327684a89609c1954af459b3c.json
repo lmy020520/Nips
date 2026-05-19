@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "gladiolus",
+  "pred_answer": "gladiolus",
+  "normalized_gold": "gladiolus",
+  "normalized_pred": "gladiolus",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8a2ff85542992d82986eea",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8a2ff85542992d82986eea::Frank Neuhauser::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8a2ff85542992d82986eea::Scripps National Spelling Bee::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8a2ff85542992d82986eea::Pranav Sivakumar::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8a2ff85542992d82986eea::Frank Neuhauser",
+        "5a8a2ff85542992d82986eea::Scripps National Spelling Bee"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8a2ff85542992d82986eea::Frank Neuhauser::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8a2ff85542992d82986eea::Scripps National Spelling Bee::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8a2ff85542992d82986eea::Pranav Sivakumar::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8a2ff85542992d82986eea::Pranav Sivakumar::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] In 2013, he finished 2nd in the 86th Scripps National Spelling Bee, finished 2nd in the Illinois State Geography Bee, and was named a Siemens Competition National Semifinalist, making him the only person to achieve all these feats in a span of one year.\n[2] The Scripps National Spelling Bee (formerly the Scripps Howard National Spelling Bee and commonly called the National Spelling Bee) is an annual spelling bee held in the United States.\n[3] Frank Louis Neuhauser (September 29, 1913 – March 11, 2011) was an American patent lawyer and spelling bee champion, who won the first National Spelling Bee in 1925 by successfully spelling the word \"gladiolus.\""
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

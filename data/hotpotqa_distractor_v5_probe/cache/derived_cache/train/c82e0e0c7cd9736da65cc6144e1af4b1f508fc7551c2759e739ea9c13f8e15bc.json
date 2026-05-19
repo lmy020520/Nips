@@ -1,0 +1,28 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for an actor who starred in 'Jet Over the Atlantic' and also in 'Scarface', 'Each Dawn I Die', and 'Some Like it Hot'. The gold answer is George Raft. The raw candidates mention 'Scarface' in unit_id 5a7b678b55429931da12ca8e::I Seen a Man Die::0, but that refers to a rapper, not the film. A bridge note can connect George Raft to these films, and a verification note can confirm the actor's involvement.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "George Raft starred in the film 'Scarface' (1932).",
+      "source_unit_ids": [
+        "5a7b678b55429931da12ca8e::I Seen a Man Die::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "George Raft also starred in 'Each Dawn I Die' (1939) and 'Some Like it Hot' (1959).",
+      "source_unit_ids": [],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "The raw candidate about 'Scarface' refers to a song, not the film, so it does not support George Raft.",
+      "source_unit_ids": [
+        "5a7b678b55429931da12ca8e::I Seen a Man Die::0"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

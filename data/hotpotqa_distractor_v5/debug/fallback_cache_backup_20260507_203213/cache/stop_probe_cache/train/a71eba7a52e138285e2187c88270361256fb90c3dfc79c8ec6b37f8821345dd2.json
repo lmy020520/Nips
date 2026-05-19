@@ -1,0 +1,100 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Providence Hospital",
+  "pred_answer": "Providence Hospital",
+  "normalized_gold": "providence hospital",
+  "normalized_pred": "providence hospital",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74402b55429974ef308bc6",
+    "t": 4,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74402b55429974ef308bc6::National Rehabilitation Hospital (Dublin)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74402b55429974ef308bc6::Heritage Hospital::9"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74402b55429974ef308bc6::Providence Hospital (Washington, D.C.)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74402b55429974ef308bc6::Providence Hospital (Washington, D.C.)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a74402b55429974ef308bc6::MedStar National Rehabilitation Hospital::0"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5a74402b55429974ef308bc6::Children's National Medical Center::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74402b55429974ef308bc6::Providence Hospital (Washington, D.C.)",
+        "5a74402b55429974ef308bc6::MedStar National Rehabilitation Hospital"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74402b55429974ef308bc6::National Rehabilitation Hospital (Dublin)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74402b55429974ef308bc6::Heritage Hospital::9",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74402b55429974ef308bc6::Providence Hospital (Washington, D.C.)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74402b55429974ef308bc6::Providence Hospital (Washington, D.C.)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a74402b55429974ef308bc6::MedStar National Rehabilitation Hospital::0",
+          "added_step": 4
+        },
+        {
+          "unit_id": "5a74402b55429974ef308bc6::Children's National Medical Center::1",
+          "added_step": 5
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74402b55429974ef308bc6::Children's National Medical Center::1",
+      "last_updated_step": 5
+    },
+    "K_t": "Evidence:\n[1] Located just north of the McMillan Reservoir and Howard University, it shares grounds with Washington Hospital Center, National Rehabilitation Hospital, and the DC Veterans Affairs Medical Center.\n[2] MedStar National Rehabilitation Network (MedStar NRH) is located in Washington, D.C., and specializes in treating persons with physical disabilities, including spinal cord injury, brain injury, stroke, arthritis, amputation, multiple sclerosis, post-polio syndrome, orthopedic, and other neurological conditions.\n[3] Providence Hospital is a 408 bed hospital located in the District of Columbia.\n[4] Founded in 1861, it is the longest continuously operating hospital in the District."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

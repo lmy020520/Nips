@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1900",
+  "pred_answer": "1900",
+  "normalized_gold": "1900",
+  "normalized_pred": "1900",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2dc22554299677310263c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2dc22554299677310263c::Reginald Burchell::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2dc22554299677310263c::Geoffry Hurry::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2dc22554299677310263c::Division of North Sydney::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2dc22554299677310263c::John Lynch (Australian politician)::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2dc22554299677310263c::Geoffry Hurry",
+        "5ac2dc22554299677310263c::Division of North Sydney"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2dc22554299677310263c::Reginald Burchell::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2dc22554299677310263c::Geoffry Hurry::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2dc22554299677310263c::Division of North Sydney::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2dc22554299677310263c::John Lynch (Australian politician)::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2dc22554299677310263c::John Lynch (Australian politician)::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Lynch was one of the Labor members who followed Prime Minister Billy Hughes when he left the Labor Party in 1916 and formed the Nationalist Party with the Liberals.\n[2] It was proclaimed in 1900 and was one of the original 75 federation divisions contested at the first federal election.\n[3] In 1922, he was elected to the Australian House of Representatives as the Nationalist member for Bendigo, succeeding Prime Minister Billy Hughes, who transferred to North Sydney, and defeating Edmund Jowett, the Country Party member for the abolished seat of Grampians.\n[4] In 1916, he joined Prime Minister Billy Hughes in leaving the Labor Party over the issue of conscription, joining Hughes' new National Labor Party."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

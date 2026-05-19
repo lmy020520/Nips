@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Darby O'Gill and the Little People",
+  "pred_answer": "Darby O'Gill and the Little People",
+  "normalized_gold": "darby ogill and the little people",
+  "normalized_pred": "darby ogill and the little people",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85edae5542997b5ce40035",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85edae5542997b5ce40035::Albert Sharpe::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85edae5542997b5ce40035::Walt Disney's Treasury of Classic Tales::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85edae5542997b5ce40035::Darby O'Gill and the Little People::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85edae5542997b5ce40035::Big Red (film)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a85edae5542997b5ce40035::Little People::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85edae5542997b5ce40035::Darby O'Gill and the Little People",
+        "5a85edae5542997b5ce40035::Big Red (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85edae5542997b5ce40035::Albert Sharpe::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85edae5542997b5ce40035::Walt Disney's Treasury of Classic Tales::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85edae5542997b5ce40035::Darby O'Gill and the Little People::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85edae5542997b5ce40035::Big Red (film)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a85edae5542997b5ce40035::Little People::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85edae5542997b5ce40035::Little People::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Little People is a for children ages 6–36 months and to ages 3 and up, originally produced by Fisher-Price, Inc. in the 1960s as the Play Family People.\n[2] Big Red is a 1962 American family-oriented adventure film from Walt Disney Productions.\n[3] Darby O'Gill and the Little People is a 1959 Walt Disney Productions feature film starring Albert Sharpe, Janet Munro, Sean Connery and Jimmy O'Dea, in a tale about a wily Irishman and his battle of wits with leprechauns.\n[4] Each story adapted a different Disney film, such as Darby O'Gill and the Little People, Peter Pan, or Davy Crockett."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

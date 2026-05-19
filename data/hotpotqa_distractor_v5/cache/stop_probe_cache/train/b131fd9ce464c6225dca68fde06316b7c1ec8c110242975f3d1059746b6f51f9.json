@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Margaret Theresa of Spain",
+  "pred_answer": "Margaret Theresa of Spain",
+  "normalized_gold": "margaret theresa of spain",
+  "normalized_pred": "margaret theresa of spain",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae536475542993aec5ec17e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae536475542993aec5ec17e::Infanta Margarita Teresa in a Pink Dress::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae536475542993aec5ec17e::Infanta Margarita Teresa in a Blue Dress::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae536475542993aec5ec17e::Margaret Theresa of Spain::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae536475542993aec5ec17e::Las Meninas (film)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae536475542993aec5ec17e::Infanta Margarita Teresa in a Pink Dress",
+        "5ae536475542993aec5ec17e::Margaret Theresa of Spain"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae536475542993aec5ec17e::Infanta Margarita Teresa in a Pink Dress::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae536475542993aec5ec17e::Infanta Margarita Teresa in a Blue Dress::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae536475542993aec5ec17e::Margaret Theresa of Spain::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae536475542993aec5ec17e::Las Meninas (film)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae536475542993aec5ec17e::Las Meninas (film)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Its title alludes to the well-known painting by Diego Velázquez, \"Las Meninas\".\n[2] Daughter of King Philip IV of Spain and elder full-sister of Charles II, the last of the Spanish Habsburgs, she is the central figure in the famous \"Las Meninas\" by Diego Velázquez, and subject of many of his later paintings.\n[3] Infanta Margarita Teresa in a Blue Dress is one of the best known portraits by Spanish painter Diego Velázquez.\n[4] Infanta Margarita Teresa in a Pink Dress is a 1660 oil on canvas portrait of Margaret Theresa of Spain by the Spanish painter Diego Velázquez, though his identification as its author is not considered secure."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Thunder",
+  "pred_answer": "Thunder",
+  "normalized_gold": "thunder",
+  "normalized_pred": "thunder",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84cea25542997b5ce3ff69",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84cea25542997b5ce3ff69::Animal Rap::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84cea25542997b5ce3ff69::Kublai Khan (song)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84cea25542997b5ce3ff69::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a84cea25542997b5ce3ff69::Arturo Gatti::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a84cea25542997b5ce3ff69::A History of Violence (album)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84cea25542997b5ce3ff69::Animal Rap",
+        "5a84cea25542997b5ce3ff69::Arturo Gatti"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84cea25542997b5ce3ff69::Animal Rap::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84cea25542997b5ce3ff69::Kublai Khan (song)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84cea25542997b5ce3ff69::Arturo Gatti::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a84cea25542997b5ce3ff69::A History of Violence (album)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a84cea25542997b5ce3ff69::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a84cea25542997b5ce3ff69::A History of Violence (album)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The song was the second single released from the duo's third album \"Visions of Gandhi\", following \"Animal Rap\", and followed by \"Rise of the Machines\".\n[2] A History of Violence is the sixth album by Philadelphia hip hop group Jedi Mind Tricks, released on November 11, 2008 on Babygrande Records.\n[3] Arturo Gatti (April 15, 1972 – July 11, 2009) was an Italian Canadian professional boxer who competed from 1991 to 2007.\n[4] \"Kublai Khan\" is a single by Hip Hop duo Jedi Mind Tricks, released in 2003 through Babygrande Records .\n\nNotes:\n[bridge] The song 'Animal Rap' by Jedi Mind Tricks is named after the nickname of Italian Canadian boxer 'Thunder'."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

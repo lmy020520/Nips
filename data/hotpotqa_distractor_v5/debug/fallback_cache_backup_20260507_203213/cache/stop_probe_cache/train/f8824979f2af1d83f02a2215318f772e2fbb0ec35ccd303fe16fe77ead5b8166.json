@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Loughborough University",
+  "pred_answer": "Loughborough University",
+  "normalized_gold": "loughborough university",
+  "normalized_pred": "loughborough university",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f54eb5542992414482a5a",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f54eb5542992414482a5a::Matthew Lambley::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f54eb5542992414482a5a::Texas State Bobcats::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f54eb5542992414482a5a::Matthew Lambley::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8f54eb5542992414482a5a::Loughborough University::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8f54eb5542992414482a5a::Nido Qubein::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f54eb5542992414482a5a::Matthew Lambley",
+        "5a8f54eb5542992414482a5a::Loughborough University"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f54eb5542992414482a5a::Matthew Lambley::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f54eb5542992414482a5a::Texas State Bobcats::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f54eb5542992414482a5a::Matthew Lambley::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8f54eb5542992414482a5a::Loughborough University::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8f54eb5542992414482a5a::Nido Qubein::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f54eb5542992414482a5a::Nido Qubein::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Since 2005 when Qubein became the seventh president of High Point University, he has led a transformation that has nearly tripled the number of faculty, tripled traditional undergraduate enrollment, and added four academic schools.\n[2] It has been a university since 1966, but the institution dates back to 1909, when the then Loughborough Technical Institute began with a focus on skills and knowledge which would be directly applicable in the wider world.\n[3] After completing his A-levels he moved to Loughborough University and then The University of Huddersfield.\n[4] Note: The records listed below are as of the end of the 2009–2010 academic year.The Bobcat has been the mascot of Texas State University since 1921, when the university adopted the name from the recommendation of a committee formed to raise school spirit."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

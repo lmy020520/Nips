@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Five Point Someone",
+  "pred_answer": "Five Point Someone",
+  "normalized_gold": "five point someone",
+  "normalized_pred": "five point someone",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7fc69d5542992097ad2fc0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7fc69d5542992097ad2fc0::Mona Singh::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7fc69d5542992097ad2fc0::Naya Roop Nayi Zindagi::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7fc69d5542992097ad2fc0::3 Idiots::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7fc69d5542992097ad2fc0::What Young India Wants::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7fc69d5542992097ad2fc0::Mona Singh",
+        "5a7fc69d5542992097ad2fc0::3 Idiots"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7fc69d5542992097ad2fc0::Mona Singh::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7fc69d5542992097ad2fc0::Naya Roop Nayi Zindagi::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7fc69d5542992097ad2fc0::3 Idiots::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7fc69d5542992097ad2fc0::What Young India Wants::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7fc69d5542992097ad2fc0::What Young India Wants::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] What Young India Wants is a non-fiction book by Chetan Bhagat.\n[2] It was inspired by the novel \"Five Point Someone\" by Chetan Bhagat.\n[3] It is anchored by Mona Singh, popularly known as Jassi.\n[4] Singh is known for playing the leading roles of Jassi (Jasmeet Walia) in \"Jassi Jaissi Koi Nahin\", Mona Pradeep Singh in \"Kya Huaa Tera Vaada\", winning the show \"Jhalak Dikhhla Jaa\", and also for her role in the film \"3 Idiots\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

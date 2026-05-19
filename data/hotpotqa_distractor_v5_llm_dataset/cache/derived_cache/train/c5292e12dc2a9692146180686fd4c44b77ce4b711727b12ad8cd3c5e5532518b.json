@@ -1,0 +1,22 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the animal after which the mascot is the second-heaviest cat. The state summary indicates the cougar is second-heaviest after the jaguar, but we need to confirm the mascot is a cougar and that the jaguar is the heaviest. The raw candidates provide relevant information: unit_id 5a7d22085542995ed0d165ff::Cougar::5 mentions the jaguar is native to the Americas, and unit_id 5a7d22085542995ed0d165ff::Community School of Davidson::1 mentions a different mascot, but we need to find the correct school. However, the provided raw candidates do not include the Cross County Community School. We can derive a verification note to check if the mascot is a cougar and a bridge note to link the cougar to the jaguar as the heaviest.",
+  "derived_candidates": [
+    {
+      "type": "verification_note",
+      "text": "The cougar is the second-heaviest cat in the New World after the jaguar.",
+      "source_unit_ids": [
+        "5a7d22085542995ed0d165ff::Cougar::5"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "The school's mascot is the cougar, which is the second-heaviest cat after the jaguar.",
+      "source_unit_ids": [
+        "5a7d22085542995ed0d165ff::Cougar::5"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

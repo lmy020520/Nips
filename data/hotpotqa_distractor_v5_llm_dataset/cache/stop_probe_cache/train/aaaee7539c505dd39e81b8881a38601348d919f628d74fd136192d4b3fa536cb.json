@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Nocturnal Animals",
+  "pred_answer": "Nocturnal Animals",
+  "normalized_gold": "nocturnal animals",
+  "normalized_pred": "nocturnal animals",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abb1cba5542996cc5e49faf",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abb1cba5542996cc5e49faf::Tom Ford::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abb1cba5542996cc5e49faf::Valmont (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abb1cba5542996cc5e49faf::Tom Ford::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abb1cba5542996cc5e49faf::A Single Man::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abb1cba5542996cc5e49faf::Arthur Newman (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abb1cba5542996cc5e49faf::Tom Ford",
+        "5abb1cba5542996cc5e49faf::A Single Man"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abb1cba5542996cc5e49faf::Tom Ford::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abb1cba5542996cc5e49faf::Valmont (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abb1cba5542996cc5e49faf::Tom Ford::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abb1cba5542996cc5e49faf::A Single Man::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abb1cba5542996cc5e49faf::Arthur Newman (film)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abb1cba5542996cc5e49faf::Arthur Newman (film)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Arthur Newman (stylized as Arthur & Mike in the United Kingdom) is a 2012 American dramatic comedy film directed by Dante Ariola and starring Colin Firth and Emily Blunt.\n[2] It is directed by Tom Ford in his directorial debut and stars Colin Firth, who was nominated for an Academy Award for Best Actor for his portrayal of George Falconer, a depressed gay British university professor living in Southern California in 1962.\n[3] Ford directed the Oscar-nominated films \"A Single Man\" (2009) and \"Nocturnal Animals\" (2016).\n[4] Valmont is a 1989 French-American drama film directed by Miloš Forman and starring Colin Firth, Annette Bening, and Meg Tilly."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

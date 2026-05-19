@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Orange",
+  "pred_answer": "Orange",
+  "normalized_gold": "orange",
+  "normalized_pred": "orange",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8af17355429950cd6afc25",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8af17355429950cd6afc25::Walferdange Castle::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8af17355429950cd6afc25::Osborne House::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8af17355429950cd6afc25::William I of the Netherlands::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8af17355429950cd6afc25::Kinlochaline Castle::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8af17355429950cd6afc25::Walferdange Castle",
+        "5a8af17355429950cd6afc25::William I of the Netherlands"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8af17355429950cd6afc25::Walferdange Castle::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8af17355429950cd6afc25::Osborne House::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8af17355429950cd6afc25::William I of the Netherlands::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8af17355429950cd6afc25::Kinlochaline Castle::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8af17355429950cd6afc25::Kinlochaline Castle::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is also known as Caisteal an Ime (Scottish Gaelic for \"Castle of Butter\") because a Lady of Clan MacInnes, Dubh Chal (Lady of the Black Veil), is said to have paid the builder with butter equal to the volume of the castle.\n[2] William I (Willem Frederik, Prince of Orange-Nassau; 24 August 1772 – 12 December 1843) was a Prince of Orange and the first King of the Netherlands and Grand Duke of Luxembourg.\n[3] The builder was Thomas Cubitt, the London architect and builder whose company built the main façade of Buckingham Palace for the royal couple in 1847.\n[4] Walferdange Castle (French: \"Château de Walferdange\" ), located in the small town of Walferdange in central Luxembourg, dates from 1824 when William I of the Netherlands who was also Grand Duke of Luxembourg built it as a stud farm."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

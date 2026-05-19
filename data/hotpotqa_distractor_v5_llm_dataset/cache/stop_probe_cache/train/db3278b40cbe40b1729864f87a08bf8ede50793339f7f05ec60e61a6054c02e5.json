@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "April 9, 1914",
+  "pred_answer": "April 9, 1914",
+  "normalized_gold": "april 9 1914",
+  "normalized_pred": "april 9 1914",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae145ea5542997b2ef7d19e",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae145ea5542997b2ef7d19e::New York-class battleship::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae145ea5542997b2ef7d19e::United States occupation of Veracruz::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae145ea5542997b2ef7d19e::USS Valley Forge (CV-45)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae145ea5542997b2ef7d19e::New York-class battleship",
+        "5ae145ea5542997b2ef7d19e::United States occupation of Veracruz"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae145ea5542997b2ef7d19e::New York-class battleship::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae145ea5542997b2ef7d19e::United States occupation of Veracruz::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae145ea5542997b2ef7d19e::USS Valley Forge (CV-45)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae145ea5542997b2ef7d19e::USS Valley Forge (CV-45)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] USS \"Valley Forge\" (CV/CVA/CVS-45, LPH-8) was one of 24 \"Essex\"-class aircraft carrier s built during and shortly after World War II for the United States Navy.\n[2] The United States occupation of Veracruz began with the Battle of Veracruz and lasted for seven months, as a response to the Tampico Affair of April 9, 1914.\n[3] The \"New York\" class of battleship was a class of ships designed and constructed by the United States Navy between 1908 and 1914."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

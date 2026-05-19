@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hong Kong",
+  "pred_answer": "Hong Kong",
+  "normalized_gold": "hong kong",
+  "normalized_pred": "hong kong",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a665455429941d65f261a",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a665455429941d65f261a::Waterfall Bay, Hong Kong::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a665455429941d65f261a::Wah Fu Estate::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a665455429941d65f261a::Wah Fu::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a665455429941d65f261a::Hong Kong::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7a665455429941d65f261a::Kellett Bay::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a665455429941d65f261a::Wah Fu",
+        "5a7a665455429941d65f261a::Hong Kong"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a665455429941d65f261a::Waterfall Bay, Hong Kong::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a665455429941d65f261a::Wah Fu Estate::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a665455429941d65f261a::Wah Fu::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a665455429941d65f261a::Hong Kong::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7a665455429941d65f261a::Kellett Bay::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a665455429941d65f261a::Kellett Bay::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Kellett Bay (), or Kai Lung Wan () is a bay on southwestern Hong Kong Island in Hong Kong.\n[2] Hong Kong, officially the Hong Kong Special Administrative Region of the People's Republic of China, is an autonomous territory south to Mainland China and east to Macao in East Asia.\n[3] Wah Fu (] ) is an area located in Southern District, on Hong Kong Island, Hong Kong.\n[4] Wah Fu Estate () is a public housing estate located next to Waterfall Bay, Pok Fu Lam in Hong Kong's Southern District."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

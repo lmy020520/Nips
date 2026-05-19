@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Pablo Honey",
+  "pred_answer": "Pablo Honey",
+  "normalized_gold": "pablo honey",
+  "normalized_pred": "pablo honey",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abeee275542993fe9a41da2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abeee275542993fe9a41da2::Frank Bennett (singer)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abeee275542993fe9a41da2::High and Dry::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abeee275542993fe9a41da2::Creep (Radiohead song)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abeee275542993fe9a41da2::Lir (band)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abeee275542993fe9a41da2::Frank Bennett (singer)",
+        "5abeee275542993fe9a41da2::Creep (Radiohead song)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abeee275542993fe9a41da2::Frank Bennett (singer)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abeee275542993fe9a41da2::High and Dry::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abeee275542993fe9a41da2::Creep (Radiohead song)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abeee275542993fe9a41da2::Lir (band)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abeee275542993fe9a41da2::Lir (band)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Their sound has been described as \"a fusion of funky progressive rock, folky mysticism and savvy pop\".\n[2] \"Creep\" is a song by the English alternative rock band Radiohead, released as their debut single in 1992; it appeared on their first album, \"Pablo Honey\" (1993).\n[3] \"High and Dry\" is a song by the English alternative rock band Radiohead, released as the first single from their second studio album \"The Bends\" (1995).\n[4] He is known for his big band renditions of rock and pop singles, including \"Creep\" by Radiohead, \"Better Man\" by Pearl Jam, and \"Under the Bridge\" by the Red Hot Chili Peppers."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,32 @@
+{
+  "should_derive": true,
+  "reason": "The recent probe feedback indicates a false stop with answer conflict, and the derive_goal is to bridge query entity to answer candidate. Current evidence lacks explicit profession information for John Lanchester, and the derived notes can help organize raw evidence to clarify professions and support answer correction.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Alan Dean Foster is described as an American writer of fantasy and science fiction in the provided evidence.",
+      "source_unit_ids": [
+        "5a8b42be55429949d91db515::Alan Dean Foster::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "Multiple science fiction novels by Alan Dean Foster are listed, reinforcing his profession as a writer.",
+      "source_unit_ids": [
+        "5a8b42be55429949d91db515::Orphan Star::0",
+        "5a8b42be55429949d91db515::The Deluge Drivers::0",
+        "5a8b42be55429949d91db515::Sentenced to Prism::0"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "The evidence for John Lanchester does not explicitly state his profession, requiring further information to compare with Alan Dean Foster.",
+      "source_unit_ids": [
+        "5a8b42be55429949d91db515::John Lanchester::1"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

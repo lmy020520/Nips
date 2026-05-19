@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Erich Friedrich Wilhelm Ludendorff",
+  "pred_answer": "Erich Friedrich Wilhelm Ludendorff",
+  "normalized_gold": "erich friedrich wilhelm ludendorff",
+  "normalized_pred": "erich friedrich wilhelm ludendorff",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a807683554299485f5985fb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a807683554299485f5985fb::Operation Michael::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a807683554299485f5985fb::Victor Sellheim::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a807683554299485f5985fb::Erich Ludendorff::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a807683554299485f5985fb::Erich Ludendorff::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a807683554299485f5985fb::Operation Michael",
+        "5a807683554299485f5985fb::Erich Ludendorff"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a807683554299485f5985fb::Operation Michael::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a807683554299485f5985fb::Victor Sellheim::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a807683554299485f5985fb::Erich Ludendorff::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a807683554299485f5985fb::Erich Ludendorff::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a807683554299485f5985fb::Erich Ludendorff::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Erich Friedrich Wilhelm Ludendorff (9 April 1865 – 20 December 1937) was a German general, the victor of the Battle of Liège and the Battle of Tannenberg.\n[2] From August 1916, his appointment as Quartermaster general (\"Erster Generalquartiermeister\") made him the leader (along with Paul von Hindenburg) of the German war efforts during World War I until his resignation in October 1918, just before the end of hostilities.\n[3] After serving in a variety of staff positions, he became Quartermaster general of the Australian Military Forces in 1912 and two years later was Adjutant general.\n[4] Operation \"Michael\" was a major German military offensive during the First World War that began the Spring Offensive on 21 March 1918."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

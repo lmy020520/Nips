@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Benjamin \"Bugsy\" Siegel",
+  "pred_answer": "Benjamin \"Bugsy\" Siegel",
+  "normalized_gold": "benjamin bugsy siegel",
+  "normalized_pred": "benjamin bugsy siegel",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac54dce5542993e66e822e4",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac54dce5542993e66e822e4::Bugsy Siegel::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac54dce5542993e66e822e4::Easy Street (book)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac54dce5542993e66e822e4::Bugsy Siegel::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac54dce5542993e66e822e4::David Berman (mobster)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac54dce5542993e66e822e4::Guy F. Tozzoli::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac54dce5542993e66e822e4::Bugsy Siegel",
+        "5ac54dce5542993e66e822e4::David Berman (mobster)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac54dce5542993e66e822e4::Bugsy Siegel::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac54dce5542993e66e822e4::Easy Street (book)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac54dce5542993e66e822e4::Bugsy Siegel::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac54dce5542993e66e822e4::David Berman (mobster)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac54dce5542993e66e822e4::Guy F. Tozzoli::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac54dce5542993e66e822e4::Guy F. Tozzoli::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] As such he was the driving force behind the development of the World Trade Center.\n[2] He was one of the pioneers of gambling in Las Vegas, where he was a partner with flamboyant mobster Bugsy Siegel at the Flamingo Hotel.\n[3] Benjamin \"Bugsy\" Siegel (February 28, 1906 – June 20, 1947) was a Jewish American mobster.\n[4] Easy Street: The True Story of a Mob Family (1981) is the first memoir of Susan Berman, daughter of Las Vegas mobster David Berman."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

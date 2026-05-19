@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Randal Kleiser",
+  "pred_answer": "Randal Kleiser",
+  "normalized_gold": "randal kleiser",
+  "normalized_pred": "randal kleiser",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc897b554299438c868de3",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc897b554299438c868de3::Honey, I Blew Up the Kid::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc897b554299438c868de3::Honey, We Shrunk Ourselves::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc897b554299438c868de3::Eve Gordon::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc897b554299438c868de3::Honey, I Blew Up the Kid",
+        "5adc897b554299438c868de3::Honey, We Shrunk Ourselves"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc897b554299438c868de3::Honey, I Blew Up the Kid::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc897b554299438c868de3::Honey, We Shrunk Ourselves::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc897b554299438c868de3::Eve Gordon::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc897b554299438c868de3::Eve Gordon::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] She also starred in the 1997 film \"Honey, We Shrunk Ourselves\", starring opposite Rick Moranis.\n[2] Honey, We Shrunk Ourselves is a 1997 live-action direct-to-video sequel to \"Honey, I Shrunk the Kids\" and \"Honey, I Blew Up the Kid\".\n[3] Directed by Randal Kleiser and released by Walt Disney Pictures, the film stars Rick Moranis, Marcia Strassman, Robert Oliveri and Amy O'Neill, who reprise their roles as Wayne, Diane, Nick, and Amy Szalinski respectively, as well as newcomer Keri Russell as Mandy Park, Nick's love interest and babysitter of Adam, the Szalinskis' new two-year-old son, whose accidental exposure to Wayne's new indus"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

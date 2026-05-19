@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Canadian",
+  "pred_answer": "Canadian",
+  "normalized_gold": "canadian",
+  "normalized_pred": "canadian",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a89edd35542992e4fca8489",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a89edd35542992e4fca8489::Desmond Miles::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a89edd35542992e4fca8489::Sam Fisher (Splinter Cell)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a89edd35542992e4fca8489::Michael Ironside::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a89edd35542992e4fca8489::Tom Clancy's Splinter Cell: Conviction::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a89edd35542992e4fca8489::Sam Fisher (Splinter Cell)",
+        "5a89edd35542992e4fca8489::Michael Ironside"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a89edd35542992e4fca8489::Desmond Miles::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a89edd35542992e4fca8489::Sam Fisher (Splinter Cell)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a89edd35542992e4fca8489::Michael Ironside::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a89edd35542992e4fca8489::Tom Clancy's Splinter Cell: Conviction::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a89edd35542992e4fca8489::Tom Clancy's Splinter Cell: Conviction::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] This was Michael Ironside's final voice performance as Sam Fisher.\n[2] Frederick Reginald Ironside (born February 12, 1950) is a Canadian actor best known by his stage name Michael Ironside.\n[3] Fisher was originally voiced by veteran actor Michael Ironside in the first five installments of the series.\n[4] Desmond Miles is a fictional character and the main protagonist of the frame story uniting the first five installments in the \"Assassin's Creed\" series of video games."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

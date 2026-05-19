@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "David Bodanis",
+  "pred_answer": "David Bodanis",
+  "normalized_gold": "david bodanis",
+  "normalized_pred": "david bodanis",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab86fce55429916710eb04f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab86fce55429916710eb04f::Émilie du Châtelet::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab86fce55429916710eb04f::Isaac Newton::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab86fce55429916710eb04f::Passionate Minds::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab86fce55429916710eb04f::Dick Turpin::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab86fce55429916710eb04f::Émilie du Châtelet",
+        "5ab86fce55429916710eb04f::Passionate Minds"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab86fce55429916710eb04f::Émilie du Châtelet::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab86fce55429916710eb04f::Isaac Newton::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab86fce55429916710eb04f::Passionate Minds::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab86fce55429916710eb04f::Dick Turpin::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab86fce55429916710eb04f::Dick Turpin::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Turpin may have followed his father's trade as a butcher early in his life but, by the early 1730s, he had joined a gang of deer thieves and, later, became a poacher, burglar, horse thief and killer.\n[2] Passionate Minds: The Great Enlightenment Love Affair is a 2006 book by author David Bodanis.\n[3] Sir Isaac Newton {'1': \", '2': \", '3': \", '4': \"} ( ; 25 December 1642 – 20 March 1726/27) was an English mathematician, astronomer, and physicist (described in his own day as a \"natural philosopher\") who is widely recognised as one of the most influential scientists of all time and a key figure in the scientific revolution.\n[4] Gabrielle Émilie Le Tonnelier de Breteuil, Marquise Du Châtelet (] ; 17 December 1706  – 10 September 1749) was a French natural philosopher, mathematician, physicist, and author during the early 1730s until her untimely death due to childbirth in 1749."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

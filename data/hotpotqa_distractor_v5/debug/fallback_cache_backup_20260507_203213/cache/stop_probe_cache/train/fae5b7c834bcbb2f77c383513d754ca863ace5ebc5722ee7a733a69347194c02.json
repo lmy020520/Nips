@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1910",
+  "pred_answer": "1910",
+  "normalized_gold": "1910",
+  "normalized_pred": "1910",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac0799d5542996f0d89cbed",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac0799d5542996f0d89cbed::Excursions (Barber)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac0799d5542996f0d89cbed::Frühlingsrauschen::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac0799d5542996f0d89cbed::Samuel Barber::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac0799d5542996f0d89cbed::Piano Sonata No. 5 (Prokofiev)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac0799d5542996f0d89cbed::Excursions (Barber)",
+        "5ac0799d5542996f0d89cbed::Samuel Barber"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac0799d5542996f0d89cbed::Excursions (Barber)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac0799d5542996f0d89cbed::Frühlingsrauschen::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac0799d5542996f0d89cbed::Samuel Barber::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac0799d5542996f0d89cbed::Piano Sonata No. 5 (Prokofiev)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac0799d5542996f0d89cbed::Piano Sonata No. 5 (Prokofiev)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Sergei Prokofiev's Piano Sonata no. 5 in C major, Op. 38 (1923) and Op. 135 (revised 1952-53) is a sonata for solo piano.\n[2] Samuel Osborne Barber II (March 9, 1910 – January 23, 1981) was an American composer of orchestral, opera, choral, and piano music.\n[3] Frühlingsrauschen, Op. 32, No. 3 (Rustle of Spring) is a solo piano piece written by the Norwegian composer Christian Sinding (1856–1941) in 1896.\n[4] Excursions, Op. 20, is the first published solo piano piece by Samuel Barber."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

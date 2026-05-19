@@ -1,0 +1,96 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "44th",
+  "pred_answer": "2006",
+  "normalized_gold": "44th",
+  "normalized_pred": "2006",
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "The question asks for the number of the later film of Fantasia and Brother Bear. The gold answer is '44th', but the pred answer is '2006'. The selected chunks show that Fantasia is the third Disney animated feature film and Brother Bear is the 44th. However, the question asks for the number of the later film, which would be the film that came later in time. Fantasia (1940) is earlier than Brother Bear (2003), so the later film is Brother Bear, which is the 44th. But the pred answer '2006' is not supported as a number. The evidence does not support the pred answer.",
+  "missing_support_reasons": [
+    "The pred answer '2006' is not a number and is not supported by the evidence. The evidence shows Brother Bear is the 44th Disney animated feature film, but the pred answer does not match."
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "The question asks for the number of the later film of Fantasia and Brother Bear. The gold answer is '44th', but the pred answer is '2006'. The selected chunks show that Fantasia is the third Disney animated feature film and Brother Bear is the 44th. However, the question asks for the number of the later film, which would be the film that came later in time. Fantasia (1940) is earlier than Brother Bear (2003), so the later film is Brother Bear, which is the 44th. But the pred answer '2006' is not supported as a number. The evidence does not support the pred answer.",
+    "missing_support_reasons": [
+      "The pred answer '2006' is not a number and is not supported by the evidence. The evidence shows Brother Bear is the 44th Disney animated feature film, but the pred answer does not match."
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5a85935f5542992a431d1b30",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85935f5542992a431d1b30::The Big Honey Hunt::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85935f5542992a431d1b30::Brother Bear (soundtrack)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85935f5542992a431d1b30::Brother Bear::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85935f5542992a431d1b30::Fantasia (1940 film)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a85935f5542992a431d1b30::Brother Bear 2::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85935f5542992a431d1b30::Brother Bear",
+        "5a85935f5542992a431d1b30::Fantasia (1940 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85935f5542992a431d1b30::The Big Honey Hunt::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85935f5542992a431d1b30::Brother Bear (soundtrack)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85935f5542992a431d1b30::Brother Bear::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85935f5542992a431d1b30::Fantasia (1940 film)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a85935f5542992a431d1b30::Brother Bear 2::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85935f5542992a431d1b30::Brother Bear 2::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Brother Bear 2 is a 2006 American animated comedy-drama film and the direct-to-video sequel to the animated feature \"Brother Bear\", which was released on August 29, 2006.\n[2] Fantasia is a 1940 American animated film produced by Walt Disney and released by Walt Disney Productions.\n[3] In the film, an Inuit boy named Kenai pursues a bear in revenge for a battle that he provoked in which his oldest brother Sitka is killed.\n[4] Brother Bear: An Original Walt Disney Records Soundtrack is the soundtrack to Disney's 2003 animated feature film \"Brother Bear\"."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

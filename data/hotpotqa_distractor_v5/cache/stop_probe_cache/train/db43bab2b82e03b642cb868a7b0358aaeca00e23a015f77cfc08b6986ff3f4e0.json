@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Congo River",
+  "pred_answer": "Congo River",
+  "normalized_gold": "congo river",
+  "normalized_pred": "congo river",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac18ca25542994ab5c67d77",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac18ca25542994ab5c67d77::Tcham N'Toya::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac18ca25542994ab5c67d77::African river martin::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac18ca25542994ab5c67d77::Kinshasa::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac18ca25542994ab5c67d77::Kinshasa::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac18ca25542994ab5c67d77::Tcham N'Toya",
+        "5ac18ca25542994ab5c67d77::Kinshasa"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac18ca25542994ab5c67d77::Tcham N'Toya::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac18ca25542994ab5c67d77::African river martin::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac18ca25542994ab5c67d77::Kinshasa::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac18ca25542994ab5c67d77::Kinshasa::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac18ca25542994ab5c67d77::Kinshasa::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is situated on the Congo River.\n[2] Kinshasa ( ; ] ; formerly Léopoldville (French: \"Léopoldville\" or Dutch    )) is the capital and the largest city of the Democratic Republic of the Congo.\n[3] When discovered, it was not initially recognised as a swallow, and its structural differences from most of its relatives, including its stout bill and robust legs and feet, have led to its current placement in a separate subfamily shared only with the Asian white-eyed river martin.\n[4] Tcham N'Toya-Zoa (born 3 November 1983 in Kinshasa, DR Congo) is a French-Congolese footballer."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

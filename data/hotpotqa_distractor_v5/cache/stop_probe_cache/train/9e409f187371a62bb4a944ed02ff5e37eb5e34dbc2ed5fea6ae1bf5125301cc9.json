@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "National Fascist Party",
+  "pred_answer": "National Fascist Party",
+  "normalized_gold": "national fascist party",
+  "normalized_pred": "national fascist party",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc0f4355429944faac240a",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc0f4355429944faac240a::We the Living (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc0f4355429944faac240a::Italian Associations in South America::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc0f4355429944faac240a::Futurist Political Party::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adc0f4355429944faac240a::National Fascist Party::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5adc0f4355429944faac240a::Purple People::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc0f4355429944faac240a::We the Living (film)",
+        "5adc0f4355429944faac240a::National Fascist Party"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc0f4355429944faac240a::We the Living (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc0f4355429944faac240a::Italian Associations in South America::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc0f4355429944faac240a::Futurist Political Party::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adc0f4355429944faac240a::National Fascist Party::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5adc0f4355429944faac240a::Purple People::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc0f4355429944faac240a::Purple People::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The movement was dissaffected with mainstream Italian politics, and identified themselves at demonstrations and rallies by wearing items of the colour purple, chosen because it was not associated with any major Italian political party.\n[2] The National Fascist Party (\"Partito Nazionale Fascista\", PNF) was an Italian political party, created by Benito Mussolini as the political expression of fascism (previously represented by groups known as \"Fasci\").\n[3] The Futurist Political Party (Italian: \"Partito Politico Futurista\") was an Italian political party founded in 1918 by Filippo Tommaso Marinetti as an extension of the futurist artistic and social movement.\n[4] The Italian Associations in South America (\"Associazioni Italiane in Sud America\", AISA) is an Italian political party representing voters living in South America, for this continent has been object of major Italian immigration."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

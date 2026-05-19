@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "3–7",
+  "pred_answer": "3–7",
+  "normalized_gold": "3–7",
+  "normalized_pred": "3–7",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adfa089554299025d62a2f9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adfa089554299025d62a2f9::Oklahoma State University–Stillwater::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adfa089554299025d62a2f9::1952 Maryland Terrapins football team::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adfa089554299025d62a2f9::1952 Oklahoma A&amp;M Cowboys football team::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adfa089554299025d62a2f9::1951–52 in Belgian football::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adfa089554299025d62a2f9::Oklahoma State University–Stillwater",
+        "5adfa089554299025d62a2f9::1952 Oklahoma A&amp;M Cowboys football team"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adfa089554299025d62a2f9::Oklahoma State University–Stillwater::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adfa089554299025d62a2f9::1952 Maryland Terrapins football team::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adfa089554299025d62a2f9::1952 Oklahoma A&amp;M Cowboys football team::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adfa089554299025d62a2f9::1951–52 in Belgian football::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adfa089554299025d62a2f9::1951–52 in Belgian football::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 1951–1952 season was the 49th season of competitive football in Belgium.\n[2] In their third season under head coach Jennings B. Whitworth, the Cowboys compiled a 3–7 record (2–2 against conference opponents), finished in third place in the conference, and were outscored by opponents by a combined total of 178 to 146.\n[3] The 1952 Maryland Terrapins football team represented the University of Maryland in National Collegiate Athletic Association (NCAA) college football in its 32nd season as a member of the Southern Conference.\n[4] OSU was founded in 1890 under the Morrill Act."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

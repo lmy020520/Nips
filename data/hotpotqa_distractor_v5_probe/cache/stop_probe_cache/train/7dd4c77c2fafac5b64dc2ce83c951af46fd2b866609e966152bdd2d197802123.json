@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Buzz Aldrin",
+  "pred_answer": "Buzz Aldrin",
+  "normalized_gold": "buzz aldrin",
+  "normalized_pred": "buzz aldrin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77471255429972597f14e3",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77471255429972597f14e3::Mars One::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77471255429972597f14e3::The Waters of Mars::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77471255429972597f14e3::Mars to Stay::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77471255429972597f14e3::Nili Patera dune field::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77471255429972597f14e3::Mars One",
+        "5a77471255429972597f14e3::Mars to Stay"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77471255429972597f14e3::Mars One::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77471255429972597f14e3::The Waters of Mars::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77471255429972597f14e3::Mars to Stay::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77471255429972597f14e3::Nili Patera dune field::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a77471255429972597f14e3::Nili Patera dune field::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The dunes of the Patera field are of the barchan type and their study by HiRISE was the first one to establish dune and ripple movement of a minimum of 1 m on Mars.\n[2] Among many notable Mars to Stay advocates, former Apollo astronaut Buzz Aldrin has been particularly outspoken, suggesting in numerous forums \"Forget the Moon, Let’s Head to Mars!\"\n[3] The story is set on Mars in the year 2059 where the Doctor encounters the first human colony, Bowie Base One.\n[4] The Mars One organization has proposed to land the first humans on Mars and establish a permanent human colony there by 2035."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

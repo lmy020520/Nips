@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Queen Elizabeth II",
+  "pred_answer": "Queen Elizabeth II",
+  "normalized_gold": "queen elizabeth ii",
+  "normalized_pred": "queen elizabeth ii",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8770255542993e715abf44",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8770255542993e715abf44::Black spider memos::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8770255542993e715abf44::Charles, Prince of Wales::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8770255542993e715abf44::Duke of Rothesay::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8770255542993e715abf44::Black spider memos",
+        "5a8770255542993e715abf44::Charles, Prince of Wales"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8770255542993e715abf44::Black spider memos::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8770255542993e715abf44::Charles, Prince of Wales::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8770255542993e715abf44::Duke of Rothesay::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8770255542993e715abf44::Duke of Rothesay::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It is the title mandated for use by the heir apparent when in Scotland, in preference to the titles \"Duke of Cornwall\" (which also belongs to the eldest living son of the monarch, when and only when he is also heir apparent, by right) and \"Prince of Wales\" (traditionally granted to the heir apparent), which are used in the rest of the United Kingdom and overseas.\n[2] Charles, Prince of Wales (Charles Philip Arthur George; born 14 November 1948) is the eldest child and heir apparent of Queen Elizabeth II.\n[3] The \"black spider\" memos are letters and memos written by Charles, Prince of Wales, to British government ministers and politicians over the years."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

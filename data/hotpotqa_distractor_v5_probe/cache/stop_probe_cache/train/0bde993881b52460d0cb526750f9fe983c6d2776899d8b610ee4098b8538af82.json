@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "film director",
+  "pred_answer": "film director",
+  "normalized_gold": "film director",
+  "normalized_pred": "film director",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79292b55429970f5fffe5f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79292b55429970f5fffe5f::Baraka (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79292b55429970f5fffe5f::Ron Fricke::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79292b55429970f5fffe5f::Jacques Becker::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a79292b55429970f5fffe5f::The Hole (1960 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79292b55429970f5fffe5f::Ron Fricke",
+        "5a79292b55429970f5fffe5f::Jacques Becker"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79292b55429970f5fffe5f::Baraka (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79292b55429970f5fffe5f::Ron Fricke::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79292b55429970f5fffe5f::Jacques Becker::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a79292b55429970f5fffe5f::The Hole (1960 film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a79292b55429970f5fffe5f::The Hole (1960 film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Hole (French: Le Trou ) is a 1960 French crime film directed by Jacques Becker.\n[2] Jacques Becker (] ; 15 September 1906 – 21 February 1960) was a French screenwriter and film director.\n[3] Ron Fricke is a North American film director and cinematographer, specializing in time-lapse photography and large format cinematography.\n[4] Baraka is a 1992 non-narrative documentary film directed by Ron Fricke."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

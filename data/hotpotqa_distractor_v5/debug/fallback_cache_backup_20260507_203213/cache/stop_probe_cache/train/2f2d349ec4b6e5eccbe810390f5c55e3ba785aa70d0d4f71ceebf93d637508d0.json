@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Golden Valley, Minnesota",
+  "pred_answer": "Golden Valley, Minnesota",
+  "normalized_gold": "golden valley minnesota",
+  "normalized_pred": "golden valley minnesota",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5f9465542996de7b71a96",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5f9465542996de7b71a96::Häagen-Dazs::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5f9465542996de7b71a96::Peters Ice Cream::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5f9465542996de7b71a96::General Mills::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae5f9465542996de7b71a96::Blue Bell Creameries::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5f9465542996de7b71a96::Häagen-Dazs",
+        "5ae5f9465542996de7b71a96::General Mills"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5f9465542996de7b71a96::Häagen-Dazs::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5f9465542996de7b71a96::Peters Ice Cream::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5f9465542996de7b71a96::General Mills::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae5f9465542996de7b71a96::Blue Bell Creameries::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5f9465542996de7b71a96::Blue Bell Creameries::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Despite being sold in a limited number of states, as of 2015 Blue Bell is the fourth highest-selling ice cream brand in the United States as a whole.\n[2] It is headquartered in Golden Valley, Minnesota, a suburb of Minneapolis.\n[3] Peters Ice Cream is an Australian ice cream brand, now a subsidiary of European food firm R&R Ice Cream.\n[4] Häagen-Dazs is an American ice cream brand, established by Reuben and Rose Mattus in the Bronx, New York, in 1961."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

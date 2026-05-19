@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fabio Fognini",
+  "pred_answer": "Fabio Fognini",
+  "normalized_gold": "fabio fognini",
+  "normalized_pred": "fabio fognini",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a90ba1b55429933b8a205c6",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a90ba1b55429933b8a205c6::Adam Pavlásek::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a90ba1b55429933b8a205c6::Paolo Lorenzi::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a90ba1b55429933b8a205c6::Fabio Fognini::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a90ba1b55429933b8a205c6::Daniel Vacek::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a90ba1b55429933b8a205c6::Adam Pavlásek::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a90ba1b55429933b8a205c6::Fabio Fognini",
+        "5a90ba1b55429933b8a205c6::Daniel Vacek"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a90ba1b55429933b8a205c6::Adam Pavlásek::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a90ba1b55429933b8a205c6::Paolo Lorenzi::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a90ba1b55429933b8a205c6::Fabio Fognini::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a90ba1b55429933b8a205c6::Daniel Vacek::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a90ba1b55429933b8a205c6::Adam Pavlásek::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a90ba1b55429933b8a205c6::Adam Pavlásek::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Adam Pavlásek (born 8 October 1994) is a tennis player playing on the ATP Challenger Tour from the Czech Republic.\n[2] Daniel Vacek (born 1 April 1971) is a former tennis player from Czechoslovakia and the Czech Republic who turned professional in 1990.\n[3] Fabio Fognini (] ; born 24 May 1987) is an Italian professional tennis player who is currently ranked world No. 29 in men's singles by the Association of Tennis Professionals (ATP) and the current Italian No. 1.\n[4] His career-high singles ranking is World No. 33."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the best Puerto Rican boxers of all time",
+  "pred_answer": "the best Puerto Rican boxers of all time",
+  "normalized_gold": "the best puerto rican boxers of all time",
+  "normalized_pred": "the best puerto rican boxers of all time",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2893b5542993be8fa993d",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2893b5542993be8fa993d::United Nations Secretary-General selection, 1971::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2893b5542993be8fa993d::Enrique Solis::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2893b5542993be8fa993d::Carlos Ortiz::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab2893b5542993be8fa993d::Wilfred Benítez::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab2893b5542993be8fa993d::Esteban de Jesús::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2893b5542993be8fa993d::Carlos Ortiz",
+        "5ab2893b5542993be8fa993d::Wilfred Benítez"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2893b5542993be8fa993d::United Nations Secretary-General selection, 1971::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2893b5542993be8fa993d::Enrique Solis::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2893b5542993be8fa993d::Carlos Ortiz::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab2893b5542993be8fa993d::Wilfred Benítez::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab2893b5542993be8fa993d::Esteban de Jesús::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2893b5542993be8fa993d::Esteban de Jesús::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] De Jesús, a native of the town of Carolina, Puerto Rico, was a gymmate of Wilfred Benítez and an acquaintance of Benitez's mother, Clara Benítez.\n[2] Wilfred Benítez (born September 12, 1958) is a Puerto Rican former professional boxer and the youngest world champion in the sport's history.\n[3] Along with Félix Trinidad, Miguel Cotto, Wilfredo Gómez, Héctor Camacho, and Wilfred Benítez, Ortiz is considered among the best Puerto Rican boxers of all time by sports journalists and analysts.\n[4] Solis is a member of a prolific Puerto Rican boxing family, his brothers being former WBA and Ring Magazine world Bantamweight champion Julian Solis, former WBC world Junior Lightweight title challenger Rafael Solis and Santos Solis, who once fought Wilfred Benitez as a professional and went ten rounds with him."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,28 @@
+{
+  "should_derive": true,
+  "reason": "The state summary provides birth dates for both directors, but the raw candidates do not include these dates. A verification note can confirm the birth dates from the state summary, and a bridge note can compare them to answer the question.",
+  "derived_candidates": [
+    {
+      "type": "verification_note",
+      "text": "Gordon Wiles was born on October 10, 1904.",
+      "source_unit_ids": [
+        "5a7c48f155429907fabeef4e::Gordon Wiles::1"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Irvin Kershner was born on April 29, 1923.",
+      "source_unit_ids": [],
+      "coarse_priority": 2
+    },
+    {
+      "type": "bridge_note",
+      "text": "Gordon Wiles (born 1904) was born before Irvin Kershner (born 1923).",
+      "source_unit_ids": [
+        "5a7c48f155429907fabeef4e::Gordon Wiles::1"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

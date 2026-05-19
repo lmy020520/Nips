@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "between 11 or 13 and 18",
+  "pred_answer": "between 11 or 13 and 18",
+  "normalized_gold": "between 11 or 13 and 18",
+  "normalized_pred": "between 11 or 13 and 18",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae53c9655429960a22e0290",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae53c9655429960a22e0290::Public school (United Kingdom)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae53c9655429960a22e0290::Hilden Grange School::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae53c9655429960a22e0290::Queen Elizabeth Grammar School, Wakefield::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae53c9655429960a22e0290::Eton Fives::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae53c9655429960a22e0290::Public school (United Kingdom)",
+        "5ae53c9655429960a22e0290::Queen Elizabeth Grammar School, Wakefield"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae53c9655429960a22e0290::Public school (United Kingdom)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae53c9655429960a22e0290::Hilden Grange School::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae53c9655429960a22e0290::Queen Elizabeth Grammar School, Wakefield::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae53c9655429960a22e0290::Eton Fives::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae53c9655429960a22e0290::Eton Fives::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Eton Fives is an uncommon sport, with only a few courts, most of them as part of the facilities of the public schools in the United Kingdom (as well as Rydal Penrhos, Wolverhampton Grammar School, St Olave's Grammar School, St Bartholomew's School, Newbury and St Saviour's Grammar School, the Royal Grammar School, High Wycombe, King Edward's School, Birmingham, Queen Elizabeth's School for Boys, C\n[2] Queen Elizabeth Grammar School (QEGS) is an independent, public school for boys in Wakefield, West Yorkshire, England.\n[3] It caters for children from Nursery to Year 8.\n[4] A public school in England and Wales is an older, student selective, fee-paying independent secondary school which caters primarily for children aged between 11 or 13 and 18."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

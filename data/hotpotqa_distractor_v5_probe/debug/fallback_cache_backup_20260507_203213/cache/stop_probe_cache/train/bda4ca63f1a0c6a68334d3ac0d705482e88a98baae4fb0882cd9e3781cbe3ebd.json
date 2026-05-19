@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Barry Orton",
+  "pred_answer": "Barry Orton",
+  "normalized_gold": "barry orton",
+  "normalized_pred": "barry orton",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab7cf6d55429928e1fe391a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab7cf6d55429928e1fe391a::Barry Orton::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab7cf6d55429928e1fe391a::Bob Orton Jr.::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab7cf6d55429928e1fe391a::Kenji Sakaguchi (actor)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab7cf6d55429928e1fe391a::Barry Orton",
+        "5ab7cf6d55429928e1fe391a::Bob Orton Jr."
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab7cf6d55429928e1fe391a::Barry Orton::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab7cf6d55429928e1fe391a::Bob Orton Jr.::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab7cf6d55429928e1fe391a::Kenji Sakaguchi (actor)::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab7cf6d55429928e1fe391a::Kenji Sakaguchi (actor)::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He is the son of former professional wrestler Seiji Sakaguchi and the brother of current professional wrestler Yukio.\n[2] He is the son of professional wrestler Bob Orton Sr., the brother of professional wrestler Barry Orton, and the father of professional wrestler Randy Orton.\n[3] Randal Barry Orton (born May 28, 1958), better known as Barry Orton, is an American actor, musician, and former professional wrestler."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

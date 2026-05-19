@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Yelena Shvaybovich",
+  "pred_answer": "Yelena Shvaybovich",
+  "normalized_gold": "yelena shvaybovich",
+  "normalized_pred": "yelena shvaybovich",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7eaa6e55429930675135c2",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7eaa6e55429930675135c2::Yelena Shvaybovich::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7eaa6e55429930675135c2::Eduardo Portela::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7eaa6e55429930675135c2::1992 Summer Olympics::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7eaa6e55429930675135c2::Siarhei Rutenka::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7eaa6e55429930675135c2::Yelena Shvaybovich",
+        "5a7eaa6e55429930675135c2::1992 Summer Olympics"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7eaa6e55429930675135c2::Yelena Shvaybovich::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7eaa6e55429930675135c2::Eduardo Portela::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7eaa6e55429930675135c2::1992 Summer Olympics::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7eaa6e55429930675135c2::Siarhei Rutenka::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7eaa6e55429930675135c2::Siarhei Rutenka::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Siarhei Rutenka, also Sergej Rutenka (Belarusian: Сяргей Рутэнка ; born 29 September 1981) is a Belarusian former handball player.\n[2] The 1992 Summer Olympic Games (Spanish: \"Juegos Olímpicos de Verano de 1992\"; Catalan: \"Jocs Olímpics d'estiu de 1992\"), officially known as the Games of the XXV Olympiad, was an international multi-sport event played in Barcelona, Catalonia, Spain in 1992.\n[3] Eduardo Portela Marín (born 1934 in Barcelona, Catalonia, Spain) is a Spanish former basketball player, former basketball coach, and basketball executive.\n[4] Yelena Shvaybovich (Belarusian: Алена Швайбовіч ; born 3 February 1966 in Minsk, Belarussian SSR) is a Belarusian former basketball player who competed in the 1992 Summer Olympics."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

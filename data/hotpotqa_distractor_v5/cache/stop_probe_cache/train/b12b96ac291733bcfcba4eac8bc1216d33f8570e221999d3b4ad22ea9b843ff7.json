@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "1907",
+  "pred_answer": "1907",
+  "normalized_gold": "1907",
+  "normalized_pred": "1907",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7bab9e554299294a54aa85",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7bab9e554299294a54aa85::Judith F. Kroll::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7bab9e554299294a54aa85::Anne F. Garréta::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7bab9e554299294a54aa85::University of California, Riverside::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7bab9e554299294a54aa85::Judith Becker::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7bab9e554299294a54aa85::Judith F. Kroll",
+        "5a7bab9e554299294a54aa85::University of California, Riverside"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7bab9e554299294a54aa85::Judith F. Kroll::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7bab9e554299294a54aa85::Anne F. Garréta::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7bab9e554299294a54aa85::University of California, Riverside::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7bab9e554299294a54aa85::Judith Becker::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7bab9e554299294a54aa85::Judith Becker::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Becker teaches at the University of Michigan.\n[2] Founded in 1907 as the UC Citrus Experiment Station, Riverside pioneered research in biological pest control and the use of growth regulators responsible for extending the citrus growing season in California from four to nine months.\n[3] She also teaches at Duke University as a Research Professor of Literature and Romance Studies.\n[4] Judith F. Kroll is a Distinguished Professor of Psychology, Linguistics, and Women's Studies at University of California, Riverside."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the University of Oregon",
+  "pred_answer": "the University of Oregon",
+  "normalized_gold": "the university of oregon",
+  "normalized_pred": "the university of oregon",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae07b085542993d6555eb79",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae07b085542993d6555eb79::Dan Fouts::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae07b085542993d6555eb79::Jerry Frei::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae07b085542993d6555eb79::Aaron Turner (American football)::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae07b085542993d6555eb79::Dan Fouts",
+        "5ae07b085542993d6555eb79::Jerry Frei"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae07b085542993d6555eb79::Dan Fouts::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae07b085542993d6555eb79::Jerry Frei::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae07b085542993d6555eb79::Aaron Turner (American football)::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae07b085542993d6555eb79::Aaron Turner (American football)::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] He led the Big West Conference in receiving yards for three consecutive seasons from 1990 to 1992.\n[2] He was the head coach at the University of Oregon for five seasons, 1967 through 1971, compiling a record of 22–29–2.\n[3] He led the NFL in passing yards four straight years from 1979 to 1982, and became the first player in history to throw for 4,000 yards in three consecutive seasons."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

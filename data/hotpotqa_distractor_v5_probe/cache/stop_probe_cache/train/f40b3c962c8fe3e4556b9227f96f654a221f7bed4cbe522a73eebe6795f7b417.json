@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "BMW",
+  "pred_answer": "BMW",
+  "normalized_gold": "bmw",
+  "normalized_pred": "bmw",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab73e4555429928e1fe383c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab73e4555429928e1fe383c::Alex Zanardi::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab73e4555429928e1fe383c::Johnny Mowlem::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab73e4555429928e1fe383c::2005 FIA WTCC Race of Germany::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab73e4555429928e1fe383c::Max Papis::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab73e4555429928e1fe383c::Alex Zanardi",
+        "5ab73e4555429928e1fe383c::2005 FIA WTCC Race of Germany"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab73e4555429928e1fe383c::Alex Zanardi::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab73e4555429928e1fe383c::Johnny Mowlem::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab73e4555429928e1fe383c::2005 FIA WTCC Race of Germany::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab73e4555429928e1fe383c::Max Papis::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab73e4555429928e1fe383c::Max Papis::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Massimiliano \"Max\" Papis (born October 3, 1969) is an Italian professional stock car racing driver who has competed in several top-level motorsports events such as Le Mans 24 Hours, Formula One and Champ Car.\n[2] Andy Priaulx took his first win of the season in the first race for BMW, and the second race was won by Alex Zanardi, also for BMW, at a track close to the one where he lost his legs in a crash in 2001.\n[3] Johnny Mowlem (born 12 February 1969) is a professional British racing driver.\n[4] Alessandro \"Alex\" Zanardi (] ; born 23 October 1966) is an Italian professional racing driver and paracyclist."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

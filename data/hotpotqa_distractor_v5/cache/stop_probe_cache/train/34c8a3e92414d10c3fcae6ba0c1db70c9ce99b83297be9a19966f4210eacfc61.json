@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "David Lynch",
+  "pred_answer": "David Lynch",
+  "normalized_gold": "david lynch",
+  "normalized_pred": "david lynch",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7d197f554299452d57bae8",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7d197f554299452d57bae8::Dune (video game)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7d197f554299452d57bae8::Dune 2000::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7d197f554299452d57bae8::Dune II::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7d197f554299452d57bae8::David Lynch::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7d197f554299452d57bae8::Dune (video game)::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7d197f554299452d57bae8::Dune II",
+        "5a7d197f554299452d57bae8::David Lynch"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7d197f554299452d57bae8::Dune (video game)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7d197f554299452d57bae8::Dune 2000::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7d197f554299452d57bae8::Dune II::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7d197f554299452d57bae8::David Lynch::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7d197f554299452d57bae8::Dune (video game)::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7d197f554299452d57bae8::Dune (video game)::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Released for the Amiga and IBM PC compatibles, it was one of the first floppy games to be converted to CD format, which included footage of the David Lynch movie, voice-acting for all speaking roles, and highly improved, 3D-rendered traveling and location screens.\n[2] David Keith Lynch (born January 20, 1946) is an American director, screenwriter, producer, painter, musician, actor, and photographer.\n[3] It is based upon David Lynch's 1984 movie \"Dune\", an adaptation of Frank Herbert's science fiction novel of the same name.\n[4] It is a partial remake of \"Dune II\", which is loosely based on Frank Herbert's \"Dune\" universe."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

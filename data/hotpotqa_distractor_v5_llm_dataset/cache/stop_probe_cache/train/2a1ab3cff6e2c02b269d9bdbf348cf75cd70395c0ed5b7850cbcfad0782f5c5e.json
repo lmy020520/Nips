@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Barack Obama",
+  "pred_answer": "Barack Obama",
+  "normalized_gold": "barack obama",
+  "normalized_pred": "barack obama",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74db1b5542996c70cfae1b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74db1b5542996c70cfae1b::Vivek Kundra::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74db1b5542996c70cfae1b::Data.gov::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74db1b5542996c70cfae1b::Barack Obama::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74db1b5542996c70cfae1b::Karen S. Evans::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74db1b5542996c70cfae1b::Vivek Kundra",
+        "5a74db1b5542996c70cfae1b::Barack Obama"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74db1b5542996c70cfae1b::Vivek Kundra::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74db1b5542996c70cfae1b::Data.gov::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74db1b5542996c70cfae1b::Barack Obama::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74db1b5542996c70cfae1b::Karen S. Evans::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74db1b5542996c70cfae1b::Karen S. Evans::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Evans served as the \"de facto\" chief information officer for the United States until the office was created by Barack Obama who appointed Vivek Kundra.\n[2] Barack Hussein Obama II ( ; born August 4, 1961) is an American politician who served as the 44th President of the United States from 2009 to 2017.\n[3] Data.gov is a U.S. government website launched in late May 2009 by the then Federal Chief Information Officer (CIO) of the United States, Vivek Kundra.\n[4] Vivek Kundra (Hindi: विवेक कुंद्रा ; born October 9, 1974) is an Indian American administrator who served as the first chief information officer of the United States from March, 2009 to August, 2011 under President Barack Obama."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

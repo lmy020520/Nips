@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "The Whites",
+  "pred_answer": "The Whites",
+  "normalized_gold": "the whites",
+  "normalized_pred": "the whites",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a84aa545542991dd0999d69",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a84aa545542991dd0999d69::The Forester Sisters::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a84aa545542991dd0999d69::The Whites::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a84aa545542991dd0999d69::Deborah Allen::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a84aa545542991dd0999d69::I Hurt for You::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a84aa545542991dd0999d69::The Whites",
+        "5a84aa545542991dd0999d69::Deborah Allen"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a84aa545542991dd0999d69::The Forester Sisters::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a84aa545542991dd0999d69::The Whites::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a84aa545542991dd0999d69::Deborah Allen::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a84aa545542991dd0999d69::I Hurt for You::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a84aa545542991dd0999d69::I Hurt for You::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"I Hurt for You\" is a song co-written and recorded by American country music artist Deborah Allen.\n[2] Allen has also written No. 1 singles for herself, Janie Fricke, and John Conlee; Top 5 hits for Patty Loveless and Tanya Tucker; and a Top 10 hit for The Whites.\n[3] The Whites is an American country music vocal group consisting of Sharon White (born 1953), her sister Cheryl (born 1955), and their father Buck (born 1930).\n[4] The Forester Sisters are an American country music vocal group consisting of sisters Kathy, June, Kim and Christy Forester."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

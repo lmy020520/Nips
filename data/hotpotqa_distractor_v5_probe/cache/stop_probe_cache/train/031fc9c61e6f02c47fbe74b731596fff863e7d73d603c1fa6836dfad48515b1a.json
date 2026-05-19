@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Rohinton Mistry",
+  "pred_answer": "Rohinton Mistry",
+  "normalized_gold": "rohinton mistry",
+  "normalized_pred": "rohinton mistry",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7135e15542994082a3e670",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7135e15542994082a3e670::Gillian Bradshaw::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7135e15542994082a3e670::Family Matters (novel)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7135e15542994082a3e670::Rohinton Mistry::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7135e15542994082a3e670::Cyrus Mistry (writer)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7135e15542994082a3e670::Gillian Bradshaw",
+        "5a7135e15542994082a3e670::Rohinton Mistry"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7135e15542994082a3e670::Gillian Bradshaw::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7135e15542994082a3e670::Family Matters (novel)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7135e15542994082a3e670::Rohinton Mistry::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7135e15542994082a3e670::Cyrus Mistry (writer)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7135e15542994082a3e670::Cyrus Mistry (writer)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Cyrus Mistry was born in march 11,1956 is an Indian author and playwright.\n[2] Rohinton Mistry {'1': \", '2': \", '3': \", '4': \"} (born 3 July 1952) is an Indian-born Canadian writer.\n[3] Family Matters is the third novel by Indian-born author Rohinton Mistry.\n[4] Gillian Marucha Bradshaw (born May 14, 1956) is an American writer of historical fiction, historical fantasy, children's literature, science fiction, and contemporary science-based novels, who currently lives in Britain."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

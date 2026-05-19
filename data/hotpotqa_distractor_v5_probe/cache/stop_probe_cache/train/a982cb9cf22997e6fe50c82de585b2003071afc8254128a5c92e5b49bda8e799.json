@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "writer",
+  "pred_answer": "writer",
+  "normalized_gold": "writer",
+  "normalized_pred": "writer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe55805542991f6610614a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe55805542991f6610614a::Douglas Ainslie::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe55805542991f6610614a::Daniil Kharms::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe55805542991f6610614a::Arthur Conan Doyle::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe55805542991f6610614a::The Lost World (TV series)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe55805542991f6610614a::Daniil Kharms",
+        "5abe55805542991f6610614a::Arthur Conan Doyle"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe55805542991f6610614a::Douglas Ainslie::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe55805542991f6610614a::Daniil Kharms::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe55805542991f6610614a::Arthur Conan Doyle::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe55805542991f6610614a::The Lost World (TV series)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe55805542991f6610614a::The Lost World (TV series)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Sir Arthur Conan Doyle's The Lost World is a syndicated television series loosely based on the 1912 novel by Sir Arthur Conan Doyle, \"The Lost World\".\n[2] Sir Arthur Ignatius Conan Doyle KStJ, DL (22 May 1859 – 7 July 1930) was a British writer best known for his detective fiction featuring the character Sherlock Holmes.\n[3] Daniil Kharms (Russian: Дании́л Ива́нович Хармс ; 30 December [O.S. 17 December] 1905  – 2 February 1942) was an early Soviet-era surrealist and absurdist poet, writer and dramatist.\n[4] He was identified as the \"Dear Ainslie\" recipient of twelve letters written by Arthur Conan Doyle in 1895 - 1896, which were auctioned by Christie's in 2004."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

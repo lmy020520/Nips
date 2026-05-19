@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Channel 4",
+  "pred_answer": "Channel 4",
+  "normalized_gold": "channel 4",
+  "normalized_pred": "channel 4",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6bbe355429953192ad368",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6bbe355429953192ad368::Howard Marks::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6bbe355429953192ad368::Sam Kydd::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6bbe355429953192ad368::Ice Hockey Hair::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6bbe355429953192ad368::Celebrity Big Brother racism controversy::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6bbe355429953192ad368::Howard Marks",
+        "5ab6bbe355429953192ad368::Ice Hockey Hair"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6bbe355429953192ad368::Howard Marks::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6bbe355429953192ad368::Sam Kydd::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6bbe355429953192ad368::Ice Hockey Hair::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6bbe355429953192ad368::Celebrity Big Brother racism controversy::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6bbe355429953192ad368::Celebrity Big Brother racism controversy::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The \"Celebrity Big Brother\" racism controversy was a series of events related to incidents of racist behaviour by contestants on the British television series \"Celebrity Big Brother 5\", shown on British television station Channel 4.\n[2] The EP's opening song, \"Smokin'\", was commissioned by British television station Channel 4 for a programme about sloth presented by Howard Marks.\n[3] His best-known roles were in two major British television series of the 1960s, as the smuggler Orlando O'Connor in \"Crane\", and as a recurring character in \"Coronation Street\".\n[4] Dennis Howard Marks (13 August 1945 – 10 April 2016) was a Welsh drug smuggler and author who achieved notoriety as an international cannabis smuggler through high-profile court cases."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

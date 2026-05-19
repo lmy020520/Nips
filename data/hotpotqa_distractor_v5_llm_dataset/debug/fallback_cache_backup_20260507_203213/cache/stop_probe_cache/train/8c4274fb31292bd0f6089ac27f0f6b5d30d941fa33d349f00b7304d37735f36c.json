@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ron Chernow",
+  "pred_answer": "Ron Chernow",
+  "normalized_gold": "ron chernow",
+  "normalized_pred": "ron chernow",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab581a45542992aa134a337",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab581a45542992aa134a337::The World Was Wide Enough::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab581a45542992aa134a337::Hamilton (musical)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab581a45542992aa134a337::Tixall Wide::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab581a45542992aa134a337::The World Was Wide Enough",
+        "5ab581a45542992aa134a337::Hamilton (musical)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab581a45542992aa134a337::The World Was Wide Enough::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab581a45542992aa134a337::Hamilton (musical)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab581a45542992aa134a337::Tixall Wide::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab581a45542992aa134a337::Tixall Wide::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It is said he \"gave permission for the canal to pass through his land on the condition that it was made ... wide enough to look like a lake from the house\".\n[2] Hamilton: An American Musical is a sung- and rapped-through musical about the life of American Founding Father Alexander Hamilton, with music, lyrics and book by Lin-Manuel Miranda, inspired by the 2004 biography \"Alexander Hamilton\" by historian Ron Chernow.\n[3] \"The World Was Wide Enough\" is the penultimate song from Act 2 of the musical \"Hamilton\", based on the life of Alexander Hamilton, which premiered on Broadway in 2015."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

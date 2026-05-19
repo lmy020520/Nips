@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Donovan R. Cook III",
+  "pred_answer": "Donovan R. Cook III",
+  "normalized_gold": "donovan r cook iii",
+  "normalized_pred": "donovan r cook iii",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4b4ed55429913cc2044d9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4b4ed55429913cc2044d9::The Walt Disney Company::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4b4ed55429913cc2044d9::Phillip Stillman::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4b4ed55429913cc2044d9::Donovan Cook::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4b4ed55429913cc2044d9::2 Stupid Dogs::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4b4ed55429913cc2044d9::The Walt Disney Company",
+        "5ae4b4ed55429913cc2044d9::Donovan Cook"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4b4ed55429913cc2044d9::The Walt Disney Company::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4b4ed55429913cc2044d9::Phillip Stillman::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4b4ed55429913cc2044d9::Donovan Cook::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4b4ed55429913cc2044d9::2 Stupid Dogs::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4b4ed55429913cc2044d9::2 Stupid Dogs::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] 2 Stupid Dogs is an American animated television series, created and designed by Donovan Cook and produced by Hanna-Barbera Cartoons, that originally ran from September 5, 1993 to May 15, 1995 on TBS (as a part of their \"Sunday Morning In Front Of The TV\" block) and in syndication.\n[2] Donovan R. Cook III is an American film director, best known for creating, directing and producing the animated series \"2 Stupid Dogs\" and directing the Disney animated features \"Return to Never Land\" and \"\".\n[3] He played for the undefeated 1894 Yale Bulldogs football team and was selected as the consensus first-team center on the 1894 College Football All-America Team.\n[4] Disney was founded on October 16, 1923 – by brothers Walt Disney and Roy O. Disney – as the Disney Brothers Cartoon Studio, and established itself as a leader in the American animation industry before diversifying into live-action film production, television, and theme parks."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

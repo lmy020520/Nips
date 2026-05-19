@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Tropicana Resort & Casino in Las Vegas",
+  "pred_answer": "Tropicana Resort & Casino in Las Vegas",
+  "normalized_gold": "tropicana resort & casino in las vegas",
+  "normalized_pred": "tropicana resort & casino in las vegas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abb7c515542993f40c73b09",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abb7c515542993f40c73b09::Tropicana Avenue::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abb7c515542993f40c73b09::Tropicana Casino &amp; Resort Atlantic City::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abb7c515542993f40c73b09::Keep the Customer Satisfied (album)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abb7c515542993f40c73b09::Tropicana Las Vegas::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abb7c515542993f40c73b09::Dirk Arthur::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abb7c515542993f40c73b09::Keep the Customer Satisfied (album)",
+        "5abb7c515542993f40c73b09::Tropicana Las Vegas"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abb7c515542993f40c73b09::Tropicana Avenue::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abb7c515542993f40c73b09::Tropicana Casino &amp; Resort Atlantic City::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abb7c515542993f40c73b09::Keep the Customer Satisfied (album)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abb7c515542993f40c73b09::Tropicana Las Vegas::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abb7c515542993f40c73b09::Dirk Arthur::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abb7c515542993f40c73b09::Dirk Arthur::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He has starred in the Las Vegas show \"Xtreme Magic\", at the Tropicana Resort & Casino.\n[2] Tropicana Las Vegas is a hotel and casino on the Las Vegas Strip in Paradise, Nevada.\n[3] Keep the Customer Satisfied is a 1970 live album by Buddy Rich and his big band, recorded at the Tropicana Resort & Casino in Las Vegas.\n[4] The Tropicana Casino & Resort Atlantic City is a luxury hotel, casino, and spa resort located on Brighton Avenue and the Boardwalk in Atlantic City, New Jersey."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Joseph Clifford Montana Jr.",
+  "pred_answer": "Joseph Clifford Montana Jr.",
+  "normalized_gold": "joseph clifford montana jr",
+  "normalized_pred": "joseph clifford montana jr",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae4c1f35542995dadf243e5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae4c1f35542995dadf243e5::Dwight Clark::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae4c1f35542995dadf243e5::Dean Look::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae4c1f35542995dadf243e5::Joe Montana::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae4c1f35542995dadf243e5::The Catch (American football)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae4c1f35542995dadf243e5::Dwight Clark",
+        "5ae4c1f35542995dadf243e5::Joe Montana"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae4c1f35542995dadf243e5::Dwight Clark::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae4c1f35542995dadf243e5::Dean Look::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae4c1f35542995dadf243e5::Joe Montana::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae4c1f35542995dadf243e5::The Catch (American football)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae4c1f35542995dadf243e5::The Catch (American football)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] With 58 seconds left in the game, San Francisco wide receiver Dwight Clark made a leaping grab in the back of the end zone to complete a 6-yard touchdown pass from quarterback Joe Montana, enabling the 49ers to defeat the Cowboys, 28–27.\n[2] Joseph Clifford Montana Jr. (born June 11, 1956), nicknamed \"Joe Cool\" and \"The Comeback Kid\", is a former American football quarterback who played in the National Football League (NFL) for 16 seasons, primarily with the San Francisco 49ers and then with the Kansas City Chiefs for the final two seasons of his NFL career.\n[3] He was the side judge who signaled touchdown on the historical Joe Montana to Dwight Clark pass better known as \"The Catch\" during the 1982 NFC Championship game between the Dallas Cowboys and the San Francisco 49ers.\n[4] He caught the winning touchdown pass thrown by quarterback Joe Montana in the NFC Championship Game in January 1982 against the Dallas Cowboys."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

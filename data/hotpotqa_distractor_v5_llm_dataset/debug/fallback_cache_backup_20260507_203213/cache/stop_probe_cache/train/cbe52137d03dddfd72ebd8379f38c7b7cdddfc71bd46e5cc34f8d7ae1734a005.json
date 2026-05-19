@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Life in the Freezer",
+  "pred_answer": "Life in the Freezer",
+  "normalized_gold": "life in the freezer",
+  "normalized_pred": "life in the freezer",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac4d7695542996feb3fe949",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac4d7695542996feb3fe949::Walking with Monsters::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac4d7695542996feb3fe949::Walking with Cavemen::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac4d7695542996feb3fe949::Life in the Freezer::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac4d7695542996feb3fe949::Ben Bartlett::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac4d7695542996feb3fe949::Walking with Cavemen",
+        "5ac4d7695542996feb3fe949::Life in the Freezer"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac4d7695542996feb3fe949::Walking with Monsters::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac4d7695542996feb3fe949::Walking with Cavemen::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac4d7695542996feb3fe949::Life in the Freezer::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac4d7695542996feb3fe949::Ben Bartlett::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac4d7695542996feb3fe949::Ben Bartlett::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He is mainly celebrated for having been the creator of the background music in BBC nature documentary series \"Walking with Dinosaurs\" (1999), \"Walking with Beasts\" (2001), \"Chased by Dinosaurs\" (2002) or \"Walking with Monsters\" (2005), among others.\n[2] Life in the Freezer is a BBC nature documentary series written and presented by David Attenborough, first transmitted in the United Kingdom from 18 November 1993.\n[3] Walking with Cavemen is a four-part television documentary series about human evolution produced by the BBC in the United Kingdom.\n[4] Walking with Monsters (also distributed as \"Before the Dinosaurs - Walking with Monsters\" or \"Walking with Monsters - Life Before Dinosaurs\") is a three-part British documentary film series about life in the Paleozoic, and briefly into the Mesozoic, bringing to life extinct arthropods, fish, amphibians, synapsids, and reptiles."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

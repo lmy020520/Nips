@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "George Orwell",
+  "pred_answer": "George Orwell",
+  "normalized_gold": "george orwell",
+  "normalized_pred": "george orwell",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab306bc5542991669774187",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab306bc5542991669774187::Animal Farm (1954 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab306bc5542991669774187::Animal Farm::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab306bc5542991669774187::Harold Whitaker::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab306bc5542991669774187::History of British animation::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab306bc5542991669774187::Animal Farm (1954 film)",
+        "5ab306bc5542991669774187::Harold Whitaker"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab306bc5542991669774187::Animal Farm (1954 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab306bc5542991669774187::Animal Farm::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab306bc5542991669774187::Harold Whitaker::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab306bc5542991669774187::History of British animation::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab306bc5542991669774187::History of British animation::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Notable full-length animated features to be produced in the UK include Animal Farm (1954), Yellow Submarine (1968), Watership Down (1978), and (2005).\n[2] Harold Jackson Whitaker (5 June 1920 – 26 December 2013) was a British animator, whose credits included \"Animal Farm\" in 1954 and \"Heavy Metal\" in 1981.\n[3] Animal Farm is an allegorical novella by George Orwell, first published in England on 17 August 1945.\n[4] Animal Farm is a 1954 British-American adult animated comedy-drama film by Halas and Batchelor, based on the book \"Animal Farm\" by George Orwell."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

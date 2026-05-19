@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Leif Garrett",
+  "pred_answer": "Leif Garrett",
+  "normalized_gold": "leif garrett",
+  "normalized_pred": "leif garrett",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7aca6055429927d897bf14",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7aca6055429927d897bf14::Leif Garrett::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7aca6055429927d897bf14::Michael Lloyd (music producer)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7aca6055429927d897bf14::Georg Olden (actor)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7aca6055429927d897bf14::Leif Garrett",
+        "5a7aca6055429927d897bf14::Michael Lloyd (music producer)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7aca6055429927d897bf14::Leif Garrett::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7aca6055429927d897bf14::Michael Lloyd (music producer)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7aca6055429927d897bf14::Georg Olden (actor)::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7aca6055429927d897bf14::Georg Olden (actor)::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Rising to prominence as a teen idol in the mid-1980s, Olden is also known for his feature film roles; as \"Piper\" in the teen comedy \"Bad Manners\" (aka: \"Growing Pains\") and as one of the teenage bullies in the science fiction adventure \"Explorers\".\n[2] After working with Mike Curb, Kim Fowley and others in the mid and late 1960s on musical projects including the West Coast Pop Art Experimental Band, and Steven Spielberg's first short film, \"Amblin'\", he became a producer of such teen idol pop stars as The Osmonds, Shaun Cassidy, and Leif Garrett in the 1970s.\n[3] He worked as a child actor then in the 1970s became famous as a teen idol."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

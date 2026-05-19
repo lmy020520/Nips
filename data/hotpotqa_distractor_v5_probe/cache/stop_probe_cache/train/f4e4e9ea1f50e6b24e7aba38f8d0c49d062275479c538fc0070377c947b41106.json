@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mike Singletary",
+  "pred_answer": "Mike Singletary",
+  "normalized_gold": "mike singletary",
+  "normalized_pred": "mike singletary",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae398bd5542994393b9e721",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae398bd5542994393b9e721::2009 San Francisco 49ers season::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae398bd5542994393b9e721::Mike Singletary::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae398bd5542994393b9e721::2012 New Orleans Saints season::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae398bd5542994393b9e721::2009 San Francisco 49ers season",
+        "5ae398bd5542994393b9e721::Mike Singletary"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae398bd5542994393b9e721::2009 San Francisco 49ers season::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae398bd5542994393b9e721::Mike Singletary::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae398bd5542994393b9e721::2012 New Orleans Saints season::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae398bd5542994393b9e721::2012 New Orleans Saints season::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] On April 12, 2012, linebackers coach Joe Vitt was named interim head coach to replace Sean Payton while he served his one-year suspension.\n[2] Singletary later pursued a career as a coach, first as a linebackers coach for the Baltimore Ravens, then as the linebackers coach for the San Francisco 49ers.\n[3] The 2009 San Francisco 49ers season was the franchise's 64th season, 60th in the National Football League, and the first full year with Mike Singletary as head coach after being named interim head coach in 2008."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

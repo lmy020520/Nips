@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "over 35",
+  "pred_answer": "over 35",
+  "normalized_gold": "over 35",
+  "normalized_pred": "over 35",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a778f8955429949eeb29ef8",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a778f8955429949eeb29ef8::Bol Baby Bol::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a778f8955429949eeb29ef8::Adnan Sami::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a778f8955429949eeb29ef8::The Edges of Twilight::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a778f8955429949eeb29ef8::Bol Baby Bol",
+        "5a778f8955429949eeb29ef8::Adnan Sami"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a778f8955429949eeb29ef8::Bol Baby Bol::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a778f8955429949eeb29ef8::Adnan Sami::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a778f8955429949eeb29ef8::The Edges of Twilight::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a778f8955429949eeb29ef8::The Edges of Twilight::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] So with this album we became more familiar with many more instruments.\n[2] He can play over 35 musical instruments.\n[3] Bol Baby Bol is a Hindi musical game show produced by Fox Television Studios that aired on STAR One Friday and Saturday nights."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

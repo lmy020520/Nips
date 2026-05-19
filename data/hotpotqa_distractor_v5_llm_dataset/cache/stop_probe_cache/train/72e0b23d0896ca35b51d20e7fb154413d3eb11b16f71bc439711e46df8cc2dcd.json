@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Welland Canal",
+  "pred_answer": "Welland Canal",
+  "normalized_gold": "welland canal",
+  "normalized_pred": "welland canal",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7e19a255429965cec5ea55",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7e19a255429965cec5ea55::Saint Lawrence Seaway::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7e19a255429965cec5ea55::Hogansburg, New York::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7e19a255429965cec5ea55::Saint Regis, New York::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7e19a255429965cec5ea55::St. Regis River (Montana)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7e19a255429965cec5ea55::Saint Lawrence Seaway",
+        "5a7e19a255429965cec5ea55::Saint Regis, New York"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7e19a255429965cec5ea55::Saint Lawrence Seaway::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7e19a255429965cec5ea55::Hogansburg, New York::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7e19a255429965cec5ea55::Saint Regis, New York::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7e19a255429965cec5ea55::St. Regis River (Montana)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7e19a255429965cec5ea55::St. Regis River (Montana)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It begins at Lookout Pass on the Idaho/Montana border, flows east and ends at the confluence with the Clark Fork in the city of St. Regis.\n[2] It lies on the NY 37 highway near the Canada–United States border, at the confluence of the St. Regis River with the Saint Lawrence Seaway.\n[3] It lies on NY 37 near the Canadian-US border at the confluence of the St. Regis River with the Saint Lawrence Seaway.\n[4] Legally, the Seaway extends from Montreal, Quebec, to Lake Erie and includes the Welland Canal."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "\"Hit n Run Phase Two\"",
+  "pred_answer": "\"Hit n Run Phase Two\"",
+  "normalized_gold": "hit n run phase two",
+  "normalized_pred": "hit n run phase two",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae657735542995703ce8b59",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae657735542995703ce8b59::Tony M.::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae657735542995703ce8b59::The New Power Generation::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae657735542995703ce8b59::At the Drive-In::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae657735542995703ce8b59::Tony M.",
+        "5ae657735542995703ce8b59::The New Power Generation"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae657735542995703ce8b59::Tony M.::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae657735542995703ce8b59::The New Power Generation::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae657735542995703ce8b59::At the Drive-In::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae657735542995703ce8b59::At the Drive-In::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Their third and final album before their split, 2000's \"Relationship of Command\", received a number of accolades and is cited as a landmark of the post-hardcore genre.\n[2] In 2015, the New Power Generation reunited as Prince's backing band for his final studio album before his death, \"Hit n Run Phase Two\".\n[3] Anthony Mosley, known as Tony M., is a rapper best known as a member of Prince's band, The New Power Generation."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

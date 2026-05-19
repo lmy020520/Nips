@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "King of the Grizzlies",
+  "pred_answer": "King of the Grizzlies",
+  "normalized_gold": "king of the grizzlies",
+  "normalized_pred": "king of the grizzlies",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b598e5542995d1e6f137b",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b598e5542995d1e6f137b::One Magic Christmas::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b598e5542995d1e6f137b::King of the Grizzlies::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b598e5542995d1e6f137b::Santa Claus in film::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b598e5542995d1e6f137b::One Magic Christmas",
+        "5a8b598e5542995d1e6f137b::King of the Grizzlies"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b598e5542995d1e6f137b::One Magic Christmas::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b598e5542995d1e6f137b::King of the Grizzlies::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b598e5542995d1e6f137b::Santa Claus in film::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b598e5542995d1e6f137b::Santa Claus in film::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] A year later, a film directed by George Albert Smith in titled \"Santa Claus\" (or \"The Visit from Santa Claus\" in the United Kingdom) was created.\n[2] King of the Grizzlies is a 1970 American adventure film directed by Ron Kelly and written by Jack Speirs, Rod Peterson and Norman Wright.\n[3] One Magic Christmas is a 1985 American/Canadian Christmas fantasy film directed by Phillip Borsos."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

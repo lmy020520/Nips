@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Australia",
+  "pred_answer": "Australia",
+  "normalized_gold": "australia",
+  "normalized_pred": "australia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b55dd5542992d025e680c",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b55dd5542992d025e680c::East Gate/West Gate::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b55dd5542992d025e680c::Sudley, Virginia::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b55dd5542992d025e680c::West Gate Bridge::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7b55dd5542992d025e680c::West Gate Distributor::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7b55dd5542992d025e680c::West Gate Tunnel::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b55dd5542992d025e680c::West Gate Bridge",
+        "5a7b55dd5542992d025e680c::West Gate Distributor"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b55dd5542992d025e680c::East Gate/West Gate::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b55dd5542992d025e680c::Sudley, Virginia::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b55dd5542992d025e680c::West Gate Bridge::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7b55dd5542992d025e680c::West Gate Distributor::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7b55dd5542992d025e680c::West Gate Tunnel::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b55dd5542992d025e680c::West Gate Tunnel::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The West Gate Tunnel, originally known as the Western Distributor, is a proposed 5 kilometre toll road in Melbourne, Australia, to link the West Gate Freeway at Yarraville with CityLink at Docklands via a tunnel beneath Yarraville.\n[2] The West Gate Distributor is a proposed toll road in Melbourne, Australia, to provide access between the West Gate Freeway and the Port of Melbourne, primarily for heavy freight vehicles.\n[3] The West Gate Bridge is a steel box girder cable-stayed bridge in Melbourne, Victoria, Australia.\n[4] As of the 2010 census, Sudley comprises what in the 2000 census were the Sudley and West Gate CDPs."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

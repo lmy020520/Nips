@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "1995",
+  "pred_answer": "1995",
+  "normalized_gold": "1995",
+  "normalized_pred": "1995",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a735dd355429901807db007",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a735dd355429901807db007::Charles Schwab Corporation::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a735dd355429901807db007::Stausee Solis::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a735dd355429901807db007::United Utilities::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a735dd355429901807db007::Stocks Reservoir::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a735dd355429901807db007::Stausee Solis::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a735dd355429901807db007::United Utilities",
+        "5a735dd355429901807db007::Stocks Reservoir"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a735dd355429901807db007::Charles Schwab Corporation::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a735dd355429901807db007::Stausee Solis::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a735dd355429901807db007::United Utilities::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a735dd355429901807db007::Stocks Reservoir::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a735dd355429901807db007::Stausee Solis::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a735dd355429901807db007::Stausee Solis::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The water in the reservoir is used for energy production further downstream, in the power plants Sils and Rothenbrunnen.\n[2] The Board House is a building used for meetings by United Utilities and is located on the western shores of the reservoir, near the Hodder Water Treatment Works.\n[3] United Utilities Group PLC (UU), the United Kingdom's largest listed water company, was founded in 1995 as a result of the merger of North West Water and NORWEB.\n[4] Was built in 1986 by the Electric Power Company of Zurich (ewz)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

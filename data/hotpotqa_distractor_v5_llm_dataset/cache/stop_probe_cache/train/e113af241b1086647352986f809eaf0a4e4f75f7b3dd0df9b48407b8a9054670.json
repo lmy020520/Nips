@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Margaret Edwards Award",
+  "pred_answer": "Margaret Edwards Award",
+  "normalized_gold": "margaret edwards award",
+  "normalized_pred": "margaret edwards award",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adc374c55429944faac246b",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adc374c55429944faac246b::S. E. Hinton::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adc374c55429944faac246b::The Outsiders (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adc374c55429944faac246b::American Library in Paris Book Award::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adc374c55429944faac246b::S. E. Hinton",
+        "5adc374c55429944faac246b::The Outsiders (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adc374c55429944faac246b::S. E. Hinton::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adc374c55429944faac246b::The Outsiders (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adc374c55429944faac246b::American Library in Paris Book Award::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adc374c55429944faac246b::American Library in Paris Book Award::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The American Library in Paris Book Award (est. 2010) is a book award established by the American Library in Paris.\n[2] The Outsiders is a 1983 American coming-of-age drama film directed by Francis Ford Coppola, an adaptation of the novel of the same name by S. E. Hinton.\n[3] In 1988 she received the inaugural Margaret Edwards Award from the American Library Association for her cumulative contribution in writing for teens."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

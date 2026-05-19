@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Christian Ponder",
+  "pred_answer": "Christian Ponder",
+  "normalized_gold": "christian ponder",
+  "normalized_pred": "christian ponder",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5aba9fd955429955dce3eea3",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5aba9fd955429955dce3eea3::2011 Minnesota Vikings season::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5aba9fd955429955dce3eea3::W. W. Hughes::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5aba9fd955429955dce3eea3::Christian Ponder::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5aba9fd955429955dce3eea3::Florida State–Virginia football rivalry::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5aba9fd955429955dce3eea3::2011 Minnesota Vikings season",
+        "5aba9fd955429955dce3eea3::Christian Ponder"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5aba9fd955429955dce3eea3::2011 Minnesota Vikings season::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5aba9fd955429955dce3eea3::W. W. Hughes::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5aba9fd955429955dce3eea3::Christian Ponder::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5aba9fd955429955dce3eea3::Florida State–Virginia football rivalry::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5aba9fd955429955dce3eea3::Florida State–Virginia football rivalry::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Florida State–Virginia football rivalry is an American college football rivalry between the Florida State Seminoles football team of Florida State University and Virginia Cavaliers football team of the University of Virginia.\n[2] He played college football at Florida State University and was the Seminoles starting quarterback from 2008 to 2010.\n[3] W. W. Hughes was an American football player and coach former head coach of the Florida State college football program from 1902 to 1903.\n[4] McNabb played respectably, having a passer rating of 82.9 and only turning the ball over twice, but his 1–5 record as starter led to him being benched in favor of rookie Christian Ponder in Week 6, and McNabb was later waived on December 1, 2011."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Wells & Young's Brewery",
+  "pred_answer": "Wells & Young's Brewery",
+  "normalized_gold": "wells & youngs brewery",
+  "normalized_pred": "wells & youngs brewery",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac15a215542994ab5c67cef",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac15a215542994ab5c67cef::Simonds Brewery::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac15a215542994ab5c67cef::Wells &amp; Young's Brewery::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac15a215542994ab5c67cef::Cains Brewery::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac15a215542994ab5c67cef::Simonds Brewery",
+        "5ac15a215542994ab5c67cef::Wells &amp; Young's Brewery"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac15a215542994ab5c67cef::Simonds Brewery::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac15a215542994ab5c67cef::Wells &amp; Young's Brewery::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac15a215542994ab5c67cef::Cains Brewery::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac15a215542994ab5c67cef::Cains Brewery::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It was reopened by GB Breweries, who became part of Bryggerigruppen in 1991, and in 2002 was sold to Gardener-Shaw for £3.4 million.\n[2] Wells & Young's Brewery (Wells & Young's Brewing Company) was formed in October 2006 from the merger of the brewing operations of Charles Wells Ltd and Young's Brewery.\n[3] H & G Simonds Ltd was a brewery founded in Reading, Berkshire, England in 1785 by William Blackall Simonds."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

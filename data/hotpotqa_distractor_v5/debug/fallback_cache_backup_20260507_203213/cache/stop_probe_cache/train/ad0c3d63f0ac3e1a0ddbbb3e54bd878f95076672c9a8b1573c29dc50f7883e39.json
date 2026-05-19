@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Queens Park Rangers",
+  "pred_answer": "Queens Park Rangers",
+  "normalized_gold": "queens park rangers",
+  "normalized_pred": "queens park rangers",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a903b9c5542995651fb50fb",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a903b9c5542995651fb50fb::2011–12 Swansea City A.F.C. season::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a903b9c5542995651fb50fb::2011–12 Premier League::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a903b9c5542995651fb50fb::Alan Waddle::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a903b9c5542995651fb50fb::2011–12 Swansea City A.F.C. season",
+        "5a903b9c5542995651fb50fb::2011–12 Premier League"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a903b9c5542995651fb50fb::2011–12 Swansea City A.F.C. season::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a903b9c5542995651fb50fb::2011–12 Premier League::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a903b9c5542995651fb50fb::Alan Waddle::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a903b9c5542995651fb50fb::Alan Waddle::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] In June 1973 Waddle was signed by Liverpool manager Bill Shankly and netted his only goal for the Reds in a 1-0 win over rivals Everton in December 1973.\n[2] The season began on 13 August 2011 and ended on 13 May 2012 with Manchester City sealing their first league title since 1968 with victory over Queens Park Rangers on the final day.\n[3] Swansea finished the season at 11th place after beating Liverpool 1–0 in the last game of the season on 13 May 2012."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

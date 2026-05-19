@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Al Ewing",
+  "pred_answer": "Al Ewing",
+  "normalized_gold": "al ewing",
+  "normalized_pred": "al ewing",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8de6d05542995085b37350",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8de6d05542995085b37350::Zombo (comics)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8de6d05542995085b37350::Hagibis::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8de6d05542995085b37350::Henry Flint::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8de6d05542995085b37350::Mark Badger::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8de6d05542995085b37350::Zombo (comics)",
+        "5a8de6d05542995085b37350::Henry Flint"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8de6d05542995085b37350::Zombo (comics)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8de6d05542995085b37350::Hagibis::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8de6d05542995085b37350::Henry Flint::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8de6d05542995085b37350::Mark Badger::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8de6d05542995085b37350::Mark Badger::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Mark Badger is an illustrator who has worked as a penciler, inker, cover artist, painter, and occasional colorist in the American comic book industry.\n[2] Henry Flint is a British comic book artist who has worked mainly for British science fiction comic \"2000 AD\".\n[3] Tarzan-like in appearance, the form of Hagibis had also been based on another early Filipino comic book hero, namely Kulafu who was created by another pioneer Filipino comic book artist, Francisco Reyes.\n[4] The character was created by Henry Flint and Al Ewing and first appeared in 2009."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

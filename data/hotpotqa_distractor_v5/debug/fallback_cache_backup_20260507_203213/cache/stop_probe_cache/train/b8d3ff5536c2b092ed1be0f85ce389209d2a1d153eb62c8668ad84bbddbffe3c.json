@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Green Bay Packers",
+  "pred_answer": "Green Bay Packers",
+  "normalized_gold": "green bay packers",
+  "normalized_pred": "green bay packers",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a908a6555429933b8a20543",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a908a6555429933b8a20543::2017 Kansas City Chiefs season::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a908a6555429933b8a20543::2013 Kansas City Chiefs season::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a908a6555429933b8a20543::John Dorsey (American football)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a908a6555429933b8a20543::John Dorsey (American football)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a908a6555429933b8a20543::2017 Kansas City Chiefs season",
+        "5a908a6555429933b8a20543::John Dorsey (American football)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a908a6555429933b8a20543::2017 Kansas City Chiefs season::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a908a6555429933b8a20543::2013 Kansas City Chiefs season::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a908a6555429933b8a20543::John Dorsey (American football)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a908a6555429933b8a20543::John Dorsey (American football)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a908a6555429933b8a20543::John Dorsey (American football)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He is a former National Football League player for the Green Bay Packers, and later served, for two decades, in the Packers' Scouting Department, including Director of College Scouting from 2000-2012.\n[2] John Michael Dorsey (born August 30, 1960) is an American football executive and former player, who most recently served as the General Manager of the Kansas City Chiefs in the National Football League from the 2013 season through the 2016 season.\n[3] The Kansas City Chiefs season was the franchise's 54th season and the first under the head coach/general manager tandem of Andy Reid and John Dorsey.\n[4] General manager John Dorsey was fired on June 22, 2017."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

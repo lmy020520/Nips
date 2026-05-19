@@ -1,0 +1,24 @@
+{
+  "should_derive": true,
+  "reason": "The question asks who sat in on guitar at the Let It Rock concert and had a top 5 hit with 'Angel Eyes'. The state summary mentions Jeff Healey, but the raw candidates do not directly confirm this. A bridge note can connect the raw candidate about 'Angel Eyes' (Tamara Walker) to the question, but that is not the right person. A verification note can check if any raw candidate mentions Jeff Healey or the Let It Rock concert. Since none do, we need to derive notes to guide further search.",
+  "derived_candidates": [
+    {
+      "type": "verification_note",
+      "text": "No raw candidate mentions Jeff Healey or the Let It Rock concert.",
+      "source_unit_ids": [
+        "5a721cdb55429971e9dc9281::No Tengo Dinero (Los Umbrellos song)::5",
+        "5a721cdb55429971e9dc9281::Tamara Walker::6",
+        "5a721cdb55429971e9dc9281::Midnight Madness (album)::6"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "The song 'Angel Eyes' is associated with Tamara Walker, but she is not the guitarist at the Let It Rock concert.",
+      "source_unit_ids": [
+        "5a721cdb55429971e9dc9281::Tamara Walker::6"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

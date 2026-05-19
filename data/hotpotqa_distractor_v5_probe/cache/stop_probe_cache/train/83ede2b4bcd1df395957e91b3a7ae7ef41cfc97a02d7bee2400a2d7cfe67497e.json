@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "\"Essex\" class",
+  "pred_answer": "\"Essex\" class",
+  "normalized_gold": "essex class",
+  "normalized_pred": "essex class",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b9f26554299294a54aa2c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b9f26554299294a54aa2c::Essex-class aircraft carrier::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b9f26554299294a54aa2c::Lion-class battleship::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b9f26554299294a54aa2c::Iowa-class battleship::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7b9f26554299294a54aa2c::Invincible-class aircraft carrier::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b9f26554299294a54aa2c::Essex-class aircraft carrier",
+        "5a7b9f26554299294a54aa2c::Iowa-class battleship"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b9f26554299294a54aa2c::Essex-class aircraft carrier::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b9f26554299294a54aa2c::Lion-class battleship::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b9f26554299294a54aa2c::Iowa-class battleship::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7b9f26554299294a54aa2c::Invincible-class aircraft carrier::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b9f26554299294a54aa2c::Invincible-class aircraft carrier::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The \"Invincible\" class was a class of light aircraft carrier operated by the Royal Navy.\n[2] The \"Iowa\"-class battleships were a class of six fast battleships ordered by the United States Navy in 1939 and 1940 to escort the Fast Carrier Task Forces that would operate in the Pacific Theater of World War II.\n[3] None of the other ships planned were laid down, although there was a proposal to modify one of the suspended ships into a hybrid battleship/aircraft carrier with two 16-inch gun turrets and a flight deck.\n[4] The \"Essex\" class was a class of aircraft carriers of the United States Navy that constituted the 20th century's most numerous class of capital ships."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

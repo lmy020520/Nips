@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Maxine Waters",
+  "pred_answer": "Maxine Waters",
+  "normalized_gold": "maxine waters",
+  "normalized_pred": "maxine waters",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79d2cf554299148911fa65",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79d2cf554299148911fa65::Maxine Waters::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79d2cf554299148911fa65::Ashwin Madia::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79d2cf554299148911fa65::California's 43rd congressional district::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a79d2cf554299148911fa65::Rico Oller::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79d2cf554299148911fa65::Maxine Waters",
+        "5a79d2cf554299148911fa65::California's 43rd congressional district"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79d2cf554299148911fa65::Maxine Waters::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79d2cf554299148911fa65::Ashwin Madia::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79d2cf554299148911fa65::California's 43rd congressional district::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a79d2cf554299148911fa65::Rico Oller::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a79d2cf554299148911fa65::Rico Oller::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Thomas \"Rico\" Oller (born July 16, 1958) is a Republican U.S. politician from California.\n[2] California's 43rd congressional district is a congressional district in the U.S. state of California that is represented by Democrat Maxine Waters .\n[3] Jigar Ashwin Madia, known as Ashwin Madia (born March 3, 1978), is an American attorney and Iraq War veteran who ran for the United States Congress in Minnesota's 3rd congressional district in 2008.\n[4] In Congress, she is an outspoken opponent of the Iraq War and Donald Trump."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Fairfield County",
+  "pred_answer": "Fairfield County",
+  "normalized_gold": "fairfield county",
+  "normalized_pred": "fairfield county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a75274e55429916b0164277",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a75274e55429916b0164277::S.A.C. Capital Advisors::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a75274e55429916b0164277::Stamford, Connecticut::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a75274e55429916b0164277::Taxation of private equity and hedge funds::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a75274e55429916b0164277::S.A.C. Capital Advisors",
+        "5a75274e55429916b0164277::Stamford, Connecticut"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a75274e55429916b0164277::S.A.C. Capital Advisors::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a75274e55429916b0164277::Stamford, Connecticut::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a75274e55429916b0164277::Taxation of private equity and hedge funds::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a75274e55429916b0164277::Taxation of private equity and hedge funds::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] They are subject to favorable regulatory treatment in most jurisdictions from which they are managed, which allows them to engage in financial activities that are off-limits for more regulated companies.\n[2] Stamford is a city in Fairfield County, Connecticut, United States.\n[3] SAC Capital Advisors was a group of hedge funds founded by Steven A. Cohen in 1992."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

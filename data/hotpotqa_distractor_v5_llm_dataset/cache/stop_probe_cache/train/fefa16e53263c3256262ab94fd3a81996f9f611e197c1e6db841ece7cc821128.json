@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "five",
+  "pred_answer": "five",
+  "normalized_gold": "five",
+  "normalized_pred": "five",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab29d6d554299194fa93463",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab29d6d554299194fa93463::Kampala::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab29d6d554299194fa93463::91.3 Capital FM::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab29d6d554299194fa93463::Negeri FM::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab29d6d554299194fa93463::Kampala",
+        "5ab29d6d554299194fa93463::91.3 Capital FM"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab29d6d554299194fa93463::Kampala::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab29d6d554299194fa93463::91.3 Capital FM::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab29d6d554299194fa93463::Negeri FM::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab29d6d554299194fa93463::Negeri FM::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Negeri FM is a Malay language-radio station broadcasting from Seremban, Malaysia which is operated by the Radio Televisyen Malaysia.\n[2] 91.3 Capital FM (sometimes called Capital Radio or Capital Fm) is an English radio channel broadcasting from Kampala Uganda at 91.3MHz and covers the whole of Uganda plus some parts of Northern Tanzania, Rwanda, Eastern Congo, and western Kenya.\n[3] The city is divided into five boroughs that oversee local planning: Kampala Central Division, Kawempe Division, Makindye Division, Nakawa Division, and Rubaga Division."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

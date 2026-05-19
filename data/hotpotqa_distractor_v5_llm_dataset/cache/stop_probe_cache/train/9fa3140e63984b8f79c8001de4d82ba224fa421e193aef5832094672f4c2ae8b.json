@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "bimonthly",
+  "pred_answer": "bimonthly",
+  "normalized_gold": "bimonthly",
+  "normalized_pred": "bimonthly",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3148d5542995ef918c0fe",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3148d5542995ef918c0fe::Jenefer Shute::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3148d5542995ef918c0fe::Life-Size (novel)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3148d5542995ef918c0fe::Boston Review::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3148d5542995ef918c0fe::The Harvard Advocate::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3148d5542995ef918c0fe::Jenefer Shute",
+        "5ac3148d5542995ef918c0fe::Boston Review"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3148d5542995ef918c0fe::Jenefer Shute::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3148d5542995ef918c0fe::Life-Size (novel)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3148d5542995ef918c0fe::Boston Review::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3148d5542995ef918c0fe::The Harvard Advocate::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3148d5542995ef918c0fe::The Harvard Advocate::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Fifty years after that, Donald Hall wrote in \"The New York Times Book Review\" that \"In the world of the college – where every generation is born, grows old and dies in four years – it is rare for an institution to survive a decade, much less a century.\n[2] Boston Review is a bimonthly American political and literary magazine.\n[3] Life-Size is the debut novel by South African author Jenefer Shute, published in 1992 and is a Literary Guild selection.\n[4] She has also written for \"Harpers\", \"The Nation\", \"salon.com\", \"The Guardian\", \"Tikkun\", the \"Boston Review\", and \"Modern Fiction Studies\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

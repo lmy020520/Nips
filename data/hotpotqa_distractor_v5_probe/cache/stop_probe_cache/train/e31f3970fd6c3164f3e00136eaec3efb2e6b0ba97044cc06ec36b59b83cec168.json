@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1861",
+  "pred_answer": "1861",
+  "normalized_gold": "1861",
+  "normalized_pred": "1861",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae6679d5542992ae0d16330",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae6679d5542992ae0d16330::Joseph Brown Collection::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae6679d5542992ae0d16330::National Gallery of Art::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae6679d5542992ae0d16330::National Gallery of Victoria::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae6679d5542992ae0d16330::Portland Art Museum::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae6679d5542992ae0d16330::Joseph Brown Collection",
+        "5ae6679d5542992ae0d16330::National Gallery of Victoria"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae6679d5542992ae0d16330::Joseph Brown Collection::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae6679d5542992ae0d16330::National Gallery of Art::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae6679d5542992ae0d16330::National Gallery of Victoria::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae6679d5542992ae0d16330::Portland Art Museum::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae6679d5542992ae0d16330::Portland Art Museum::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Portland Art Museum in Portland, Oregon, United States, was founded in 1892, making it the oldest art museum on the West Coast and seventh oldest in the US.\n[2] Founded in 1861, it is Australia's oldest, largest and most visited art museum.\n[3] The core collection includes major works of art donated by Paul Mellon, Ailsa Mellon Bruce, Lessing J. Rosenwald, Samuel Henry Kress, Rush Harrison Kress, Peter Arrell Brown Widener, Joseph E. Widener, and Chester Dale.\n[4] The Joseph Brown Collection comprises works of art donated to the National Gallery of Victoria in 2004 by the collector and art dealer Joseph Brown."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Maradhoo Feydhoo School",
+  "pred_answer": "Maradhoo Feydhoo School",
+  "normalized_gold": "maradhoo feydhoo school",
+  "normalized_pred": "maradhoo feydhoo school",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7541ab5542993748c89803",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7541ab5542993748c89803::Maradhoo Feydhoo School::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7541ab5542993748c89803::Ari Atoll::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7541ab5542993748c89803::Addu City::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7541ab5542993748c89803::Marine wildlife of Baa Atoll::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7541ab5542993748c89803::Maradhoo Feydhoo School",
+        "5a7541ab5542993748c89803::Addu City"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7541ab5542993748c89803::Maradhoo Feydhoo School::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7541ab5542993748c89803::Ari Atoll::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7541ab5542993748c89803::Addu City::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7541ab5542993748c89803::Marine wildlife of Baa Atoll::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7541ab5542993748c89803::Marine wildlife of Baa Atoll::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The marine wildlife of Baa Atoll consists of marine species living in a circular archipelago in the Maldives, inside the administrative division of Baa Atoll, which is the southern part of Maalhosmadulu Atoll.\n[2] Addu City (local administrative code Seenu) is a city in Maldives that consists of the inhabited islands of the southernmost atoll of the archipelago.\n[3] It is one of the biggest atolls and is located in the west of the archipelago.\n[4] Maradhoo Feydhoo School is a school located in Maradhoo-Feydhoo, a district of Addu City in the Maldives."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

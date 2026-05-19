@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ministro Pistarini International Airport",
+  "pred_answer": "Ministro Pistarini International Airport",
+  "normalized_gold": "ministro pistarini international airport",
+  "normalized_pred": "ministro pistarini international airport",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a832a625542990548d0b1b4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a832a625542990548d0b1b4::Ministro Pistarini International Airport::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a832a625542990548d0b1b4::National Route A004 (Argentina)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a832a625542990548d0b1b4::National Route A002 (Argentina)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a832a625542990548d0b1b4::Ministro Pistarini International Airport::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a832a625542990548d0b1b4::Ministro Pistarini International Airport",
+        "5a832a625542990548d0b1b4::National Route A002 (Argentina)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a832a625542990548d0b1b4::Ministro Pistarini International Airport::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a832a625542990548d0b1b4::National Route A004 (Argentina)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a832a625542990548d0b1b4::National Route A002 (Argentina)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a832a625542990548d0b1b4::Ministro Pistarini International Airport::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a832a625542990548d0b1b4::Ministro Pistarini International Airport::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is the country's largest international airport by number of passengers handled—85% of international traffic—and is a hub for international flights of Aerolíneas Argentinas and LATAM Argentina.\n[2] National Route A002 Autopista Teniente General Pablo Riccheri connects Avenida General Paz with Ministro Pistarini International Airport (Ezeiza).\n[3] National Route A004 is a four-lane highway connecting National Route 1 (Buenos Aires-La Plata highway) at km marker 31 with the Juan María Gutiérrez circle in Greater Buenos Aires.\n[4] Ministro Pistarini International Airport (Spanish: \"Aeropuerto Internacional Ministro Pistarini\" ) (IATA: EZE, ICAO: SAEZ) , known as Ezeiza International Airport owing to its location in the Ezeiza Partido in Greater Buenos Aires, is an international airport 22 km south-southwest of the Autonomous City of Buenos Aires, the capital city of Argentina."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Oscar Hammerstein II",
+  "pred_answer": "Oscar Hammerstein II",
+  "normalized_gold": "oscar hammerstein ii",
+  "normalized_pred": "oscar hammerstein ii",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae74bf15542997b22f6a692",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae74bf15542997b22f6a692::James Byng::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae74bf15542997b22f6a692::Oscar Hammerstein II::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae74bf15542997b22f6a692::Sunny (1941 film)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae74bf15542997b22f6a692::Scott Sanders (producer)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae74bf15542997b22f6a692::Oscar Hammerstein II",
+        "5ae74bf15542997b22f6a692::Sunny (1941 film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae74bf15542997b22f6a692::James Byng::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae74bf15542997b22f6a692::Oscar Hammerstein II::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae74bf15542997b22f6a692::Sunny (1941 film)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae74bf15542997b22f6a692::Scott Sanders (producer)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae74bf15542997b22f6a692::Scott Sanders (producer)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He is best known for the theatrical musical version of Alice Walker’s novel \"The Color Purple\", of which he was Lead Producer along with Oprah Winfrey, Quincy Jones, and Harvey Weinstein, for producing \"Elaine Stritch: at Liberty\" and the 2012 revival of the musical \"Evita\", and for his work on numerous musical and theatrical productions.\n[2] It was adapted by Sig Herzig from the Jerome Kern-Oscar Hammerstein II musical play \"Sunny\".\n[3] Oscar Greeley Clendenning Hammerstein II ( ; July 12, 1895 – August 23, 1960) was an American librettist, theatrical producer, and (usually uncredited) theatre director of musicals for almost forty years.\n[4] Mr. Producer\", honoring theatrical producer Cameron Mackintosh at the Lyceum Theatre on 8 June 1998."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

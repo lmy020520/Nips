@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "John Allen Amos Jr.",
+  "pred_answer": "John Allen Amos Jr.",
+  "normalized_gold": "john allen amos jr",
+  "normalized_pred": "john allen amos jr",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe3bb55542993f32c2a0b7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe3bb55542993f32c2a0b7::John Amos::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe3bb55542993f32c2a0b7::Albert Reed Jr.::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe3bb55542993f32c2a0b7::The Players Club::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe3bb55542993f32c2a0b7::Ta-Ronce Allen::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe3bb55542993f32c2a0b7::John Amos",
+        "5abe3bb55542993f32c2a0b7::The Players Club"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe3bb55542993f32c2a0b7::John Amos::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe3bb55542993f32c2a0b7::Albert Reed Jr.::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe3bb55542993f32c2a0b7::The Players Club::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe3bb55542993f32c2a0b7::Ta-Ronce Allen::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe3bb55542993f32c2a0b7::Ta-Ronce Allen::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] She is also the daughter of actor Raymond Allen, who starred as Uncle Woodrow Anderson on the NBC sitcom \"Sanford and Son\" and Ned \"The Wino\" on the CBS sitcom \"Good Times\" in the 1970s.\n[2] The Players Club is a 1998 American comedy/drama film written and directed by Ice Cube making his directorial debut.\n[3] He was mostly known for his recurring role as Alderman Fred C. Davis on \"Good Times\".\n[4] John Allen Amos Jr. (born December 27, 1939) is an American actor who is best known for his role as James Evans, Sr. on the CBS television series \"Good Times\" (1974–76)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

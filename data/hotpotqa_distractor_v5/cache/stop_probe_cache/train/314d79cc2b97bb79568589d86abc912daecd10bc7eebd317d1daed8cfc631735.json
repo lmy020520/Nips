@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sheldon Silver",
+  "pred_answer": "Sheldon Silver",
+  "normalized_gold": "sheldon silver",
+  "normalized_pred": "sheldon silver",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abf528e5542993fe9a41dfe",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abf528e5542993fe9a41dfe::Yuh-Line Niou::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abf528e5542993fe9a41dfe::Alice Cancel::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abf528e5542993fe9a41dfe::Sheldon Silver::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abf528e5542993fe9a41dfe::Tom Campbell (California politician)::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abf528e5542993fe9a41dfe::Yuh-Line Niou",
+        "5abf528e5542993fe9a41dfe::Sheldon Silver"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abf528e5542993fe9a41dfe::Yuh-Line Niou::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abf528e5542993fe9a41dfe::Alice Cancel::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abf528e5542993fe9a41dfe::Sheldon Silver::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abf528e5542993fe9a41dfe::Tom Campbell (California politician)::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abf528e5542993fe9a41dfe::Tom Campbell (California politician)::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] On June 8, 2010, he lost his third bid for the United States Senate, and second for the seat held by Democrat Barbara Boxer, losing the Republican nomination to Carly Fiorina.\n[2] Sheldon \"Shelly\" Silver (born February 13, 1944) is a former lawyer and Democratic Party politician from New York City, who rose to become the powerful Speaker of the New York State Assembly in 1994 until his arrest on federal corruption charges in 2015.\n[3] In 2016, Cancel was defeated in the Democratic primary for her seat by Yuh-Line Niou.\n[4] She is a Democratic Party member of the New York State Assembly for the 65th district, the seat previously held by Sheldon Silver."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

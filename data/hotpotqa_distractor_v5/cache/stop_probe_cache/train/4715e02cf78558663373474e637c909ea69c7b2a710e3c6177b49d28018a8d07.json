@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2007",
+  "pred_answer": "2007",
+  "normalized_gold": "2007",
+  "normalized_pred": "2007",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add2022554299473435385f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add2022554299473435385f::Russell Trood::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add2022554299473435385f::Samuel Manetoali::9"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add2022554299473435385f::John Howard::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5add2022554299473435385f::William McMahon::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add2022554299473435385f::Russell Trood",
+        "5add2022554299473435385f::John Howard"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add2022554299473435385f::Russell Trood::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add2022554299473435385f::Samuel Manetoali::9",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add2022554299473435385f::John Howard::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5add2022554299473435385f::William McMahon::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add2022554299473435385f::William McMahon::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Sir William Daniel \"Billy\" McMahon, {'1': \", '2': \", '3': \", '4': \"} PC (23 February 190831 March 1988), was an Australian politician who was the Leader of the Liberal Party and the 20th Prime Minister of Australia from 10 March 1971 to 5 December 1972.\n[2] John Winston Howard, {'1': \", '2': \", '3': \", '4': \"} (born 26 July 1939) was the 25th Prime Minister of Australia, serving from 11 March 1996 to 3 December 2007.\n[3] In this year's (2014) general election which was held on the 19th November, he was voted in again for the third term with a landslide victory.\n[4] Russell Brunell Trood (5 December 1948 – 9 January 2017) was a Liberal Party Senator for the state of Queensland, Australia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

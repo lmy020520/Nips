@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Security Service Act 1989",
+  "pred_answer": "Security Service Act 1989",
+  "normalized_gold": "security service act 1989",
+  "normalized_pred": "security service act 1989",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8ec8df5542995a26add51e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8ec8df5542995a26add51e::See What I Wanna See::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8ec8df5542995a26add51e::Michael Bettaney::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8ec8df5542995a26add51e::MI5::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8ec8df5542995a26add51e::MI5(g)::8"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8ec8df5542995a26add51e::Michael Bettaney",
+        "5a8ec8df5542995a26add51e::MI5"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8ec8df5542995a26add51e::See What I Wanna See::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8ec8df5542995a26add51e::Michael Bettaney::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8ec8df5542995a26add51e::MI5::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8ec8df5542995a26add51e::MI5(g)::8",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8ec8df5542995a26add51e::MI5(g)::8",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The organisation, especially under Nathan, worked closely with the Special Branch of the Scotland Yard in Britain and with the Indian Political Intelligence Office headed by John Wallinger, which operated a network of spies in neutral Switzerland which a number of the Indian revolutionaries and members of the Berlin Committee used as a base.\n[2] MI5 is directed by the Joint Intelligence Committee (JIC), and the service is bound by the Security Service Act 1989.\n[3] Michael John Bettaney (born 13 February 1950) was an intelligence officer working in the counter-espionage branch of MI5 who was convicted at the Old Bailey in 1984 of offences under section 1 of the Official Secrets Act 1911 after passing sensitive documents to the Soviet Embassy in London and attempting to act as an agent-in-place for the Soviet Union.\n[4] See What I Wanna See is a musical by Michael John LaChiusa based on three short stories by Ryūnosuke Akutagawa: \"Kesa and Morito\", \"In a Grove\" (the inspiration also for Akira Kurosawa's \"Rashomon\") and \"\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

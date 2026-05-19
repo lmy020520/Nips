@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "director and screenwriter",
+  "pred_answer": "director and screenwriter",
+  "normalized_gold": "director and screenwriter",
+  "normalized_pred": "director and screenwriter",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae02142554299025d62a41e",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae02142554299025d62a41e::Dreams (1990 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae02142554299025d62a41e::Une chambre en ville::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae02142554299025d62a41e::Akira Kurosawa::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae02142554299025d62a41e::Jacques Demy::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae02142554299025d62a41e::Hideo Oguni::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae02142554299025d62a41e::Akira Kurosawa",
+        "5ae02142554299025d62a41e::Jacques Demy"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae02142554299025d62a41e::Dreams (1990 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae02142554299025d62a41e::Une chambre en ville::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae02142554299025d62a41e::Akira Kurosawa::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae02142554299025d62a41e::Jacques Demy::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae02142554299025d62a41e::Hideo Oguni::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae02142554299025d62a41e::Hideo Oguni::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He is best known for co-writing screenplays for a number of films directed by Akira Kurosawa, including \"Ikiru\", \"The Seven Samurai\", \"Throne of Blood\" and \"The Hidden Fortress\".\n[2] Jacques Demy (] ; 5 June 1931 – 27 October 1990) was a French director, lyricist, and screenwriter.\n[3] Akira Kurosawa (黒沢 明 , March 23, 1910 – September 6, 1998) was a Japanese film director and screenwriter.\n[4] Une chambre en ville (also known as A Room in Town) is a 1982 French film directed by Jacques Demy, with music by Michel Colombier, and starring Dominique Sanda, Danielle Darrieux, and Michel Piccoli."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

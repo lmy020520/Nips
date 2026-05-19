@@ -1,0 +1,23 @@
+{
+  "should_derive": true,
+  "reason": "The state summary indicates the answer is Diamond Foods, but the raw candidates do not include it. A bridge note can connect the known entity 'Diamond Foods' to the question's description, and a verification note can confirm the company's specialization.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Diamond Foods is an American packaged food company that specializes in marketing nuts.",
+      "source_unit_ids": [
+        "5a73add955429908901be30f::Diamond Foods::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "The raw candidates do not include Diamond Foods, so additional evidence is needed to confirm the company's specialization in nuts.",
+      "source_unit_ids": [
+        "5a73add955429908901be30f::Post Holdings::0",
+        "5a73add955429908901be30f::WhiteWave Foods::0"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

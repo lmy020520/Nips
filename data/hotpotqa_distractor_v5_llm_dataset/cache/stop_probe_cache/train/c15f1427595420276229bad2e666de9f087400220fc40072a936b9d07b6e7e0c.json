@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "George Mikan",
+  "pred_answer": "George Mikan",
+  "normalized_gold": "george mikan",
+  "normalized_pred": "george mikan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a775c9b5542994aec3b72ae",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a775c9b5542994aec3b72ae::Bob Knight (basketball, born 1929)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a775c9b5542994aec3b72ae::1947–48 Minneapolis Lakers season::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a775c9b5542994aec3b72ae::1947–48 Minneapolis Lakers season::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a775c9b5542994aec3b72ae::George Mikan::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a775c9b5542994aec3b72ae::Sherron Collins::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a775c9b5542994aec3b72ae::1947–48 Minneapolis Lakers season",
+        "5a775c9b5542994aec3b72ae::George Mikan"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a775c9b5542994aec3b72ae::Bob Knight (basketball, born 1929)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a775c9b5542994aec3b72ae::1947–48 Minneapolis Lakers season::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a775c9b5542994aec3b72ae::1947–48 Minneapolis Lakers season::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a775c9b5542994aec3b72ae::George Mikan::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a775c9b5542994aec3b72ae::Sherron Collins::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a775c9b5542994aec3b72ae::Sherron Collins::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Sherron Marlon Collins (born March 18, 1987) is an American professional basketball player who last played for the Windsor Express of the National Basketball League of Canada (NBL).\n[2] George Lawrence Mikan, Jr. (June 18, 1924 – June 1, 2005), nicknamed Mr. Basketball, was an American professional basketball player for the Chicago American Gears of the National Basketball League (NBL) and the Minneapolis Lakers of the NBL, the Basketball Association of America (BAA) and the National Basketball Association (NBA).\n[3] George Mikan led the team with 21.3 points per game.\n[4] The Lakers won the National Basketball League championship against the Rochester Royals."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

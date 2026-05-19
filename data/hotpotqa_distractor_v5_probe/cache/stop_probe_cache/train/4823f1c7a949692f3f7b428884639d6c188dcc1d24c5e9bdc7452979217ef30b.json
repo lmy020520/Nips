@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Matt Lattanzi",
+  "pred_answer": "Matt Lattanzi",
+  "normalized_gold": "matt lattanzi",
+  "normalized_pred": "matt lattanzi",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2c828554299657fa29051",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2c828554299657fa29051::Catch Me If You Can (1989 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2c828554299657fa29051::Matt Lattanzi::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2c828554299657fa29051::John Farrar::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2c828554299657fa29051::Catch Me If You Can (1989 film)",
+        "5ac2c828554299657fa29051::Matt Lattanzi"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2c828554299657fa29051::Catch Me If You Can (1989 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2c828554299657fa29051::Matt Lattanzi::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2c828554299657fa29051::John Farrar::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2c828554299657fa29051::John Farrar::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] As a songwriter and producer he worked with Olivia Newton-John from 1971 to 1989.\n[2] He is most commonly recognized as the first husband of singer and actor Olivia Newton-John, and for his acting in films such as \"My Tutor\" and the soap opera \"Paradise Beach\".\n[3] Catch Me If You Can is a 1989 American motion picture starring Matt Lattanzi, Loryn Locklin, Grant Heslov, Geoffrey Lewis and M. Emmet Walsh."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

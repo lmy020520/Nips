@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "July 16, 2007",
+  "pred_answer": "July 16, 2007",
+  "normalized_gold": "july 16 2007",
+  "normalized_pred": "july 16 2007",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd77bd5542993062266ca6",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd77bd5542993062266ca6::The Last Farewell::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd77bd5542993062266ca6::Woodworm Records::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd77bd5542993062266ca6::New Frontier Hotel and Casino::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd77bd5542993062266ca6::Farewell (The Supremes album)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abd77bd5542993062266ca6::The Last Farewell::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd77bd5542993062266ca6::New Frontier Hotel and Casino",
+        "5abd77bd5542993062266ca6::Farewell (The Supremes album)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd77bd5542993062266ca6::The Last Farewell::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd77bd5542993062266ca6::Woodworm Records::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd77bd5542993062266ca6::New Frontier Hotel and Casino::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd77bd5542993062266ca6::Farewell (The Supremes album)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abd77bd5542993062266ca6::The Last Farewell::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd77bd5542993062266ca6::The Last Farewell::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] It was subsequently recorded and featured on Whittaker's 1971 album \"New World in the Morning\" (\"A Special Kind of Man\" in the US and Canada).\n[2] The album was recorded over the course of the group's final engagement together at the New Frontier Hotel and Casino in Las Vegas, Nevada, including the final night on January 14, 1970.\n[3] It was the second resort that opened on the Las Vegas Strip and operated continuously from October 30, 1942 until it closed on July 16, 2007.\n[4] The album was a recording of performances taken from the band's 1979 farewell tour."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

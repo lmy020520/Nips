@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "music",
+  "pred_answer": "music",
+  "normalized_gold": "music",
+  "normalized_pred": "music",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac297e0554299657fa28fc5",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac297e0554299657fa28fc5::Di-rect::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac297e0554299657fa28fc5::Front 242::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac297e0554299657fa28fc5::Black Strobe::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac297e0554299657fa28fc5::Di-rect",
+        "5ac297e0554299657fa28fc5::Front 242"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac297e0554299657fa28fc5::Di-rect::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac297e0554299657fa28fc5::Front 242::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac297e0554299657fa28fc5::Black Strobe::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac297e0554299657fa28fc5::Black Strobe::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Originally producing in the house genre, they later became more influenced by music from the 1970s and 1980s, especially industrial post punk and European electronic body music.\n[2] Front 242 is a Belgian electronic music group that came into prominence during the 1980s.\n[3] Di-rect is a rock band from The Hague, The Netherlands, which was formed in 1999."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

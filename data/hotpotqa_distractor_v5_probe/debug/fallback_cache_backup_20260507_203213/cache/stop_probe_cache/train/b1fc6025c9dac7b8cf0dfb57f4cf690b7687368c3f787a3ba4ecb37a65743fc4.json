@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Sumerian literature",
+  "pred_answer": "Sumerian literature",
+  "normalized_gold": "sumerian literature",
+  "normalized_pred": "sumerian literature",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a83aeec554299123d8c218a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a83aeec554299123d8c218a::History of Iraq::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a83aeec554299123d8c218a::Sumerian literature::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a83aeec554299123d8c218a::Francophone literature::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a83aeec554299123d8c218a::History of Iraq",
+        "5a83aeec554299123d8c218a::Sumerian literature"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a83aeec554299123d8c218a::History of Iraq::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a83aeec554299123d8c218a::Sumerian literature::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a83aeec554299123d8c218a::Francophone literature::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a83aeec554299123d8c218a::Francophone literature::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Writing in French by Africans was formerly classified as \"colonial literature\" and discussed as part of colonial studies for its ethnographical interest, rather than studied for its literary merit.\n[2] Sumerian literature is the literature written in the Sumerian language during the Middle Bronze Age.\n[3] The territory of the modern state of Iraq was defined in 1920 as Mandatory Iraq."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

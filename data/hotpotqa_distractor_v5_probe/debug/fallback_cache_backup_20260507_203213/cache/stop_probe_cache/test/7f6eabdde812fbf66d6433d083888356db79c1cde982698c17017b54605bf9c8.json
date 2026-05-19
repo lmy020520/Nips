@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1961",
+  "pred_answer": "1961",
+  "normalized_gold": "1961",
+  "normalized_pred": "1961",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a90843c5542995651fb517e",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a90843c5542995651fb517e::Battle of Clitheroe::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a90843c5542995651fb517e::Treaty of Taipei::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a90843c5542995651fb517e::Bay of Pigs Invasion::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a90843c5542995651fb517e::Francisco Jose Hernandez::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a90843c5542995651fb517e::Battle of Clitheroe::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a90843c5542995651fb517e::Bay of Pigs Invasion",
+        "5a90843c5542995651fb517e::Francisco Jose Hernandez"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a90843c5542995651fb517e::Battle of Clitheroe::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a90843c5542995651fb517e::Treaty of Taipei::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a90843c5542995651fb517e::Bay of Pigs Invasion::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a90843c5542995651fb517e::Francisco Jose Hernandez::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a90843c5542995651fb517e::Battle of Clitheroe::7",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a90843c5542995651fb517e::Battle of Clitheroe::7",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] A pitched battle took place and the result was that the English army was routed.\n[2] Francisco José Hernández, known as \"Pepe\", (Havana, 1 September 1936) is a Cuban exile of the 1960s, anti-Castro, and Bay of Pigs Invasion participant who is co-founder and president of the Cuban American National Foundation that claims to be taking a less overt position against the Cuban form of government.\n[3] The Bay of Pigs Invasion (Spanish: Invasión de Playa Girón or Invasión de Bahía de Cochinos or Batalla de Girón) was a failed military invasion of Cuba undertaken by the Central Intelligence Agency (CIA)-sponsored paramilitary group Brigade 2506 on 17 April 1961.\n[4] Although the ROC itself was not a participant in the San Francisco Peace Conference due to the resumption of the Chinese Civil War after 1945, this treaty largely corresponds to that of San Francisco."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Southern Italy",
+  "pred_answer": "Southern Italy",
+  "normalized_gold": "southern italy",
+  "normalized_pred": "southern italy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8a250d5542992d82986ec8",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8a250d5542992d82986ec8::Carapelle (river)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8a250d5542992d82986ec8::Foglia::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8a250d5542992d82986ec8::Apulia::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8a250d5542992d82986ec8::Calaggio::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8a250d5542992d82986ec8::Foglia::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8a250d5542992d82986ec8::Apulia",
+        "5a8a250d5542992d82986ec8::Calaggio"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8a250d5542992d82986ec8::Carapelle (river)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8a250d5542992d82986ec8::Foglia::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8a250d5542992d82986ec8::Apulia::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8a250d5542992d82986ec8::Calaggio::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8a250d5542992d82986ec8::Foglia::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8a250d5542992d82986ec8::Foglia::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The source of the river is west of Sestino in the province of Arezzo (which is in the Tuscany region of Italy) in the Appennino Umbro-Marchigiano mountains.\n[2] The Calaggio is a river in the province of Avellino in Campania and the province of Foggia in Apulia.\n[3] Apulia ( ; Italian: \"Puglia\" ] ; Neapolitan: \"Pùglia\" ] ; Albanian: \"Pulia\" ; Ancient Greek: Ἀπουλία , Apoulia) is a region of Italy in Southern Italy bordering the Adriatic Sea to the east, the Ionian Sea to the southeast, and the Strait of Òtranto and Gulf of Taranto to the south.\n[4] The Foglia is the northernmost river of the Marche region of Italy."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

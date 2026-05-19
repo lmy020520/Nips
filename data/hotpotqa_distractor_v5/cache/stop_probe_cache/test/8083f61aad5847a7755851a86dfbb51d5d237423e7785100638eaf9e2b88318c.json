@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Robert Arthur Mould",
+  "pred_answer": "Robert Arthur Mould",
+  "normalized_gold": "robert arthur mould",
+  "normalized_pred": "robert arthur mould",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a74e8a25542996c70cfae37",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a74e8a25542996c70cfae37::Tom Johnston (musician)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a74e8a25542996c70cfae37::Voice of Reason (Rifle Sport album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a74e8a25542996c70cfae37::Bob Mould::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a74e8a25542996c70cfae37::Julie Masi::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a74e8a25542996c70cfae37::Voice of Reason (Rifle Sport album)",
+        "5a74e8a25542996c70cfae37::Bob Mould"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a74e8a25542996c70cfae37::Tom Johnston (musician)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a74e8a25542996c70cfae37::Voice of Reason (Rifle Sport album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a74e8a25542996c70cfae37::Bob Mould::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a74e8a25542996c70cfae37::Julie Masi::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a74e8a25542996c70cfae37::Julie Masi::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Julie Ann Masi is a Canadian musician, principally known as a percussionist and vocalist with The Parachute Club.\n[2] Robert Arthur Mould (born October 16, 1960) is an American musician, principally known for his work as guitarist, vocalist and songwriter for alternative rock bands Hüsker Dü in the 1980s and Sugar in the 1990s.\n[3] Voice Of Reason is the first album by the Minneapolis band Rifle Sport.\n[4] He is a guitarist and vocalist, known principally as a founder, guitarist, lead vocalist and songwriter for the rock group The Doobie Brothers, as well as for his own solo career."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

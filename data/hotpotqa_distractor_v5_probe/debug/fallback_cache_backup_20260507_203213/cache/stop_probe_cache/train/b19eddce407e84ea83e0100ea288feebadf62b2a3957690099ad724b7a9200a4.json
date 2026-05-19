@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Venus and Adonis",
+  "pred_answer": "Venus and Adonis",
+  "normalized_gold": "venus and adonis",
+  "normalized_pred": "venus and adonis",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abef5de5542997ec76fd39d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abef5de5542997ec76fd39d::The Rape of Lucrece::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abef5de5542997ec76fd39d::Venus and Adonis (Shakespeare poem)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abef5de5542997ec76fd39d::Henry Wriothesley, 3rd Earl of Southampton::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abef5de5542997ec76fd39d::William Herbert, 3rd Earl of Pembroke::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abef5de5542997ec76fd39d::Venus and Adonis (Shakespeare poem)",
+        "5abef5de5542997ec76fd39d::Henry Wriothesley, 3rd Earl of Southampton"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abef5de5542997ec76fd39d::The Rape of Lucrece::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abef5de5542997ec76fd39d::Venus and Adonis (Shakespeare poem)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abef5de5542997ec76fd39d::Henry Wriothesley, 3rd Earl of Southampton::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abef5de5542997ec76fd39d::William Herbert, 3rd Earl of Pembroke::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abef5de5542997ec76fd39d::William Herbert, 3rd Earl of Pembroke::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 1623, the First Folio of William Shakespeare's plays was dedicated to him, together with his brother, Philip Herbert, 1st Earl of Montgomery.\n[2] Shakespeare's two narrative poems, \"Venus and Adonis\" and \"The Rape of Lucrece\", were dedicated to Southampton, who is generally identified as the Fair Youth of Shakespeare's Sonnets.\n[3] Venus and Adonis is a narrative poem by William Shakespeare published in 1593.\n[4] In his previous narrative poem, \"Venus and Adonis\" (1593), Shakespeare had included a dedicatory letter to his patron, the Earl of Southampton, in which he promised to write a \"graver work\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

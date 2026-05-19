@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ahmad Balshe",
+  "pred_answer": "Ahmad Balshe",
+  "normalized_gold": "ahmad balshe",
+  "normalized_pred": "ahmad balshe",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab961db5542996be20204b7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab961db5542996be20204b7::I Drink I Smoke::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab961db5542996be20204b7::Dollar Bill (group)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab961db5542996be20204b7::Belly (rapper)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab961db5542996be20204b7::Magic smoke::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab961db5542996be20204b7::I Drink I Smoke",
+        "5ab961db5542996be20204b7::Belly (rapper)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab961db5542996be20204b7::I Drink I Smoke::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab961db5542996be20204b7::Dollar Bill (group)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab961db5542996be20204b7::Belly (rapper)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab961db5542996be20204b7::Magic smoke::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab961db5542996be20204b7::Magic smoke::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Magic smoke (also factory smoke, blue smoke, angry pixies, or the genie) is a humorous name for the caustic smoke produced by burning out electronic circuits or components (usually by overheating, overamping, or incorrect wiring configurations), which is held to contain the essence of the component's function.\n[2] Ahmad Balshe (Arabic: أحمد بلشي‎ ‎ ) (born April 7, 1984), better known by his stage name Belly, is a Palestinian-Canadian recording artist, singer-songwriter and record producer.\n[3] Dollar Bill is a Swedish hip hop group from Rosengård (Malmö County), Sweden established in 2002, and made up of Tax (real name Muhammed Ahmadi), The Beast (real name Besfort Sulejmani) and their friend Edo (real name Eldin Telalovic).\n[4] \"I Drink I Smoke\" is a song by Canadian rapper Belly."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

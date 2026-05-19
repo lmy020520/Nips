@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The 1981 World Rowing Championships",
+  "pred_answer": "The 1981 World Rowing Championships",
+  "normalized_gold": "the 1981 world rowing championships",
+  "normalized_pred": "the 1981 world rowing championships",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab4484655429942dd415f0a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab4484655429942dd415f0a::1981 World Rowing Championships::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab4484655429942dd415f0a::Reima Karppinen::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab4484655429942dd415f0a::John Lindsay (Paralympian)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab4484655429942dd415f0a::1981 World Rowing Championships",
+        "5ab4484655429942dd415f0a::Reima Karppinen"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab4484655429942dd415f0a::1981 World Rowing Championships::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab4484655429942dd415f0a::Reima Karppinen::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab4484655429942dd415f0a::John Lindsay (Paralympian)::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab4484655429942dd415f0a::John Lindsay (Paralympian)::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] At the 1992 Barcelona Games, he won a gold medal in the Men's 200 m TW3 event, for which he received a Medal of the Order of Australia, a silver medal in the Men's 100 m TW3 event and a bronze medal in the Men's 400 m TW3 event.\n[2] In this event, he won a silver medal at the 1981 World Rowing Championships, together with his legendary brother Pertti.\n[3] The 1981 World Rowing Championships were World Rowing Championships that were held from 30 August to 6 September 1981 at Oberschleißheim outside Munich, Germany."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

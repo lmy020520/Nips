@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Arthur Lubin",
+  "pred_answer": "Arthur Lubin",
+  "normalized_gold": "arthur lubin",
+  "normalized_pred": "arthur lubin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c6deb554299240d9c2163",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c6deb554299240d9c2163::Arthur Lubin::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c6deb554299240d9c2163::Buck Privates::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c6deb554299240d9c2163::Ciro Ippolito::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8c6deb554299240d9c2163::Francis (film)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c6deb554299240d9c2163::Arthur Lubin",
+        "5a8c6deb554299240d9c2163::Ciro Ippolito"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c6deb554299240d9c2163::Arthur Lubin::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c6deb554299240d9c2163::Buck Privates::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c6deb554299240d9c2163::Ciro Ippolito::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8c6deb554299240d9c2163::Francis (film)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c6deb554299240d9c2163::Francis (film)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Francis\" is produced by Robert Arthur, directed by Arthur Lubin, and stars Donald O'Connor and Patricia Medina.\n[2] Ciro Ippolito (born Naples, Italy, 27 January 1947) is an Italian film director and producer.\n[3] \"Buck Privates\" is one of three Abbott and Costello films featuring The Andrews Sisters, who were also under contract to Universal Pictures at the time.\n[4] Arthur Lubin (July 25, 1898 – May 12, 1995) was an American film director and producer who directed several \"Abbott & Costello\" films, \"Phantom of the Opera\" (1943), the \"Francis the Talking Mule\" series and created the talking-horse TV series \"Mister Ed\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

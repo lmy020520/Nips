@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "YTV",
+  "pred_answer": "YTV",
+  "normalized_gold": "ytv",
+  "normalized_pred": "ytv",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a83ec5d554299123d8c21cb",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a83ec5d554299123d8c21cb::Life with Boys::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a83ec5d554299123d8c21cb::Madison Pettis::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a83ec5d554299123d8c21cb::Torri Webster::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a83ec5d554299123d8c21cb::Life with Boys",
+        "5a83ec5d554299123d8c21cb::Madison Pettis"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a83ec5d554299123d8c21cb::Life with Boys::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a83ec5d554299123d8c21cb::Madison Pettis::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a83ec5d554299123d8c21cb::Torri Webster::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a83ec5d554299123d8c21cb::Torri Webster::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] She is known for her starring role as Tess Foster in the YTV teen sitcom \"Life with Boys\", which earned her the Young Artist Award for Best Leading Young Actress in a TV Series.\n[2] She is known for her roles as Sophie Martinez on the Disney Channel comedy series \"Cory in the House\", as Peyton Kelly in the 2007 film \"The Game Plan\", and as Allie Brookes in the 2011 Canadian comedy series \"Life with Boys\".\n[3] Life with Boys is a Canadian teen sitcom that aired in Canada on YTV from September 2011 through August 2013."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

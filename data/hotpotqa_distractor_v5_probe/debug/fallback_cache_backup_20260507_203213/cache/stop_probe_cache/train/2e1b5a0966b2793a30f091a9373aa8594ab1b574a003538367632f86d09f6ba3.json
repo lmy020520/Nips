@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Santiago Bernabéu Trophy",
+  "pred_answer": "The Santiago Bernabéu Trophy",
+  "normalized_gold": "the santiago bernabéu trophy",
+  "normalized_pred": "the santiago bernabéu trophy",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a8df255429927d897bec5",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a8df255429927d897bec5::Trofeo Santiago Bernabéu::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a8df255429927d897bec5::Santiago Bernabéu Yeste::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a8df255429927d897bec5::Trofeo Santiago Bernabéu::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a8df255429927d897bec5::Trofeo Santiago Bernabéu",
+        "5a7a8df255429927d897bec5::Santiago Bernabéu Yeste"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a8df255429927d897bec5::Trofeo Santiago Bernabéu::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a8df255429927d897bec5::Santiago Bernabéu Yeste::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a8df255429927d897bec5::Trofeo Santiago Bernabéu::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a8df255429927d897bec5::Trofeo Santiago Bernabéu::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Santiago Bernabéu Trophy (Spanish: \"Trofeo Santiago Bernabéu\" ) is dedicated to the memory of long-time Real Madrid president Santiago Bernabéu.\n[2] Santiago Bernabéu de Yeste (] ; 8 June 1895 – 2 June 1978) was a footballer who played for Real Madrid as a forward, and is one of the most important men in Real Madrid's history.\n[3] It is a friendly tournament organised each year by Real Madrid at the beginning of the season, somewhere around the end of August or the beginning of September."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

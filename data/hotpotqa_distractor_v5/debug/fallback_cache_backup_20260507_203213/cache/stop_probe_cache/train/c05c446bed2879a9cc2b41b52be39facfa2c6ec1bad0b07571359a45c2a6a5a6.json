@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "8 March 1948",
+  "pred_answer": "8 March 1948",
+  "normalized_gold": "8 march 1948",
+  "normalized_pred": "8 march 1948",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7b10125542992d025e6740",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7b10125542992d025e6740::Marriage Act 1994::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7b10125542992d025e6740::Criminal Justice and Public Order Act 1994::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7b10125542992d025e6740::Gyles Brandreth::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7b10125542992d025e6740::Marriage Act 1753::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7b10125542992d025e6740::Marriage Act 1994",
+        "5a7b10125542992d025e6740::Gyles Brandreth"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7b10125542992d025e6740::Marriage Act 1994::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7b10125542992d025e6740::Criminal Justice and Public Order Act 1994::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7b10125542992d025e6740::Gyles Brandreth::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7b10125542992d025e6740::Marriage Act 1753::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7b10125542992d025e6740::Marriage Act 1753::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Marriage Act 1753, full title \"An Act for the Better Preventing of Clandestine Marriage\", popularly known as Lord Hardwicke's Marriage Act (citation 26 Geo.\n[2] Gyles Daubeney Brandreth (born 8 March 1948) is an English writer, broadcaster, actor, and former Conservative Member of Parliament.\n[3] The Criminal Justice and Public Order Act 1994 (c.33) is an Act of the Parliament of the United Kingdom.\n[4] The Marriage Act 1994 (c. 34) is an Act of the Parliament of the United Kingdom."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

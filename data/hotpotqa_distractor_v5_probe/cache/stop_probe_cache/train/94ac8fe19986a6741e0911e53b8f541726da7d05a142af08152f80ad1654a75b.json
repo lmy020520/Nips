@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Freston Road",
+  "pred_answer": "Freston Road",
+  "normalized_gold": "freston road",
+  "normalized_pred": "freston road",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a72af405542994cef4bc3d9",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a72af405542994cef4bc3d9::Mutoid Waste Company::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a72af405542994cef4bc3d9::Frestonia::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a72af405542994cef4bc3d9::Brink's::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a72af405542994cef4bc3d9::Mutoid Waste Company",
+        "5a72af405542994cef4bc3d9::Frestonia"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a72af405542994cef4bc3d9::Mutoid Waste Company::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a72af405542994cef4bc3d9::Frestonia::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a72af405542994cef4bc3d9::Brink's::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a72af405542994cef4bc3d9::Brink's::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The company emerged from the Pittston Company and changed its name to the Brink’s Company in 2003.\n[2] Frestonia was the name adopted by the residents of Freston Road, London, when they attempted to secede from the United Kingdom in 1977.\n[3] The Mutoid Waste Company was a performance arts group founded in West London, United Kingdom by Joe Rush and Robin Cooke in collaboration with Alan P Scott and Joshua Bowler."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

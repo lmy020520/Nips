@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Hugo Campagnaro",
+  "pred_answer": "Hugo Campagnaro",
+  "normalized_gold": "hugo campagnaro",
+  "normalized_pred": "hugo campagnaro",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a79055455429974737f7946",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a79055455429974737f7946::Madjer::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a79055455429974737f7946::2009 Coppa Italia Final::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a79055455429974737f7946::Hugo Campagnaro::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a79055455429974737f7946::Robbie Rogers::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a79055455429974737f7946::2009 Coppa Italia Final",
+        "5a79055455429974737f7946::Hugo Campagnaro"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a79055455429974737f7946::Madjer::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a79055455429974737f7946::2009 Coppa Italia Final::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a79055455429974737f7946::Hugo Campagnaro::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a79055455429974737f7946::Robbie Rogers::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a79055455429974737f7946::Robbie Rogers::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Robert Hampton \"Robbie\" Rogers III (born May 12, 1987) is an American professional soccer player who plays for LA Galaxy in Major League Soccer.\n[2] Hugo Armando Campagnaro (] ; born 27 June 1980) is an Argentine footballer who plays as a centre back for Italian club Pescara in Serie B.\n[3] Hugo Campagnaro missed his spot kick for Sampdoria and allowed Ousmane Dabo to slot home the winner for Lazio.\n[4] He plays in forward position, and has won numerous awards at the FIFA Beach Soccer World Cups for his goalscoring abilities."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

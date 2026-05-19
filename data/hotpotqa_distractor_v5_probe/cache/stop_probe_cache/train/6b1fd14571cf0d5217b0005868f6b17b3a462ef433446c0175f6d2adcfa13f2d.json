@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Detroit Tigers",
+  "pred_answer": "Detroit Tigers",
+  "normalized_gold": "detroit tigers",
+  "normalized_pred": "detroit tigers",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adea63355429975fa854f3c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adea63355429975fa854f3c::Detroit Tigers::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adea63355429975fa854f3c::Fred House (baseball)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adea63355429975fa854f3c::Bethesda Big Train::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adea63355429975fa854f3c::Detroit Tigers",
+        "5adea63355429975fa854f3c::Fred House (baseball)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adea63355429975fa854f3c::Detroit Tigers::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adea63355429975fa854f3c::Fred House (baseball)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adea63355429975fa854f3c::Bethesda Big Train::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adea63355429975fa854f3c::Bethesda Big Train::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The team is a member of the Cal Ripken Collegiate Baseball League (CRCBL), and derives its name from the nickname of Hall of Fame pitcher Walter Johnson, who was a Bethesda resident for ten years.\n[2] Willard Edwin \"Fred\" House (October 3, 1890 – November 16, 1923) was a Major League Baseball pitcher who played for the Detroit Tigers in 1913 .\n[3] The team currently plays its home games at Comerica Park in Downtown Detroit."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

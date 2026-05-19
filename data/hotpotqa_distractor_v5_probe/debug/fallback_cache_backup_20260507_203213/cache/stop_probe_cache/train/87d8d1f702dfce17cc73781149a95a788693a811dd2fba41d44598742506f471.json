@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "magazine",
+  "pred_answer": "magazine",
+  "normalized_gold": "magazine",
+  "normalized_pred": "magazine",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abaf1f55542996cc5e49f27",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abaf1f55542996cc5e49f27::Ken Caldeira::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abaf1f55542996cc5e49f27::Philip Ball::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abaf1f55542996cc5e49f27::New Scientist::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abaf1f55542996cc5e49f27::World (magazine)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abaf1f55542996cc5e49f27::Rachel Sussman::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abaf1f55542996cc5e49f27::New Scientist",
+        "5abaf1f55542996cc5e49f27::World (magazine)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abaf1f55542996cc5e49f27::Ken Caldeira::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abaf1f55542996cc5e49f27::Philip Ball::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abaf1f55542996cc5e49f27::New Scientist::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abaf1f55542996cc5e49f27::World (magazine)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abaf1f55542996cc5e49f27::Rachel Sussman::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abaf1f55542996cc5e49f27::Rachel Sussman::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Sussman's interdisciplinary project \"The Oldest Living Things in the World,\" has been featured in the media all over the world, including the New Yorker, New York Times, Wall Street Journal, CNN, The Guardian, NPR's Picture Show, New Scientist, as well as publications in China, Brazil, New Zealand, and throughout Europe.\n[2] World (often written in all-caps as WORLD) is a biweekly Christian news magazine, published in the United States by God's World Publications, a non-profit 501(c)(3) organization based in Asheville, North Carolina.\n[3] New Scientist is a weekly English-language international science magazine, founded in 1956.\n[4] He has contributed to publications ranging from \"New Scientist\" to the \"New York Times\", \"The Guardian\", the \"Financial Times\" and \"New Statesman\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

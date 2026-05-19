@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Eon Productions",
+  "pred_answer": "Eon Productions",
+  "normalized_gold": "eon productions",
+  "normalized_pred": "eon productions",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae1385555429901ffe4ae02",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae1385555429901ffe4ae02::Harry Saltzman: Showman::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae1385555429901ffe4ae02::Across the Great Divide Tour (DVD)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae1385555429901ffe4ae02::From Russia with Love (film)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae1385555429901ffe4ae02::From Russia with Love (film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae1385555429901ffe4ae02::Harry Saltzman: Showman",
+        "5ae1385555429901ffe4ae02::From Russia with Love (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae1385555429901ffe4ae02::Harry Saltzman: Showman::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae1385555429901ffe4ae02::Across the Great Divide Tour (DVD)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae1385555429901ffe4ae02::From Russia with Love (film)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae1385555429901ffe4ae02::From Russia with Love (film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae1385555429901ffe4ae02::From Russia with Love (film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] From Russia with Love (1963) is the second spy film in the \"James Bond\" film series produced by Eon Productions, as well as Sean Connery's second role as MI6 agent James Bond.\n[2] It was directed by Terence Young, produced by Albert R. Broccoli and Harry Saltzman, and written by Richard Maibaum and Johanna Harwood, based on Ian Fleming's similarly-named 1957 novel.\n[3] The DVD was produced by filming company PVC Live, who have produced DVD releases for U2, Red Hot Chili Peppers and Radiohead.\n[4] Produced by MGM, it is included on DVD releases of that company's \"From Russia with Love\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

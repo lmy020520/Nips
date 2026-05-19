@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "KBS2",
+  "pred_answer": "KBS2",
+  "normalized_gold": "kbs2",
+  "normalized_pred": "kbs2",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab8aff255429919ba4e2358",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab8aff255429919ba4e2358::Happy Sunday::7"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab8aff255429919ba4e2358::The Return of Superman (TV series)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab8aff255429919ba4e2358::2 Days &amp; 1 Night::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab8aff255429919ba4e2358::Happy Sunday",
+        "5ab8aff255429919ba4e2358::The Return of Superman (TV series)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab8aff255429919ba4e2358::Happy Sunday::7",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab8aff255429919ba4e2358::The Return of Superman (TV series)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab8aff255429919ba4e2358::2 Days &amp; 1 Night::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab8aff255429919ba4e2358::2 Days &amp; 1 Night::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] 2 Days & 1 Night (; also known as 1 Night 2 Days; abbreviated as 1N2D) is a South Korean reality-variety show that airs on KBS2 beginning August 5, 2007.\n[2] The Return of Superman (; also known as Superman Is Back) is a South Korean reality-variety show that airs on KBS2.\n[3] On November 3, 2013 \"Star Family Show Mamma Mia\" was moved to Wednesday nights and replaced with \"The Return of Superman\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

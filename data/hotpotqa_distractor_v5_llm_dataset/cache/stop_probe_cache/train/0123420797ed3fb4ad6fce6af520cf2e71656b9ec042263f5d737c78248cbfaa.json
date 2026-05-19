@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Walt Disney World Resort",
+  "pred_answer": "Walt Disney World Resort",
+  "normalized_gold": "walt disney world resort",
+  "normalized_pred": "walt disney world resort",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7bd9305542997c3ec97291",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7bd9305542997c3ec97291::Snow White's Scary Adventures::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7bd9305542997c3ec97291::Frozen Ever After::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7bd9305542997c3ec97291::Frozen (2013 film)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7bd9305542997c3ec97291::Pocahontas (1995 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7bd9305542997c3ec97291::Frozen Ever After",
+        "5a7bd9305542997c3ec97291::Frozen (2013 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7bd9305542997c3ec97291::Snow White's Scary Adventures::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7bd9305542997c3ec97291::Frozen Ever After::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7bd9305542997c3ec97291::Frozen (2013 film)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7bd9305542997c3ec97291::Pocahontas (1995 film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7bd9305542997c3ec97291::Pocahontas (1995 film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Pocahontas is a 1995 American animated musical romantic-comedy-drama film produced by Walt Disney Feature Animation for Walt Disney Pictures.\n[2] It is the 53rd Disney animated feature film.\n[3] Part of the Norway Pavilion of the park's World Showcase section, the attraction features scenes inspired by Disney's 2013 animated film \"Frozen\" as well as the 2015 animated short \"Frozen Fever\".\n[4] Snow White's Scary Adventures is a dark ride at the Disneyland, Tokyo Disneyland, Disneyland Park (Paris) theme parks, and formerly the Magic Kingdom theme park at the Walt Disney World Resort."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "BMW X1",
+  "pred_answer": "BMW X1",
+  "normalized_gold": "bmw x1",
+  "normalized_pred": "bmw x1",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8ad8135542992d82986f9a",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8ad8135542992d82986f9a::BMW X3::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8ad8135542992d82986f9a::Range Rover Evoque::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8ad8135542992d82986f9a::BMW X1::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8ad8135542992d82986f9a::BMW xDrive::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8ad8135542992d82986f9a::Borgward BX7::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8ad8135542992d82986f9a::BMW X1",
+        "5a8ad8135542992d82986f9a::BMW xDrive"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8ad8135542992d82986f9a::BMW X3::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8ad8135542992d82986f9a::Range Rover Evoque::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8ad8135542992d82986f9a::BMW X1::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8ad8135542992d82986f9a::BMW xDrive::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8ad8135542992d82986f9a::Borgward BX7::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8ad8135542992d82986f9a::Borgward BX7::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Borgward BX7 is a Sino-German compact luxury crossover SUV manufactured by Borgward.\n[2] BMW xDrive is the marketing name for the all-wheel drive system found on the BMW X1, X3, X4, X5, and X6 crossover sport activity vehicles.\n[3] The BMW X1 is a compact luxury crossover SUV manufactured and marketed worldwide by BMW since 2009.\n[4] The Range Rover Evoque is a compact luxury crossover SUV produced by the British manufacturer Land Rover, part of Tata's Jaguar Land Rover group."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

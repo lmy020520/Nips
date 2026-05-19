@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "American",
+  "pred_answer": "American",
+  "normalized_gold": "american",
+  "normalized_pred": "american",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab662e355429954757d3277",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab662e355429954757d3277::Church Universal and Triumphant::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab662e355429954757d3277::&quot;I AM&quot; Activity::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab662e355429954757d3277::Elizabeth Clare Prophet::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab662e355429954757d3277::The Summit Lighthouse::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab662e355429954757d3277::Church Universal and Triumphant",
+        "5ab662e355429954757d3277::Elizabeth Clare Prophet"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab662e355429954757d3277::Church Universal and Triumphant::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab662e355429954757d3277::&quot;I AM&quot; Activity::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab662e355429954757d3277::Elizabeth Clare Prophet::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab662e355429954757d3277::The Summit Lighthouse::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab662e355429954757d3277::The Summit Lighthouse::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Today it is the outreach arm of Church Universal and Triumphant, founded in 1975 by Prophet's wife Elizabeth Clare Prophet.\n[2] Elizabeth Clare Prophet (\"née\": Wulf, a.k.a. Guru Ma) (April 8, 1939 – October 15, 2009) was an American Spiritual Leader, author, orator, and writer.\n[3] It is an offshoot of theosophy and a major precursor of several New Age religions including the Church Universal and Triumphant.\n[4] Church Universal and Triumphant (CUT) is an international New Age religious organization founded in 1975 by Elizabeth Clare Prophet."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

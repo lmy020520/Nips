@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "22",
+  "pred_answer": "22",
+  "normalized_gold": "22",
+  "normalized_pred": "22",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f16f4554299458435d55e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f16f4554299458435d55e::NHL on NBC commentators::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f16f4554299458435d55e::Football Night in America::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f16f4554299458435d55e::Rockefeller Center::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8f16f4554299458435d55e::Coach Trip::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f16f4554299458435d55e::NHL on NBC commentators",
+        "5a8f16f4554299458435d55e::Rockefeller Center"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f16f4554299458435d55e::NHL on NBC commentators::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f16f4554299458435d55e::Football Night in America::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f16f4554299458435d55e::Rockefeller Center::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8f16f4554299458435d55e::Coach Trip::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f16f4554299458435d55e::Coach Trip::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Coach Trip is a British reality game show originally broadcast on Channel 4 from 7 March 2005 to 30 June 2006.\n[2] Rockefeller Center is a large complex consisting of 19 high-rise commercial buildings covering 22 acre between 48th and 51st Streets in New York City.\n[3] Prior to 2012, \"Football Night in America\" originally broadcast from the GE Building in New York City, first out of Studio 8G from 2006 to 2012 and in 2013, from Studio 8H, where \"Saturday Night Live\" is also taped.\n[4] From 2006 to 2008, NBC's studio show originally broadcast out of the rink at New York's Rockefeller Center, at the foot of NBC's offices during January and February."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

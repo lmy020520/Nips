@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "February 20, 1963",
+  "pred_answer": "February 20, 1963",
+  "normalized_gold": "february 20 1963",
+  "normalized_pred": "february 20 1963",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a763e595542992db947374e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a763e595542992db947374e::I May Be Wrong but I Doubt It::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a763e595542992db947374e::Erotomania::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a763e595542992db947374e::Charles Barkley::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a763e595542992db947374e::Dobra, Rajasthan::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a763e595542992db947374e::I May Be Wrong but I Doubt It",
+        "5a763e595542992db947374e::Charles Barkley"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a763e595542992db947374e::I May Be Wrong but I Doubt It::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a763e595542992db947374e::Erotomania::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a763e595542992db947374e::Charles Barkley::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a763e595542992db947374e::Dobra, Rajasthan::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a763e595542992db947374e::Dobra, Rajasthan::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A famous person from Dobra is Retired Captain Hawasingh Lamoria.\n[2] Charles Wade Barkley (born February 20, 1963) is an American retired professional basketball player who is currently the analyst on \"Inside the NBA\".\n[3] This belief is usually applied to someone with higher status or a famous person, but can also be applied to a complete stranger.\n[4] I May Be Wrong but I Doubt It is a memoir by former American professional basketball player Charles Barkley."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

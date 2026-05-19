@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Bugs Bunny",
+  "pred_answer": "Bugs Bunny",
+  "normalized_gold": "bugs bunny",
+  "normalized_pred": "bugs bunny",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81925c554299260e20a29b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81925c554299260e20a29b::Robin Hood Makes Good::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81925c554299260e20a29b::Robin Hood Daffy::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81925c554299260e20a29b::Chuck Jones::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a81925c554299260e20a29b::Robin of Sherwood::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81925c554299260e20a29b::Robin Hood Makes Good",
+        "5a81925c554299260e20a29b::Chuck Jones"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81925c554299260e20a29b::Robin Hood Makes Good::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81925c554299260e20a29b::Robin Hood Daffy::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a81925c554299260e20a29b::Chuck Jones::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a81925c554299260e20a29b::Robin of Sherwood::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a81925c554299260e20a29b::Robin of Sherwood::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Robin of Sherwood (retitled Robin Hood in the United States) is a British television series, based on the legend of Robin Hood.\n[2] He wrote, produced, and/or directed many classic animated cartoon shorts starring Bugs Bunny, Daffy Duck, Wile E. Coyote and the Road Runner, Pepé Le Pew, Porky Pig, Michigan J. Frog, the Three Bears, and a slew of other Warner characters.\n[3] It was also the second parody of Robin Hood directed by Chuck Jones, after the 1949 Bugs Bunny short \"Rabbit Hood\".\n[4] Robin Hood Makes Good is a 1938 Merrie Melodies color cartoon short, directed by Chuck Jones and written by Dave Monahan, and released by Warner Bros. on February 11, 1939."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

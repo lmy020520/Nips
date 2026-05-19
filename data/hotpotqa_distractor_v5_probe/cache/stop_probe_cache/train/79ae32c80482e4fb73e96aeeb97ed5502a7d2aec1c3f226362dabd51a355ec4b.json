@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "QE II Stadium",
+  "pred_answer": "QE II Stadium in Brisbane, Australia",
+  "normalized_gold": "qe ii stadium",
+  "normalized_pred": "qe ii stadium in brisbane australia",
+  "exact_match": false,
+  "context_exact_match": true,
+  "answer_match_rule": "context_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_supported",
+  "support_evidence_summary": "Don Wright won a bronze medal at the 1982 Commonwealth Games, and the athletics events at those Games took place at QE II Stadium in Brisbane, Australia.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_supported",
+    "support_evidence_summary": "Don Wright won a bronze medal at the 1982 Commonwealth Games, and the athletics events at those Games took place at QE II Stadium in Brisbane, Australia.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a6d3355429941d65f2638",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a6d3355429941d65f2638::Aniversario: Never Compromise::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a6d3355429941d65f2638::John Lindsay (Paralympian)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a6d3355429941d65f2638::Athletics at the 1982 Commonwealth Games::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a6d3355429941d65f2638::Don Wright (athlete)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7a6d3355429941d65f2638::John Lindsay (Paralympian)::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a6d3355429941d65f2638::Athletics at the 1982 Commonwealth Games",
+        "5a7a6d3355429941d65f2638::Don Wright (athlete)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a6d3355429941d65f2638::Aniversario: Never Compromise::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a6d3355429941d65f2638::John Lindsay (Paralympian)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a6d3355429941d65f2638::Athletics at the 1982 Commonwealth Games::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a6d3355429941d65f2638::Don Wright (athlete)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7a6d3355429941d65f2638::John Lindsay (Paralympian)::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a6d3355429941d65f2638::John Lindsay (Paralympian)::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He won a gold medal in the men's athletics 100 m T52 event at the 1996 Summer Paralympics with a time of 15.22, a silver medal in the 200 m T52 event with a time of 27.38, and a bronze medal in the 400 m T52 event with a time of 52.93.\n[2] He was a two-time bronze medallist in at the Commonwealth Games in 1982 and 1986.\n[3] At the 1982 Commonwealth Games, the athletics events took place at the QE II Stadium in Brisbane, Australia from 3–9 October 1982.\n[4] At the 1992 Barcelona Games, he won a gold medal in the Men's 200 m TW3 event, for which he received a Medal of the Order of Australia, a silver medal in the Men's 100 m TW3 event and a bronze medal in the Men's 400 m TW3 event."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

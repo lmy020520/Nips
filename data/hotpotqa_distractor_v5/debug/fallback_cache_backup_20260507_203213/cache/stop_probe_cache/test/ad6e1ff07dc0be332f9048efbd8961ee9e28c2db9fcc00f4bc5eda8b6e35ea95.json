@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the jack",
+  "pred_answer": "the jack",
+  "normalized_gold": "the jack",
+  "normalized_pred": "the jack",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85d6d95542996432c570fb",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85d6d95542996432c570fb::Jacking::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85d6d95542996432c570fb::Bijection::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85d6d95542996432c570fb::House dance::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85d6d95542996432c570fb::House Dance International::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85d6d95542996432c570fb::Jacking",
+        "5a85d6d95542996432c570fb::House dance"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85d6d95542996432c570fb::Jacking::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85d6d95542996432c570fb::Bijection::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85d6d95542996432c570fb::House dance::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85d6d95542996432c570fb::House Dance International::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85d6d95542996432c570fb::House Dance International::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] House Dance International (“HDI”) is an annual street dance festival based in New York City that highlights the art forms of House dance, Vogue, Hustle, Waacking and Experimental, all of which are performed to house music or derivatives of electronic dance music.\n[2] House dance is a social dance primarily danced to house music that has roots in the clubs of Chicago and of New York.\n[3] In mathematics, a bijection, bijective function or one-to-one correspondence is a function between the elements of two sets, where each element of one set is paired with exactly one element of the other set, and each element of the other set is paired with exactly one element of the first set.\n[4] Jacking, or the jack, is a freestyle dance move in which the dancer ripples his or her torso back and forth in an undulating motion."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

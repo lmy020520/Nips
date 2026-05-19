@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "British",
+  "pred_answer": "British",
+  "normalized_gold": "british",
+  "normalized_pred": "british",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adde7aa5542997dc79070a0",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adde7aa5542997dc79070a0::English National Opera commissions and premieres::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adde7aa5542997dc79070a0::English National Opera::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adde7aa5542997dc79070a0::English National Opera commissions and premieres::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adde7aa5542997dc79070a0::London Coliseum::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5adde7aa5542997dc79070a0::Nigel Levings::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adde7aa5542997dc79070a0::English National Opera commissions and premieres",
+        "5adde7aa5542997dc79070a0::London Coliseum"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adde7aa5542997dc79070a0::English National Opera commissions and premieres::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adde7aa5542997dc79070a0::English National Opera::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adde7aa5542997dc79070a0::English National Opera commissions and premieres::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adde7aa5542997dc79070a0::London Coliseum::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5adde7aa5542997dc79070a0::Nigel Levings::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adde7aa5542997dc79070a0::Nigel Levings::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Some of his most significant works include operas such as \"The Demon\" at the Bregenz Festival and for Zurich Opera; \"Billy Budd\" for the Welsh National Opera, Opera Australia, Canadian Opera Company, and for the English National Opera; \"Nabucco\" for Opera Australia; \"Wozzeck\" for Opera Australia; \"L'Orfeo\" for Innsbrucker Festwochen der Alten Musik and the Berlin State Opera; \"A Midsummer Night's\n[2] The London Coliseum (also known as the Coliseum Theatre) is a theatre in St. Martin's Lane, central London, built as one of London's largest and most luxurious \"family\" variety theatres. Opened on 24 December 1904 as the London Coliseum Theatre of Varieties, it was designed by the theatrical architect Frank Matcham for the impresario Oswald Stoll.\n[3] The company, formerly known as Sadler's Wells Opera, has long had a policy of commissioning new works, and has staged many world and British premieres.\n[4] English National Opera (ENO) is an opera company based in London, resident at the London Coliseum in St. Martin's Lane."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Olu Dara Jones",
+  "pred_answer": "Olu Dara Jones",
+  "normalized_gold": "olu dara jones",
+  "normalized_pred": "olu dara jones",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6aec5554299110f219a49",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6aec5554299110f219a49::Olu Dara::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6aec5554299110f219a49::Warren Benbow::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6aec5554299110f219a49::Olu Dara::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6aec5554299110f219a49::Olu Dara",
+        "5ab6aec5554299110f219a49::Warren Benbow"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6aec5554299110f219a49::Olu Dara::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6aec5554299110f219a49::Warren Benbow::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6aec5554299110f219a49::Olu Dara::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6aec5554299110f219a49::Olu Dara::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Olu Dara Jones (born Charles Jones III; January 12, 1941) is an American cornetist, guitarist and singer.\n[2] Warren Benbow (born December 22, 1954, in New York City) is a drummer who has worked with Nina Simone, Jimmy Owens, Larry Willis, Eddie Gómez, Olu Dara, Michael Urbaniak, Teruo Nakamura, and was an original member of James Blood Ulmer's band 'Odyssey'.\n[3] He is the father of rapper Nas."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

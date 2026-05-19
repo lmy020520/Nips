@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Austrian Empire",
+  "pred_answer": "Austrian Empire",
+  "normalized_gold": "austrian empire",
+  "normalized_pred": "austrian empire",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0e36055429924de1b71ce",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0e36055429924de1b71ce::Austrian Empire::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0e36055429924de1b71ce::Battle of Wagram::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0e36055429924de1b71ce::XIII Corps (Grande Armée)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0e36055429924de1b71ce::Austrian Empire",
+        "5ae0e36055429924de1b71ce::Battle of Wagram"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0e36055429924de1b71ce::Austrian Empire::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0e36055429924de1b71ce::Battle of Wagram::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0e36055429924de1b71ce::XIII Corps (Grande Armée)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0e36055429924de1b71ce::XIII Corps (Grande Armée)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The XIII Corps of the \"Grande Armée\" was the name of a French military formation that existed during the Napoleonic Wars.\n[2] The Battle of Wagram (] ; 5–6 July 1809) was a military engagement of the Napoleonic Wars that ended in a decisive victory for Emperor Napoleon I's French and allied army against the Austrian army under the command of Archduke Charles of Austria-Teschen.\n[3] The Austrian Empire (Austrian German: \"Kaiserthum Oesterreich\" , modern spelling \"Kaisertum Österreich \") was a Central European multinational great power from 1804 to 1867 created by proclamation out of the realms of the Habsburgs."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Spanish/Argentine",
+  "pred_answer": "Spanish/Argentine",
+  "normalized_gold": "spanish/argentine",
+  "normalized_pred": "spanish/argentine",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add2e425542992ae4cec4d7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add2e425542992ae4cec4d7::Bad Company (1986 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add2e425542992ae4cec4d7::The Two Waters::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add2e425542992ae4cec4d7::Federico Luppi::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5add2e425542992ae4cec4d7::Asesinato en el Senado de la Nación::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add2e425542992ae4cec4d7::Bad Company (1986 film)",
+        "5add2e425542992ae4cec4d7::Federico Luppi"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add2e425542992ae4cec4d7::Bad Company (1986 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add2e425542992ae4cec4d7::The Two Waters::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add2e425542992ae4cec4d7::Federico Luppi::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5add2e425542992ae4cec4d7::Asesinato en el Senado de la Nación::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add2e425542992ae4cec4d7::Asesinato en el Senado de la Nación::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Miguel Ángel Solá won Best Actor for his performance at the Havana Film Festival and Jusid won a Golden Colon for his directorship at the Huelva Latin American Film Festival.\n[2] Federico Luppi (] ; born February 23, 1936) is a Spanish/Argentine film, TV, radio and theatre actor.\n[3] The Two Waters (Spanish: \"A dos aguas\" ) is a 1988 Argentine drama film directed by Carlos Olguin-Trelawny, his \"opera prima\", and written Martha Gavensky starring Miguel Ángel Solá and Bárbara Mújica.\n[4] Bad Company (Spanish: Malayunta ) is a 1986 Argentine drama film written and directed by José Santiso and starring Federico Luppi, Bárbara Mújica and Miguel Ángel Solá."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lithuanian Security Police (LSP)",
+  "pred_answer": "Lithuanian Security Police (LSP)",
+  "normalized_gold": "lithuanian security police lsp",
+  "normalized_pred": "lithuanian security police lsp",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adea81755429939a52fe929",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adea81755429939a52fe929::Lithuanian Security Police::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adea81755429939a52fe929::Algimantas Dailidė::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adea81755429939a52fe929::The Holocaust in Lithuania::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adea81755429939a52fe929::Lithuanian Security Police",
+        "5adea81755429939a52fe929::Algimantas Dailidė"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adea81755429939a52fe929::Lithuanian Security Police::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adea81755429939a52fe929::Algimantas Dailidė::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adea81755429939a52fe929::The Holocaust in Lithuania::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adea81755429939a52fe929::The Holocaust in Lithuania::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The Holocaust in Nazi-occupied Lithuania resulted in the near total destruction of Lithuanian Jews (Litvaks), living in \"Generalbezirk Litauen\" of Reichskommissariat Ostland within the Nazi-controlled Lithuanian SSR.\n[2] Algimantas Mykolas Dailidė (born 12 March 1921) is a former official of the Nazi-sponsored Lithuanian Security Police (Saugumas) during World War II.\n[3] The Lithuanian Security Police (LSP), also known as Saugumas (Lithuanian: \"Saugumo policija\" ), was a local police force that operated in Nazi-occupied Lithuania from 1941 to 1944."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

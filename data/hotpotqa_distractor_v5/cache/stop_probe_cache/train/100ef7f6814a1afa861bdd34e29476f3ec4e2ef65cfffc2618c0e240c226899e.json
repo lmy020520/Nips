@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Dick Clark's Caravan of Stars",
+  "pred_answer": "Dick Clark's Caravan of Stars",
+  "normalized_gold": "dick clarks caravan of stars",
+  "normalized_pred": "dick clarks caravan of stars",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a83bfd75542993344746085",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a83bfd75542993344746085::Exile (American band)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a83bfd75542993344746085::Mark Gray (singer)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a83bfd75542993344746085::High school clubs and organizations::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a83bfd75542993344746085::Exile (American band)",
+        "5a83bfd75542993344746085::Mark Gray (singer)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a83bfd75542993344746085::Exile (American band)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a83bfd75542993344746085::Mark Gray (singer)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a83bfd75542993344746085::High school clubs and organizations::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a83bfd75542993344746085::High school clubs and organizations::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Clubs are started by either corporations, counterpart adult organizations, or campus students looking to satisfy a need or demand.\n[2] He recorded both as a solo artist for Columbia Records and as a member of the country pop band Exile, of which he was a member between 1979 and 1982.\n[3] They started by playing local clubs which led to touring with Dick Clark's Caravan of Stars opening shows and providing backup for major rock artists of the period."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Gold Logie Award",
+  "pred_answer": "Gold Logie Award",
+  "normalized_gold": "gold logie award",
+  "normalized_pred": "gold logie award",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0aed455429945ae95941c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0aed455429945ae95941c::Hamish Blake::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0aed455429945ae95941c::Hamish &amp; Andy (radio show)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0aed455429945ae95941c::Hamish &amp; Andy::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0aed455429945ae95941c::Logie Awards::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0aed455429945ae95941c::Hamish Blake",
+        "5ae0aed455429945ae95941c::Hamish &amp; Andy"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0aed455429945ae95941c::Hamish Blake::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0aed455429945ae95941c::Hamish &amp; Andy (radio show)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0aed455429945ae95941c::Hamish &amp; Andy::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0aed455429945ae95941c::Logie Awards::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0aed455429945ae95941c::Logie Awards::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Awards are given in many categories, but the most widely publicized award and highest honour is the Gold Logie, which is awarded to the most popular personality on Australian television for the previous calendar year, with the record for most wins going to Kennedy and Ray Martin.\n[2] Hamish & Andy are an Australian comedy duo formed in 2003 by Hamish Blake and Andrew (Andy) Lee.\n[3] The Hamish & Andy Show (Hamish and Andy), is an Australian radio show created by and starring comedic duo Hamish Blake and Andy Lee.\n[4] Individually, Blake also won the Gold Logie Award for Most Popular Personality on Australian Television."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

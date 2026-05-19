@@ -1,0 +1,89 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm_failure",
+  "gold_answer": "yes",
+  "pred_answer": null,
+  "normalized_gold": "yes",
+  "normalized_pred": null,
+  "exact_match": false,
+  "context_exact_match": false,
+  "answer_match_rule": "none",
+  "AnswerCorrect_t": false,
+  "SupportSufficient_t": false,
+  "support_rule": "insufficient",
+  "support_evidence_summary": "",
+  "missing_support_reasons": [
+    "missing_pred_answer"
+  ],
+  "support_probe": {
+    "support_sufficient": false,
+    "support_rule": "insufficient",
+    "support_evidence_summary": "",
+    "missing_support_reasons": [
+      "missing_pred_answer"
+    ]
+  },
+  "state_snapshot": {
+    "qid": "5abd601055429933744ab79f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd601055429933744ab79f::Yixing::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd601055429933744ab79f::Guangshui::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd601055429933744ab79f::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd601055429933744ab79f::Yixing::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd601055429933744ab79f::Yixing",
+        "5abd601055429933744ab79f::Guangshui"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd601055429933744ab79f::Yixing::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd601055429933744ab79f::Guangshui::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd601055429933744ab79f::Yixing::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5abd601055429933744ab79f::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5abd601055429933744ab79f::Yixing::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The city is known for its traditional Yixing clay ware.\n[2] Guangshui () is a city of approximately 137,000 inhabitants located in northeastern Hubei province, People's Republic of China, near the border with Henan province.\n[3] Yixing () is a county-level city with a population of 1.24 million administrated under the prefecture-level city of Wuxi in southern Jiangsu province, People's Republic of China, and is part of the Yangtze River Delta.\n\nNotes:\n[bridge] The city is known for its traditional Yixing clay ware."
+  },
+  "TeacherStop_t": false,
+  "FalseStop_t": true,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

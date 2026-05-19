@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "the French surrendered",
+  "pred_answer": "the French surrendered",
+  "normalized_gold": "the french surrendered",
+  "normalized_pred": "the french surrendered",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7a04c05542996a35c17081",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7a04c05542996a35c17081::Alexey Fyodorovich Orlov::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7a04c05542996a35c17081::George Heneage Lawrence Dundas::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7a04c05542996a35c17081::Battle of Paris (1814)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7a04c05542996a35c17081::VI Corps (Grande Armée)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7a04c05542996a35c17081::Alexey Fyodorovich Orlov",
+        "5a7a04c05542996a35c17081::Battle of Paris (1814)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7a04c05542996a35c17081::Alexey Fyodorovich Orlov::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7a04c05542996a35c17081::George Heneage Lawrence Dundas::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7a04c05542996a35c17081::Battle of Paris (1814)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7a04c05542996a35c17081::VI Corps (Grande Armée)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7a04c05542996a35c17081::VI Corps (Grande Armée)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The VI Corps of the \"Grande Armée\" was the name of a French military unit that existed during the Napoleonic Wars.\n[2] After a day of fighting in the suburbs of Paris, the French surrendered on March 31, ending the War of the Sixth Coalition and forcing Emperor Napoleon to abdicate and go into exile.\n[3] As a result of this he was appointed to the command of the sixth-rate HMS \"Calpe\" in which he took part in the Battle of Algeciras Bay in July 1801 during the French Revolutionary Wars.\n[4] He was born in Moscow and took part in all the Napoleonic Wars from 1805 to the capture of Paris."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

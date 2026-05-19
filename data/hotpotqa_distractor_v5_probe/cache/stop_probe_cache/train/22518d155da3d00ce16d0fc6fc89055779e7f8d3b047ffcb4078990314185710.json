@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Lauren Holly",
+  "pred_answer": "Lauren Holly",
+  "normalized_gold": "lauren holly",
+  "normalized_pred": "lauren holly",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85ec175542991dd0999ec5",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85ec175542991dd0999ec5::Lauren Holly::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85ec175542991dd0999ec5::Dragon: The Bruce Lee Story::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85ec175542991dd0999ec5::Bruce Lee's Fighting Method::11"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85ec175542991dd0999ec5::Lauren Holly",
+        "5a85ec175542991dd0999ec5::Dragon: The Bruce Lee Story"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85ec175542991dd0999ec5::Lauren Holly::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85ec175542991dd0999ec5::Dragon: The Bruce Lee Story::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85ec175542991dd0999ec5::Bruce Lee's Fighting Method::11",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85ec175542991dd0999ec5::Bruce Lee's Fighting Method::11",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Uyehara, a martial artist in his own right, was a key personage in arranging Lee's material for publication.\n[2] Dragon: The Bruce Lee Story is a 1993 American biographical drama film written and directed by Rob Cohen, and starring Jason Scott Lee, Lauren Holly and Robert Wagner.\n[3] She is known for her roles as Deputy Sheriff Maxine Stewart in the television series \"Picket Fences\", Mary Swanson in the 1994 film \"Dumb and Dumber\", as Linda Lee in \"\", and Director Jenny Shepard in the series \"NCIS\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,23 @@
+{
+  "should_derive": true,
+  "reason": "The question asks whether Chenghai District or Gaoping is a district of Shantou. The state summary already indicates Chenghai is a district, but we need to confirm Gaoping's status. The raw candidates provide evidence that Chenghai is a district (unit_id 2 mentions 'Chenghai District, Shantou'), but no mention of Gaoping. A verification note can confirm Chenghai's district status, and a bridge note can highlight the lack of evidence for Gaoping.",
+  "derived_candidates": [
+    {
+      "type": "verification_note",
+      "text": "Chenghai is explicitly referred to as a district of Shantou in the source.",
+      "source_unit_ids": [
+        "5a7321205542992359bc323d::Lim Nee Soon::1"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "No evidence in the provided sources supports Gaoping being a district of Shantou.",
+      "source_unit_ids": [
+        "5a7321205542992359bc323d::Feixia Middle School::0",
+        "5a7321205542992359bc323d::Shantou Experimental School::0"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

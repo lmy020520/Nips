@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "New York City Hall",
+  "pred_answer": "New York City Hall",
+  "normalized_gold": "new york city hall",
+  "normalized_pred": "new york city hall",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abacfbe554299660624162b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abacfbe554299660624162b::New York City Hall::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abacfbe554299660624162b::St. Patrick's Old Cathedral::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abacfbe554299660624162b::Joseph-François Mangin::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abacfbe554299660624162b::Park Theatre (Manhattan)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abacfbe554299660624162b::New York City Hall",
+        "5abacfbe554299660624162b::Joseph-François Mangin"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abacfbe554299660624162b::New York City Hall::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abacfbe554299660624162b::St. Patrick's Old Cathedral::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abacfbe554299660624162b::Joseph-François Mangin::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abacfbe554299660624162b::Park Theatre (Manhattan)::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abacfbe554299660624162b::Park Theatre (Manhattan)::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] French architect Marc Isambard Brunel collaborated with fellow émigré Joseph-François Mangin and his brother Charles on the design of the building in the 1790s.\n[2] He was a French-American architect who is noted for designing New York City Hall and St. Patrick's Old Cathedral in New York City.\n[3] Built between 1809 and 1815, and designed by Joseph-François Mangin in the Gothic Revival style, it was the seat of the Roman Catholic Archdiocese of New York until the current Saint Patrick's Cathedral opened in 1879.\n[4] New York City Hall, the seat of New York City government, is located at the center of City Hall Park in the Civic Center area of Lower Manhattan, between Broadway, Park Row, and Chambers Street."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

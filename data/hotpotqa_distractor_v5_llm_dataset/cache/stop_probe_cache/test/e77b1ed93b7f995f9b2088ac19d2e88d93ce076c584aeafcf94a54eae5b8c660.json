@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "about 26,000.",
+  "pred_answer": "about 26,000.",
+  "normalized_gold": "about 26000",
+  "normalized_pred": "about 26000",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae320a95542991a06ce992e",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae320a95542991a06ce992e::Safari Records::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae320a95542991a06ce992e::WhoCares::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae320a95542991a06ce992e::Hertford::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae320a95542991a06ce992e::Deep Purple::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae320a95542991a06ce992e::List of Deep Purple band members::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae320a95542991a06ce992e::Hertford",
+        "5ae320a95542991a06ce992e::Deep Purple"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae320a95542991a06ce992e::Safari Records::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae320a95542991a06ce992e::WhoCares::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae320a95542991a06ce992e::Hertford::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae320a95542991a06ce992e::Deep Purple::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae320a95542991a06ce992e::List of Deep Purple band members::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae320a95542991a06ce992e::List of Deep Purple band members::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Deep Purple are an English hard rock band from Hertford, Hertfordshire.\n[2] Deep Purple are an English rock band formed in Hertford in 1968.\n[3] Forming a civil parish, the 2011 census put the population of Hertford at about 26,000.\n[4] WhoCares was a supergroup formed by Ian Gillan of Deep Purple and Tony Iommi of Black Sabbath in 2011 with the participation of a great number of rock artists as a charity project to raise money to rebuild a music school in Gyumri, Armenia after the destruction of the city in the 1988 earthquake in Armenia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

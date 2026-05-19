@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "1999",
+  "pred_answer": "1999",
+  "normalized_gold": "1999",
+  "normalized_pred": "1999",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7fa53155429969796c1b0d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7fa53155429969796c1b0d::Toyota Vitz::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7fa53155429969796c1b0d::Toyota Etios::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7fa53155429969796c1b0d::Toyota Yaris::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7fa53155429969796c1b0d::Toyota Vitz::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7fa53155429969796c1b0d::Toyota Vitz",
+        "5a7fa53155429969796c1b0d::Toyota Yaris"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7fa53155429969796c1b0d::Toyota Vitz::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7fa53155429969796c1b0d::Toyota Etios::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7fa53155429969796c1b0d::Toyota Yaris::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7fa53155429969796c1b0d::Toyota Vitz::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7fa53155429969796c1b0d::Toyota Vitz::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Now in its third generation, the name \"Toyota Vitz\" has been used consistently in Japan, with most international markets receiving the same vehicle under the Toyota Yaris name, or formerly as the Toyota Echo in some markets for the first generation.\n[2] The Toyota Yaris (Japanese: トヨタ ・ヤリス , Toyota Yarisu ) is a subcompact car produced by Toyota since 1999 , replacing the Starlet.\n[3] The Toyota Etios is a line of four-door sedan and five-door hatchback subcompact cars produced by the Japanese automaker Toyota for the Indian automotive market since 2010, for South Africa and Brazil since 2012 and Indonesia since 2013 (1.2 litre petrol hatchback).\n[4] The Toyota Vitz is a line of three- and five-door hatchback subcompact cars produced since 1999 by the Japanese automobile manufacturer Toyota."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

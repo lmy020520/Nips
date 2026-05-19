@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Queen Elizabeth I",
+  "pred_answer": "Queen Elizabeth I",
+  "normalized_gold": "queen elizabeth i",
+  "normalized_pred": "queen elizabeth i",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3e4555542994393b9e793",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3e4555542994393b9e793::Goneril::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3e4555542994393b9e793::Asian American literature::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3e4555542994393b9e793::Elizabethan literature::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae3e4555542994393b9e793::Vocal learning::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3e4555542994393b9e793::Goneril",
+        "5ae3e4555542994393b9e793::Elizabethan literature"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3e4555542994393b9e793::Goneril::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3e4555542994393b9e793::Asian American literature::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3e4555542994393b9e793::Elizabethan literature::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae3e4555542994393b9e793::Vocal learning::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3e4555542994393b9e793::Vocal learning::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Vocal learning is distinct from auditory learning, or the ability to form memories of sounds heard, a relatively common trait which is present in all vertebrates tested.\n[2] Elizabethan literature refers to bodies of work produced during the reign of Queen Elizabeth I (1558–1603), and is one of the most splendid ages of English literature.\n[3] Asian American literature became a category during the 1970s but didn't see a direct impact in viewership until later in the 1970s.\n[4] Her aggressiveness is a rare trait for a female character in Elizabethan literature."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

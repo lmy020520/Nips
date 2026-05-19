@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2003",
+  "pred_answer": "2003",
+  "normalized_gold": "2003",
+  "normalized_pred": "2003",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae5442f55429960a22e02a6",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae5442f55429960a22e02a6::Osceola Parkway::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae5442f55429960a22e02a6::Florida's Turnpike::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae5442f55429960a22e02a6::Florida State Road 526::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae5442f55429960a22e02a6::Osceola Parkway",
+        "5ae5442f55429960a22e02a6::Florida's Turnpike"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae5442f55429960a22e02a6::Osceola Parkway::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae5442f55429960a22e02a6::Florida's Turnpike::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae5442f55429960a22e02a6::Florida State Road 526::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae5442f55429960a22e02a6::Florida State Road 526::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] State Road 526 (SR 526) is a 12 mi east–west route in the Orlando MSA, located entirely in Orange County.\n[2] Florida's Turnpike, designated as State Road 91 (SR 91) and the Ronald Reagan Turnpike, is a toll road in Florida, maintained by Florida's Turnpike Enterprise (FTE).\n[3] The Osceola Parkway, signed as County Road 522 (CR 522) since around 2003 (and originally planned as State Road 424 ), is a 12.4 mi , partially tolled arterial road extending east–west across the northern boundary of Osceola County, Florida, roughly paralleling the border with Orange County."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

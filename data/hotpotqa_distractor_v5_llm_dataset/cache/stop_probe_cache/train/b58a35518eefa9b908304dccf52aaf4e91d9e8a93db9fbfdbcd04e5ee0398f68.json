@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1969",
+  "pred_answer": "1969",
+  "normalized_gold": "1969",
+  "normalized_pred": "1969",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab507c95542990594ba9ce1",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab507c95542990594ba9ce1::Dick Snider::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab507c95542990594ba9ce1::Bud Wilkinson::6"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab507c95542990594ba9ce1::Dick Romney::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab507c95542990594ba9ce1::Dick Snider",
+        "5ab507c95542990594ba9ce1::Bud Wilkinson"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab507c95542990594ba9ce1::Dick Snider::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab507c95542990594ba9ce1::Bud Wilkinson::6",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab507c95542990594ba9ce1::Dick Romney::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab507c95542990594ba9ce1::Dick Romney::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Romney was inducted into the College Football Hall of Fame as a coach in 1954 and was elected to the Helms Athletic Foundation and Hall of Fame as a football coach in 1958.\n[2] Wilkinson was inducted into the College Football Hall of Fame as a coach in 1969.\n[3] He is most widely known for his humor column in the Topeka Capital-Journal, and he was campaign manager for former University of Oklahoma football coach Bud Wilkinson's failed 1964 US Senate campaign."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

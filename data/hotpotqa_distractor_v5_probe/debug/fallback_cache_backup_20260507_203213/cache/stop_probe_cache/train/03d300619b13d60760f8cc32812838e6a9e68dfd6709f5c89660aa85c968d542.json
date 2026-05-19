@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Michael \"Mike\" Manley",
+  "pred_answer": "Michael \"Mike\" Manley",
+  "normalized_gold": "michael mike manley",
+  "normalized_pred": "michael mike manley",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7bce98554299294a54aafe",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7bce98554299294a54aafe::Eat Your Kimchi::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7bce98554299294a54aafe::Hollis E. Roberts::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7bce98554299294a54aafe::Mike Manley (artist)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7bce98554299294a54aafe::Thunder (CeCe Beck)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7bce98554299294a54aafe::Eat Your Kimchi::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7bce98554299294a54aafe::Mike Manley (artist)",
+        "5a7bce98554299294a54aafe::Thunder (CeCe Beck)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7bce98554299294a54aafe::Eat Your Kimchi::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7bce98554299294a54aafe::Hollis E. Roberts::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7bce98554299294a54aafe::Mike Manley (artist)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7bce98554299294a54aafe::Thunder (CeCe Beck)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7bce98554299294a54aafe::Eat Your Kimchi::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7bce98554299294a54aafe::Eat Your Kimchi::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The YouTube channel featuring their videos is the 18th most popular in Korea and the YouTube portion of their videos accumulated more than 239 million views as of October 6, 2015 on four separate channels.\n[2] An associate of the Marvel Family of superheroes, Thunder (the alter ego of CeCe Beck, or simply \"Beck\"), is a far-future recipient of the power of Shazam.\n[3] Michael \"Mike\" Manley (born October 19, 1961) is an American artist, most notable as a comic strip cartoonist and comic book inker and penciller.\n[4] Hollis Earl Roberts (May 9, 1943 – October 19, 2011) was a Native American politician whose career was highlighted by his 19-year period as chief of the Choctaw Nation of Oklahoma."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

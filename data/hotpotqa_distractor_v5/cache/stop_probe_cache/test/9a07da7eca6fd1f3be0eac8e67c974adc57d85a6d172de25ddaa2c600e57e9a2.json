@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "16,116",
+  "pred_answer": "16,116",
+  "normalized_gold": "16116",
+  "normalized_pred": "16116",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abdf7055542993f32c2a06c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abdf7055542993f32c2a06c::Quincy Mumford::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abdf7055542993f32c2a06c::Plumas County, California::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abdf7055542993f32c2a06c::Asbury Park, New Jersey::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abdf7055542993f32c2a06c::Canton, Missouri::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abdf7055542993f32c2a06c::Quincy Mumford",
+        "5abdf7055542993f32c2a06c::Asbury Park, New Jersey"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abdf7055542993f32c2a06c::Quincy Mumford::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abdf7055542993f32c2a06c::Plumas County, California::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abdf7055542993f32c2a06c::Asbury Park, New Jersey::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abdf7055542993f32c2a06c::Canton, Missouri::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abdf7055542993f32c2a06c::Canton, Missouri::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The population was 2,377 at the 2010 census.\n[2] As of the 2010 United States Census, the city's population was 16,116, reflecting a decline of 814 (−4.8%) from the 16,930 counted in the 2000 Census, which had in turn increased by 131 (+0.8%) from the 16,799 counted in the 1990 Census.\n[3] As of the 2010 census, the population was 20,007.\n[4] He has released several solo albums since his debut in 2008, and is also rhythm guitarist and frontman of the band Quincy Mumford & The Reason Why, a five-person group based in Asbury Park, New Jersey."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1984",
+  "pred_answer": "1984",
+  "normalized_gold": "1984",
+  "normalized_pred": "1984",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2ddf5554299677310263e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2ddf5554299677310263e::Joh for Canberra::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2ddf5554299677310263e::Australian federal election, 1990::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2ddf5554299677310263e::Andrew Peacock::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2ddf5554299677310263e::Casino Canberra::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2ddf5554299677310263e::Australian federal election, 1990",
+        "5ac2ddf5554299677310263e::Andrew Peacock"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2ddf5554299677310263e::Joh for Canberra::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2ddf5554299677310263e::Australian federal election, 1990::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2ddf5554299677310263e::Andrew Peacock::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2ddf5554299677310263e::Casino Canberra::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2ddf5554299677310263e::Casino Canberra::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Bob Hawke was the winner of the golden roulette ball that was used for the first spin of the roulette wheel in the temporary casino.\n[2] He was a minister in the Gorton, McMahon and Fraser governments and federal leader of the Liberal Party of Australia and Leader of the Opposition (1983–1985 and 1989–1990), leading the Coalition opposition to defeat at the 1984 election and the 1990 election.\n[3] Federal elections were held in Australia on 24 March 1990.\n[4] The Australian Labor Party under Bob Hawke went on to win by an increased majority in the 1987 federal election, gaining its highest-ever number of seats."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

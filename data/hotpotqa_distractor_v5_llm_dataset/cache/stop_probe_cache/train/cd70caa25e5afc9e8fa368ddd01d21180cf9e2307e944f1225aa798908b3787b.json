@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Kalyan",
+  "pred_answer": "Kalyan",
+  "normalized_gold": "kalyan",
+  "normalized_pred": "kalyan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab74b25554299110f219aff",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab74b25554299110f219aff::St. Bartholomew's Church, Mysore::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab74b25554299110f219aff::Thane district::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab74b25554299110f219aff::Kalyan::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab74b25554299110f219aff::Borivali-Padgha::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab74b25554299110f219aff::St. Bartholomew's Church, Mysore",
+        "5ab74b25554299110f219aff::Kalyan"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab74b25554299110f219aff::St. Bartholomew's Church, Mysore::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab74b25554299110f219aff::Thane district::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab74b25554299110f219aff::Kalyan::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab74b25554299110f219aff::Borivali-Padgha::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab74b25554299110f219aff::Borivali-Padgha::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Borivali-Padgha is a twin Village in Bhiwandi Taluka in Thane District of Maharashtra State, India.\n[2] Kalyan is a city in the Thane District of Maharashtra state in Konkan division.\n[3] Thane District ([ʈʰaːɳeˑ ]) is a district in the Indian state of Maharashtra in Konkan Division.\n[4] The church is named after Saint Bartholomew, one of the 12 apostles of Jesus Christ, and is said to have visited India in the first century AD, and preached the Christian gospel in the Kalyan, Thane and Raigad regions of present-day Maharashtra."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

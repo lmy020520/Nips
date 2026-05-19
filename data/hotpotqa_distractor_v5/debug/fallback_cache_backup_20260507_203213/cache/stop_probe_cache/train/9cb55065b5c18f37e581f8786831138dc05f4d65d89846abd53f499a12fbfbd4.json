@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Tony Wade Hayes",
+  "pred_answer": "Tony Wade Hayes",
+  "normalized_gold": "tony wade hayes",
+  "normalized_pred": "tony wade hayes",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5aba64e655429939ce03dcca",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5aba64e655429939ce03dcca::McHayes::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5aba64e655429939ce03dcca::The Broadway Album::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5aba64e655429939ce03dcca::Wade Hayes::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5aba64e655429939ce03dcca::Soft and Beautiful::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5aba64e655429939ce03dcca::McHayes",
+        "5aba64e655429939ce03dcca::Wade Hayes"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5aba64e655429939ce03dcca::McHayes::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5aba64e655429939ce03dcca::The Broadway Album::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5aba64e655429939ce03dcca::Wade Hayes::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5aba64e655429939ce03dcca::Soft and Beautiful::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5aba64e655429939ce03dcca::Soft and Beautiful::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Soft and Beautiful is the seventeenth studio album by the American singer Aretha Franklin, released on June 20, 1969, by Columbia Records.\n[2] Tony Wade Hayes (born April 20, 1969 in Bethel Acres, Oklahoma) is an American country music artist.\n[3] The album, originally released on the Columbia label and subsequently re-released by Columbia and Sony Records, was a critical and commercial success.\n[4] McHayes was an American country music duo established in 2003 by Wade Hayes (guitar, vocals), along with musician Mark McClurg (fiddle, vocals)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "American Graffiti",
+  "pred_answer": "American Graffiti",
+  "normalized_gold": "american graffiti",
+  "normalized_pred": "american graffiti",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5adeb10b5542992fa25da805",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5adeb10b5542992fa25da805::Get Outta My Dreams, Get into My Car::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5adeb10b5542992fa25da805::Get Outta Town::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5adeb10b5542992fa25da805::You're Sixteen::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5adeb10b5542992fa25da805::Calypso Crazy::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5adeb10b5542992fa25da805::Get Outta My Dreams, Get into My Car",
+        "5adeb10b5542992fa25da805::You're Sixteen"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5adeb10b5542992fa25da805::Get Outta My Dreams, Get into My Car::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5adeb10b5542992fa25da805::Get Outta Town::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5adeb10b5542992fa25da805::You're Sixteen::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5adeb10b5542992fa25da805::Calypso Crazy::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5adeb10b5542992fa25da805::Calypso Crazy::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Following the successful chart performances of the \"Tear Down These Walls\" single \"Get Outta My Dreams, Get Into My Car\", \"Calypso Crazy\" was released as the album's second single.\n[2] The original 1960 version of \"You're Sixteen\" by Johnny Burnette is featured prominently on the 1973 motion picture soundtrack of the film \"American Graffiti\".\n[3] \"Get Outta Town\" (a.k.a. \"Fletch, Get Outta Town\") is a song by American musician-singer-songwriter Dan Hartman, released as a single in 1985 from the original motion picture soundtrack for the film \"Fletch\".\n[4] \"Get Outta My Dreams, Get into My Car\" is a 1988 single by Trinidadian-born British singer Billy Ocean, based on a line in the Sherman Brothers' song (famously covered by Johnny Burnette as well as Ringo Starr) \"You're Sixteen\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

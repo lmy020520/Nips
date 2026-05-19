@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "30 September",
+  "pred_answer": "30 September",
+  "normalized_gold": "30 september",
+  "normalized_pred": "30 september",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abfc6655542997ec76fd451",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abfc6655542997ec76fd451::2014 AFL draft::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abfc6655542997ec76fd451::2017 AFL draft::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abfc6655542997ec76fd451::2017 AFL season::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abfc6655542997ec76fd451::2017 AFL season::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abfc6655542997ec76fd451::2017 AFL draft",
+        "5abfc6655542997ec76fd451::2017 AFL season"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abfc6655542997ec76fd451::2014 AFL draft::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abfc6655542997ec76fd451::2017 AFL draft::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abfc6655542997ec76fd451::2017 AFL season::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abfc6655542997ec76fd451::2017 AFL season::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abfc6655542997ec76fd451::2017 AFL season::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The first game was played on Thursday, 23 March, and the season concluded with the 2017 AFL Grand Final on Saturday, 30 September.\n[2] The 2017 Australian Football League season was the 121st season of the elite Australian rules football competition.\n[3] Additions to each club's playing list are not allowed at any other time during the year.\n[4] Additions to each club's playing list are not allowed at any other time during the year."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

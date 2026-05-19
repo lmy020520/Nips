@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ronald Wilson Reagan",
+  "pred_answer": "Ronald Wilson Reagan",
+  "normalized_gold": "ronald wilson reagan",
+  "normalized_pred": "ronald wilson reagan",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac3d33f5542995ef918c24a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac3d33f5542995ef918c24a::Nancy Hanks (art historian)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac3d33f5542995ef918c24a::Frank Hodsoll::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac3d33f5542995ef918c24a::Ronald Reagan::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac3d33f5542995ef918c24a::40th Battalion (Australia)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac3d33f5542995ef918c24a::Frank Hodsoll",
+        "5ac3d33f5542995ef918c24a::Ronald Reagan"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac3d33f5542995ef918c24a::Nancy Hanks (art historian)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac3d33f5542995ef918c24a::Frank Hodsoll::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac3d33f5542995ef918c24a::Ronald Reagan::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac3d33f5542995ef918c24a::40th Battalion (Australia)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac3d33f5542995ef918c24a::40th Battalion (Australia)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The 40th Battalion was an infantry battalion of the Australian Army.\n[2] Ronald Wilson Reagan ( ; February 6, 1911 – June 5, 2004) was an American statesman and actor who served as the 40th President of the United States from 1981 to 1989.\n[3] He was appointed by President Ronald Reagan and served from 1981 to 1989.\n[4] She was appointed by President Richard M. Nixon and served from 1969 to 1977, continuing her service under President Gerald R. Ford."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

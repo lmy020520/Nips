@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "band",
+  "pred_answer": "band",
+  "normalized_gold": "band",
+  "normalized_pred": "band",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2a057554299657fa28fe9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2a057554299657fa28fe9::Panic! at the Disco::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2a057554299657fa28fe9::List of terms for ethnic exogroups::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2a057554299657fa28fe9::Matt Willis::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2a057554299657fa28fe9::Galois group::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2a057554299657fa28fe9::Panic! at the Disco",
+        "5ac2a057554299657fa28fe9::Matt Willis"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2a057554299657fa28fe9::Panic! at the Disco::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2a057554299657fa28fe9::List of terms for ethnic exogroups::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2a057554299657fa28fe9::Matt Willis::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2a057554299657fa28fe9::Galois group::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2a057554299657fa28fe9::Galois group::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In mathematics, more specifically in the area of abstract algebra known as Galois theory, the Galois group of a certain type of field extension is a specific group associated with the field extension.\n[2] Mathew James \"Matt\" Willis (born 8 May 1983), also previously known as Mattie Jay, is an English singer-songwriter, television presenter and actor, best known as the bassist and one of the vocalists of the pop punk band, Busted.\n[3] Exogroup terms are sometimes considered to be derogatory, depending on the word and the context and manner in which it is used.\n[4] at the Disco is an American rock band from Las Vegas, Nevada, formed in 2004 and featuring the current lineup of vocalist Brendon Urie, accompanied on tour by bassist Dallon Weekes, guitarist Kenneth Harris and drummer Dan Pawlovich."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

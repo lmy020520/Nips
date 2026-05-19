@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Southern Methodist University",
+  "pred_answer": "Southern Methodist University",
+  "normalized_gold": "southern methodist university",
+  "normalized_pred": "southern methodist university",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae31dbf55429928c4239610",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae31dbf55429928c4239610::Larry Brown (basketball)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae31dbf55429928c4239610::2012–13 SMU Mustangs men's basketball team::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae31dbf55429928c4239610::2013–14 SMU Mustangs men's basketball team::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae31dbf55429928c4239610::Larry Brown (basketball)",
+        "5ae31dbf55429928c4239610::2012–13 SMU Mustangs men's basketball team"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae31dbf55429928c4239610::Larry Brown (basketball)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae31dbf55429928c4239610::2012–13 SMU Mustangs men's basketball team::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae31dbf55429928c4239610::2013–14 SMU Mustangs men's basketball team::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae31dbf55429928c4239610::2013–14 SMU Mustangs men's basketball team::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The 2013–14 SMU Mustangs men's basketball team represented Southern Methodist University (SMU) during the 2013–14 NCAA Division I men's basketball season.\n[2] The 2012–13 SMU Mustangs men's basketball team represented Southern Methodist University during the 2012–13 NCAA Division I men's basketball season.\n[3] Lawrence Harvey Brown (born September 14, 1940) is an American basketball coach, who was most recently head men's basketball coach at Southern Methodist University."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

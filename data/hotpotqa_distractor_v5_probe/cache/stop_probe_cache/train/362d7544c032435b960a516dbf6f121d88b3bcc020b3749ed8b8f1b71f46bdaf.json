@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Molly Brown",
+  "pred_answer": "Molly Brown",
+  "normalized_gold": "molly brown",
+  "normalized_pred": "molly brown",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a82156e5542995ce29dcca7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a82156e5542995ce29dcca7::James Joseph Brown::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a82156e5542995ce29dcca7::Avoca Lodge::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a82156e5542995ce29dcca7::The Titanic (song)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a82156e5542995ce29dcca7::James Joseph Brown",
+        "5a82156e5542995ce29dcca7::Avoca Lodge"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a82156e5542995ce29dcca7::James Joseph Brown::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a82156e5542995ce29dcca7::Avoca Lodge::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a82156e5542995ce29dcca7::The Titanic (song)::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a82156e5542995ce29dcca7::The Titanic (song)::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] \"The Titanic\" (also known as \"It Was Sad When That Great Ship Went Down\" and \"Titanic (Husbands and Wives)\") is a folk song and children's song most known for being sung in the United States at summer camp.\n[2] Avoca Lodge, known as The Molly Brown Summer House, is a Registered Historic Place in southwest Denver, Colorado near Bear Creek.\n[3] His wife was \"RMS Titanic\" survivor Molly Brown."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

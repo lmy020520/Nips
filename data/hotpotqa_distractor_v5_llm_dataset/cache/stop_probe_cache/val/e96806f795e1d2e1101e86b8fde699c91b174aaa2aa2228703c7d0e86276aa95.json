@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "With the Beatles",
+  "pred_answer": "With the Beatles",
+  "normalized_gold": "with the beatles",
+  "normalized_pred": "with the beatles",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a710e4c5542994082a3e52f",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a710e4c5542994082a3e52f::You've Really Got a Hold on Me::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a710e4c5542994082a3e52f::I've Been Good to You::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a710e4c5542994082a3e52f::You've Really Got a Hold on Me::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a710e4c5542994082a3e52f::The Fabulous Miracles::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a710e4c5542994082a3e52f::I Like It Like That (album)::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a710e4c5542994082a3e52f::You've Really Got a Hold on Me",
+        "5a710e4c5542994082a3e52f::The Fabulous Miracles"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a710e4c5542994082a3e52f::You've Really Got a Hold on Me::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a710e4c5542994082a3e52f::I've Been Good to You::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a710e4c5542994082a3e52f::You've Really Got a Hold on Me::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a710e4c5542994082a3e52f::The Fabulous Miracles::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a710e4c5542994082a3e52f::I Like It Like That (album)::7",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a710e4c5542994082a3e52f::I Like It Like That (album)::7",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The new 1964 recordings \"I Like It Like That\", \"Would I love You\" and \"That's What Love Is Made Of\" were included on the only US Miracles 1964 album release \"Miracles Greatest Hits From The Beginning\" which was the first double album released by Motown Records.\n[2] The Fabulous Miracles is a 1963 album by The Miracles featuring the million-selling \"Grammy Hall of Fame\" hit, \"You've Really Got a Hold on Me\", one of the group's most popular singles.\n[3] It was covered by English rock group the Beatles on their second album, \"With the Beatles\" and many other musicians.\n[4] Written by Miracles lead singer Smokey Robinson, the song begins with the lyric, \"Look what you've done...You've made a fool out of someone...\" which Lennon later paraphrased in \"his\" song as, \"What have you done...You've made a fool of everyone.\""
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

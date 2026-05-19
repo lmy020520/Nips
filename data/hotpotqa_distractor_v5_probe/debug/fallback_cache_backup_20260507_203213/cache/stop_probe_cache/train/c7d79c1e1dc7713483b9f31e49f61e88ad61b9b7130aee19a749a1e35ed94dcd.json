@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "University of Arkansas",
+  "pred_answer": "University of Arkansas",
+  "normalized_gold": "university of arkansas",
+  "normalized_pred": "university of arkansas",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8a9a195542996c9b8d5f32",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8a9a195542996c9b8d5f32::Mike Anderson (basketball)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8a9a195542996c9b8d5f32::2001–02 Arkansas Razorbacks men's basketball team::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8a9a195542996c9b8d5f32::Nolan Richardson::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8a9a195542996c9b8d5f32::Mike Anderson (baseball coach)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8a9a195542996c9b8d5f32::Mike Anderson (basketball)",
+        "5a8a9a195542996c9b8d5f32::Nolan Richardson"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8a9a195542996c9b8d5f32::Mike Anderson (basketball)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8a9a195542996c9b8d5f32::2001–02 Arkansas Razorbacks men's basketball team::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8a9a195542996c9b8d5f32::Nolan Richardson::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8a9a195542996c9b8d5f32::Mike Anderson (baseball coach)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8a9a195542996c9b8d5f32::Mike Anderson (baseball coach)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Mike Anderson (born June 8, 1965) was the head baseball coach at Nebraska from 2003-2011.\n[2] Nolan Richardson (born December 27, 1941) is a former American basketball head coach best known for his tenure at the University of Arkansas, where he won the 1994 NCAA Men's Division I Basketball Tournament.\n[3] Assistant head coach Mike Anderson became the interim head coach for the remainder of the season.\n[4] He served as an assistant/associate head coach under Nolan Richardson at Arkansas for 17 years."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

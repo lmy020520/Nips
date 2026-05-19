@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Little Match Girl",
+  "pred_answer": "The Little Match Girl",
+  "normalized_gold": "the little match girl",
+  "normalized_pred": "the little match girl",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a73520c5542994cef4bc53f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a73520c5542994cef4bc53f::The Little Match Girl::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a73520c5542994cef4bc53f::The Red Shoes (fairy tale)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a73520c5542994cef4bc53f::La vendedora de rosas::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a73520c5542994cef4bc53f::Allumette: A Fable::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a73520c5542994cef4bc53f::The Little Match Girl",
+        "5a73520c5542994cef4bc53f::La vendedora de rosas"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a73520c5542994cef4bc53f::The Little Match Girl::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a73520c5542994cef4bc53f::The Red Shoes (fairy tale)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a73520c5542994cef4bc53f::La vendedora de rosas::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a73520c5542994cef4bc53f::Allumette: A Fable::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a73520c5542994cef4bc53f::Allumette: A Fable::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is a \"reimagining\" of \"The Little Match Girl\" by Hans Christian Andersen.\n[2] The film is loosely based on the fairy tale \"The Little Match Girl\" by Hans Christian Andersen; it was entered into the 1998 Cannes Film Festival.\n[3] \"The Red Shoes\" (Danish: \"De røde sko\") is a fairy tale by Danish poet and author Hans Christian Andersen first published by C.A. Reitzel in Copenhagen 7 April 1845 in \"New Fairy Tales.\n[4] The story, about a dying child's dreams and hope, was first published in 1845."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

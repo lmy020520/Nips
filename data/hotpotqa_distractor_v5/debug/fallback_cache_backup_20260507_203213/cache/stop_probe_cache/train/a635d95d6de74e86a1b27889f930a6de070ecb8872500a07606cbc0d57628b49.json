@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1813",
+  "pred_answer": "1813",
+  "normalized_gold": "1813",
+  "normalized_pred": "1813",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7f83275542995d8a8dde93",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7f83275542995d8a8dde93::List of The Lizzie Bennet Diaries episodes::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7f83275542995d8a8dde93::Bernie Su::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7f83275542995d8a8dde93::Pride and Prejudice::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7f83275542995d8a8dde93::Pride and Prejudice (1940 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7f83275542995d8a8dde93::Bernie Su",
+        "5a7f83275542995d8a8dde93::Pride and Prejudice"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7f83275542995d8a8dde93::List of The Lizzie Bennet Diaries episodes::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7f83275542995d8a8dde93::Bernie Su::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7f83275542995d8a8dde93::Pride and Prejudice::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7f83275542995d8a8dde93::Pride and Prejudice (1940 film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7f83275542995d8a8dde93::Pride and Prejudice (1940 film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Pride and Prejudice is a 1940 American film adaptation of Jane Austen's novel \"Pride and Prejudice\", directed by Robert Z. Leonard and starring Greer Garson and Laurence Olivier.\n[2] Pride and Prejudice is a romance novel by Jane Austen, first published in 1813.\n[3] He is best known for his work on the Emmy Award-winning web series \"The Lizzie Bennet Diaries\" with Hank Green, a modern vlog-style adaptation of Jane Austen’s \"Pride and Prejudice\" which won YouTube’s first primetime Emmy.\n[4] \"The Lizzie Bennet Diaries\" is an American web series in the style of video blogging created by Hank Green and Bernie Su, based on the novel \"Pride and Prejudice\" by Jane Austen."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "25 million people",
+  "pred_answer": "25 million people",
+  "normalized_gold": "25 million people",
+  "normalized_pred": "25 million people",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab29a2b554299545a2cf9cb",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab29a2b554299545a2cf9cb::Robert Sheffey::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab29a2b554299545a2cf9cb::Appalachia::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab29a2b554299545a2cf9cb::Piute Pass Archeological District::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab29a2b554299545a2cf9cb::Robert Sheffey",
+        "5ab29a2b554299545a2cf9cb::Appalachia"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab29a2b554299545a2cf9cb::Robert Sheffey::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab29a2b554299545a2cf9cb::Appalachia::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab29a2b554299545a2cf9cb::Piute Pass Archeological District::5",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab29a2b554299545a2cf9cb::Piute Pass Archeological District::5",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] After European settlers came to the region, the pass became the site of Fort Piute, a U.S. Army redoubt which protected travelers along the Mojave Road.\n[2] As of the 2010 United States Census, the region was home to approximately 25 million people.\n[3] Robert Sayers Sheffey (July 4, 1820 – August 30, 1902) was a Methodist evangelist and circuit-riding preacher, renowned for his eccentricities and power in prayer, who ministered to, and became part of the folklore of, the Appalachian region of southwest Virginia, southern West Virginia and eastern Tennessee."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

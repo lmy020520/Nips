@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Adrian Dantley",
+  "pred_answer": "Adrian Dantley",
+  "normalized_gold": "adrian dantley",
+  "normalized_pred": "adrian dantley",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a75fd0955429976ec32bce2",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a75fd0955429976ec32bce2::Adrian Dantley::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a75fd0955429976ec32bce2::1993–94 Los Angeles Clippers season::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a75fd0955429976ec32bce2::1976–77 Buffalo Braves season::9"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a75fd0955429976ec32bce2::Mark Aguirre::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a75fd0955429976ec32bce2::Mark Kingsmill::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a75fd0955429976ec32bce2::Adrian Dantley",
+        "5a75fd0955429976ec32bce2::Mark Aguirre"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a75fd0955429976ec32bce2::Adrian Dantley::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a75fd0955429976ec32bce2::1993–94 Los Angeles Clippers season::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a75fd0955429976ec32bce2::1976–77 Buffalo Braves season::9",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a75fd0955429976ec32bce2::Mark Aguirre::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a75fd0955429976ec32bce2::Mark Kingsmill::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a75fd0955429976ec32bce2::Mark Kingsmill::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Mark Adrian Kingsmill (born 4 December 1956) is an Australian rock musician.\n[2] Mark Anthony Aguirre (born December 10, 1959) is an American retired basketball player in the National Basketball Association.\n[3] The only spotlight was rookie Adrian Dantley, who captured Rookie of the Year honors with 20.3 points per game.\n[4] In the offseason, the Clippers signed free agent Mark Aguirre, who won championships with the Detroit Pistons."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Dino Buzzati-Traverso",
+  "pred_answer": "Dino Buzzati-Traverso",
+  "normalized_gold": "dino buzzati-traverso",
+  "normalized_pred": "dino buzzati-traverso",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7aa9425542992d025e66e4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7aa9425542992d025e66e4::Robert Graves::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7aa9425542992d025e66e4::Bàrnabo delle montagne::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7aa9425542992d025e66e4::Dino Buzzati::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7aa9425542992d025e66e4::Larger than Life (novel)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7aa9425542992d025e66e4::Robert Graves",
+        "5a7aa9425542992d025e66e4::Dino Buzzati"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7aa9425542992d025e66e4::Robert Graves::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7aa9425542992d025e66e4::Bàrnabo delle montagne::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7aa9425542992d025e66e4::Dino Buzzati::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7aa9425542992d025e66e4::Larger than Life (novel)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7aa9425542992d025e66e4::Larger than Life (novel)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Larger than Life (Italian: Il grande ritratto ) is a 1960 novel by the Italian writer Dino Buzzati.\n[2] Dino Buzzati-Traverso (] ; 14 October 1906 – 28 January 1972) was an Italian novelist, short story writer, painter and poet, as well as a journalist for \"Corriere della Sera\".\n[3] Bàrnabo delle montagne (\"Bàrnabo of the mountains\") is a 1933 novel by the Italian writer Dino Buzzati.\n[4] Robert von Ranke Graves (24 July 1895 – 7 December 1985), also known as Robert Ranke Graves and most commonly Robert Graves, was an English poet, novelist, critic and classicist."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

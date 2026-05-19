@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Queen Paola Foundation",
+  "pred_answer": "The Queen Paola Foundation",
+  "normalized_gold": "the queen paola foundation",
+  "normalized_pred": "the queen paola foundation",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a78e77c554299029c4b5ed5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a78e77c554299029c4b5ed5::Prince of Liège::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a78e77c554299029c4b5ed5::Queen Paola of Belgium::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a78e77c554299029c4b5ed5::Queen Paola Foundation::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a78e77c554299029c4b5ed5::Festinoval::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a78e77c554299029c4b5ed5::Queen Paola of Belgium",
+        "5a78e77c554299029c4b5ed5::Queen Paola Foundation"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a78e77c554299029c4b5ed5::Prince of Liège::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a78e77c554299029c4b5ed5::Queen Paola of Belgium::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a78e77c554299029c4b5ed5::Queen Paola Foundation::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a78e77c554299029c4b5ed5::Festinoval::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a78e77c554299029c4b5ed5::Festinoval::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was founded in June 2002 as a free, non profit foundation and a homage to local musician and activist Tino Agustí i Vaeza, who died in a car crash.\n[2] The Queen Paola Foundation, founded in December 1992, is a Belgian non-profit organization.\n[3] Queen Paola of Belgium (born Donna Paola Ruffo di Calabria on 11 September 1937) is the wife of the former King Albert II and was Queen of the Belgians from 1993 until his abdication in 2013 in favour of their son King Philippe.\n[4] Prince of Liège was a substantive title awarded by King Albert I of the Belgians to his youngest grandson, Prince Albert (former King Albert II), while he was third in line to the throne of Belgium."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

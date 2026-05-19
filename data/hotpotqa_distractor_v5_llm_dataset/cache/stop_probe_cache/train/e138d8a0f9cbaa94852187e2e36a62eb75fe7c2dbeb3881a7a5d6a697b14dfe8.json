@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "11,307",
+  "pred_answer": "11,307",
+  "normalized_gold": "11307",
+  "normalized_pred": "11307",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9b060554299131ca423cf",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9b060554299131ca423cf::Old Waverly Golf Club::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9b060554299131ca423cf::West Point, Mississippi::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9b060554299131ca423cf::Squire Creek Country Club::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9b060554299131ca423cf::Old Waverly Golf Club",
+        "5ab9b060554299131ca423cf::West Point, Mississippi"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9b060554299131ca423cf::Old Waverly Golf Club::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9b060554299131ca423cf::West Point, Mississippi::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9b060554299131ca423cf::Squire Creek Country Club::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9b060554299131ca423cf::Squire Creek Country Club::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Squire Creek features an 18-hole championship golf course designed by Tom Fazio.\n[2] The population was 11,307 at the 2010 census.\n[3] Old Waverly Golf Club, located in West Point, Mississippi, is an 18-hole championship golf course founded by the George Bryan family and 29 other founders in 1988."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

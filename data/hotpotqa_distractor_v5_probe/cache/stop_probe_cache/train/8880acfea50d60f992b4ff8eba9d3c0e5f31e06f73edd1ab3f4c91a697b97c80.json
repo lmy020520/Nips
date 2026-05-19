@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Pat's Pizza",
+  "pred_answer": "Pat's Pizza",
+  "normalized_gold": "pats pizza",
+  "normalized_pred": "pats pizza",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade135b5542990dbb2f7f45",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade135b5542990dbb2f7f45::Pat's Pizza::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade135b5542990dbb2f7f45::Pizza delivery::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade135b5542990dbb2f7f45::Discovery Zone::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade135b5542990dbb2f7f45::Pat's Pizza::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade135b5542990dbb2f7f45::Pat's Pizza",
+        "5ade135b5542990dbb2f7f45::Discovery Zone"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade135b5542990dbb2f7f45::Pat's Pizza::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade135b5542990dbb2f7f45::Pizza delivery::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade135b5542990dbb2f7f45::Discovery Zone::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade135b5542990dbb2f7f45::Pat's Pizza::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade135b5542990dbb2f7f45::Pat's Pizza::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 1953, he added pizza to the menu, and it was such a hit that he changed Farnsworth's Cafe into a pizza parlor, giving it its current name.\n[2] Discovery Zone (DZ) was a chain of entertainment facilities featuring games and elaborate indoor mazes designed for young children, including roller slides, climbing play structures and ball pits.\n[3] A delivery fee is often charged with what the customer has bought.\n[4] Pat's Pizza is a chain of restaurants in Maine."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

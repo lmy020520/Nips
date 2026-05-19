@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "7 July 1981",
+  "pred_answer": "7 July 1981",
+  "normalized_gold": "7 july 1981",
+  "normalized_pred": "7 july 1981",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7dbced5542990b8f503a56",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7dbced5542990b8f503a56::Santosh Lal::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7dbced5542990b8f503a56::Helicopter shot::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7dbced5542990b8f503a56::MS Dhoni::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7dbced5542990b8f503a56::Brian Helicopter::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7dbced5542990b8f503a56::Santosh Lal",
+        "5a7dbced5542990b8f503a56::MS Dhoni"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7dbced5542990b8f503a56::Santosh Lal::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7dbced5542990b8f503a56::Helicopter shot::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7dbced5542990b8f503a56::MS Dhoni::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7dbced5542990b8f503a56::Brian Helicopter::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7dbced5542990b8f503a56::Brian Helicopter::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Brian Helicopter is the stage name of Gareth Holder (born 27 June 1958, Leamington Spa), an English musician, based in the United States.\n[2] Mahendra Singh Dhoni (   ; commonly known as MS Dhoni; born 7 July 1981) is an Indian cricketer who captained the Indian team in limited-overs formats from 11th of September 2007 to 4th of January 2017 and in Test cricket from 2008 to 28th of December 2014.\n[3] The helicopter shot in cricket is the act of flicking the bat toward the leg side when facing a yorker or a fuller-length delivery, and finishing the stroke with a flourish by twisting the bat in an overhead circle.\n[4] He taught MS Dhoni how to play the helicopter shot."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

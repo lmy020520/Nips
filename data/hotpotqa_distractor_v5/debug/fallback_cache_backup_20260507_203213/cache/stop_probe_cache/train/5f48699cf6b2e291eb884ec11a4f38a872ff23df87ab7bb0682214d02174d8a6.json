@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1927",
+  "pred_answer": "1927",
+  "normalized_gold": "1927",
+  "normalized_pred": "1927",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae733cf5542991e8301cbcf",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae733cf5542991e8301cbcf::Blind Alfred Reed::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae733cf5542991e8301cbcf::Carter Family::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae733cf5542991e8301cbcf::Maybelle and Ezra Carter House::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae733cf5542991e8301cbcf::Blind Alfred Reed",
+        "5ae733cf5542991e8301cbcf::Carter Family"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae733cf5542991e8301cbcf::Blind Alfred Reed::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae733cf5542991e8301cbcf::Carter Family::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae733cf5542991e8301cbcf::Maybelle and Ezra Carter House::3",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae733cf5542991e8301cbcf::Maybelle and Ezra Carter House::3",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The house is most notable for its association with the Carter Family, a traditional American folk music group that recorded between 1927 and 1956.\n[2] The Carter Family is a traditional American folk music group that recorded between 1927 and 1956.\n[3] He was one of the artists who recorded at the Bristol Sessions in 1927, alongside more famous names such as Jimmie Rodgers and The Carter Family."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Marvel Comics",
+  "pred_answer": "Marvel Comics",
+  "normalized_gold": "marvel comics",
+  "normalized_pred": "marvel comics",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade8d445542997c77adee50",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade8d445542997c77adee50::Valeria Richards::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade8d445542997c77adee50::Iron Lad::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade8d445542997c77adee50::Mister Fantastic::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade8d445542997c77adee50::Diamond (comics)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade8d445542997c77adee50::Valeria Richards",
+        "5ade8d445542997c77adee50::Mister Fantastic"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade8d445542997c77adee50::Valeria Richards::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade8d445542997c77adee50::Iron Lad::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade8d445542997c77adee50::Mister Fantastic::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade8d445542997c77adee50::Diamond (comics)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade8d445542997c77adee50::Diamond (comics)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Diamond (Kent Chang) is a fictional character, a superhero appearing in American comic books published by Marvel Comics.\n[2] Mister Fantastic (Reed Richards) is a fictional superhero appearing in American comic books published by Marvel Comics.\n[3] Iron Lad (Nathaniel \"Nate\" Richards) is a fictional superhero appearing in American comic books published by Marvel Comics.\n[4] Valeria Meghan Richards is a fictional character of Marvel Comics, the daughter of Mister Fantastic (Reed Richards) and the Invisible Woman (Susan Storm Richards), husband and wife and two original members of the superhero team the Fantastic Four."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

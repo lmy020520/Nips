@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1917",
+  "pred_answer": "1917",
+  "normalized_gold": "1917",
+  "normalized_pred": "1917",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a90aeda5542990a98493699",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a90aeda5542990a98493699::Riverport Railroad::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a90aeda5542990a98493699::Pueblo Depot Activity::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a90aeda5542990a98493699::Savanna Army Depot::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a90aeda5542990a98493699::Dakota, Missouri Valley and Western Railroad::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a90aeda5542990a98493699::Riverport Railroad",
+        "5a90aeda5542990a98493699::Savanna Army Depot"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a90aeda5542990a98493699::Riverport Railroad::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a90aeda5542990a98493699::Pueblo Depot Activity::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a90aeda5542990a98493699::Savanna Army Depot::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a90aeda5542990a98493699::Dakota, Missouri Valley and Western Railroad::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a90aeda5542990a98493699::Dakota, Missouri Valley and Western Railroad::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Dakota, Missouri Valley and Western Railroad (reporting mark DMVW) started operations in September 1990 operating over 360 miles (580 km) of former Soo Line Railroad track in Montana and North Dakota.\n[2] It was opened in 1917 as a proving and testing facility for weapons developed at Rock Island Arsenal.\n[3] Pueblo Depot Activity \"(PUDA)\", formerly known as the Pueblo Ordnance Depot and the Pueblo Army Depot, was a U.S. Army ammunition storage and supply facility.\n[4] The Riverport Railroad (reporting mark RVPR) is a switching railroad located in Savanna, Illinois, and operates the former Savanna Army Depot Track."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

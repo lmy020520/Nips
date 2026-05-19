@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Freebird Games",
+  "pred_answer": "Freebird Games",
+  "normalized_gold": "freebird games",
+  "normalized_pred": "freebird games",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab6e035554299710c8d1f8f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab6e035554299710c8d1f8f::Role-playing game::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab6e035554299710c8d1f8f::Oxenfree::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab6e035554299710c8d1f8f::To the Moon::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab6e035554299710c8d1f8f::To the Moon::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab6e035554299710c8d1f8f::Role-playing game",
+        "5ab6e035554299710c8d1f8f::To the Moon"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab6e035554299710c8d1f8f::Role-playing game::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab6e035554299710c8d1f8f::Oxenfree::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab6e035554299710c8d1f8f::To the Moon::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab6e035554299710c8d1f8f::To the Moon::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab6e035554299710c8d1f8f::To the Moon::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] To the Moon is a role-playing adventure video game developed and published by Freebird Games.\n[2] Initially released for Microsoft Windows, it was later ported to OS X and Linux in January 2014, and for Android and iOS devices in May 2017.\n[3] The game was released for Microsoft Windows, OS X and Xbox One in January 2016; the game was released on PlayStation 4 and Linux later in 2016 and on iOS and Android in 2017.\n[4] A role-playing game (sometimes spelled roleplaying game and abbreviated to RPG) is a game in which players assume the roles of characters in a fictional setting."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

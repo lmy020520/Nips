@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "rock group",
+  "pred_answer": "rock group",
+  "normalized_gold": "rock group",
+  "normalized_pred": "rock group",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab5ddbd554299494045f08f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab5ddbd554299494045f08f::Chvrches::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab5ddbd554299494045f08f::Against Nature (album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab5ddbd554299494045f08f::The Fatima Mansions::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab5ddbd554299494045f08f::The Fatima Mansions::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab5ddbd554299494045f08f::Chvrches",
+        "5ab5ddbd554299494045f08f::The Fatima Mansions"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab5ddbd554299494045f08f::Chvrches::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab5ddbd554299494045f08f::Against Nature (album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab5ddbd554299494045f08f::The Fatima Mansions::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab5ddbd554299494045f08f::The Fatima Mansions::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab5ddbd554299494045f08f::The Fatima Mansions::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Fatima Mansions were an art rock group formed in 1988 by Cork singer/keyboardist Cathal Coughlan, formerly of Microdisney.\n[2] The original line-up consisted of Coughlan, along with Nick Allum, Jonathan Fell, Zac Woolhouse and Aindrias O'Gruama.\n[3] Against Nature was the debut album from Fatima Mansions.\n[4] Chvrches (pronounced and written as \"churches\" in Roman form and stylised as CHVRCHΞS) are a Scottish synth-pop band from Glasgow, formed in September 2011."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

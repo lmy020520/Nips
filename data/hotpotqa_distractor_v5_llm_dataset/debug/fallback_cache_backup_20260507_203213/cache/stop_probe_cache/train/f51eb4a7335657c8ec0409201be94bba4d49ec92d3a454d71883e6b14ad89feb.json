@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hoss Cartwright",
+  "pred_answer": "Hoss Cartwright",
+  "normalized_gold": "hoss cartwright",
+  "normalized_pred": "hoss cartwright",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5addaf755542995b365fab5d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5addaf755542995b365fab5d::Bonanza::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5addaf755542995b365fab5d::Women's PGA Championship::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5addaf755542995b365fab5d::Dan Blocker::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5addaf755542995b365fab5d::O'Donnell Heritage Museum::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5addaf755542995b365fab5d::Bonanza",
+        "5addaf755542995b365fab5d::Dan Blocker"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5addaf755542995b365fab5d::Bonanza::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5addaf755542995b365fab5d::Women's PGA Championship::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5addaf755542995b365fab5d::Dan Blocker::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5addaf755542995b365fab5d::O'Donnell Heritage Museum::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5addaf755542995b365fab5d::O'Donnell Heritage Museum::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A part of the museum includes a room of exhibits on the actor Dan Blocker, who portrayed the Hoss Cartwright character for thirteen years on NBC's \"Bonanza\".\n[2] He is best remembered for his role as Hoss Cartwright in the NBC Western television series \"Bonanza\".\n[3] The Women's PGA Championship is the second-longest running golf tournament in the history of the Ladies Professional Golf Association, surpassed only by the U.S. Women's Open.\n[4] Lasting 14 seasons and 431 episodes, \"Bonanza\" is NBC's longest-running western, and ranks overall as the second-longest-running western series on U.S. network television (behind CBS's \"Gunsmoke\"), and within the top 10 longest-running, live-action American series."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

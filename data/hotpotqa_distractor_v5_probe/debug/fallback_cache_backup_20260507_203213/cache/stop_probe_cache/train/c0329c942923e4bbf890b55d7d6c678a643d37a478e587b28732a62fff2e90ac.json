@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "dog",
+  "pred_answer": "dog",
+  "normalized_gold": "dog",
+  "normalized_pred": "dog",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae36eba5542992e3233c3fe",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae36eba5542992e3233c3fe::Telomian::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae36eba5542992e3233c3fe::Alaunt::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae36eba5542992e3233c3fe::Cat registry::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae36eba5542992e3233c3fe::Telomian",
+        "5ae36eba5542992e3233c3fe::Alaunt"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae36eba5542992e3233c3fe::Telomian::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae36eba5542992e3233c3fe::Alaunt::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae36eba5542992e3233c3fe::Cat registry::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae36eba5542992e3233c3fe::Cat registry::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] A cat registry is not the same as a breed club or breed society (these are specific-breed organisations that may be affiliated with one or more registries with whom they have lodged breed standards in order to be able to exhibit under the auspices of that registry).\n[2] The Alaunt breed had three distinct phenotypes: Alaunt Veantre, Alaunt Boucherie and the Alaunt Gentile.\n[3] The Telomian is a breed of dog native to Malaysia."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

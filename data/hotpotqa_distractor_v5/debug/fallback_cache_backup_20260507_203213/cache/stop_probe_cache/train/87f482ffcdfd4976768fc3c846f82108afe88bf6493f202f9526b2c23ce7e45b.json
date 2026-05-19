@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Ealing, London",
+  "pred_answer": "Ealing, London",
+  "normalized_gold": "ealing london",
+  "normalized_pred": "ealing london",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2b61a5542992decbdcd79",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2b61a5542992decbdcd79::Unfinished Business (song)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2b61a5542992decbdcd79::Unfinished Business (EPMD album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2b61a5542992decbdcd79::White Lies (band)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae2b61a5542992decbdcd79::Sione's 2: Unfinished Business::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2b61a5542992decbdcd79::Unfinished Business (song)",
+        "5ae2b61a5542992decbdcd79::White Lies (band)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2b61a5542992decbdcd79::Unfinished Business (song)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2b61a5542992decbdcd79::Unfinished Business (EPMD album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2b61a5542992decbdcd79::White Lies (band)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae2b61a5542992decbdcd79::Sione's 2: Unfinished Business::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2b61a5542992decbdcd79::Sione's 2: Unfinished Business::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Sione's 2: Unfinished Business is a 2012 New Zealand comedy film and the sequel to the hugely successful 2006 film \"Sione's Wedding\".\n[2] White Lies are an English post-punk band from Ealing, London.\n[3] Unfinished Business is the second album from Hip Hop duo EPMD.\n[4] \"Unfinished Business\" is a single by UK band White Lies, released by Chess Club on 28 April 2008 on 7\" vinyl."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

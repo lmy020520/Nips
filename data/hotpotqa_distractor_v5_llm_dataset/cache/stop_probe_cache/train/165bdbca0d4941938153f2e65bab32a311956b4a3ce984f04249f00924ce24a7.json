@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "South Indian cinema",
+  "pred_answer": "South Indian cinema",
+  "normalized_gold": "south indian cinema",
+  "normalized_pred": "south indian cinema",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae48b2355429913cc204496",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae48b2355429913cc204496::Boys (2003 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae48b2355429913cc204496::Jal Shah::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae48b2355429913cc204496::Genelia D'Souza::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae48b2355429913cc204496::Lakshmi Menon (actress)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae48b2355429913cc204496::Boys (2003 film)",
+        "5ae48b2355429913cc204496::Genelia D'Souza"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae48b2355429913cc204496::Boys (2003 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae48b2355429913cc204496::Jal Shah::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae48b2355429913cc204496::Genelia D'Souza::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae48b2355429913cc204496::Lakshmi Menon (actress)::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae48b2355429913cc204496::Lakshmi Menon (actress)::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Later,she established herself as one of most successful and popular actress in south Indian cinema .\n[2] She was recognized for her role in \"Boys\" the same year, and later established herself in Telugu cinema by acting in several Telugu films during 2003–2008.\n[3] She is a very popular actress of Nepali movies.\n[4] Boys is a 2003 Indian Tamil coming-of-age film directed by S. Shankar."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

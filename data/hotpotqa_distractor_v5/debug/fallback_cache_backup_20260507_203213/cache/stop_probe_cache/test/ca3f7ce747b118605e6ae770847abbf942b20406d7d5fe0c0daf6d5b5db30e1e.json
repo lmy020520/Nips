@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "director",
+  "pred_answer": "director",
+  "normalized_gold": "director",
+  "normalized_pred": "director",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abe76c255429965af743f15",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abe76c255429965af743f15::Rango (2011 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abe76c255429965af743f15::John Landis::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abe76c255429965af743f15::Gore Verbinski::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abe76c255429965af743f15::Deborah Nadoolman Landis::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abe76c255429965af743f15::John Landis",
+        "5abe76c255429965af743f15::Gore Verbinski"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abe76c255429965af743f15::Rango (2011 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abe76c255429965af743f15::John Landis::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abe76c255429965af743f15::Gore Verbinski::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abe76c255429965af743f15::Deborah Nadoolman Landis::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abe76c255429965af743f15::Deborah Nadoolman Landis::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Deborah Nadoolman Landis (born May 26, 1952) is an American film and theater costume designer.\n[2] Gregor \"Gore\" Verbinski (born March 16, 1964) is an American film director, screenwriter, producer and musician.\n[3] John David Landis (born August 3, 1950) is an American film director, screenwriter, actor, and producer.\n[4] Rango is a 2011 American 3D computer-animated Western action comedy film directed by Gore Verbinski, written by John Logan, and produced by Verbinski, Graham King and John B. Carls."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

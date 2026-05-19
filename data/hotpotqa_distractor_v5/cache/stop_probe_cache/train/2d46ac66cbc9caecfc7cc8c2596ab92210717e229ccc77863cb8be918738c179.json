@@ -1,0 +1,77 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Perri",
+  "pred_answer": "Perri",
+  "normalized_gold": "perri",
+  "normalized_pred": "perri",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a81112755429938b61422a3",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a81112755429938b61422a3::Perri (film)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a81112755429938b61422a3::Beauty and the Beast (2017 film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a81112755429938b61422a3::derived::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a81112755429938b61422a3::Perri (film)",
+        "5a81112755429938b61422a3::Beauty and the Beast (2017 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a81112755429938b61422a3::Perri (film)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a81112755429938b61422a3::Beauty and the Beast (2017 film)::0",
+          "added_step": 1
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a81112755429938b61422a3::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a81112755429938b61422a3::derived::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Perri is a 1957 film from Walt Disney Productions, based on Felix Salten's 1938 \"Perri: The Youth of a Squirrel\".\n[2] Beauty and the Beast is a 2017 American musical romantic fantasy film directed by Bill Condon from a screenplay written by Stephen Chbosky and Evan Spiliotopoulos, and co-produced by Walt Disney Pictures and Mandeville Films.\n[3] It was the company's fifth feature entry in their \"True-Life Adventures\" series, and the only one to be labeled a \"True Life Fantasy\".\n\nNotes:\n[verification] Perri is a 1957 film from Walt Disney Productions, based on Felix Salten's 1938 book."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

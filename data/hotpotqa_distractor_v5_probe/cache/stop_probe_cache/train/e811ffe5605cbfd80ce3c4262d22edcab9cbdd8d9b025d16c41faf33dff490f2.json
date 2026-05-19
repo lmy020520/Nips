@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Jon Sensbach",
+  "pred_answer": "Jon Sensbach",
+  "normalized_gold": "jon sensbach",
+  "normalized_pred": "jon sensbach",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae2232b5542994d89d5b36d",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae2232b5542994d89d5b36d::University of Florida::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae2232b5542994d89d5b36d::Florida State University::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae2232b5542994d89d5b36d::Church History (journal)::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae2232b5542994d89d5b36d::Clemson University::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae2232b5542994d89d5b36d::University of Florida",
+        "5ae2232b5542994d89d5b36d::Church History (journal)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae2232b5542994d89d5b36d::University of Florida::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae2232b5542994d89d5b36d::Florida State University::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae2232b5542994d89d5b36d::Church History (journal)::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae2232b5542994d89d5b36d::Clemson University::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae2232b5542994d89d5b36d::Clemson University::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Clemson University is an American public, coeducational, land-grant and sea-grant research university in Clemson, South Carolina.\n[2] The editors-in-chief are Andrea Sterk (University of Minnesota), Euan Cameron (Union Theological Seminary, Columbia University), Dana Robert (Boston University) and Jon Sensbach (University of Florida).\n[3] Florida State University (commonly referred to as Florida State or FSU) is an American public space-grant and sea-grant research university.\n[4] The University of Florida (commonly referred to as Florida or UF) is an American public land-grant, sea-grant, and space-grant research university on a 2000 acre campus in Gainesville, Florida."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

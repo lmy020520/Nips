@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The xx",
+  "pred_answer": "The xx",
+  "normalized_gold": "the xx",
+  "normalized_pred": "the xx",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85d42a5542996432c570f4",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85d42a5542996432c570f4::Lunic::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85d42a5542996432c570f4::Juniore::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85d42a5542996432c570f4::The xx::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85d42a5542996432c570f4::Teleman::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85d42a5542996432c570f4::Lunic",
+        "5a85d42a5542996432c570f4::The xx"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85d42a5542996432c570f4::Lunic::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85d42a5542996432c570f4::Juniore::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85d42a5542996432c570f4::The xx::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85d42a5542996432c570f4::Teleman::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85d42a5542996432c570f4::Teleman::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Teleman is an English indie pop band formed in London in 2012.\n[2] The xx are an English indie pop band formed in 2005 in Wandsworth, London, and currently consists of Oliver Sim (bass, vocals), Romy Madley Croft (guitar, vocals) and Jamie xx (beats, MPC, record production).\n[3] Juniore is a French indie pop band formed in Paris in 2013.\n[4] Lunic's most recent album, \"Future Sex Drama\", is a blend of dark ethereal synthpop and electronic rock similar to Metric, The xx, Lights, or Ladytron."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

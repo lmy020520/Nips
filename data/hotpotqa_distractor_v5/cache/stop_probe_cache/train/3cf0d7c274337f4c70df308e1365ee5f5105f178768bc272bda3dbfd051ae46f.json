@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Adrien Brody",
+  "pred_answer": "Adrien Brody",
+  "normalized_gold": "adrien brody",
+  "normalized_pred": "adrien brody",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7338cb5542994cef4bc4d8",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7338cb5542994cef4bc4d8::The Pianist (soundtrack)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7338cb5542994cef4bc4d8::Władysław Szpilman::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7338cb5542994cef4bc4d8::Morgan Freeman on screen and stage::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7338cb5542994cef4bc4d8::The Pianist (soundtrack)",
+        "5a7338cb5542994cef4bc4d8::Władysław Szpilman"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7338cb5542994cef4bc4d8::The Pianist (soundtrack)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7338cb5542994cef4bc4d8::Władysław Szpilman::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7338cb5542994cef4bc4d8::Morgan Freeman on screen and stage::6",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7338cb5542994cef4bc4d8::Morgan Freeman on screen and stage::6",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] His role earned him a nomination for the Academy Award for Best Supporting Actor.\n[2] Władysław Szpilman (] ; 5 December 19116 July 2000) was a Polish pianist and classical composer of Jewish descent.\n[3] The Pianist: Music from the Motion Picture is the original soundtrack, on the Sony Classical label, of the 2002 Academy Award-winning and Golden Globe-nominated film \"The Pianist\" starring Adrien Brody (who won the Academy Award for Best Actor for his role as \"Władysław Szpilman\" in this film), Thomas Kretschmann and Frank Finlay."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1983",
+  "pred_answer": "1983",
+  "normalized_gold": "1983",
+  "normalized_pred": "1983",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7e3ea5542993210983fa9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7e3ea5542993210983fa9::Return of the Pride::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7e3ea5542993210983fa9::5th Avenue (album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7e3ea5542993210983fa9::White Lion::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae7e3ea5542993210983fa9::The Reads::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7e3ea5542993210983fa9::Return of the Pride",
+        "5ae7e3ea5542993210983fa9::White Lion"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7e3ea5542993210983fa9::Return of the Pride::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7e3ea5542993210983fa9::5th Avenue (album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae7e3ea5542993210983fa9::White Lion::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae7e3ea5542993210983fa9::The Reads::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae7e3ea5542993210983fa9::The Reads::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Reads are a Wenglish alternative rock band whose debut studio album, \"Stories from the Border\", was released in early 2011 with \"Good Omens\" the first single to be released from the album on 25 July 2011.\n[2] White Lion was a Danish/American rock band that was formed in New York City in 1983 by Danish vocalist Mike Tramp and American guitarist Vito Bratta.\n[3] 5th Avenue is the fifth studio album of Christina Aguilar - a popular Thai artist.\n[4] Return of the Pride is the fifth and final studio album featuring original material by White Lion."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

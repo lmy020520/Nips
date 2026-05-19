@@ -1,0 +1,5 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for the location of the conference, but we only know the conference name. We need to connect the conference to a location. The raw candidates mention venues but not the conference location. A bridge note can link the conference to its location using external knowledge, but since we must ground in provided units, we can note that the conference is Hockey East and its location is New England based on gold answer hint. However, we cannot use gold answer directly. Instead, we can derive a verification note to check if any raw candidate implies location. None do, so we derive a bridge note to connect conference to location using the fact that Hockey East is in New England, but that fact is not in raw candidates. To comply, we derive a note that the conference is Hockey East and its location is New England, citing the raw candidate that mentions Hockey East? But raw candidates do not mention Hockey East. The state summary mentions Hockey East but not in raw candidates. So we cannot derive a grounded note. Therefore, should_derive is false.",
+  "derived_candidates": []
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Drew Field Municipal Airport",
+  "pred_answer": "Drew Field Municipal Airport",
+  "normalized_gold": "drew field municipal airport",
+  "normalized_pred": "drew field municipal airport",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8781855542996e4f308814",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8781855542996e4f308814::International Plaza and Bay Street::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8781855542996e4f308814::Rainbow Row::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8781855542996e4f308814::Tampa International Airport::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8781855542996e4f308814::Tampa International Airport::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8781855542996e4f308814::International Plaza and Bay Street",
+        "5a8781855542996e4f308814::Tampa International Airport"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8781855542996e4f308814::International Plaza and Bay Street::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8781855542996e4f308814::Rainbow Row::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8781855542996e4f308814::Tampa International Airport::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8781855542996e4f308814::Tampa International Airport::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8781855542996e4f308814::Tampa International Airport::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The airport was called Drew Field Municipal Airport until 1952.\n[2] It has been praised for its architecture and \"Landside/Airside\" design of a central terminal (\"landside\") connected by people movers to satellite air terminals and gates (\"airsides\"), a pioneering concept when designed in the late 1960s.\n[3] The houses are located north of Tradd St. and south of Elliott St. on East Bay Street, that is, 79 to 107 East Bay Street.\n[4] The mall, which opened in 2001, was built to give travelers an option to shop and dine in high-class surroundings, while at the same time be able to stay near Tampa International Airport (which borders the property)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

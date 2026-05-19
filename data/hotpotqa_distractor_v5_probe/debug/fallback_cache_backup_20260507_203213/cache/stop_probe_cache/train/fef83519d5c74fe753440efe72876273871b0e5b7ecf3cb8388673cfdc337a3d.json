@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "director",
+  "pred_answer": "director",
+  "normalized_gold": "director",
+  "normalized_pred": "director",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac1c8075542994ab5c67e17",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac1c8075542994ab5c67e17::The Big Killing (1928 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac1c8075542994ab5c67e17::Mickey (1918 film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac1c8075542994ab5c67e17::F. Richard Jones::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac1c8075542994ab5c67e17::Shaun Scott (filmmaker)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac1c8075542994ab5c67e17::Graffiti on the Train Tour::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac1c8075542994ab5c67e17::F. Richard Jones",
+        "5ac1c8075542994ab5c67e17::Shaun Scott (filmmaker)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac1c8075542994ab5c67e17::The Big Killing (1928 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac1c8075542994ab5c67e17::Mickey (1918 film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac1c8075542994ab5c67e17::F. Richard Jones::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac1c8075542994ab5c67e17::Shaun Scott (filmmaker)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac1c8075542994ab5c67e17::Graffiti on the Train Tour::5",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac1c8075542994ab5c67e17::Graffiti on the Train Tour::5",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] With their flight due to leave within a few hours and Jones unable to walk, bassist Richard Jones had to transport the singer across the airport in a luggage trolley.\n[2] Shaun Scott (born November 8, 1984): American filmmaker, film director, film editor, writer, historian.\n[3] Frank Richard Jones (September 7, 1893 – December 14, 1930) was an American director and producer.\n[4] Mickey is a 1918 silent comedy-drama film starring Mabel Normand, directed by F. Richard Jones and James Young, and written by J.G. Hawks."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

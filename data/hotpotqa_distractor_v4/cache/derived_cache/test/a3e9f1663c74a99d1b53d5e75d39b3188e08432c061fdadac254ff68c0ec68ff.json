@@ -1,0 +1,22 @@
+{
+  "should_derive": true,
+  "reason": "The recent probe feedback indicates a false stop with an incorrect answer 'December 1978', and the derive_goal is to bridge query entity to answer candidate. The top raw candidates include evidence that the Airline Deregulation Act was a 1978 federal law and that it contributed to Braniff Airways ceasing operations, but the exact date or month may need clarification. Deriving bridge and verification notes can help organize this evidence to correct the answer focus and clarify the target type (federal law date).",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "The Airline Deregulation Act is a 1978 United States federal law that deregulated the airline industry.",
+      "source_unit_ids": [
+        "5ac2e9c45542990b17b154a0::Airline Deregulation Act::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Braniff Airways ceased operations in May 1982 due to high fuel prices and the Airline Deregulation Act of December 1978.",
+      "source_unit_ids": [
+        "5ac2e9c45542990b17b154a0::Braniff International Airways::3"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

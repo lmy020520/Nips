@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Kingscliff, New South Wales",
+  "pred_answer": "Kingscliff, New South Wales",
+  "normalized_gold": "kingscliff new south wales",
+  "normalized_pred": "kingscliff new south wales",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac15c1c5542994ab5c67cf7",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac15c1c5542994ab5c67cf7::Murder of Peter Aston::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac15c1c5542994ab5c67cf7::Werribee DVD incident::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac15c1c5542994ab5c67cf7::Murder of Peter Aston::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac15c1c5542994ab5c67cf7::Kingscliff, New South Wales::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ac15c1c5542994ab5c67cf7::Human rights abuses in Azad Kashmir::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac15c1c5542994ab5c67cf7::Murder of Peter Aston",
+        "5ac15c1c5542994ab5c67cf7::Kingscliff, New South Wales"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac15c1c5542994ab5c67cf7::Murder of Peter Aston::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac15c1c5542994ab5c67cf7::Werribee DVD incident::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac15c1c5542994ab5c67cf7::Murder of Peter Aston::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac15c1c5542994ab5c67cf7::Kingscliff, New South Wales::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ac15c1c5542994ab5c67cf7::Human rights abuses in Azad Kashmir::3",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac15c1c5542994ab5c67cf7::Human rights abuses in Azad Kashmir::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Those missing include Pakistani army personnel, those involved in spying for Pakistan, or those suspected of spying for India.\n[2] Kingscliff is a coastal town just south of Tweed Heads in the Northern Rivers region of New South Wales, Australia, and is part of Tweed Shire.\n[3] Reid and Luckman then drove the boys at gun and knife point to Kingscliff, New South Wales, where they were beaten, tortured, and sexually assaulted before Aston was ultimately murdered.\n[4] The 2006 Werribee DVD incident occurred in the Australian town of Werribee (a suburb of Melbourne, Victoria), when a group of teenage boys, who collectively called themselves the \"Teenage Kings of Werribee\", filmed themselves committing various criminal acts, including the sexual assault of a teenage girl with a developmental disability."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

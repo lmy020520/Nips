@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Taylor Swift",
+  "pred_answer": "Taylor Swift",
+  "normalized_gold": "taylor swift",
+  "normalized_pred": "taylor swift",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a80859f5542992097ad2ff4",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a80859f5542992097ad2ff4::Jeffrey E. Cohen::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a80859f5542992097ad2ff4::Jenelle Riley::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a80859f5542992097ad2ff4::Love Story (Taylor Swift song)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a80859f5542992097ad2ff4::Fearless (Taylor Swift album)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a80859f5542992097ad2ff4::Love Story (novel)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a80859f5542992097ad2ff4::Love Story (Taylor Swift song)",
+        "5a80859f5542992097ad2ff4::Fearless (Taylor Swift album)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a80859f5542992097ad2ff4::Jeffrey E. Cohen::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a80859f5542992097ad2ff4::Jenelle Riley::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a80859f5542992097ad2ff4::Love Story (Taylor Swift song)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a80859f5542992097ad2ff4::Fearless (Taylor Swift album)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a80859f5542992097ad2ff4::Love Story (novel)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a80859f5542992097ad2ff4::Love Story (novel)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Love Story is a 1970 romance novel by American writer Erich Segal.\n[2] Fearless is the second studio album by the American singer-songwriter Taylor Swift.\n[3] \"Love Story\" is a song performed by American singer-songwriter Taylor Swift.\n[4] She wrote and directed the award-winning play \"A Kind of Love Story\" which had its world premiere at Sacred Fools Theatre in Los Angeles."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

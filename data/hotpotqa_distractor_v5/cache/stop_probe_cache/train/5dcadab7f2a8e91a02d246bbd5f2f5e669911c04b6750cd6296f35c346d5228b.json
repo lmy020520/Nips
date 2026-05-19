@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "heavily downtuned, mid-paced",
+  "pred_answer": "heavily downtuned, mid-paced",
+  "normalized_gold": "heavily downtuned mid-paced",
+  "normalized_pred": "heavily downtuned mid-paced",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab2c50855429916697740b1",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab2c50855429916697740b1::The Plunderers (band)::7"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab2c50855429916697740b1::Lime Spiders::7"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab2c50855429916697740b1::Alternative metal::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab2c50855429916697740b1::Alberto Ardines::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab2c50855429916697740b1::Nu metal::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab2c50855429916697740b1::Alternative metal",
+        "5ab2c50855429916697740b1::Alberto Ardines"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab2c50855429916697740b1::The Plunderers (band)::7",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab2c50855429916697740b1::Lime Spiders::7",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab2c50855429916697740b1::Alternative metal::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab2c50855429916697740b1::Alberto Ardines::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab2c50855429916697740b1::Nu metal::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab2c50855429916697740b1::Nu metal::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Nu metal rarely features guitar solos; the genre is heavily syncopated and based on guitar riffs.\n[2] He is working on a new alternative/power metal band called Sauze that he formed with Manuel Ramil, Fernando Mon, and Toni Amboaje.\n[3] Alternative metal bands are often characterized by heavily downtuned, mid-paced guitar riffs, a mixture of accessible melodic vocals and harsh vocals and sometimes unconventional sounds within other heavy metal styles.\n[4] The group disbanded in 1990 and in 1999 Australian musicologist, Ian McFarlane, noted they had provided \"raucous sound mixed screaming vocals and wild, fuzz-tone guitar riffs to arrive at a mutant strain of acid punk that bordered on heavy metal\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "May 30, 1994",
+  "pred_answer": "May 30, 1994",
+  "normalized_gold": "may 30 1994",
+  "normalized_pred": "may 30 1994",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae0425c55429942ec259c63",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae0425c55429942ec259c63::Mark Romanek videography::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae0425c55429942ec259c63::Mark Romanek::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae0425c55429942ec259c63::Closer (Nine Inch Nails song)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae0425c55429942ec259c63::Only (Nine Inch Nails song)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae0425c55429942ec259c63::Mark Romanek",
+        "5ae0425c55429942ec259c63::Closer (Nine Inch Nails song)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae0425c55429942ec259c63::Mark Romanek videography::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae0425c55429942ec259c63::Mark Romanek::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae0425c55429942ec259c63::Closer (Nine Inch Nails song)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae0425c55429942ec259c63::Only (Nine Inch Nails song)::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae0425c55429942ec259c63::Only (Nine Inch Nails song)::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It was released as the second single from Nine Inch Nails' fourth album, \"With Teeth\".\n[2] It was released on May 30, 1994 as the album's second single.\n[3] Romanek wrote and directed the 2002 film \"One Hour Photo\" and directed the 2010 film \"Never Let Me Go\".\n[4] Romanek later directed \"Closer\" for the industrial rock band Nine Inch Nails, which contains imagery involves terror, sexuality, and animal cruelty."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

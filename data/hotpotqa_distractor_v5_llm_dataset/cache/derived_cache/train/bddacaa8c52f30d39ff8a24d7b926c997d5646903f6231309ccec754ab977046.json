@@ -1,0 +1,23 @@
+{
+  "should_derive": true,
+  "reason": "The state summary shows Denis Rennie is a Grenadian football player and Grenada is an island country in the southeastern Caribbean Sea. However, the raw candidates do not directly link Denis Rennie to Grenada's location. Candidate 3 (Shane Rennie) mentions Grenadian football player, which can be used to verify the country association. Candidate 2 (Denis Viana da Silva) is a Brazilian football player, which is irrelevant. Candidate 1 (Jim Wood) is unrelated. A bridge note can connect Denis Rennie to Grenada via the shared nationality with Shane Rennie, and a verification note can confirm Grenada's location.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Denis Rennie and Shane Rennie are both Grenadian football players.",
+      "source_unit_ids": [
+        "5a7f4b5f55429969796c1a00::Denis Viana da Silva::0",
+        "5a7f4b5f55429969796c1a00::Shane Rennie::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Grenada is an island country in the southeastern Caribbean Sea.",
+      "source_unit_ids": [
+        "5a7f4b5f55429969796c1a00::Shane Rennie::0"
+      ],
+      "coarse_priority": 2
+    }
+  ]
+}

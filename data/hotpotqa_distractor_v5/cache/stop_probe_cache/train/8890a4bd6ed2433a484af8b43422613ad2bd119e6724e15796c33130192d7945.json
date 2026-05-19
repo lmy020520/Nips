@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "N.W.A",
+  "pred_answer": "N.W.A",
+  "normalized_gold": "nwa",
+  "normalized_pred": "nwa",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85b2425542994c784ddb47",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85b2425542994c784ddb47::N.W.A::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85b2425542994c784ddb47::Good Life Cafe::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85b2425542994c784ddb47::Menace II Society (soundtrack)::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85b2425542994c784ddb47::MC Eiht::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85b2425542994c784ddb47::N.W.A",
+        "5a85b2425542994c784ddb47::Menace II Society (soundtrack)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85b2425542994c784ddb47::N.W.A::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85b2425542994c784ddb47::Good Life Cafe::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85b2425542994c784ddb47::Menace II Society (soundtrack)::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85b2425542994c784ddb47::MC Eiht::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85b2425542994c784ddb47::MC Eiht::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He is also known for his role as A-Wax in the 1993 film \"Menace II Society\".\n[2] Several songs heard both in the movie and in the closing credits, such as \"Got to Give It Up\" by Marvin Gaye, \"Love and Happiness\" by Al Green, \"Dopeman\" by N.W.A, \"Ghetto Bird\" by Ice Cube, \"Computer Love\" by Zapp, \"For the Love of You\" by The Isley Brothers\", \"Honey Love\", \"Slow Dance (Hey Mr. DJ)\", and Dedicated (all performed by R. Kelly), \"Atomic Dog\" by George Clinton, \"Fly Away\" by Hi-Five,\n[3] The Good Life Cafe was a health food market and cafe in Los Angeles, California, known for its open mic nights that helped the 1990s Los Angeles alternative hip hop movement flourish.\n[4] N.W.A (an abbreviation for Niggaz Wit Attitudes) was an American hip hop group from Los Angeles, California."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

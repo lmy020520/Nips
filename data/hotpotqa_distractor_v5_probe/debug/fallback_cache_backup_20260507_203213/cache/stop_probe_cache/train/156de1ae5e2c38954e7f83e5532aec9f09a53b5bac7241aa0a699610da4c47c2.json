@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "magazine",
+  "pred_answer": "magazine",
+  "normalized_gold": "magazine",
+  "normalized_pred": "magazine",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9e20555429901930fa73c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9e20555429901930fa73c::Nexus Mods::5"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9e20555429901930fa73c::Instinct (magazine)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9e20555429901930fa73c::Nexus (magazine)::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab9e20555429901930fa73c::Angelaki::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9e20555429901930fa73c::Instinct (magazine)",
+        "5ab9e20555429901930fa73c::Nexus (magazine)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9e20555429901930fa73c::Nexus Mods::5",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9e20555429901930fa73c::Instinct (magazine)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9e20555429901930fa73c::Nexus (magazine)::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab9e20555429901930fa73c::Angelaki::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9e20555429901930fa73c::Angelaki::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Since 1998, it has been published by Routledge.\n[2] The magazine is or has been published in over 12 languages and is sold in over 20 countries.\n[3] The magazine was first published in 1997 by Instinct Publishing and was distributed by Curtis Circulation.\n[4] The website's hosting and publication of various mods has been covered in the gaming and computer press."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

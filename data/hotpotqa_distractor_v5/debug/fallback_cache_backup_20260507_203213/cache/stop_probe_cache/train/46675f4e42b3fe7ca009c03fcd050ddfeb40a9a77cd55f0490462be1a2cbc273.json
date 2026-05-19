@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "film director",
+  "pred_answer": "film director",
+  "normalized_gold": "film director",
+  "normalized_pred": "film director",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab8b8815542991b5579efe7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab8b8815542991b5579efe7::Mark Joffe::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab8b8815542991b5579efe7::The Man Who Sued God::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab8b8815542991b5579efe7::Milcho Manchevski::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab8b8815542991b5579efe7::Dust (2001 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab8b8815542991b5579efe7::Mark Joffe",
+        "5ab8b8815542991b5579efe7::Milcho Manchevski"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab8b8815542991b5579efe7::Mark Joffe::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab8b8815542991b5579efe7::The Man Who Sued God::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab8b8815542991b5579efe7::Milcho Manchevski::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab8b8815542991b5579efe7::Dust (2001 film)::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab8b8815542991b5579efe7::Dust (2001 film)::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Dust is a 2001 time-twister drama film, a UK-French,German-Spanish-Macedonian co-production, written and directed by Milcho Manchevski.\n[2] Milcho Manchevski (Macedonian: Милчо Манчевски ] , born October 18, 1969) is a Macedonian film director. \"\n[3] The Man Who Sued God is a 2001 Australian comedy film starring Billy Connolly and Judy Davis, and directed by Mark Joffe.\n[4] Mark Joffe (born 1956) is an Australian film and television director."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hutchison Whampoa",
+  "pred_answer": "Hutchison Whampoa",
+  "normalized_gold": "hutchison whampoa",
+  "normalized_pred": "hutchison whampoa",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b605355429949d91db57c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b605355429949d91db57c::Hutchison Whampoa::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b605355429949d91db57c::Peter C Wong::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b605355429949d91db57c::Philip Stanley Cassidy::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8b605355429949d91db57c::Ho Sai-chu::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b605355429949d91db57c::Hutchison Whampoa",
+        "5a8b605355429949d91db57c::Philip Stanley Cassidy"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b605355429949d91db57c::Hutchison Whampoa::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b605355429949d91db57c::Peter C Wong::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b605355429949d91db57c::Philip Stanley Cassidy::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8b605355429949d91db57c::Ho Sai-chu::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b605355429949d91db57c::Ho Sai-chu::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Ho Sai-chu, GBM, JP (; born 6 June 1937) was a Hong Kong entrepreneur and the member of the Legislative Council from 1985 to 1991 for Commercial (Second) constituency, Provisional Legislative Council from 1996 to 1998 and Legislative Council after the transfer of the Hong Kong sovereignty in 1998 to 2000 for the Election Committee constituency.\n[2] He was taipan of the John D. Hutchison & Co. and unofficial member of the Executive Council and the Legislative Council of Hong Kong.\n[3] Peter Chak-cheong Wong, CBE, JP (19September 192222September 1989) was a member of the Executive Council and Legislative Council of Hong Kong and president of the Law Society of Hong Kong.\n[4] Hutchison Whampoa Limited (HWL) was an investment holding company based in Hong Kong."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

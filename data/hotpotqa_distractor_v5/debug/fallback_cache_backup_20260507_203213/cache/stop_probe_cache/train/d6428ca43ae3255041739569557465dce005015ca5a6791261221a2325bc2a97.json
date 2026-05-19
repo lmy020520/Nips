@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Xichang",
+  "pred_answer": "Xichang",
+  "normalized_gold": "xichang",
+  "normalized_pred": "xichang",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab297a7554299449642c91a",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab297a7554299449642c91a::Wanning::3"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab297a7554299449642c91a::Demographics of Hyderabad::10"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab297a7554299449642c91a::Xichang::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab297a7554299449642c91a::Sikhism in Greater Vancouver::5"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab297a7554299449642c91a::Wanning",
+        "5ab297a7554299449642c91a::Xichang"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab297a7554299449642c91a::Wanning::3",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab297a7554299449642c91a::Demographics of Hyderabad::10",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab297a7554299449642c91a::Xichang::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab297a7554299449642c91a::Sikhism in Greater Vancouver::5",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab297a7554299449642c91a::Sikhism in Greater Vancouver::5",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] As of 2011 the population of the City of Vancouver proper is 2.3% Sikh.\n[2] Xichang, formerly known as Jiandu and Jianchang, is a city in and the seat of the Liangshan Yi Autonomous Prefecture, in the south of Sichuan Province, China.\n[3] Hyderabad city is governed by Greater Hyderabad Municipal Corporation that comes under the Hyderabad Urban Agglomeration, which has a population of 7.7 million the sixth most populous urban agglomeration in the country, with 3,985,240 males and 3,764,094 are females.\n[4] It has an estimated population of 65,871 (2006)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

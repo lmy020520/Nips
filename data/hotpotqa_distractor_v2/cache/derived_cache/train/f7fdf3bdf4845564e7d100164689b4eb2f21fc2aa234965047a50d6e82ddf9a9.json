@@ -1,0 +1,33 @@
+{
+  "should_derive": true,
+  "reason": "The current evidence is insufficient to answer the question about an actress born in 1967 starring in a 1997 Wes Craven film. The provided raw candidates contain relevant information about Wes Craven films and actors born in 1967, but need organization to bridge the gap and verify connections.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Liev Schreiber is an actor born in 1967 who appears in Scream 2, a 1997 film.",
+      "source_unit_ids": [
+        "5a77a95d5542992a6e59df64::Liev Schreiber::0",
+        "5a77a95d5542992a6e59df64::Scream 2::1"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "Scream 2 is a 1997 film starring Liev Schreiber, who was born in 1967.",
+      "source_unit_ids": [
+        "5a77a95d5542992a6e59df64::Scream 2::1",
+        "5a77a95d5542992a6e59df64::Liev Schreiber::0"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "bridge_note",
+      "text": "Wes Craven directed Wes Craven's New Nightmare in 1994 and Deadly Blessing in 1981, but not necessarily the 1997 film in question.",
+      "source_unit_ids": [
+        "5a77a95d5542992a6e59df64::Wes Craven's New Nightmare::0",
+        "5a77a95d5542992a6e59df64::Deadly Blessing::0"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

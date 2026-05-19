@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "magazine",
+  "pred_answer": "magazine",
+  "normalized_gold": "magazine",
+  "normalized_pred": "magazine",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab444795542991779162c45",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab444795542991779162c45::WidgetCo, Inc.::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab444795542991779162c45::Better Homes and Gardens (magazine)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab444795542991779162c45::Down Beat::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab444795542991779162c45::Reader's Digest::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab444795542991779162c45::Better Homes and Gardens (magazine)",
+        "5ab444795542991779162c45::Down Beat"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab444795542991779162c45::WidgetCo, Inc.::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab444795542991779162c45::Better Homes and Gardens (magazine)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab444795542991779162c45::Down Beat::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab444795542991779162c45::Reader's Digest::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab444795542991779162c45::Reader's Digest::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] For many years, \"Reader's Digest\" was the best-selling consumer magazine in the United States; it lost the distinction in 2009 to \"Better Homes and Gardens\".\n[2] DownBeat (stylized DOWNBEAT) is an American magazine devoted to \"jazz, blues and beyond\", the last word indicating its expansion beyond the jazz realm which it covered exclusively in previous years.\n[3] Better Homes and Gardens is the fourth best selling magazine in the United States.\n[4] WidgetCo products have been featured by Better Homes and Gardens and Gawker Media."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

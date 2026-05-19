@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Howard A. Glickstein",
+  "pred_answer": "Howard A. Glickstein",
+  "normalized_gold": "howard a glickstein",
+  "normalized_pred": "howard a glickstein",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a76a8cb5542993569682c77",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a76a8cb5542993569682c77::Touro Law Center::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a76a8cb5542993569682c77::Touro University Nevada::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a76a8cb5542993569682c77::Howard A. Glickstein::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a76a8cb5542993569682c77::Touro College::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a76a8cb5542993569682c77::Touro Law Center",
+        "5a76a8cb5542993569682c77::Howard A. Glickstein"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a76a8cb5542993569682c77::Touro Law Center::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a76a8cb5542993569682c77::Touro University Nevada::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a76a8cb5542993569682c77::Howard A. Glickstein::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a76a8cb5542993569682c77::Touro College::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a76a8cb5542993569682c77::Touro College::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Touro College is a private college of higher and professional education in New York City, New York, in the United States.\n[2] Howard A. Glickstein is an attorney, legal scholar, educator, and Dean Emeritus of Touro Law Center in Central Islip, New York.\n[3] TUN is a part of The Touro College and University System, which includes Manhattan-based Touro College and New York Medical College, accredited by the Middle States Commission on Higher Education as well as Touro University, which includes both Touro University California and Touro University Nevada, accredited by the Western Association of Schools and Colleges.\n[4] The Law Center is part of Touro College, a private, not-for-profit, coeducational institution based in New York City."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

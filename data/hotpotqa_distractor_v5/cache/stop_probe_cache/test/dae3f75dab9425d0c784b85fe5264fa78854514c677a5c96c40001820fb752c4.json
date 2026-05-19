@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Creature Comforts",
+  "pred_answer": "Creature Comforts",
+  "normalized_gold": "creature comforts",
+  "normalized_pred": "creature comforts",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7180205542994082a3e856",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7180205542994082a3e856::Creature Comforts::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7180205542994082a3e856::Wallace and Gromit::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7180205542994082a3e856::Nick Park::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7180205542994082a3e856::Killing of Harambe::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7180205542994082a3e856::Creature Comforts",
+        "5a7180205542994082a3e856::Nick Park"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7180205542994082a3e856::Creature Comforts::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7180205542994082a3e856::Wallace and Gromit::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7180205542994082a3e856::Nick Park::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7180205542994082a3e856::Killing of Harambe::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7180205542994082a3e856::Killing of Harambe::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] A number of primatologists and conservationists wrote later that the zoo had no other choice under the circumstances, and that it highlighted the danger of zoo animals in close proximity to humans and the need for better standards of care.\n[2] Park has been nominated for an Academy Award a total of six times, and won four with \"Creature Comforts\" (1989), \"The Wrong Trousers\" (1993), \"A Close Shave\" (1995), and \"\" (2005).\n[3] Wallace and Gromit is a British clay animation comedy series created by Nick Park of Aardman Animations.\n[4] The film matched animated zoo animals with a soundtrack of people talking about their homes, making it appear as if the animals were being interviewed about their living conditions."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

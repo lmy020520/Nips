@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "And There's More",
+  "pred_answer": "And There's More",
+  "normalized_gold": "and theres more",
+  "normalized_pred": "and theres more",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae513225542993aec5ec12e",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae513225542993aec5ec12e::That Mitchell and Webb Sound::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae513225542993aec5ec12e::The Wrong Door::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae513225542993aec5ec12e::And There's More::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae513225542993aec5ec12e::Jimmy Cricket::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ae513225542993aec5ec12e::Laura Solon: Talking and Not Talking::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae513225542993aec5ec12e::And There's More",
+        "5ae513225542993aec5ec12e::Jimmy Cricket"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae513225542993aec5ec12e::That Mitchell and Webb Sound::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae513225542993aec5ec12e::The Wrong Door::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae513225542993aec5ec12e::And There's More::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae513225542993aec5ec12e::Jimmy Cricket::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ae513225542993aec5ec12e::Laura Solon: Talking and Not Talking::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae513225542993aec5ec12e::Laura Solon: Talking and Not Talking::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The show was voted on the British Comedy Guide website as the \"Best British Radio Sketch Show of 2008\".\n[2] James Mulgrew (born 17 October 1945), known professionally as Jimmy Cricket, is an Irish comedian.\n[3] And There's More is a comedy sketch show starring Jimmy Cricket produced by Central Independent Television for ITV from 1985 till 1988.\n[4] The programme is the first comedy show in which almost all of the sketches have a CGI element."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

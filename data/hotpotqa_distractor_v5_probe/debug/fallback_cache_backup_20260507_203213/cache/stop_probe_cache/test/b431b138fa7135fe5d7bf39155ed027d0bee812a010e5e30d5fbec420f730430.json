@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "April 20, 1946",
+  "pred_answer": "April 20, 1946",
+  "normalized_gold": "april 20 1946",
+  "normalized_pred": "april 20 1946",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab204795542993be8fa98ad",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab204795542993be8fa98ad::Peter and the Wolf (1946 film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab204795542993be8fa98ad::The Road Runner Show::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab204795542993be8fa98ad::Make Mine Music::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab204795542993be8fa98ad::The Moxy Show::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab204795542993be8fa98ad::Peter and the Wolf (1946 film)",
+        "5ab204795542993be8fa98ad::Make Mine Music"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab204795542993be8fa98ad::Peter and the Wolf (1946 film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab204795542993be8fa98ad::The Road Runner Show::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab204795542993be8fa98ad::Make Mine Music::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab204795542993be8fa98ad::The Moxy Show::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab204795542993be8fa98ad::The Moxy Show::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Moxy Show (also known as The Moxy Pirate Show and The Moxy & Flea Show), is an American animated anthology television series produced by Turner Production for Cartoon Network.\n[2] Make Mine Music is a 1946 American animated anthology film produced by Walt Disney and released to theatres on April 20, 1946.\n[3] The Road Runner Show was an animated anthology series which compiled theatrical Wile E. Coyote and The Road Runner cartoons from the \"Looney Tunes\" and \"Merrie Melodies\", which were produced by Warner Bros.\n[4] Peter and the Wolf is an 1946 animated short based on the 1936 musical composition/fairy tale by Sergei Prokofiev, produced by Walt Disney and narrated by Sterling Holloway."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

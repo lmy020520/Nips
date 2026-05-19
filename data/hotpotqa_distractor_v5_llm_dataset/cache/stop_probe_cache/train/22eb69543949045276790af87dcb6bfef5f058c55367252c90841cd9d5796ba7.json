@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "NSYNC",
+  "pred_answer": "NSYNC",
+  "normalized_gold": "nsync",
+  "normalized_pred": "nsync",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7ffa305542994857a7687a",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7ffa305542994857a7687a::Bye Bye Bye::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7ffa305542994857a7687a::NSYNC::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7ffa305542994857a7687a::It's Gonna Be Me::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7ffa305542994857a7687a::Bye Bye Bye",
+        "5a7ffa305542994857a7687a::NSYNC"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7ffa305542994857a7687a::Bye Bye Bye::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7ffa305542994857a7687a::NSYNC::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7ffa305542994857a7687a::It's Gonna Be Me::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7ffa305542994857a7687a::It's Gonna Be Me::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It was released on June 13, 2000 as the second single in the United States and third in Europe from their second studio album \"No Strings Attached\".\n[2] NSYNC (sometimes stylized as *NSYNC or 'N Sync) was an American boy band formed in Orlando, Florida in 1995 and launched in Germany by BMG Ariola Munich.\n[3] It was released on January 11, 2000 as the first single from their second studio album \"No Strings Attached\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

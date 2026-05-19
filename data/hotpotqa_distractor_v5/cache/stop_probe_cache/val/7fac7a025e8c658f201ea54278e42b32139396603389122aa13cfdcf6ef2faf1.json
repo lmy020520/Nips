@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hardee's Food Systems",
+  "pred_answer": "Hardee's Food Systems",
+  "normalized_gold": "hardees food systems",
+  "normalized_pred": "hardees food systems",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a779f5c5542992a6e59df2f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a779f5c5542992a6e59df2f::Love's Travel Stops &amp; Country Stores::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a779f5c5542992a6e59df2f::Tom Love::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a779f5c5542992a6e59df2f::Hardee's::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a779f5c5542992a6e59df2f::Love's Travel Stops &amp; Country Stores::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a779f5c5542992a6e59df2f::Love's Travel Stops &amp; Country Stores",
+        "5a779f5c5542992a6e59df2f::Hardee's"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a779f5c5542992a6e59df2f::Love's Travel Stops &amp; Country Stores::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a779f5c5542992a6e59df2f::Tom Love::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a779f5c5542992a6e59df2f::Hardee's::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a779f5c5542992a6e59df2f::Love's Travel Stops &amp; Country Stores::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a779f5c5542992a6e59df2f::Love's Travel Stops &amp; Country Stores::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Love's has two primary kinds of stores: country stores and travel stops.\n[2] Hardee's Food Systems Inc., is an American-based fast-food restaurant chain operated by CKE Restaurants Holdings, Inc. (\"CKE\") with locations primarily in the Southern and Midwestern United States.\n[3] He is the owner, founder and executive chairman of Love's Travel Stops & Country Stores.\n[4] Love's Travel Stops & Country Stores (commonly referred to as Love's) is a family-owned chain of more than 430 truck stop and convenience stores in 41 states."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

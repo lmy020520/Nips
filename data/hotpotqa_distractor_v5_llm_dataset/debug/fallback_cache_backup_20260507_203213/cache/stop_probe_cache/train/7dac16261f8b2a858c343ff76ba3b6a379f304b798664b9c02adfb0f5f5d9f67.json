@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Najaf Governorate",
+  "pred_answer": "Najaf Governorate",
+  "normalized_gold": "najaf governorate",
+  "normalized_pred": "najaf governorate",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a80a1575542995d8a8ddfb6",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a80a1575542995d8a8ddfb6::Date palm::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a80a1575542995d8a8ddfb6::Vegetable Lamb of Tartary::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a80a1575542995d8a8ddfb6::Al-Meshkhab District::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a80a1575542995d8a8ddfb6::Land use statistics by country::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a80a1575542995d8a8ddfb6::Date palm",
+        "5a80a1575542995d8a8ddfb6::Al-Meshkhab District"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a80a1575542995d8a8ddfb6::Date palm::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a80a1575542995d8a8ddfb6::Vegetable Lamb of Tartary::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a80a1575542995d8a8ddfb6::Al-Meshkhab District::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a80a1575542995d8a8ddfb6::Land use statistics by country::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a80a1575542995d8a8ddfb6::Land use statistics by country::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Countries are sorted by their total cultivated land area which is a sum of total arable land area and total area of permanent crops. Arable land is a land cultivated for crops like wheat, maize, and rice that are replanted after each harvest; permanent crops land is a land cultivated for crops like citrus, coffee, and rubber that are not replanted after each harvest; this also includes land under\n[2] Al-Meshkhab is a district located in Najaf Governorate.\n[3] The Vegetable Lamb of Tartary (Latin: \"Agnus scythicus\" or \"Planta Tartarica Barometz\") is a legendary zoophyte of Central Asia, once believed to grow sheep as its fruit.\n[4] Although its place of origin is unknown because of long cultivation, it probably originated from lands around Iraq."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

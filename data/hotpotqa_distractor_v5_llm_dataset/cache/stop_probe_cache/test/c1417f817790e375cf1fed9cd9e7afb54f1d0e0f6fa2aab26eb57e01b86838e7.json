@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "10 January 1920",
+  "pred_answer": "10 January 1920",
+  "normalized_gold": "10 january 1920",
+  "normalized_pred": "10 january 1920",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ac2758b55429963665199c3",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ac2758b55429963665199c3::Frank Jackson (Alabama)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ac2758b55429963665199c3::League of Nations::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ac2758b55429963665199c3::Nicolae Titulescu::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ac2758b55429963665199c3::Gheorghe Tătărescu::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ac2758b55429963665199c3::League of Nations",
+        "5ac2758b55429963665199c3::Nicolae Titulescu"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ac2758b55429963665199c3::Frank Jackson (Alabama)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ac2758b55429963665199c3::League of Nations::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ac2758b55429963665199c3::Nicolae Titulescu::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ac2758b55429963665199c3::Gheorghe Tătărescu::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ac2758b55429963665199c3::Gheorghe Tătărescu::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Gheorghe I. Tătărescu (also known as \"Guță Tătărescu\", with a slightly antiquated pet form of his given name; 2 November 1886 – 28 March 1957) was a Romanian politician who served 36th Prime Minister of Romania (1934–1937; 1939–1940), three times as Minister of Foreign Affairs (\"interim\" in 1934 and 1938; appointed to the office in 1945-1947), and once as Minister of War (1934).\n[2] Nicolae Titulescu (] ; March 4, 1882 – March 17, 1941) was a well-known Romanian diplomat, at various times government minister, finance and foreign minister, and for two terms President of the General Assembly of the League of Nations (1930–32).\n[3] The League of Nations (abbreviated as LN in English, \"La Société des Nations \" ] abbreviated as SDN or SdN in French) was an intergovernmental organisation founded on 10 January 1920 as a result of the Paris Peace Conference that ended the First World War.\n[4] In addition, he served two terms on the Opp City Council from 1952 to 1960; he was a charter member of the Opp Lions Club in 1946, served as president of that organization from 1945 to 1950, and was still an active member at the time of his death; he was a member of the Opp City Board of Education from 1951 to 1952; he served two years as president of the Opp Chamber of Commerce from 1950 to 1951"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

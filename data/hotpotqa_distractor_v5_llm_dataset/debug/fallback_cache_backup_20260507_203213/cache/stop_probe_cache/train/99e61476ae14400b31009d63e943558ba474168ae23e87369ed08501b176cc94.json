@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Serbia",
+  "pred_answer": "Serbia",
+  "normalized_gold": "serbia",
+  "normalized_pred": "serbia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abee19d5542994516f45464",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abee19d5542994516f45464::Monument to the Unknown Hero::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abee19d5542994516f45464::The Monument to the Unknown Soldier::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abee19d5542994516f45464::Monument to the Unknown Hero::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abee19d5542994516f45464::Tomb of the Unknown Soldier::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abee19d5542994516f45464::Firdos Square::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abee19d5542994516f45464::Monument to the Unknown Hero",
+        "5abee19d5542994516f45464::Tomb of the Unknown Soldier"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abee19d5542994516f45464::Monument to the Unknown Hero::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abee19d5542994516f45464::The Monument to the Unknown Soldier::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abee19d5542994516f45464::Monument to the Unknown Hero::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abee19d5542994516f45464::Tomb of the Unknown Soldier::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abee19d5542994516f45464::Firdos Square::6",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abee19d5542994516f45464::Firdos Square::6",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] In 2009, the architect of the Monument to the Unknown Soldier Rifat Chadirji expressed interest in rebuilding the monument on its original site.\n[2] The Tomb of the Unknown Soldier refers to a monument (cenotaph) in dedication to the services of an unknown soldier and to the common memories of all soldiers killed in any war.\n[3] The Monument to the Unknown Hero (Serbian: Споменик Незнаном јунаку / Spomenik Neznanom junaku) is a World War I memorial located atop Mount Avala, south-east of Belgrade, Serbia, and designed by the sculptor Ivan Meštrović.\n[4] The Monument to the Unknown Soldier (Arabic,نصب الجندي المجهول) is a monument in central Baghdad designed by Italian architect Marcello D'Olivo and built between 1979 and 1982."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

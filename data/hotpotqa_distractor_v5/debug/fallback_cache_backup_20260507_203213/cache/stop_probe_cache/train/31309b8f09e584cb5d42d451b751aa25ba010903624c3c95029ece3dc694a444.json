@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "St Albans",
+  "pred_answer": "St Albans",
+  "normalized_gold": "st albans",
+  "normalized_pred": "st albans",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abace3455429901930fa8c0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abace3455429901930fa8c0::Purcell School::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abace3455429901930fa8c0::Ricardo Zohn-Muldoon::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abace3455429901930fa8c0::Rosemary Rapaport::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abace3455429901930fa8c0::Peter Edwards (chemist)::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abace3455429901930fa8c0::Purcell School",
+        "5abace3455429901930fa8c0::Rosemary Rapaport"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abace3455429901930fa8c0::Purcell School::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abace3455429901930fa8c0::Ricardo Zohn-Muldoon::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abace3455429901930fa8c0::Rosemary Rapaport::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abace3455429901930fa8c0::Peter Edwards (chemist)::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abace3455429901930fa8c0::Peter Edwards (chemist)::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] He was elected a Fellow of the Royal Society in 1996 and was awarded the 2003 Hughes Medal of the Royal Society \"for his distinguished work as a solid state chemist.\n[2] Rosemary Rapaport (29 March 1918 in St Albans – 8 June 2011 in Olney) was a violinist and music teacher who founded the Purcell School for musically gifted children.\n[3] His \"Comala\" (2010, Bridge Records 9325) was a finalist for the 2011 Pulitzer Prize for Music and he was awarded a Guggenheim Fellowship in 1995, a Mozart Medal in 1994, and a Lillian Fairchild Award in 2011.\n[4] The school was awarded the UNESCO Mozart Medal in 2003, which was received on behalf of the school by Prince Charles, who is a patron of the school."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

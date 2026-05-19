@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Marc Preston Webb",
+  "pred_answer": "Marc Preston Webb",
+  "normalized_gold": "marc preston webb",
+  "normalized_pred": "marc preston webb",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7792d95542995d831811e9",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7792d95542995d831811e9::The Amazing Spider-Man (2012 film)::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7792d95542995d831811e9::Max Charles::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7792d95542995d831811e9::Marc Webb::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7792d95542995d831811e9::Spider-Man in film::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7792d95542995d831811e9::The Amazing Spider-Man (2012 film)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7792d95542995d831811e9::Marc Webb",
+        "5a7792d95542995d831811e9::Spider-Man in film"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7792d95542995d831811e9::The Amazing Spider-Man (2012 film)::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7792d95542995d831811e9::Max Charles::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7792d95542995d831811e9::Marc Webb::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7792d95542995d831811e9::Spider-Man in film::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7792d95542995d831811e9::The Amazing Spider-Man (2012 film)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7792d95542995d831811e9::The Amazing Spider-Man (2012 film)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Amazing Spider-Man is a 2012 American superhero film based on the Marvel Comics character Spider-Man, and sharing the title of the character's longest-running comic book.\n[2] Spider-Man is the alter-ego of Peter Parker, a talented young freelance photographer and aspiring scientist, and Miles Morales, a high school student, both imbued with superhuman abilities after being bitten by radioactive/genetically-altered spiders.\n[3] Marc Preston Webb (born August 31, 1974) is an American music video, short film, and film director.\n[4] In addition to his appearance in the 2012 film \"The Three Stooges\", Charles played a young Peter Parker in \"The Amazing Spider-Man\" and had a role in the ABC comedy science fiction series \"The Neighbors\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

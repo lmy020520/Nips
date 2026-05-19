@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Battle of the Alamo",
+  "pred_answer": "Battle of the Alamo",
+  "normalized_gold": "battle of the alamo",
+  "normalized_pred": "battle of the alamo",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8c7a9d5542995e66a47613",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8c7a9d5542995e66a47613::Battle of the Alamo::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8c7a9d5542995e66a47613::Damacio Jiménez::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8c7a9d5542995e66a47613::Juana Navarro Alsbury::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8c7a9d5542995e66a47613::Battle of the Alamo",
+        "5a8c7a9d5542995e66a47613::Damacio Jiménez"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8c7a9d5542995e66a47613::Battle of the Alamo::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8c7a9d5542995e66a47613::Damacio Jiménez::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8c7a9d5542995e66a47613::Juana Navarro Alsbury::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8c7a9d5542995e66a47613::Juana Navarro Alsbury::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Juana Gertrudis Navarro Alsbury (1812 – July 23, 1888) was one of the few Texian survivors of the Battle of the Alamo during the Texas Revolution in 1836.\n[2] Damacio Jiménez was Tejano soldier who served under Juan Seguín during the Battle of the Alamo, but was not recognized as such until 150 years afterwards.\n[3] The Battle of the Alamo (February 23 – March 6, 1836) was a pivotal event in the Texas Revolution."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

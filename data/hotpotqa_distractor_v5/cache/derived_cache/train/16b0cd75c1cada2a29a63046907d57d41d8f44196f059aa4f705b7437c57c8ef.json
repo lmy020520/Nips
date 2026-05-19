@@ -1,0 +1,30 @@
+{
+  "should_derive": true,
+  "reason": "The question asks for a song written by Chloe Angelides for a specific person. The raw evidence shows Chloe Angelides worked on 'Talk Dirty' album with Jason Derulo, but the target person is described as an American singer, songwriter, music video director, and photographer raised in Baldwin, New York. Anthony Mandler is a music video director and photographer, but not a singer/songwriter. Alejandro Santiago Ciena is a music video director but not from Baldwin, NY. Need to bridge to identify the target person and verify the song.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Anthony Mandler is an American music video director and photographer, but not a singer or songwriter.",
+      "source_unit_ids": [
+        "5a7a33ee5542996a35c17131::Anthony Mandler::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "bridge_note",
+      "text": "Chloe Angelides co-wrote songs on Jason Derulo's album 'Talk Dirty'.",
+      "source_unit_ids": [
+        "5a7a33ee5542996a35c17131::Talk Dirty (album)::4"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "verification_note",
+      "text": "The target person is likely not Anthony Mandler because he is not a singer or songwriter.",
+      "source_unit_ids": [
+        "5a7a33ee5542996a35c17131::Anthony Mandler::0"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

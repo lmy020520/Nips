@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "William the Bastard",
+  "pred_answer": "William the Bastard",
+  "normalized_gold": "william the bastard",
+  "normalized_pred": "william the bastard",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae07db455429924de1b70d8",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae07db455429924de1b70d8::Stone Castle::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae07db455429924de1b70d8::Kabi Lungchok::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae07db455429924de1b70d8::William the Conqueror::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae07db455429924de1b70d8::Deal Castle::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae07db455429924de1b70d8::Stone Castle",
+        "5ae07db455429924de1b70d8::William the Conqueror"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae07db455429924de1b70d8::Stone Castle::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae07db455429924de1b70d8::Kabi Lungchok::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae07db455429924de1b70d8::William the Conqueror::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae07db455429924de1b70d8::Deal Castle::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae07db455429924de1b70d8::Deal Castle::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Comprising a keep with six inner and outer bastions, the moated stone castle covered 0.85 acre and had sixty-six firing positions for artillery.\n[2] William I (c. 1028 – 9 September 1087), usually known as William the Conqueror and sometimes William the Bastard, was the first Norman King of England, reigning from 1066 until his death in 1087.\n[3] The historicity of the site is attributed to the fact that the Lepchas, the ethnic tribals of Sikkim and Bhutias (ethnic Bhot), the immigrants from southern Bhot who settled down in Sikkim from the 14th century onwards, ceremonially signed a \"Treaty of Blood Brotherhood\" with religious fervour.\n[4] It was built between 1135 and 1140 on the site where William the Conqueror signed a treaty with the men of Kent in 1067."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

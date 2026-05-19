@@ -1,0 +1,109 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Tee Martin",
+  "pred_answer": "Tee Martin",
+  "normalized_gold": "tee martin",
+  "normalized_pred": "tee martin",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a77821755429967ab1051e5",
+    "t": 5,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a77821755429967ab1051e5::2011 USC Trojans football team::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a77821755429967ab1051e5::Tim Holt (American football)::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a77821755429967ab1051e5::Lost Lettermen::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a77821755429967ab1051e5::Allan Graf::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a77821755429967ab1051e5::derived::0"
+      },
+      {
+        "step_id": 5,
+        "unit_id": "5a77821755429967ab1051e5::Tee Martin::1"
+      },
+      {
+        "step_id": 6,
+        "unit_id": "5a77821755429967ab1051e5::Major Applewhite::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a77821755429967ab1051e5::Lost Lettermen",
+        "5a77821755429967ab1051e5::Tee Martin"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a77821755429967ab1051e5::2011 USC Trojans football team::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a77821755429967ab1051e5::Tim Holt (American football)::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a77821755429967ab1051e5::Lost Lettermen::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a77821755429967ab1051e5::Allan Graf::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a77821755429967ab1051e5::Tee Martin::1",
+          "added_step": 5
+        },
+        {
+          "unit_id": "5a77821755429967ab1051e5::Major Applewhite::1",
+          "added_step": 6
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a77821755429967ab1051e5::derived::0",
+          "added_step": 4
+        }
+      ],
+      "last_added_unit_id": "5a77821755429967ab1051e5::Major Applewhite::1",
+      "last_updated_step": 6
+    },
+    "K_t": "Evidence:\n[1] USC concluded their season with two thousand-yard receivers (Robert Woods and Marqise Lee), a thousand-yard rusher (Curtis McNeal), and a 3,000-yard passer (Matt Barkley) for the first time since the 2005 season, when Kiffin served as offensive coordinator.\n[2] He is the current head coach for the University of Houston, where he previously served as the offensive coordinator and quarterbacks coach.\n[3] He is the current offensive coordinator for the University of Southern California Trojans.\n[4] A high school All-American football player at San Fernando in Los Angeles, California, Graf played offensive guard for the undefeated national champion University of Southern California Trojans in 1972.\n\nNotes:\n[bridge] Tee Martin is the current offensive coordinator for the University of Southern California Trojans."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

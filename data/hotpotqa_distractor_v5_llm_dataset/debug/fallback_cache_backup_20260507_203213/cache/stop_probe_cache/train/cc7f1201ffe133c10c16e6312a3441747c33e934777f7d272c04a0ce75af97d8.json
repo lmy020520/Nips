@@ -1,0 +1,77 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mount Bigelow",
+  "pred_answer": "Mount Bigelow",
+  "normalized_gold": "mount bigelow",
+  "normalized_pred": "mount bigelow",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae7f9875542993210983fea",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae7f9875542993210983fea::Mount Bigelow (Maine)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae7f9875542993210983fea::Bigelow Preserve::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae7f9875542993210983fea::derived::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae7f9875542993210983fea::Mount Bigelow (Maine)",
+        "5ae7f9875542993210983fea::Bigelow Preserve"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae7f9875542993210983fea::Mount Bigelow (Maine)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae7f9875542993210983fea::Bigelow Preserve::0",
+          "added_step": 1
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5ae7f9875542993210983fea::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5ae7f9875542993210983fea::derived::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Mount Bigelow (also called the Bigelow Range and Bigelow Mountain) is a long mountain ridge with several summits.\n[2] Bigelow Mountain Preserve is a 36000 acre state-owned nature preserve in the western part of the U.S. state of Maine.\n[3] It is located in Franklin County and Somerset County, Maine.\n\nNotes:\n[verification] Mount Bigelow (also called the Bigelow Range and Bigelow Mountain) is a long mountain ridge with several summits."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

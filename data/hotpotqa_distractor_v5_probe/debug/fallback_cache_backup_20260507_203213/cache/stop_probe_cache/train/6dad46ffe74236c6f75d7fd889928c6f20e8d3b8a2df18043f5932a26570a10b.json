@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Baalbeck International Festival",
+  "pred_answer": "Baalbeck International Festival",
+  "normalized_gold": "baalbeck international festival",
+  "normalized_pred": "baalbeck international festival",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7f93b055429969796c1ac0",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7f93b055429969796c1ac0::Tell El Hadeth::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7f93b055429969796c1ac0::Beisu, Hebei::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7f93b055429969796c1ac0::Baalbek::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7f93b055429969796c1ac0::Pithom::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7f93b055429969796c1ac0::Tell El Hadeth",
+        "5a7f93b055429969796c1ac0::Baalbek"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7f93b055429969796c1ac0::Tell El Hadeth::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7f93b055429969796c1ac0::Beisu, Hebei::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7f93b055429969796c1ac0::Baalbek::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7f93b055429969796c1ac0::Pithom::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7f93b055429969796c1ac0::Pithom::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Others say that the site is identified with \"Tell El Retabeh\", while the 10th century Jewish scholar, Saadia Gaon, identified the place in his Judeo-Arabic translation of the Pentateuch as Faiyum, 100 km southwest of Cairo.\n[2] It is home to the annual Baalbeck International Festival.\n[3] Beisu () is a town of Wuji County, Hebei province, China, located 14 km west of the county seat and about double that northeast of downtown Shijiazhuang.\n[4] Tell El Hadeth is an archaeological site 14 km west southwest of Baalbek in the Beqaa Mohafazat (Governorate)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Arrival of a Train at La Ciotat",
+  "pred_answer": "Arrival of a Train at La Ciotat",
+  "normalized_gold": "arrival of a train at la ciotat",
+  "normalized_pred": "arrival of a train at la ciotat",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9bef3554299753720f844",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9bef3554299753720f844::La Pêche aux poissons rouges::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9bef3554299753720f844::La Voltige::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9bef3554299753720f844::Cinema of Turkey::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab9bef3554299753720f844::L'Arrivée d'un train en gare de La Ciotat::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab9bef3554299753720f844::Workers Leaving the Lumière Factory::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9bef3554299753720f844::Cinema of Turkey",
+        "5ab9bef3554299753720f844::L'Arrivée d'un train en gare de La Ciotat"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9bef3554299753720f844::La Pêche aux poissons rouges::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9bef3554299753720f844::La Voltige::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9bef3554299753720f844::Cinema of Turkey::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab9bef3554299753720f844::L'Arrivée d'un train en gare de La Ciotat::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab9bef3554299753720f844::Workers Leaving the Lumière Factory::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9bef3554299753720f844::Workers Leaving the Lumière Factory::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Workers Leaving The Lumière Factory in Lyon (French: \"La Sortie de l'Usine Lumière à Lyon\" ), also known as Employees Leaving the Lumière Factory and Exiting the Factory, is an 1895 French short black-and-white silent documentary film directed and produced by Louis Lumière.\n[2] L'arrivée d'un train en gare de La Ciotat (translated from French into English as The Arrival of a Train at La Ciotat Station, Arrival of a Train at La Ciotat (US) and The Arrival of the Mail Train, and in the United Kingdom the film is known as Train Pulling into a Station) is an 1895 French short black-and-white silent documentary film directed and produced by Auguste and Louis Lumière.\n[3] The first movie exhibited in the Ottoman Empire was the Lumiere Brothers' 1895 film, \"L'Arrivée d'un train en gare de La Ciotat\", which was shown in Istanbul in 1896.\n[4] La Voltige (also known as Horse Trick Riders) is an 1895 French short black-and-white silent documentary film directed and produced by Louis Lumière."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

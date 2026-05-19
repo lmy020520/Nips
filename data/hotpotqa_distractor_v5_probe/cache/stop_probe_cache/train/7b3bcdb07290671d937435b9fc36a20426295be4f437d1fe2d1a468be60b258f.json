@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Steve Jobs",
+  "pred_answer": "Steve Jobs",
+  "normalized_gold": "steve jobs",
+  "normalized_pred": "steve jobs",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8cb4765542996e8ac88b2f",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8cb4765542996e8ac88b2f::Chrisann Brennan::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8cb4765542996e8ac88b2f::The Bite in the Apple::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8cb4765542996e8ac88b2f::Lisa Brennan-Jobs::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8cb4765542996e8ac88b2f::Tadeusz Fuss-Kaden::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8cb4765542996e8ac88b2f::Chrisann Brennan",
+        "5a8cb4765542996e8ac88b2f::Lisa Brennan-Jobs"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8cb4765542996e8ac88b2f::Chrisann Brennan::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8cb4765542996e8ac88b2f::The Bite in the Apple::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8cb4765542996e8ac88b2f::Lisa Brennan-Jobs::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8cb4765542996e8ac88b2f::Tadeusz Fuss-Kaden::2",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8cb4765542996e8ac88b2f::Tadeusz Fuss-Kaden::2",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] After an acknowledgement of paternity by justice, his name was Kaden - that of his father.\n[2] Lisa Nicole Brennan-Jobs (born Lisa Nicole Brennan; May 17, 1978) is an American writer.\n[3] Brennan is an American painter, Steve Jobs' high school girlfriend, an early employee of Apple Inc. before it went public, and the mother of Jobs' first child Lisa Brennan-Jobs.\n[4] Chrisann Brennan (born September 29, 1954) is an American painter and writer who wrote the autobiography \"The Bite in the Apple\" about her relationship with Apple co-founder Steve Jobs."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

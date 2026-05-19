@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Greg Weisman and Victor Cook",
+  "pred_answer": "Greg Weisman and Victor Cook",
+  "normalized_gold": "greg weisman and victor cook",
+  "normalized_pred": "greg weisman and victor cook",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5add30985542992c1e3a2561",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5add30985542992c1e3a2561::List of The Spectacular Spider-Man episodes::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5add30985542992c1e3a2561::The Spectacular Spider-Man (TV series)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5add30985542992c1e3a2561::Steve Ditko::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5add30985542992c1e3a2561::Eye of Agamotto::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5add30985542992c1e3a2561::The Spectacular Spider-Man (TV series)",
+        "5add30985542992c1e3a2561::Steve Ditko"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5add30985542992c1e3a2561::List of The Spectacular Spider-Man episodes::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5add30985542992c1e3a2561::The Spectacular Spider-Man (TV series)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5add30985542992c1e3a2561::Steve Ditko::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5add30985542992c1e3a2561::Eye of Agamotto::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5add30985542992c1e3a2561::Eye of Agamotto::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Created by writer Stan Lee and artist Steve Ditko, it first appeared in \"The Origin of Dr. Strange\", an eight-page story in \"Strange Tales\" #115 (December 1963).\n[2] Stephen J. Ditko ( ; born November 2, 1927) is an American comics artist and writer best known as the artist and co-creator, with Stan Lee, of the Marvel Comics superheroes Spider-Man and Doctor Strange.\n[3] The Spectacular Spider-Man is an American animated television series based on the superhero character published by Marvel Comics and developed for television by Greg Weisman and Victor Cook.\n[4] \"The Spectacular Spider-Man\" is an American animated television series based on the Marvel Comics character, Spider-Man, and developed for television by Greg Weisman and Victor Cook."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Joe Manganiello",
+  "pred_answer": "Joe Manganiello",
+  "normalized_gold": "joe manganiello",
+  "normalized_pred": "joe manganiello",
+  "exact_match": true,
+  "context_exact_match": false,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abee9f05542997719eab5f6",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abee9f05542997719eab5f6::Bondar::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abee9f05542997719eab5f6::Steve Holland (actor)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abee9f05542997719eab5f6::Joe Manganiello::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abee9f05542997719eab5f6::Tumbledown (2015 film)::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5abee9f05542997719eab5f6::Venom (comic book)::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abee9f05542997719eab5f6::Joe Manganiello",
+        "5abee9f05542997719eab5f6::Tumbledown (2015 film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abee9f05542997719eab5f6::Bondar::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abee9f05542997719eab5f6::Steve Holland (actor)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abee9f05542997719eab5f6::Joe Manganiello::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abee9f05542997719eab5f6::Tumbledown (2015 film)::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5abee9f05542997719eab5f6::Venom (comic book)::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abee9f05542997719eab5f6::Venom (comic book)::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Venom is the title of several American comic book series published by Marvel Comics focusing on the various heroic and villainous incarnations of the character Venom, which have usually consisting of a human host and amorphous alien being called a symbiote.\n[2] Tumbledown is a 2015 American romantic comedy film directed by Sean Mewshaw and written by Desiree Van Til.\n[3] He played Flash Thompson in Sam Raimi's \"Spider-Man\" trilogy and had various recurring roles in television on \"ER\", \"How I Met Your Mother\", and \"One Tree Hill\", before landing his breakout role as werewolf Alcide Herveaux on the HBO television series \"True Blood\".\n[4] Holland played Flash Gordon in the 1954 television series of the same name."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

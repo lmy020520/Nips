@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Insha'Allah",
+  "pred_answer": "Insha'Allah",
+  "normalized_gold": "inshaallah",
+  "normalized_pred": "inshaallah",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a83c9335542996488c2e4cc",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a83c9335542996488c2e4cc::Jonathan James::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a83c9335542996488c2e4cc::Insha'Allah (2009 film)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a83c9335542996488c2e4cc::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a83c9335542996488c2e4cc::Chicago Woman's Club::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a83c9335542996488c2e4cc::derived::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a83c9335542996488c2e4cc::Jonathan James",
+        "5a83c9335542996488c2e4cc::Insha'Allah (2009 film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a83c9335542996488c2e4cc::Jonathan James::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a83c9335542996488c2e4cc::Insha'Allah (2009 film)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a83c9335542996488c2e4cc::Chicago Woman's Club::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a83c9335542996488c2e4cc::derived::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a83c9335542996488c2e4cc::derived::3",
+          "added_step": 4
+        }
+      ],
+      "last_added_unit_id": "5a83c9335542996488c2e4cc::derived::3",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The Film was written by Jonathan James and produced by Catherine Marcus.\n[2] The United States incarcerates more of its youth than any other country in the world through the juvenile courts and the adult criminal justice system, which reflects the larger trends in incarceration practices in the United States.\n[3] The club was notable for creating educational opportunities in the Chicago region and helped create the first juvenile court in the United States.\n[4] Jonathan Joseph James (December 12, 1983 – May 18, 2007) was an American hacker who was the first juvenile incarcerated for cybercrime in the United States.\n\nNotes:\n[verification] The film written by Jonathan James is titled Insha'Allah.\n[bridge] Jonathan Joseph James was an American hacker and is considered the first juvenile incarcerated for cybercrime in the United States."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

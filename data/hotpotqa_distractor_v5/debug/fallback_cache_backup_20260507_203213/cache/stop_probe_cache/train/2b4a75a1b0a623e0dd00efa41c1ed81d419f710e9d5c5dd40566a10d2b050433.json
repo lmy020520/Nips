@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Coos County",
+  "pred_answer": "Coos County",
+  "normalized_gold": "coos county",
+  "normalized_pred": "coos county",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b39d655429971feec4676",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b39d655429971feec4676::Pinkham Notch::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b39d655429971feec4676::Shelburne Moriah Mountain::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b39d655429971feec4676::Mount Moriah (New Hampshire)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8b39d655429971feec4676::Wildcat Mountain (New Hampshire)::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8b39d655429971feec4676::Middle Moriah Mountain::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b39d655429971feec4676::Pinkham Notch",
+        "5a8b39d655429971feec4676::Wildcat Mountain (New Hampshire)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b39d655429971feec4676::Pinkham Notch::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b39d655429971feec4676::Shelburne Moriah Mountain::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b39d655429971feec4676::Mount Moriah (New Hampshire)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8b39d655429971feec4676::Wildcat Mountain (New Hampshire)::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8b39d655429971feec4676::Middle Moriah Mountain::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b39d655429971feec4676::Middle Moriah Mountain::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The mountain is part of the Carter-Moriah Range of the White Mountains, which runs along the northern east side of Pinkham Notch.\n[2] The mountain is part of the Carter-Moriah Range of the White Mountains, on the east side of Pinkham Notch.\n[3] Mount Moriah is a mountain located in Coos County, New Hampshire.\n[4] The mountain is part of the Carter-Moriah Range of the White Mountains, which runs along the northern east side of Pinkham Notch."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "The University of Basel",
+  "pred_answer": "The University of Basel",
+  "normalized_gold": "the university of basel",
+  "normalized_pred": "the university of basel",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a728bff5542994cef4bc32c",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a728bff5542994cef4bc32c::Jean Pieters::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a728bff5542994cef4bc32c::University of Basel::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a728bff5542994cef4bc32c::University of Cape Town::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a728bff5542994cef4bc32c::Jean Pieters",
+        "5a728bff5542994cef4bc32c::University of Basel"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a728bff5542994cef4bc32c::Jean Pieters::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a728bff5542994cef4bc32c::University of Basel::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a728bff5542994cef4bc32c::University of Cape Town::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a728bff5542994cef4bc32c::University of Cape Town::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] UCT was founded in 1829 as the South African College making it the oldest higher education institute in South Africa, it is jointly the oldest university in South Africa and the oldest extant university in Sub-Saharan Africa alongside Stellenbosch University which received full university status on the same day in 1918.\n[2] Founded on 4 April 1460, it is Switzerland’s oldest university and is counted among the leading institutions of the country.\n[3] Jean Pieters is a Dutch biochemist and Professor at the Biozentrum of the University of Basel, Switzerland."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

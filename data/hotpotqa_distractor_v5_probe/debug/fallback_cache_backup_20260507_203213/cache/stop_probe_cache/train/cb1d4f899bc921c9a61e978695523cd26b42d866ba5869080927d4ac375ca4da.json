@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Samuel Beckett",
+  "pred_answer": "Samuel Beckett",
+  "normalized_gold": "samuel beckett",
+  "normalized_pred": "samuel beckett",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae807975542994a481bbe91",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae807975542994a481bbe91::Rose Hill (actress)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae807975542994a481bbe91::Footfalls::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae807975542994a481bbe91::World Theatre Season::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae807975542994a481bbe91::Rose Hill (actress)",
+        "5ae807975542994a481bbe91::Footfalls"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae807975542994a481bbe91::Rose Hill (actress)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae807975542994a481bbe91::Footfalls::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae807975542994a481bbe91::World Theatre Season::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae807975542994a481bbe91::World Theatre Season::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It originated as a one-off celebration in 1964 organised by Peter Daubeny and the Royal Shakespeare Company as part of the celebrations for William Shakespeare's quatercentenary.\n[2] It was written in English, between 2 March and December 1975 and was first performed at the Royal Court Theatre as part of the Samuel Beckett Festival, on May 20, 1976 directed by Beckett himself.\n[3] She was a former member of the Royal Shakespeare Company."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

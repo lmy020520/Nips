@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "William A. Fowler",
+  "pred_answer": "William A. Fowler",
+  "normalized_gold": "william a fowler",
+  "normalized_pred": "william a fowler",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a874ec2554299211dda2bd4",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a874ec2554299211dda2bd4::Subrahmanyan Chandrasekhar::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a874ec2554299211dda2bd4::Chandrasekhar virial equations::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a874ec2554299211dda2bd4::List of Nobel laureates in Chemistry::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a874ec2554299211dda2bd4::Subrahmanyan Chandrasekhar",
+        "5a874ec2554299211dda2bd4::Chandrasekhar virial equations"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a874ec2554299211dda2bd4::Subrahmanyan Chandrasekhar::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a874ec2554299211dda2bd4::Chandrasekhar virial equations::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a874ec2554299211dda2bd4::List of Nobel laureates in Chemistry::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a874ec2554299211dda2bd4::List of Nobel laureates in Chemistry::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] These prizes are awarded for outstanding contributions in chemistry, physics, literature, peace, and physiology or medicine.\n[2] In astrophysics, the Chandrasekhar virial equations are a hierarchy of moment equations of the Euler equations, developed by the Indian American astrophysicist Subrahmanyan Chandrasekhar, the Physicist Enrico Fermi and Norman R. Lebovitz.\n[3] Subrahmanyan Chandrasekhar, FRS (Tamil: சுப்பிரமணியன் சந்திரசேகர் ; ; 19 October 1910 – 21 August 1995), was an Indian American astrophysicist who was awarded the 1983 Nobel Prize for Physics with William A. Fowler \"for his theoretical studies of the physical processes of importance to the structure and evolution of the stars\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

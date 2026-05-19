@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "City of London",
+  "pred_answer": "City of London",
+  "normalized_gold": "city of london",
+  "normalized_pred": "city of london",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8a2aab5542996c9b8d5e29",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8a2aab5542996c9b8d5e29::Oranges and Lemons::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8a2aab5542996c9b8d5e29::Oranges &amp; Lemons (album)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8a2aab5542996c9b8d5e29::Saint Clement's (cocktail)::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8a2aab5542996c9b8d5e29::Oranges and Lemons",
+        "5a8a2aab5542996c9b8d5e29::Oranges &amp; Lemons (album)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8a2aab5542996c9b8d5e29::Oranges and Lemons::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8a2aab5542996c9b8d5e29::Oranges &amp; Lemons (album)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8a2aab5542996c9b8d5e29::Saint Clement's (cocktail)::1",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8a2aab5542996c9b8d5e29::Saint Clement's (cocktail)::1",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Though the ingredients may vary, it always consists of orange juice mixed with a lemon-flavored drink, usually in equal proportions; the name of the drink refers to the English nursery rhyme Oranges and Lemons.\n[2] Oranges & Lemons is the eleventh studio album by English band XTC, released in 1989.\n[3] \"Oranges and Lemons\" is a traditional English nursery rhyme and singing game which refers to the bells of several churches, all within or close to the City of London."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

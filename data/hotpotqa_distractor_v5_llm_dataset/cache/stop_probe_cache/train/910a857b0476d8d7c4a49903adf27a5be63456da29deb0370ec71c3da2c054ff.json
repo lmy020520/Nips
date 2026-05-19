@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Peter Crouch",
+  "pred_answer": "Peter Crouch",
+  "normalized_gold": "peter crouch",
+  "normalized_pred": "peter crouch",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8b76825542997f31a41d3a",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8b76825542997f31a41d3a::Sean Clancy::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8b76825542997f31a41d3a::Djamel Zidane::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8b76825542997f31a41d3a::Sean Clancy::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8b76825542997f31a41d3a::Peter Crouch::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8b76825542997f31a41d3a::Giuseppe Meazza::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8b76825542997f31a41d3a::Sean Clancy",
+        "5a8b76825542997f31a41d3a::Peter Crouch"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8b76825542997f31a41d3a::Sean Clancy::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8b76825542997f31a41d3a::Djamel Zidane::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8b76825542997f31a41d3a::Sean Clancy::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8b76825542997f31a41d3a::Peter Crouch::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8b76825542997f31a41d3a::Giuseppe Meazza::2",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8b76825542997f31a41d3a::Giuseppe Meazza::2",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] At international level, he led Italy to win two consecutive World Cups: in 1934 on home soil, and in 1938 as captain; he was named to the All-star Team and won the Golden Ball Award at the 1934 World Cup, as the tournament's best player.\n[2] He was capped 42 times by the England national team between 2005 and 2010, scoring 22 goals for his country in that time, and appearing at two World Cups.\n[3] He is the brother of model Abbey Clancy, who is married to fellow footballer Peter Crouch.\n[4] He played in two World Cups."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

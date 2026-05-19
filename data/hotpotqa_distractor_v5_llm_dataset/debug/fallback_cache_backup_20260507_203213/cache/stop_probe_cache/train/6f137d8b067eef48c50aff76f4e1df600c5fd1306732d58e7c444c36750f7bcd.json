@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "United States",
+  "pred_answer": "United States",
+  "normalized_gold": "united states",
+  "normalized_pred": "united states",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8740ff5542994846c1cd36",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8740ff5542994846c1cd36::Newport News/Williamsburg International Airport::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8740ff5542994846c1cd36::Virginia State Route 165::5"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8740ff5542994846c1cd36::Memphis International Airport::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8740ff5542994846c1cd36::Norfolk International Airport::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a8740ff5542994846c1cd36::Indianapolis International Airport::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8740ff5542994846c1cd36::Memphis International Airport",
+        "5a8740ff5542994846c1cd36::Norfolk International Airport"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8740ff5542994846c1cd36::Newport News/Williamsburg International Airport::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8740ff5542994846c1cd36::Virginia State Route 165::5",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8740ff5542994846c1cd36::Memphis International Airport::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8740ff5542994846c1cd36::Norfolk International Airport::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a8740ff5542994846c1cd36::Indianapolis International Airport::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8740ff5542994846c1cd36::Indianapolis International Airport::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Indianapolis International Airport (IATA: IND, ICAO: KIND, FAA LID: IND) is a public airport seven miles (11 km) southwest of downtown Indianapolis, in Marion County, Indiana, United States.\n[2] Norfolk International Airport (IATA: ORF, ICAO: KORF, FAA LID: ORF) is a public use airport located three nautical miles (6 km) northeast of the central business district of Norfolk, an independent city in the U.S. state of Virginia.\n[3] Memphis International Airport (IATA: MEM, ICAO: KMEM, FAA LID: MEM) is a civil-military airport seven miles (11.2 km) southeast of downtown Memphis in Shelby County, Tennessee, United States.\n[4] Within Norfolk, the state highway parallels Interstate 64 (I-64) while passing through the eastern and northern areas of the city near Norfolk International Airport and Naval Station Norfolk."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

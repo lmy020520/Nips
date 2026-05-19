@@ -1,0 +1,32 @@
+{
+  "should_derive": true,
+  "reason": "The recent probe feedback indicates an answer conflict with 'writer' being incorrect, and the gold answer hint suggests 'novelist'. The current evidence focuses on Alan Dean Foster's profession as a writer, but lacks explicit connection to John Lanchester or clarification on the specific shared profession. Deriving bridge and verification notes can help organize evidence to bridge from Alan Dean Foster's known profession to the correct answer candidate and verify details.",
+  "derived_candidates": [
+    {
+      "type": "bridge_note",
+      "text": "Alan Dean Foster is described as an American writer of fantasy and science fiction, indicating his profession.",
+      "source_unit_ids": [
+        "5a8b42be55429949d91db515::Alan Dean Foster::0"
+      ],
+      "coarse_priority": 1
+    },
+    {
+      "type": "verification_note",
+      "text": "The evidence specifies that Alan Dean Foster is a writer of novels, such as 'The Deluge Drivers'.",
+      "source_unit_ids": [
+        "5a8b42be55429949d91db515::The Deluge Drivers::0",
+        "5a8b42be55429949d91db515::Alan Dean Foster::0"
+      ],
+      "coarse_priority": 2
+    },
+    {
+      "type": "bridge_note",
+      "text": "Alan Dean Foster's works include series like the Pip and Flinx novels, supporting his role as a novelist.",
+      "source_unit_ids": [
+        "5a8b42be55429949d91db515::Bloodhype::1",
+        "5a8b42be55429949d91db515::Alan Dean Foster::0"
+      ],
+      "coarse_priority": 3
+    }
+  ]
+}

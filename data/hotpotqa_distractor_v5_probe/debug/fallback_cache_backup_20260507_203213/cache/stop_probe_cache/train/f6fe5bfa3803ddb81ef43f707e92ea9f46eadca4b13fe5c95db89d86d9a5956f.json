@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "February 6, 1897March",
+  "pred_answer": "February 6, 1897March",
+  "normalized_gold": "february 6 1897march",
+  "normalized_pred": "february 6 1897march",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a734a2c5542991f9a20c6e7",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a734a2c5542991f9a20c6e7::Murder, Inc.::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a734a2c5542991f9a20c6e7::Stephen Grammauta::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a734a2c5542991f9a20c6e7::Louis Buchalter::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a734a2c5542991f9a20c6e7::B.M.F. (Blowin' Money Fast)::3"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a734a2c5542991f9a20c6e7::Murder, Inc.",
+        "5a734a2c5542991f9a20c6e7::Louis Buchalter"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a734a2c5542991f9a20c6e7::Murder, Inc.::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a734a2c5542991f9a20c6e7::Stephen Grammauta::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a734a2c5542991f9a20c6e7::Louis Buchalter::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a734a2c5542991f9a20c6e7::B.M.F. (Blowin' Money Fast)::3",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a734a2c5542991f9a20c6e7::B.M.F. (Blowin' Money Fast)::3",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The song was originally released as an unmastered version on Ross' promotional mixtape, the Albert Anastasia EP.\n[2] Louis \"Lepke\" Buchalter (Pronounced \"Lep-key\") (February 6, 1897March 4, 1944) was a Jewish-American mobster and head of the Mafia hit squad Murder, Inc. during the 1930s.\n[3] Stephen \"Stevie Coogan\" Grammauta (born December 6, 1916) is a caporegime with the Gambino crime family who allegedly participated in the murder of mob boss Albert \"Mad Hatter\" Anastasia.\n[4] Originally headed by Louis \"Lepke\" Buchalter, and later by Albert \"The Mad Hatter\" Anastasia, Murder, Inc. was believed to be responsible for between 400 and 1,000 contract killings, until the group was exposed in the early 1940s by former group member Abe \"Kid Twist\" Reles."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

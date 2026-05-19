@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "2010",
+  "pred_answer": "2010",
+  "normalized_gold": "2010",
+  "normalized_pred": "2010",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab98af955429970cfb8eb3c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab98af955429970cfb8eb3c::Fred Gehrke::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab98af955429970cfb8eb3c::Jackie Walker (American football, born 1962)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab98af955429970cfb8eb3c::Christian Yelich::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab98af955429970cfb8eb3c::Emeel Salem::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab98af955429970cfb8eb3c::Fred Gehrke",
+        "5ab98af955429970cfb8eb3c::Christian Yelich"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab98af955429970cfb8eb3c::Fred Gehrke::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab98af955429970cfb8eb3c::Jackie Walker (American football, born 1962)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab98af955429970cfb8eb3c::Christian Yelich::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab98af955429970cfb8eb3c::Emeel Salem::4",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab98af955429970cfb8eb3c::Emeel Salem::4",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Salem was drafted as a junior at The University of Alabama in the 10th round of the 2006 Major League Baseball Draft by the Baltimore Orioles, but opted to return for his senior year.\n[2] Yelich was drafted out of high school by the Marlins in the 1st round (23rd overall) of the 2010 Major League Baseball Draft.\n[3] He was the 28th player selected in the 1986 NFL Draft, the first player drafted in the second round of a year in which there were only 27 first-round picks.\n[4] He is the great-grandfather of Miami Marlin Christian Yelich"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

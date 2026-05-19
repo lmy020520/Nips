@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Kanye West",
+  "pred_answer": "Kanye West",
+  "normalized_gold": "kanye west",
+  "normalized_pred": "kanye west",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a85de255542994c784ddb9c",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a85de255542994c784ddb9c::New Slaves::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a85de255542994c784ddb9c::Rhymefest::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a85de255542994c784ddb9c::Watch the Throne::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a85de255542994c784ddb9c::New Slaves::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a85de255542994c784ddb9c::New Slaves",
+        "5a85de255542994c784ddb9c::Watch the Throne"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a85de255542994c784ddb9c::New Slaves::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a85de255542994c784ddb9c::Rhymefest::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a85de255542994c784ddb9c::Watch the Throne::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a85de255542994c784ddb9c::New Slaves::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a85de255542994c784ddb9c::New Slaves::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"New Slaves\" is a song performed by American hip hop recording artist Kanye West, taken from his sixth studio album \"Yeezus\" (2013).\n[2] Watch the Throne is a collaborative studio album by American rappers Jay-Z and Kanye West, released on August 8, 2011, by Roc-A-Fella Records, Roc Nation, and Def Jam Recordings.\n[3] His prominent songwriting credits include co–writing Kanye West's \"Jesus Walks\", which won the Grammy for Best Rap Song at the 47th Annual Grammy Awards, \"New Slaves\" taken from West's sixth studio album \"Yeezus\" (2013) and \"Glory\", which received the 2014 Golden Globe Award for Best Original Song and the 2014 Academy Award for Best Original Song.\n[4] The song features vocals from American recording artist Frank Ocean, whom West previously collaborated with on \"Watch the Throne\" (2011)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

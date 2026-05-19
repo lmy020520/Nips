@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Maurice Clarett",
+  "pred_answer": "Maurice Clarett",
+  "normalized_gold": "maurice clarett",
+  "normalized_pred": "maurice clarett",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a73297c5542992359bc3254",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a73297c5542992359bc3254::Maurice Clarett::4"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a73297c5542992359bc3254::Aurealius Thomas::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a73297c5542992359bc3254::2002 Ohio State Buckeyes football team::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a73297c5542992359bc3254::derived::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a73297c5542992359bc3254::Maurice Clarett::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a73297c5542992359bc3254::Maurice Clarett",
+        "5a73297c5542992359bc3254::2002 Ohio State Buckeyes football team"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a73297c5542992359bc3254::Maurice Clarett::4",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a73297c5542992359bc3254::Aurealius Thomas::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a73297c5542992359bc3254::2002 Ohio State Buckeyes football team::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a73297c5542992359bc3254::Maurice Clarett::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a73297c5542992359bc3254::derived::2",
+          "added_step": 3
+        }
+      ],
+      "last_added_unit_id": "5a73297c5542992359bc3254::Maurice Clarett::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] During his freshman year at Ohio State University in 2002, he helped lead the Buckeyes to a national championship.\n[2] Maurice Edward Clarett (born October 29, 1983) is a former American football running back who played for the Ohio State Buckeyes football team.\n[3] The 2002 Ohio State Buckeyes football team was the national champion of the 2002 NCAA Division I-A football season.\n[4] He attended the Ohio State University where he played college football at the guard position for the Ohio State Buckeyes football team from 1956 to 1957.\n\nNotes:\n[bridge] Maurice Clarett challenged the NFL's draft eligibility rule requiring players to be three years removed from high school."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

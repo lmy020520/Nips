@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Auschwitz concentration camp",
+  "pred_answer": "Auschwitz concentration camp",
+  "normalized_gold": "auschwitz concentration camp",
+  "normalized_pred": "auschwitz concentration camp",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a9058f75542990a984935f9",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a9058f75542990a984935f9::Erich Zoddel::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a9058f75542990a984935f9::Lobor concentration camp::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a9058f75542990a984935f9::Zofia Posmysz::3"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a9058f75542990a984935f9::Auschwitz concentration camp::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a9058f75542990a984935f9::Auschwitz concentration camp::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a9058f75542990a984935f9::Zofia Posmysz",
+        "5a9058f75542990a984935f9::Auschwitz concentration camp"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a9058f75542990a984935f9::Erich Zoddel::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a9058f75542990a984935f9::Lobor concentration camp::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a9058f75542990a984935f9::Zofia Posmysz::3",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a9058f75542990a984935f9::Auschwitz concentration camp::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a9058f75542990a984935f9::Auschwitz concentration camp::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a9058f75542990a984935f9::Auschwitz concentration camp::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] Auschwitz concentration camp (German: \"Konzentrationslager Auschwitz\" , ] , also \"KZ Auschwitz \" or \"KL Auschwitz \") was a network of German Nazi concentration camps and extermination camps built and operated by the Third Reich in Polish areas annexed by Nazi Germany during World War II.\n[2] It consisted of (the original camp), Auschwitz II–Birkenau (a combination concentration/extermination camp), (a labor camp to staff an IG Farben factory), and 45 satellite camps.\n[3] She is the author of several works including the 1959 radio play \"The Passenger in Cabin 45\", which was adapted into her 1962 novel \"Passenger\", and into a television play and film \"The Passenger\".\n[4] The Lobor concentration camp or Loborgrad camp (Croatian: \"Koncentracioni logor Lobor\" ) was a concentration camp established in Lobor, Independent State of Croatia (modern-day Croatia) in the deserted palace of Keglevich family."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

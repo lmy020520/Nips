@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Olivia Arias",
+  "pred_answer": "Olivia Arias",
+  "normalized_gold": "olivia arias",
+  "normalized_pred": "olivia arias",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a736d725542991f29ee2e0b",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a736d725542991f29ee2e0b::Beautiful Girl (George Harrison song)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a736d725542991f29ee2e0b::Soft Touch::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a736d725542991f29ee2e0b::Olivia Harrison::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a736d725542991f29ee2e0b::Songs by George Harrison::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a736d725542991f29ee2e0b::Beautiful Girl (George Harrison song)",
+        "5a736d725542991f29ee2e0b::Olivia Harrison"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a736d725542991f29ee2e0b::Beautiful Girl (George Harrison song)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a736d725542991f29ee2e0b::Soft Touch::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a736d725542991f29ee2e0b::Olivia Harrison::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a736d725542991f29ee2e0b::Songs by George Harrison::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a736d725542991f29ee2e0b::Songs by George Harrison::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Songs by George Harrison is a book of song lyrics and commentary by English musician George Harrison, with illustrations by New Zealand artist Keith West.\n[2] Olivia Trinidad Harrison (née Arias; born 18 May 1948) is a Mexican author, film producer, and the widow of musician George Harrison of the Beatles.\n[3] \"Soft Touch\" is a song by English musician George Harrison from his 1979 album \"George Harrison\".\n[4] In its finished, 1976 form, the lyrics of \"Beautiful Girl\" were inspired by Harrison's second wife, Olivia Arias."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

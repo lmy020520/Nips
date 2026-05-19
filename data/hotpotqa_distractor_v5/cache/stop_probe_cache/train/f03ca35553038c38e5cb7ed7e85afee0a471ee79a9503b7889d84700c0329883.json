@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Centre Island, New York",
+  "pred_answer": "Centre Island, New York",
+  "normalized_gold": "centre island new york",
+  "normalized_pred": "centre island new york",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abda21b55429933744ab80e",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abda21b55429933744ab80e::Gypsy (catboat)::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abda21b55429933744ab80e::1903 America's Cup::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abda21b55429933744ab80e::Seawanhaka Corinthian Yacht Club::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abda21b55429933744ab80e::Ottawa Curling Club::7"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abda21b55429933744ab80e::Gypsy (catboat)",
+        "5abda21b55429933744ab80e::Seawanhaka Corinthian Yacht Club"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abda21b55429933744ab80e::Gypsy (catboat)::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abda21b55429933744ab80e::1903 America's Cup::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abda21b55429933744ab80e::Seawanhaka Corinthian Yacht Club::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abda21b55429933744ab80e::Ottawa Curling Club::7",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abda21b55429933744ab80e::Ottawa Curling Club::7",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Ottawa Curling Club is one of two clubs in Downtown Ottawa, the other is the Rideau Curling Club, which maintains a rivalry with the Ottawa.\n[2] The Seawanhaka Corinthian Yacht Club is one of the oldest yacht clubs in the Western Hemisphere, located in Centre Island, New York, with access to Long Island Sound.\n[3] It took place in the New York City harbor and consisted of a best of five series of races between \"Reliance\", the fourth of Nathaniel Herreshoff's defenders for the cup, entered by the New York Yacht Club; and \"Shamrock III\", representing the Royal Ulster Yacht Club and also the third of Sir Thomas Lipton's Cup challengers.\n[4] Her design was influenced by the \"Seawanhaka Rule\", instituted at the Seawanhaka Corinthian Yacht Club to govern important characteristics of racing boats."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

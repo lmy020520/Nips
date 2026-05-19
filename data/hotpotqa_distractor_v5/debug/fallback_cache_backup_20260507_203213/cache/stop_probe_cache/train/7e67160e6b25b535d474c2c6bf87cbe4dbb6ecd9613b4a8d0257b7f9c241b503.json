@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Hostel",
+  "pred_answer": "Hostel",
+  "normalized_gold": "hostel",
+  "normalized_pred": "hostel",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a827e0955429940e5e1a8db",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a827e0955429940e5e1a8db::Eli Roth::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a827e0955429940e5e1a8db::Guess Who (film)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a827e0955429940e5e1a8db::The Green Inferno (film)::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a827e0955429940e5e1a8db::Leonard Cohen: I'm Your Man::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a827e0955429940e5e1a8db::Eli Roth",
+        "5a827e0955429940e5e1a8db::The Green Inferno (film)"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a827e0955429940e5e1a8db::Eli Roth::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a827e0955429940e5e1a8db::Guess Who (film)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a827e0955429940e5e1a8db::The Green Inferno (film)::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a827e0955429940e5e1a8db::Leonard Cohen: I'm Your Man::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a827e0955429940e5e1a8db::Leonard Cohen: I'm Your Man::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It is based on a January 2005 tribute show at the Sydney Opera House titled \"Came So Far for Beauty\", which was presented by Sydney Festival under the artistic direction of Brett Sheehy, and produced by Hal Willner.\n[2] The film was inspired by and is a homage to Italian cannibal films of the late 1970s and early '80s \"cannibal boom\", including \"Cannibal Holocaust\" (1980), which features a film-within-a-film titled \"The Green Inferno\".\n[3] Guess Who is a 2005 American comedy film about race relations directed by Kevin Rodney Sullivan.\n[4] As a director and producer, he is most closely associated with the horror genre, first coming to prominence by directing the 2005 film \"Hostel\" and its 2007 sequel, \"\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

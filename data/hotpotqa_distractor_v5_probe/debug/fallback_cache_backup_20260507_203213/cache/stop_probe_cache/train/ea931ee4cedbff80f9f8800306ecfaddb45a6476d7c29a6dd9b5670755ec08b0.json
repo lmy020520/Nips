@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Mexico",
+  "pred_answer": "Mexico",
+  "normalized_gold": "mexico",
+  "normalized_pred": "mexico",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8562645542997b5ce3fff3",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8562645542997b5ce3fff3::Eva Sámano::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8562645542997b5ce3fff3::The Woman with the Whip::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8562645542997b5ce3fff3::Adolfo López Mateos::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8562645542997b5ce3fff3::Eva Sámano::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8562645542997b5ce3fff3::Eva Sámano",
+        "5a8562645542997b5ce3fff3::Adolfo López Mateos"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8562645542997b5ce3fff3::Eva Sámano::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8562645542997b5ce3fff3::The Woman with the Whip::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8562645542997b5ce3fff3::Adolfo López Mateos::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8562645542997b5ce3fff3::Eva Sámano::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8562645542997b5ce3fff3::Eva Sámano::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Eva Sámano (May 5, 1910 - January 7, 1984) was a Mexican educator.\n[2] Adolfo López Mateos (] ; 26 May 1909 – 22 September 1969) was a Mexican politician affiliated with the Institutional Revolutionary Party (PRI) who served as President of Mexico from 1958 to 1964.\n[3] The Woman with the Whip is a 1952 biography of political leader Eva Perón, the late First Lady and Spiritual Leader of the Nation of Argentina.\n[4] She was the first wife of President Adolfo López Mateos and First Lady of Mexico from 1958 to 1964."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

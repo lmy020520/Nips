@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Ansel Elgort",
+  "pred_answer": "Ansel Elgort",
+  "normalized_gold": "ansel elgort",
+  "normalized_pred": "ansel elgort",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7fa9ca5542994857a767aa",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7fa9ca5542994857a767aa::Ansel Elgort::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7fa9ca5542994857a767aa::Octavia Spencer::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7fa9ca5542994857a767aa::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7fa9ca5542994857a767aa::Divergent (film)::2"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a7fa9ca5542994857a767aa::William Katt::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7fa9ca5542994857a767aa::Ansel Elgort",
+        "5a7fa9ca5542994857a767aa::Divergent (film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7fa9ca5542994857a767aa::Ansel Elgort::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7fa9ca5542994857a767aa::Octavia Spencer::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7fa9ca5542994857a767aa::Divergent (film)::2",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a7fa9ca5542994857a767aa::William Katt::1",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a7fa9ca5542994857a767aa::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a7fa9ca5542994857a767aa::William Katt::1",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] He first became known for playing Tommy Ross, the ill-fated prom date of Carrie White in the film version of \"Carrie\" (1976) and subsequently starred in films such as \"First Love\" (1977), \"Big Wednesday\" (1978) and \"\" (1979).\n[2] It stars Shailene Woodley, Theo James, Ashley Judd, Jai Courtney, Ray Stevenson, Zoë Kravitz, Miles Teller, Tony Goldwyn, Ansel Elgort, Maggie Q and Kate Winslet.\n[3] Her breakthrough came in 2011, when she starred as Minny Jackson in the period drama film \"The Help\", for which she won the Academy Award, Golden Globe, SAG, BAFTA, and Critics' Choice Movie Award for Best Supporting Actress.\n[4] As a film actor, he played Tommy Ross in the horror film \"Carrie\" (2013), Caleb Prior in \"The Divergent Series \" franchise, Augustus Waters in the romantic teen drama \"The Fault in Our Stars\" (2014), and the title character in Edgar Wright's action thriller \"Baby Driver\" (2017).\n\nNotes:\n[bridge] Ansel Elgort played Tommy Ross in the 2013 film 'Carrie'."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

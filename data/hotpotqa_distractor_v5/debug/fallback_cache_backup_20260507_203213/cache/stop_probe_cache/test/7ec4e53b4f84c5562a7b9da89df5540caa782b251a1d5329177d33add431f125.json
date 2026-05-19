@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "St. Vincent",
+  "pred_answer": "St. Vincent",
+  "normalized_gold": "st vincent",
+  "normalized_pred": "st vincent",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8eb63455429917b4a5bdb7",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8eb63455429917b4a5bdb7::St. Vincent (musician)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8eb63455429917b4a5bdb7::Jonny Browning::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8eb63455429917b4a5bdb7::Wang Leehom::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8eb63455429917b4a5bdb7::St. Vincent (musician)",
+        "5a8eb63455429917b4a5bdb7::Jonny Browning"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8eb63455429917b4a5bdb7::St. Vincent (musician)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8eb63455429917b4a5bdb7::Jonny Browning::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8eb63455429917b4a5bdb7::Wang Leehom::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8eb63455429917b4a5bdb7::Wang Leehom::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Formally trained at the Eastman School of Music, Williams College and Berklee College of Music, his musical style is known for fusing Chinese elements (such as Beijing opera, traditional styles of ethnic minorities, Chinese classical orchestra) with hip-hop and R&B.\n[2] Jonny Browning is an American instrumental surf musician, primarily known as touring guitarist Victor Vector for the band Man or Astro-Man?\n[3] Anne Erin \"Annie\" Clark (born September 28, 1982), better known by her stage name St. Vincent, is an American musician, singer-songwriter, and multi-instrumentalist."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

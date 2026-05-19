@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Wes Craven",
+  "pred_answer": "Wes Craven",
+  "normalized_gold": "wes craven",
+  "normalized_pred": "wes craven",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5aba790e554299232ef4a2dd",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5aba790e554299232ef4a2dd::Off Season (novel)::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5aba790e554299232ef4a2dd::Sin-Jin Smyth::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5aba790e554299232ef4a2dd::The Hills Have Eyes (1977 film)::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5aba790e554299232ef4a2dd::The Legend of Cool &quot;Disco&quot; Dan::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5aba790e554299232ef4a2dd::Off Season (novel)",
+        "5aba790e554299232ef4a2dd::The Hills Have Eyes (1977 film)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5aba790e554299232ef4a2dd::Off Season (novel)::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5aba790e554299232ef4a2dd::Sin-Jin Smyth::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5aba790e554299232ef4a2dd::The Hills Have Eyes (1977 film)::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5aba790e554299232ef4a2dd::The Legend of Cool &quot;Disco&quot; Dan::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5aba790e554299232ef4a2dd::The Legend of Cool &quot;Disco&quot; Dan::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Legend of Cool \"Disco\" Dan is a 2013 American documentary film written and directed by Joseph Pattisall.\n[2] The Hills Have Eyes is a 1977 American exploitation-horror film written, directed, and edited by Wes Craven and starring Susan Lanier, Michael Berryman and Dee Wallace.\n[3] Sin-Jin Smyth is an unreleased horror film written and directed by Ethan Dettenmaier, based on an old legend inspired by the Kansas Stull Cemetery.\n[4] It was Ketchum's first novel and was partially based upon the legend of Sawney Bean, which also inspired Wes Craven's 1977 cult classic horror film \"The Hills Have Eyes\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

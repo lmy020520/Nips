@@ -1,0 +1,85 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "Gangsta rap",
+  "pred_answer": "gangsta rap",
+  "normalized_gold": "gangsta rap",
+  "normalized_pred": "gangsta rap",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7629db554299109176e692",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7629db554299109176e692::Iceberg Slim::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7629db554299109176e692::Roberts (surname)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7629db554299109176e692::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7629db554299109176e692::Gangsta rap::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7629db554299109176e692::Iceberg Slim",
+        "5a7629db554299109176e692::Gangsta rap"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7629db554299109176e692::Iceberg Slim::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7629db554299109176e692::Roberts (surname)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7629db554299109176e692::Gangsta rap::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a7629db554299109176e692::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a7629db554299109176e692::Gangsta rap::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Beck's novels were adapted into movies, and the imagery and tone of Beck's fiction have been acknowledged as an influence by several rap musicians, including Ice T and Ice Cube, whose names are homages to Beck.\n[2] The genre evolved from hardcore hip hop into a distinct form, pioneered in the mid-1980s by rappers such as Schoolly D and Ice-T, and was popularized in the later part of the 1980s by groups like N.W.A.\n[3] Roberts is a surname of Norman origin, deriving from the Norman given name Robert, meaning \"bright renown\" – from the Germanic elements \"hrod\" meaning renown and \"beraht\" meaning bright.\n[4] Robert Beck (born Robert Lee Maupin or Robert Moppins, Jr.; August 4, 1918 – April 28, 1992), better known as Iceberg Slim, was an American pimp who subsequently became an influential author among a primarily African-American readership.\n\nNotes:\n[verification] Iceberg Slim's fiction influenced rap musicians Ice T and Ice Cube, who are known for gangsta rap."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

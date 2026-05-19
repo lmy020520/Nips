@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "National Football League",
+  "pred_answer": "National Football League",
+  "normalized_gold": "national football league",
+  "normalized_pred": "national football league",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5aba38c455429901930fa784",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5aba38c455429901930fa784::Jesse Palmer::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5aba38c455429901930fa784::ESPN College Football Thursday Primetime::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5aba38c455429901930fa784::ESPN College Football Friday Primetime::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5aba38c455429901930fa784::Jesse Palmer",
+        "5aba38c455429901930fa784::ESPN College Football Thursday Primetime"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5aba38c455429901930fa784::Jesse Palmer::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5aba38c455429901930fa784::ESPN College Football Thursday Primetime::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5aba38c455429901930fa784::ESPN College Football Friday Primetime::4",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5aba38c455429901930fa784::ESPN College Football Friday Primetime::4",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The game is preceded by a 5-10 minute long segment of \"College Football Scoreboard\" with Adnan Virk, Danny Kanell and Joey Galloway.\n[2] The game is preceded by a 30-minute segment with Adnan Virk, Joey Galloway and Jesse Palmer, all of whom also appear on the halftime report.\n[3] Jesse James Palmer (born October 5, 1978) is a Canadian sports commentator and former college and professional football player who was a quarterback in the National Football League (NFL) for five seasons in the early 2000s."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

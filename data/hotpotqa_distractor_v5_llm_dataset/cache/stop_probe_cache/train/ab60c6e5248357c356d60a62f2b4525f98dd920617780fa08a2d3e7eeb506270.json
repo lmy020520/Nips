@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "documentary film",
+  "pred_answer": "documentary film",
+  "normalized_gold": "documentary film",
+  "normalized_pred": "documentary film",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8a312255429930ff3c0ced",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8a312255429930ff3c0ced::Andy Whittaker::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8a312255429930ff3c0ced::Burma VJ::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8a312255429930ff3c0ced::Darius Goes West::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a8a312255429930ff3c0ced::Burma VJ::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8a312255429930ff3c0ced::Burma VJ",
+        "5a8a312255429930ff3c0ced::Darius Goes West"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8a312255429930ff3c0ced::Andy Whittaker::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8a312255429930ff3c0ced::Burma VJ::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8a312255429930ff3c0ced::Darius Goes West::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a8a312255429930ff3c0ced::Burma VJ::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8a312255429930ff3c0ced::Burma VJ::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Burma VJ: Reporting from a Closed Country is a 2008 Danish documentary film directed by Anders Østergaard.\n[2] Darius Goes West: The Roll of his Life is a documentary by Logan Smalley about Darius Weems, a teenager living with Duchenne muscular dystrophy.\n[3] The footage was smuggled out of the country, physically or over the Internet.\n[4] Andy Whittaker is the founder of UK film distributor Dogwoof, who focus on social issue films such as \"Food, Inc.\" and \"Burma VJ\"."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

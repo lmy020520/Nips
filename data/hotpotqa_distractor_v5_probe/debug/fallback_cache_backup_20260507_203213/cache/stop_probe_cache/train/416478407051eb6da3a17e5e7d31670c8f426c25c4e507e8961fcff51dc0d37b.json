@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Empire Strikes Back",
+  "pred_answer": "The Empire Strikes Back",
+  "normalized_gold": "the empire strikes back",
+  "normalized_pred": "the empire strikes back",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab930e3554299753720f786",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab930e3554299753720f786::The Empire Strikes Back::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab930e3554299753720f786::Return of the Jedi::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab930e3554299753720f786::Star Wars: Shadows of the Empire::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab930e3554299753720f786::Rogue One::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab930e3554299753720f786::The Empire Strikes Back",
+        "5ab930e3554299753720f786::Star Wars: Shadows of the Empire"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab930e3554299753720f786::The Empire Strikes Back::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab930e3554299753720f786::Return of the Jedi::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab930e3554299753720f786::Star Wars: Shadows of the Empire::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab930e3554299753720f786::Rogue One::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab930e3554299753720f786::Rogue One::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Rogue One: A Star Wars Story, or simply Rogue One, is a 2016 American epic space opera film directed by Gareth Edwards.\n[2] The original idea was to create a story set between the films \"The Empire Strikes Back\" and \"Return of the Jedi\" (a time no \"Star Wars\" novel had explored before), and to explore all commercial possibilities of a full motion picture release, without actually making the film.\n[3] Return of the Jedi (also known as Star Wars: Episode VI – Return of the Jedi) is a 1983 American epic space opera film directed by Richard Marquand.\n[4] The Empire Strikes Back (also known as Star Wars: Episode V – The Empire Strikes Back) is a 1980 American epic space opera film directed by Irvin Kershner."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

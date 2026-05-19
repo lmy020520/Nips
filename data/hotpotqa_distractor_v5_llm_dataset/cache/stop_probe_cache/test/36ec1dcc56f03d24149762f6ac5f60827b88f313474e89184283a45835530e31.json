@@ -1,0 +1,85 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Volvo 850",
+  "pred_answer": "Volvo 850",
+  "normalized_gold": "volvo 850",
+  "normalized_pred": "volvo 850",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7220f055429971e9dc92ac",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7220f055429971e9dc92ac::Volvo 850::2"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7220f055429971e9dc92ac::Volvo P80 platform::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7220f055429971e9dc92ac::derived::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7220f055429971e9dc92ac::Volvo S70::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7220f055429971e9dc92ac::Volvo 850",
+        "5a7220f055429971e9dc92ac::Volvo S70"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7220f055429971e9dc92ac::Volvo 850::2",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7220f055429971e9dc92ac::Volvo P80 platform::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7220f055429971e9dc92ac::Volvo S70::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a7220f055429971e9dc92ac::derived::0",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a7220f055429971e9dc92ac::Volvo S70::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] It debuted with the 1991 Volvo 850 and again in autumn 1996 with the Volvo 850 AWD.\n[2] The S70 was essentially a facelifted 850 saloon.\n[3] It is designed for different wheelbases in front-wheel drive configurations and was adapted to all wheel drive.\n[4] The 850 was the first front-wheel drive vehicle from Volvo to be sold in North America and also the first all-wheel drive Volvo.\n\nNotes:\n[verification] Volvo P80 platform debuted with the 1991 Volvo 850 and again in autumn 1996 with the Volvo 850 AWD."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

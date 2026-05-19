@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Basketball",
+  "pred_answer": "Basketball",
+  "normalized_gold": "basketball",
+  "normalized_pred": "basketball",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab5f4cc554299110f219994",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab5f4cc554299110f219994::Play Sports::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab5f4cc554299110f219994::Play the Game (NGO)::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab5f4cc554299110f219994::Cavaliers–Warriors rivalry::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab5f4cc554299110f219994::Deron Williams::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab5f4cc554299110f219994::National Art Museum of Sport::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab5f4cc554299110f219994::Cavaliers–Warriors rivalry",
+        "5ab5f4cc554299110f219994::Deron Williams"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab5f4cc554299110f219994::Play Sports::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab5f4cc554299110f219994::Play the Game (NGO)::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab5f4cc554299110f219994::Cavaliers–Warriors rivalry::1",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab5f4cc554299110f219994::Deron Williams::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab5f4cc554299110f219994::National Art Museum of Sport::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab5f4cc554299110f219994::National Art Museum of Sport::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] In America, a country celebrated for hard work and hard play, sport art has had an especially vigorous history.\n[2] He played college basketball for the University of Illinois before being drafted third overall in the 2005 NBA draft by the Utah Jazz.\n[3] While the two teams have played each other since the Cavaliers joined the league in 1970, their rivalry did not develop until the 2014–15 season, when they met in the first of three consecutive NBA Finals series.\n[4] Play the Game is an international initiative and conference under the auspices of the Danish Institute for Sports Studies which aims to strengthen sport's ethical foundation and promote democracy, transparency and freedom of expression in sport."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

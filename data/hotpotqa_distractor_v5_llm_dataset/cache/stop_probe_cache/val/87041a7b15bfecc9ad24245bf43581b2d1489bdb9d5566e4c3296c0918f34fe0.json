@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "1903",
+  "pred_answer": "1903",
+  "normalized_gold": "1903",
+  "normalized_pred": "1903",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae3f5355542995ad6573ce9",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae3f5355542995ad6573ce9::Trenarren::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae3f5355542995ad6573ce9::Jens T. Larsen House::9"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae3f5355542995ad6573ce9::A. L. Rowse::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae3f5355542995ad6573ce9::United States Senator James F. Wilson House::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae3f5355542995ad6573ce9::Trenarren",
+        "5ae3f5355542995ad6573ce9::A. L. Rowse"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae3f5355542995ad6573ce9::Trenarren::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae3f5355542995ad6573ce9::Jens T. Larsen House::9",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae3f5355542995ad6573ce9::A. L. Rowse::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae3f5355542995ad6573ce9::United States Senator James F. Wilson House::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae3f5355542995ad6573ce9::United States Senator James F. Wilson House::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] This house was built for attorney William L. Hamilton in 1854.\n[2] Alfred Leslie Rowse (4 December 1903 – 3 October 1997), known publicly as A. L. Rowse but to friends and family as \"Leslie\", was a British author and historian from Cornwall, England, UK.\n[3] This was his retirement home, and he lived here until he died, as did his wife Elena who died in 1928.\n[4] A. L. Rowse the historian lived in his retirement in Trenarren House."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

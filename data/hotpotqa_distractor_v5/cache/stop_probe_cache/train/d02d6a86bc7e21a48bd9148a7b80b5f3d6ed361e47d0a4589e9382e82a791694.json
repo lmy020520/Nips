@@ -1,0 +1,92 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Pulp Fiction",
+  "pred_answer": "Pulp Fiction",
+  "normalized_gold": "pulp fiction",
+  "normalized_pred": "pulp fiction",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ab9651255429970cfb8eab4",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ab9651255429970cfb8eab4::Quentin Tarantino filmography::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ab9651255429970cfb8eab4::Jackie Brown::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ab9651255429970cfb8eab4::Pulp Fiction::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ab9651255429970cfb8eab4::Miramax::0"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5ab9651255429970cfb8eab4::From Dusk till Dawn::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ab9651255429970cfb8eab4::Pulp Fiction",
+        "5ab9651255429970cfb8eab4::Miramax"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ab9651255429970cfb8eab4::Quentin Tarantino filmography::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ab9651255429970cfb8eab4::Jackie Brown::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ab9651255429970cfb8eab4::Pulp Fiction::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ab9651255429970cfb8eab4::Miramax::0",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5ab9651255429970cfb8eab4::From Dusk till Dawn::0",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ab9651255429970cfb8eab4::From Dusk till Dawn::0",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] From Dusk till Dawn is a 1996 American action horror film directed by Robert Rodriguez and written by Quentin Tarantino.\n[2] Miramax (also known as Miramax Films) is an American entertainment company known for producing and distributing films and television shows.\n[3] Pulp Fiction is a 1994 American black comedy neo-noir crime film written and directed by Quentin Tarantino, from a story by Tarantino and Roger Avary.\n[4] Jackie Brown is a 1997 American crime thriller film written and directed by Quentin Tarantino."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

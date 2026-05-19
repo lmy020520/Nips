@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Brian Johnson",
+  "pred_answer": "Brian Johnson",
+  "normalized_gold": "brian johnson",
+  "normalized_pred": "brian johnson",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ade12d655429975fa854e29",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ade12d655429975fa854e29::AC/DShe::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ade12d655429975fa854e29::Back in Black::4"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ade12d655429975fa854e29::Family Jewels (AC/DC album)::2"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ade12d655429975fa854e29::Brian Johnson::1"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ade12d655429975fa854e29::Back in Black",
+        "5ade12d655429975fa854e29::Family Jewels (AC/DC album)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ade12d655429975fa854e29::AC/DShe::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ade12d655429975fa854e29::Back in Black::4",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ade12d655429975fa854e29::Family Jewels (AC/DC album)::2",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ade12d655429975fa854e29::Brian Johnson::1",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ade12d655429975fa854e29::Brian Johnson::1",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] In 1980, he became the third lead singer of the Australian rock band AC/DC, after the death of their second lead singer Bon Scott.\n[2] The first disc contains videos from the Bon Scott era (1975–1980), such as the band's first TV appearance and a performance on television ten days before Scott died.\n[3] It is the band's first album with vocalist Brian Johnson, replacing Bon Scott, who died in February of the same year, shortly before the band started recording the album.\n[4] The band, hailing from San Francisco, covers only pre-1980 AC/DC songs (thus those written while Bon Scott was still alive)."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

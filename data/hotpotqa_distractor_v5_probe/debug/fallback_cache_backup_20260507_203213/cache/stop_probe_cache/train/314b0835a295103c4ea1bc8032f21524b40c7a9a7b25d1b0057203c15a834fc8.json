@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "The Crown",
+  "pred_answer": "The Crown",
+  "normalized_gold": "the crown",
+  "normalized_pred": "the crown",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abcd6f355429965836004cc",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abcd6f355429965836004cc::Vanessa Kirby::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abcd6f355429965836004cc::The Crown (TV series)::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abcd6f355429965836004cc::Elizabeth at 90: A Family Portrait::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abcd6f355429965836004cc::Vanessa Kirby",
+        "5abcd6f355429965836004cc::The Crown (TV series)"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abcd6f355429965836004cc::Vanessa Kirby::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abcd6f355429965836004cc::The Crown (TV series)::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abcd6f355429965836004cc::Elizabeth at 90: A Family Portrait::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abcd6f355429965836004cc::Elizabeth at 90: A Family Portrait::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] Elizabeth at 90: A Family Portrait is a 2016 television documentary film made to commemorate the 90th birthday of Queen Elizabeth II.\n[2] The show is a biographical story about the reign of Queen Elizabeth II of the United Kingdom.\n[3] She starred as Estella in the BBC adaptation of \"Great Expectations\" in 2011, as Joanna in Richard Curtis' romantic comedy \"About Time\" in 2013, and currently portrays Princess Margaret in Peter Morgan's Netflix series \"The Crown\", for which she has been nominated for the British Academy Television Award for Best Supporting Actress."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

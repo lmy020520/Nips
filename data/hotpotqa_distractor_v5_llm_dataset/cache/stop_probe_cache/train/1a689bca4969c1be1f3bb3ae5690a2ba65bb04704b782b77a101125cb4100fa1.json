@@ -1,0 +1,93 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_conflict_fallback",
+  "gold_answer": "Grinnell College",
+  "pred_answer": "Grinnell College",
+  "normalized_gold": "grinnell college",
+  "normalized_pred": "grinnell college",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a73b6f75542992d56e7e390",
+    "t": 3,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a73b6f75542992d56e7e390::Ferdinand Holtkamp::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a73b6f75542992d56e7e390::Grinnell College::1"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a73b6f75542992d56e7e390::derived::1"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a73b6f75542992d56e7e390::Case Western Reserve University::1"
+      },
+      {
+        "step_id": 4,
+        "unit_id": "5a73b6f75542992d56e7e390::Case Western Reserve Spartans football::4"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a73b6f75542992d56e7e390::Grinnell College",
+        "5a73b6f75542992d56e7e390::Case Western Reserve University"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a73b6f75542992d56e7e390::Ferdinand Holtkamp::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a73b6f75542992d56e7e390::Grinnell College::1",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a73b6f75542992d56e7e390::Case Western Reserve University::1",
+          "added_step": 3
+        },
+        {
+          "unit_id": "5a73b6f75542992d56e7e390::Case Western Reserve Spartans football::4",
+          "added_step": 4
+        }
+      ],
+      "derived_refs": [
+        {
+          "unit_id": "5a73b6f75542992d56e7e390::derived::1",
+          "added_step": 2
+        }
+      ],
+      "last_added_unit_id": "5a73b6f75542992d56e7e390::Case Western Reserve Spartans football::4",
+      "last_updated_step": 4
+    },
+    "K_t": "Evidence:\n[1] The university was created in 1967 by the federation of Case Institute of Technology (founded in 1881 by Leonard Case Jr.) and Western Reserve University (founded in 1826 in the area that was once the Connecticut Western Reserve).\n[2] The team in its current form was created in 1970 after the federation of Western Reserve University and Case Institute of Technology.\n[3] It was founded in 1846, when a group of New England Congregationalists established the Trustees of Iowa College.\n[4] He served as the head football coach at the Agricultural and Mechanical College of the State of Mississippi—now known as Mississippi State University—from 1920 to 1921 and at Western Reserve University—now a part of Case Western Reserve University—from 1922 to 1925, compiling a career college football coaching record of 25–26–3.\n\nNotes:\n[bridge] Case Western Reserve University's earliest predecessor, Western Reserve University, was founded in 1826, which is earlier than Grinnell College's founding in 18"
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

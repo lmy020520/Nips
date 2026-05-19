@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Pennsylvania Air National Guard",
+  "pred_answer": "Pennsylvania Air National Guard",
+  "normalized_gold": "pennsylvania air national guard",
+  "normalized_pred": "pennsylvania air national guard",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a8f9c8c55429918e830d293",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a8f9c8c55429918e830d293::103d Fighter Squadron::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a8f9c8c55429918e830d293::Naval Air Station Joint Reserve Base Willow Grove::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a8f9c8c55429918e830d293::103d Fighter Squadron::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a8f9c8c55429918e830d293::103d Fighter Squadron",
+        "5a8f9c8c55429918e830d293::Naval Air Station Joint Reserve Base Willow Grove"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a8f9c8c55429918e830d293::103d Fighter Squadron::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a8f9c8c55429918e830d293::Naval Air Station Joint Reserve Base Willow Grove::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a8f9c8c55429918e830d293::103d Fighter Squadron::0",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a8f9c8c55429918e830d293::103d Fighter Squadron::0",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] The 103d Fighter Squadron (103 FS) is an inactive unit of the Pennsylvania Air National Guard.\n[2] Naval Air Station Joint Reserve Base Willow Grove or NASJRB Willow Grove (IATA: NXX, ICAO: KNXX, FAA LID: NXX) was a Naval Air Station owned by the U.S. Navy and located in Horsham Township, Montgomery County, Pennsylvania, United States four miles (6 km) northwest of the central business district of Willow Grove, which is north of Philadelphia, Pennsylvania.\n[3] It was last assigned to the 111th Fighter Wing, stationed at Naval Air Station Joint Reserve Base Willow Grove, Willow Grove, Pennsylvania."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

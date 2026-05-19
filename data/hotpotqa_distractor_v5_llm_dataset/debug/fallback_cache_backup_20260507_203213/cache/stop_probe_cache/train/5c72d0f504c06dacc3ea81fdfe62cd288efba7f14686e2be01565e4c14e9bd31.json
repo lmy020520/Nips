@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Fatsia",
+  "pred_answer": "Fatsia",
+  "normalized_gold": "fatsia",
+  "normalized_pred": "fatsia",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5ae522b55542993aec5ec155",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5ae522b55542993aec5ec155::Leuchtenbergia::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5ae522b55542993aec5ec155::Tetrapanax::3"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5ae522b55542993aec5ec155::Fatsia::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5ae522b55542993aec5ec155::Oplopanax::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5ae522b55542993aec5ec155::Leuchtenbergia",
+        "5ae522b55542993aec5ec155::Fatsia"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5ae522b55542993aec5ec155::Leuchtenbergia::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5ae522b55542993aec5ec155::Tetrapanax::3",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5ae522b55542993aec5ec155::Fatsia::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5ae522b55542993aec5ec155::Oplopanax::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5ae522b55542993aec5ec155::Oplopanax::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] Oplopanax is a small genus of flowering plants in the family Araliaceae, consisting of three species of deciduous shrubs, native to western North America and northeastern Asia.\n[2] Fatsia is a small genus of three species of evergreen shrubs native to southern Japan and Taiwan.\n[3] The species was once included in the genus \"Fatsia\" as \"Fatsia papyrifera\".\n[4] Leuchtenbergia principis (agave cactus or prism cactus), the sole species of the genus Leuchtenbergia, is a species of cactus."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

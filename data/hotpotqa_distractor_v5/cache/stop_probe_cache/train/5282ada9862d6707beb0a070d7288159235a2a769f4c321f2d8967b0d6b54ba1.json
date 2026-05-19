@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "llm",
+  "gold_answer": "American",
+  "pred_answer": "American",
+  "normalized_gold": "american",
+  "normalized_pred": "american",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a7315655542991f9a20c604",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a7315655542991f9a20c604::Coach of the Year (film)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a7315655542991f9a20c604::Doll on a Music Box::7"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a7315655542991f9a20c604::Erin Gray::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5a7315655542991f9a20c604::When I Dream::6"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a7315655542991f9a20c604::Coach of the Year (film)",
+        "5a7315655542991f9a20c604::Erin Gray"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a7315655542991f9a20c604::Coach of the Year (film)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a7315655542991f9a20c604::Doll on a Music Box::7",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a7315655542991f9a20c604::Erin Gray::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5a7315655542991f9a20c604::When I Dream::6",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a7315655542991f9a20c604::When I Dream::6",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] \"Hello I Love You\" was featured in the 1982 movie, \"Six Pack\", starring Kenny Rogers, Erin Gray and Diane Lane.\n[2] Erin Gray (born January 7, 1950) is an American actress, perhaps best known for her roles as Colonel Wilma Deering in the science fiction television series \"Buck Rogers in the 25th Century\" and as Kate Summers-Stratton in the situation comedy \"Silver Spoons\".\n[3] In 2005, the Broadway \"Truly\" was portrayed by actress Erin Dilly, who was nominated for a Tony Award that year for the role.\n[4] Coach of the Year is a 1980 American TV film about a paraplegic coach, starring Robert Conrad, Erin Gray, Red West and Daphne Reid."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

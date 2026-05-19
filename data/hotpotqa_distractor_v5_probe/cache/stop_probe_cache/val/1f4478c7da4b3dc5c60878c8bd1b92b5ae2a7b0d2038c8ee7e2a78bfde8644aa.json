@@ -1,0 +1,84 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "Lord's Resistance Army",
+  "pred_answer": "Lord's Resistance Army",
+  "normalized_gold": "lords resistance army",
+  "normalized_pred": "lords resistance army",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5abd8dd95542996e802b47c5",
+    "t": 2,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5abd8dd95542996e802b47c5::Aboke::1"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5abd8dd95542996e802b47c5::Aboke abductions::0"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5abd8dd95542996e802b47c5::Lord's Resistance Army::0"
+      },
+      {
+        "step_id": 3,
+        "unit_id": "5abd8dd95542996e802b47c5::Beili Wang::0"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5abd8dd95542996e802b47c5::Aboke",
+        "5abd8dd95542996e802b47c5::Lord's Resistance Army"
+      ],
+      "k_br": 0.0,
+      "k_dis": 0.0,
+      "k_sup": 2.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5abd8dd95542996e802b47c5::Aboke::1",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5abd8dd95542996e802b47c5::Aboke abductions::0",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5abd8dd95542996e802b47c5::Lord's Resistance Army::0",
+          "added_step": 2
+        },
+        {
+          "unit_id": "5abd8dd95542996e802b47c5::Beili Wang::0",
+          "added_step": 3
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5abd8dd95542996e802b47c5::Beili Wang::0",
+      "last_updated_step": 3
+    },
+    "K_t": "Evidence:\n[1] The Anointed King / Beili Wang (被立王) is a Christian cult of Christian origin in the People's Republic of China, which possibly had more than 100,000 members at its peak.\n[2] The Lord's Resistance Army (LRA), also known as the Lord's Resistance Movement, is a rebel group and heterodox Christian cult which operates in northern Uganda, South Sudan, the Central African Republic, and the Democratic Republic of the Congo.\n[3] The Aboke abductions were the kidnapping of 139 secondary school female students from St. Mary's College boarding school by rebels of the Lord's Resistance Army (LRA) on 10 October 1996, in Aboke, Kole District (then part of Apac District), Uganda.\n[4] It is known for being the site of the Aboke abductions in October 1996 from St. Mary's College of 139 schoolgirls by rebels of the Lord's Resistance Army."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}

@@ -1,0 +1,76 @@
+{
+  "probe_run": true,
+  "cache_hit": false,
+  "answer_source": "context_gold_fallback",
+  "gold_answer": "13 months",
+  "pred_answer": "13 months",
+  "normalized_gold": "13 months",
+  "normalized_pred": "13 months",
+  "exact_match": true,
+  "context_exact_match": true,
+  "answer_match_rule": "normalized_exact",
+  "AnswerCorrect_t": true,
+  "SupportSufficient_t": true,
+  "support_rule": "multi_hop_answer_in_evidence",
+  "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+  "missing_support_reasons": [],
+  "support_probe": {
+    "support_sufficient": true,
+    "support_rule": "multi_hop_answer_in_evidence",
+    "support_evidence_summary": "The selected evidence covers the target hops and explicitly contains the gold answer.",
+    "missing_support_reasons": []
+  },
+  "state_snapshot": {
+    "qid": "5a87753d5542996e4f3087f0",
+    "t": 1,
+    "H_t": [
+      {
+        "step_id": 0,
+        "unit_id": "5a87753d5542996e4f3087f0::Roy Black (attorney)::0"
+      },
+      {
+        "step_id": 1,
+        "unit_id": "5a87753d5542996e4f3087f0::Jeffrey Epstein::2"
+      },
+      {
+        "step_id": 2,
+        "unit_id": "5a87753d5542996e4f3087f0::Edgecombe County serial killer::2"
+      }
+    ],
+    "A_t": {
+      "covered_target_ids": [
+        "5a87753d5542996e4f3087f0::Roy Black (attorney)",
+        "5a87753d5542996e4f3087f0::Jeffrey Epstein"
+      ],
+      "k_br": 1.0,
+      "k_dis": 0.0,
+      "k_sup": 1.0
+    },
+    "S_t": {
+      "raw_refs": [
+        {
+          "unit_id": "5a87753d5542996e4f3087f0::Roy Black (attorney)::0",
+          "added_step": 0
+        },
+        {
+          "unit_id": "5a87753d5542996e4f3087f0::Jeffrey Epstein::2",
+          "added_step": 1
+        },
+        {
+          "unit_id": "5a87753d5542996e4f3087f0::Edgecombe County serial killer::2",
+          "added_step": 2
+        }
+      ],
+      "derived_refs": [],
+      "last_added_unit_id": "5a87753d5542996e4f3087f0::Edgecombe County serial killer::2",
+      "last_updated_step": 2
+    },
+    "K_t": "Evidence:\n[1] It is suspected that Antwan Maurice, a registered sex offender who was charged with a murder fitting a similar profile, was responsible for the Edgecombe deaths.\n[2] In 2008, Epstein was convicted of soliciting an underage girl for prostitution, for which he served 13 months in prison.\n[3] Roy Black (born February 17, 1945 in New York City) is a civil and criminal defense trial attorney."
+  },
+  "TeacherStop_t": true,
+  "FalseStop_t": false,
+  "stop_candidate": false,
+  "false_stop_count_before": 0,
+  "false_stop_count_after": 0,
+  "t": null
+}
