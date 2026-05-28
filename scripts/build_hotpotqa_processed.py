@@ -1,4 +1,6 @@
 import json
+import os
+import argparse
 from pathlib import Path
 
 
@@ -144,9 +146,20 @@ def convert_file(raw_path: Path, processed_path: Path):
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Normalize HotpotQA raw json files into jsonl.")
+    parser.add_argument(
+        "--base-dir",
+        type=Path,
+        default=Path(os.environ.get("HOTPOTQA_RAW_BASE", "data/hotpotqa_distractor")),
+        help="Directory containing raw/{train,val,test}.json and receiving processed/*.jsonl.",
+    )
+    args = parser.parse_args()
+
     project_root = Path(__file__).resolve().parent.parent
 
-    base_dir = project_root / "data" / "hotpotqa_distractor"
+    base_dir = args.base_dir
+    if not base_dir.is_absolute():
+        base_dir = project_root / base_dir
     raw_dir = base_dir / "raw"
     processed_dir = base_dir / "processed"
 

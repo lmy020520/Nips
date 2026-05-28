@@ -82,6 +82,11 @@ def run_eval(model, loader, tokenizer, device, max_length: int) -> Dict[str, flo
             packed_scores, _ = CrossEncoderRanker.pack_scores(flat_scores, batch["candidate_counts"])
 
             loss = F.cross_entropy(packed_scores, labels)
+            if not torch.isfinite(loss):
+                raise FloatingPointError(
+                    "Non-finite eval loss detected. "
+                    f"qids={batch['qids'][:3]}, ts={batch['ts'][:3]}"
+                )
             preds = packed_scores.argmax(dim=-1)
 
             bs = labels.size(0)
@@ -141,6 +146,11 @@ def train_one_epoch(
             )
             packed_scores, _ = CrossEncoderRanker.pack_scores(flat_scores, batch["candidate_counts"])
             loss = F.cross_entropy(packed_scores, labels)
+            if not torch.isfinite(loss):
+                raise FloatingPointError(
+                    "Non-finite train loss detected. "
+                    f"step={step_idx}, qids={batch['qids'][:3]}, ts={batch['ts'][:3]}"
+                )
             loss = loss / grad_accum_steps
 
         scaler.scale(loss).backward()

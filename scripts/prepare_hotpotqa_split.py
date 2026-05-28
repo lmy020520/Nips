@@ -1,3 +1,4 @@
+import argparse
 import json
 import hashlib
 from pathlib import Path
@@ -56,9 +57,19 @@ def project_fields(sample: dict):
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Download and split HotpotQA distractor.")
+    parser.add_argument("--out-base", type=Path, default=None)
+    parser.add_argument("--train-size", type=int, default=TRAIN_SIZE)
+    parser.add_argument("--val-size", type=int, default=VAL_SIZE)
+    parser.add_argument("--test-size", type=int, default=TEST_SIZE)
+    parser.add_argument("--seed", type=int, default=SEED)
+    args = parser.parse_args()
+
     project_root = Path(__file__).resolve().parent.parent
 
-    out_base = project_root / "data" / "hotpotqa_distractor"
+    out_base = args.out_base or (project_root / "data" / "hotpotqa_distractor")
+    if not out_base.is_absolute():
+        out_base = project_root / out_base
     out_train_path = out_base / "raw" / "train.json"
     out_val_path = out_base / "raw" / "val.json"
     out_test_path = out_base / "raw" / "test.json"
@@ -76,21 +87,21 @@ def main():
     raw_train = [dict(x) for x in ds["train"]]
     raw_valid = [dict(x) for x in ds["validation"]]
 
-    if len(raw_train) < TRAIN_SIZE + VAL_SIZE:
+    if len(raw_train) < args.train_size + args.val_size:
         raise ValueError(
-            f"train split 样本不足，需要至少 {TRAIN_SIZE + VAL_SIZE} 条，实际只有 {len(raw_train)} 条"
+            f"train split 样本不足，需要至少 {args.train_size + args.val_size} 条，实际只有 {len(raw_train)} 条"
         )
-    if len(raw_valid) < TEST_SIZE:
+    if len(raw_valid) < args.test_size:
         raise ValueError(
-            f"validation split 样本不足，需要至少 {TEST_SIZE} 条，实际只有 {len(raw_valid)} 条"
+            f"validation split 样本不足，需要至少 {args.test_size} 条，实际只有 {len(raw_valid)} 条"
         )
 
-    sorted_train = sort_stably(raw_train, SEED)
-    sorted_valid = sort_stably(raw_valid, SEED)
+    sorted_train = sort_stably(raw_train, args.seed)
+    sorted_valid = sort_stably(raw_valid, args.seed)
 
-    train_raw = sorted_train[:TRAIN_SIZE]
-    val_raw = sorted_train[TRAIN_SIZE:TRAIN_SIZE + VAL_SIZE]
-    test_raw = sorted_valid[:TEST_SIZE]
+    train_raw = sorted_train[:args.train_size]
+    val_raw = sorted_train[args.train_size:args.train_size + args.val_size]
+    test_raw = sorted_valid[:args.test_size]
 
     train_data = [project_fields(x) for x in train_raw]
     val_data = [project_fields(x) for x in val_raw]
@@ -108,19 +119,19 @@ def main():
             "dataset_id": "hotpotqa/hotpot_qa",
             "config": "distractor"
         },
-        "seed": SEED,
+        "seed": args.seed,
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "split_sizes": {
-            "train": TRAIN_SIZE,
-            "val": VAL_SIZE,
-            "test": TEST_SIZE
+            "train": args.train_size,
+            "val": args.val_size,
+            "test": args.test_size
         },
         "kept_fields_in_raw": ["qid"] + KEEP_FIELDS,
         "file_paths": {
-            "train": "data/hotpotqa_distractor/raw/train.json",
-            "val": "data/hotpotqa_distractor/raw/val.json",
-            "test": "data/hotpotqa_distractor/raw/test.json",
-            "meta": "data/hotpotqa_distractor/splits/split_meta.json"
+            "train": str(out_train_path),
+            "val": str(out_val_path),
+            "test": str(out_test_path),
+            "meta": str(out_meta_path)
         }
     }
     save_json(meta, out_meta_path)

@@ -67,6 +67,12 @@ def main() -> None:
     parser.add_argument("--full-max-qids", default="0", help="Debug limit; 0 means all qids.")
     parser.add_argument("--full-only-split", choices=("", *SPLITS), default="")
     parser.add_argument("--full-max-workers", default="4")
+    parser.add_argument(
+        "--processed-base",
+        type=Path,
+        default=None,
+        help="Processed HotpotQA jsonl directory used to build raw units/index/targets.",
+    )
     parser.add_argument("--skip-full", action="store_true", help="Only build v5 inputs, not trajectories/samples/debug.")
     args = parser.parse_args()
 
@@ -82,6 +88,8 @@ def main() -> None:
     env["FULL_MAX_QIDS"] = str(args.full_max_qids)
     env["FULL_ONLY_SPLIT"] = args.full_only_split
     env["FULL_MAX_WORKERS"] = str(args.full_max_workers)
+    if args.processed_base is not None:
+        env["HOTPOTQA_PROCESSED_BASE"] = str(args.processed_base.resolve())
 
     copy_queries(args.query_source.resolve(), data_root)
     write_manifest(data_root, args)

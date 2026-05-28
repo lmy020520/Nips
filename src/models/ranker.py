@@ -9,6 +9,10 @@ class CrossEncoderRanker(nn.Module):
     def __init__(self, pretrained_name: str, dropout: float = 0.1):
         super().__init__()
         self.encoder = AutoModel.from_pretrained(pretrained_name)
+        # Some local mirrors/checkpoints may resolve to fp16 weights. Keep the
+        # trainable base model in fp32; autocast will handle mixed precision when
+        # explicitly enabled by the training config.
+        self.encoder.float()
         hidden_size = self.encoder.config.hidden_size
         self.dropout = nn.Dropout(dropout)
         self.scorer = nn.Linear(hidden_size, 1)

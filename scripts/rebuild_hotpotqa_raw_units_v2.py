@@ -6,7 +6,7 @@ from typing import Iterable, List, Dict
 
 SPLITS = ["train", "val", "test"]
 
-DEFAULT_INPUT_BASE = "data/hotpotqa_distractor/processed"
+DEFAULT_INPUT_BASE = os.environ.get("HOTPOTQA_PROCESSED_BASE", "data/hotpotqa_distractor/processed")
 DEFAULT_OUTPUT_BASE = os.environ.get("HOTPOTQA_UNIT_REGISTRY_BASE", os.environ.get("HOTPOTQA_DATA_ROOT", "data/hotpotqa_distractor_v2") + "/unit_registry")
 
 
