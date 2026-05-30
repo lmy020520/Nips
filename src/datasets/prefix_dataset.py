@@ -5,6 +5,13 @@ from typing import Dict, Iterable, List, Optional
 from torch.utils.data import Dataset
 
 
+ROLE_TO_ID = {
+    "bridge": 0,
+    "support": 1,
+    "distinguish": 2,
+}
+
+
 def read_jsonl(path: Path) -> Iterable[dict]:
     with path.open("r", encoding="utf-8") as f:
         for line_idx, line in enumerate(f, start=1):
@@ -58,6 +65,29 @@ def load_memory_map(memory_path: str) -> Dict[str, dict]:
         }
 
     return memory_map
+
+
+def load_role_map(role_targets_path: Optional[str]) -> Dict[str, Dict[str, int]]:
+    if not role_targets_path:
+        return {}
+
+    role_map: Dict[str, Dict[str, int]] = {}
+    path = Path(role_targets_path)
+    for row_idx, record in enumerate(read_jsonl(path), start=1):
+        qid = str(record.get("qid") or "")
+        if not qid:
+            raise ValueError(f"role targets 缺少 qid: file={path}, row={row_idx}")
+
+        qid_roles = role_map.setdefault(qid, {})
+        for target in record.get("T_q_raw") or []:
+            if not isinstance(target, dict):
+                continue
+            role = str(target.get("primary_role") or "").strip()
+            doc_id = str(target.get("doc_id") or "").strip()
+            if role not in ROLE_TO_ID or not doc_id:
+                continue
+            qid_roles[doc_id] = ROLE_TO_ID[role]
+    return role_map
 
 
 def format_candidate_text(memory_item: dict) -> str:
@@ -134,11 +164,12 @@ def get_k_t(record: dict) -> str:
 
 
 class PrefixRankingDataset(Dataset):
-    def __init__(self, samples_path: str, memory_path: str):
+    def __init__(self, samples_path: str, memory_path: str, role_targets_path: Optional[str] = None):
         self.samples_path = Path(samples_path)
         self.memory_path = Path(memory_path)
 
         self.memory_map = load_memory_map(str(self.memory_path))
+        self.role_map = load_role_map(role_targets_path)
         self.samples: List[dict] = []
 
         for row_idx, record in enumerate(read_jsonl(self.samples_path), start=1):
@@ -199,6 +230,10 @@ class PrefixRankingDataset(Dataset):
                 )
 
             label_idx = normalized_candidates.index(positive_unit_id)
+            positive_memory = self.memory_map.get(positive_unit_id)
+            positive_role_id = -100
+            if positive_memory:
+                positive_role_id = self.role_map.get(qid, {}).get(positive_memory["title"], -100)
 
             self.samples.append(
                 {
@@ -210,6 +245,7 @@ class PrefixRankingDataset(Dataset):
                     "candidate_texts": candidate_texts,
                     "label_idx": label_idx,
                     "positive_unit_id": positive_unit_id,
+                    "positive_role_id": positive_role_id,
                     "stop_label": stop_label,
                 }
             )
@@ -232,6 +268,7 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
     candidate_unit_ids: List[List[str]] = []
     positive_unit_ids: List[str] = []
     stop_labels: List[int] = []
+    positive_role_ids: List[int] = []
 
     for item in batch:
         qids.append(item["qid"])
@@ -239,6 +276,7 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
         candidate_unit_ids.append(item["candidate_unit_ids"])
         positive_unit_ids.append(item["positive_unit_id"])
         stop_labels.append(item["stop_label"])
+        positive_role_ids.append(item["positive_role_id"])
 
         context_text = f"Question: {item['question']}\nNotebook:\n{item['K_t']}"
         cand_texts = item["candidate_texts"]
@@ -260,4 +298,5 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
         "candidate_unit_ids": candidate_unit_ids,
         "positive_unit_ids": positive_unit_ids,
         "stop_labels": stop_labels,
+        "positive_role_ids": positive_role_ids,
     }

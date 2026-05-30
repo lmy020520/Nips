@@ -6,7 +6,7 @@ from transformers import AutoModel
 
 
 class CrossEncoderRanker(nn.Module):
-    def __init__(self, pretrained_name: str, dropout: float = 0.1):
+    def __init__(self, pretrained_name: str, dropout: float = 0.1, num_roles: int = 3):
         super().__init__()
         self.encoder = AutoModel.from_pretrained(pretrained_name)
         # Some local mirrors/checkpoints may resolve to fp16 weights. Keep the
@@ -16,6 +16,7 @@ class CrossEncoderRanker(nn.Module):
         hidden_size = self.encoder.config.hidden_size
         self.dropout = nn.Dropout(dropout)
         self.scorer = nn.Linear(hidden_size, 1)
+        self.role_classifier = nn.Linear(hidden_size, num_roles)
 
     def forward(
         self,
@@ -32,7 +33,8 @@ class CrossEncoderRanker(nn.Module):
         cls_state = outputs.last_hidden_state[:, 0, :]
         cls_state = self.dropout(cls_state)
         flat_scores = self.scorer(cls_state).squeeze(-1)  # [num_pairs]
-        return flat_scores
+        role_logits = self.role_classifier(cls_state)  # [num_pairs, num_roles]
+        return flat_scores, role_logits
 
     @staticmethod
     def pack_scores(

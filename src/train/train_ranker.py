@@ -38,8 +38,19 @@ def save_json(obj: dict, path: str):
         json.dump(obj, f, ensure_ascii=False, indent=2)
 
 
-def build_loader(samples_path: str, memory_path: str, batch_size: int, num_workers: int, shuffle: bool):
-    dataset = PrefixRankingDataset(samples_path=samples_path, memory_path=memory_path)
+def build_loader(
+    samples_path: str,
+    memory_path: str,
+    batch_size: int,
+    num_workers: int,
+    shuffle: bool,
+    role_targets_path: str = None,
+):
+    dataset = PrefixRankingDataset(
+        samples_path=samples_path,
+        memory_path=memory_path,
+        role_targets_path=role_targets_path,
+    )
     loader = DataLoader(
         dataset,
         batch_size=batch_size,
@@ -54,12 +65,31 @@ def move_to_device(batch_tokens: dict, device: torch.device) -> dict:
     return {k: v.to(device) for k, v in batch_tokens.items()}
 
 
-def run_eval(model, loader, tokenizer, device, max_length: int) -> Dict[str, float]:
+def get_positive_flat_indices(candidate_counts, labels, device):
+    offsets = []
+    cursor = 0
+    for count, label in zip(candidate_counts, labels.tolist()):
+        offsets.append(cursor + label)
+        cursor += count
+    return torch.tensor(offsets, dtype=torch.long, device=device)
+
+
+def compute_margin_loss(packed_scores, labels, margin: float):
+    positive_scores = packed_scores.gather(1, labels.unsqueeze(1)).squeeze(1)
+    negative_scores = packed_scores.clone()
+    negative_scores.scatter_(1, labels.unsqueeze(1), torch.finfo(packed_scores.dtype).min)
+    hardest_negative_scores = negative_scores.max(dim=1).values
+    return F.relu(margin - positive_scores + hardest_negative_scores).mean()
+
+
+def run_eval(model, loader, tokenizer, device, max_length: int, role_aux_weight: float = 0.0) -> Dict[str, float]:
     model.eval()
 
     total_loss = 0.0
     total_samples = 0
     correct = 0
+    role_correct = 0
+    role_total = 0
 
     with torch.no_grad():
         for batch in tqdm(loader, desc="eval", leave=False):
@@ -74,7 +104,7 @@ def run_eval(model, loader, tokenizer, device, max_length: int) -> Dict[str, flo
             tokens = move_to_device(tokens, device)
             labels = torch.tensor(batch["labels"], dtype=torch.long, device=device)
 
-            flat_scores = model(
+            flat_scores, flat_role_logits = model(
                 input_ids=tokens["input_ids"],
                 attention_mask=tokens["attention_mask"],
                 token_type_ids=tokens.get("token_type_ids"),
@@ -82,6 +112,17 @@ def run_eval(model, loader, tokenizer, device, max_length: int) -> Dict[str, flo
             packed_scores, _ = CrossEncoderRanker.pack_scores(flat_scores, batch["candidate_counts"])
 
             loss = F.cross_entropy(packed_scores, labels)
+            role_labels = torch.tensor(batch["positive_role_ids"], dtype=torch.long, device=device)
+            role_mask = role_labels != -100
+            if role_aux_weight > 0.0 and role_mask.any():
+                positive_flat_indices = get_positive_flat_indices(batch["candidate_counts"], labels, device)
+                positive_role_logits = flat_role_logits[positive_flat_indices]
+                role_loss = F.cross_entropy(positive_role_logits[role_mask], role_labels[role_mask])
+                loss = loss + role_aux_weight * role_loss
+                role_correct += (
+                    positive_role_logits[role_mask].argmax(dim=-1) == role_labels[role_mask]
+                ).sum().item()
+                role_total += role_mask.sum().item()
             if not torch.isfinite(loss):
                 raise FloatingPointError(
                     "Non-finite eval loss detected. "
@@ -100,6 +141,8 @@ def run_eval(model, loader, tokenizer, device, max_length: int) -> Dict[str, flo
     return {
         "loss": avg_loss,
         "acc": acc,
+        "role_acc": role_correct / max(role_total, 1),
+        "role_labeled": role_total,
     }
 
 
@@ -116,12 +159,17 @@ def train_one_epoch(
     max_grad_norm: float,
     use_fp16: bool,
     log_every: int,
+    role_aux_weight: float,
+    margin_loss_weight: float,
+    margin: float,
 ):
     model.train()
 
     total_loss = 0.0
     total_samples = 0
     correct = 0
+    role_correct = 0
+    role_total = 0
 
     optimizer.zero_grad(set_to_none=True)
 
@@ -139,13 +187,23 @@ def train_one_epoch(
         labels = torch.tensor(batch["labels"], dtype=torch.long, device=device)
 
         with torch.amp.autocast("cuda", enabled=use_fp16):
-            flat_scores = model(
+            flat_scores, flat_role_logits = model(
                 input_ids=tokens["input_ids"],
                 attention_mask=tokens["attention_mask"],
                 token_type_ids=tokens.get("token_type_ids"),
             )
             packed_scores, _ = CrossEncoderRanker.pack_scores(flat_scores, batch["candidate_counts"])
             loss = F.cross_entropy(packed_scores, labels)
+            if margin_loss_weight > 0.0:
+                loss = loss + margin_loss_weight * compute_margin_loss(packed_scores, labels, margin)
+
+            role_labels = torch.tensor(batch["positive_role_ids"], dtype=torch.long, device=device)
+            role_mask = role_labels != -100
+            if role_aux_weight > 0.0 and role_mask.any():
+                positive_flat_indices = get_positive_flat_indices(batch["candidate_counts"], labels, device)
+                positive_role_logits = flat_role_logits[positive_flat_indices]
+                role_loss = F.cross_entropy(positive_role_logits[role_mask], role_labels[role_mask])
+                loss = loss + role_aux_weight * role_loss
             if not torch.isfinite(loss):
                 raise FloatingPointError(
                     "Non-finite train loss detected. "
@@ -170,6 +228,11 @@ def train_one_epoch(
             total_loss += loss.item() * grad_accum_steps * bs
             total_samples += bs
             correct += (preds == labels).sum().item()
+            if role_aux_weight > 0.0 and role_mask.any():
+                role_correct += (
+                    positive_role_logits[role_mask].argmax(dim=-1) == role_labels[role_mask]
+                ).sum().item()
+                role_total += role_mask.sum().item()
 
         if step_idx % log_every == 0:
             progress.set_postfix(
@@ -183,6 +246,8 @@ def train_one_epoch(
     return {
         "loss": avg_loss,
         "acc": acc,
+        "role_acc": role_correct / max(role_total, 1),
+        "role_labeled": role_total,
     }
 
 
@@ -236,6 +301,9 @@ def main():
     max_grad_norm = float(config["train"]["max_grad_norm"])
     log_every = int(config["train"]["log_every"])
     use_fp16 = bool(config["train"]["fp16"]) and device.type == "cuda"
+    role_aux_weight = float(config["train"].get("role_aux_weight", 0.0))
+    margin_loss_weight = float(config["train"].get("margin_loss_weight", 0.0))
+    margin = float(config["train"].get("margin", 0.2))
 
     tokenizer = AutoTokenizer.from_pretrained(pretrained_name)
 
@@ -245,6 +313,7 @@ def main():
         batch_size=batch_size,
         num_workers=num_workers,
         shuffle=True,
+        role_targets_path=config["data"].get("train_role_targets"),
     )
     val_dataset, val_loader = build_loader(
         samples_path=config["data"]["val_samples"],
@@ -252,6 +321,7 @@ def main():
         batch_size=batch_size,
         num_workers=num_workers,
         shuffle=False,
+        role_targets_path=config["data"].get("val_role_targets"),
     )
     test_dataset, test_loader = build_loader(
         samples_path=config["data"]["test_samples"],
@@ -259,6 +329,7 @@ def main():
         batch_size=batch_size,
         num_workers=num_workers,
         shuffle=False,
+        role_targets_path=config["data"].get("test_role_targets"),
     )
 
     model = CrossEncoderRanker(
@@ -306,6 +377,9 @@ def main():
             max_grad_norm=max_grad_norm,
             use_fp16=use_fp16,
             log_every=log_every,
+            role_aux_weight=role_aux_weight,
+            margin_loss_weight=margin_loss_weight,
+            margin=margin,
         )
 
         val_metrics = run_eval(
@@ -314,6 +388,7 @@ def main():
             tokenizer=tokenizer,
             device=device,
             max_length=max_length,
+            role_aux_weight=role_aux_weight,
         )
 
         print(
@@ -321,6 +396,7 @@ def main():
             f"train_acc={train_metrics['acc']:.4f} "
             f"val_loss={val_metrics['loss']:.4f} "
             f"val_acc={val_metrics['acc']:.4f}"
+            f" val_role_acc={val_metrics['role_acc']:.4f}"
         )
 
         history.append(
@@ -356,6 +432,7 @@ def main():
         tokenizer=tokenizer,
         device=device,
         max_length=max_length,
+        role_aux_weight=role_aux_weight,
     )
     save_json(test_metrics, os.path.join(output_dir, "test_metrics.json"))
 
