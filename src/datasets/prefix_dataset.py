@@ -164,13 +164,20 @@ def get_k_t(record: dict) -> str:
 
 
 class PrefixRankingDataset(Dataset):
-    def __init__(self, samples_path: str, memory_path: str, role_targets_path: Optional[str] = None):
+    def __init__(
+        self,
+        samples_path: str,
+        memory_path: str,
+        role_targets_path: Optional[str] = None,
+        require_labeled_positive: bool = False,
+    ):
         self.samples_path = Path(samples_path)
         self.memory_path = Path(memory_path)
 
         self.memory_map = load_memory_map(str(self.memory_path))
         self.role_map = load_role_map(role_targets_path)
         self.samples: List[dict] = []
+        self.skipped_unlabeled_positive = 0
 
         for row_idx, record in enumerate(read_jsonl(self.samples_path), start=1):
             required_fields = ["qid", "t", "question", "candidates"]
@@ -234,6 +241,9 @@ class PrefixRankingDataset(Dataset):
             positive_role_id = -100
             if positive_memory:
                 positive_role_id = self.role_map.get(qid, {}).get(positive_memory["title"], -100)
+            if require_labeled_positive and positive_role_id == -100:
+                self.skipped_unlabeled_positive += 1
+                continue
 
             self.samples.append(
                 {

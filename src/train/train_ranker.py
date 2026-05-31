@@ -45,11 +45,13 @@ def build_loader(
     num_workers: int,
     shuffle: bool,
     role_targets_path: str = None,
+    require_labeled_positive: bool = False,
 ):
     dataset = PrefixRankingDataset(
         samples_path=samples_path,
         memory_path=memory_path,
         role_targets_path=role_targets_path,
+        require_labeled_positive=require_labeled_positive,
     )
     loader = DataLoader(
         dataset,
@@ -314,6 +316,7 @@ def main():
         num_workers=num_workers,
         shuffle=True,
         role_targets_path=config["data"].get("train_role_targets"),
+        require_labeled_positive=bool(config["data"].get("train_require_labeled_positive", False)),
     )
     val_dataset, val_loader = build_loader(
         samples_path=config["data"]["val_samples"],
@@ -353,6 +356,7 @@ def main():
 
     print("===== dataset stats =====")
     print(f"train samples: {len(train_dataset)}")
+    print(f"train skipped unlabeled positives: {train_dataset.skipped_unlabeled_positive}")
     print(f"val samples:   {len(val_dataset)}")
     print(f"test samples:  {len(test_dataset)}")
     print("===== training =====")
