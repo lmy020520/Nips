@@ -4206,7 +4206,51 @@ def rollout_one_qid(
     one_more_closure_stop_attempt_used = False
     late_repair_stop_retry_used = False
 
+    # Some initialization states already contain every gold target. Close those
+    # paths before retrieval so a zero-value distractor cannot become a fake
+    # next-step positive merely because it appears first in the shortlist.
+    initial_unit_registry = build_unit_registry(raw_unit_map, derived_registry)
+    initial_probe = make_offline_terminal_probe(
+        query_info=query_info,
+        state=state,
+        target_info=target_info,
+        unit_registry=initial_unit_registry,
+        chunks=chunks,
+        api_key=api_key,
+        model=model,
+        base_url=base_url,
+        t=0,
+        reason="pre_step_initial_closure",
+    )
+    if initial_probe is not None:
+        terminal_status = "terminal"
+        terminal_t = 0
+        abort_reason = None
+        terminal_probe = initial_probe
+        terminal_failure_signals = build_failure_signals(
+            question=query_info["question"],
+            stop_probe_history=stop_probe_history,
+            last_delta_covered_targets=last_delta_covered_targets,
+            last_retrieval_repeat_ratio=last_retrieval_repeat_ratio,
+        )
+        terminal_gate_trace = {
+            "pre_step_initial_closure": True,
+            "raw_complete": True,
+            "derived_need": False,
+            "trigger_derived": False,
+        }
+        terminal_proposer_trace = {
+            "pre_step_initial_closure": True,
+            "harvest_count": 0,
+            "final_count": 0,
+            "aux_count": 0,
+            "illegal_count": 0,
+        }
+        log(f"[QID {qid}] TERMINAL by pre-step initial closure", force=True)
+
     for t in range(T_MAX):
+        if terminal_status == "terminal":
+            break
         log(f"[QID {qid}] step={t} begin")
         probe = None
         g_harvest = []

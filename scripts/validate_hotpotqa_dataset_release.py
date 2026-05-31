@@ -258,19 +258,26 @@ def validate_split_alignment(
     for split in SPLITS:
         full_qids = set(full_by_split.get(split, {}))
         sample_qids = set(samples_by_split.get(split, {}))
+        expected_sample_qids = {
+            qid
+            for qid, row in full_by_split.get(split, {}).items()
+            if row.get("terminal_t") != 0
+        }
         debug_qids = set(debug_by_split.get(split, {}))
         for qid in full_qids:
             prev = qid_owner.get(qid)
             if prev is not None:
                 add_issue(issues, "CRITICAL", split=split, qid=qid, issue="qid_repeated_across_splits", extra={"detail": f"also_in={prev}"})
             qid_owner[qid] = split
-        if full_qids != sample_qids:
+        # A trajectory closed by the initial-state probe has no next-step
+        # decision, so it correctly contributes no training sample rows.
+        if expected_sample_qids != sample_qids:
             add_issue(
                 issues,
                 "CRITICAL",
                 split=split,
                 issue="full_sample_qid_set_mismatch",
-                extra={"detail": f"missing_samples={sorted(full_qids - sample_qids)[:5]} extra_samples={sorted(sample_qids - full_qids)[:5]}"},
+                extra={"detail": f"missing_samples={sorted(expected_sample_qids - sample_qids)[:5]} extra_samples={sorted(sample_qids - expected_sample_qids)[:5]}"},
             )
         if full_qids != debug_qids:
             add_issue(
@@ -433,7 +440,10 @@ def validate_full_and_path(
                 terminal_units = sorted_h_units(terminal_state)
                 # Terminal H_t includes the initial seed evidence prefix; the generated path
                 # should match the suffix appended by teacher steps.
-                if len(terminal_units) < len(positive_units) or terminal_units[-len(positive_units):] != positive_units:
+                if positive_units and (
+                    len(terminal_units) < len(positive_units)
+                    or terminal_units[-len(positive_units):] != positive_units
+                ):
                     add_issue(issues, "CRITICAL", split=split, qid=qid, issue="terminal_state_path_mismatch")
     return stats
 
