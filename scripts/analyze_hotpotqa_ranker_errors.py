@@ -83,6 +83,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--output", default="")
     parser.add_argument("--batch-size", type=int, default=4)
     parser.add_argument("--top-errors", type=int, default=50)
+    parser.add_argument("--top-candidates", type=int, default=5)
     parser.add_argument("--device", default="cuda")
     return parser
 
@@ -170,6 +171,24 @@ def main():
                     confusion[(positive_role, predicted_role)] += 1
                     positive_score = float(packed_scores[index, label].item())
                     predicted_score = float(packed_scores[index, prediction].item())
+                    valid_scores = packed_scores[index, :count]
+                    ranked_indices = valid_scores.argsort(descending=True).tolist()
+                    positive_rank = ranked_indices.index(label) + 1
+                    top_candidates = []
+                    for rank, candidate_index in enumerate(ranked_indices[: max(args.top_candidates, 0)], start=1):
+                        candidate_id = candidate_ids[candidate_index]
+                        candidate_memory = dataset.memory_map.get(candidate_id, {})
+                        candidate_doc_id = str(candidate_memory.get("title") or "")
+                        candidate_role = doc_role_map.get(qid, {}).get(candidate_doc_id, "unlabeled")
+                        top_candidates.append(
+                            {
+                                "rank": rank,
+                                "unit_id": candidate_id,
+                                "doc_id": candidate_doc_id,
+                                "role": candidate_role,
+                                "score": round(float(valid_scores[candidate_index].item()), 6),
+                            }
+                        )
                     errors.append(
                         {
                             "qid": qid,
@@ -182,6 +201,8 @@ def main():
                             "positive_score": round(positive_score, 6),
                             "predicted_score": round(predicted_score, 6),
                             "score_gap": round(predicted_score - positive_score, 6),
+                            "positive_rank": positive_rank,
+                            "top_candidates": top_candidates,
                         }
                     )
 
