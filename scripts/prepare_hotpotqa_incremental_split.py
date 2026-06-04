@@ -36,6 +36,15 @@ def load_json(path: Path) -> list[dict]:
     return rows
 
 
+def load_query_qids(path: Path) -> list[str]:
+    qids = []
+    with path.open("r", encoding="utf-8") as f:
+        for line in f:
+            if line.strip():
+                qids.append(str(json.loads(line)["qid"]))
+    return qids
+
+
 def write_json(rows: list[dict], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
@@ -108,6 +117,12 @@ def distribution(rows: list[dict]) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--existing-source", type=Path, default=Path("data/hotpotqa_distractor_v6_10k_source"))
+    parser.add_argument(
+        "--existing-query-root",
+        type=Path,
+        default=Path("data/hotpotqa_distractor_v7_10k_llm_prestep/queries"),
+        help="Fallback qid source when existing-source/raw is unavailable.",
+    )
     parser.add_argument("--output-source", type=Path, default=Path("data/hotpotqa_distractor_v8_15k_source"))
     parser.add_argument("--new-train-qids", type=int, default=5000)
     parser.add_argument("--seed", type=int, default=20260604)
@@ -120,17 +135,41 @@ def main() -> None:
     if manifest_path.exists() and not args.force:
         raise FileExistsError(f"output already exists; pass --force to rebuild: {output}")
 
-    existing = {split: load_json(args.existing_source / "raw" / f"{split}.json") for split in SPLITS}
-    existing_qids = {qid_of(row) for split in SPLITS for row in existing[split]}
-
     print("Loading full HotpotQA distractor train split...", flush=True)
     dataset = load_dataset(
         "hotpotqa/hotpot_qa",
         "distractor",
-        split="train",
         cache_dir=str(args.dataset_cache_dir) if args.dataset_cache_dir else None,
     )
-    pool = [dict(row) for row in dataset if qid_of(row) not in existing_qids]
+    raw_paths = {split: args.existing_source / "raw" / f"{split}.json" for split in SPLITS}
+    if all(path.exists() for path in raw_paths.values()):
+        existing = {split: load_json(path) for split, path in raw_paths.items()}
+        existing_source_mode = "raw_source"
+    else:
+        requested = {
+            split: load_query_qids(args.existing_query_root / f"{split}.jsonl")
+            for split in SPLITS
+        }
+        full_lookup = {
+            qid_of(row): dict(row)
+            for source_split in ("train", "validation")
+            for row in dataset[source_split]
+        }
+        missing = {
+            split: [qid for qid in qids if qid not in full_lookup]
+            for split, qids in requested.items()
+        }
+        missing = {split: qids for split, qids in missing.items() if qids}
+        if missing:
+            raise RuntimeError(f"could not restore existing qids from full HotpotQA: {missing}")
+        existing = {
+            split: [project_fields(full_lookup[qid]) for qid in qids]
+            for split, qids in requested.items()
+        }
+        existing_source_mode = "restored_from_queries"
+
+    existing_qids = {qid_of(row) for split in SPLITS for row in existing[split]}
+    pool = [dict(row) for row in dataset["train"] if qid_of(row) not in existing_qids]
     new_raw, bucket_stats = select_new_rows(pool, args.new_train_qids, args.seed)
     new_rows = [project_fields(row) for row in new_raw]
 
@@ -157,6 +196,8 @@ def main() -> None:
         "created_at": datetime.now(timezone.utc).isoformat(),
         "seed": args.seed,
         "existing_source": str(args.existing_source),
+        "existing_query_root": str(args.existing_query_root),
+        "existing_source_mode": existing_source_mode,
         "output_source": str(output),
         "new_train_qids": len(new_rows),
         "split_sizes": {split: len(combined[split]) for split in SPLITS},
