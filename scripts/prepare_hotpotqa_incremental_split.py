@@ -55,6 +55,23 @@ def stable_key(qid: str, seed: int) -> str:
     return hashlib.sha256(f"{seed}::{qid}".encode()).hexdigest()
 
 
+def restore_original_split(dataset, train_size: int, val_size: int, test_size: int, seed: int) -> dict[str, list[dict]]:
+    sorted_train = sorted((dict(row) for row in dataset["train"]), key=lambda row: stable_key(qid_of(row), seed))
+    sorted_validation = sorted(
+        (dict(row) for row in dataset["validation"]),
+        key=lambda row: stable_key(qid_of(row), seed),
+    )
+    if len(sorted_train) < train_size + val_size:
+        raise RuntimeError("full HotpotQA train split is too small to restore the existing split")
+    if len(sorted_validation) < test_size:
+        raise RuntimeError("full HotpotQA validation split is too small to restore the existing test split")
+    return {
+        "train": [project_fields(row) for row in sorted_train[:train_size]],
+        "val": [project_fields(row) for row in sorted_train[train_size : train_size + val_size]],
+        "test": [project_fields(row) for row in sorted_validation[:test_size]],
+    }
+
+
 def qid_of(row: dict) -> str:
     for key in ("qid", "_id", "id"):
         if key in row:
@@ -126,6 +143,10 @@ def main() -> None:
     parser.add_argument("--output-source", type=Path, default=Path("data/hotpotqa_distractor_v8_15k_source"))
     parser.add_argument("--new-train-qids", type=int, default=5000)
     parser.add_argument("--seed", type=int, default=20260604)
+    parser.add_argument("--existing-split-seed", type=int, default=42)
+    parser.add_argument("--existing-train-size", type=int, default=10000)
+    parser.add_argument("--existing-val-size", type=int, default=500)
+    parser.add_argument("--existing-test-size", type=int, default=500)
     parser.add_argument("--dataset-cache-dir", type=Path)
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
@@ -145,7 +166,7 @@ def main() -> None:
     if all(path.exists() for path in raw_paths.values()):
         existing = {split: load_json(path) for split, path in raw_paths.items()}
         existing_source_mode = "raw_source"
-    else:
+    elif all((args.existing_query_root / f"{split}.jsonl").exists() for split in SPLITS):
         requested = {
             split: load_query_qids(args.existing_query_root / f"{split}.jsonl")
             for split in SPLITS
@@ -167,6 +188,15 @@ def main() -> None:
             for split, qids in requested.items()
         }
         existing_source_mode = "restored_from_queries"
+    else:
+        existing = restore_original_split(
+            dataset,
+            train_size=args.existing_train_size,
+            val_size=args.existing_val_size,
+            test_size=args.existing_test_size,
+            seed=args.existing_split_seed,
+        )
+        existing_source_mode = "restored_from_stable_split"
 
     existing_qids = {qid_of(row) for split in SPLITS for row in existing[split]}
     pool = [dict(row) for row in dataset["train"] if qid_of(row) not in existing_qids]
@@ -198,6 +228,7 @@ def main() -> None:
         "existing_source": str(args.existing_source),
         "existing_query_root": str(args.existing_query_root),
         "existing_source_mode": existing_source_mode,
+        "existing_split_seed": args.existing_split_seed,
         "output_source": str(output),
         "new_train_qids": len(new_rows),
         "split_sizes": {split: len(combined[split]) for split in SPLITS},
