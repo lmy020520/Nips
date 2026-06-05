@@ -339,6 +339,16 @@ def main():
         pretrained_name=pretrained_name,
         dropout=dropout,
     ).to(device)
+    init_checkpoint = str(config["train"].get("init_checkpoint", "") or "").strip()
+    if init_checkpoint:
+        checkpoint = torch.load(init_checkpoint, map_location=device)
+        state_dict = checkpoint.get("model_state_dict", checkpoint)
+        missing_keys, unexpected_keys = model.load_state_dict(state_dict, strict=False)
+        print(f"Loaded init checkpoint: {init_checkpoint}")
+        if missing_keys:
+            print(f"  missing_keys: {missing_keys}")
+        if unexpected_keys:
+            print(f"  unexpected_keys: {unexpected_keys}")
 
     optimizer = AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
 

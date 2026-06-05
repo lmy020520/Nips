@@ -1,0 +1,32 @@
+seed: 42
+output_dir: outputs/ranker/deberta_v3_large_v7_lr1e5_len320
+
+model:
+  pretrained_name: models/deberta-v3-large
+  dropout: 0.1
+
+data:
+  train_samples: data/hotpotqa_distractor_v7_10k_llm_prestep/samples/train.jsonl
+  val_samples: data/hotpotqa_distractor_v7_10k_llm_prestep/samples/val.jsonl
+  test_samples: data/hotpotqa_distractor_v7_10k_llm_prestep/samples/test.jsonl
+
+  train_memory: data/hotpotqa_distractor_v7_10k_llm_prestep/unit_registry/raw_units_train.jsonl
+  val_memory: data/hotpotqa_distractor_v7_10k_llm_prestep/unit_registry/raw_units_val.jsonl
+  test_memory: data/hotpotqa_distractor_v7_10k_llm_prestep/unit_registry/raw_units_test.jsonl
+
+  train_role_targets: data/hotpotqa_distractor_v7_10k_llm_prestep/targets/train.jsonl
+  val_role_targets: data/hotpotqa_distractor_v7_10k_llm_prestep/targets/val.jsonl
+  test_role_targets: data/hotpotqa_distractor_v7_10k_llm_prestep/targets/test.jsonl
+
+train:
+  batch_size: 1
+  num_workers: 0
+  epochs: 4
+  lr: 1.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.06
+  max_length: 320
+  grad_accum_steps: 16
+  max_grad_norm: 1.0
+  log_every: 20
+  fp16: false
