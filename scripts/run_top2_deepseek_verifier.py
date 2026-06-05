@@ -181,6 +181,29 @@ def build_prompt(
         )
         return top2_ids, user_prompt
 
+    if style == "targeted":
+        user_prompt = (
+            f"Question:\n{question}\n\n"
+            f"Gold answer: {answer or '(not provided)'}\n\n"
+            f"Already selected evidence before this step:\n{history}\n\n"
+            "The original ranker chose Candidate A, but this is a known hard near-miss case. "
+            "Do a careful counterfactual check: would Candidate B be a better next evidence sentence?\n\n"
+            "Checklist:\n"
+            "- Does Candidate A merely identify an entity/background while Candidate B supplies the missing relation?\n"
+            "- Does Candidate B connect the current evidence to the answer or next hop?\n"
+            "- Is Candidate A a lexical distractor that matches question words but does not advance reasoning?\n"
+            "- For comparison questions, does the chosen sentence support the requested comparison, not just one entity?\n"
+            "- For bridge questions, does the chosen sentence establish the bridge needed to reach the answer?\n\n"
+            "Choose A only if A is clearly more useful as the next evidence. "
+            "Choose B if B better completes the multi-hop reasoning, even if B has lower ranker score.\n\n"
+            f"Candidate A metadata: doc_id={doc_a}, role={role_a}, ranker_score={top2[0].get('score')}\n"
+            f"Candidate A text:\n{cand_a}\n\n"
+            f"Candidate B metadata: doc_id={doc_b}, role={role_b}, ranker_score={top2[1].get('score')}\n"
+            f"Candidate B text:\n{cand_b}\n\n"
+            'Return strict JSON: {"choice":"A"} or {"choice":"B"} with an optional short "reason".'
+        )
+        return top2_ids, user_prompt
+
     answer_line = f"Gold answer: {answer}\n\n" if answer else ""
     user_prompt = (
         f"Question:\n{question}\n\n"
@@ -210,7 +233,12 @@ def main() -> None:
     parser.add_argument("--memory", required=True)
     parser.add_argument("--queries", default="")
     parser.add_argument("--targets", default="")
-    parser.add_argument("--prompt-style", choices=("basic", "enhanced"), default="enhanced")
+    parser.add_argument("--prompt-style", choices=("basic", "enhanced", "targeted"), default="enhanced")
+    parser.add_argument(
+        "--rerun-unfixed-from",
+        default="",
+        help="Optional previous verifier report; only rerun cases that were not fixed.",
+    )
     parser.add_argument("--output", default="outputs/analysis/top2_deepseek_verifier_results.json")
     parser.add_argument("--cache-dir", default="outputs/analysis/top2_verifier_cache")
     parser.add_argument("--limit", type=int, default=0)
@@ -238,6 +266,14 @@ def main() -> None:
         for item in analysis.get("top_errors", [])
         if item.get("positive_rank") is not None and int(item["positive_rank"]) <= 2
     ]
+    if args.rerun_unfixed_from:
+        previous = load_json(Path(args.rerun_unfixed_from))
+        unfixed_keys = {
+            (str(item["qid"]), int(item["t"]))
+            for item in previous.get("results", [])
+            if not item.get("fixed")
+        }
+        errors = [item for item in errors if (str(item["qid"]), int(item["t"])) in unfixed_keys]
     if args.limit > 0:
         errors = errors[: args.limit]
 
@@ -325,6 +361,7 @@ def main() -> None:
         "memory": args.memory,
         "model": model,
         "prompt_style": args.prompt_style,
+        "rerun_unfixed_from": args.rerun_unfixed_from,
         "base_summary": summary,
         "verifier_cases": len(errors),
         "fixed": fixed,
