@@ -44,6 +44,29 @@ def load_sample_map(samples_path: Path) -> dict[tuple[str, int], dict]:
     return rows
 
 
+def load_query_map(query_path: Path | None) -> dict[str, dict]:
+    if query_path is None or not query_path.exists():
+        return {}
+    return {str(record["qid"]): record for record in read_jsonl(query_path)}
+
+
+def load_doc_role_map(targets_path: Path | None) -> dict[str, dict[str, str]]:
+    if targets_path is None or not targets_path.exists():
+        return {}
+    role_map: dict[str, dict[str, str]] = {}
+    for record in read_jsonl(targets_path):
+        qid = str(record["qid"])
+        qid_roles = role_map.setdefault(qid, {})
+        for unit in record.get("T_q_raw") or []:
+            if not isinstance(unit, dict):
+                continue
+            doc_id = str(unit.get("doc_id") or "").strip()
+            role = str(unit.get("primary_role") or "").strip()
+            if doc_id and role:
+                qid_roles[doc_id] = role
+    return role_map
+
+
 def load_memory_map(memory_path: Path) -> dict[str, dict]:
     rows = {}
     for record in read_jsonl(memory_path):
@@ -63,6 +86,13 @@ def candidate_text(unit_id: str, memory_map: dict[str, dict], sample: dict) -> s
         payload = derived[unit_id]
         return str(payload.get("text") or payload.get("unit_text") or "").strip()
     return unit_id
+
+
+def candidate_doc_id(unit_id: str, memory_map: dict[str, dict]) -> str:
+    if unit_id in memory_map:
+        item = memory_map[unit_id]
+        return str(item.get("doc_id") or item.get("title") or unit_title(unit_id))
+    return unit_title(unit_id)
 
 
 def history_text(sample: dict, memory_map: dict[str, dict]) -> str:
@@ -118,21 +148,56 @@ def deepseek_json(
     return json.loads(content)
 
 
-def build_prompt(error: dict, sample: dict, memory_map: dict[str, dict]) -> tuple[list[str], str]:
+def build_prompt(
+    error: dict,
+    sample: dict,
+    memory_map: dict[str, dict],
+    query_map: dict[str, dict],
+    doc_role_map: dict[str, dict[str, str]],
+    style: str,
+) -> tuple[list[str], str]:
     top2 = error["top_candidates"][:2]
     top2_ids = [str(item["unit_id"]) for item in top2]
-    question = str(sample.get("question") or error.get("question") or "")
+    qid = str(error["qid"])
+    question = str(sample.get("question") or query_map.get(qid, {}).get("question") or "")
+    answer = str(query_map.get(qid, {}).get("answer") or "")
     history = history_text(sample, memory_map)
+    doc_a = candidate_doc_id(top2_ids[0], memory_map)
+    doc_b = candidate_doc_id(top2_ids[1], memory_map)
+    role_a = doc_role_map.get(qid, {}).get(doc_a, top2[0].get("role", "unlabeled"))
+    role_b = doc_role_map.get(qid, {}).get(doc_b, top2[1].get("role", "unlabeled"))
     cand_a = candidate_text(top2_ids[0], memory_map, sample)
     cand_b = candidate_text(top2_ids[1], memory_map, sample)
+    if style == "basic":
+        user_prompt = (
+            f"Question:\n{question}\n\n"
+            f"Already selected evidence before this step:\n{history}\n\n"
+            "Choose which candidate should be selected as the NEXT evidence. "
+            "The next evidence should best advance the multi-hop reasoning toward answering the question, "
+            "not merely repeat already selected information.\n\n"
+            f"Candidate A:\n{cand_a}\n\n"
+            f"Candidate B:\n{cand_b}\n\n"
+            'Return strict JSON: {"choice":"A"} or {"choice":"B"} with an optional short "reason".'
+        )
+        return top2_ids, user_prompt
+
+    answer_line = f"Gold answer: {answer}\n\n" if answer else ""
     user_prompt = (
         f"Question:\n{question}\n\n"
+        f"{answer_line}"
         f"Already selected evidence before this step:\n{history}\n\n"
-        "Choose which candidate should be selected as the NEXT evidence. "
-        "The next evidence should best advance the multi-hop reasoning toward answering the question, "
-        "not merely repeat already selected information.\n\n"
-        f"Candidate A:\n{cand_a}\n\n"
-        f"Candidate B:\n{cand_b}\n\n"
+        "Task: choose the better NEXT evidence sentence for a trajectory-aware multi-hop retriever.\n\n"
+        "Decision rules:\n"
+        "1. Prefer the candidate that fills the missing hop needed to answer the question.\n"
+        "2. If a candidate only repeats already selected evidence, choose the other candidate.\n"
+        "3. If t=1, prefer evidence that connects the previous hop to the final answer or missing entity.\n"
+        "4. Use the gold answer only as a judging aid; do not select a sentence solely because it mentions many question words.\n"
+        "5. For bridge evidence, choose the sentence that creates the useful link to the next document/entity.\n"
+        "6. For support evidence, choose the sentence that directly supports the final answer.\n\n"
+        f"Candidate A metadata: doc_id={doc_a}, role={role_a}, ranker_score={top2[0].get('score')}\n"
+        f"Candidate A text:\n{cand_a}\n\n"
+        f"Candidate B metadata: doc_id={doc_b}, role={role_b}, ranker_score={top2[1].get('score')}\n"
+        f"Candidate B text:\n{cand_b}\n\n"
         'Return strict JSON: {"choice":"A"} or {"choice":"B"} with an optional short "reason".'
     )
     return top2_ids, user_prompt
@@ -143,6 +208,9 @@ def main() -> None:
     parser.add_argument("--analysis", required=True)
     parser.add_argument("--samples", required=True)
     parser.add_argument("--memory", required=True)
+    parser.add_argument("--queries", default="")
+    parser.add_argument("--targets", default="")
+    parser.add_argument("--prompt-style", choices=("basic", "enhanced"), default="enhanced")
     parser.add_argument("--output", default="outputs/analysis/top2_deepseek_verifier_results.json")
     parser.add_argument("--cache-dir", default="outputs/analysis/top2_verifier_cache")
     parser.add_argument("--limit", type=int, default=0)
@@ -160,6 +228,8 @@ def main() -> None:
     analysis = load_json(Path(args.analysis))
     sample_map = load_sample_map(Path(args.samples))
     memory_map = load_memory_map(Path(args.memory))
+    query_map = load_query_map(Path(args.queries)) if args.queries else {}
+    doc_role_map = load_doc_role_map(Path(args.targets)) if args.targets else {}
     cache_dir = Path(args.cache_dir)
     cache_dir.mkdir(parents=True, exist_ok=True)
 
@@ -185,8 +255,15 @@ def main() -> None:
         qid = str(error["qid"])
         t = int(error["t"])
         sample = sample_map[(qid, t)]
-        top2_ids, user_prompt = build_prompt(error, sample, memory_map)
-        key = cache_key(qid, t, top2_ids)
+        top2_ids, user_prompt = build_prompt(
+            error,
+            sample,
+            memory_map,
+            query_map,
+            doc_role_map,
+            args.prompt_style,
+        )
+        key = cache_key(f"{args.prompt_style}:{qid}", t, top2_ids)
         cache_path = cache_dir / f"{key}.json"
         if cache_path.exists():
             verifier = load_json(cache_path)
@@ -247,6 +324,7 @@ def main() -> None:
         "samples": args.samples,
         "memory": args.memory,
         "model": model,
+        "prompt_style": args.prompt_style,
         "base_summary": summary,
         "verifier_cases": len(errors),
         "fixed": fixed,
