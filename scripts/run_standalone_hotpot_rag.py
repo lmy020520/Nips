@@ -11,11 +11,9 @@ import time
 import urllib.request
 from collections import Counter
 from pathlib import Path
-from typing import Iterable
 
 import numpy as np
 import torch
-from rank_bm25 import BM25Okapi
 from tqdm import tqdm
 from transformers import AutoTokenizer
 
@@ -91,13 +89,22 @@ def tokenize(text: str) -> list[str]:
     return [t for t in tokens if t.strip()]
 
 
-class HybridRetriever:
-    def __init__(self, docs: list[str], dense_model: str = "", device: str = "cpu"):
+class Retriever:
+    def __init__(self, docs: list[str], method: str = "dense", dense_model: str = "", device: str = "cpu"):
         self.docs = docs
-        self.bm25 = BM25Okapi([tokenize(doc) for doc in docs])
+        self.method = method
+        self.bm25 = None
         self.dense_model = None
         self.doc_embeddings = None
-        if dense_model:
+
+        if method in {"bm25", "hybrid"}:
+            from rank_bm25 import BM25Okapi
+
+            self.bm25 = BM25Okapi([tokenize(doc) for doc in docs])
+
+        if method in {"dense", "hybrid"}:
+            if not dense_model:
+                raise RuntimeError("--dense-model is required when --retriever is dense or hybrid")
             from sentence_transformers import SentenceTransformer
 
             self.dense_model = SentenceTransformer(dense_model, device=device)
@@ -109,16 +116,26 @@ class HybridRetriever:
             )
 
     def retrieve(self, query: str, top_k: int = 30) -> list[str]:
-        scores = self.bm25.get_scores(tokenize(query))
         doc_scores = Counter()
-        for rank, idx in enumerate(np.argsort(scores)[::-1][: min(top_k * 4, len(self.docs))]):
-            doc_scores[int(idx)] += 1.0 / (60 + rank + 1)
+
+        if self.bm25 is not None:
+            scores = self.bm25.get_scores(tokenize(query))
+            for rank, idx in enumerate(np.argsort(scores)[::-1][: min(top_k * 4, len(self.docs))]):
+                score = float(scores[int(idx)])
+                if self.method == "bm25":
+                    doc_scores[int(idx)] = score
+                else:
+                    doc_scores[int(idx)] += 1.0 / (60 + rank + 1)
 
         if self.dense_model is not None and self.doc_embeddings is not None:
             q = self.dense_model.encode([query], convert_to_numpy=True, normalize_embeddings=True)[0]
             sims = np.dot(self.doc_embeddings, q)
             for rank, idx in enumerate(np.argsort(sims)[::-1][: min(top_k * 4, len(self.docs))]):
-                doc_scores[int(idx)] += 1.0 / (60 + rank + 1)
+                score = float(sims[int(idx)])
+                if self.method == "dense":
+                    doc_scores[int(idx)] = score
+                else:
+                    doc_scores[int(idx)] += 1.0 / (60 + rank + 1)
 
         ranked = [idx for idx, _ in doc_scores.most_common(top_k)]
         return [self.docs[idx] for idx in ranked]
@@ -243,6 +260,7 @@ def main() -> None:
     parser.add_argument("--output", default="outputs/rag/hotpot_rag_report.json")
     parser.add_argument("--model-dir", default="models/deberta-v3-large")
     parser.add_argument("--checkpoint", default="outputs/ranker/frozen_deberta_v3_large_v7_main_val08252/best_model.pt")
+    parser.add_argument("--retriever", choices=["dense", "hybrid", "bm25"], default="dense")
     parser.add_argument("--dense-model", default="")
     parser.add_argument("--retrieve-top-k", type=int, default=30)
     parser.add_argument("--rerank-top-k", type=int, default=5)
@@ -260,7 +278,12 @@ def main() -> None:
 
     docs = load_docs(Path(args.docs))
     questions = load_questions(Path(args.benchmark), max_items=args.max_items)
-    retriever = HybridRetriever(docs, dense_model=args.dense_model, device=args.device)
+    retriever = Retriever(
+        docs,
+        method=args.retriever,
+        dense_model=args.dense_model,
+        device=args.device,
+    )
     reranker = HotpotReranker(
         model_dir=Path(args.model_dir),
         checkpoint=Path(args.checkpoint),
@@ -314,9 +337,11 @@ def main() -> None:
         "docs": args.docs,
         "benchmark": args.benchmark,
         "checkpoint": args.checkpoint,
+        "retriever": args.retriever,
         "dense_model": args.dense_model,
         "retrieve_top_k": args.retrieve_top_k,
         "rerank_top_k": args.rerank_top_k,
+        "judge_parse_error": totals["judge_parse_error"],
     }
     report = {"summary": summary, "results": results}
     save_json(report, Path(args.output))
