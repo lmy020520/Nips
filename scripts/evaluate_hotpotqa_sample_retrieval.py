@@ -28,8 +28,27 @@ def load_memory(path: Path) -> dict[str, dict]:
     for row in read_jsonl(path):
         unit_id = str(row.get("unit_id") or "")
         if unit_id:
-            memory[unit_id] = row
+            title = str(row.get("title") or row.get("doc_id") or "")
+            if not title:
+                parts = unit_id.split("::")
+                title = parts[-2] if len(parts) >= 2 else unit_id
+            sent_id = row.get("sent_id")
+            if sent_id is None:
+                try:
+                    sent_id = int(unit_id.rsplit("::", 1)[-1])
+                except ValueError:
+                    sent_id = 0
+            memory[unit_id] = {
+                "unit_id": unit_id,
+                "title": title,
+                "sent_id": int(sent_id),
+                "text": str(row.get("text") or "").strip(),
+            }
     return memory
+
+
+def format_candidate_text(memory_item: dict) -> str:
+    return f"{memory_item['title']} [{memory_item['sent_id']}] {memory_item['text']}"
 
 
 def sample_candidate_ids(row: dict) -> list[str]:
@@ -47,6 +66,13 @@ def sample_positive_id(row: dict) -> str:
     return str(ranking.get("positive_unit_id") or "")
 
 
+def sample_k_t(row: dict) -> str:
+    if "K_t" in row:
+        return str(row["K_t"])
+    state = row.get("state") or {}
+    return str(state.get("K_t") or "")
+
+
 class DenseScorer:
     def __init__(self, model_name_or_path: str, device: str, batch_size: int):
         from sentence_transformers import SentenceTransformer
@@ -54,9 +80,9 @@ class DenseScorer:
         self.model = SentenceTransformer(model_name_or_path, device=device)
         self.batch_size = batch_size
 
-    def score(self, question: str, texts: list[str]) -> np.ndarray:
+    def score(self, query: str, texts: list[str]) -> np.ndarray:
         q_emb = self.model.encode(
-            [question],
+            [query],
             batch_size=1,
             convert_to_numpy=True,
             normalize_embeddings=True,
@@ -83,8 +109,7 @@ class HotpotRanker:
         self.model.load_state_dict(checkpoint_obj.get("model_state_dict", checkpoint_obj), strict=False)
         self.model.eval()
 
-    def score(self, question: str, texts: list[str]) -> np.ndarray:
-        context = f"Question: {question}\nNotebook:\n"
+    def score(self, context: str, texts: list[str]) -> np.ndarray:
         scores = []
         with torch.no_grad():
             for start in range(0, len(texts), self.batch_size):
@@ -119,6 +144,7 @@ def main() -> None:
     parser.add_argument("--checkpoint", required=True)
     parser.add_argument("--model-dir", default="models/deberta-v3-large")
     parser.add_argument("--ks", default="1,2,3,5,8,10")
+    parser.add_argument("--dense-query-mode", choices=["question", "state"], default="question")
     parser.add_argument("--max-items", type=int, default=0)
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--dense-batch-size", type=int, default=64)
@@ -152,6 +178,8 @@ def main() -> None:
 
     for row in tqdm(samples, desc="hotpotqa-sample-retrieval"):
         question = str(row.get("question") or "")
+        k_t = sample_k_t(row)
+        context = f"Question: {question}\nNotebook:\n{k_t}"
         candidate_ids = sample_candidate_ids(row)
         positive_id = sample_positive_id(row)
         if not question or not candidate_ids or positive_id not in candidate_ids:
@@ -161,7 +189,8 @@ def main() -> None:
         texts = []
         missing = False
         for unit_id in candidate_ids:
-            text = str((memory.get(unit_id) or {}).get("text") or "")
+            memory_item = memory.get(unit_id) or {}
+            text = format_candidate_text(memory_item) if memory_item.get("text") else ""
             if not text:
                 missing = True
                 break
@@ -171,8 +200,9 @@ def main() -> None:
             continue
 
         label = candidate_ids.index(positive_id)
-        dense_scores = dense.score(question, texts)
-        ranker_scores = ranker.score(question, texts)
+        dense_query = context if args.dense_query_mode == "state" else question
+        dense_scores = dense.score(dense_query, texts)
+        ranker_scores = ranker.score(context, texts)
         dense_order = np.argsort(dense_scores)[::-1].tolist()
         ranker_order = np.argsort(ranker_scores)[::-1].tolist()
 
@@ -200,6 +230,7 @@ def main() -> None:
         "samples": args.samples,
         "memory": args.memory,
         "dense_model": args.dense_model,
+        "dense_query_mode": args.dense_query_mode,
         "checkpoint": args.checkpoint,
         "total": totals["total"],
         "skipped": totals["skipped"],
