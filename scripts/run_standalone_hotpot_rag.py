@@ -203,7 +203,7 @@ def judge_answer(
     gold: str,
     prediction: str,
     contexts: list[str],
-) -> dict:
+) -> tuple[dict, str]:
     prompt = f"""
 你是一名严格的RAG评测专家。请只输出JSON。
 
@@ -225,9 +225,15 @@ def judge_answer(
     )
     content = content.replace("```json", "").replace("```", "").strip()
     try:
-        return json.loads(content)
+        return json.loads(content), content
     except json.JSONDecodeError:
-        return {"correctness": 0, "context_recall": 0, "faithfulness": 0}
+        match = re.search(r"\{.*\}", content, re.DOTALL)
+        if match:
+            try:
+                return json.loads(match.group()), content
+            except json.JSONDecodeError:
+                pass
+        return {"correctness": 0, "context_recall": 0, "faithfulness": 0, "parse_error": 1}, content
 
 
 def main() -> None:
@@ -243,6 +249,7 @@ def main() -> None:
     parser.add_argument("--max-items", type=int, default=20)
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--skip-judge", action="store_true")
+    parser.add_argument("--judge-debug", action="store_true")
     args = parser.parse_args()
 
     api_key = os.environ.get("DEEPSEEK_API_KEY", "").strip()
@@ -271,10 +278,12 @@ def main() -> None:
         prediction, token_cost = answer_question(api_key, base_url, llm_model, question, contexts)
         latency = time.time() - started
         scores = {"correctness": None, "context_recall": None, "faithfulness": None}
+        judge_raw = ""
         if not args.skip_judge:
-            scores = judge_answer(api_key, base_url, llm_model, question, item["ground_truth"], prediction, contexts)
+            scores, judge_raw = judge_answer(api_key, base_url, llm_model, question, item["ground_truth"], prediction, contexts)
             for key in ("correctness", "context_recall", "faithfulness"):
                 totals[key] += int(scores.get(key) or 0)
+            totals["judge_parse_error"] += int(scores.get("parse_error") or 0)
             totals["judged"] += 1
         totals["total"] += 1
         totals["tokens"] += token_cost
@@ -284,6 +293,7 @@ def main() -> None:
                 **item,
                 "prediction": prediction,
                 "scores": scores,
+                "judge_raw": judge_raw if args.judge_debug else "",
                 "contexts": contexts,
                 "rerank_scores": [row["score"] for row in ranked],
                 "token_cost": token_cost,
