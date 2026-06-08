@@ -78,6 +78,10 @@ def format_notebook_evidence(memory_item: dict, index: int) -> str:
     return f"[{index}] {memory_item['title']}: {memory_item['text']}"
 
 
+def tokenize_for_retrieval(text: str) -> list[str]:
+    return re.findall(r"[A-Za-z0-9]+", str(text).lower())
+
+
 def sample_candidate_ids(row: dict) -> list[str]:
     candidates = row.get("candidates") or {}
     for key in ("C_t", "R_t"):
@@ -271,6 +275,38 @@ class PolicyModel:
         return np.array(scores)
 
 
+class DenseScorer:
+    def __init__(self, model_name_or_path: str, device: str, batch_size: int):
+        from sentence_transformers import SentenceTransformer
+
+        self.model = SentenceTransformer(model_name_or_path, device=device)
+        self.batch_size = max(1, batch_size)
+
+    def score(self, query: str, candidate_texts: list[str]) -> np.ndarray:
+        query_embedding = self.model.encode(
+            [query],
+            batch_size=1,
+            convert_to_numpy=True,
+            normalize_embeddings=True,
+            show_progress_bar=False,
+        )[0]
+        candidate_embeddings = self.model.encode(
+            candidate_texts,
+            batch_size=self.batch_size,
+            convert_to_numpy=True,
+            normalize_embeddings=True,
+            show_progress_bar=False,
+        )
+        return np.dot(candidate_embeddings, query_embedding)
+
+
+def bm25_scores(query: str, candidate_texts: list[str]) -> np.ndarray:
+    from rank_bm25 import BM25Okapi
+
+    tokenized_candidates = [tokenize_for_retrieval(text) for text in candidate_texts]
+    return np.array(BM25Okapi(tokenized_candidates).get_scores(tokenize_for_retrieval(query)))
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Run trajectory-aware policy RAG over HotpotQA sample states.")
     parser.add_argument("--samples", required=True)
@@ -286,7 +322,15 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--max-length", type=int, default=320)
     parser.add_argument("--state-mode", choices=["dataset", "policy"], default="dataset")
-    parser.add_argument("--selector", choices=["policy", "first", "random", "gold_oracle"], default="policy")
+    parser.add_argument(
+        "--selector",
+        choices=["policy", "bm25", "dense", "dense_policy", "first", "random", "gold_oracle"],
+        default="policy",
+    )
+    parser.add_argument("--dense-model", default="")
+    parser.add_argument("--dense-batch-size", type=int, default=64)
+    parser.add_argument("--dense-query-mode", choices=["question", "state"], default="question")
+    parser.add_argument("--candidate-top-k", type=int, default=8)
     parser.add_argument("--select-top-k", type=int, default=1)
     parser.add_argument("--answer-mode", choices=["short", "json"], default="json")
     parser.add_argument("--generate-answers", action="store_true")
@@ -315,7 +359,7 @@ def main() -> None:
         qids = qids[: args.max_qids]
 
     policy = None
-    if args.selector == "policy":
+    if args.selector in {"policy", "dense_policy"}:
         policy = PolicyModel(
             model_dir=Path(args.model_dir),
             checkpoint=Path(args.checkpoint),
@@ -323,6 +367,11 @@ def main() -> None:
             max_length=args.max_length,
             batch_size=args.batch_size,
         )
+    dense = None
+    if args.selector in {"dense", "dense_policy"}:
+        if not args.dense_model:
+            raise RuntimeError("--dense-model is required for --selector dense or dense_policy")
+        dense = DenseScorer(args.dense_model, device=args.device, batch_size=args.dense_batch_size)
 
     totals = Counter()
     qid_success = Counter()
@@ -373,18 +422,40 @@ def main() -> None:
                 context = f"Question: {question}\nNotebook:\n{sample_k_t(row)}"
 
             label = usable_candidate_ids.index(positive_id)
+            display_scores = np.zeros(len(usable_candidate_ids), dtype=float)
             if args.selector == "policy":
                 scores = policy.score(context, candidate_texts)
+                display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
+            elif args.selector == "bm25":
+                scores = bm25_scores(question, candidate_texts)
+                display_scores = scores
+                order = np.argsort(scores)[::-1].tolist()
+            elif args.selector == "dense":
+                dense_query = context if args.dense_query_mode == "state" else question
+                scores = dense.score(dense_query, candidate_texts)
+                display_scores = scores
+                order = np.argsort(scores)[::-1].tolist()
+            elif args.selector == "dense_policy":
+                dense_query = context if args.dense_query_mode == "state" else question
+                dense_scores = dense.score(dense_query, candidate_texts)
+                dense_order = np.argsort(dense_scores)[::-1].tolist()
+                candidate_top_k = min(max(1, args.candidate_top_k), len(dense_order))
+                rerank_indices = dense_order[:candidate_top_k]
+                rerank_texts = [candidate_texts[index] for index in rerank_indices]
+                policy_scores = policy.score(context, rerank_texts)
+                reranked_local = np.argsort(policy_scores)[::-1].tolist()
+                order = [rerank_indices[index] for index in reranked_local]
+                order += [index for index in dense_order if index not in set(order)]
+                display_scores = dense_scores
+                for local_index, original_index in enumerate(rerank_indices):
+                    display_scores[original_index] = float(policy_scores[local_index])
             elif args.selector == "first":
-                scores = np.zeros(len(usable_candidate_ids), dtype=float)
                 order = list(range(len(usable_candidate_ids)))
             elif args.selector == "random":
-                scores = np.zeros(len(usable_candidate_ids), dtype=float)
                 order = list(range(len(usable_candidate_ids)))
                 rng.shuffle(order)
             else:
-                scores = np.zeros(len(usable_candidate_ids), dtype=float)
                 order = [label] + [index for index in range(len(usable_candidate_ids)) if index != label]
             pred_index = order[0]
             pred_id = usable_candidate_ids[pred_index]
@@ -422,7 +493,7 @@ def main() -> None:
                         {
                             "unit_id": usable_candidate_ids[index],
                             "doc_id": memory[usable_candidate_ids[index]]["doc_id"],
-                            "score": round(float(scores[index]), 6),
+                            "score": round(float(display_scores[index]), 6),
                         }
                         for index in order[:5]
                     ],
@@ -489,6 +560,9 @@ def main() -> None:
         "checkpoint": args.checkpoint,
         "state_mode": args.state_mode,
         "selector": args.selector,
+        "dense_model": args.dense_model,
+        "dense_query_mode": args.dense_query_mode,
+        "candidate_top_k": args.candidate_top_k,
         "select_top_k": args.select_top_k,
         "answer_mode": args.answer_mode,
         "seed": args.seed,
