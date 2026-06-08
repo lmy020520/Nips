@@ -280,7 +280,6 @@ def main() -> None:
 
             totals["steps"] += 1
             step_correct = pred_id == positive_id
-            totals["step_acc@1"] += int(step_correct)
             all_steps_correct = all_steps_correct and step_correct
             for k in ks:
                 totals[f"step_acc@{k}"] += int(label in order[:k])
