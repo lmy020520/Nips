@@ -164,34 +164,76 @@ def deepseek_chat(api_key: str, base_url: str, model: str, messages: list[dict],
     return data["choices"][0]["message"]["content"], int(data.get("usage", {}).get("total_tokens") or 0)
 
 
-def answer_with_llm(question: str, evidence: list[dict]) -> tuple[str, int, float]:
+def extract_answer_from_json(raw_answer: str) -> str:
+    text = str(raw_answer or "").strip()
+    text = text.replace("```json", "").replace("```", "").strip()
+    try:
+        data = json.loads(text)
+        if isinstance(data, dict) and data.get("answer") is not None:
+            return str(data["answer"]).strip()
+    except json.JSONDecodeError:
+        pass
+    match = re.search(r"\{.*\}", text, re.DOTALL)
+    if match:
+        try:
+            data = json.loads(match.group())
+            if isinstance(data, dict) and data.get("answer") is not None:
+                return str(data["answer"]).strip()
+        except json.JSONDecodeError:
+            pass
+    return text.splitlines()[0].strip() if text else ""
+
+
+def answer_with_llm(question: str, evidence: list[dict], answer_mode: str) -> tuple[str, str, int, float]:
     api_key = os.environ.get("DEEPSEEK_API_KEY", "").strip()
     if not api_key:
-        return "", 0, 0.0
+        return "", "", 0, 0.0
     base_url = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
     model = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
     context = "\n".join(format_notebook_evidence(item, idx + 1) for idx, item in enumerate(evidence))
-    messages = [
-        {
-            "role": "system",
-            "content": (
-                "Answer the question using only the provided evidence. "
-                "Return only the short answer, not an explanation. "
-                "If the evidence is insufficient, say unknown."
-            ),
-        },
-        {
-            "role": "user",
-            "content": (
-                f"Evidence:\n{context}\n\n"
-                f"Question: {question}\n\n"
-                "Short answer:"
-            ),
-        },
-    ]
+    if answer_mode == "json":
+        messages = [
+            {
+                "role": "system",
+                "content": (
+                    "You are an extractive HotpotQA answer module. "
+                    "Use only the evidence. Output valid JSON only. "
+                    "The answer must be the shortest exact answer phrase, usually an entity, date, number, yes, or no. "
+                    "Do not include explanations."
+                ),
+            },
+            {
+                "role": "user",
+                "content": (
+                    f"Evidence:\n{context}\n\n"
+                    f"Question: {question}\n\n"
+                    'Return exactly: {"answer":"..."}'
+                ),
+            },
+        ]
+    else:
+        messages = [
+            {
+                "role": "system",
+                "content": (
+                    "Answer the question using only the provided evidence. "
+                    "Return only the short answer, not an explanation. "
+                    "If the evidence is insufficient, say unknown."
+                ),
+            },
+            {
+                "role": "user",
+                "content": (
+                    f"Evidence:\n{context}\n\n"
+                    f"Question: {question}\n\n"
+                    "Short answer:"
+                ),
+            },
+        ]
     started = time.time()
-    content, tokens = deepseek_chat(api_key, base_url, model, messages, temperature=0.0)
-    return content, tokens, time.time() - started
+    raw_answer, tokens = deepseek_chat(api_key, base_url, model, messages, temperature=0.0)
+    answer = extract_answer_from_json(raw_answer) if answer_mode == "json" else raw_answer.strip()
+    return answer, raw_answer, tokens, time.time() - started
 
 
 class PolicyModel:
@@ -244,6 +286,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-length", type=int, default=320)
     parser.add_argument("--state-mode", choices=["dataset", "policy"], default="dataset")
     parser.add_argument("--select-top-k", type=int, default=1)
+    parser.add_argument("--answer-mode", choices=["short", "json"], default="json")
     parser.add_argument("--generate-answers", action="store_true")
     parser.add_argument("--output", default="outputs/rag/hotpotqa_policy_rag_report.json")
     return parser
@@ -379,11 +422,16 @@ def main() -> None:
         qid_success["full_gold_unit_coverage"] += int(set(gold_units).issubset(set(selected_units)))
 
         answer = ""
+        raw_answer = ""
         answer_tokens = 0
         answer_latency = 0.0
         question = str(rows[0].get("question") or "")
         if args.generate_answers:
-            answer, answer_tokens, answer_latency = answer_with_llm(question, selected_evidence)
+            answer, raw_answer, answer_tokens, answer_latency = answer_with_llm(
+                question,
+                selected_evidence,
+                answer_mode=args.answer_mode,
+            )
 
         gold_answer = str((queries.get(qid) or {}).get("answer") or "")
         if args.generate_answers and gold_answer:
@@ -399,6 +447,7 @@ def main() -> None:
                 "qid": qid,
                 "question": question,
                 "answer": answer,
+                "raw_answer": raw_answer,
                 "answer_tokens": answer_tokens,
                 "answer_latency": round(answer_latency, 3),
                 "gold_answer": gold_answer,
@@ -423,6 +472,7 @@ def main() -> None:
         "checkpoint": args.checkpoint,
         "state_mode": args.state_mode,
         "select_top_k": args.select_top_k,
+        "answer_mode": args.answer_mode,
         "sample_states": len(samples),
         "qids": qid_success["total"],
         "steps": totals["steps"],
