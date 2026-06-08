@@ -10,11 +10,13 @@ next evidence unit, and aggregates step-level and trajectory-level metrics.
 from __future__ import annotations
 
 import argparse
+import http.client
 import json
 import os
 import re
 import string
 import time
+import urllib.error
 import urllib.request
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -151,22 +153,45 @@ def f1_score(prediction: str, gold_answer: str) -> float:
     return 2 * precision * recall / (precision + recall)
 
 
-def deepseek_chat(api_key: str, base_url: str, model: str, messages: list[dict], temperature: float = 0.0) -> tuple[str, int]:
+def deepseek_chat(
+    api_key: str,
+    base_url: str,
+    model: str,
+    messages: list[dict],
+    temperature: float = 0.0,
+    max_retries: int = 5,
+    retry_sleep: float = 2.0,
+) -> tuple[str, int]:
     body = {
         "model": model,
         "messages": messages,
         "temperature": temperature,
         "stream": False,
     }
-    req = urllib.request.Request(
-        base_url.rstrip("/") + "/chat/completions",
-        data=json.dumps(body, ensure_ascii=False).encode("utf-8"),
-        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-        method="POST",
-    )
-    with urllib.request.urlopen(req, timeout=90) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
-    return data["choices"][0]["message"]["content"], int(data.get("usage", {}).get("total_tokens") or 0)
+    last_error = None
+    for attempt in range(1, max(1, max_retries) + 1):
+        req = urllib.request.Request(
+            base_url.rstrip("/") + "/chat/completions",
+            data=json.dumps(body, ensure_ascii=False).encode("utf-8"),
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=90) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            return data["choices"][0]["message"]["content"], int(data.get("usage", {}).get("total_tokens") or 0)
+        except (
+            TimeoutError,
+            ConnectionError,
+            ConnectionResetError,
+            http.client.RemoteDisconnected,
+            urllib.error.URLError,
+        ) as exc:
+            last_error = exc
+            if attempt >= max_retries:
+                break
+            time.sleep(retry_sleep * attempt)
+    raise RuntimeError(f"DeepSeek request failed after {max_retries} retries: {last_error}") from last_error
 
 
 def extract_answer_from_json(raw_answer: str) -> str:
@@ -189,7 +214,13 @@ def extract_answer_from_json(raw_answer: str) -> str:
     return text.splitlines()[0].strip() if text else ""
 
 
-def answer_with_llm(question: str, evidence: list[dict], answer_mode: str) -> tuple[str, str, int, float]:
+def answer_with_llm(
+    question: str,
+    evidence: list[dict],
+    answer_mode: str,
+    max_retries: int,
+    retry_sleep: float,
+) -> tuple[str, str, int, float]:
     api_key = os.environ.get("DEEPSEEK_API_KEY", "").strip()
     if not api_key:
         return "", "", 0, 0.0
@@ -236,9 +267,22 @@ def answer_with_llm(question: str, evidence: list[dict], answer_mode: str) -> tu
             },
         ]
     started = time.time()
-    raw_answer, tokens = deepseek_chat(api_key, base_url, model, messages, temperature=0.0)
+    raw_answer, tokens = deepseek_chat(
+        api_key,
+        base_url,
+        model,
+        messages,
+        temperature=0.0,
+        max_retries=max_retries,
+        retry_sleep=retry_sleep,
+    )
     answer = extract_answer_from_json(raw_answer) if answer_mode == "json" else raw_answer.strip()
     return answer, raw_answer, tokens, time.time() - started
+
+
+def cache_file_for_qid(cache_dir: Path, qid: str) -> Path:
+    safe_qid = re.sub(r"[^A-Za-z0-9_.-]+", "_", qid)
+    return cache_dir / f"{safe_qid}.json"
 
 
 class PolicyModel:
@@ -334,6 +378,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--select-top-k", type=int, default=1)
     parser.add_argument("--answer-mode", choices=["short", "json"], default="json")
     parser.add_argument("--generate-answers", action="store_true")
+    parser.add_argument("--answer-cache-dir", default="")
+    parser.add_argument("--llm-max-retries", type=int, default=8)
+    parser.add_argument("--llm-retry-sleep", type=float, default=2.0)
     parser.add_argument("--seed", type=int, default=20260608)
     parser.add_argument("--output", default="outputs/rag/hotpotqa_policy_rag_report.json")
     return parser
@@ -348,6 +395,9 @@ def main() -> None:
     queries = load_queries(args.queries)
     ks = sorted({int(k) for k in args.ks.split(",") if k.strip()})
     rng = random.Random(args.seed)
+    answer_cache_dir = Path(args.answer_cache_dir) if args.answer_cache_dir else Path(f"{args.output}.cache")
+    if args.generate_answers:
+        answer_cache_dir.mkdir(parents=True, exist_ok=True)
 
     grouped: dict[str, list[dict]] = defaultdict(list)
     for row in samples:
@@ -515,11 +565,42 @@ def main() -> None:
         answer_latency = 0.0
         question = str(rows[0].get("question") or "")
         if args.generate_answers:
-            answer, raw_answer, answer_tokens, answer_latency = answer_with_llm(
-                question,
-                selected_evidence,
-                answer_mode=args.answer_mode,
-            )
+            cache_path = cache_file_for_qid(answer_cache_dir, qid)
+            if cache_path.exists():
+                cached = json.loads(cache_path.read_text(encoding="utf-8"))
+                answer = str(cached.get("answer") or "")
+                raw_answer = str(cached.get("raw_answer") or "")
+                answer_tokens = int(cached.get("answer_tokens") or 0)
+                answer_latency = float(cached.get("answer_latency") or 0.0)
+            else:
+                try:
+                    answer, raw_answer, answer_tokens, answer_latency = answer_with_llm(
+                        question,
+                        selected_evidence,
+                        answer_mode=args.answer_mode,
+                        max_retries=args.llm_max_retries,
+                        retry_sleep=args.llm_retry_sleep,
+                    )
+                except Exception as exc:
+                    answer = ""
+                    raw_answer = f"ERROR: {exc}"
+                    answer_tokens = 0
+                    answer_latency = 0.0
+                    answer_metrics["answer_errors"] += 1
+                cache_path.write_text(
+                    json.dumps(
+                        {
+                            "qid": qid,
+                            "answer": answer,
+                            "raw_answer": raw_answer,
+                            "answer_tokens": answer_tokens,
+                            "answer_latency": answer_latency,
+                        },
+                        ensure_ascii=False,
+                        indent=2,
+                    ),
+                    encoding="utf-8",
+                )
 
         gold_answer = str((queries.get(qid) or {}).get("answer") or "")
         if args.generate_answers and gold_answer:
@@ -565,6 +646,7 @@ def main() -> None:
         "candidate_top_k": args.candidate_top_k,
         "select_top_k": args.select_top_k,
         "answer_mode": args.answer_mode,
+        "answer_cache_dir": str(answer_cache_dir) if args.generate_answers else "",
         "seed": args.seed,
         "sample_states": len(samples),
         "qids": qid_success["total"],
@@ -598,6 +680,7 @@ def main() -> None:
             "avg_answer_latency": round(answer_metrics["answer_latency"] / judged_answers, 3)
             if answer_metrics["answer_judged"]
             else None,
+            "answer_errors": answer_metrics["answer_errors"],
         }
     )
 
