@@ -12,6 +12,8 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
+import string
 import time
 import urllib.request
 from collections import Counter, defaultdict
@@ -104,6 +106,44 @@ def load_queries(path: str) -> dict[str, dict]:
     if not query_path.exists():
         return {}
     return {str(row.get("qid")): row for row in read_jsonl(query_path) if row.get("qid")}
+
+
+def normalize_answer(text: str) -> str:
+    def remove_articles(value: str) -> str:
+        return re.sub(r"\b(a|an|the)\b", " ", value)
+
+    def white_space_fix(value: str) -> str:
+        return " ".join(value.split())
+
+    def remove_punc(value: str) -> str:
+        exclude = set(string.punctuation)
+        return "".join(ch for ch in value if ch not in exclude)
+
+    return white_space_fix(remove_articles(remove_punc(str(text).lower())))
+
+
+def exact_match_score(prediction: str, gold_answer: str) -> int:
+    return int(normalize_answer(prediction) == normalize_answer(gold_answer))
+
+
+def answer_contains_score(prediction: str, gold_answer: str) -> int:
+    norm_pred = normalize_answer(prediction)
+    norm_gold = normalize_answer(gold_answer)
+    return int(bool(norm_gold) and norm_gold in norm_pred)
+
+
+def f1_score(prediction: str, gold_answer: str) -> float:
+    pred_tokens = normalize_answer(prediction).split()
+    gold_tokens = normalize_answer(gold_answer).split()
+    common = Counter(pred_tokens) & Counter(gold_tokens)
+    num_same = sum(common.values())
+    if not pred_tokens or not gold_tokens:
+        return float(pred_tokens == gold_tokens)
+    if num_same == 0:
+        return 0.0
+    precision = num_same / len(pred_tokens)
+    recall = num_same / len(gold_tokens)
+    return 2 * precision * recall / (precision + recall)
 
 
 def deepseek_chat(api_key: str, base_url: str, model: str, messages: list[dict], temperature: float = 0.0) -> tuple[str, int]:
@@ -225,6 +265,7 @@ def main() -> None:
 
     totals = Counter()
     qid_success = Counter()
+    answer_metrics = Counter()
     records = []
 
     for qid in tqdm(qids, desc="policy-rag"):
@@ -324,6 +365,15 @@ def main() -> None:
         if args.generate_answers:
             answer, answer_tokens, answer_latency = answer_with_llm(question, selected_evidence)
 
+        gold_answer = str((queries.get(qid) or {}).get("answer") or "")
+        if args.generate_answers and gold_answer:
+            answer_metrics["answer_judged"] += 1
+            answer_metrics["answer_em"] += exact_match_score(answer, gold_answer)
+            answer_metrics["answer_contains"] += answer_contains_score(answer, gold_answer)
+            answer_metrics["answer_f1"] += f1_score(answer, gold_answer)
+            answer_metrics["answer_tokens"] += answer_tokens
+            answer_metrics["answer_latency"] += answer_latency
+
         records.append(
             {
                 "qid": qid,
@@ -331,7 +381,10 @@ def main() -> None:
                 "answer": answer,
                 "answer_tokens": answer_tokens,
                 "answer_latency": round(answer_latency, 3),
-                "gold_answer": str((queries.get(qid) or {}).get("answer") or ""),
+                "gold_answer": gold_answer,
+                "answer_em": exact_match_score(answer, gold_answer) if gold_answer and answer else None,
+                "answer_contains": answer_contains_score(answer, gold_answer) if gold_answer and answer else None,
+                "answer_f1": round(f1_score(answer, gold_answer), 6) if gold_answer and answer else None,
                 "selected_unit_ids": selected_units,
                 "gold_unit_ids": gold_units,
                 "selected_doc_ids": sorted(selected_doc_ids),
@@ -360,6 +413,28 @@ def main() -> None:
     }
     for k in ks:
         summary[f"step_acc@{k}"] = round(totals[f"step_acc@{k}"] / step_total, 6)
+
+    judged_answers = max(answer_metrics["answer_judged"], 1)
+    summary.update(
+        {
+            "answer_judged": answer_metrics["answer_judged"],
+            "answer_em": round(answer_metrics["answer_em"] / judged_answers, 6)
+            if answer_metrics["answer_judged"]
+            else None,
+            "answer_contains": round(answer_metrics["answer_contains"] / judged_answers, 6)
+            if answer_metrics["answer_judged"]
+            else None,
+            "answer_f1": round(answer_metrics["answer_f1"] / judged_answers, 6)
+            if answer_metrics["answer_judged"]
+            else None,
+            "avg_answer_tokens": round(answer_metrics["answer_tokens"] / judged_answers, 2)
+            if answer_metrics["answer_judged"]
+            else None,
+            "avg_answer_latency": round(answer_metrics["answer_latency"] / judged_answers, 3)
+            if answer_metrics["answer_judged"]
+            else None,
+        }
+    )
 
     report = {"summary": summary, "results": records}
     write_json(report, Path(args.output))
