@@ -174,9 +174,20 @@ def answer_with_llm(question: str, evidence: list[dict]) -> tuple[str, int, floa
     messages = [
         {
             "role": "system",
-            "content": "Answer the question using only the provided evidence. If the evidence is insufficient, say unknown.",
+            "content": (
+                "Answer the question using only the provided evidence. "
+                "Return only the short answer, not an explanation. "
+                "If the evidence is insufficient, say unknown."
+            ),
         },
-        {"role": "user", "content": f"Evidence:\n{context}\n\nQuestion: {question}"},
+        {
+            "role": "user",
+            "content": (
+                f"Evidence:\n{context}\n\n"
+                f"Question: {question}\n\n"
+                "Short answer:"
+            ),
+        },
     ]
     started = time.time()
     content, tokens = deepseek_chat(api_key, base_url, model, messages, temperature=0.0)
@@ -232,6 +243,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--max-length", type=int, default=320)
     parser.add_argument("--state-mode", choices=["dataset", "policy"], default="dataset")
+    parser.add_argument("--select-top-k", type=int, default=1)
     parser.add_argument("--generate-answers", action="store_true")
     parser.add_argument("--output", default="outputs/rag/hotpotqa_policy_rag_report.json")
     return parser
@@ -316,18 +328,24 @@ def main() -> None:
             label = usable_candidate_ids.index(positive_id)
             pred_index = order[0]
             pred_id = usable_candidate_ids[pred_index]
-            pred_memory = memory[pred_id]
             positive_memory = memory[positive_id]
+            selected_indices = order[: max(1, args.select_top_k)]
+            selected_step_ids = [usable_candidate_ids[index] for index in selected_indices]
 
             totals["steps"] += 1
             step_correct = pred_id == positive_id
             all_steps_correct = all_steps_correct and step_correct
+            totals["step_selected_contains_gold"] += int(positive_id in selected_step_ids)
             for k in ks:
                 totals[f"step_acc@{k}"] += int(label in order[:k])
 
-            selected_units.append(pred_id)
-            selected_evidence.append(pred_memory)
-            selected_doc_ids.add(pred_memory["doc_id"])
+            for selected_id in selected_step_ids:
+                if selected_id in selected_units:
+                    continue
+                selected_memory = memory[selected_id]
+                selected_units.append(selected_id)
+                selected_evidence.append(selected_memory)
+                selected_doc_ids.add(selected_memory["doc_id"])
             gold_units.append(positive_id)
             gold_doc_ids.add(positive_memory["doc_id"])
             step_records.append(
@@ -336,7 +354,9 @@ def main() -> None:
                     "question": question,
                     "positive_unit_id": positive_id,
                     "predicted_unit_id": pred_id,
+                    "selected_unit_ids": selected_step_ids,
                     "correct": step_correct,
+                    "selected_contains_gold": positive_id in selected_step_ids,
                     "positive_rank": order.index(label) + 1,
                     "top5": [
                         {
@@ -402,6 +422,7 @@ def main() -> None:
         "queries": args.queries,
         "checkpoint": args.checkpoint,
         "state_mode": args.state_mode,
+        "select_top_k": args.select_top_k,
         "sample_states": len(samples),
         "qids": qid_success["total"],
         "steps": totals["steps"],
@@ -410,6 +431,7 @@ def main() -> None:
         "any_gold_doc_selected": round(qid_success["any_gold_doc_selected"] / qid_total, 6),
         "full_gold_doc_coverage": round(qid_success["full_gold_doc_coverage"] / qid_total, 6),
         "full_gold_unit_coverage": round(qid_success["full_gold_unit_coverage"] / qid_total, 6),
+        "step_selected_contains_gold": round(totals["step_selected_contains_gold"] / step_total, 6),
     }
     for k in ks:
         summary[f"step_acc@{k}"] = round(totals[f"step_acc@{k}"] / step_total, 6)
