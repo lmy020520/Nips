@@ -18,6 +18,7 @@ import time
 import urllib.request
 from collections import Counter, defaultdict
 from pathlib import Path
+import random
 
 import numpy as np
 import torch
@@ -285,9 +286,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--max-length", type=int, default=320)
     parser.add_argument("--state-mode", choices=["dataset", "policy"], default="dataset")
+    parser.add_argument("--selector", choices=["policy", "first", "random", "gold_oracle"], default="policy")
     parser.add_argument("--select-top-k", type=int, default=1)
     parser.add_argument("--answer-mode", choices=["short", "json"], default="json")
     parser.add_argument("--generate-answers", action="store_true")
+    parser.add_argument("--seed", type=int, default=20260608)
     parser.add_argument("--output", default="outputs/rag/hotpotqa_policy_rag_report.json")
     return parser
 
@@ -300,6 +303,7 @@ def main() -> None:
     memory = load_memory(Path(args.memory))
     queries = load_queries(args.queries)
     ks = sorted({int(k) for k in args.ks.split(",") if k.strip()})
+    rng = random.Random(args.seed)
 
     grouped: dict[str, list[dict]] = defaultdict(list)
     for row in samples:
@@ -310,13 +314,15 @@ def main() -> None:
     if args.max_qids > 0:
         qids = qids[: args.max_qids]
 
-    policy = PolicyModel(
-        model_dir=Path(args.model_dir),
-        checkpoint=Path(args.checkpoint),
-        device=args.device,
-        max_length=args.max_length,
-        batch_size=args.batch_size,
-    )
+    policy = None
+    if args.selector == "policy":
+        policy = PolicyModel(
+            model_dir=Path(args.model_dir),
+            checkpoint=Path(args.checkpoint),
+            device=args.device,
+            max_length=args.max_length,
+            batch_size=args.batch_size,
+        )
 
     totals = Counter()
     qid_success = Counter()
@@ -366,9 +372,20 @@ def main() -> None:
             else:
                 context = f"Question: {question}\nNotebook:\n{sample_k_t(row)}"
 
-            scores = policy.score(context, candidate_texts)
-            order = np.argsort(scores)[::-1].tolist()
             label = usable_candidate_ids.index(positive_id)
+            if args.selector == "policy":
+                scores = policy.score(context, candidate_texts)
+                order = np.argsort(scores)[::-1].tolist()
+            elif args.selector == "first":
+                scores = np.zeros(len(usable_candidate_ids), dtype=float)
+                order = list(range(len(usable_candidate_ids)))
+            elif args.selector == "random":
+                scores = np.zeros(len(usable_candidate_ids), dtype=float)
+                order = list(range(len(usable_candidate_ids)))
+                rng.shuffle(order)
+            else:
+                scores = np.zeros(len(usable_candidate_ids), dtype=float)
+                order = [label] + [index for index in range(len(usable_candidate_ids)) if index != label]
             pred_index = order[0]
             pred_id = usable_candidate_ids[pred_index]
             positive_memory = memory[positive_id]
@@ -471,8 +488,10 @@ def main() -> None:
         "queries": args.queries,
         "checkpoint": args.checkpoint,
         "state_mode": args.state_mode,
+        "selector": args.selector,
         "select_top_k": args.select_top_k,
         "answer_mode": args.answer_mode,
+        "seed": args.seed,
         "sample_states": len(samples),
         "qids": qid_success["total"],
         "steps": totals["steps"],
