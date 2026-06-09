@@ -344,11 +344,53 @@ class DenseScorer:
         return np.dot(candidate_embeddings, query_embedding)
 
 
+class GenericReranker:
+    def __init__(self, model_name_or_path: str, device: str, batch_size: int):
+        from sentence_transformers import CrossEncoder
+
+        self.model = CrossEncoder(model_name_or_path, device=device)
+        self.batch_size = max(1, batch_size)
+
+    def score(self, query: str, candidate_texts: list[str]) -> np.ndarray:
+        pairs = [(query, text) for text in candidate_texts]
+        return np.array(self.model.predict(pairs, batch_size=self.batch_size, show_progress_bar=False))
+
+
 def bm25_scores(query: str, candidate_texts: list[str]) -> np.ndarray:
     from rank_bm25 import BM25Okapi
 
     tokenized_candidates = [tokenize_for_retrieval(text) for text in candidate_texts]
     return np.array(BM25Okapi(tokenized_candidates).get_scores(tokenize_for_retrieval(query)))
+
+
+def minmax_normalize(scores: np.ndarray) -> np.ndarray:
+    scores = np.asarray(scores, dtype=float)
+    if scores.size == 0:
+        return scores
+    min_score = float(np.min(scores))
+    max_score = float(np.max(scores))
+    if max_score - min_score < 1e-12:
+        return np.zeros_like(scores, dtype=float)
+    return (scores - min_score) / (max_score - min_score)
+
+
+def multi_query_variants(question: str, context: str) -> list[str]:
+    variants = [
+        question,
+        f"Find evidence that answers: {question}",
+        f"Find the bridge entity and final answer evidence for: {question}",
+    ]
+    context = str(context or "").strip()
+    if context:
+        variants.append(f"{question}\nKnown evidence:\n{context}")
+    deduped = []
+    seen = set()
+    for query in variants:
+        key = " ".join(query.lower().split())
+        if key and key not in seen:
+            seen.add(key)
+            deduped.append(query)
+    return deduped
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -368,12 +410,27 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--state-mode", choices=["dataset", "policy"], default="dataset")
     parser.add_argument(
         "--selector",
-        choices=["policy", "bm25", "dense", "dense_policy", "first", "random", "gold_oracle"],
+        choices=[
+            "policy",
+            "bm25",
+            "dense",
+            "hybrid",
+            "multi_query_dense",
+            "iterative_dense",
+            "dense_policy",
+            "generic_reranker",
+            "first",
+            "random",
+            "gold_oracle",
+        ],
         default="policy",
     )
     parser.add_argument("--dense-model", default="")
     parser.add_argument("--dense-batch-size", type=int, default=64)
     parser.add_argument("--dense-query-mode", choices=["question", "state"], default="question")
+    parser.add_argument("--hybrid-alpha", type=float, default=0.5, help="Dense score weight for hybrid selector.")
+    parser.add_argument("--reranker-model", default="")
+    parser.add_argument("--reranker-batch-size", type=int, default=16)
     parser.add_argument("--candidate-top-k", type=int, default=8)
     parser.add_argument("--select-top-k", type=int, default=1)
     parser.add_argument("--answer-mode", choices=["short", "json"], default="json")
@@ -418,10 +475,18 @@ def main() -> None:
             batch_size=args.batch_size,
         )
     dense = None
-    if args.selector in {"dense", "dense_policy"}:
+    if args.selector in {"dense", "hybrid", "multi_query_dense", "iterative_dense", "dense_policy"}:
         if not args.dense_model:
-            raise RuntimeError("--dense-model is required for --selector dense or dense_policy")
+            raise RuntimeError(
+                "--dense-model is required for --selector dense, hybrid, multi_query_dense, "
+                "iterative_dense, or dense_policy"
+            )
         dense = DenseScorer(args.dense_model, device=args.device, batch_size=args.dense_batch_size)
+    reranker = None
+    if args.selector == "generic_reranker":
+        if not args.reranker_model:
+            raise RuntimeError("--reranker-model is required for --selector generic_reranker")
+        reranker = GenericReranker(args.reranker_model, device=args.device, batch_size=args.reranker_batch_size)
 
     totals = Counter()
     qid_success = Counter()
@@ -486,6 +551,26 @@ def main() -> None:
                 scores = dense.score(dense_query, candidate_texts)
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
+            elif args.selector == "hybrid":
+                dense_query = context if args.dense_query_mode == "state" else question
+                dense_scores = dense.score(dense_query, candidate_texts)
+                lexical_scores = bm25_scores(question, candidate_texts)
+                alpha = min(1.0, max(0.0, args.hybrid_alpha))
+                scores = alpha * minmax_normalize(dense_scores) + (1.0 - alpha) * minmax_normalize(lexical_scores)
+                display_scores = scores
+                order = np.argsort(scores)[::-1].tolist()
+            elif args.selector == "multi_query_dense":
+                query_scores = [
+                    dense.score(query, candidate_texts)
+                    for query in multi_query_variants(question, context)
+                ]
+                scores = np.max(np.vstack(query_scores), axis=0)
+                display_scores = scores
+                order = np.argsort(scores)[::-1].tolist()
+            elif args.selector == "iterative_dense":
+                scores = dense.score(context, candidate_texts)
+                display_scores = scores
+                order = np.argsort(scores)[::-1].tolist()
             elif args.selector == "dense_policy":
                 dense_query = context if args.dense_query_mode == "state" else question
                 dense_scores = dense.score(dense_query, candidate_texts)
@@ -500,6 +585,10 @@ def main() -> None:
                 display_scores = dense_scores
                 for local_index, original_index in enumerate(rerank_indices):
                     display_scores[original_index] = float(policy_scores[local_index])
+            elif args.selector == "generic_reranker":
+                scores = reranker.score(context, candidate_texts)
+                display_scores = scores
+                order = np.argsort(scores)[::-1].tolist()
             elif args.selector == "first":
                 order = list(range(len(usable_candidate_ids)))
             elif args.selector == "random":
@@ -643,6 +732,8 @@ def main() -> None:
         "selector": args.selector,
         "dense_model": args.dense_model,
         "dense_query_mode": args.dense_query_mode,
+        "hybrid_alpha": args.hybrid_alpha,
+        "reranker_model": args.reranker_model,
         "candidate_top_k": args.candidate_top_k,
         "select_top_k": args.select_top_k,
         "answer_mode": args.answer_mode,
