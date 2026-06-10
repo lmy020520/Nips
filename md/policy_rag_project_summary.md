@@ -1,146 +1,477 @@
 # Policy-RAG 项目阶段性总结
 
-本文档总结当前项目从数据构建、模型训练、错误分析、RAG 接入到对比实验设计的完整工作流。当前项目的核心结论是：我们训练的模型不应被简单表述为传统 reranker，而应定位为一个 **trajectory-aware evidence selection policy model**，并将其接入 RAG 的检索/证据选择阶段，形成 **Policy-RAG**。
+## 1. 项目定位
 
-## 1. 项目目标
+本项目面向多跳问答场景下的 Retrieval-Augmented Generation（RAG），重点研究 **如何为大语言模型构造更有效的上下文**。
 
-HotpotQA 是典型的多跳问答任务。传统 RAG 常见流程是：
+传统 RAG 通常采用如下流程：
 
 ```text
-Question -> Retriever -> Top-k passages -> LLM answer
+Question -> Retriever -> Top-k documents/passages -> LLM answer
 ```
 
-但多跳问答的问题在于：一次性检索 top-k 往往不能准确覆盖完整推理链，尤其是 bridge question、comparison question 和需要逐步补全证据状态的场景。
+这种范式在单跳问答中较为有效，但在多跳问答中存在明显不足。多跳问题通常需要多个证据之间形成推理链，例如先找到 bridge entity，再找到最终 answer evidence。如果仅根据原始问题一次性检索 top-k 证据，检索结果可能相关但不完整，也可能包含大量噪声，最终导致 LLM 无法稳定回答。
 
-因此我们希望构建一个更适合多跳问答的 RAG 流程：
+因此，本项目的核心问题不是单纯提高检索召回率，而是：
+
+```text
+如何在有限上下文预算下，动态选择并组织多跳问答所需的证据，使最终输入 LLM 的 context 更适合回答问题。
+```
+
+我们将这个问题定义为：
+
+```text
+Trajectory-aware Context Construction for Multi-hop RAG
+```
+
+即：把多跳 RAG 的上下文构建过程建模为一个带有证据状态的序列决策问题。
+
+## 2. 核心思想
+
+### 2.1 从一次性检索到序列化 context 构建
+
+传统检索器通常只学习：
+
+```text
+score(q, u)
+```
+
+其中 `q` 是问题，`u` 是候选证据。这类方法只判断候选证据和问题之间的静态相关性。
+
+但在多跳问答中，候选证据是否有用，取决于当前已经选中了哪些证据。例如，当系统已经找到 bridge evidence 后，下一步更需要的是 support / answer evidence，而不是重复选择另一个表面相关的 bridge 句子。
+
+因此，我们建模的不是普通相关性分数，而是一个带状态的证据价值函数：
+
+```text
+Q_theta(s_t, u) = score(q, K_t, u)
+```
+
+其中：
+
+- `q`：原始问题；
+- `K_t`：当前已经构造出的 evidence context / notebook；
+- `u`：当前候选证据；
+- `t`：多跳证据选择过程中的步骤。
+- `s_t = (q, H_t, K_t)`：当前 RAG 证据构建状态。
+
+也就是说，模型不是只做 query-passage relevance，而是学习：
+
+```text
+在当前证据状态下，下一条最应该进入上下文的 evidence 是什么。
+```
+
+更准确地说，这里的 score 可以理解为：
+
+```text
+在状态 s_t 下，如果选择候选证据 u 加入上下文，
+它对最终完成多跳证据覆盖和回答问题的预期价值有多大。
+```
+
+因此，本项目中的 score 本质上是 **state-action value**，而不是普通检索相关性分数。
+
+### 2.2 Value-based 视角
+
+为了突出本项目的原理，可以将多跳 context construction 写成一个有限步序列决策问题。
+
+#### State
+
+```text
+s_t = (q, H_t, K_t)
+```
+
+其中：
+
+- `q` 是当前问题；
+- `H_t` 是已经选择过的 evidence history；
+- `K_t` 是由已选证据渲染出的当前 context / notebook。
+
+#### Action
+
+```text
+a_t = u,  u in C_t
+```
+
+也就是从当前候选证据集合 `C_t` 中选择一条 evidence unit 加入上下文。
+
+#### Transition
+
+选择 `u` 之后，系统更新 evidence state：
+
+```text
+H_{t+1} = H_t ∪ {u}
+K_{t+1} = Render(H_{t+1})
+```
+
+#### Value
+
+我们希望学习：
+
+```text
+Q_theta(s_t, u)
+```
+
+它表示在当前状态 `s_t` 下选择证据 `u` 的价值。这个价值不是局部文本相关性，而是和最终目标相关：
+
+- 是否补齐缺失的 bridge evidence；
+- 是否补齐 answer-facing support evidence；
+- 是否减少当前 context 的 evidence deficit；
+- 是否提高最终 gold evidence coverage；
+- 是否帮助 LLM 在最终 context 中回答正确。
+
+因此，Policy-RAG 的选择过程可以写成：
+
+```text
+u_{t+1} = argmax_{u in C_t} Q_theta(s_t, u)
+```
+
+这就是 value-based 的核心：模型输出的是每个候选 action 在当前 context state 下的价值估计，然后根据价值选择下一条 evidence。
+
+#### 与普通 score/rerank 的区别
+
+普通 reranker 的 score 通常表示：
+
+```text
+relevance(q, u)
+```
+
+而我们的 score 表示：
+
+```text
+value(s_t, u)
+```
+
+二者区别在于：
+
+```text
+同一条 evidence u，在不同 K_t 下价值可能不同。
+```
+
+例如：
+
+- 如果当前 context 还没有 bridge evidence，则 bridge sentence 的 value 高；
+- 如果 bridge evidence 已经选入 context，则重复 bridge sentence 的 value 应下降；
+- 如果当前缺少 answer support，则 answer-facing support sentence 的 value 应上升。
+
+这就是本项目相对于普通检索和 reranking 的核心差异。
+
+### 2.3 Policy-RAG 的基本流程
+
+当前系统可以抽象为：
 
 ```text
 Question
-  -> Candidate Generation
+  -> Candidate Evidence Pool
   -> Trajectory-aware Evidence Selection Policy
-  -> Evidence Notebook / State Update
+  -> Evidence State / Notebook Update
+  -> Answer-facing Context
   -> LLM Answer
 ```
 
-其中，模型不是只判断 query 和 passage 的静态相关性，而是根据：
-
-- 当前问题 `Question`
-- 当前已经选中的证据状态 `K_t / Notebook`
-- 当前候选证据集合 `C_t`
-- 下一步应该选择的 gold evidence/action
-
-来决定下一步应该选择哪条证据。因此更准确的表述是：
+更具体地说：
 
 ```text
-Trajectory-aware retrieval policy model
+输入：q, K_t, C_t
+输出：每个候选 u 的 Q_theta(s_t, u)，并选择价值最高的 u_{t+1}
 ```
 
-或者：
+其中：
+
+- `q` 是问题；
+- `K_t` 是当前已经选择并组织好的证据上下文；
+- `C_t` 是当前候选证据集合；
+- `u_{t+1}` 是下一条被选择进入 context 的证据。
+
+最终，系统将多步选择出的证据集合组织成 answer-facing context，再交给 LLM 生成答案。
+
+### 2.4 与传统 reranker 的区别
+
+本项目中的模型容易被误解为 reranker，但二者的学习目标不同。
+
+传统 reranker 通常是：
 
 ```text
-Policy-RAG evidence selector
+rerank(q, candidates)
 ```
 
-## 2. 核心方法定位
+它对一批候选 passage 做一次性排序。
 
-### 2.1 不是传统 reranker
-
-传统 cross-encoder reranker 通常学习：
+我们的模型是：
 
 ```text
-score(query, passage)
+Q_theta(s_t, u) = value(q, K_t, u)
+select_next = argmax_u Q_theta(s_t, u)
 ```
 
-我们的模型学习的是：
+它在当前 evidence state 下选择下一条最有增益的证据。因此，它更适合称为：
 
 ```text
-score(question, current_state, candidate_evidence)
+Trajectory-aware evidence selection policy
 ```
 
-其中 `current_state` 包含当前已经选择的证据、上下文 notebook、trajectory step 等信息。因此它学习的不只是相关性，而是 **retrieval decision policy**。
-
-### 2.2 在 RAG 系统中的位置
-
-我们的 Policy-RAG 组件位于 RAG 的检索阶段内部：
+或：
 
 ```text
-Candidate evidence pool
-  -> Policy model selects evidence conditioned on current trajectory state
-  -> Selected evidence forms context
-  -> LLM generates answer
+Value-guided context construction policy
 ```
 
-它不是替代 LLM，也不是答案生成模块，而是负责把多跳问答需要的证据更准确地组织进上下文。
+而不是传统意义上的 one-shot reranker。
 
-## 3. 数据集构建过程
+## 3. 方法框架
 
-### 3.1 早期数据集版本
+### 3.1 核心对象
 
-项目从 HotpotQA distractor 数据集开始，逐步构建了多个版本的数据：
+项目中使用以下核心对象描述多跳 RAG 的证据构建过程。
 
-| Version | 作用 |
+#### Query `q`
+
+问题对象，包含：
+
+```text
+qid
+question
+answer
+metadata
+```
+
+#### Candidate Evidence `C_t`
+
+当前步骤可供选择的候选证据集合。每个候选通常是 sentence-level evidence unit。
+
+#### History `H_t`
+
+已经选择过的 evidence unit 序列：
+
+```text
+H_t = [u_1, u_2, ..., u_t]
+```
+
+#### Notebook / Context State `K_t`
+
+由已选证据渲染得到的当前上下文状态。它表示 LLM 当前已经“知道”的证据内容。
+
+#### Policy `pi`
+
+学习一个选择策略：
+
+```text
+pi(u | q, K_t, C_t)
+```
+
+用于判断候选证据 `u` 是否应该作为下一条证据进入上下文。
+
+### 3.2 Teacher-Student 设计
+
+项目采用 teacher-student 思路。
+
+Teacher 阶段用于离线构造高质量监督轨迹：
+
+```text
+(q, K_t, C_t) -> u_{t+1}^*
+```
+
+其中 `u_{t+1}^*` 是当前状态下的 gold next evidence。
+
+Student 阶段训练一个轻量模型，学习 teacher 生成的 evidence selection decision。在线推理时，student 不需要调用复杂 teacher 逻辑，只需要根据当前 context state 对候选证据打分并选择。
+
+这个设计的好处是：
+
+- 将复杂的多跳上下文构建过程转化为监督学习任务；
+- 将昂贵的标注和轨迹构建放到离线阶段；
+- 在线阶段只需要小模型完成 evidence selection，成本低于 agentic RAG；
+- 模型显式学习 context state，而不是只学习静态相关性。
+
+## 4. 数据集整理过程
+
+### 4.1 原始数据来源
+
+项目主要使用 HotpotQA distractor 数据集。HotpotQA 适合作为本项目实验数据，原因是：
+
+- 它是典型多跳问答数据集；
+- 每个问题包含多个 distractor documents；
+- 标注了 supporting facts；
+- 可以用于构造 evidence selection trajectory；
+- 适合评估多跳证据覆盖和最终答案质量。
+
+原始样本包含：
+
+```text
+question
+answer
+type
+level
+context
+supporting_facts
+```
+
+其中 `context` 包含多个候选文档及其句子，`supporting_facts` 给出 gold evidence 所在文档和句子编号。
+
+### 4.2 统一数据格式
+
+为了训练和评测 Policy-RAG，我们将 HotpotQA 转换成以下几类文件。
+
+#### Queries
+
+路径示例：
+
+```text
+queries/test.jsonl
+```
+
+每行表示一个问题：
+
+```json
+{
+  "qid": "...",
+  "question": "...",
+  "answer": "...",
+  "metadata": {
+    "dataset": "hotpotqa_distractor",
+    "split": "test",
+    "type": "bridge",
+    "level": "hard"
+  }
+}
+```
+
+#### Raw Units
+
+路径示例：
+
+```text
+unit_registry/raw_units_test.jsonl
+```
+
+将 HotpotQA context 中的句子拆成 sentence-level evidence units：
+
+```json
+{
+  "unit_id": "qid::doc_id::sent_id",
+  "text": "...",
+  "doc_id": "...",
+  "parent_chunk_id": "...",
+  "provenance": "raw",
+  "candidate_granularity": "sentence"
+}
+```
+
+#### Targets
+
+路径示例：
+
+```text
+targets/test.jsonl
+```
+
+由 HotpotQA supporting facts 构造 gold evidence targets：
+
+```json
+{
+  "qid": "...",
+  "question": "...",
+  "T_q_raw": [
+    {
+      "unit_id": "...",
+      "text": "...",
+      "doc_id": "...",
+      "primary_role": "support"
+    }
+  ]
+}
+```
+
+#### Samples
+
+路径示例：
+
+```text
+samples/test.jsonl
+```
+
+这是训练和评测的核心文件。每一条 sample 对应一个 trajectory step：
+
+```json
+{
+  "qid": "...",
+  "t": 0,
+  "question": "...",
+  "state": {
+    "K_t": "current evidence context"
+  },
+  "candidates": {
+    "C_t": ["unit_id_1", "unit_id_2", "..."]
+  },
+  "labels": {
+    "ranking_label": {
+      "positive_unit_id": "gold_next_unit",
+      "negative_unit_ids": ["..."]
+    }
+  }
+}
+```
+
+这样就把多跳证据选择问题转成了监督学习问题：
+
+```text
+给定 q、K_t 和候选 C_t，选择 positive_unit_id。
+```
+
+### 4.3 数据版本演进
+
+项目中逐步构建了多个数据版本。
+
+| 数据版本 | 主要作用 |
 |---|---|
 | `v3/v4` | 初步构建 trajectories、raw units、targets、samples |
-| `v5_llm_dataset` | 引入 LLM role 标注，形成可训练的 ranking/policy 数据 |
-| `v6_10k_llm` | 扩大到约 10k qids，用于更稳定训练 |
-| `v7_10k_llm_prestep` | 关键版本，引入 pre-step trajectory/state 表示，模型性能显著提升 |
-| `v8_15k_llm_prestep` | 扩大训练数据尝试，但效果不一定稳定提升 |
+| `v5_llm_dataset` | 引入 LLM role 标注，增强 bridge/support 区分 |
+| `v6_10k_llm` | 扩大到约 10k qids，提高训练稳定性 |
+| `v7_10k_llm_prestep` | 引入 pre-step trajectory state，是当前主力训练数据 |
+| `v8_15k_llm_prestep` | 扩大训练数据到约 15k，作为扩展尝试 |
+| `eval_3000_cand10` | 当前用于正式 RAG 对比实验的 3000 条独立评测集 |
 
-### 3.2 当前最佳训练数据
-
-当前效果最好的主线数据是：
+当前最佳训练数据为：
 
 ```text
 data/hotpotqa_distractor_v7_10k_llm_prestep
 ```
 
-核心文件包括：
-
-```text
-samples/train.jsonl
-samples/val.jsonl
-samples/test.jsonl
-unit_registry/raw_units_train.jsonl
-unit_registry/raw_units_val.jsonl
-unit_registry/raw_units_test.jsonl
-queries/test.jsonl
-targets/test.jsonl
-```
-
-其中 `samples/*.jsonl` 是模型训练和评测的核心，每条样本表示一个 trajectory step 下的 evidence selection decision。
-
-### 3.3 新的 3000 条独立评测集
-
-为了做更正式的 RAG 对比实验，我们新增了独立评测集构建脚本：
-
-```text
-scripts/prepare_hotpotqa_policy_rag_eval.py
-scripts/validate_hotpotqa_policy_rag_eval.py
-```
-
-目标是从 HotpotQA validation/dev 中抽取 3000 条，构建成 Policy-RAG 可直接评测的格式。
-
-当前推荐的正式评测集路径：
+当前主要评测数据为：
 
 ```text
 data/hotpotqa_distractor_eval_3000_cand10
 ```
 
-选择 `cand10` 的原因是：它与模型训练阶段的候选规模更接近，每一步约 10 个候选证据，因此更适合作为主实验设置。全候选版本也保留为更难的 open-candidate setting。
+### 4.4 为什么使用 cand10 评测设置
 
-## 4. 模型训练过程
+`cand10` 表示每一步候选集合约为 10 条 evidence units。
 
-### 4.1 基础模型
+采用 cand10 的原因是：
 
-主要尝试过：
+- 与模型训练时的候选规模一致；
+- 便于公平比较不同选择策略；
+- 可以聚焦评估 context construction policy，而不是把问题变成完全开放检索；
+- 和之前 383 条测试实验保持一致。
 
-| Model | 结果 |
-|---|---|
-| `microsoft/deberta-v3-base` | 可以跑通，但准确率较低 |
-| `microsoft/deberta-v3-large` | 当前主力模型，效果最好 |
-| BGE reranker / 其他更强模型 | 有尝试，但没有超过当前 DeBERTa v3 large 主线 |
+另外也构建过 full-candidate 设置，即每一步使用该问题原始 HotpotQA context 中的所有 sentence 作为候选，平均约 40-60 个候选。该设置远难于训练时分布，更适合作为 stress test，而不是当前主实验。
 
-当前最佳模型使用：
+## 5. 模型训练过程
+
+### 5.1 模型结构
+
+当前 student policy 使用 cross-encoder 结构，对：
+
+```text
+(question + current context, candidate evidence)
+```
+
+进行联合编码，然后输出候选证据的分数。
+
+当前主力 backbone：
+
+```text
+microsoft/deberta-v3-large
+```
+
+本地模型目录：
 
 ```text
 models/deberta-v3-large
@@ -152,122 +483,142 @@ models/deberta-v3-large
 outputs/ranker/frozen_deberta_v3_large_v7_main_val08252/best_model.pt
 ```
 
-### 4.2 关键训练结果
+### 5.2 训练目标
 
-早期 v5/v6 训练准确率大致在 0.60-0.70 区间。引入 v7 pre-step trajectory 表示后，效果明显提升。
+每个训练样本对应一个多跳轨迹 step。模型需要在候选集合中将 gold next evidence 排在前面。
 
-关键结果之一：
-
-```text
-Best epoch: 4, best val acc: 0.8252
-test_acc: 0.8257
-```
-
-这成为后续 RAG 接入的主模型。
-
-### 4.3 训练中解决的问题
-
-训练过程中遇到并解决过：
-
-- `protobuf` / `tiktoken` 缺失导致 tokenizer 加载失败
-- Hugging Face 下载超时，改用 `HF_ENDPOINT=https://hf-mirror.com`
-- `fp16` 下出现 `Attempting to unscale FP16 gradients`
-- DeBERTa large 在 RTX 3090 上 OOM，调整 `batch_size`、`max_length`、`grad_accum_steps`
-- 多卡可用但最终主要采用单卡稳定训练
-- Git LFS 下载大文件卡死，改用 tar 包或 raw 脚本下载
-
-## 5. 错误分析与性能提升
-
-### 5.1 早期错误分析
-
-我们使用：
+训练目标可以理解为：
 
 ```text
-scripts/analyze_hotpotqa_ranker_errors.py
+maximize score(q, K_t, u_positive)
+minimize score(q, K_t, u_negative)
 ```
 
-分析模型错误，发现：
-
-- `unlabeled` 正样本是早期数据构造中的主要问题之一
-- `bridge` 和 `support` 的同角色近邻混淆较多
-- 第二步 trajectory 选择比第一步更难
-- 大候选集合下容易出现 near-miss
-
-### 5.2 数据修复方向
-
-主要修复策略：
-
-- 清理 `unlabeled positive`
-- 增加 pre-step state
-- 加 hard negative / near-miss mining
-- 调整学习率、epoch、max length
-- 尝试扩大数据到 15k
-
-最终发现，**数据构造方式和 trajectory state 设计** 比单纯扩大模型或训练轮数更重要。
-
-## 6. LLM verifier 尝试
-
-曾经尝试用 DeepSeek 作为 top-2 verifier，对模型 top-2 候选做二次判断。
-
-结果示例：
+也就是学习：
 
 ```text
-base_acc: 0.825708
-basic_fixed: 26
-targeted_extra_fixed: 15
-combined_correct: 420
-combined_acc: 0.915033
+当前 context state 下，哪条 evidence 对完成多跳推理最有贡献。
 ```
 
-这说明 LLM verifier 可以显著提升最终选择准确率，但我们最终认为它不适合作为主方法，因为：
+### 5.3 训练过程中的主要调整
 
-- 需要额外 API 成本
-- 推理延迟增加
-- 论文贡献会偏向大模型后处理，而不是小模型本身
+训练过程中进行了多轮优化：
 
-因此主线仍然回到：提升小模型自身的 evidence selection 能力，并将其作为 RAG 检索策略模块。
+- 从 DeBERTa-v3-base 切换到 DeBERTa-v3-large；
+- 处理 Hugging Face 下载、tokenizer、protobuf、tiktoken 等环境问题；
+- 处理 RTX 3090 上 large 模型 OOM 问题；
+- 调整 `batch_size`、`max_length`、`grad_accum_steps`；
+- 尝试不同学习率、epoch、seed；
+- 对错误样本进行分析，修复 unlabeled positive 和 near-miss hard negatives；
+- 引入 pre-step state，显著提升 trajectory-aware selection 效果。
 
-## 7. Policy-RAG 系统实现
+### 5.4 当前训练效果
 
-核心脚本：
+当前最佳模型来自 v7 pre-step 数据版本。
+
+代表性结果：
+
+```text
+Best epoch: 4
+best val acc: 0.8252
+test acc: 0.8257
+```
+
+这个结果说明模型已经能够较好地学习 trajectory-aware evidence selection。
+
+## 6. RAG 系统接入
+
+### 6.1 Policy-RAG 推理流程
+
+在 RAG 推理阶段，系统逐步选择 evidence。
+
+对于每个问题：
+
+1. 读取当前候选集合 `C_t`；
+2. 根据已经选择的 evidence 构造 `K_t`；
+3. 使用 policy model 对每条候选 evidence 打分；
+4. 选择 top-k evidence 加入上下文；
+5. 多步完成后，将 selected evidence 组织成 answer-facing context；
+6. 调用 LLM 输出答案。
+
+当前核心脚本：
 
 ```text
 scripts/run_hotpotqa_policy_rag.py
 ```
 
-该脚本支持多种 selector：
+### 6.2 支持的对比方法
 
-| Selector | 含义 |
+当前脚本支持多种 selector，用于公平比较。
+
+| Selector | 说明 |
 |---|---|
-| `policy` | 我们的 trajectory-aware policy model |
-| `bm25` | BM25 baseline |
-| `dense` | BGE dense retriever baseline |
-| `dense_policy` | Dense 召回后再用 policy 选择 |
-| `first` | 直接取候选前几条 |
+| `policy` | 我们的 trajectory-aware context construction policy |
+| `bm25` | BM25 词法检索 |
+| `dense` | BGE dense retrieval |
+| `hybrid` | BM25 + dense 分数融合 |
+| `multi_query_dense` | 多查询视角 dense retrieval |
+| `iterative_dense` | 基于当前 state 的 iterative dense retrieval |
+| `generic_reranker` | 通用 cross-encoder reranker |
+| `dense_policy` | dense shortlist 后使用 policy 选择 |
+| `first` | 直接选择候选前几条 |
 | `random` | 随机选择候选 |
 | `gold_oracle` | Gold evidence only reference |
 
-支持生成答案：
+### 6.3 答案生成
 
-```text
---generate-answers
---answer-mode json
+证据选择完成后，使用 LLM 根据 selected evidence 生成答案。
+
+当前答案生成采用 JSON 模式：
+
+```json
+{"answer": "..."}
 ```
 
-并支持 API 断线恢复：
+这样可以减少解释性文本对 EM/F1 评测的影响。
+
+系统还加入了 answer cache 和 retry 机制：
 
 ```text
---llm-max-retries 10
---answer-cache-dir ...
+--answer-cache-dir
+--llm-max-retries
 ```
 
-这样即使 DeepSeek API 中途断开，也可以重复同一命令继续跑，已完成的 qid 会从 cache 读取。
+避免 API 中断导致长时间实验需要重跑。
 
-## 8. 383 条测试集对比实验
+## 7. 实验指标
 
-基于 `v7_10k_llm_prestep` 的 test split，我们完成了 383 个 qid 的完整对比实验。
+项目同时评估 evidence quality 和 answer quality。
 
-### 8.1 实验结果
+### 7.1 Evidence Quality
+
+| 指标 | 含义 |
+|---|---|
+| `step_acc@1` | 每一步 top-1 是否选中 gold evidence |
+| `step_acc@5` | 每一步 top-5 是否包含 gold evidence |
+| `step_selected_contains_gold` | 每一步最终选入 context 的证据是否包含 gold evidence |
+| `full_gold_doc_coverage` | 最终 context 是否覆盖完整 gold documents |
+| `full_gold_unit_coverage` | 最终 context 是否覆盖完整 gold sentence units |
+
+这些指标直接衡量 context construction 是否成功。
+
+### 7.2 Answer Quality
+
+| 指标 | 含义 |
+|---|---|
+| `answer_em` | Exact Match |
+| `answer_f1` | token-level F1 |
+| `answer_contains` | 生成答案是否包含 gold answer |
+| `avg_answer_tokens` | 平均回答消耗 token |
+| `avg_answer_latency` | 平均回答延迟 |
+
+这些指标衡量 evidence context 是否真正帮助 LLM 生成正确答案。
+
+## 8. 已完成的主要实验
+
+### 8.1 383 条测试集实验
+
+在 v7 test split 上完成了 383 个 qid 的完整对比。
 
 | Method | QIDs | Answer EM | Answer F1 | Answer Contains | Full Gold Doc Coverage | Full Gold Unit Coverage | Step Selected Contains Gold | Avg Tokens | Latency |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -279,85 +630,18 @@ scripts/run_hotpotqa_policy_rag.py
 | Dense+Policy | 383 | 0.5535 | 0.6907 | 0.6319 | 0.9948 | 0.9843 | 0.9346 | 345.09 | 1.215 |
 | **Policy-RAG** | 383 | **0.5587** | **0.6955** | **0.6371** | **0.9974** | **0.9843** | **0.9346** | 345.76 | **0.827** |
 
-### 8.2 主要结论
+主要观察：
 
-Policy-RAG 在答案指标上最好：
+- Policy-RAG 明显优于 BM25-RAG 和 Dense-RAG；
+- Policy-RAG 的 evidence coverage 接近 Gold-only；
+- Policy-RAG 的答案质量高于 Gold-only，说明额外上下文可能提供了有益的消歧信息；
+- Dense+Policy 与 Policy-RAG 接近，但 Policy-RAG 速度更快。
 
-```text
-Answer EM = 0.5587
-Answer F1 = 0.6955
-```
+### 8.2 3000 条 cand10 smoke test
 
-相比主流 baseline：
+在 3000 条独立评测集的 cand10 设置下，先进行了 20 条 smoke test。
 
-| 对比 | EM 提升 | F1 提升 |
-|---|---:|---:|
-| vs First | +22.19 | +24.93 |
-| vs Random | +15.40 | +17.44 |
-| vs BM25-RAG | +9.40 | +9.92 |
-| vs Dense-RAG | +7.05 | +6.43 |
-| vs Dense+Policy | +0.52 | +0.48 |
-
-关键证据覆盖指标：
-
-```text
-full_gold_doc_coverage = 0.9974
-full_gold_unit_coverage = 0.9843
-step_selected_contains_gold = 0.9346
-```
-
-这些指标说明：Policy-RAG 的主要优势不是让 LLM 更强，而是让进入上下文的 evidence 更准确、更完整。
-
-### 8.3 Gold-only 的解释
-
-`Gold-only` 的 coverage 是 1.0，但答案指标低于 Policy-RAG。这不矛盾，因为：
-
-- Gold-only 只提供标注证据
-- Policy-RAG top-5 可能包含额外有帮助的上下文
-- LLM 回答时额外上下文可能帮助实体消歧和答案表达
-
-因此 `Gold-only` 不应写成 theoretical upper bound，更适合称为：
-
-```text
-Gold Evidence Only reference
-```
-
-## 9. 3000 条独立评测集
-
-为了得到更正式、更有说服力的实验结果，我们开始构建 3000 条独立评测集。
-
-### 9.1 全候选版本 smoke test
-
-路径：
-
-```text
-data/hotpotqa_distractor_eval_3000
-```
-
-该版本每一步候选是 HotpotQA 原始 context 中的所有 sentence，平均候选数约 50。
-
-Smoke20 结果：
-
-```text
-step_acc@1 = 0.12
-step_acc@5 = 0.36
-answer_em = 0.0
-answer_f1 = 0.0
-```
-
-其中答案全 0 的原因是第一次 DeepSeek API key 没有正确传入；检索指标偏低则说明全候选设置远难于训练时的候选规模。
-
-### 9.2 cand10 版本 smoke test
-
-路径：
-
-```text
-data/hotpotqa_distractor_eval_3000_cand10
-```
-
-该版本每一步保留 10 个候选，更接近训练设置。
-
-Smoke20 结果：
+结果：
 
 ```text
 qids = 20
@@ -379,146 +663,110 @@ avg_answer_latency = 1.206
 answer_errors = 0
 ```
 
-这个结果说明：
+该结果说明：
 
-- 新 3000 数据集构建流程可用
-- DeepSeek API 调用正常
-- cand10 设置与当前模型能力匹配
-- 可以进入 3000 条完整对比实验
+- 新评测数据格式正确；
+- Policy-RAG 可以在独立 3000 条数据上正常运行；
+- cand10 设置下证据覆盖和答案生成效果较好；
+- 可以进入完整 3000 条对比实验。
 
-## 10. 正式对比实验设计
+## 9. 当前工作的主要特点
 
-正式实验建议使用：
+### 9.1 显式建模多跳 context state
+
+与传统检索器相比，本项目不是只看 `question-candidate` 相关性，而是显式引入当前 evidence state。
+
+这使模型能够学习：
+
+```text
+当前 context 还缺什么证据？
+下一条 evidence 应该补充哪个推理环节？
+```
+
+### 9.2 将 context construction 转化为监督学习
+
+通过 teacher trajectory，将多跳证据构建过程转化为：
+
+```text
+(q, K_t, C_t) -> u_{t+1}^*
+```
+
+这使得系统既保留了多跳推理过程，又避免在线阶段依赖昂贵的 LLM agent。
+
+### 9.3 同时优化 evidence coverage 和 answer quality
+
+项目不是只报告检索 recall，也不是只报告答案 EM/F1，而是同时评估：
+
+- 每一步证据选择是否正确；
+- 最终 context 是否覆盖完整 gold evidence；
+- LLM 是否能基于该 context 输出正确答案。
+
+这更符合 RAG 系统的真实目标。
+
+## 10. 后续实验计划
+
+### 10.1 完整 3000 条主实验
+
+在：
 
 ```text
 data/hotpotqa_distractor_eval_3000_cand10
 ```
 
-主要方法：
+上跑完整对比：
 
-| Method | 类型 | 作用 |
-|---|---|---|
-| First | Ablation / weak baseline | 不做智能选择，直接取前几个候选 |
-| Random | Ablation / weak baseline | 随机选择候选 |
-| BM25-RAG | Main baseline | 传统词法检索 RAG |
-| Dense-RAG | Main baseline | BGE dense retriever RAG |
-| Dense+Policy | Hybrid baseline | Dense 召回后用 policy 选择 |
-| Gold-only | Oracle-style reference | 只提供 gold evidence |
-| Policy-RAG | Ours | trajectory-aware evidence selection |
+- BM25-RAG
+- Dense-RAG
+- Hybrid-RAG
+- MultiQuery-Dense
+- Iterative-Dense
+- Generic-Reranker
+- Dense+Policy
+- Policy-RAG
+- First
+- Random
+- Gold-only
 
-主要指标：
+### 10.2 Context ablation
 
-| 指标类型 | 指标 |
+为了进一步证明 context state 的作用，需要增加消融实验：
+
+| Ablation | 目的 |
 |---|---|
-| Answer Quality | `answer_em`, `answer_f1`, `answer_contains` |
-| Evidence Quality | `full_gold_doc_coverage`, `full_gold_unit_coverage`, `step_selected_contains_gold` |
-| Step Accuracy | `step_acc@1`, `step_acc@2`, `step_acc@3`, `step_acc@5` |
-| Efficiency | `avg_answer_tokens`, `avg_answer_latency` |
-| Robustness | `answer_errors` |
+| no-state policy | 去掉 `K_t`，只用 question 和 candidate |
+| dataset-state policy | 使用 teacher-provided state |
+| self-state policy | 使用模型自己选择出来的 state |
+| top-1 / top-3 / top-5 context budget | 分析上下文预算对结果影响 |
+| no-order context | 打乱 evidence 顺序，分析顺序信息作用 |
 
-## 11. 当前论文贡献点
+### 10.3 Candidate difficulty analysis
 
-当前工作可以总结为三个贡献：
+为了展示方法在不同候选难度下的表现，可以比较：
 
-### 11.1 提出 trajectory-aware evidence selection policy
+| Setting | 候选规模 | 作用 |
+|---|---:|---|
+| cand10 | 约 10 | 主实验，接近训练分布 |
+| cand20 | 约 20 | 中等难度 |
+| full-candidate | 约 40-60 | stress test |
 
-区别于传统 reranker，模型显式考虑当前 retrieval trajectory state，从而学习下一步 evidence selection decision。
+这样可以形成候选规模难度曲线，说明方法的适用范围和当前限制。
 
-### 11.2 构建 Policy-RAG 多跳证据组织流程
+## 11. 可以用于论文的贡献表述
 
-将 policy model 放入 RAG 检索阶段，形成：
+当前工作可以总结为三点贡献。
 
-```text
-Candidate Generation -> Policy Evidence Selection -> Context Assembly -> LLM Answer
-```
+### Contribution 1: Trajectory-aware context construction formulation
 
-在 HotpotQA 多跳问答上显著提升 evidence coverage 和 answer quality。
+将多跳 RAG 的上下文构建问题建模为一个 trajectory-aware sequential evidence selection problem，而不是一次性检索或普通 reranking。
 
-### 11.3 系统化对比 BM25、Dense、Random、First、Gold-only
+### Contribution 2: Teacher-guided supervised policy learning
 
-383 条实验中，Policy-RAG 超过 BM25-RAG 和 Dense-RAG，并在证据覆盖上接近 Gold-only。
+通过离线 teacher trajectory 构造监督样本，使 student policy 学习在当前 evidence state 下选择下一条最有增益的证据。
 
-下一步 3000 条实验将进一步验证方法稳定性。
+### Contribution 3: Improved evidence coverage and answer quality
 
-## 12. 当前最重要的路径
+实验表明，Policy-RAG 相比 BM25-RAG、Dense-RAG 和其他 baseline，在 evidence coverage 与 answer quality 上均有提升。
 
-### 最佳模型
+## 12. 一句话总结
 
-```text
-outputs/ranker/frozen_deberta_v3_large_v7_main_val08252/best_model.pt
-```
-
-### 模型目录
-
-```text
-models/deberta-v3-large
-```
-
-### 当前主评测集
-
-```text
-data/hotpotqa_distractor_eval_3000_cand10
-```
-
-### RAG 脚本
-
-```text
-scripts/run_hotpotqa_policy_rag.py
-```
-
-### 构建 3000 eval 数据脚本
-
-```text
-scripts/prepare_hotpotqa_policy_rag_eval.py
-scripts/validate_hotpotqa_policy_rag_eval.py
-```
-
-## 13. 下一步计划
-
-1. 跑完 `eval3000_cand10` 上的完整 Policy-RAG。
-2. 跑完以下完整对比：
-   - BM25-RAG
-   - Dense-RAG
-   - Dense+Policy
-   - Random
-   - First
-   - Gold-only
-3. 汇总 3000 条正式实验表格。
-4. 如时间允许，补充全候选 setting：
-
-```text
-data/hotpotqa_distractor_eval_3000
-```
-
-5. 将论文表述统一为：
-
-```text
-trajectory-aware evidence selection policy
-Policy-RAG
-multi-hop evidence assembly
-```
-
-避免将核心模型简单称为 reranker。
-
-## 14. 给老师看的简短总结
-
-我们的方法不是传统 reranker，而是一个 trajectory-aware evidence selection policy。它根据问题、当前已选证据状态和候选证据集合，逐步选择下一条 evidence，并将最终证据集合交给 LLM 回答。
-
-在 383 个 HotpotQA 测试 qid 上，Policy-RAG 相比 BM25-RAG 和 Dense-RAG 都有明显提升：
-
-```text
-Policy-RAG: EM 0.5587, F1 0.6955
-Dense-RAG:  EM 0.4883, F1 0.6312
-BM25-RAG:   EM 0.4648, F1 0.5963
-```
-
-同时，Policy-RAG 的证据覆盖率非常高：
-
-```text
-full_gold_doc_coverage = 0.9974
-full_gold_unit_coverage = 0.9843
-step_selected_contains_gold = 0.9346
-```
-
-这说明我们的主要优势在于多跳证据选择和上下文组织，而不是简单依赖更强生成模型。
-
+本项目研究的是多跳 RAG 中的 context construction 问题。我们将证据选择建模为一个 trajectory-aware sequential decision process，通过离线 teacher 构造 evidence-state trajectories，并训练 student policy 在当前 context 下选择下一条最有增益的证据，从而在有限上下文预算内提高多跳证据覆盖率和最终答案质量。
