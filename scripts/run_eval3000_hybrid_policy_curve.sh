@@ -12,7 +12,10 @@ CUDA_DEVICE="${CUDA_DEVICE:-5}"
 MAX_QIDS="${MAX_QIDS:-0}"
 SELECT_TOP_K="${SELECT_TOP_K:-5}"
 HYBRID_ALPHA="${HYBRID_ALPHA:-0.5}"
+FRONT_POOL_K="${FRONT_POOL_K:-30}"
 LOCAL_EXPANSION_WINDOW="${LOCAL_EXPANSION_WINDOW:-1}"
+MMR_LAMBDA="${MMR_LAMBDA:-0.7}"
+MMR_SAME_DOC_SIMILARITY="${MMR_SAME_DOC_SIMILARITY:-0.35}"
 ANSWER_MODE="${ANSWER_MODE:-json}"
 LLM_MAX_RETRIES="${LLM_MAX_RETRIES:-10}"
 
@@ -44,8 +47,11 @@ for CAND_K in 10 15 20; do
     --dense-model "$DENSE_MODEL" \
     --dense-query-mode question \
     --hybrid-alpha "$HYBRID_ALPHA" \
+    --front-pool-k "$FRONT_POOL_K" \
     --candidate-top-k "$CAND_K" \
     --local-expansion-window "$LOCAL_EXPANSION_WINDOW" \
+    --mmr-lambda "$MMR_LAMBDA" \
+    --mmr-same-doc-similarity "$MMR_SAME_DOC_SIMILARITY" \
     --select-top-k "$SELECT_TOP_K" \
     --answer-mode "$ANSWER_MODE" \
     --ks 1,2,3,5 \
@@ -69,7 +75,9 @@ for path in sorted(Path("outputs/rag").glob("eval3000_cand50_hybrid_policy_cand*
             "file": str(path),
             "qids": s.get("qids"),
             "candidate_top_k": s.get("candidate_top_k"),
+            "front_pool_k": s.get("front_pool_k"),
             "local_expansion_window": s.get("local_expansion_window"),
+            "mmr_lambda": s.get("mmr_lambda"),
             "answer_em": s.get("answer_em"),
             "answer_f1": s.get("answer_f1"),
             "answer_contains": s.get("answer_contains"),

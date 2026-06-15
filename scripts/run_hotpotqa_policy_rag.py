@@ -428,6 +428,120 @@ def local_expanded_order(
     return expanded
 
 
+def local_expanded_pool(
+    seed_indices: list[int],
+    candidate_ids: list[str],
+    memory: dict[str, dict],
+    *,
+    window: int,
+) -> list[int]:
+    """Expand a seed pool with nearby same-document sentences, preserving seed order."""
+    by_doc: dict[tuple[str, str], list[tuple[int, int]]] = defaultdict(list)
+    for idx, unit_id in enumerate(candidate_ids):
+        item = memory.get(unit_id)
+        if not item:
+            continue
+        qid = unit_id.split("::", 1)[0]
+        by_doc[(qid, str(item.get("doc_id") or item.get("title") or ""))].append((int(item.get("sent_id") or 0), idx))
+    for doc_key in by_doc:
+        by_doc[doc_key].sort()
+
+    expanded: list[int] = []
+    seen: set[int] = set()
+
+    def add(index: int) -> None:
+        if index not in seen:
+            seen.add(index)
+            expanded.append(index)
+
+    for index in seed_indices:
+        add(index)
+        if window <= 0:
+            continue
+        item = memory.get(candidate_ids[index])
+        if not item:
+            continue
+        qid = candidate_ids[index].split("::", 1)[0]
+        doc_key = (qid, str(item.get("doc_id") or item.get("title") or ""))
+        sent_id = int(item.get("sent_id") or 0)
+        for neighbor_sent_id, neighbor_index in by_doc.get(doc_key, []):
+            if abs(neighbor_sent_id - sent_id) <= window:
+                add(neighbor_index)
+    return expanded
+
+
+def text_jaccard(left: str, right: str) -> float:
+    left_tokens = set(tokenize_for_retrieval(left))
+    right_tokens = set(tokenize_for_retrieval(right))
+    if not left_tokens or not right_tokens:
+        return 0.0
+    return len(left_tokens & right_tokens) / len(left_tokens | right_tokens)
+
+
+def candidate_similarity(
+    left_index: int,
+    right_index: int,
+    candidate_texts: list[str],
+    candidate_ids: list[str],
+    memory: dict[str, dict],
+    *,
+    same_doc_similarity: float,
+) -> float:
+    lexical_similarity = text_jaccard(candidate_texts[left_index], candidate_texts[right_index])
+    left = memory.get(candidate_ids[left_index]) or {}
+    right = memory.get(candidate_ids[right_index]) or {}
+    same_doc = bool(left.get("doc_id") and left.get("doc_id") == right.get("doc_id"))
+    if same_doc:
+        lexical_similarity = max(lexical_similarity, same_doc_similarity)
+    return lexical_similarity
+
+
+def mmr_select(
+    pool_indices: list[int],
+    relevance_scores: np.ndarray,
+    candidate_texts: list[str],
+    candidate_ids: list[str],
+    memory: dict[str, dict],
+    *,
+    limit: int,
+    lambda_: float,
+    same_doc_similarity: float,
+) -> list[int]:
+    """Select a relevant but non-redundant subset from a front-end candidate pool."""
+    if limit <= 0 or len(pool_indices) <= limit:
+        return pool_indices[:limit] if limit > 0 else pool_indices
+
+    lambda_ = min(1.0, max(0.0, lambda_))
+    relevance = minmax_normalize(relevance_scores)
+    selected: list[int] = []
+    remaining = list(dict.fromkeys(pool_indices))
+
+    while remaining and len(selected) < limit:
+        best_index = None
+        best_score = None
+        for index in remaining:
+            redundancy = 0.0
+            if selected:
+                redundancy = max(
+                    candidate_similarity(
+                        index,
+                        selected_index,
+                        candidate_texts,
+                        candidate_ids,
+                        memory,
+                        same_doc_similarity=same_doc_similarity,
+                    )
+                    for selected_index in selected
+                )
+            score = lambda_ * float(relevance[index]) - (1.0 - lambda_) * redundancy
+            if best_score is None or score > best_score:
+                best_score = score
+                best_index = index
+        selected.append(int(best_index))
+        remaining.remove(int(best_index))
+    return selected
+
+
 def multi_query_variants(question: str, context: str) -> list[str]:
     variants = [
         question,
@@ -485,10 +599,23 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--dense-query-mode", choices=["question", "state"], default="question")
     parser.add_argument("--hybrid-alpha", type=float, default=0.5, help="Dense score weight for hybrid selector.")
     parser.add_argument(
+        "--front-pool-k",
+        type=int,
+        default=30,
+        help="For hybrid_policy, merge BM25 topK and dense topK before local expansion/MMR.",
+    )
+    parser.add_argument(
         "--local-expansion-window",
         type=int,
         default=0,
         help="For hybrid_policy, include +/-N same-document neighbor sentences before policy compression.",
+    )
+    parser.add_argument("--mmr-lambda", type=float, default=0.7, help="Relevance weight for hybrid_policy MMR compression.")
+    parser.add_argument(
+        "--mmr-same-doc-similarity",
+        type=float,
+        default=0.35,
+        help="Minimum redundancy similarity assigned to candidates from the same document during MMR.",
     )
     parser.add_argument("--reranker-model", default="")
     parser.add_argument("--reranker-batch-size", type=int, default=16)
@@ -626,14 +753,28 @@ def main() -> None:
                 lexical_scores = bm25_scores(question, candidate_texts)
                 alpha = min(1.0, max(0.0, args.hybrid_alpha))
                 hybrid_scores = alpha * minmax_normalize(dense_scores) + (1.0 - alpha) * minmax_normalize(lexical_scores)
+                dense_order = np.argsort(dense_scores)[::-1].tolist()
+                lexical_order = np.argsort(lexical_scores)[::-1].tolist()
                 hybrid_order = np.argsort(hybrid_scores)[::-1].tolist()
-                candidate_top_k = min(max(1, args.candidate_top_k), len(hybrid_order))
-                compressed_indices = local_expanded_order(
-                    hybrid_order,
+                front_pool_k = min(max(1, args.front_pool_k), len(hybrid_order))
+                seed_indices = list(dict.fromkeys(dense_order[:front_pool_k] + lexical_order[:front_pool_k] + hybrid_order[:front_pool_k]))
+                expanded_indices = local_expanded_pool(
+                    seed_indices,
                     usable_candidate_ids,
                     memory,
                     window=max(0, args.local_expansion_window),
+                )
+                expanded_indices.sort(key=lambda index: float(hybrid_scores[index]), reverse=True)
+                candidate_top_k = min(max(1, args.candidate_top_k), len(hybrid_order))
+                compressed_indices = mmr_select(
+                    expanded_indices,
+                    hybrid_scores,
+                    candidate_texts,
+                    usable_candidate_ids,
+                    memory,
                     limit=candidate_top_k,
+                    lambda_=args.mmr_lambda,
+                    same_doc_similarity=args.mmr_same_doc_similarity,
                 )
                 compressed_texts = [candidate_texts[index] for index in compressed_indices]
                 policy_scores = policy.score(context, compressed_texts)
@@ -817,7 +958,10 @@ def main() -> None:
         "dense_model": args.dense_model,
         "dense_query_mode": args.dense_query_mode,
         "hybrid_alpha": args.hybrid_alpha,
+        "front_pool_k": args.front_pool_k,
         "local_expansion_window": args.local_expansion_window,
+        "mmr_lambda": args.mmr_lambda,
+        "mmr_same_doc_similarity": args.mmr_same_doc_similarity,
         "reranker_model": args.reranker_model,
         "candidate_top_k": args.candidate_top_k,
         "select_top_k": args.select_top_k,
