@@ -332,6 +332,15 @@ def rebuild_candidates(
         else:
             compressed.append(positive_index)
 
+    target_count = min(max(1, candidate_top_k), len(unit_ids))
+    if len(compressed) < target_count:
+        for index in front_order:
+            if index in compressed:
+                continue
+            compressed.append(index)
+            if len(compressed) >= target_count:
+                break
+
     candidate_ids = [unit_ids[index] for index in compressed]
     dense_rank = dense_order.index(positive_index) + 1
     bm25_rank = lexical_order.index(positive_index) + 1

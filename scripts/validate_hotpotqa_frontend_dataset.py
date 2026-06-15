@@ -37,6 +37,7 @@ def main() -> None:
     root = args.data_root
     summary = {"data_root": str(root), "splits": {}}
     issues = []
+    warnings = []
 
     for split in [item.strip() for item in args.splits.split(",") if item.strip()]:
         samples_path = root / "samples" / f"{split}.jsonl"
@@ -48,7 +49,13 @@ def main() -> None:
             issues.append({"split": split, "issue": "missing_memory", "path": str(memory_path)})
             continue
 
-        memory_ids = {str(row.get("unit_id")) for row in read_jsonl(memory_path)}
+        memory_rows = list(read_jsonl(memory_path))
+        memory_ids = {str(row.get("unit_id")) for row in memory_rows}
+        memory_count_by_qid = Counter()
+        for row in memory_rows:
+            unit_id = str(row.get("unit_id") or "")
+            qid = str(row.get("qid") or unit_id.split("::", 1)[0])
+            memory_count_by_qid[qid] += 1
         counters = Counter()
         by_qid = defaultdict(list)
         candidate_count = Counter()
@@ -87,15 +94,18 @@ def main() -> None:
                     }
                 )
             if args.expected_candidates > 0 and len(candidates) != args.expected_candidates:
-                issues.append(
-                    {
-                        "split": split,
-                        "row": row_idx,
-                        "issue": "unexpected_candidate_count",
-                        "qid": qid,
-                        "count": len(candidates),
-                    }
-                )
+                item = {
+                    "split": split,
+                    "row": row_idx,
+                    "issue": "unexpected_candidate_count",
+                    "qid": qid,
+                    "count": len(candidates),
+                    "available_units_for_qid": memory_count_by_qid[qid],
+                }
+                if memory_count_by_qid[qid] < args.expected_candidates:
+                    warnings.append(item)
+                else:
+                    issues.append(item)
 
         summary["splits"][split] = {
             "qids": len(by_qid),
@@ -109,6 +119,8 @@ def main() -> None:
     summary["status"] = "OK" if not issues else "FAILED"
     summary["issue_count"] = len(issues)
     summary["issues"] = issues[:20]
+    summary["warning_count"] = len(warnings)
+    summary["warnings"] = warnings[:20]
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     if issues:
         raise SystemExit(1)
