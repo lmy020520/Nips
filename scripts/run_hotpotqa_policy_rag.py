@@ -374,6 +374,60 @@ def minmax_normalize(scores: np.ndarray) -> np.ndarray:
     return (scores - min_score) / (max_score - min_score)
 
 
+def local_expanded_order(
+    order: list[int],
+    candidate_ids: list[str],
+    memory: dict[str, dict],
+    *,
+    window: int,
+    limit: int,
+) -> list[int]:
+    """Keep front-end winners while pulling in nearby sentences from the same document."""
+    if limit <= 0:
+        limit = len(order)
+    if window <= 0:
+        return order[:limit]
+
+    by_doc: dict[tuple[str, str], list[tuple[int, int]]] = defaultdict(list)
+    for idx, unit_id in enumerate(candidate_ids):
+        item = memory.get(unit_id)
+        if not item:
+            continue
+        qid = unit_id.split("::", 1)[0]
+        by_doc[(qid, str(item.get("doc_id") or item.get("title") or ""))].append((int(item.get("sent_id") or 0), idx))
+    for doc_key in by_doc:
+        by_doc[doc_key].sort()
+
+    expanded: list[int] = []
+    seen: set[int] = set()
+
+    def add(index: int) -> None:
+        if index not in seen and len(expanded) < limit:
+            seen.add(index)
+            expanded.append(index)
+
+    for index in order:
+        add(index)
+        item = memory.get(candidate_ids[index])
+        if item:
+            qid = candidate_ids[index].split("::", 1)[0]
+            doc_key = (qid, str(item.get("doc_id") or item.get("title") or ""))
+            sent_id = int(item.get("sent_id") or 0)
+            for neighbor_sent_id, neighbor_index in by_doc.get(doc_key, []):
+                if abs(neighbor_sent_id - sent_id) <= window:
+                    add(neighbor_index)
+                if len(expanded) >= limit:
+                    break
+        if len(expanded) >= limit:
+            break
+
+    for index in order:
+        add(index)
+        if len(expanded) >= limit:
+            break
+    return expanded
+
+
 def multi_query_variants(question: str, context: str) -> list[str]:
     variants = [
         question,
@@ -415,6 +469,7 @@ def build_parser() -> argparse.ArgumentParser:
             "bm25",
             "dense",
             "hybrid",
+            "hybrid_policy",
             "multi_query_dense",
             "iterative_dense",
             "dense_policy",
@@ -429,6 +484,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--dense-batch-size", type=int, default=64)
     parser.add_argument("--dense-query-mode", choices=["question", "state"], default="question")
     parser.add_argument("--hybrid-alpha", type=float, default=0.5, help="Dense score weight for hybrid selector.")
+    parser.add_argument(
+        "--local-expansion-window",
+        type=int,
+        default=0,
+        help="For hybrid_policy, include +/-N same-document neighbor sentences before policy compression.",
+    )
     parser.add_argument("--reranker-model", default="")
     parser.add_argument("--reranker-batch-size", type=int, default=16)
     parser.add_argument("--candidate-top-k", type=int, default=8)
@@ -466,7 +527,7 @@ def main() -> None:
         qids = qids[: args.max_qids]
 
     policy = None
-    if args.selector in {"policy", "dense_policy"}:
+    if args.selector in {"policy", "dense_policy", "hybrid_policy"}:
         policy = PolicyModel(
             model_dir=Path(args.model_dir),
             checkpoint=Path(args.checkpoint),
@@ -475,10 +536,10 @@ def main() -> None:
             batch_size=args.batch_size,
         )
     dense = None
-    if args.selector in {"dense", "hybrid", "multi_query_dense", "iterative_dense", "dense_policy"}:
+    if args.selector in {"dense", "hybrid", "hybrid_policy", "multi_query_dense", "iterative_dense", "dense_policy"}:
         if not args.dense_model:
             raise RuntimeError(
-                "--dense-model is required for --selector dense, hybrid, multi_query_dense, "
+                "--dense-model is required for --selector dense, hybrid, hybrid_policy, multi_query_dense, "
                 "iterative_dense, or dense_policy"
             )
         dense = DenseScorer(args.dense_model, device=args.device, batch_size=args.dense_batch_size)
@@ -559,6 +620,29 @@ def main() -> None:
                 scores = alpha * minmax_normalize(dense_scores) + (1.0 - alpha) * minmax_normalize(lexical_scores)
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
+            elif args.selector == "hybrid_policy":
+                dense_query = context if args.dense_query_mode == "state" else question
+                dense_scores = dense.score(dense_query, candidate_texts)
+                lexical_scores = bm25_scores(question, candidate_texts)
+                alpha = min(1.0, max(0.0, args.hybrid_alpha))
+                hybrid_scores = alpha * minmax_normalize(dense_scores) + (1.0 - alpha) * minmax_normalize(lexical_scores)
+                hybrid_order = np.argsort(hybrid_scores)[::-1].tolist()
+                candidate_top_k = min(max(1, args.candidate_top_k), len(hybrid_order))
+                compressed_indices = local_expanded_order(
+                    hybrid_order,
+                    usable_candidate_ids,
+                    memory,
+                    window=max(0, args.local_expansion_window),
+                    limit=candidate_top_k,
+                )
+                compressed_texts = [candidate_texts[index] for index in compressed_indices]
+                policy_scores = policy.score(context, compressed_texts)
+                reranked_local = np.argsort(policy_scores)[::-1].tolist()
+                order = [compressed_indices[index] for index in reranked_local]
+                order += [index for index in hybrid_order if index not in set(order)]
+                display_scores = hybrid_scores
+                for local_index, original_index in enumerate(compressed_indices):
+                    display_scores[original_index] = float(policy_scores[local_index])
             elif args.selector == "multi_query_dense":
                 query_scores = [
                     dense.score(query, candidate_texts)
@@ -733,6 +817,7 @@ def main() -> None:
         "dense_model": args.dense_model,
         "dense_query_mode": args.dense_query_mode,
         "hybrid_alpha": args.hybrid_alpha,
+        "local_expansion_window": args.local_expansion_window,
         "reranker_model": args.reranker_model,
         "candidate_top_k": args.candidate_top_k,
         "select_top_k": args.select_top_k,
