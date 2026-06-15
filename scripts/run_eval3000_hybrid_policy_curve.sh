@@ -13,11 +13,13 @@ MAX_QIDS="${MAX_QIDS:-0}"
 SELECT_TOP_K="${SELECT_TOP_K:-5}"
 HYBRID_ALPHA="${HYBRID_ALPHA:-0.5}"
 FRONT_POOL_K="${FRONT_POOL_K:-30}"
+FRONT_FUSION="${FRONT_FUSION:-rrf}"
 LOCAL_EXPANSION_WINDOW="${LOCAL_EXPANSION_WINDOW:-1}"
 MMR_LAMBDA="${MMR_LAMBDA:-0.7}"
 MMR_SAME_DOC_SIMILARITY="${MMR_SAME_DOC_SIMILARITY:-0.35}"
 ANSWER_MODE="${ANSWER_MODE:-json}"
 LLM_MAX_RETRIES="${LLM_MAX_RETRIES:-10}"
+CANDIDATE_TOP_KS="${CANDIDATE_TOP_KS:-10 15}"
 
 if [[ -z "${DEEPSEEK_API_KEY:-}" ]]; then
   read -rsp "DeepSeek API Key: " DEEPSEEK_API_KEY
@@ -27,7 +29,7 @@ fi
 
 python3 scripts/validate_hotpotqa_policy_rag_eval.py --data-root "$DATA_ROOT"
 
-for CAND_K in 10 15 20; do
+for CAND_K in $CANDIDATE_TOP_KS; do
   SUFFIX="hybrid_policy_cand${CAND_K}_top${SELECT_TOP_K}_local${LOCAL_EXPANSION_WINDOW}"
   EXTRA_ARGS=()
   if [[ "$MAX_QIDS" != "0" ]]; then
@@ -45,9 +47,10 @@ for CAND_K in 10 15 20; do
     --state-mode policy \
     --selector hybrid_policy \
     --dense-model "$DENSE_MODEL" \
-    --dense-query-mode question \
+    --dense-query-mode state \
     --hybrid-alpha "$HYBRID_ALPHA" \
     --front-pool-k "$FRONT_POOL_K" \
+    --front-fusion "$FRONT_FUSION" \
     --candidate-top-k "$CAND_K" \
     --local-expansion-window "$LOCAL_EXPANSION_WINDOW" \
     --mmr-lambda "$MMR_LAMBDA" \
@@ -76,6 +79,7 @@ for path in sorted(Path("outputs/rag").glob("eval3000_cand50_hybrid_policy_cand*
             "qids": s.get("qids"),
             "candidate_top_k": s.get("candidate_top_k"),
             "front_pool_k": s.get("front_pool_k"),
+            "front_fusion": s.get("front_fusion"),
             "local_expansion_window": s.get("local_expansion_window"),
             "mmr_lambda": s.get("mmr_lambda"),
             "answer_em": s.get("answer_em"),

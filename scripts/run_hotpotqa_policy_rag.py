@@ -374,6 +374,14 @@ def minmax_normalize(scores: np.ndarray) -> np.ndarray:
     return (scores - min_score) / (max_score - min_score)
 
 
+def reciprocal_rank_fusion(orders: list[list[int]], size: int, k: int = 60) -> np.ndarray:
+    scores = np.zeros(size, dtype=float)
+    for order in orders:
+        for rank, index in enumerate(order, start=1):
+            scores[index] += 1.0 / (k + rank)
+    return scores
+
+
 def local_expanded_order(
     order: list[int],
     candidate_ids: list[str],
@@ -605,6 +613,12 @@ def build_parser() -> argparse.ArgumentParser:
         help="For hybrid_policy, merge BM25 topK and dense topK before local expansion/MMR.",
     )
     parser.add_argument(
+        "--front-fusion",
+        choices=["rrf", "score"],
+        default="rrf",
+        help="For hybrid_policy, rank merged BM25/Dense candidates with RRF or normalized score fusion.",
+    )
+    parser.add_argument(
         "--local-expansion-window",
         type=int,
         default=0,
@@ -748,27 +762,33 @@ def main() -> None:
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
             elif args.selector == "hybrid_policy":
-                dense_query = context if args.dense_query_mode == "state" else question
+                front_query = context
+                dense_query = front_query if args.dense_query_mode == "state" else question
                 dense_scores = dense.score(dense_query, candidate_texts)
-                lexical_scores = bm25_scores(question, candidate_texts)
+                lexical_scores = bm25_scores(front_query, candidate_texts)
                 alpha = min(1.0, max(0.0, args.hybrid_alpha))
                 hybrid_scores = alpha * minmax_normalize(dense_scores) + (1.0 - alpha) * minmax_normalize(lexical_scores)
                 dense_order = np.argsort(dense_scores)[::-1].tolist()
                 lexical_order = np.argsort(lexical_scores)[::-1].tolist()
-                hybrid_order = np.argsort(hybrid_scores)[::-1].tolist()
-                front_pool_k = min(max(1, args.front_pool_k), len(hybrid_order))
-                seed_indices = list(dict.fromkeys(dense_order[:front_pool_k] + lexical_order[:front_pool_k] + hybrid_order[:front_pool_k]))
+                front_scores = (
+                    reciprocal_rank_fusion([lexical_order, dense_order], len(usable_candidate_ids))
+                    if args.front_fusion == "rrf"
+                    else hybrid_scores
+                )
+                front_order = np.argsort(front_scores)[::-1].tolist()
+                front_pool_k = min(max(1, args.front_pool_k), len(front_order))
+                seed_indices = list(dict.fromkeys(lexical_order[:front_pool_k] + dense_order[:front_pool_k]))
                 expanded_indices = local_expanded_pool(
                     seed_indices,
                     usable_candidate_ids,
                     memory,
                     window=max(0, args.local_expansion_window),
                 )
-                expanded_indices.sort(key=lambda index: float(hybrid_scores[index]), reverse=True)
-                candidate_top_k = min(max(1, args.candidate_top_k), len(hybrid_order))
+                expanded_indices.sort(key=lambda index: float(front_scores[index]), reverse=True)
+                candidate_top_k = min(max(1, args.candidate_top_k), len(front_order))
                 compressed_indices = mmr_select(
                     expanded_indices,
-                    hybrid_scores,
+                    front_scores,
                     candidate_texts,
                     usable_candidate_ids,
                     memory,
@@ -780,8 +800,8 @@ def main() -> None:
                 policy_scores = policy.score(context, compressed_texts)
                 reranked_local = np.argsort(policy_scores)[::-1].tolist()
                 order = [compressed_indices[index] for index in reranked_local]
-                order += [index for index in hybrid_order if index not in set(order)]
-                display_scores = hybrid_scores
+                order += [index for index in front_order if index not in set(order)]
+                display_scores = front_scores
                 for local_index, original_index in enumerate(compressed_indices):
                     display_scores[original_index] = float(policy_scores[local_index])
             elif args.selector == "multi_query_dense":
@@ -959,6 +979,7 @@ def main() -> None:
         "dense_query_mode": args.dense_query_mode,
         "hybrid_alpha": args.hybrid_alpha,
         "front_pool_k": args.front_pool_k,
+        "front_fusion": args.front_fusion,
         "local_expansion_window": args.local_expansion_window,
         "mmr_lambda": args.mmr_lambda,
         "mmr_same_doc_similarity": args.mmr_same_doc_similarity,
