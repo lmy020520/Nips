@@ -95,10 +95,36 @@ def positive_id(row: dict) -> str:
     return ""
 
 
+def candidate_ids_from_row(row: dict) -> list[str]:
+    candidates = row.get("candidates") or {}
+    value = candidates.get("C_t") or candidates.get("R_t") or []
+    return [str(unit_id) for unit_id in value]
+
+
 def get_k_t(row: dict) -> str:
     if row.get("K_t") is not None:
         return str(row["K_t"])
     return str((row.get("state") or {}).get("K_t") or "")
+
+
+def set_k_t(row: dict, k_t: str) -> dict:
+    row = dict(row)
+    state = dict(row.get("state") or {})
+    state["K_t"] = k_t
+    row["state"] = state
+    if "K_t" in row:
+        row["K_t"] = k_t
+    return row
+
+
+def notebook_from_unit_ids(unit_ids: list[str], memory_by_unit: dict[str, dict]) -> str:
+    lines = []
+    for idx, unit_id in enumerate(unit_ids, start=1):
+        item = memory_by_unit.get(unit_id)
+        if not item:
+            continue
+        lines.append(f"[{idx}] {memory_doc_id(item)}: {str(item.get('text') or '').strip()}")
+    return "\n".join(lines)
 
 
 def reciprocal_rank_fusion(orders: list[list[int]], size: int, k: int = 60) -> np.ndarray:
@@ -394,11 +420,24 @@ def rebuild_split(
     stats = Counter()
     rank_buckets = Counter()
 
-    for row in tqdm(source_samples, desc=f"rebuild-{split}"):
+    rows_by_qid: dict[str, list[dict]] = defaultdict(list)
+    for row in source_samples:
+        rows_by_qid[str(row.get("qid") or "")].append(row)
+    for qid in rows_by_qid:
+        rows_by_qid[qid].sort(key=lambda item: int(item.get("t", 0)))
+    ordered_samples = [
+        row
+        for qid in sorted(rows_by_qid)
+        for row in rows_by_qid[qid]
+    ]
+
+    previous_rebuilt_by_key: dict[tuple[str, int], dict] = {}
+
+    def build_one(row: dict, *, variant: str, variant_meta: dict | None = None) -> dict | None:
         qid = str(row.get("qid") or "")
         if not qid or qid not in memory_by_qid:
             stats["skipped_missing_qid_memory"] += 1
-            continue
+            return None
 
         candidate_ids, meta = rebuild_candidates(
             row,
@@ -411,6 +450,9 @@ def rebuild_split(
             mmr_same_doc_similarity=args.mmr_same_doc_similarity,
             force_positive=True,
         )
+        if args.natural_only and not meta["natural_positive_in_candidates"]:
+            stats["skipped_not_natural_positive"] += 1
+            return None
         positive = positive_id(row)
         if positive not in candidate_ids:
             raise AssertionError(f"positive missing after force: qid={qid} positive={positive}")
@@ -423,7 +465,10 @@ def rebuild_split(
             "rebuilt_at": datetime.now(timezone.utc).isoformat(),
             "source_root": str(source_root),
             "front_end_plan": "Hybrid + Local Expansion + MMR",
+            "sample_variant": variant,
         }
+        if variant_meta:
+            rebuilt["build_meta"]["variant_meta"] = variant_meta
         rebuilt["candidates"] = {
             **(rebuilt.get("candidates") or {}),
             "R_t": candidate_ids,
@@ -440,7 +485,6 @@ def rebuild_split(
             },
         }
         rebuilt["frontend_meta"] = meta
-        rebuilt_samples.append(rebuilt)
 
         stats["samples"] += 1
         stats["natural_positive"] += int(meta["natural_positive_in_candidates"])
@@ -448,6 +492,48 @@ def rebuild_split(
         stats[f"candidate_count_{len(candidate_ids)}"] += 1
         rank_bucket = int(math.ceil(min(meta["rrf_rank"], 100) / 10.0) * 10)
         rank_buckets[f"rrf_rank<={rank_bucket}"] += 1
+        stats[f"variant_{variant}"] += 1
+        return rebuilt
+
+    for row in tqdm(ordered_samples, desc=f"rebuild-{split}"):
+        rebuilt = build_one(row, variant="teacher_state")
+        if rebuilt is None:
+            continue
+        rebuilt_samples.append(rebuilt)
+        previous_rebuilt_by_key[(str(row.get("qid") or ""), int(row.get("t", 0)))] = rebuilt
+
+        if args.corrupt_state_variants <= 0 or int(row.get("t", 0)) <= 0:
+            continue
+
+        qid = str(row.get("qid") or "")
+        t = int(row.get("t", 0))
+        previous = previous_rebuilt_by_key.get((qid, t - 1))
+        if not previous:
+            continue
+        previous_positive = positive_id(previous)
+        previous_candidates = [
+            unit_id for unit_id in candidate_ids_from_row(previous)
+            if unit_id != previous_positive and unit_id in memory_by_unit
+        ]
+        if not previous_candidates:
+            continue
+
+        for variant_idx, wrong_unit_id in enumerate(previous_candidates[: args.corrupt_state_variants], start=1):
+            corrupted = set_k_t(
+                row,
+                notebook_from_unit_ids([wrong_unit_id], memory_by_unit),
+            )
+            rebuilt_corrupt = build_one(
+                corrupted,
+                variant="corrupted_state",
+                variant_meta={
+                    "variant_idx": variant_idx,
+                    "wrong_previous_unit_id": wrong_unit_id,
+                    "wrong_previous_doc_id": memory_doc_id(memory_by_unit[wrong_unit_id]),
+                },
+            )
+            if rebuilt_corrupt is not None:
+                rebuilt_samples.append(rebuilt_corrupt)
 
     output_samples_path = output_root / "samples" / f"{split}.jsonl"
     output_memory_path = output_root / "unit_registry" / f"raw_units_{split}.jsonl"
@@ -479,6 +565,15 @@ def rebuild_split(
             if key.startswith("candidate_count_")
         },
         "rank_buckets": dict(rank_buckets),
+        "variants": {
+            key.replace("variant_", ""): value
+            for key, value in stats.items()
+            if key.startswith("variant_")
+        },
+        "skipped": {
+            "missing_qid_memory": stats["skipped_missing_qid_memory"],
+            "not_natural_positive": stats["skipped_not_natural_positive"],
+        },
     }
 
 
@@ -495,6 +590,17 @@ def main() -> None:
     parser.add_argument("--local-expansion-window", type=int, default=1)
     parser.add_argument("--mmr-lambda", type=float, default=0.7)
     parser.add_argument("--mmr-same-doc-similarity", type=float, default=0.35)
+    parser.add_argument(
+        "--natural-only",
+        action="store_true",
+        help="Keep only samples where the fixed front-end naturally includes the positive evidence.",
+    )
+    parser.add_argument(
+        "--corrupt-state-variants",
+        type=int,
+        default=0,
+        help="Add N rollout-style variants with near-miss previous evidence as K_t for t>0 samples.",
+    )
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
 
@@ -524,6 +630,8 @@ def main() -> None:
             "dense_model": args.dense_model,
             "mmr_lambda": args.mmr_lambda,
             "mmr_same_doc_similarity": args.mmr_same_doc_similarity,
+            "natural_only": args.natural_only,
+            "corrupt_state_variants": args.corrupt_state_variants,
         },
         "teacher": {
             "trajectory_backbone": "existing teacher positive sequence",
@@ -532,8 +640,13 @@ def main() -> None:
                 "C_t",
                 "ranking labels",
                 "hard negatives from fixed hybrid front-end",
+                "optional natural-only filtering",
+                "optional corrupted-state rollout-style variants",
             ],
-            "note": "Positive evidence is forced into C_t when not naturally selected, matching C_t = R_t union teacher gold action.",
+            "note": (
+                "Positive evidence is forced into C_t when not naturally selected unless --natural-only is set, "
+                "matching C_t = R_t union teacher gold action for teacher-forced variants."
+            ),
         },
         "splits": split_summaries,
     }
