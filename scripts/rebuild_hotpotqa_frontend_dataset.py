@@ -377,13 +377,26 @@ def compose_final_candidates(
             break
         add(index)
 
-    if require_positive and positive_index not in seen:
+    final = final[:target_count]
+    if require_positive and positive_index not in final:
         if len(final) >= target_count and final:
-            removed = final.pop()
-            seen.remove(removed)
-        add(positive_index)
+            final[-1] = int(positive_index)
+        else:
+            final.append(int(positive_index))
 
-    return final[:target_count]
+    deduped = []
+    seen = set()
+    for index in final:
+        if index in seen:
+            continue
+        seen.add(index)
+        deduped.append(index)
+    if require_positive and positive_index not in seen:
+        if len(deduped) >= target_count and deduped:
+            deduped[-1] = int(positive_index)
+        else:
+            deduped.append(int(positive_index))
+    return deduped[:target_count]
 
 
 def rebuild_candidates(
