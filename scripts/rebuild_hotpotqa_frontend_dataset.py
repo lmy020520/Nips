@@ -287,6 +287,105 @@ def mmr_select(
     return selected
 
 
+def interleave_orders(orders: list[list[int]]) -> list[int]:
+    """Interleave ranked lists while preserving each list's internal order."""
+    merged = []
+    seen = set()
+    max_len = max((len(order) for order in orders), default=0)
+    for rank in range(max_len):
+        for order in orders:
+            if rank >= len(order):
+                continue
+            index = int(order[rank])
+            if index in seen:
+                continue
+            seen.add(index)
+            merged.append(index)
+    return merged
+
+
+def select_frontend_hard_negatives(
+    *,
+    positive_index: int,
+    source: str,
+    count: int,
+    expanded_indices: list[int],
+    front_order: list[int],
+    dense_order: list[int],
+    lexical_order: list[int],
+) -> list[int]:
+    if count <= 0 or source == "none":
+        return []
+
+    expanded_set = set(expanded_indices)
+    if source == "rrf":
+        order = front_order
+    elif source == "dense":
+        order = dense_order
+    elif source == "bm25":
+        order = lexical_order
+    elif source == "mixed":
+        order = interleave_orders([front_order, dense_order, lexical_order])
+    else:
+        raise ValueError(f"unknown hard-negative source: {source}")
+
+    selected = []
+    seen = set()
+    for index in order:
+        index = int(index)
+        if index == positive_index or index not in expanded_set or index in seen:
+            continue
+        selected.append(index)
+        seen.add(index)
+        if len(selected) >= count:
+            break
+    return selected
+
+
+def compose_final_candidates(
+    *,
+    hard_negative_indices: list[int],
+    mmr_indices: list[int],
+    front_order: list[int],
+    positive_index: int,
+    target_count: int,
+    require_positive: bool,
+) -> list[int]:
+    final = []
+    seen = set()
+
+    def add(index: int) -> None:
+        index = int(index)
+        if index in seen:
+            return
+        seen.add(index)
+        final.append(index)
+
+    for index in hard_negative_indices:
+        add(index)
+    for index in mmr_indices:
+        add(index)
+
+    if require_positive and positive_index not in seen:
+        if len(final) >= target_count and final:
+            removed = final.pop()
+            seen.remove(removed)
+        add(positive_index)
+
+    for index in front_order:
+        if len(final) >= target_count:
+            break
+        add(index)
+
+    if require_positive and positive_index not in seen:
+        if len(final) >= target_count and final:
+            removed = final.pop()
+            seen.remove(removed)
+        add(positive_index)
+
+    return final[:target_count]
+
+
 def rebuild_candidates(
     row: dict,
     pool_items: list[dict],
@@ -298,6 +397,8 @@ def rebuild_candidates(
     mmr_lambda: float,
     mmr_same_doc_similarity: float,
     force_positive: bool,
+    hard_negative_source: str,
+    hard_negative_count: int,
 ) -> tuple[list[str], dict]:
     question = str(row.get("question") or "")
     front_query = f"Question: {question}\nNotebook:\n{get_k_t(row)}"
@@ -333,6 +434,15 @@ def rebuild_candidates(
 
     positive_index = unit_index[positive]
     natural_positive_in_candidates = positive_index in compressed
+    hard_negative_indices = select_frontend_hard_negatives(
+        positive_index=positive_index,
+        source=hard_negative_source,
+        count=hard_negative_count,
+        expanded_indices=expanded_indices,
+        front_order=front_order,
+        dense_order=dense_order,
+        lexical_order=lexical_order,
+    )
     forced_positive = False
     if force_positive and not natural_positive_in_candidates:
         forced_positive = True
@@ -343,29 +453,15 @@ def rebuild_candidates(
         else:
             compressed = [positive_index]
 
-    # Preserve front-end/MMR order while ensuring no duplicate after replacement.
-    deduped = []
-    seen = set()
-    for index in compressed:
-        if index in seen:
-            continue
-        seen.add(index)
-        deduped.append(index)
-    compressed = deduped
-    if force_positive and positive_index not in compressed:
-        if len(compressed) >= candidate_top_k:
-            compressed[-1] = positive_index
-        else:
-            compressed.append(positive_index)
-
     target_count = min(max(1, candidate_top_k), len(unit_ids))
-    if len(compressed) < target_count:
-        for index in front_order:
-            if index in compressed:
-                continue
-            compressed.append(index)
-            if len(compressed) >= target_count:
-                break
+    compressed = compose_final_candidates(
+        hard_negative_indices=hard_negative_indices,
+        mmr_indices=compressed,
+        front_order=front_order,
+        positive_index=positive_index,
+        target_count=target_count,
+        require_positive=force_positive,
+    )
 
     candidate_ids = [unit_ids[index] for index in compressed]
     dense_rank = dense_order.index(positive_index) + 1
@@ -384,6 +480,9 @@ def rebuild_candidates(
         "rrf_rank": rrf_rank,
         "natural_positive_in_candidates": natural_positive_in_candidates,
         "forced_positive": forced_positive,
+        "hard_negative_source": hard_negative_source,
+        "hard_negative_count": hard_negative_count,
+        "hard_negative_unit_ids": [unit_ids[index] for index in hard_negative_indices],
         "candidate_count": len(candidate_ids),
     }
     return candidate_ids, meta
@@ -449,6 +548,8 @@ def rebuild_split(
             mmr_lambda=args.mmr_lambda,
             mmr_same_doc_similarity=args.mmr_same_doc_similarity,
             force_positive=True,
+            hard_negative_source=args.hard_negative_source,
+            hard_negative_count=args.hard_negative_count,
         )
         if args.natural_only and not meta["natural_positive_in_candidates"]:
             stats["skipped_not_natural_positive"] += 1
@@ -489,6 +590,8 @@ def rebuild_split(
         stats["samples"] += 1
         stats["natural_positive"] += int(meta["natural_positive_in_candidates"])
         stats["forced_positive"] += int(meta["forced_positive"])
+        stats[f"hard_negative_source_{meta['hard_negative_source']}"] += 1
+        stats[f"hard_negative_count_{len(meta['hard_negative_unit_ids'])}"] += 1
         stats[f"candidate_count_{len(candidate_ids)}"] += 1
         rank_bucket = int(math.ceil(min(meta["rrf_rank"], 100) / 10.0) * 10)
         rank_buckets[f"rrf_rank<={rank_bucket}"] += 1
@@ -564,6 +667,16 @@ def rebuild_split(
             for key, value in stats.items()
             if key.startswith("candidate_count_")
         },
+        "hard_negative_count": {
+            key.replace("hard_negative_count_", ""): value
+            for key, value in stats.items()
+            if key.startswith("hard_negative_count_")
+        },
+        "hard_negative_source": {
+            key.replace("hard_negative_source_", ""): value
+            for key, value in stats.items()
+            if key.startswith("hard_negative_source_")
+        },
         "rank_buckets": dict(rank_buckets),
         "variants": {
             key.replace("variant_", ""): value
@@ -590,6 +703,21 @@ def main() -> None:
     parser.add_argument("--local-expansion-window", type=int, default=1)
     parser.add_argument("--mmr-lambda", type=float, default=0.7)
     parser.add_argument("--mmr-same-doc-similarity", type=float, default=0.35)
+    parser.add_argument(
+        "--hard-negative-source",
+        choices=["none", "rrf", "dense", "bm25", "mixed"],
+        default="none",
+        help=(
+            "Preserve high-ranked front-end near-miss negatives in the final candidate pool. "
+            "Use 'mixed' to interleave RRF, dense, and BM25 ranks."
+        ),
+    )
+    parser.add_argument(
+        "--hard-negative-count",
+        type=int,
+        default=0,
+        help="Number of front-end hard negatives to force-preserve before MMR fill.",
+    )
     parser.add_argument(
         "--natural-only",
         action="store_true",
@@ -630,6 +758,8 @@ def main() -> None:
             "dense_model": args.dense_model,
             "mmr_lambda": args.mmr_lambda,
             "mmr_same_doc_similarity": args.mmr_same_doc_similarity,
+            "hard_negative_source": args.hard_negative_source,
+            "hard_negative_count": args.hard_negative_count,
             "natural_only": args.natural_only,
             "corrupt_state_variants": args.corrupt_state_variants,
         },
