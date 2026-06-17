@@ -1,0 +1,31 @@
+seed: 42
+output_dir: outputs/ranker/deberta_v3_large_v13_hybrid_natural_hard_margin_ft
+
+model:
+  pretrained_name: models/deberta-v3-large
+  dropout: 0.1
+
+data:
+  train_samples: data/hotpotqa_distractor_v11_hybrid_natural/samples/train.jsonl
+  val_samples: data/hotpotqa_distractor_v11_hybrid_natural/samples/val.jsonl
+  test_samples: data/hotpotqa_distractor_v11_hybrid_natural/samples/test.jsonl
+
+  train_memory: data/hotpotqa_distractor_v11_hybrid_natural/unit_registry/raw_units_train.jsonl
+  val_memory: data/hotpotqa_distractor_v11_hybrid_natural/unit_registry/raw_units_val.jsonl
+  test_memory: data/hotpotqa_distractor_v11_hybrid_natural/unit_registry/raw_units_test.jsonl
+
+train:
+  init_checkpoint: outputs/ranker/deberta_v3_large_v11_hybrid_natural/best_model.pt
+  batch_size: 1
+  num_workers: 0
+  epochs: 2
+  lr: 2.0e-6
+  weight_decay: 0.01
+  warmup_ratio: 0.10
+  max_length: 320
+  grad_accum_steps: 16
+  max_grad_norm: 1.0
+  log_every: 20
+  fp16: false
+  margin_loss_weight: 0.5
+  margin: 0.6
