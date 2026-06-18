@@ -11,6 +11,8 @@ ROLE_TO_ID = {
     "distinguish": 2,
 }
 
+DEFICIT_KEYS = ["d_br", "d_dis", "d_sup", "d_der"]
+
 
 def read_jsonl(path: Path) -> Iterable[dict]:
     with path.open("r", encoding="utf-8") as f:
@@ -88,6 +90,72 @@ def load_role_map(role_targets_path: Optional[str]) -> Dict[str, Dict[str, int]]
                 continue
             qid_roles[doc_id] = ROLE_TO_ID[role]
     return role_map
+
+
+def load_role_totals(role_targets_path: Optional[str]) -> Dict[str, Dict[str, float]]:
+    if not role_targets_path:
+        return {}
+
+    totals: Dict[str, Dict[str, float]] = {}
+    path = Path(role_targets_path)
+    for row_idx, record in enumerate(read_jsonl(path), start=1):
+        qid = str(record.get("qid") or "")
+        if not qid:
+            raise ValueError(f"role targets 缺少 qid: file={path}, row={row_idx}")
+
+        qid_totals = {"bridge": 0.0, "support": 0.0, "distinguish": 0.0}
+        for target in record.get("T_q_raw") or []:
+            if not isinstance(target, dict):
+                continue
+            role = str(target.get("primary_role") or "").strip()
+            if role == "disambiguation":
+                role = "distinguish"
+            if role not in qid_totals:
+                continue
+            qid_totals[role] += float(target.get("weight", 1.0))
+        totals[qid] = qid_totals
+    return totals
+
+
+def get_state_a_t(record: dict) -> dict:
+    state = record.get("state") or {}
+    a_t = state.get("A_t") or record.get("A_t") or {}
+    return a_t if isinstance(a_t, dict) else {}
+
+
+def get_progress_value(a_t: dict, role: str) -> float:
+    aliases = {
+        "bridge": ("k_bridge", "k_br"),
+        "support": ("k_support", "k_sup"),
+        "distinguish": ("k_distinguish", "k_dis"),
+    }
+    for key in aliases[role]:
+        if key in a_t:
+            return float(a_t.get(key) or 0.0)
+    return 0.0
+
+
+def compute_deficit_label(record: dict, role_totals: Dict[str, Dict[str, float]], alpha: float = 1.0) -> List[float]:
+    qid = str(record.get("qid") or "")
+    totals = role_totals.get(qid)
+    if not totals:
+        return [-100.0, -100.0, -100.0, -100.0]
+
+    a_t = get_state_a_t(record)
+    labels = []
+    for role in ("bridge", "distinguish", "support"):
+        total = float(totals.get(role, 0.0))
+        if total <= 0.0:
+            labels.append(0.0)
+            continue
+        progress = get_progress_value(a_t, role)
+        sufficiency = (progress + alpha) / (total + 2.0 * alpha)
+        labels.append(max(0.0, min(1.0, 1.0 - sufficiency)))
+
+    # Derived evidence is optional in the current HotpotQA setting. Keep the
+    # fourth dimension for API compatibility with the KBS formulation.
+    labels.append(0.0)
+    return labels
 
 
 def format_candidate_text(memory_item: dict) -> str:
@@ -176,6 +244,7 @@ class PrefixRankingDataset(Dataset):
 
         self.memory_map = load_memory_map(str(self.memory_path))
         self.role_map = load_role_map(role_targets_path)
+        self.role_totals = load_role_totals(role_targets_path)
         self.samples: List[dict] = []
         self.skipped_unlabeled_positive = 0
 
@@ -194,6 +263,7 @@ class PrefixRankingDataset(Dataset):
             candidates = get_candidate_ids(record)
             positive_unit_id = get_positive_unit_id(record)
             stop_label = get_stop_label(record)
+            deficit_label = compute_deficit_label(record, self.role_totals)
             derived_payloads = normalize_derived_payloads(record.get("derived_payloads"))
 
             if not question:
@@ -257,6 +327,7 @@ class PrefixRankingDataset(Dataset):
                     "positive_unit_id": positive_unit_id,
                     "positive_role_id": positive_role_id,
                     "stop_label": stop_label,
+                    "deficit_label": deficit_label,
                 }
             )
 
@@ -279,6 +350,7 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
     positive_unit_ids: List[str] = []
     stop_labels: List[int] = []
     positive_role_ids: List[int] = []
+    deficit_labels: List[List[float]] = []
 
     for item in batch:
         qids.append(item["qid"])
@@ -287,6 +359,7 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
         positive_unit_ids.append(item["positive_unit_id"])
         stop_labels.append(item["stop_label"])
         positive_role_ids.append(item["positive_role_id"])
+        deficit_labels.append(item["deficit_label"])
 
         context_text = f"Question: {item['question']}\nNotebook:\n{item['K_t']}"
         cand_texts = item["candidate_texts"]
@@ -309,4 +382,5 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
         "positive_unit_ids": positive_unit_ids,
         "stop_labels": stop_labels,
         "positive_role_ids": positive_role_ids,
+        "deficit_labels": deficit_labels,
     }
