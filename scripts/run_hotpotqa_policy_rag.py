@@ -297,7 +297,18 @@ class PolicyModel:
         self.model.eval()
 
     def score(self, context: str, candidate_texts: list[str]) -> np.ndarray:
+        scores, _, _ = self.score_with_aux(context, candidate_texts, return_aux=False)
+        return scores
+
+    def score_with_aux(
+        self,
+        context: str,
+        candidate_texts: list[str],
+        return_aux: bool = True,
+    ) -> tuple[np.ndarray, np.ndarray | None, np.ndarray | None]:
         scores = []
+        role_probs = []
+        deficit_preds = []
         with torch.no_grad():
             for start in range(0, len(candidate_texts), self.batch_size):
                 batch_texts = candidate_texts[start : start + self.batch_size]
@@ -310,13 +321,37 @@ class PolicyModel:
                     return_tensors="pt",
                 )
                 tokens = {key: value.to(self.device) for key, value in tokens.items()}
-                output, _ = self.model(
+                model_outputs = self.model(
                     input_ids=tokens["input_ids"],
                     attention_mask=tokens["attention_mask"],
                     token_type_ids=tokens.get("token_type_ids"),
+                    return_deficit=return_aux,
                 )
+                if return_aux:
+                    output, role_logits, deficit_output = model_outputs
+                    role_probs.extend(torch.softmax(role_logits, dim=-1).detach().cpu().tolist())
+                    deficit_preds.extend(deficit_output.detach().cpu().tolist())
+                else:
+                    output, _ = model_outputs
                 scores.extend(output.detach().cpu().tolist())
-        return np.array(scores)
+        return (
+            np.array(scores),
+            np.array(role_probs) if return_aux else None,
+            np.array(deficit_preds) if return_aux else None,
+        )
+
+    def deficit_aware_score(self, context: str, candidate_texts: list[str], role_weight: float) -> np.ndarray:
+        scores, role_probs, deficit_preds = self.score_with_aux(context, candidate_texts, return_aux=True)
+        if role_probs is None or deficit_preds is None or len(scores) == 0:
+            return scores
+
+        # Role logits use [bridge, support, distinguish]. Deficit labels use
+        # [bridge, distinguish, support, derived]. Align them before matching.
+        deficit_state = np.mean(deficit_preds, axis=0)
+        role_deficit = np.array([deficit_state[0], deficit_state[2], deficit_state[1]])
+        contribution_match = np.dot(role_probs[:, :3], role_deficit)
+
+        return minmax_normalize(scores) + float(role_weight) * contribution_match
 
 
 class DenseScorer:
@@ -635,6 +670,21 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--reranker-batch-size", type=int, default=16)
     parser.add_argument("--candidate-top-k", type=int, default=8)
     parser.add_argument("--select-top-k", type=int, default=1)
+    parser.add_argument(
+        "--policy-score-mode",
+        choices=["rank", "deficit_role"],
+        default="rank",
+        help=(
+            "Use plain ranking score or combine ranking with "
+            "predicted deficit/contribution-role compatibility."
+        ),
+    )
+    parser.add_argument(
+        "--deficit-role-weight",
+        type=float,
+        default=0.5,
+        help="Weight for contribution-role and predicted-deficit compatibility.",
+    )
     parser.add_argument("--answer-mode", choices=["short", "json"], default="json")
     parser.add_argument("--generate-answers", action="store_true")
     parser.add_argument("--answer-cache-dir", default="")
@@ -741,7 +791,11 @@ def main() -> None:
             label = usable_candidate_ids.index(positive_id)
             display_scores = np.zeros(len(usable_candidate_ids), dtype=float)
             if args.selector == "policy":
-                scores = policy.score(context, candidate_texts)
+                scores = (
+                    policy.deficit_aware_score(context, candidate_texts, args.deficit_role_weight)
+                    if args.policy_score_mode == "deficit_role"
+                    else policy.score(context, candidate_texts)
+                )
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
             elif args.selector == "bm25":
@@ -797,7 +851,11 @@ def main() -> None:
                     same_doc_similarity=args.mmr_same_doc_similarity,
                 )
                 compressed_texts = [candidate_texts[index] for index in compressed_indices]
-                policy_scores = policy.score(context, compressed_texts)
+                policy_scores = (
+                    policy.deficit_aware_score(context, compressed_texts, args.deficit_role_weight)
+                    if args.policy_score_mode == "deficit_role"
+                    else policy.score(context, compressed_texts)
+                )
                 reranked_local = np.argsort(policy_scores)[::-1].tolist()
                 order = [compressed_indices[index] for index in reranked_local]
                 order += [index for index in front_order if index not in set(order)]
@@ -823,7 +881,11 @@ def main() -> None:
                 candidate_top_k = min(max(1, args.candidate_top_k), len(dense_order))
                 rerank_indices = dense_order[:candidate_top_k]
                 rerank_texts = [candidate_texts[index] for index in rerank_indices]
-                policy_scores = policy.score(context, rerank_texts)
+                policy_scores = (
+                    policy.deficit_aware_score(context, rerank_texts, args.deficit_role_weight)
+                    if args.policy_score_mode == "deficit_role"
+                    else policy.score(context, rerank_texts)
+                )
                 reranked_local = np.argsort(policy_scores)[::-1].tolist()
                 order = [rerank_indices[index] for index in reranked_local]
                 order += [index for index in dense_order if index not in set(order)]
@@ -986,6 +1048,8 @@ def main() -> None:
         "reranker_model": args.reranker_model,
         "candidate_top_k": args.candidate_top_k,
         "select_top_k": args.select_top_k,
+        "policy_score_mode": args.policy_score_mode,
+        "deficit_role_weight": args.deficit_role_weight,
         "answer_mode": args.answer_mode,
         "answer_cache_dir": str(answer_cache_dir) if args.generate_answers else "",
         "seed": args.seed,
