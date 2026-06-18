@@ -112,6 +112,23 @@ def compute_deficit_mae(deficit_preds, deficit_labels):
     return torch.abs(deficit_preds[mask] - deficit_labels[mask]).sum().item(), int(mask.sum().item())
 
 
+def compute_candidate_role_loss(flat_role_logits, flat_candidate_role_ids):
+    role_mask = flat_candidate_role_ids != -100
+    if not role_mask.any():
+        return None
+    return F.cross_entropy(flat_role_logits[role_mask], flat_candidate_role_ids[role_mask])
+
+
+def compute_candidate_role_metrics(flat_role_logits, flat_candidate_role_ids):
+    role_mask = flat_candidate_role_ids != -100
+    if not role_mask.any():
+        return 0, 0
+    correct = (
+        flat_role_logits[role_mask].argmax(dim=-1) == flat_candidate_role_ids[role_mask]
+    ).sum().item()
+    return int(correct), int(role_mask.sum().item())
+
+
 def run_eval(
     model,
     loader,
@@ -120,6 +137,7 @@ def run_eval(
     max_length: int,
     role_aux_weight: float = 0.0,
     deficit_aux_weight: float = 0.0,
+    candidate_role_aux_weight: float = 0.0,
 ) -> Dict[str, float]:
     model.eval()
 
@@ -128,6 +146,8 @@ def run_eval(
     correct = 0
     role_correct = 0
     role_total = 0
+    candidate_role_correct = 0
+    candidate_role_total = 0
     deficit_abs_error = 0.0
     deficit_total = 0
 
@@ -168,6 +188,18 @@ def run_eval(
                     positive_role_logits[role_mask].argmax(dim=-1) == role_labels[role_mask]
                 ).sum().item()
                 role_total += role_mask.sum().item()
+            if candidate_role_aux_weight > 0.0:
+                flat_candidate_role_ids = torch.tensor(
+                    batch["flat_candidate_role_ids"], dtype=torch.long, device=device
+                )
+                candidate_role_loss = compute_candidate_role_loss(flat_role_logits, flat_candidate_role_ids)
+                if candidate_role_loss is not None:
+                    loss = loss + candidate_role_aux_weight * candidate_role_loss
+                    batch_correct, batch_total = compute_candidate_role_metrics(
+                        flat_role_logits, flat_candidate_role_ids
+                    )
+                    candidate_role_correct += batch_correct
+                    candidate_role_total += batch_total
             if deficit_aux_weight > 0.0:
                 deficit_labels = torch.tensor(batch["deficit_labels"], dtype=torch.float, device=device)
                 deficit_preds = mean_pack_vectors(flat_deficit_preds, batch["candidate_counts"])
@@ -197,6 +229,8 @@ def run_eval(
         "acc": acc,
         "role_acc": role_correct / max(role_total, 1),
         "role_labeled": role_total,
+        "candidate_role_acc": candidate_role_correct / max(candidate_role_total, 1),
+        "candidate_role_labeled": candidate_role_total,
         "deficit_mae": deficit_abs_error / max(deficit_total, 1),
         "deficit_labeled": deficit_total,
     }
@@ -219,6 +253,7 @@ def train_one_epoch(
     margin_loss_weight: float,
     margin: float,
     deficit_aux_weight: float,
+    candidate_role_aux_weight: float,
 ):
     model.train()
 
@@ -227,6 +262,8 @@ def train_one_epoch(
     correct = 0
     role_correct = 0
     role_total = 0
+    candidate_role_correct = 0
+    candidate_role_total = 0
     deficit_abs_error = 0.0
     deficit_total = 0
 
@@ -268,6 +305,13 @@ def train_one_epoch(
                 positive_role_logits = flat_role_logits[positive_flat_indices]
                 role_loss = F.cross_entropy(positive_role_logits[role_mask], role_labels[role_mask])
                 loss = loss + role_aux_weight * role_loss
+            if candidate_role_aux_weight > 0.0:
+                flat_candidate_role_ids = torch.tensor(
+                    batch["flat_candidate_role_ids"], dtype=torch.long, device=device
+                )
+                candidate_role_loss = compute_candidate_role_loss(flat_role_logits, flat_candidate_role_ids)
+                if candidate_role_loss is not None:
+                    loss = loss + candidate_role_aux_weight * candidate_role_loss
             if deficit_aux_weight > 0.0:
                 deficit_labels = torch.tensor(batch["deficit_labels"], dtype=torch.float, device=device)
                 deficit_preds = mean_pack_vectors(flat_deficit_preds, batch["candidate_counts"])
@@ -303,6 +347,12 @@ def train_one_epoch(
                     positive_role_logits[role_mask].argmax(dim=-1) == role_labels[role_mask]
                 ).sum().item()
                 role_total += role_mask.sum().item()
+            if candidate_role_aux_weight > 0.0:
+                batch_correct, batch_total = compute_candidate_role_metrics(
+                    flat_role_logits, flat_candidate_role_ids
+                )
+                candidate_role_correct += batch_correct
+                candidate_role_total += batch_total
             if deficit_aux_weight > 0.0:
                 batch_abs_error, batch_total = compute_deficit_mae(deficit_preds, deficit_labels)
                 deficit_abs_error += batch_abs_error
@@ -322,6 +372,8 @@ def train_one_epoch(
         "acc": acc,
         "role_acc": role_correct / max(role_total, 1),
         "role_labeled": role_total,
+        "candidate_role_acc": candidate_role_correct / max(candidate_role_total, 1),
+        "candidate_role_labeled": candidate_role_total,
         "deficit_mae": deficit_abs_error / max(deficit_total, 1),
         "deficit_labeled": deficit_total,
     }
@@ -378,6 +430,7 @@ def main():
     log_every = int(config["train"]["log_every"])
     use_fp16 = bool(config["train"]["fp16"]) and device.type == "cuda"
     role_aux_weight = float(config["train"].get("role_aux_weight", 0.0))
+    candidate_role_aux_weight = float(config["train"].get("candidate_role_aux_weight", 0.0))
     margin_loss_weight = float(config["train"].get("margin_loss_weight", 0.0))
     margin = float(config["train"].get("margin", 0.2))
     deficit_aux_weight = float(config["train"].get("deficit_aux_weight", 0.0))
@@ -470,6 +523,7 @@ def main():
             margin_loss_weight=margin_loss_weight,
             margin=margin,
             deficit_aux_weight=deficit_aux_weight,
+            candidate_role_aux_weight=candidate_role_aux_weight,
         )
 
         val_metrics = run_eval(
@@ -480,6 +534,7 @@ def main():
             max_length=max_length,
             role_aux_weight=role_aux_weight,
             deficit_aux_weight=deficit_aux_weight,
+            candidate_role_aux_weight=candidate_role_aux_weight,
         )
 
         print(
@@ -488,6 +543,7 @@ def main():
             f"val_loss={val_metrics['loss']:.4f} "
             f"val_acc={val_metrics['acc']:.4f}"
             f" val_role_acc={val_metrics['role_acc']:.4f}"
+            f" val_candidate_role_acc={val_metrics['candidate_role_acc']:.4f}"
             f" val_deficit_mae={val_metrics['deficit_mae']:.4f}"
         )
 
@@ -526,6 +582,7 @@ def main():
         max_length=max_length,
         role_aux_weight=role_aux_weight,
         deficit_aux_weight=deficit_aux_weight,
+        candidate_role_aux_weight=candidate_role_aux_weight,
     )
     save_json(test_metrics, os.path.join(output_dir, "test_metrics.json"))
 

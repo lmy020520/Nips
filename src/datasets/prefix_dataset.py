@@ -85,6 +85,8 @@ def load_role_map(role_targets_path: Optional[str]) -> Dict[str, Dict[str, int]]
             if not isinstance(target, dict):
                 continue
             role = str(target.get("primary_role") or "").strip()
+            if role == "disambiguation":
+                role = "distinguish"
             doc_id = str(target.get("doc_id") or "").strip()
             if role not in ROLE_TO_ID or not doc_id:
                 continue
@@ -275,6 +277,7 @@ class PrefixRankingDataset(Dataset):
 
             normalized_candidates = []
             candidate_texts = []
+            candidate_role_ids = []
             seen = set()
             for unit_id in candidates:
                 unit_id = str(unit_id)
@@ -289,10 +292,12 @@ class PrefixRankingDataset(Dataset):
                             f"candidate qid 不匹配: qid={qid}, unit_id={unit_id}, memory_qid={memory_item['qid']}"
                         )
                     candidate_text = format_candidate_text(memory_item)
+                    candidate_role_id = self.role_map.get(qid, {}).get(memory_item["title"], -100)
                 elif unit_id in derived_payloads:
                     candidate_text = format_derived_candidate_text(unit_id, derived_payloads[unit_id])
                     if not candidate_text.strip():
                         raise ValueError(f"derived candidate text 为空: qid={qid}, unit_id={unit_id}")
+                    candidate_role_id = -100
                 else:
                     raise ValueError(
                         f"candidate 不在 memory 或 derived_payloads 中: qid={qid}, unit_id={unit_id}"
@@ -300,6 +305,7 @@ class PrefixRankingDataset(Dataset):
 
                 normalized_candidates.append(unit_id)
                 candidate_texts.append(candidate_text)
+                candidate_role_ids.append(candidate_role_id)
 
             if positive_unit_id not in normalized_candidates:
                 raise ValueError(
@@ -323,6 +329,7 @@ class PrefixRankingDataset(Dataset):
                     "K_t": k_t,
                     "candidate_unit_ids": normalized_candidates,
                     "candidate_texts": candidate_texts,
+                    "candidate_role_ids": candidate_role_ids,
                     "label_idx": label_idx,
                     "positive_unit_id": positive_unit_id,
                     "positive_role_id": positive_role_id,
@@ -351,6 +358,7 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
     stop_labels: List[int] = []
     positive_role_ids: List[int] = []
     deficit_labels: List[List[float]] = []
+    flat_candidate_role_ids: List[int] = []
 
     for item in batch:
         qids.append(item["qid"])
@@ -370,6 +378,7 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
         for cand_text in cand_texts:
             flat_text_a.append(context_text)
             flat_text_b.append(cand_text)
+        flat_candidate_role_ids.extend(item["candidate_role_ids"])
 
     return {
         "qids": qids,
@@ -383,4 +392,5 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
         "stop_labels": stop_labels,
         "positive_role_ids": positive_role_ids,
         "deficit_labels": deficit_labels,
+        "flat_candidate_role_ids": flat_candidate_role_ids,
     }
