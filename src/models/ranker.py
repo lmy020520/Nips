@@ -12,6 +12,7 @@ class CrossEncoderRanker(nn.Module):
         dropout: float = 0.1,
         num_roles: int = 3,
         num_deficits: int = 4,
+        num_contributions: int = 4,
     ):
         super().__init__()
         self.encoder = AutoModel.from_pretrained(pretrained_name)
@@ -24,6 +25,7 @@ class CrossEncoderRanker(nn.Module):
         self.scorer = nn.Linear(hidden_size, 1)
         self.role_classifier = nn.Linear(hidden_size, num_roles)
         self.deficit_regressor = nn.Linear(hidden_size, num_deficits)
+        self.contribution_regressor = nn.Linear(hidden_size, num_contributions)
 
     def forward(
         self,
@@ -31,6 +33,7 @@ class CrossEncoderRanker(nn.Module):
         attention_mask: torch.Tensor,
         token_type_ids: torch.Tensor = None,
         return_deficit: bool = False,
+        return_contribution: bool = False,
     ) -> torch.Tensor:
         outputs = self.encoder(
             input_ids=input_ids,
@@ -42,10 +45,14 @@ class CrossEncoderRanker(nn.Module):
         cls_state = self.dropout(cls_state)
         flat_scores = self.scorer(cls_state).squeeze(-1)  # [num_pairs]
         role_logits = self.role_classifier(cls_state)  # [num_pairs, num_roles]
+        outputs = [flat_scores, role_logits]
         if return_deficit:
             deficit_preds = torch.sigmoid(self.deficit_regressor(cls_state))  # [num_pairs, num_deficits]
-            return flat_scores, role_logits, deficit_preds
-        return flat_scores, role_logits
+            outputs.append(deficit_preds)
+        if return_contribution:
+            contribution_preds = torch.sigmoid(self.contribution_regressor(cls_state))  # [num_pairs, num_contributions]
+            outputs.append(contribution_preds)
+        return tuple(outputs)
 
     @staticmethod
     def pack_scores(

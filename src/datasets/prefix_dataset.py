@@ -12,6 +12,7 @@ ROLE_TO_ID = {
 }
 
 DEFICIT_KEYS = ["d_br", "d_dis", "d_sup", "d_der"]
+CONTRIBUTION_KEYS = ["c_br", "c_dis", "c_sup", "c_der"]
 
 
 def read_jsonl(path: Path) -> Iterable[dict]:
@@ -160,6 +161,19 @@ def compute_deficit_label(record: dict, role_totals: Dict[str, Dict[str, float]]
     return labels
 
 
+def get_positive_contribution_label(record: dict) -> List[float]:
+    c_t_star = get_nested(record, ["labels", "c_t_star"], {})
+    if not isinstance(c_t_star, dict):
+        return [-100.0, -100.0, -100.0, -100.0]
+    labels = []
+    for key in CONTRIBUTION_KEYS:
+        value = c_t_star.get(key)
+        if not isinstance(value, (int, float)) or isinstance(value, bool):
+            return [-100.0, -100.0, -100.0, -100.0]
+        labels.append(max(0.0, min(1.0, float(value))))
+    return labels
+
+
 def format_candidate_text(memory_item: dict) -> str:
     return f"{memory_item['title']} [{memory_item['sent_id']}] {memory_item['text']}"
 
@@ -266,6 +280,7 @@ class PrefixRankingDataset(Dataset):
             positive_unit_id = get_positive_unit_id(record)
             stop_label = get_stop_label(record)
             deficit_label = compute_deficit_label(record, self.role_totals)
+            positive_contribution_label = get_positive_contribution_label(record)
             derived_payloads = normalize_derived_payloads(record.get("derived_payloads"))
 
             if not question:
@@ -335,6 +350,7 @@ class PrefixRankingDataset(Dataset):
                     "positive_role_id": positive_role_id,
                     "stop_label": stop_label,
                     "deficit_label": deficit_label,
+                    "positive_contribution_label": positive_contribution_label,
                 }
             )
 
@@ -358,6 +374,7 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
     stop_labels: List[int] = []
     positive_role_ids: List[int] = []
     deficit_labels: List[List[float]] = []
+    positive_contribution_labels: List[List[float]] = []
     flat_candidate_role_ids: List[int] = []
 
     for item in batch:
@@ -368,6 +385,7 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
         stop_labels.append(item["stop_label"])
         positive_role_ids.append(item["positive_role_id"])
         deficit_labels.append(item["deficit_label"])
+        positive_contribution_labels.append(item["positive_contribution_label"])
 
         context_text = f"Question: {item['question']}\nNotebook:\n{item['K_t']}"
         cand_texts = item["candidate_texts"]
@@ -392,5 +410,6 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
         "stop_labels": stop_labels,
         "positive_role_ids": positive_role_ids,
         "deficit_labels": deficit_labels,
+        "positive_contribution_labels": positive_contribution_labels,
         "flat_candidate_role_ids": flat_candidate_role_ids,
     }

@@ -477,6 +477,44 @@ class PolicyModel:
             "max": float(np.max(values)),
         }
 
+    def contribution_aware_score(
+        self,
+        context: str,
+        candidate_texts: list[str],
+        contribution_weight: float,
+    ) -> np.ndarray:
+        scores = []
+        deficit_preds = []
+        contribution_preds = []
+        with torch.no_grad():
+            for start in range(0, len(candidate_texts), self.batch_size):
+                batch_texts = candidate_texts[start : start + self.batch_size]
+                tokens = self.tokenizer(
+                    [context] * len(batch_texts),
+                    batch_texts,
+                    padding=True,
+                    truncation=True,
+                    max_length=self.max_length,
+                    return_tensors="pt",
+                )
+                tokens = {key: value.to(self.device) for key, value in tokens.items()}
+                output, _, deficit_output, contribution_output = self.model(
+                    input_ids=tokens["input_ids"],
+                    attention_mask=tokens["attention_mask"],
+                    token_type_ids=tokens.get("token_type_ids"),
+                    return_deficit=True,
+                    return_contribution=True,
+                )
+                scores.extend(output.detach().cpu().tolist())
+                deficit_preds.extend(deficit_output.detach().cpu().tolist())
+                contribution_preds.extend(contribution_output.detach().cpu().tolist())
+        scores = np.array(scores)
+        if len(scores) == 0:
+            return scores
+        deficit_state = np.mean(np.array(deficit_preds), axis=0)
+        contribution_match = np.dot(np.array(contribution_preds), deficit_state)
+        return minmax_normalize(scores) + float(contribution_weight) * minmax_normalize(contribution_match)
+
 
 class DenseScorer:
     def __init__(self, model_name_or_path: str, device: str, batch_size: int):
@@ -802,11 +840,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--select-top-k", type=int, default=1)
     parser.add_argument(
         "--policy-score-mode",
-        choices=["rank", "deficit_role"],
+        choices=["rank", "deficit_role", "deficit_contribution"],
         default="rank",
         help=(
-            "Use plain ranking score or combine ranking with "
-            "predicted deficit/contribution-role compatibility."
+            "Use plain ranking score, deficit-role compatibility, or "
+            "deficit-true-contribution compatibility."
         ),
     )
     parser.add_argument(
@@ -814,6 +852,12 @@ def build_parser() -> argparse.ArgumentParser:
         type=float,
         default=0.5,
         help="Weight for contribution-role and predicted-deficit compatibility.",
+    )
+    parser.add_argument(
+        "--deficit-contribution-weight",
+        type=float,
+        default=0.5,
+        help="Weight for true contribution head and predicted-deficit compatibility.",
     )
     parser.add_argument("--answer-mode", choices=["short", "json"], default="json")
     parser.add_argument("--generate-answers", action="store_true")
@@ -953,11 +997,14 @@ def main() -> None:
             label = usable_candidate_ids.index(positive_id)
             display_scores = np.zeros(len(usable_candidate_ids), dtype=float)
             if args.selector == "policy":
-                scores = (
-                    policy.deficit_aware_score(context, candidate_texts, args.deficit_role_weight)
-                    if args.policy_score_mode == "deficit_role"
-                    else policy.score(context, candidate_texts)
-                )
+                if args.policy_score_mode == "deficit_role":
+                    scores = policy.deficit_aware_score(context, candidate_texts, args.deficit_role_weight)
+                elif args.policy_score_mode == "deficit_contribution":
+                    scores = policy.contribution_aware_score(
+                        context, candidate_texts, args.deficit_contribution_weight
+                    )
+                else:
+                    scores = policy.score(context, candidate_texts)
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
             elif args.selector == "bm25":
@@ -1013,11 +1060,14 @@ def main() -> None:
                     same_doc_similarity=args.mmr_same_doc_similarity,
                 )
                 compressed_texts = [candidate_texts[index] for index in compressed_indices]
-                policy_scores = (
-                    policy.deficit_aware_score(context, compressed_texts, args.deficit_role_weight)
-                    if args.policy_score_mode == "deficit_role"
-                    else policy.score(context, compressed_texts)
-                )
+                if args.policy_score_mode == "deficit_role":
+                    policy_scores = policy.deficit_aware_score(context, compressed_texts, args.deficit_role_weight)
+                elif args.policy_score_mode == "deficit_contribution":
+                    policy_scores = policy.contribution_aware_score(
+                        context, compressed_texts, args.deficit_contribution_weight
+                    )
+                else:
+                    policy_scores = policy.score(context, compressed_texts)
                 reranked_local = np.argsort(policy_scores)[::-1].tolist()
                 order = [compressed_indices[index] for index in reranked_local]
                 order += [index for index in front_order if index not in set(order)]
@@ -1043,11 +1093,14 @@ def main() -> None:
                 candidate_top_k = min(max(1, args.candidate_top_k), len(dense_order))
                 rerank_indices = dense_order[:candidate_top_k]
                 rerank_texts = [candidate_texts[index] for index in rerank_indices]
-                policy_scores = (
-                    policy.deficit_aware_score(context, rerank_texts, args.deficit_role_weight)
-                    if args.policy_score_mode == "deficit_role"
-                    else policy.score(context, rerank_texts)
-                )
+                if args.policy_score_mode == "deficit_role":
+                    policy_scores = policy.deficit_aware_score(context, rerank_texts, args.deficit_role_weight)
+                elif args.policy_score_mode == "deficit_contribution":
+                    policy_scores = policy.contribution_aware_score(
+                        context, rerank_texts, args.deficit_contribution_weight
+                    )
+                else:
+                    policy_scores = policy.score(context, rerank_texts)
                 reranked_local = np.argsort(policy_scores)[::-1].tolist()
                 order = [rerank_indices[index] for index in reranked_local]
                 order += [index for index in dense_order if index not in set(order)]
@@ -1264,6 +1317,7 @@ def main() -> None:
         "select_top_k": args.select_top_k,
         "policy_score_mode": args.policy_score_mode,
         "deficit_role_weight": args.deficit_role_weight,
+        "deficit_contribution_weight": args.deficit_contribution_weight,
         "answer_mode": args.answer_mode,
         "save_online_states": args.save_online_states,
         "online_state_max_raw": args.online_state_max_raw,
