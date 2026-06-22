@@ -157,6 +157,21 @@ def main() -> None:
     parser.add_argument("--hybrid-alpha", type=float, default=0.5)
     parser.add_argument("--candidate-top-k", type=int, default=10)
     parser.add_argument("--select-top-k", type=int, default=5)
+    parser.add_argument(
+        "--policy-score-mode",
+        choices=["rank", "front_policy_blend"],
+        default="rank",
+        help="Use plain student policy ranking or front-end/student score blending.",
+    )
+    parser.add_argument(
+        "--policy-blend-weight",
+        type=float,
+        default=0.35,
+        help=(
+            "For front_policy_blend, weight assigned to the student policy score. "
+            "Final score = (1-w)*front_score + w*policy_score."
+        ),
+    )
     parser.add_argument("--local-expansion-window", type=int, default=1)
     parser.add_argument("--mmr-lambda", type=float, default=0.7)
     parser.add_argument("--mmr-same-doc-similarity", type=float, default=0.35)
@@ -290,10 +305,22 @@ def main() -> None:
             )
 
             policy_scores = np.array([])
+            rerank_scores = np.array([])
             policy_order = []
             if compressed_indices:
                 policy_scores = policy.score(context, [candidate_texts[index] for index in compressed_indices])
-                policy_local_order = np.argsort(policy_scores)[::-1].tolist()
+                if args.policy_score_mode == "front_policy_blend":
+                    front_local_scores = np.array([fused_scores[index] for index in compressed_indices], dtype=float)
+                    policy_weight = min(1.0, max(0.0, args.policy_blend_weight))
+                    rerank_scores = (
+                        (1.0 - policy_weight)
+                        * ((front_local_scores - np.min(front_local_scores)) / (np.ptp(front_local_scores) + 1e-12))
+                        + policy_weight
+                        * ((policy_scores - np.min(policy_scores)) / (np.ptp(policy_scores) + 1e-12))
+                    )
+                else:
+                    rerank_scores = policy_scores
+                policy_local_order = np.argsort(rerank_scores)[::-1].tolist()
                 policy_order = [compressed_indices[index] for index in policy_local_order]
 
             stage_orders = {
@@ -400,6 +427,8 @@ def main() -> None:
         "hybrid_alpha": args.hybrid_alpha,
         "candidate_top_k": args.candidate_top_k,
         "select_top_k": args.select_top_k,
+        "policy_score_mode": args.policy_score_mode,
+        "policy_blend_weight": args.policy_blend_weight,
         "local_expansion_window": args.local_expansion_window,
         "mmr_lambda": args.mmr_lambda,
         "mmr_same_doc_similarity": args.mmr_same_doc_similarity,

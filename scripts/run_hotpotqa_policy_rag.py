@@ -840,11 +840,21 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--select-top-k", type=int, default=1)
     parser.add_argument(
         "--policy-score-mode",
-        choices=["rank", "deficit_role", "deficit_contribution"],
+        choices=["rank", "deficit_role", "deficit_contribution", "front_policy_blend"],
         default="rank",
         help=(
             "Use plain ranking score, deficit-role compatibility, or "
-            "deficit-true-contribution compatibility."
+            "deficit-true-contribution compatibility. For hybrid_policy, "
+            "front_policy_blend safely combines front-end and policy scores."
+        ),
+    )
+    parser.add_argument(
+        "--policy-blend-weight",
+        type=float,
+        default=0.35,
+        help=(
+            "For --policy-score-mode front_policy_blend, weight assigned to the "
+            "student policy score. Final score = (1-w)*front_score + w*policy_score."
         ),
     )
     parser.add_argument(
@@ -997,6 +1007,8 @@ def main() -> None:
             label = usable_candidate_ids.index(positive_id)
             display_scores = np.zeros(len(usable_candidate_ids), dtype=float)
             if args.selector == "policy":
+                if args.policy_score_mode == "front_policy_blend":
+                    raise RuntimeError("--policy-score-mode front_policy_blend requires --selector hybrid_policy.")
                 if args.policy_score_mode == "deficit_role":
                     scores = policy.deficit_aware_score(context, candidate_texts, args.deficit_role_weight)
                 elif args.policy_score_mode == "deficit_contribution":
@@ -1060,20 +1072,31 @@ def main() -> None:
                     same_doc_similarity=args.mmr_same_doc_similarity,
                 )
                 compressed_texts = [candidate_texts[index] for index in compressed_indices]
-                if args.policy_score_mode == "deficit_role":
+                if args.policy_score_mode == "front_policy_blend":
+                    policy_scores = policy.score(context, compressed_texts)
+                    front_local_scores = np.array([front_scores[index] for index in compressed_indices], dtype=float)
+                    policy_weight = min(1.0, max(0.0, args.policy_blend_weight))
+                    rerank_scores = (
+                        (1.0 - policy_weight) * minmax_normalize(front_local_scores)
+                        + policy_weight * minmax_normalize(policy_scores)
+                    )
+                elif args.policy_score_mode == "deficit_role":
                     policy_scores = policy.deficit_aware_score(context, compressed_texts, args.deficit_role_weight)
+                    rerank_scores = policy_scores
                 elif args.policy_score_mode == "deficit_contribution":
                     policy_scores = policy.contribution_aware_score(
                         context, compressed_texts, args.deficit_contribution_weight
                     )
+                    rerank_scores = policy_scores
                 else:
                     policy_scores = policy.score(context, compressed_texts)
-                reranked_local = np.argsort(policy_scores)[::-1].tolist()
+                    rerank_scores = policy_scores
+                reranked_local = np.argsort(rerank_scores)[::-1].tolist()
                 order = [compressed_indices[index] for index in reranked_local]
                 order += [index for index in front_order if index not in set(order)]
                 display_scores = front_scores
                 for local_index, original_index in enumerate(compressed_indices):
-                    display_scores[original_index] = float(policy_scores[local_index])
+                    display_scores[original_index] = float(rerank_scores[local_index])
             elif args.selector == "multi_query_dense":
                 query_scores = [
                     dense.score(query, candidate_texts)
@@ -1093,6 +1116,8 @@ def main() -> None:
                 candidate_top_k = min(max(1, args.candidate_top_k), len(dense_order))
                 rerank_indices = dense_order[:candidate_top_k]
                 rerank_texts = [candidate_texts[index] for index in rerank_indices]
+                if args.policy_score_mode == "front_policy_blend":
+                    raise RuntimeError("--policy-score-mode front_policy_blend requires --selector hybrid_policy.")
                 if args.policy_score_mode == "deficit_role":
                     policy_scores = policy.deficit_aware_score(context, rerank_texts, args.deficit_role_weight)
                 elif args.policy_score_mode == "deficit_contribution":
@@ -1316,6 +1341,7 @@ def main() -> None:
         "candidate_top_k": args.candidate_top_k,
         "select_top_k": args.select_top_k,
         "policy_score_mode": args.policy_score_mode,
+        "policy_blend_weight": args.policy_blend_weight,
         "deficit_role_weight": args.deficit_role_weight,
         "deficit_contribution_weight": args.deficit_contribution_weight,
         "answer_mode": args.answer_mode,
