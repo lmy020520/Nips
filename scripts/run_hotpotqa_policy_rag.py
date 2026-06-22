@@ -462,6 +462,21 @@ class PolicyModel:
 
         return minmax_normalize(scores) + float(role_weight) * contribution_match
 
+    def estimate_deficit(self, context: str, candidate_texts: list[str]) -> dict:
+        _, _, deficit_preds = self.score_with_aux(context, candidate_texts, return_aux=True)
+        if deficit_preds is None or len(deficit_preds) == 0:
+            values = np.zeros(4, dtype=float)
+        else:
+            values = np.mean(deficit_preds, axis=0)
+        return {
+            "d_br": float(values[0]),
+            "d_dis": float(values[1]),
+            "d_sup": float(values[2]),
+            "d_der": float(values[3]),
+            "mean": float(np.mean(values)),
+            "max": float(np.max(values)),
+        }
+
 
 class DenseScorer:
     def __init__(self, model_name_or_path: str, device: str, batch_size: int):
@@ -805,6 +820,20 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--save-online-states", action="store_true")
     parser.add_argument("--online-state-max-raw", type=int, default=8)
     parser.add_argument("--online-state-max-chars", type=int, default=260)
+    parser.add_argument(
+        "--stop-control",
+        choices=["none", "deficit"],
+        default="none",
+        help="Optional online stopping controller. Default keeps old fixed-step behavior.",
+    )
+    parser.add_argument("--stop-min-steps", type=int, default=1)
+    parser.add_argument("--stop-deficit-threshold", type=float, default=0.12)
+    parser.add_argument(
+        "--stop-deficit-mode",
+        choices=["mean", "max"],
+        default="mean",
+        help="Use mean or max predicted typed deficit for deficit-driven stopping.",
+    )
     parser.add_argument("--answer-cache-dir", default="")
     parser.add_argument("--llm-max-retries", type=int, default=8)
     parser.add_argument("--llm-retry-sleep", type=float, default=2.0)
@@ -844,6 +873,8 @@ def main() -> None:
             max_length=args.max_length,
             batch_size=args.batch_size,
         )
+    if args.stop_control == "deficit" and policy is None:
+        raise RuntimeError("--stop-control deficit requires a policy-based selector.")
     dense = None
     if args.selector in {"dense", "hybrid", "hybrid_policy", "multi_query_dense", "iterative_dense", "dense_policy"}:
         if not args.dense_model:
@@ -873,7 +904,16 @@ def main() -> None:
         online_state = init_online_state()
         gold_units: list[str] = []
         gold_doc_ids: set[str] = set()
+        target_gold_units: list[str] = []
+        target_gold_doc_ids: set[str] = set()
+        for target_row in rows:
+            target_positive_id = sample_positive_id(target_row)
+            target_item = memory.get(target_positive_id)
+            if target_positive_id and target_item:
+                target_gold_units.append(target_positive_id)
+                target_gold_doc_ids.add(target_item["doc_id"])
         step_records = []
+        stop_record = None
         all_steps_correct = True
 
         for row in rows:
@@ -1025,6 +1065,36 @@ def main() -> None:
                 rng.shuffle(order)
             else:
                 order = [label] + [index for index in range(len(usable_candidate_ids)) if index != label]
+
+            deficit_estimate = None
+            stop_decision = {
+                "should_stop": False,
+                "reason": "disabled",
+            }
+            if args.stop_control == "deficit":
+                deficit_estimate = policy.estimate_deficit(context, candidate_texts)
+                stop_value = float(deficit_estimate[args.stop_deficit_mode])
+                enough_steps = len(selected_units) >= max(0, args.stop_min_steps)
+                should_stop = enough_steps and stop_value <= args.stop_deficit_threshold
+                stop_decision = {
+                    "should_stop": bool(should_stop),
+                    "reason": "deficit_below_threshold" if should_stop else "continue",
+                    "mode": args.stop_deficit_mode,
+                    "value": round(stop_value, 6),
+                    "threshold": args.stop_deficit_threshold,
+                    "selected_units": len(selected_units),
+                    "min_steps": args.stop_min_steps,
+                    "deficit": {key: round(float(value), 6) for key, value in deficit_estimate.items()},
+                }
+                if should_stop:
+                    totals["stop_triggered"] += 1
+                    stop_record = {
+                        "t": int(row.get("t", 0)),
+                        "question": question,
+                        **stop_decision,
+                    }
+                    all_steps_correct = False
+                    break
             pred_index = order[0]
             pred_id = usable_candidate_ids[pred_index]
             positive_memory = memory[positive_id]
@@ -1075,6 +1145,11 @@ def main() -> None:
                     for index in order[:5]
                 ],
             }
+            if deficit_estimate is not None:
+                step_record["deficit_estimate"] = {
+                    key: round(float(value), 6) for key, value in deficit_estimate.items()
+                }
+                step_record["stop_decision"] = stop_decision
             if args.save_online_states:
                 step_record["online_state_before"] = online_state_before
                 step_record["online_state_after"] = online_state
@@ -1084,10 +1159,11 @@ def main() -> None:
             continue
 
         qid_success["total"] += 1
+        qid_success["stopped"] += int(stop_record is not None)
         qid_success["all_steps_correct"] += int(all_steps_correct)
-        qid_success["any_gold_doc_selected"] += int(bool(selected_doc_ids & gold_doc_ids))
-        qid_success["full_gold_doc_coverage"] += int(gold_doc_ids.issubset(selected_doc_ids))
-        qid_success["full_gold_unit_coverage"] += int(set(gold_units).issubset(set(selected_units)))
+        qid_success["any_gold_doc_selected"] += int(bool(selected_doc_ids & target_gold_doc_ids))
+        qid_success["full_gold_doc_coverage"] += int(target_gold_doc_ids.issubset(selected_doc_ids))
+        qid_success["full_gold_unit_coverage"] += int(set(target_gold_units).issubset(set(selected_units)))
 
         answer = ""
         raw_answer = ""
@@ -1154,10 +1230,12 @@ def main() -> None:
                 "answer_contains": answer_contains_score(answer, gold_answer) if gold_answer and answer else None,
                 "answer_f1": round(f1_score(answer, gold_answer), 6) if gold_answer and answer else None,
                 "selected_unit_ids": selected_units,
-                "gold_unit_ids": gold_units,
+                "gold_unit_ids": target_gold_units,
                 "selected_doc_ids": sorted(selected_doc_ids),
-                "gold_doc_ids": sorted(gold_doc_ids),
+                "gold_doc_ids": sorted(target_gold_doc_ids),
                 "all_steps_correct": all_steps_correct,
+                "stopped_early": stop_record is not None,
+                "stop_record": stop_record,
                 "steps": step_records,
                 "final_online_state": online_state if args.save_online_states else None,
             }
@@ -1190,12 +1268,18 @@ def main() -> None:
         "save_online_states": args.save_online_states,
         "online_state_max_raw": args.online_state_max_raw,
         "online_state_max_chars": args.online_state_max_chars,
+        "stop_control": args.stop_control,
+        "stop_min_steps": args.stop_min_steps,
+        "stop_deficit_threshold": args.stop_deficit_threshold,
+        "stop_deficit_mode": args.stop_deficit_mode,
         "answer_cache_dir": str(answer_cache_dir) if args.generate_answers else "",
         "seed": args.seed,
         "sample_states": len(samples),
         "qids": qid_success["total"],
         "steps": totals["steps"],
         "skipped": totals["skipped"],
+        "stopped_qids": qid_success["stopped"],
+        "stop_triggered": totals["stop_triggered"],
         "trajectory_all_steps_correct": round(qid_success["all_steps_correct"] / qid_total, 6),
         "any_gold_doc_selected": round(qid_success["any_gold_doc_selected"] / qid_total, 6),
         "full_gold_doc_coverage": round(qid_success["full_gold_doc_coverage"] / qid_total, 6),
