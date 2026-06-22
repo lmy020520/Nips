@@ -106,6 +106,115 @@ def sample_k_t(row: dict) -> str:
     return str(state.get("K_t") or "")
 
 
+def init_online_state() -> dict:
+    return {
+        "H_t": [],
+        "A_t": {
+            "raw_unit_ids": [],
+            "doc_ids": [],
+            "unit_doc": {},
+        },
+        "S_t": {
+            "raw_refs": [],
+            "derived_refs": [],
+            "last_added_unit_id": None,
+            "last_updated_step": -1,
+        },
+        "K_t": "",
+    }
+
+
+def render_online_k_t(state: dict, memory: dict[str, dict], *, max_raw: int = 8, max_chars_per_item: int = 260) -> str:
+    """Render the current lightweight notebook state as answer-facing context."""
+    s_t = state.get("S_t") or {}
+    raw_refs = s_t.get("raw_refs") if isinstance(s_t.get("raw_refs"), list) else []
+    ordered_refs = sorted(
+        raw_refs,
+        key=lambda ref: (int(ref.get("added_step", 0)), int(ref.get("selected_count", 0))),
+        reverse=True,
+    )
+
+    parts = []
+    if ordered_refs:
+        parts.append("Evidence:")
+        for index, ref in enumerate(ordered_refs[:max_raw], start=1):
+            unit_id = str(ref.get("unit_id") or "")
+            item = memory.get(unit_id)
+            if not item:
+                continue
+            text = str(item.get("text") or "").strip()
+            if len(text) > max_chars_per_item:
+                text = text[: max_chars_per_item - 3].rstrip() + "..."
+            title = str(item.get("title") or item.get("doc_id") or "")
+            parts.append(f"[{index}] {title}: {text}")
+    return "\n".join(parts).strip()
+
+
+def update_online_state(
+    state: dict,
+    unit_id: str,
+    memory_item: dict,
+    memory: dict[str, dict],
+    *,
+    step_id: int,
+    max_raw: int = 8,
+    max_chars_per_item: int = 260,
+) -> dict:
+    """Deterministically apply Update -> Ledger -> Render for online policy mode."""
+    next_state = {
+        "H_t": list(state.get("H_t") or []),
+        "A_t": {
+            "raw_unit_ids": list((state.get("A_t") or {}).get("raw_unit_ids") or []),
+            "doc_ids": list((state.get("A_t") or {}).get("doc_ids") or []),
+            "unit_doc": dict((state.get("A_t") or {}).get("unit_doc") or {}),
+        },
+        "S_t": {
+            "raw_refs": [dict(ref) for ref in (state.get("S_t") or {}).get("raw_refs") or []],
+            "derived_refs": [dict(ref) for ref in (state.get("S_t") or {}).get("derived_refs") or []],
+            "last_added_unit_id": (state.get("S_t") or {}).get("last_added_unit_id"),
+            "last_updated_step": (state.get("S_t") or {}).get("last_updated_step", -1),
+        },
+        "K_t": str(state.get("K_t") or ""),
+    }
+
+    # Update: keep a prefix trajectory and lightweight notebook refs.
+    if unit_id not in next_state["H_t"]:
+        next_state["H_t"].append(unit_id)
+    raw_refs = next_state["S_t"]["raw_refs"]
+    existing_ref = next((ref for ref in raw_refs if ref.get("unit_id") == unit_id), None)
+    if existing_ref is None:
+        raw_refs.append(
+            {
+                "unit_id": unit_id,
+                "added_step": step_id,
+                "used_in_summary_count": 0,
+                "selected_count": 1,
+            }
+        )
+    else:
+        existing_ref["selected_count"] = int(existing_ref.get("selected_count") or 0) + 1
+    next_state["S_t"]["last_added_unit_id"] = unit_id
+    next_state["S_t"]["last_updated_step"] = step_id
+
+    # Ledger: record raw coverage in a deterministic, inspectable form.
+    doc_id = str(memory_item.get("doc_id") or memory_item.get("title") or "")
+    if unit_id not in next_state["A_t"]["raw_unit_ids"]:
+        next_state["A_t"]["raw_unit_ids"].append(unit_id)
+    if doc_id and doc_id not in next_state["A_t"]["doc_ids"]:
+        next_state["A_t"]["doc_ids"].append(doc_id)
+    if doc_id:
+        next_state["A_t"]["unit_doc"][unit_id] = doc_id
+
+    # Render: expose the compiled notebook context for the next selection step.
+    next_state["K_t"] = render_online_k_t(
+        next_state,
+        memory,
+        max_raw=max_raw,
+        max_chars_per_item=max_chars_per_item,
+    )
+    return next_state
+
+
 def load_queries(path: str) -> dict[str, dict]:
     if not path:
         return {}
@@ -620,6 +729,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-length", type=int, default=320)
     parser.add_argument("--state-mode", choices=["dataset", "policy"], default="dataset")
     parser.add_argument(
+        "--policy-context-source",
+        choices=["legacy", "online_state"],
+        default="legacy",
+        help="For --state-mode policy, use legacy selected-evidence notebook or rendered online K_t.",
+    )
+    parser.add_argument(
         "--selector",
         choices=[
             "policy",
@@ -687,6 +802,9 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--answer-mode", choices=["short", "json"], default="json")
     parser.add_argument("--generate-answers", action="store_true")
+    parser.add_argument("--save-online-states", action="store_true")
+    parser.add_argument("--online-state-max-raw", type=int, default=8)
+    parser.add_argument("--online-state-max-chars", type=int, default=260)
     parser.add_argument("--answer-cache-dir", default="")
     parser.add_argument("--llm-max-retries", type=int, default=8)
     parser.add_argument("--llm-retry-sleep", type=float, default=2.0)
@@ -752,6 +870,7 @@ def main() -> None:
         selected_units: list[str] = []
         selected_evidence: list[dict] = []
         selected_doc_ids: set[str] = set()
+        online_state = init_online_state()
         gold_units: list[str] = []
         gold_doc_ids: set[str] = set()
         step_records = []
@@ -780,10 +899,13 @@ def main() -> None:
                 continue
 
             if args.state_mode == "policy":
-                notebook = "\n".join(
-                    format_notebook_evidence(item, index + 1)
-                    for index, item in enumerate(selected_evidence)
-                )
+                if args.policy_context_source == "online_state":
+                    notebook = online_state["K_t"]
+                else:
+                    notebook = "\n".join(
+                        format_notebook_evidence(item, index + 1)
+                        for index, item in enumerate(selected_evidence)
+                    )
                 context = f"Question: {question}\nNotebook:\n{notebook}"
             else:
                 context = f"Question: {question}\nNotebook:\n{sample_k_t(row)}"
@@ -908,6 +1030,7 @@ def main() -> None:
             positive_memory = memory[positive_id]
             selected_indices = order[: max(1, args.select_top_k)]
             selected_step_ids = [usable_candidate_ids[index] for index in selected_indices]
+            online_state_before = json.loads(json.dumps(online_state)) if args.save_online_states else None
 
             totals["steps"] += 1
             step_correct = pred_id == positive_id
@@ -923,28 +1046,39 @@ def main() -> None:
                 selected_units.append(selected_id)
                 selected_evidence.append(selected_memory)
                 selected_doc_ids.add(selected_memory["doc_id"])
+                online_state = update_online_state(
+                    online_state,
+                    selected_id,
+                    selected_memory,
+                    memory,
+                    step_id=int(row.get("t", 0)),
+                    max_raw=args.online_state_max_raw,
+                    max_chars_per_item=args.online_state_max_chars,
+                )
             gold_units.append(positive_id)
             gold_doc_ids.add(positive_memory["doc_id"])
-            step_records.append(
-                {
-                    "t": int(row.get("t", 0)),
-                    "question": question,
-                    "positive_unit_id": positive_id,
-                    "predicted_unit_id": pred_id,
-                    "selected_unit_ids": selected_step_ids,
-                    "correct": step_correct,
-                    "selected_contains_gold": positive_id in selected_step_ids,
-                    "positive_rank": order.index(label) + 1,
-                    "top5": [
-                        {
-                            "unit_id": usable_candidate_ids[index],
-                            "doc_id": memory[usable_candidate_ids[index]]["doc_id"],
-                            "score": round(float(display_scores[index]), 6),
-                        }
-                        for index in order[:5]
-                    ],
-                }
-            )
+            step_record = {
+                "t": int(row.get("t", 0)),
+                "question": question,
+                "positive_unit_id": positive_id,
+                "predicted_unit_id": pred_id,
+                "selected_unit_ids": selected_step_ids,
+                "correct": step_correct,
+                "selected_contains_gold": positive_id in selected_step_ids,
+                "positive_rank": order.index(label) + 1,
+                "top5": [
+                    {
+                        "unit_id": usable_candidate_ids[index],
+                        "doc_id": memory[usable_candidate_ids[index]]["doc_id"],
+                        "score": round(float(display_scores[index]), 6),
+                    }
+                    for index in order[:5]
+                ],
+            }
+            if args.save_online_states:
+                step_record["online_state_before"] = online_state_before
+                step_record["online_state_after"] = online_state
+            step_records.append(step_record)
 
         if not step_records:
             continue
@@ -1025,6 +1159,7 @@ def main() -> None:
                 "gold_doc_ids": sorted(gold_doc_ids),
                 "all_steps_correct": all_steps_correct,
                 "steps": step_records,
+                "final_online_state": online_state if args.save_online_states else None,
             }
         )
 
@@ -1036,6 +1171,7 @@ def main() -> None:
         "queries": args.queries,
         "checkpoint": args.checkpoint,
         "state_mode": args.state_mode,
+        "policy_context_source": args.policy_context_source,
         "selector": args.selector,
         "dense_model": args.dense_model,
         "dense_query_mode": args.dense_query_mode,
@@ -1051,6 +1187,9 @@ def main() -> None:
         "policy_score_mode": args.policy_score_mode,
         "deficit_role_weight": args.deficit_role_weight,
         "answer_mode": args.answer_mode,
+        "save_online_states": args.save_online_states,
+        "online_state_max_raw": args.online_state_max_raw,
+        "online_state_max_chars": args.online_state_max_chars,
         "answer_cache_dir": str(answer_cache_dir) if args.generate_answers else "",
         "seed": args.seed,
         "sample_states": len(samples),
