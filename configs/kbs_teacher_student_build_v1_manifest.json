@@ -1,0 +1,53 @@
+{
+  "name": "kbs_teacher_student_build_v1",
+  "description": "Unified teacher-student data construction entrypoint for the official KBS evidence acquisition pipeline.",
+  "source": {
+    "source_root": "data/hotpotqa_distractor_v7_10k_llm_prestep",
+    "splits": "train,val,test"
+  },
+  "output": {
+    "output_root": "data/kbs_teacher_student_v1_hybrid_frontend",
+    "train_config": "configs/train_ranker_deberta_kbs_official_student_v1.yaml",
+    "student_output_dir": "outputs/ranker/deberta_v3_large_kbs_official_student_v1"
+  },
+  "front_end": {
+    "dense_model": "models/bge-large-en-v1.5",
+    "front_pool_k": 30,
+    "candidate_top_k": 10,
+    "local_expansion_window": 1,
+    "mmr_lambda": 0.7,
+    "mmr_same_doc_similarity": 0.35,
+    "hard_negative_source": "mixed",
+    "hard_negative_count": 4,
+    "natural_only": false,
+    "corrupt_state_variants": 0
+  },
+  "teacher_student_interface": {
+    "trajectory_backbone": "existing teacher positive sequence",
+    "regenerated_fields": [
+      "R_t",
+      "C_t",
+      "ranking_label",
+      "candidate_provenance",
+      "frontend_meta"
+    ],
+    "preserved_fields": [
+      "question",
+      "state.K_t",
+      "labels.d_t_star",
+      "labels.c_t_star",
+      "labels.stop_label"
+    ]
+  },
+  "student_training": {
+    "default_init_checkpoint": "outputs/ranker/deberta_v3_large_v17_candidate_contribution_lr5e7/best_model.pt",
+    "heads": [
+      "ranking",
+      "role",
+      "candidate_role",
+      "deficit",
+      "positive_contribution"
+    ],
+    "candidate_wise_contribution": "not_enabled_in_v1"
+  }
+}

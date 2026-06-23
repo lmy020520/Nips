@@ -120,13 +120,17 @@ def collect_script_checks(project_root: Path) -> list[dict]:
     checks = []
     scripts = [
         "configs/kbs_official_online_rag_v1_manifest.json",
+        "configs/kbs_teacher_student_build_v1_manifest.json",
+        "configs/train_ranker_deberta_kbs_official_student_v1.yaml",
         "scripts/run_kbs_official_online_rag.sh",
+        "scripts/run_kbs_teacher_student_build.sh",
         "scripts/rebuild_hotpotqa_frontend_dataset.py",
         "scripts/run_hotpotqa_policy_rag.py",
         "scripts/analyze_hotpotqa_frontend_policy_ranks.py",
         "scripts/diagnose_frontend_trace.py",
         "scripts/validate_kbs_online_state_alignment.py",
         "scripts/check_kbs_pipeline_readiness.py",
+        "scripts/check_kbs_contribution_scope.py",
         "src/datasets/prefix_dataset.py",
         "src/models/ranker.py",
         "src/train/train_ranker.py",
