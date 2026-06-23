@@ -1,0 +1,51 @@
+{
+  "name": "kbs_official_online_rag_v1",
+  "description": "Official online KBS RAG route for trajectory-aware evidence acquisition.",
+  "data": {
+    "data_root": "data/hotpotqa_distractor_eval_3000_cand50",
+    "split": "test",
+    "samples": "data/hotpotqa_distractor_eval_3000_cand50/samples/test.jsonl",
+    "memory": "data/hotpotqa_distractor_eval_3000_cand50/unit_registry/raw_units_test.jsonl",
+    "queries": "data/hotpotqa_distractor_eval_3000_cand50/queries/test.jsonl"
+  },
+  "models": {
+    "model_dir": "models/deberta-v3-large",
+    "student_checkpoint": "outputs/ranker/deberta_v3_large_v17_candidate_contribution_lr5e7/best_model.pt",
+    "dense_model": "models/bge-large-en-v1.5"
+  },
+  "official_route": {
+    "state_mode": "policy",
+    "policy_context_source": "online_state",
+    "selector": "hybrid_policy",
+    "dense_query_mode": "state",
+    "front_pool_k": 30,
+    "front_fusion": "rrf",
+    "local_expansion_window": 1,
+    "mmr_lambda": 0.7,
+    "mmr_same_doc_similarity": 0.35,
+    "candidate_top_k": 10,
+    "select_top_k": 5,
+    "policy_score_mode": "front_policy_blend",
+    "policy_blend_weight": 0.35,
+    "answer_mode": "json",
+    "save_online_states": true
+  },
+  "entrypoint": {
+    "script": "scripts/run_kbs_official_online_rag.sh",
+    "smoke_output": "outputs/rag/kbs_official_online_state_v1_smoke20.json",
+    "full_output": "outputs/rag/kbs_official_online_state_v1_full.json"
+  },
+  "required_code": [
+    "scripts/run_kbs_official_online_rag.sh",
+    "scripts/run_hotpotqa_policy_rag.py",
+    "scripts/validate_kbs_online_state_alignment.py",
+    "scripts/check_kbs_pipeline_readiness.py",
+    "src/datasets/prefix_dataset.py",
+    "src/models/ranker.py",
+    "src/train/train_ranker.py"
+  ],
+  "notes": [
+    "legacy policy context is allowed only as an ablation.",
+    "The official route must preserve online_state before/after records when save_online_states is enabled."
+  ]
+}
