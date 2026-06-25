@@ -86,12 +86,28 @@ def add_dir(checks: list[dict], name: str, path: Path, *, required: bool = True)
     checks.append(item)
 
 
-def collect_data_checks(data_root: Path) -> list[dict]:
+def normalize_splits(value: Any, default: tuple[str, ...] = SPLITS) -> list[str]:
+    if isinstance(value, str):
+        splits = [split.strip() for split in value.split(",") if split.strip()]
+        return splits or list(default)
+    if isinstance(value, list):
+        splits = [str(split).strip() for split in value if str(split).strip()]
+        return splits or list(default)
+    return list(default)
+
+
+def collect_data_checks(data_root: Path, *, required_splits: list[str]) -> list[dict]:
     checks = []
     add_dir(checks, "data_root", data_root)
     for split in SPLITS:
-        add_file(checks, f"samples/{split}", data_root / "samples" / f"{split}.jsonl")
-        add_file(checks, f"memory/{split}", data_root / "unit_registry" / f"raw_units_{split}.jsonl")
+        required = split in required_splits
+        add_file(checks, f"samples/{split}", data_root / "samples" / f"{split}.jsonl", required=required)
+        add_file(
+            checks,
+            f"memory/{split}",
+            data_root / "unit_registry" / f"raw_units_{split}.jsonl",
+            required=required,
+        )
         add_file(checks, f"queries/{split}", data_root / "queries" / f"{split}.jsonl", required=False)
         add_file(checks, f"targets/{split}", data_root / "targets" / f"{split}.jsonl", required=False)
     add_file(checks, "manifest", data_root / "manifest.json", required=False)
@@ -349,6 +365,7 @@ def main() -> None:
     manifest_path = Path(args.manifest)
     manifest = read_json(manifest_path) if manifest_path.exists() else {}
     data_root = Path(args.data_root or nested_get(manifest, ["data", "data_root"], ""))
+    required_data_splits = normalize_splits(nested_get(manifest, ["data", "split"], "test"), default=("test",))
     samples = Path(nested_get(manifest, ["data", "samples"], data_root / "samples" / "test.jsonl"))
     memory = Path(nested_get(manifest, ["data", "memory"], data_root / "unit_registry" / "raw_units_test.jsonl"))
     queries = Path(nested_get(manifest, ["data", "queries"], data_root / "queries" / "test.jsonl"))
@@ -359,7 +376,7 @@ def main() -> None:
 
     stages = [
         summarize_stage("manifest", [file_status(manifest_path) | {"name": "manifest"}] + collect_manifest_checks(manifest, manifest_path)),
-        summarize_stage("data", collect_data_checks(data_root)),
+        summarize_stage("data", collect_data_checks(data_root, required_splits=required_data_splits)),
         summarize_stage("official_split_data", collect_single_split_data_checks(samples, memory, queries)),
         summarize_stage("sample_schema_preview", collect_sample_schema_checks(samples, memory, queries)),
         summarize_stage("model", collect_model_checks(model_dir, checkpoint, dense_model)),
@@ -373,6 +390,7 @@ def main() -> None:
         "manifest": str(manifest_path),
         "official_route_name": str(manifest.get("name") or ""),
         "data_root": str(data_root),
+        "required_data_splits": required_data_splits,
         "samples": str(samples),
         "memory": str(memory),
         "queries": str(queries),
