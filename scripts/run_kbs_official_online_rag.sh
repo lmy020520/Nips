@@ -21,6 +21,8 @@ MAX_QIDS="${MAX_QIDS:-0}"
 MAX_POLICY_STEPS="${MAX_POLICY_STEPS:-0}"
 GENERATE_ANSWERS="${GENERATE_ANSWERS:-1}"
 SAVE_ONLINE_STATES="${SAVE_ONLINE_STATES:-1}"
+REFRESH_ANSWER_CACHE="${REFRESH_ANSWER_CACHE:-1}"
+REQUIRE_DEEPSEEK_API_KEY="${REQUIRE_DEEPSEEK_API_KEY:-1}"
 
 FRONT_POOL_K="${FRONT_POOL_K:-30}"
 FRONT_FUSION="${FRONT_FUSION:-rrf}"
@@ -83,7 +85,15 @@ if [[ "$SAVE_ONLINE_STATES" == "1" ]]; then
 fi
 
 if [[ "$GENERATE_ANSWERS" == "1" ]]; then
+  if [[ "$REQUIRE_DEEPSEEK_API_KEY" == "1" && -z "${DEEPSEEK_API_KEY:-}" ]]; then
+    read -rsp "DeepSeek API Key: " DEEPSEEK_API_KEY
+    echo
+    export DEEPSEEK_API_KEY
+  fi
   cmd+=(--generate-answers)
+  if [[ "$REFRESH_ANSWER_CACHE" == "1" ]]; then
+    cmd+=(--refresh-answer-cache)
+  fi
 fi
 
 echo "[INFO] KBS official online RAG route"
@@ -91,5 +101,6 @@ echo "[INFO] data_root=$DATA_ROOT"
 echo "[INFO] checkpoint=$CHECKPOINT"
 echo "[INFO] output=$OUTPUT"
 echo "[INFO] cache=$ANSWER_CACHE_DIR"
+echo "[INFO] refresh_answer_cache=$REFRESH_ANSWER_CACHE"
 
 CUDA_VISIBLE_DEVICES="$CUDA_DEVICE" "${cmd[@]}"

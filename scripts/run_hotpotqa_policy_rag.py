@@ -872,6 +872,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--answer-mode", choices=["short", "json"], default="json")
     parser.add_argument("--generate-answers", action="store_true")
     parser.add_argument("--save-online-states", action="store_true")
+    parser.add_argument(
+        "--refresh-answer-cache",
+        action="store_true",
+        help="Ignore existing cached answers and call the LLM again; still writes fresh cache files.",
+    )
     parser.add_argument("--online-state-max-raw", type=int, default=8)
     parser.add_argument("--online-state-max-chars", type=int, default=260)
     parser.add_argument(
@@ -1250,7 +1255,7 @@ def main() -> None:
         question = str(rows[0].get("question") or "")
         if args.generate_answers:
             cache_path = cache_file_for_qid(answer_cache_dir, qid)
-            if cache_path.exists():
+            if cache_path.exists() and not args.refresh_answer_cache:
                 cached = json.loads(cache_path.read_text(encoding="utf-8"))
                 answer = str(cached.get("answer") or "")
                 raw_answer = str(cached.get("raw_answer") or "")
@@ -1345,6 +1350,7 @@ def main() -> None:
         "deficit_role_weight": args.deficit_role_weight,
         "deficit_contribution_weight": args.deficit_contribution_weight,
         "answer_mode": args.answer_mode,
+        "refresh_answer_cache": args.refresh_answer_cache,
         "save_online_states": args.save_online_states,
         "online_state_max_raw": args.online_state_max_raw,
         "online_state_max_chars": args.online_state_max_chars,

@@ -36,6 +36,7 @@ Question
 | `policy_blend_weight` | `0.35` |
 | `answer_mode` | `json` |
 | `save_online_states` | enabled |
+| `refresh_answer_cache` | enabled for official experiments |
 
 ## 3. Student Checkpoint
 
@@ -71,6 +72,21 @@ OUTPUT=outputs/rag/kbs_official_online_state_v1_full.json \
 ANSWER_CACHE_DIR=outputs/rag/cache_kbs_official_online_state_v1_full \
 bash scripts/run_kbs_official_online_rag.sh
 ```
+
+Main experiment wrapper:
+
+```bash
+bash scripts/run_kbs_main_experiment.sh
+```
+
+主实验默认会重新调用 DeepSeek：
+
+```text
+REFRESH_ANSWER_CACHE=1
+REQUIRE_DEEPSEEK_API_KEY=1
+```
+
+如果环境变量里没有 `DEEPSEEK_API_KEY`，脚本会在终端提示输入。
 
 ## 5. 可变项
 

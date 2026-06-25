@@ -24,6 +24,7 @@ OFFICIAL_ROUTE_EXPECTED = {
     "policy_score_mode": "front_policy_blend",
     "answer_mode": "json",
     "save_online_states": True,
+    "refresh_answer_cache": True,
 }
 
 
@@ -248,6 +249,7 @@ def collect_report_checks(report_path: Path, manifest: dict[str, Any]) -> list[d
         "policy_blend_weight",
         "answer_mode",
         "save_online_states",
+        "refresh_answer_cache",
     ]:
         expected = expected_route.get(key)
         actual = report.get(key)
