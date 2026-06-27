@@ -25,7 +25,7 @@ import random
 import numpy as np
 import torch
 from tqdm import tqdm
-from transformers import AutoTokenizer
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 from src.models.ranker import CrossEncoderRanker
 
@@ -553,6 +553,68 @@ class GenericReranker:
         return np.array(self.model.predict(pairs, batch_size=self.batch_size, show_progress_bar=False))
 
 
+class T5Reranker:
+    """monoT5/RankT5-style generative reranker.
+
+    The model is prompted to judge whether a document is relevant to a query.
+    We score each pair by the first-step logit margin: logit("true") -
+    logit("false"). This keeps the baseline deterministic and avoids actual
+    text generation.
+    """
+
+    def __init__(self, model_name_or_path: str, device: str, batch_size: int, max_length: int):
+        self.device = torch.device(device if torch.cuda.is_available() and device.startswith("cuda") else "cpu")
+        self.batch_size = max(1, batch_size)
+        self.max_length = max_length
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
+        self.model = AutoModelForSeq2SeqLM.from_pretrained(model_name_or_path).to(self.device)
+        self.model.eval()
+        self.true_token_id = self._single_token_id("true")
+        self.false_token_id = self._single_token_id("false")
+
+    def _single_token_id(self, text: str) -> int:
+        token_ids = self.tokenizer.encode(text, add_special_tokens=False)
+        if not token_ids:
+            raise RuntimeError(f"Unable to encode reranker label token: {text!r}")
+        return int(token_ids[0])
+
+    @staticmethod
+    def format_pair(query: str, candidate_text: str) -> str:
+        return f"Query: {query} Document: {candidate_text} Relevant:"
+
+    def score(self, query: str, candidate_texts: list[str]) -> np.ndarray:
+        scores: list[float] = []
+        decoder_start = self.model.config.decoder_start_token_id
+        if decoder_start is None:
+            decoder_start = self.tokenizer.pad_token_id
+        if decoder_start is None:
+            raise RuntimeError("T5 reranker requires decoder_start_token_id or pad_token_id.")
+
+        with torch.no_grad():
+            for start in range(0, len(candidate_texts), self.batch_size):
+                batch_texts = candidate_texts[start : start + self.batch_size]
+                inputs = [self.format_pair(query, text) for text in batch_texts]
+                tokens = self.tokenizer(
+                    inputs,
+                    padding=True,
+                    truncation=True,
+                    max_length=self.max_length,
+                    return_tensors="pt",
+                )
+                tokens = {key: value.to(self.device) for key, value in tokens.items()}
+                decoder_input_ids = torch.full(
+                    (len(batch_texts), 1),
+                    int(decoder_start),
+                    dtype=torch.long,
+                    device=self.device,
+                )
+                outputs = self.model(**tokens, decoder_input_ids=decoder_input_ids)
+                logits = outputs.logits[:, 0, :]
+                margins = logits[:, self.true_token_id] - logits[:, self.false_token_id]
+                scores.extend(margins.detach().cpu().float().tolist())
+        return np.array(scores, dtype=float)
+
+
 def bm25_scores(query: str, candidate_texts: list[str]) -> np.ndarray:
     from rank_bm25 import BM25Okapi
 
@@ -799,6 +861,7 @@ def build_parser() -> argparse.ArgumentParser:
             "iterative_dense",
             "dense_policy",
             "generic_reranker",
+            "t5_reranker",
             "first",
             "random",
             "gold_oracle",
@@ -836,6 +899,12 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--reranker-model", default="")
     parser.add_argument("--reranker-batch-size", type=int, default=16)
+    parser.add_argument(
+        "--reranker-max-length",
+        type=int,
+        default=512,
+        help="Input max length for seq2seq rerankers such as monoT5/RankT5.",
+    )
     parser.add_argument("--candidate-top-k", type=int, default=8)
     parser.add_argument("--select-top-k", type=int, default=1)
     parser.add_argument(
@@ -947,6 +1016,15 @@ def main() -> None:
         if not args.reranker_model:
             raise RuntimeError("--reranker-model is required for --selector generic_reranker")
         reranker = GenericReranker(args.reranker_model, device=args.device, batch_size=args.reranker_batch_size)
+    if args.selector == "t5_reranker":
+        if not args.reranker_model:
+            raise RuntimeError("--reranker-model is required for --selector t5_reranker")
+        reranker = T5Reranker(
+            args.reranker_model,
+            device=args.device,
+            batch_size=args.reranker_batch_size,
+            max_length=args.reranker_max_length,
+        )
 
     totals = Counter()
     qid_success = Counter()
@@ -1138,6 +1216,10 @@ def main() -> None:
                 for local_index, original_index in enumerate(rerank_indices):
                     display_scores[original_index] = float(policy_scores[local_index])
             elif args.selector == "generic_reranker":
+                scores = reranker.score(context, candidate_texts)
+                display_scores = scores
+                order = np.argsort(scores)[::-1].tolist()
+            elif args.selector == "t5_reranker":
                 scores = reranker.score(context, candidate_texts)
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
@@ -1343,6 +1425,7 @@ def main() -> None:
         "mmr_lambda": args.mmr_lambda,
         "mmr_same_doc_similarity": args.mmr_same_doc_similarity,
         "reranker_model": args.reranker_model,
+        "reranker_max_length": args.reranker_max_length,
         "candidate_top_k": args.candidate_top_k,
         "select_top_k": args.select_top_k,
         "policy_score_mode": args.policy_score_mode,
