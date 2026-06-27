@@ -845,9 +845,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--state-mode", choices=["dataset", "policy"], default="dataset")
     parser.add_argument(
         "--policy-context-source",
-        choices=["legacy", "online_state"],
+        choices=["legacy", "online_state", "query_only"],
         default="legacy",
-        help="For --state-mode policy, use legacy selected-evidence notebook or rendered online K_t.",
+        help=(
+            "For --state-mode policy, use legacy selected-evidence notebook, "
+            "rendered online K_t, or question-only context without knowledge state."
+        ),
     )
     parser.add_argument(
         "--selector",
@@ -1076,14 +1079,17 @@ def main() -> None:
                 continue
 
             if args.state_mode == "policy":
-                if args.policy_context_source == "online_state":
+                if args.policy_context_source == "query_only":
+                    context = f"Question: {question}"
+                elif args.policy_context_source == "online_state":
                     notebook = online_state["K_t"]
+                    context = f"Question: {question}\nNotebook:\n{notebook}"
                 else:
                     notebook = "\n".join(
                         format_notebook_evidence(item, index + 1)
                         for index, item in enumerate(selected_evidence)
                     )
-                context = f"Question: {question}\nNotebook:\n{notebook}"
+                    context = f"Question: {question}\nNotebook:\n{notebook}"
             else:
                 context = f"Question: {question}\nNotebook:\n{sample_k_t(row)}"
 

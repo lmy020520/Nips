@@ -16,7 +16,7 @@ REQUIRE_DEEPSEEK_API_KEY="${REQUIRE_DEEPSEEK_API_KEY:-1}"
 OUTPUT_DIR="${OUTPUT_DIR:-outputs/rag/ablations_full3000}"
 CACHE_ROOT="${CACHE_ROOT:-outputs/rag/cache_ablations_full3000}"
 
-ABLATIONS="${ABLATIONS:-official no_online_state no_front_policy_blend no_policy no_local_expansion no_dense no_bm25 no_deficit_contribution_score}"
+ABLATIONS="${ABLATIONS:-official no_online_state query_only_policy no_front_policy_blend no_policy no_local_expansion no_dense no_bm25 no_deficit_contribution_score}"
 
 if [[ "$GENERATE_ANSWERS" == "1" && "$REQUIRE_DEEPSEEK_API_KEY" == "1" && -z "${DEEPSEEK_API_KEY:-}" ]]; then
   read -rsp "DeepSeek API Key: " DEEPSEEK_API_KEY

@@ -51,6 +51,7 @@ Usage:
 Supported ABLATION values:
   official                       Full KBS official system.
   no_online_state                Use legacy selected-evidence state instead of online K_t.
+  query_only_policy              Remove knowledge state; score candidates with Question only.
   no_front_policy_blend          Use policy ranking only after hybrid front-end compression.
   no_policy                      Use hybrid front-end only; remove student policy selection.
   no_local_expansion             Disable local sentence expansion in hybrid front-end.
@@ -85,6 +86,9 @@ case "$ABLATION" in
     ;;
   no_online_state)
     policy_context_source="legacy"
+    ;;
+  query_only_policy)
+    policy_context_source="query_only"
     ;;
   no_front_policy_blend)
     policy_score_mode="rank"
