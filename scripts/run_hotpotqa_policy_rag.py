@@ -323,6 +323,96 @@ def extract_answer_from_json(raw_answer: str) -> str:
     return text.splitlines()[0].strip() if text else ""
 
 
+def extract_ranked_indices_from_json(raw_answer: str, candidate_count: int) -> list[int]:
+    text = str(raw_answer or "").strip()
+    text = text.replace("```json", "").replace("```", "").strip()
+    payload = None
+    try:
+        payload = json.loads(text)
+    except json.JSONDecodeError:
+        match = re.search(r"\{.*\}", text, re.DOTALL)
+        if match:
+            try:
+                payload = json.loads(match.group())
+            except json.JSONDecodeError:
+                payload = None
+    if not isinstance(payload, dict):
+        return []
+
+    raw_indices = payload.get("selected_indices") or payload.get("ranked_indices") or payload.get("indices") or []
+    if isinstance(raw_indices, (int, float, str)):
+        raw_indices = [raw_indices]
+    if not isinstance(raw_indices, list):
+        return []
+
+    indices: list[int] = []
+    seen: set[int] = set()
+    for value in raw_indices:
+        try:
+            idx = int(value) - 1
+        except (TypeError, ValueError):
+            continue
+        if 0 <= idx < candidate_count and idx not in seen:
+            seen.add(idx)
+            indices.append(idx)
+    return indices
+
+
+def select_with_agentic_llm(
+    question: str,
+    context: str,
+    candidate_texts: list[str],
+    *,
+    select_top_k: int,
+    max_candidates: int,
+    max_retries: int,
+    retry_sleep: float,
+) -> tuple[list[int], str, int, float]:
+    api_key = os.environ.get("DEEPSEEK_API_KEY", "").strip()
+    if not api_key:
+        raise RuntimeError("DEEPSEEK_API_KEY is required for --selector agentic_llm")
+    base_url = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
+    model = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
+
+    max_candidates = min(max(1, max_candidates), len(candidate_texts))
+    visible = candidate_texts[:max_candidates]
+    candidates_text = "\n".join(f"[{idx}] {text}" for idx, text in enumerate(visible, start=1))
+    messages = [
+        {
+            "role": "system",
+            "content": (
+                "You are an evidence-selection agent for multi-hop QA. "
+                "Given a question, the current knowledge state, and candidate evidence sentences, "
+                "select evidence that best complements the current state. "
+                "Prefer evidence that adds missing bridge/support information over redundant or merely lexical matches. "
+                "Output valid JSON only."
+            ),
+        },
+        {
+            "role": "user",
+            "content": (
+                f"Question:\n{question}\n\n"
+                f"Current knowledge state:\n{context}\n\n"
+                f"Candidate evidence:\n{candidates_text}\n\n"
+                f"Return exactly: {{\"selected_indices\":[i1,i2,...]}}\n"
+                f"Use 1-based candidate indices. Select up to {max(1, select_top_k)} indices, ranked best first."
+            ),
+        },
+    ]
+    started = time.time()
+    raw_answer, tokens = deepseek_chat(
+        api_key,
+        base_url,
+        model,
+        messages,
+        temperature=0.0,
+        max_retries=max_retries,
+        retry_sleep=retry_sleep,
+    )
+    indices = extract_ranked_indices_from_json(raw_answer, max_candidates)
+    return indices, raw_answer, tokens, time.time() - started
+
+
 def answer_with_llm(
     question: str,
     evidence: list[dict],
@@ -865,6 +955,7 @@ def build_parser() -> argparse.ArgumentParser:
             "dense_policy",
             "generic_reranker",
             "t5_reranker",
+            "agentic_llm",
             "first",
             "random",
             "gold_oracle",
@@ -966,6 +1057,13 @@ def build_parser() -> argparse.ArgumentParser:
         help="Use mean or max predicted typed deficit for deficit-driven stopping.",
     )
     parser.add_argument("--answer-cache-dir", default="")
+    parser.add_argument("--agentic-cache-dir", default="")
+    parser.add_argument(
+        "--agentic-max-candidates",
+        type=int,
+        default=50,
+        help="Maximum visible candidates per step for --selector agentic_llm.",
+    )
     parser.add_argument("--llm-max-retries", type=int, default=8)
     parser.add_argument("--llm-retry-sleep", type=float, default=2.0)
     parser.add_argument("--seed", type=int, default=20260608)
@@ -985,6 +1083,9 @@ def main() -> None:
     answer_cache_dir = Path(args.answer_cache_dir) if args.answer_cache_dir else Path(f"{args.output}.cache")
     if args.generate_answers:
         answer_cache_dir.mkdir(parents=True, exist_ok=True)
+    agentic_cache_dir = Path(args.agentic_cache_dir) if args.agentic_cache_dir else Path(f"{args.output}.agentic_cache")
+    if args.selector == "agentic_llm":
+        agentic_cache_dir.mkdir(parents=True, exist_ok=True)
 
     grouped: dict[str, list[dict]] = defaultdict(list)
     for row in samples:
@@ -1095,6 +1196,7 @@ def main() -> None:
 
             label = usable_candidate_ids.index(positive_id)
             display_scores = np.zeros(len(usable_candidate_ids), dtype=float)
+            agentic_decision = None
             if args.selector == "policy":
                 if args.policy_score_mode == "front_policy_blend":
                     raise RuntimeError("--policy-score-mode front_policy_blend requires --selector hybrid_policy.")
@@ -1229,6 +1331,53 @@ def main() -> None:
                 scores = reranker.score(context, candidate_texts)
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
+            elif args.selector == "agentic_llm":
+                cache_path = agentic_cache_dir / f"{qid}_t{int(row.get('t', 0))}.json"
+                if cache_path.exists() and not args.refresh_answer_cache:
+                    cached = json.loads(cache_path.read_text(encoding="utf-8"))
+                    raw_agentic_answer = str(cached.get("raw_answer") or "")
+                    agentic_tokens = int(cached.get("tokens") or 0)
+                    agentic_latency = float(cached.get("latency") or 0.0)
+                    selected_local = [
+                        int(idx)
+                        for idx in cached.get("selected_indices", [])
+                        if isinstance(idx, int) and 0 <= int(idx) < len(usable_candidate_ids)
+                    ]
+                else:
+                    selected_local, raw_agentic_answer, agentic_tokens, agentic_latency = select_with_agentic_llm(
+                        question,
+                        context,
+                        candidate_texts,
+                        select_top_k=args.select_top_k,
+                        max_candidates=args.agentic_max_candidates,
+                        max_retries=args.llm_max_retries,
+                        retry_sleep=args.llm_retry_sleep,
+                    )
+                    cache_path.write_text(
+                        json.dumps(
+                            {
+                                "qid": qid,
+                                "t": int(row.get("t", 0)),
+                                "selected_indices": selected_local,
+                                "raw_answer": raw_agentic_answer,
+                                "tokens": agentic_tokens,
+                                "latency": agentic_latency,
+                            },
+                            ensure_ascii=False,
+                            indent=2,
+                        ),
+                        encoding="utf-8",
+                    )
+                order = selected_local + [idx for idx in range(len(usable_candidate_ids)) if idx not in set(selected_local)]
+                display_scores = np.zeros(len(usable_candidate_ids), dtype=float)
+                for rank, idx in enumerate(order):
+                    display_scores[idx] = float(len(order) - rank)
+                agentic_decision = {
+                    "raw_answer": raw_agentic_answer,
+                    "tokens": agentic_tokens,
+                    "latency": round(agentic_latency, 3),
+                    "selected_indices": selected_local,
+                }
             elif args.selector == "first":
                 order = list(range(len(usable_candidate_ids)))
             elif args.selector == "random":
@@ -1321,6 +1470,8 @@ def main() -> None:
                     key: round(float(value), 6) for key, value in deficit_estimate.items()
                 }
                 step_record["stop_decision"] = stop_decision
+            if agentic_decision is not None:
+                step_record["agentic_decision"] = agentic_decision
             if args.save_online_states:
                 step_record["online_state_before"] = online_state_before
                 step_record["online_state_after"] = online_state
@@ -1448,6 +1599,8 @@ def main() -> None:
         "stop_deficit_threshold": args.stop_deficit_threshold,
         "stop_deficit_mode": args.stop_deficit_mode,
         "answer_cache_dir": str(answer_cache_dir) if args.generate_answers else "",
+        "agentic_cache_dir": str(agentic_cache_dir) if args.selector == "agentic_llm" else "",
+        "agentic_max_candidates": args.agentic_max_candidates,
         "seed": args.seed,
         "sample_states": len(samples),
         "qids": qid_success["total"],
