@@ -393,7 +393,37 @@ def build_outputs(rows: list[dict], output_root: Path, *, max_candidates: int, s
     }
 
 
+def hf_split_filename(split: str) -> str | None:
+    normalized = split.lower()
+    if normalized in {"validation", "valid", "val", "dev"}:
+        return "dev.json"
+    if normalized in {"test"}:
+        return "test.json"
+    if normalized in {"train", "training"}:
+        return "train.json"
+    return None
+
+
 def load_hf_rows(dataset_name: str, config: str, split: str, cache_dir: Path | None) -> list[dict]:
+    # The voidful/2WikiMultihopQA repository stores large JSON files. Loading
+    # through datasets may download all splits, including the 682MB train file.
+    # Prefer downloading the requested split file directly.
+    filename = hf_split_filename(split)
+    if filename and not config:
+        try:
+            from huggingface_hub import hf_hub_download
+
+            local_path = hf_hub_download(
+                repo_id=dataset_name,
+                repo_type="dataset",
+                filename=filename,
+                cache_dir=str(cache_dir) if cache_dir else None,
+            )
+            return read_local_rows(Path(local_path))
+        except Exception as exc:
+            print(f"Warning: direct HF file download failed for {filename}: {exc}")
+            print("Falling back to datasets.load_dataset().")
+
     from datasets import load_dataset
 
     kwargs = {}
