@@ -139,6 +139,19 @@ def get_progress_value(a_t: dict, role: str) -> float:
 
 
 def compute_deficit_label(record: dict, role_totals: Dict[str, Dict[str, float]], alpha: float = 1.0) -> List[float]:
+    labels = record.get("labels") or {}
+    d_t_star = labels.get("d_t_star") or record.get("d_t_star")
+    if isinstance(d_t_star, dict):
+        values = []
+        for key in DEFICIT_KEYS:
+            value = d_t_star.get(key)
+            if not isinstance(value, (int, float)) or isinstance(value, bool):
+                break
+            values.append(max(0.0, min(1.0, float(value))))
+        if len(values) == len(DEFICIT_KEYS):
+            return values
+
+    # Backward-compatible fallback for datasets without explicit teacher d_t*.
     qid = str(record.get("qid") or "")
     totals = role_totals.get(qid)
     if not totals:

@@ -79,9 +79,15 @@ def record_full_doc_coverage(record: dict[str, Any]) -> float | None:
 
 
 def normalize_records(report: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    # RAG reports use ``results``; older analysis exports used ``records``.
     records = report.get("records")
     if not isinstance(records, list):
-        raise ValueError("report does not contain a records list; rerun with full JSON output")
+        records = report.get("results")
+    if not isinstance(records, list):
+        raise ValueError(
+            "report does not contain a 'records' or 'results' list; "
+            "rerun with full per-qid JSON output"
+        )
     by_qid = {}
     for record in records:
         if not isinstance(record, dict):
