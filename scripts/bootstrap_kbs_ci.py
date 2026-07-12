@@ -12,13 +12,23 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-import random
 from pathlib import Path
 from statistics import mean
 from typing import Any
 
+import numpy as np
+
 
 DEFAULT_METRICS = ("answer_em", "answer_f1", "step_at_5", "full_unit_coverage")
+
+SUMMARY_KEYS = {
+    "answer_em": "answer_em",
+    "answer_f1": "answer_f1",
+    "answer_contains": "answer_contains",
+    "step_at_5": "step_acc@5",
+    "full_unit_coverage": "full_gold_unit_coverage",
+    "full_doc_coverage": "full_gold_doc_coverage",
+}
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -94,10 +104,52 @@ def normalize_records(report: dict[str, Any]) -> dict[str, dict[str, Any]]:
             continue
         qid = str(record.get("qid") or "")
         if qid:
+            if qid in by_qid:
+                raise ValueError(f"report contains duplicate qid: {qid}")
             by_qid[qid] = record
     if not by_qid:
         raise ValueError("report records list is empty or missing qid fields")
     return by_qid
+
+
+def validate_report_summary(
+    report: dict[str, Any],
+    records: dict[str, dict[str, Any]],
+    metrics: list[str],
+    *,
+    report_name: str,
+    tolerance: float = 2e-6,
+) -> None:
+    summary = report.get("summary")
+    if not isinstance(summary, dict):
+        raise ValueError(f"{report_name}: report does not contain a summary object")
+
+    summary_qids = summary.get("qids")
+    if not isinstance(summary_qids, int) or summary_qids != len(records):
+        raise ValueError(
+            f"{report_name}: summary qids={summary_qids!r}, "
+            f"but per-qid results contain {len(records)} records"
+        )
+
+    record_list = list(records.values())
+    for metric in metrics:
+        summary_key = SUMMARY_KEYS.get(metric)
+        if summary_key is None:
+            continue
+        expected = summary.get(summary_key)
+        observed = aggregate_metric(record_list, metric)
+        if expected is None or observed is None:
+            if expected is not None or observed is not None:
+                raise ValueError(
+                    f"{report_name}: {metric} availability differs between "
+                    f"summary ({expected!r}) and per-qid results ({observed!r})"
+                )
+            continue
+        if abs(float(expected) - float(observed)) > tolerance:
+            raise ValueError(
+                f"{report_name}: {metric} mismatch: summary={float(expected):.6f}, "
+                f"per-qid={float(observed):.6f}"
+            )
 
 
 def aggregate_metric(records: list[dict[str, Any]], metric: str) -> float | None:
@@ -134,21 +186,76 @@ def aggregate_metric(records: list[dict[str, Any]], metric: str) -> float | None
     raise ValueError(f"unsupported metric: {metric}")
 
 
+def metric_components(
+    records: list[dict[str, Any]], metric: str
+) -> tuple[np.ndarray, np.ndarray]:
+    """Return per-qid numerators and denominators for exact aggregation."""
+    numerators = []
+    denominators = []
+    for record in records:
+        if metric in {"answer_em", "answer_f1", "answer_contains"}:
+            value = record.get(metric)
+            if isinstance(value, (int, float)):
+                numerators.append(float(value))
+                denominators.append(1.0)
+            else:
+                numerators.append(0.0)
+                denominators.append(0.0)
+        elif metric == "step_at_5":
+            hits, total = record_step_hits(record)
+            numerators.append(float(hits))
+            denominators.append(float(total))
+        elif metric == "full_unit_coverage":
+            value = record_full_unit_coverage(record)
+            numerators.append(float(value or 0.0))
+            denominators.append(float(value is not None))
+        elif metric == "full_doc_coverage":
+            value = record_full_doc_coverage(record)
+            numerators.append(float(value or 0.0))
+            denominators.append(float(value is not None))
+        else:
+            raise ValueError(f"unsupported metric: {metric}")
+    return np.asarray(numerators, dtype=np.float64), np.asarray(denominators, dtype=np.float64)
+
+
+def bootstrap_values(
+    numerators: np.ndarray,
+    denominators: np.ndarray,
+    *,
+    rng: np.random.Generator,
+    n_bootstrap: int,
+    batch_size: int = 256,
+) -> list[float]:
+    """Resample qids in bounded batches to avoid a large bootstrap matrix."""
+    size = len(numerators)
+    values: list[float] = []
+    for start in range(0, n_bootstrap, batch_size):
+        current = min(batch_size, n_bootstrap - start)
+        indices = rng.integers(0, size, size=(current, size))
+        sampled_num = numerators[indices].sum(axis=1)
+        sampled_den = denominators[indices].sum(axis=1)
+        valid = sampled_den > 0
+        values.extend((sampled_num[valid] / sampled_den[valid]).tolist())
+    return values
+
+
 def bootstrap_ci(
     by_qid: dict[str, dict[str, Any]],
     metric: str,
     *,
-    rng: random.Random,
+    rng: np.random.Generator,
     n_bootstrap: int,
 ) -> dict[str, Any]:
-    qids = sorted(by_qid)
-    observed = aggregate_metric([by_qid[qid] for qid in qids], metric)
-    samples = []
-    for _ in range(n_bootstrap):
-        sampled = [by_qid[rng.choice(qids)] for _ in qids]
-        value = aggregate_metric(sampled, metric)
-        if value is not None:
-            samples.append(float(value))
+    records = [by_qid[qid] for qid in sorted(by_qid)]
+    numerators, denominators = metric_components(records, metric)
+    denominator = denominators.sum()
+    observed = numerators.sum() / denominator if denominator > 0 else None
+    samples = bootstrap_values(
+        numerators,
+        denominators,
+        rng=rng,
+        n_bootstrap=n_bootstrap,
+    )
     return {
         "observed": round(float(observed), 6) if observed is not None else None,
         "ci95_low": percentile(samples, 0.025),
@@ -162,7 +269,7 @@ def paired_delta_ci(
     contender: dict[str, dict[str, Any]],
     metric: str,
     *,
-    rng: random.Random,
+    rng: np.random.Generator,
     n_bootstrap: int,
 ) -> dict[str, Any]:
     qids = sorted(set(baseline) & set(contender))
@@ -174,8 +281,12 @@ def paired_delta_ci(
             "shared_qids": 0,
             "bootstrap_samples": 0,
         }
-    observed_base = aggregate_metric([baseline[qid] for qid in qids], metric)
-    observed_contender = aggregate_metric([contender[qid] for qid in qids], metric)
+    base_num, base_den = metric_components([baseline[qid] for qid in qids], metric)
+    contender_num, contender_den = metric_components([contender[qid] for qid in qids], metric)
+    observed_base = base_num.sum() / base_den.sum() if base_den.sum() > 0 else None
+    observed_contender = (
+        contender_num.sum() / contender_den.sum() if contender_den.sum() > 0 else None
+    )
     observed_delta = (
         float(observed_contender) - float(observed_base)
         if observed_base is not None and observed_contender is not None
@@ -183,12 +294,18 @@ def paired_delta_ci(
     )
 
     samples = []
-    for _ in range(n_bootstrap):
-        sampled_qids = [rng.choice(qids) for _ in qids]
-        base_value = aggregate_metric([baseline[qid] for qid in sampled_qids], metric)
-        contender_value = aggregate_metric([contender[qid] for qid in sampled_qids], metric)
-        if base_value is not None and contender_value is not None:
-            samples.append(float(contender_value) - float(base_value))
+    size = len(qids)
+    for start in range(0, n_bootstrap, 256):
+        current = min(256, n_bootstrap - start)
+        indices = rng.integers(0, size, size=(current, size))
+        sampled_base_den = base_den[indices].sum(axis=1)
+        sampled_contender_den = contender_den[indices].sum(axis=1)
+        valid = (sampled_base_den > 0) & (sampled_contender_den > 0)
+        sampled_base = base_num[indices].sum(axis=1)[valid] / sampled_base_den[valid]
+        sampled_contender = (
+            contender_num[indices].sum(axis=1)[valid] / sampled_contender_den[valid]
+        )
+        samples.extend((sampled_contender - sampled_base).tolist())
 
     return {
         "observed_delta": round(observed_delta, 6) if observed_delta is not None else None,
@@ -252,6 +369,22 @@ def main() -> None:
     parser.add_argument("--metrics", default=",".join(DEFAULT_METRICS))
     parser.add_argument("--n-bootstrap", type=int, default=10000)
     parser.add_argument("--seed", type=int, default=20260628)
+    parser.add_argument(
+        "--require-identical-qids",
+        action="store_true",
+        help="Fail unless every report contains exactly the same qid set.",
+    )
+    parser.add_argument(
+        "--require-summary-match",
+        action="store_true",
+        help="Recompute requested metrics from per-qid results and verify the report summary.",
+    )
+    parser.add_argument(
+        "--expected-qids",
+        type=int,
+        default=0,
+        help="Fail unless every report contains this many qids. Zero disables the check.",
+    )
     parser.add_argument("--output", required=True)
     parser.add_argument("--tsv-output", default="")
     args = parser.parse_args()
@@ -260,16 +393,45 @@ def main() -> None:
     reports = {}
     for spec in args.report:
         name, path = parse_report_spec(spec)
-        reports[name] = normalize_records(read_json(path))
+        if not path.is_file():
+            raise FileNotFoundError(f"{name}: report not found: {path}")
+        report = read_json(path)
+        records = normalize_records(report)
+        if args.expected_qids and len(records) != args.expected_qids:
+            raise ValueError(
+                f"{name}: expected {args.expected_qids} qids, found {len(records)}"
+            )
+        if args.require_summary_match:
+            validate_report_summary(report, records, metrics, report_name=name)
+        reports[name] = records
 
-    rng = random.Random(args.seed)
-    method_summary = {
-        name: {
-            metric: bootstrap_ci(records, metric, rng=rng, n_bootstrap=args.n_bootstrap)
-            for metric in metrics
-        }
-        for name, records in reports.items()
-    }
+    if args.require_identical_qids and reports:
+        reference_name = next(iter(reports))
+        reference_qids = set(reports[reference_name])
+        mismatches = []
+        for name, records in reports.items():
+            qids = set(records)
+            missing = reference_qids - qids
+            extra = qids - reference_qids
+            if missing or extra:
+                mismatches.append(
+                    f"{name}: missing={len(missing)}, extra={len(extra)}"
+                )
+        if mismatches:
+            details = "; ".join(mismatches)
+            raise ValueError(
+                f"report qid sets differ from {reference_name}: {details}"
+            )
+
+    rng = np.random.default_rng(args.seed)
+    method_summary = {}
+    for name, records in reports.items():
+        method_summary[name] = {}
+        for metric in metrics:
+            print(f"[bootstrap] method={name} metric={metric}", flush=True)
+            method_summary[name][metric] = bootstrap_ci(
+                records, metric, rng=rng, n_bootstrap=args.n_bootstrap
+            )
 
     paired = {}
     if args.baseline:
@@ -279,16 +441,16 @@ def main() -> None:
             if name == args.baseline:
                 continue
             comparison = f"{name}-minus-{args.baseline}"
-            paired[comparison] = {
-                metric: paired_delta_ci(
+            paired[comparison] = {}
+            for metric in metrics:
+                print(f"[bootstrap] comparison={comparison} metric={metric}", flush=True)
+                paired[comparison][metric] = paired_delta_ci(
                     reports[args.baseline],
                     records,
                     metric,
                     rng=rng,
                     n_bootstrap=args.n_bootstrap,
                 )
-                for metric in metrics
-            }
 
     summary = {
         "reports": list(reports),
@@ -296,6 +458,9 @@ def main() -> None:
         "metrics": metrics,
         "n_bootstrap": args.n_bootstrap,
         "seed": args.seed,
+        "identical_qids_required": args.require_identical_qids,
+        "summary_match_required": args.require_summary_match,
+        "expected_qids": args.expected_qids or None,
         "qids_by_method": {name: len(records) for name, records in reports.items()},
         "methods": method_summary,
         "paired_deltas": paired,
