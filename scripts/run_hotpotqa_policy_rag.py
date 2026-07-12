@@ -484,6 +484,23 @@ def cache_file_for_qid(cache_dir: Path, qid: str) -> Path:
     return cache_dir / f"{safe_qid}.json"
 
 
+def profile_start(profile: dict) -> float | None:
+    if not profile.get("active"):
+        return None
+    if profile.get("cuda"):
+        torch.cuda.synchronize()
+    return time.perf_counter()
+
+
+def profile_stop(profile: dict, stage: str, started: float | None) -> None:
+    if started is None:
+        return
+    if profile.get("cuda"):
+        torch.cuda.synchronize()
+    profile["seconds"][stage] += time.perf_counter() - started
+    profile["calls"][stage] += 1
+
+
 class PolicyModel:
     def __init__(self, model_dir: Path, checkpoint: Path, device: str, max_length: int, batch_size: int):
         self.device = torch.device(device if torch.cuda.is_available() and device.startswith("cuda") else "cpu")
@@ -1069,6 +1086,17 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--llm-retry-sleep", type=float, default=2.0)
     parser.add_argument("--seed", type=int, default=20260608)
     parser.add_argument("--output", default="outputs/rag/hotpotqa_policy_rag_report.json")
+    parser.add_argument(
+        "--profile-runtime",
+        action="store_true",
+        help="Measure local selection stages and peak PyTorch GPU memory; excludes answer API time.",
+    )
+    parser.add_argument(
+        "--profile-warmup-qids",
+        type=int,
+        default=20,
+        help="Leading qids excluded from runtime and peak-memory measurements.",
+    )
     return parser
 
 
@@ -1143,8 +1171,23 @@ def main() -> None:
     qid_success = Counter()
     answer_metrics = Counter()
     records = []
+    profile = {
+        "enabled": bool(args.profile_runtime),
+        "active": False,
+        "cuda": bool(torch.cuda.is_available() and str(args.device).startswith("cuda")),
+        "seconds": Counter(),
+        "calls": Counter(),
+        "measured_qids": 0,
+        "measured_steps": 0,
+    }
 
-    for qid in tqdm(qids, desc="policy-rag"):
+    for qid_index, qid in enumerate(tqdm(qids, desc="policy-rag")):
+        if profile["enabled"] and not profile["active"] and qid_index >= max(0, args.profile_warmup_qids):
+            if profile["cuda"]:
+                torch.cuda.synchronize()
+                torch.cuda.reset_peak_memory_stats()
+            profile["active"] = True
+        qid_profile_started = profile_start(profile)
         rows = sorted(grouped[qid], key=lambda item: int(item.get("t", 0)))
         if args.max_policy_steps > 0:
             rows = rows[: args.max_policy_steps]
@@ -1206,6 +1249,7 @@ def main() -> None:
             label = usable_candidate_ids.index(positive_id)
             display_scores = np.zeros(len(usable_candidate_ids), dtype=float)
             agentic_decision = None
+            selector_profile_started = profile_start(profile)
             if args.selector == "policy":
                 if args.policy_score_mode == "front_policy_blend":
                     raise RuntimeError("--policy-score-mode front_policy_blend requires --selector hybrid_policy.")
@@ -1220,27 +1264,42 @@ def main() -> None:
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
             elif args.selector == "bm25":
+                stage_started = profile_start(profile)
                 scores = bm25_scores(question, candidate_texts)
+                profile_stop(profile, "bm25_retrieval", stage_started)
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
             elif args.selector == "dense":
                 dense_query = context if args.dense_query_mode == "state" else question
+                stage_started = profile_start(profile)
                 scores = dense.score(dense_query, candidate_texts)
+                profile_stop(profile, "dense_retrieval", stage_started)
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
             elif args.selector == "hybrid":
                 dense_query = context if args.dense_query_mode == "state" else question
+                stage_started = profile_start(profile)
                 dense_scores = dense.score(dense_query, candidate_texts)
+                profile_stop(profile, "dense_retrieval", stage_started)
+                stage_started = profile_start(profile)
                 lexical_scores = bm25_scores(question, candidate_texts)
+                profile_stop(profile, "bm25_retrieval", stage_started)
+                stage_started = profile_start(profile)
                 alpha = min(1.0, max(0.0, args.hybrid_alpha))
                 scores = alpha * minmax_normalize(dense_scores) + (1.0 - alpha) * minmax_normalize(lexical_scores)
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
+                profile_stop(profile, "score_fusion", stage_started)
             elif args.selector == "hybrid_policy":
                 front_query = context
                 dense_query = front_query if args.dense_query_mode == "state" else question
+                stage_started = profile_start(profile)
                 dense_scores = dense.score(dense_query, candidate_texts)
+                profile_stop(profile, "dense_retrieval", stage_started)
+                stage_started = profile_start(profile)
                 lexical_scores = bm25_scores(front_query, candidate_texts)
+                profile_stop(profile, "bm25_retrieval", stage_started)
+                stage_started = profile_start(profile)
                 alpha = min(1.0, max(0.0, args.hybrid_alpha))
                 hybrid_scores = alpha * minmax_normalize(dense_scores) + (1.0 - alpha) * minmax_normalize(lexical_scores)
                 dense_order = np.argsort(dense_scores)[::-1].tolist()
@@ -1253,6 +1312,8 @@ def main() -> None:
                 front_order = np.argsort(front_scores)[::-1].tolist()
                 front_pool_k = min(max(1, args.front_pool_k), len(front_order))
                 seed_indices = list(dict.fromkeys(lexical_order[:front_pool_k] + dense_order[:front_pool_k]))
+                profile_stop(profile, "score_fusion", stage_started)
+                stage_started = profile_start(profile)
                 expanded_indices = local_expanded_pool(
                     seed_indices,
                     usable_candidate_ids,
@@ -1271,7 +1332,9 @@ def main() -> None:
                     lambda_=args.mmr_lambda,
                     same_doc_similarity=args.mmr_same_doc_similarity,
                 )
+                profile_stop(profile, "local_expansion_mmr", stage_started)
                 compressed_texts = [candidate_texts[index] for index in compressed_indices]
+                stage_started = profile_start(profile)
                 if args.policy_score_mode == "front_policy_blend":
                     policy_scores = policy.score(context, compressed_texts)
                     front_local_scores = np.array([front_scores[index] for index in compressed_indices], dtype=float)
@@ -1297,6 +1360,7 @@ def main() -> None:
                 display_scores = front_scores
                 for local_index, original_index in enumerate(compressed_indices):
                     display_scores[original_index] = float(rerank_scores[local_index])
+                profile_stop(profile, "policy_scoring", stage_started)
             elif args.selector == "multi_query_dense":
                 query_scores = [
                     dense.score(query, candidate_texts)
@@ -1306,13 +1370,20 @@ def main() -> None:
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
             elif args.selector == "iterative_dense":
+                stage_started = profile_start(profile)
                 scores = dense.score(context, candidate_texts)
+                profile_stop(profile, "dense_retrieval", stage_started)
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
             elif args.selector == "iterative_hybrid":
                 # Both retrieval channels consume the updated online state at every round.
+                stage_started = profile_start(profile)
                 dense_scores = dense.score(context, candidate_texts)
+                profile_stop(profile, "dense_retrieval", stage_started)
+                stage_started = profile_start(profile)
                 lexical_scores = bm25_scores(context, candidate_texts)
+                profile_stop(profile, "bm25_retrieval", stage_started)
+                stage_started = profile_start(profile)
                 alpha = min(1.0, max(0.0, args.hybrid_alpha))
                 scores = (
                     alpha * minmax_normalize(dense_scores)
@@ -1320,6 +1391,7 @@ def main() -> None:
                 )
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
+                profile_stop(profile, "score_fusion", stage_started)
             elif args.selector == "dense_policy":
                 dense_query = context if args.dense_query_mode == "state" else question
                 dense_scores = dense.score(dense_query, candidate_texts)
@@ -1344,7 +1416,9 @@ def main() -> None:
                 for local_index, original_index in enumerate(rerank_indices):
                     display_scores[original_index] = float(policy_scores[local_index])
             elif args.selector == "generic_reranker":
+                stage_started = profile_start(profile)
                 scores = reranker.score(context, candidate_texts)
+                profile_stop(profile, "reranker_scoring", stage_started)
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
             elif args.selector == "t5_reranker":
@@ -1405,6 +1479,9 @@ def main() -> None:
                 rng.shuffle(order)
             else:
                 order = [label] + [index for index in range(len(usable_candidate_ids)) if index != label]
+            profile_stop(profile, "selector_total", selector_profile_started)
+            if profile["active"]:
+                profile["measured_steps"] += 1
 
             deficit_estimate = None
             stop_decision = {
@@ -1499,6 +1576,10 @@ def main() -> None:
 
         if not step_records:
             continue
+
+        profile_stop(profile, "qid_selection_pipeline", qid_profile_started)
+        if profile["active"]:
+            profile["measured_qids"] += 1
 
         qid_success["total"] += 1
         qid_success["stopped"] += int(stop_record is not None)
@@ -1659,6 +1740,38 @@ def main() -> None:
             "answer_errors": answer_metrics["answer_errors"],
         }
     )
+
+    if args.profile_runtime:
+        measured_qids = int(profile["measured_qids"])
+        pipeline_seconds = float(profile["seconds"].get("qid_selection_pipeline", 0.0))
+        summary["runtime_profile"] = {
+            "warmup_qids": min(max(0, args.profile_warmup_qids), len(qids)),
+            "measured_qids": measured_qids,
+            "measured_steps": int(profile["measured_steps"]),
+            "stage_seconds": {
+                stage: round(float(seconds), 6)
+                for stage, seconds in sorted(profile["seconds"].items())
+            },
+            "stage_calls": dict(sorted(profile["calls"].items())),
+            "stage_avg_ms_per_call": {
+                stage: round(1000.0 * float(profile["seconds"][stage]) / profile["calls"][stage], 4)
+                for stage in sorted(profile["seconds"])
+                if profile["calls"][stage]
+            },
+            "selection_avg_ms_per_qid": (
+                round(1000.0 * pipeline_seconds / measured_qids, 4) if measured_qids else None
+            ),
+            "selection_throughput_qids_per_second": (
+                round(measured_qids / pipeline_seconds, 4) if pipeline_seconds > 0 else None
+            ),
+            "peak_gpu_allocated_mb": (
+                round(torch.cuda.max_memory_allocated() / (1024**2), 2) if profile["cuda"] else 0.0
+            ),
+            "peak_gpu_reserved_mb": (
+                round(torch.cuda.max_memory_reserved() / (1024**2), 2) if profile["cuda"] else 0.0
+            ),
+            "includes_answer_api": False,
+        }
 
     report = {"summary": summary, "results": records}
     write_json(report, Path(args.output))
