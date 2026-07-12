@@ -203,7 +203,14 @@ def select_candidates(
     return sorted(kept, key=lambda unit_id: stable_key(f"{qid}::{unit_id}", seed + 1))
 
 
-def build_outputs(rows: list[dict], output_root: Path, *, max_candidates: int, seed: int) -> dict:
+def build_outputs(
+    rows: list[dict],
+    output_root: Path,
+    *,
+    max_candidates: int,
+    seed: int,
+    output_split: str,
+) -> dict:
     queries = []
     raw_units = []
     targets = []
@@ -222,7 +229,7 @@ def build_outputs(rows: list[dict], output_root: Path, *, max_candidates: int, s
                 "answer": row["answer"],
                 "metadata": {
                     "dataset": "hotpotqa_distractor",
-                    "split": "test",
+                    "split": output_split,
                     "type": row["type"],
                     "level": row["level"],
                 },
@@ -291,7 +298,7 @@ def build_outputs(rows: list[dict], output_root: Path, *, max_candidates: int, s
                     "build_meta": {
                         "run_id": "hotpotqa_policy_rag_eval",
                         "source": "prepare_hotpotqa_policy_rag_eval.py",
-                        "split": "test",
+                        "split": output_split,
                     },
                     "question": row["question"],
                     "state": {
@@ -339,12 +346,12 @@ def build_outputs(rows: list[dict], output_root: Path, *, max_candidates: int, s
             previous_gold.add(positive_unit_id)
             previous_gold_evidence.append(unit_by_id[positive_unit_id])
 
-    write_json(raw_json, output_root / "raw" / "test.json")
-    write_jsonl(processed, output_root / "processed" / "test.jsonl")
-    write_jsonl(queries, output_root / "queries" / "test.jsonl")
-    write_jsonl(raw_units, output_root / "unit_registry" / "raw_units_test.jsonl")
-    write_jsonl(targets, output_root / "targets" / "test.jsonl")
-    write_jsonl(samples, output_root / "samples" / "test.jsonl")
+    write_json(raw_json, output_root / "raw" / f"{output_split}.json")
+    write_jsonl(processed, output_root / "processed" / f"{output_split}.jsonl")
+    write_jsonl(queries, output_root / "queries" / f"{output_split}.jsonl")
+    write_jsonl(raw_units, output_root / "unit_registry" / f"raw_units_{output_split}.jsonl")
+    write_jsonl(targets, output_root / "targets" / f"{output_split}.jsonl")
+    write_jsonl(samples, output_root / "samples" / f"{output_split}.jsonl")
 
     return {
         "qids": len(rows),
@@ -367,6 +374,12 @@ def main() -> None:
     parser.add_argument("--size", type=int, default=3000)
     parser.add_argument("--seed", type=int, default=20260609)
     parser.add_argument("--source-split", choices=["validation", "train"], default="validation")
+    parser.add_argument(
+        "--output-split",
+        choices=["val", "test"],
+        default="test",
+        help="Filename and metadata split used in the generated evaluation artifacts.",
+    )
     parser.add_argument("--dataset-cache-dir", type=Path)
     parser.add_argument("--exclude-root", type=Path, action="append", default=[])
     parser.add_argument("--no-default-exclude-roots", action="store_true")
@@ -425,13 +438,20 @@ def main() -> None:
     if len(selected) < args.size:
         raise RuntimeError(f"not enough usable rows: requested={args.size}, selected={len(selected)}")
 
-    stats = build_outputs(selected, output_root, max_candidates=args.max_candidates, seed=args.seed)
+    stats = build_outputs(
+        selected,
+        output_root,
+        max_candidates=args.max_candidates,
+        seed=args.seed,
+        output_split=args.output_split,
+    )
     manifest = {
         "dataset": "hotpotqa/hotpot_qa",
         "config": "distractor",
         "purpose": "independent_policy_rag_evaluation",
         "created_at": datetime.now(timezone.utc).isoformat(),
         "source_split": args.source_split,
+        "output_split": args.output_split,
         "seed": args.seed,
         "output_root": str(output_root),
         "size": args.size,
@@ -441,10 +461,12 @@ def main() -> None:
         "skip_reasons": dict(skip_reasons),
         "stats": stats,
         "files": {
-            "queries": str(output_root / "queries" / "test.jsonl"),
-            "samples": str(output_root / "samples" / "test.jsonl"),
-            "raw_units": str(output_root / "unit_registry" / "raw_units_test.jsonl"),
-            "targets": str(output_root / "targets" / "test.jsonl"),
+            "queries": str(output_root / "queries" / f"{args.output_split}.jsonl"),
+            "samples": str(output_root / "samples" / f"{args.output_split}.jsonl"),
+            "raw_units": str(
+                output_root / "unit_registry" / f"raw_units_{args.output_split}.jsonl"
+            ),
+            "targets": str(output_root / "targets" / f"{args.output_split}.jsonl"),
         },
     }
     write_json(manifest, manifest_path)
