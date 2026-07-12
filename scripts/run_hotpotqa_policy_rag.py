@@ -952,6 +952,7 @@ def build_parser() -> argparse.ArgumentParser:
             "hybrid_policy",
             "multi_query_dense",
             "iterative_dense",
+            "iterative_hybrid",
             "dense_policy",
             "generic_reranker",
             "t5_reranker",
@@ -1108,11 +1109,19 @@ def main() -> None:
     if args.stop_control == "deficit" and policy is None:
         raise RuntimeError("--stop-control deficit requires a policy-based selector.")
     dense = None
-    if args.selector in {"dense", "hybrid", "hybrid_policy", "multi_query_dense", "iterative_dense", "dense_policy"}:
+    if args.selector in {
+        "dense",
+        "hybrid",
+        "hybrid_policy",
+        "multi_query_dense",
+        "iterative_dense",
+        "iterative_hybrid",
+        "dense_policy",
+    }:
         if not args.dense_model:
             raise RuntimeError(
                 "--dense-model is required for --selector dense, hybrid, hybrid_policy, multi_query_dense, "
-                "iterative_dense, or dense_policy"
+                "iterative_dense, iterative_hybrid, or dense_policy"
             )
         dense = DenseScorer(args.dense_model, device=args.device, batch_size=args.dense_batch_size)
     reranker = None
@@ -1298,6 +1307,17 @@ def main() -> None:
                 order = np.argsort(scores)[::-1].tolist()
             elif args.selector == "iterative_dense":
                 scores = dense.score(context, candidate_texts)
+                display_scores = scores
+                order = np.argsort(scores)[::-1].tolist()
+            elif args.selector == "iterative_hybrid":
+                # Both retrieval channels consume the updated online state at every round.
+                dense_scores = dense.score(context, candidate_texts)
+                lexical_scores = bm25_scores(context, candidate_texts)
+                alpha = min(1.0, max(0.0, args.hybrid_alpha))
+                scores = (
+                    alpha * minmax_normalize(dense_scores)
+                    + (1.0 - alpha) * minmax_normalize(lexical_scores)
+                )
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
             elif args.selector == "dense_policy":
