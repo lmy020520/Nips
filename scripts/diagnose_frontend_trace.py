@@ -151,6 +151,13 @@ def main() -> None:
     parser.add_argument("--dense-batch-size", type=int, default=64)
     parser.add_argument("--max-length", type=int, default=320)
     parser.add_argument("--state-mode", choices=["dataset", "policy"], default="policy")
+    parser.add_argument(
+        "--policy-context-source",
+        choices=["legacy", "online_state"],
+        default="online_state",
+    )
+    parser.add_argument("--online-state-max-raw", type=int, default=8)
+    parser.add_argument("--online-state-max-chars", type=int, default=260)
     parser.add_argument("--dense-query-mode", choices=["question", "state"], default="state")
     parser.add_argument("--front-pool-k", type=int, default=30)
     parser.add_argument("--front-fusion", choices=["rrf", "score"], default="rrf")
@@ -190,6 +197,7 @@ def main() -> None:
         bm25_scores,
         format_candidate_text,
         format_notebook_evidence,
+        init_online_state,
         load_memory,
         local_expanded_pool,
         mmr_select,
@@ -197,6 +205,7 @@ def main() -> None:
         sample_candidate_ids,
         sample_k_t,
         sample_positive_id,
+        update_online_state,
     )
 
     samples = list(read_jsonl(Path(args.samples)))
@@ -232,6 +241,8 @@ def main() -> None:
     for qid in tqdm(qids, desc="frontend-trace"):
         rows = sorted(grouped[qid], key=lambda item: int(item.get("t", 0)))
         selected_evidence = []
+        selected_unit_ids = set()
+        online_state = init_online_state()
 
         for row in rows:
             question = str(row.get("question") or "")
@@ -255,10 +266,13 @@ def main() -> None:
                 continue
 
             if args.state_mode == "policy":
-                notebook = "\n".join(
-                    format_notebook_evidence(item, index + 1)
-                    for index, item in enumerate(selected_evidence)
-                )
+                if args.policy_context_source == "online_state":
+                    notebook = online_state["K_t"]
+                else:
+                    notebook = "\n".join(
+                        format_notebook_evidence(item, index + 1)
+                        for index, item in enumerate(selected_evidence)
+                    )
                 context = f"Question: {question}\nNotebook:\n{notebook}"
             else:
                 context = f"Question: {question}\nNotebook:\n{sample_k_t(row)}"
@@ -367,8 +381,19 @@ def main() -> None:
             selected_ids = [usable_candidate_ids[index] for index in selected_indices]
             for selected_id in selected_ids:
                 item = memory.get(selected_id)
-                if item:
-                    selected_evidence.append(item)
+                if not item or selected_id in selected_unit_ids:
+                    continue
+                selected_unit_ids.add(selected_id)
+                selected_evidence.append(item)
+                online_state = update_online_state(
+                    online_state,
+                    selected_id,
+                    item,
+                    memory,
+                    step_id=int(row.get("t", 0)),
+                    max_raw=args.online_state_max_raw,
+                    max_chars_per_item=args.online_state_max_chars,
+                )
 
             positive_item = memory[positive_id]
             traces.append(
@@ -418,6 +443,8 @@ def main() -> None:
         "memory": args.memory,
         "queries": args.queries,
         "checkpoint": args.checkpoint,
+        "state_mode": args.state_mode,
+        "policy_context_source": args.policy_context_source,
         "dense_model": args.dense_model,
         "qids": len(qids),
         "steps": totals["steps"],
