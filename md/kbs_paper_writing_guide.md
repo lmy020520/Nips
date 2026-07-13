@@ -22,7 +22,7 @@
 * 2Wiki 结果属于 question-local candidate memory 下、直接使用 HotpotQA checkpoint 的 zero-shot transfer，不属于开放域检索。
 * Question-only 与 Iterative-Hybrid baselines、统一 latency/显存/吞吐量分析均已完成。
 
-后文出现的 `KBS Official = 0.5943/0.7390`、旧 cand10 数值以及 v17 deficit 变体，均应在最终论文表格整理时替换为对应 v21 report。
+旧稿中的 `KBS Official = 0.5943/0.7390`、旧 cand10 数值以及 v17 deficit 变体均已退出正式口径；最终论文只引用对应 v21 report。
 
 ---
 
@@ -263,7 +263,7 @@ contribution prediction
 正式 online RAG 中使用的是 trained student checkpoint：
 
 ```text
-outputs/ranker/deberta_v3_large_v17_candidate_contribution_lr5e7/best_model.pt
+outputs/ranker/deberta_v3_large_v21_unified_full/best_model.pt
 ```
 
 ### 5.5 Typed deficit
@@ -494,28 +494,33 @@ avg_answer_latency
 | BM25-RAG | 0.5017 | 0.6297 | 0.6473 | 0.6230 | 0.3697 | 356.52 |
 | Dense-RAG | 0.5457 | 0.6775 | 0.7560 | 0.7523 | 0.5700 | 362.82 |
 | Hybrid-RAG | 0.5563 | 0.6884 | 0.7767 | 0.7877 | 0.5810 | 362.03 |
-| KBS Official | 0.5943 | 0.7390 | 0.8300 | 0.8903 | 0.7113 | 382.15 |
+| KSG-EA-Compact (v21) | 0.5957 | 0.7401 | 0.8277 | 0.8930 | 0.7170 | 385.08 |
+| KSG-EA-Recall (v21) | 0.6270 | 0.7777 | 0.8205 | 0.9623 | 0.8337 | 423.97 |
 | Gold Oracle | 0.6520 | 0.8023 | 1.0000 | 1.0000 | 1.0000 | 532.43 |
 
 ### 9.2 Main result interpretation
 
-KBS Official 明显优于 BM25、Dense 和 Hybrid：
+KSG-EA-Compact 和 KSG-EA-Recall 均明显优于 BM25、Dense 和 Hybrid。正式主张以 paired Bootstrap CI 为依据：
 
 ```text
 相比 BM25:
-EM: 0.5017 -> 0.5943
-F1: 0.6297 -> 0.7390
-Full Unit Coverage: 0.3697 -> 0.7113
+Compact EM: 0.5017 -> 0.5957
+Compact F1: 0.6297 -> 0.7401
+Compact Full Unit Coverage: 0.3697 -> 0.7170
 
 相比 Dense:
-EM: 0.5457 -> 0.5943
-F1: 0.6775 -> 0.7390
-Full Unit Coverage: 0.5700 -> 0.7113
+Compact EM: 0.5457 -> 0.5957
+Compact F1: 0.6775 -> 0.7401
+Compact Full Unit Coverage: 0.5700 -> 0.7170
 
 相比 Hybrid:
-EM: 0.5563 -> 0.5943
-F1: 0.6884 -> 0.7390
-Full Unit Coverage: 0.5810 -> 0.7113
+Compact EM: 0.5563 -> 0.5957
+Compact F1: 0.6884 -> 0.7401
+Compact Full Unit Coverage: 0.5810 -> 0.7170
+
+Recall EM: 0.5563 -> 0.6270
+Recall F1: 0.6884 -> 0.7777
+Recall Full Unit Coverage: 0.5810 -> 0.8337
 ```
 
 可以写成：
@@ -528,21 +533,22 @@ The proposed KBS system consistently improves both evidence coverage and answer 
 
 ## 10. Ablation Study
 
-### 10.1 Ablation results
+### 10.1 Unified auxiliary-loss ablation results (v21)
 
 | Variant | EM | F1 | Step@5 | Full Unit Cov. | Avg Tokens |
 |---|---:|---:|---:|---:|---:|
-| Official | 0.5930 | 0.7386 | 0.8300 | 0.7113 | 382.16 |
-| w/o online_state | 0.5973 | 0.7406 | 0.8309 | 0.7130 | 381.49 |
-| w/o front-policy blend | 0.6053 | 0.7498 | 0.6916 | 0.7487 | 487.03 |
-| w/o policy | 0.5540 | 0.6873 | 0.7767 | 0.5810 | 362.01 |
-| w/o local expansion | 0.5950 | 0.7389 | 0.8300 | 0.7113 | 382.11 |
-| w/o dense | 0.5013 | 0.6281 | 0.6473 | 0.3697 | 356.53 |
-| w/o BM25 | 0.5457 | 0.6778 | 0.7560 | 0.5700 | 362.81 |
-| deficit role score | 0.6047 | 0.7489 | 0.6938 | 0.7477 | 486.26 |
-| deficit contribution score | 0.6030 | 0.7464 | 0.6845 | 0.6787 | 463.62 |
+| Full | 0.5957 | 0.7401 | 0.8277 | 0.7170 | 385.08 |
+| Ranking only | 0.5970 | 0.7416 | 0.8292 | 0.7173 | 384.21 |
+| w/o deficit supervision | 0.5983 | 0.7431 | 0.8300 | 0.7173 | 384.22 |
+| w/o contribution supervision | 0.5970 | 0.7407 | 0.8276 | 0.7167 | 384.47 |
 
-### 10.2 How to interpret ablation
+Paired Bootstrap 表明 Full 与 Ranking-only、w/o Contribution 的差异均不显著；移除 deficit 后 F1 和 Step@5 仅有约 `0.3/0.23` 个百分点的小幅提升。因此辅助损失不能被表述为性能增益来源。
+
+### 10.2 Structural inference ablations
+
+`online_state / query_only / w/o blend / w/o policy / w/o local expansion / w/o dense / w/o BM25` 必须使用 v21 Full checkpoint 统一复核。无答案复核结果写入 `outputs/rag/v21_structural_noanswer/summary.json`。早期 v17 答案结果只能作为实验演化记录，不能与 v21 Full 混入同一正式消融表。
+
+### 10.3 How to interpret ablation
 
 #### Hybrid front-end is important
 
@@ -556,11 +562,10 @@ Removing either BM25 or dense retrieval degrades both evidence coverage and answ
 
 #### Student policy is useful
 
-`w/o policy` 低于 Official：
+早期结果显示 `w/o policy` 明显低于完整系统；正式数值应由 v21 structural no-answer 复核表更新：
 
 ```text
-F1: 0.6873 -> 0.7386
-Full Unit Coverage: 0.5810 -> 0.7113
+Full Unit Coverage: Hybrid baseline 0.5810 vs v21 Full 0.7170
 ```
 
 说明 student policy 对证据选择有实质提升。
@@ -752,17 +757,19 @@ Many errors are not simple retrieval failures, but fine-grained evidence discrim
 
 ## 13. Deficit Analysis 的写法
 
-当前 deficit 汇总结果：
+v21 deficit teacher-label 对齐结果：
 
 ```text
-predicted_deficit_steps = 7296
-teacher_deficit_steps = 0
-overall_mae = null
-role-wise MAE = null
-monotonic_non_increase_rate = null
+evaluated states = 459
+overall MAE = 0.261983
+overall MSE = 0.078808
+role-wise MAE = 0.225455 / 0.314328 / 0.242138 / 0.266009
+predicted-vs-teacher Pearson = 0.165130
+predicted monotonic non-increase rate = 0.697368
+teacher monotonic non-increase rate = 1.0
 ```
 
-这说明目前的 report 记录了 predicted deficit，但没有成功和 teacher d_t* 对齐。
+teacher label 已完成对齐，但预测校准仍较弱。尤其是 Student MAE 没有超过简单均值预测基线，因此不能把 deficit head 描述为准确的状态估计器。
 
 因此论文中暂时不要写：
 
@@ -770,13 +777,13 @@ monotonic_non_increase_rate = null
 Our deficit predictor achieves low MAE.
 ```
 
-可以写：
+建议写：
 
 ```text
-We incorporate typed deficit supervision into student training and expose deficit prediction as an auxiliary signal. A more fine-grained calibration analysis of predicted deficits is left for future work.
+We investigate typed deficit as exploratory structured auxiliary supervision and expose its prediction as a diagnostic interface. The current predictor shows limited calibration, and controlled ablations do not establish a consistent downstream gain.
 ```
 
-如果后续补齐 teacher deficit 对齐，可以再加 deficit MAE 表。
+正文或附录可以报告 MAE、Pearson、monotonicity，以及成功/失败 teacher-state trajectory 的 deficit 曲线；这些分析属于诊断性负结果，不构成主要性能贡献。
 
 ---
 
@@ -957,9 +964,9 @@ Local expansion has limited effect in the sentence-level HotpotQA setting, but i
 Pure policy and deficit-aware scoring may introduce more context and improve answer generation, but they reduce step-level evidence precision and increase token cost.
 ```
 
-### 16.4 deficit MAE 还没形成有效结果
+### 16.4 deficit 已完成评估，但校准和效用较弱
 
-可以写设计和训练，不要写强实验结论。
+可以写设计、训练和诊断结果，但必须同时报告 `MAE=0.2620`、弱 Pearson、简单基线比较和统一损失消融。不要写成 deficit 提升性能、预测准确或提供可靠解释。
 
 ---
 
@@ -1066,7 +1073,7 @@ candidate size 增大，coverage/F1 提升，但 Step@1 下降。
 ## 18. 推荐摘要初稿
 
 ```text
-Retrieval-augmented generation (RAG) has become a widely used paradigm for knowledge-intensive question answering. However, existing retrieval and reranking methods often select evidence based on static query-passage relevance, which is insufficient for multi-hop reasoning where the next useful evidence depends on what has already been acquired. In this paper, we propose a knowledge-state-guided evidence acquisition framework for multi-hop RAG. The framework maintains an explicit knowledge state during evidence acquisition and trains a student evidence selection policy from teacher-constructed trajectories. Beyond standard ranking labels, the teacher derives typed deficit and contribution signals, encouraging the student to select evidence that complements the current knowledge state. During online inference, a hybrid retrieval front-end first constructs a candidate pool, and the student policy selects evidence conditioned on the current knowledge state to form the final context for answer generation. Experiments on 3,000 HotpotQA examples show that our method substantially improves both evidence coverage and answer quality compared with BM25, dense retrieval, and hybrid retrieval baselines. Further analyses reveal the impact of candidate pool size and identify major failure modes in multi-hop evidence acquisition.
+Retrieval-augmented generation (RAG) has become a widely used paradigm for knowledge-intensive question answering. However, existing retrieval and reranking methods often select evidence based on static query-passage relevance, which is insufficient for multi-hop reasoning where the next useful evidence depends on what has already been acquired. In this paper, we propose a knowledge-state-guided evidence acquisition framework for multi-hop RAG. The framework maintains an explicit knowledge state during evidence acquisition and trains a student evidence selection policy from teacher-constructed trajectories. We additionally investigate typed deficit and contribution signals as exploratory structured auxiliary supervision. During online inference, a hybrid retrieval front-end first constructs a candidate pool, and the student policy selects evidence conditioned on the current knowledge state to form the final context for answer generation. Experiments on 3,000 HotpotQA examples and question-local zero-shot transfer to 1,000 2WikiMultihopQA examples show that our method substantially improves evidence coverage and answer quality compared with conventional retrieval baselines. Further analyses characterize candidate-pool trade-offs, computational cost, and major failure modes in multi-hop evidence acquisition.
 ```
 
 ---
