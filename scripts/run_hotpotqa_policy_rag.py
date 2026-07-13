@@ -1422,7 +1422,9 @@ def main() -> None:
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
             elif args.selector == "t5_reranker":
+                stage_started = profile_start(profile)
                 scores = reranker.score(context, candidate_texts)
+                profile_stop(profile, "reranker_scoring", stage_started)
                 display_scores = scores
                 order = np.argsort(scores)[::-1].tolist()
             elif args.selector == "agentic_llm":

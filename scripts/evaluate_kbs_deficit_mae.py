@@ -114,20 +114,28 @@ def main() -> None:
         context = f"Question: {question}\nNotebook:\n{sample_k_t(row)}"
         candidate_ids = sample_candidate_ids(row)
         candidate_texts = []
+        usable_candidate_ids = []
         for unit_id in candidate_ids:
             item = memory.get(unit_id)
             if item:
+                usable_candidate_ids.append(unit_id)
                 candidate_texts.append(format_candidate_text(item))
         if not candidate_texts:
             totals["missing_candidates"] += 1
             continue
 
-        _, _, deficit_preds = policy.score_with_aux(context, candidate_texts, return_aux=True)
+        ranking_scores, _, deficit_preds = policy.score_with_aux(context, candidate_texts, return_aux=True)
         if deficit_preds is None or len(deficit_preds) == 0:
             totals["missing_prediction"] += 1
             continue
         pred_values = np.mean(deficit_preds, axis=0)
         pred = {key: float(pred_values[index]) for index, key in enumerate(DEFICIT_KEYS)}
+        positive_id = str(((row.get("labels") or {}).get("ranking_label") or {}).get("positive_unit_id") or "")
+        positive_rank = None
+        if positive_id in usable_candidate_ids:
+            positive_index = usable_candidate_ids.index(positive_id)
+            order = np.argsort(ranking_scores)[::-1].tolist()
+            positive_rank = order.index(positive_index) + 1
 
         totals["evaluated"] += 1
         pred_mean = float(np.mean([pred[key] for key in DEFICIT_KEYS]))
@@ -156,6 +164,8 @@ def main() -> None:
                 "t": t,
                 "pred_mean": round(pred_mean, 6),
                 "teacher_mean": round(teacher_mean, 6),
+                "positive_rank": positive_rank,
+                "step_correct": positive_rank == 1 if positive_rank is not None else None,
                 "role_errors": role_errors,
             }
         )
