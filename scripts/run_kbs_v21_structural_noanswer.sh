@@ -41,6 +41,8 @@ root = Path(sys.argv[1])
 keys = ["qids", "step_acc@1", "step_acc@5", "full_gold_doc_coverage", "full_gold_unit_coverage"]
 rows = []
 for path in sorted(root.glob("*.json")):
+    if path.name == "summary.json":
+        continue
     summary = json.loads(path.read_text(encoding="utf-8")).get("summary", {})
     rows.append({"variant": path.stem, **{key: summary.get(key) for key in keys}})
 (root / "summary.json").write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
