@@ -596,7 +596,7 @@ def main() -> None:
     from scripts import run_hotpotqa_policy_rag as rag_runtime
 
     RAG = rag_runtime
-    memory = RAG.load_memory(args.memory)
+    memory = RAG.load_memory(Path(args.memory))
     other_states = build_other_question_states(rows)
     policy = RAG.PolicyModel(
         Path(args.model_dir),
