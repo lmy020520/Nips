@@ -294,6 +294,9 @@ class PrefixRankingDataset(Dataset):
             stop_label = get_stop_label(record)
             deficit_label = compute_deficit_label(record, self.role_totals)
             positive_contribution_label = get_positive_contribution_label(record)
+            if bool((record.get("build_meta") or {}).get("mask_auxiliary_labels", False)):
+                deficit_label = [-100.0, -100.0, -100.0, -100.0]
+                positive_contribution_label = [-100.0, -100.0, -100.0, -100.0]
             derived_payloads = normalize_derived_payloads(record.get("derived_payloads"))
 
             if not question:
