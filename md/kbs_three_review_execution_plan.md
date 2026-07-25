@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 2
-current_status: v22 mechanism passed; end-to-end validation pending
+current_status: Stage 2.1 v22 alpha-sensitivity runner prepared; server validation pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -187,6 +187,16 @@ Use no answer API during the initial selection. Report:
 Choose the alpha that maximizes validation teacher next-unit alignment at 5.
 If two values differ by less than 0.002, choose the lower-token operating
 point. Freeze the selected alpha before test evaluation.
+
+Implementation entry point:
+
+```bash
+bash scripts/run_kbs_v22_alpha_sensitivity_val.sh
+```
+
+This entry point forces `GENERATE_ANSWERS=0`, uses the v22 state-focused
+checkpoint by default, and derives state-level MRR plus selected-context
+length offline from each report.
 
 ## Step 2.2: HotpotQA end-to-end runs
 
