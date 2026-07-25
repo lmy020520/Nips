@@ -2,6 +2,7 @@
 """Build fixed-pool, multi-prefix ranking data for state-focused v22 training."""
 
 import argparse
+import gzip
 import hashlib
 import json
 import random
@@ -23,7 +24,8 @@ TOKEN_RE = re.compile(r"[a-z0-9]+")
 
 
 def read_jsonl(path: Path) -> Iterable[dict]:
-    with path.open("r", encoding="utf-8") as handle:
+    opener = gzip.open if path.suffix == ".gz" else Path.open
+    with opener(path, "rt", encoding="utf-8") as handle:
         for line_number, line in enumerate(handle, start=1):
             line = line.strip()
             if not line:
@@ -405,7 +407,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--source-root",
-        default="data/hotpotqa_distractor_v6_10k_source/processed",
+        default="data_packages/hotpotqa_v22_source_metadata",
     )
     parser.add_argument(
         "--teacher-root",
@@ -421,6 +423,20 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-qids", type=int, default=0)
     parser.add_argument("--force", action="store_true")
     return parser.parse_args()
+
+
+def find_source_path(source_root: Path, split: str) -> Path:
+    candidates = (
+        source_root / f"{split}.jsonl",
+        source_root / f"{split}.jsonl.gz",
+    )
+    for candidate in candidates:
+        if candidate.is_file():
+            return candidate
+    raise FileNotFoundError(
+        f"missing source metadata for split={split}; checked: "
+        + ", ".join(str(path) for path in candidates)
+    )
 
 
 def main() -> None:
@@ -440,7 +456,7 @@ def main() -> None:
 
     split_stats = {}
     for split in ("train", "val", "test"):
-        source_path = source_root / f"{split}.jsonl"
+        source_path = find_source_path(source_root, split)
         memory_path = teacher_root / "unit_registry" / f"raw_units_{split}.jsonl"
         targets_path = teacher_root / "targets" / f"{split}.jsonl"
         for required in (source_path, memory_path, targets_path):

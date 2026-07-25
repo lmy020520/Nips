@@ -11,7 +11,10 @@ query-only systems appear nearly identical in aggregate RAG metrics.
 ## Data construction
 
 The v22 builder uses only the existing HotpotQA training, validation, and
-internal-test splits. It does not use the 3,000-question evaluation subset.
+internal-test splits. The exact source annotations are distributed as a
+lightweight metadata package under
+`data_packages/hotpotqa_v22_source_metadata`; document contexts are omitted.
+It does not use the 3,000-question evaluation subset.
 
 For each question:
 
