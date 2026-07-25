@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 2
-current_status: Stage 2.1 v22 alpha-sensitivity runner prepared; server validation pending
+current_status: Stage 2.1 passed with alpha=0.35 frozen; Stage 2.2 pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -86,7 +86,7 @@ passes its explicit gate.
 | Stage | Goal | Current status | API | Training |
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
-| 2 | Validate v22 end to end | Next | Yes for final answers | No new model initially |
+| 2 | Validate v22 end to end | Step 2.1 passed; Step 2.2 next | Yes for final answers | No new model initially |
 | 3 | Controlled mechanism baselines | Pending | Yes for final answers | Yes |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
@@ -197,6 +197,25 @@ bash scripts/run_kbs_v22_alpha_sensitivity_val.sh
 This entry point forces `GENERATE_ANSWERS=0`, uses the v22 state-focused
 checkpoint by default, and derives state-level MRR plus selected-context
 length offline from each report.
+
+### Step 2.1 completed evidence
+
+The six reports use the same 1,000 qids and 2,449 teacher states, the same
+fixed configuration, and the v22 state-focused checkpoint. Answer generation
+was disabled.
+
+| Alpha | Alignment@1 | Alignment@5 | State MRR | Full unit coverage | Context lexical tokens |
+|---:|---:|---:|---:|---:|---:|
+| 0.00 | 0.331564 | 0.748877 | 0.509075 | 0.546 | 175.978 |
+| 0.20 | 0.363005 | 0.777869 | 0.538310 | 0.607 | 181.324 |
+| **0.35** | 0.355655 | **0.797060** | **0.541021** | 0.678 | 194.022 |
+| 0.50 | 0.324214 | 0.777460 | 0.512493 | 0.749 | 219.715 |
+| 0.80 | 0.342997 | 0.649653 | 0.487861 | **0.772** | 261.356 |
+| 1.00 | 0.341364 | 0.596570 | 0.478953 | 0.767 | 276.112 |
+
+**Frozen decision:** `alpha=0.35`. Its Alignment@5 is the unique maximum.
+The next-best value differs by `0.019191`, so the `<0.002` near-tie rule does
+not apply.
 
 ## Step 2.2: HotpotQA end-to-end runs
 
@@ -652,12 +671,14 @@ The paper may be locked only when:
 | `state-phase1-v21-full3000` | 1 | v21 Full, HotpotQA 3,000 | Correct state beats query-only mainly at Step@1/MRR | Build state-focused v22 |
 | `v22-state-focused-train-seed42` | 1 | 10,000 train qids, 27,730 rows | Best epoch 2; val acc 0.7017; test acc 0.6632 | Run fixed-pool diagnosis |
 | `state-phase1-v22-full3000` | 1 | v22, HotpotQA 3,000 | Strong state effect; rank reversal 0.7474 | Stage 1 passed |
+| `v22-alpha-sensitivity-val1000` | 2.1 | v22, HotpotQA validation 1,000 | Alpha 0.35 uniquely maximizes Alignment@5 at 0.7971 | Freeze alpha 0.35 |
 
 ## Next authorized run
 
 ```text
-Stage 2.1: v22 alpha sensitivity on the question-disjoint validation set,
-without answer-generation API calls.
+Stage 2.2: HotpotQA v22 end-to-end evaluation using frozen alpha 0.35, the
+same 3,000 qids, fresh DeepSeek answer calls, and independent output/cache
+directories.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
