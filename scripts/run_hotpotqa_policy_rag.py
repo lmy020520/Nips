@@ -30,6 +30,12 @@ from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from src.models.ranker import CrossEncoderRanker
 
 
+ANSWER_PROMPT_VERSIONS = {
+    "json": "kbs_extractive_answer_json_v1",
+    "short": "kbs_extractive_answer_short_v1",
+}
+
+
 def read_jsonl(path: Path):
     with path.open("r", encoding="utf-8") as f:
         for line in f:
@@ -952,11 +958,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--state-mode", choices=["dataset", "policy"], default="dataset")
     parser.add_argument(
         "--policy-context-source",
-        choices=["legacy", "online_state", "query_only"],
+        choices=["legacy", "online_state", "query_only", "previous_evidence_only"],
         default="legacy",
         help=(
             "For --state-mode policy, use legacy selected-evidence notebook, "
-            "rendered online K_t, or question-only context without knowledge state."
+            "rendered online K_t, question-only context, or only the previous "
+            "online top-1 prediction as an anchor."
         ),
     )
     parser.add_argument(
@@ -1195,6 +1202,7 @@ def main() -> None:
         selected_evidence: list[dict] = []
         selected_doc_ids: set[str] = set()
         online_state = init_online_state()
+        previous_predicted_unit_id = None
         gold_units: list[str] = []
         gold_doc_ids: set[str] = set()
         target_gold_units: list[str] = []
@@ -1231,9 +1239,19 @@ def main() -> None:
                 all_steps_correct = False
                 continue
 
+            context_anchor_unit_id = None
             if args.state_mode == "policy":
                 if args.policy_context_source == "query_only":
                     context = f"Question: {question}"
+                elif args.policy_context_source == "previous_evidence_only":
+                    context_anchor_unit_id = previous_predicted_unit_id
+                    previous_item = memory.get(previous_predicted_unit_id or "")
+                    notebook = (
+                        format_notebook_evidence(previous_item, 1)
+                        if previous_item is not None
+                        else ""
+                    )
+                    context = f"Question: {question}\nNotebook:\n{notebook}"
                 elif args.policy_context_source == "online_state":
                     notebook = online_state["K_t"]
                     context = f"Question: {question}\nNotebook:\n{notebook}"
@@ -1571,10 +1589,13 @@ def main() -> None:
                 step_record["stop_decision"] = stop_decision
             if agentic_decision is not None:
                 step_record["agentic_decision"] = agentic_decision
+            if args.policy_context_source == "previous_evidence_only":
+                step_record["context_anchor_unit_id"] = context_anchor_unit_id
             if args.save_online_states:
                 step_record["online_state_before"] = online_state_before
                 step_record["online_state_after"] = online_state
             step_records.append(step_record)
+            previous_predicted_unit_id = pred_id
 
         if not step_records:
             continue
@@ -1626,6 +1647,9 @@ def main() -> None:
                             "raw_answer": raw_answer,
                             "answer_tokens": answer_tokens,
                             "answer_latency": answer_latency,
+                            "answer_model": os.environ.get("DEEPSEEK_MODEL", "deepseek-chat"),
+                            "answer_mode": args.answer_mode,
+                            "answer_prompt_version": ANSWER_PROMPT_VERSIONS[args.answer_mode],
                         },
                         ensure_ascii=False,
                         indent=2,
@@ -1693,6 +1717,15 @@ def main() -> None:
         "deficit_role_weight": args.deficit_role_weight,
         "deficit_contribution_weight": args.deficit_contribution_weight,
         "answer_mode": args.answer_mode,
+        "generate_answers": bool(args.generate_answers),
+        "answer_generator": "deepseek" if args.generate_answers else "",
+        "answer_model": (
+            os.environ.get("DEEPSEEK_MODEL", "deepseek-chat") if args.generate_answers else ""
+        ),
+        "answer_temperature": 0.0 if args.generate_answers else None,
+        "answer_prompt_version": (
+            ANSWER_PROMPT_VERSIONS[args.answer_mode] if args.generate_answers else ""
+        ),
         "refresh_answer_cache": args.refresh_answer_cache,
         "save_online_states": args.save_online_states,
         "online_state_max_raw": args.online_state_max_raw,

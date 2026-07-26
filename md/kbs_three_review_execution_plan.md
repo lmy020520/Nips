@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 2
-current_status: Stage 2.1 passed with alpha=0.35 frozen; Stage 2.2 pending
+current_status: Stage 2.1 passed; Stage 2.2 runner prepared, smoke and final runs pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -226,6 +226,33 @@ and separate output/cache directories, run:
 2. v22 KSG-EA-Recall.
 3. v22 query-only policy with otherwise identical settings.
 4. v22 previous-evidence-only/anchor inference if supported by the runtime.
+
+The budget-matched executable run IDs are:
+
+```text
+full_compact
+full_recall
+query_only_compact
+query_only_recall
+```
+
+The optional inference diagnostics are `previous_only_compact` and
+`previous_only_recall`. They use only the previous online top-1 prediction as
+the policy anchor and must not be described as separately trained ACRA-style
+baselines.
+
+Implementation entry point:
+
+```bash
+RUN=<run-id> CUDA_DEVICE=<gpu> bash scripts/run_kbs_v22_stage2_hotpot.sh
+```
+
+The runner fixes `alpha=0.35`, requires fresh DeepSeek calls, uses independent
+report/cache paths, refuses silent output reuse, and records selection runtime
+and peak GPU memory. `SMOKE=1` creates an isolated 20-qid preflight report.
+Each completed report is automatically checked by
+`scripts/check_kbs_v22_stage2_report.py`; a run is not accepted merely because
+the RAG process exits.
 
 Report:
 
@@ -676,9 +703,10 @@ The paper may be locked only when:
 ## Next authorized run
 
 ```text
-Stage 2.2: HotpotQA v22 end-to-end evaluation using frozen alpha 0.35, the
-same 3,000 qids, fresh DeepSeek answer calls, and independent output/cache
-directories.
+Stage 2.2 preflight: run a 20-qid `full_compact` smoke test, verify 20 judged
+answers and zero answer errors, then run the four budget-matched 3,000-qid
+Full/Query-only Compact/Recall reports with frozen alpha 0.35 and fresh
+DeepSeek calls.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
