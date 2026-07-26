@@ -428,7 +428,7 @@ def answer_with_llm(
 ) -> tuple[str, str, int, float]:
     api_key = os.environ.get("DEEPSEEK_API_KEY", "").strip()
     if not api_key:
-        return "", "", 0, 0.0
+        raise RuntimeError("DEEPSEEK_API_KEY is required for answer generation")
     base_url = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
     model = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
     context = "\n".join(format_notebook_evidence(item, idx + 1) for idx, item in enumerate(evidence))

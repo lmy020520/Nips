@@ -88,8 +88,14 @@ def main() -> None:
             f"{len(empty_answers)} results have empty raw answers; "
             f"examples={empty_answers[:5]}"
         )
-    if not isinstance(summary.get("avg_answer_tokens"), (int, float)):
-        raise ValueError("avg_answer_tokens is missing")
+    avg_answer_tokens = summary.get("avg_answer_tokens")
+    if not isinstance(avg_answer_tokens, (int, float)) or avg_answer_tokens <= 0:
+        raise ValueError(f"avg_answer_tokens must be positive, found {avg_answer_tokens!r}")
+    avg_answer_latency = summary.get("avg_answer_latency")
+    if not isinstance(avg_answer_latency, (int, float)) or avg_answer_latency <= 0:
+        raise ValueError(
+            f"avg_answer_latency must be positive, found {avg_answer_latency!r}"
+        )
     if not isinstance(summary.get("runtime_profile"), dict):
         raise ValueError("runtime_profile is missing")
 
@@ -107,6 +113,7 @@ def main() -> None:
         "step_acc@5": summary.get("step_acc@5"),
         "full_gold_unit_coverage": summary.get("full_gold_unit_coverage"),
         "avg_answer_tokens": summary.get("avg_answer_tokens"),
+        "avg_answer_latency": summary.get("avg_answer_latency"),
         "selection_avg_ms_per_qid": summary["runtime_profile"].get(
             "selection_avg_ms_per_qid"
         ),

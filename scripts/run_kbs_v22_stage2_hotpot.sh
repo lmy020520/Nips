@@ -16,6 +16,7 @@ RUN="${RUN:-}"
 CUDA_DEVICE="${CUDA_DEVICE:-0}"
 SMOKE="${SMOKE:-0}"
 ALLOW_OVERWRITE="${ALLOW_OVERWRITE:-0}"
+RUN_SUFFIX="${RUN_SUFFIX:-}"
 
 DATA_ROOT="data/hotpotqa_distractor_eval_3000_cand50"
 CHECKPOINT="outputs/ranker/deberta_v3_large_v22_state_focused/best_model.pt"
@@ -88,6 +89,13 @@ else
   max_qids=3000
   run_tag="$RUN"
 fi
+if [[ -n "$RUN_SUFFIX" ]]; then
+  if [[ ! "$RUN_SUFFIX" =~ ^[A-Za-z0-9_.-]+$ ]]; then
+    echo "[ERROR] RUN_SUFFIX may contain only letters, numbers, dot, underscore, and hyphen" >&2
+    exit 2
+  fi
+  run_tag="${run_tag}_${RUN_SUFFIX}"
+fi
 
 samples="$DATA_ROOT/samples/test.jsonl"
 memory="$DATA_ROOT/unit_registry/raw_units_test.jsonl"
@@ -112,6 +120,11 @@ if [[ -z "${DEEPSEEK_API_KEY:-}" ]]; then
     exit 1
   fi
 fi
+if [[ -z "${DEEPSEEK_API_KEY//[[:space:]]/}" ]]; then
+  echo "[ERROR] DEEPSEEK_API_KEY is blank" >&2
+  exit 1
+fi
+export DEEPSEEK_API_KEY
 
 if [[ "$ALLOW_OVERWRITE" != "1" ]]; then
   if [[ -e "$output" ]]; then
@@ -125,6 +138,9 @@ if [[ "$ALLOW_OVERWRITE" != "1" ]]; then
 fi
 
 mkdir -p "$(dirname "$output")" "$cache_dir"
+
+echo "[INFO] checking DeepSeek connectivity and authentication before retrieval"
+python3 scripts/check_deepseek_api.py
 
 echo "[PLAN] Stage 2.2 HotpotQA v22 end-to-end evaluation"
 echo "[INFO] run=$RUN smoke=$SMOKE gpu=$CUDA_DEVICE qids=$max_qids"
