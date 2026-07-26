@@ -23,6 +23,8 @@ CHECKPOINT="outputs/ranker/deberta_v3_large_v22_state_focused/best_model.pt"
 MODEL_DIR="${MODEL_DIR:-models/deberta-v3-large}"
 DENSE_MODEL="${DENSE_MODEL:-models/bge-large-en-v1.5}"
 FROZEN_ALPHA="0.35"
+FROZEN_DEEPSEEK_MODEL="deepseek-v4-flash"
+FROZEN_DEEPSEEK_THINKING_MODE="disabled"
 
 usage() {
   cat <<'EOF'
@@ -125,6 +127,8 @@ if [[ -z "${DEEPSEEK_API_KEY//[[:space:]]/}" ]]; then
   exit 1
 fi
 export DEEPSEEK_API_KEY
+export DEEPSEEK_MODEL="$FROZEN_DEEPSEEK_MODEL"
+export DEEPSEEK_THINKING_MODE="$FROZEN_DEEPSEEK_THINKING_MODE"
 
 if [[ "$ALLOW_OVERWRITE" != "1" ]]; then
   if [[ -e "$output" ]]; then
@@ -148,6 +152,7 @@ echo "[INFO] checkpoint=$CHECKPOINT"
 echo "[INFO] context_source=$policy_context_source"
 echo "[INFO] front_pool_k=$front_pool_k candidate_top_k=$candidate_top_k select_top_k=5"
 echo "[INFO] frozen_alpha=$FROZEN_ALPHA"
+echo "[INFO] answer_model=$DEEPSEEK_MODEL thinking_mode=$DEEPSEEK_THINKING_MODE"
 echo "[INFO] fresh_answer_calls=required output=$output cache=$cache_dir"
 if [[ "$RUN" == previous_only_* ]]; then
   echo "[INFO] previous-only is an inference diagnostic, not a separately trained anchor baseline"

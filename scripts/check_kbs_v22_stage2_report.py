@@ -58,6 +58,8 @@ def main() -> None:
         "answer_mode": "json",
         "generate_answers": True,
         "answer_generator": "deepseek",
+        "answer_model": "deepseek-v4-flash",
+        "answer_thinking_mode": "disabled",
         "answer_temperature": 0.0,
         "answer_prompt_version": "kbs_extractive_answer_json_v1",
         "refresh_answer_cache": True,

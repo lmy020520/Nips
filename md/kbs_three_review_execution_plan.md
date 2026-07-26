@@ -700,15 +700,34 @@ The paper may be locked only when:
 | `state-phase1-v22-full3000` | 1 | v22, HotpotQA 3,000 | Strong state effect; rank reversal 0.7474 | Stage 1 passed |
 | `v22-alpha-sensitivity-val1000` | 2.1 | v22, HotpotQA validation 1,000 | Alpha 0.35 uniquely maximizes Alignment@5 at 0.7971 | Freeze alpha 0.35 |
 | `v22-stage2-full-compact-smoke20-attempt1` | 2.2 | v22 Compact, HotpotQA 20 | All answers, API tokens, and API latency are zero; no HTTP answer calls occurred | Reject; make blank key fail loudly |
+| `v22-stage2-full-compact-smoke20-attempt2` | 2.2 | v22 Compact, HotpotQA 20 | Preflight HTTP 400 before retrieval: the retired `deepseek-chat` alias was rejected | Reject; explicitly freeze V4-Flash non-thinking |
+
+## DeepSeek model migration note
+
+DeepSeek retired the legacy `deepseek-chat` model name after 2026-07-24.
+The earlier June 2026 experiments used that alias when it mapped to V4-Flash
+in non-thinking mode. From Stage 2.2 attempt 3 onward, all fresh answer
+generation is therefore frozen to:
+
+- requested model: `deepseek-v4-flash`;
+- thinking mode: `disabled`;
+- temperature: `0.0`;
+- prompt version: `kbs_extractive_answer_json_v1`.
+
+This is the closest protocol-continuity setting available after alias
+retirement. Reports and answer-cache records must retain the requested model
+and thinking mode. The migration must be disclosed in the reproducibility
+notes because the API does not expose a frozen historical backend snapshot.
 
 ## Next authorized run
 
 ```text
-Stage 2.2 dependency repair: download the fail-fast API patch and rerun the
-isolated 20-qid `full_compact` smoke with `RUN_SUFFIX=attempt2`. The runner
-must pass its real DeepSeek preflight before retrieval. Do not start any
-3,000-qid Stage 2.2 run until the smoke has 20 non-empty raw answers, positive
-API tokens/latency, and zero answer errors.
+Stage 2.2 dependency repair: download the explicit V4-Flash non-thinking patch
+and rerun the isolated 20-qid `full_compact` smoke with
+`RUN_SUFFIX=attempt3`. The runner must pass its real DeepSeek preflight before
+retrieval. Do not start any 3,000-qid Stage 2.2 run until the smoke has 20
+non-empty raw answers, positive API tokens/latency, zero answer errors, and
+the frozen model/mode metadata required by the report checker.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is

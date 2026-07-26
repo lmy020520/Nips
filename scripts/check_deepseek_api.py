@@ -11,6 +11,10 @@ import urllib.error
 import urllib.request
 
 
+DEFAULT_DEEPSEEK_MODEL = "deepseek-v4-flash"
+DEFAULT_DEEPSEEK_THINKING_MODE = "disabled"
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--timeout", type=float, default=30.0)
@@ -20,7 +24,15 @@ def main() -> None:
     if not api_key:
         raise RuntimeError("DEEPSEEK_API_KEY is missing or blank")
     base_url = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com").strip()
-    model = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat").strip()
+    model = os.environ.get("DEEPSEEK_MODEL", DEFAULT_DEEPSEEK_MODEL).strip()
+    thinking_mode = os.environ.get(
+        "DEEPSEEK_THINKING_MODE",
+        DEFAULT_DEEPSEEK_THINKING_MODE,
+    ).strip().lower()
+    if thinking_mode not in {"enabled", "disabled"}:
+        raise ValueError(
+            "DEEPSEEK_THINKING_MODE must be either 'enabled' or 'disabled'"
+        )
     body = {
         "model": model,
         "messages": [
@@ -29,10 +41,12 @@ def main() -> None:
                 "content": "Reply with exactly OK.",
             }
         ],
-        "temperature": 0.0,
+        "thinking": {"type": thinking_mode},
         "max_tokens": 8,
         "stream": False,
     }
+    if thinking_mode == "disabled":
+        body["temperature"] = 0.0
     request = urllib.request.Request(
         base_url.rstrip("/") + "/chat/completions",
         data=json.dumps(body).encode("utf-8"),
@@ -67,7 +81,10 @@ def main() -> None:
         json.dumps(
             {
                 "status": "PASS",
-                "model": model,
+                "requested_model": model,
+                "response_model": str(payload.get("model") or ""),
+                "thinking_mode": thinking_mode,
+                "system_fingerprint": str(payload.get("system_fingerprint") or ""),
                 "latency_seconds": round(time.time() - started, 3),
                 "total_tokens": int(usage.get("total_tokens") or 0),
                 "response_nonempty": True,

@@ -34,6 +34,24 @@ ANSWER_PROMPT_VERSIONS = {
     "json": "kbs_extractive_answer_json_v1",
     "short": "kbs_extractive_answer_short_v1",
 }
+DEFAULT_DEEPSEEK_MODEL = "deepseek-v4-flash"
+DEFAULT_DEEPSEEK_THINKING_MODE = "disabled"
+
+
+def deepseek_model() -> str:
+    return os.environ.get("DEEPSEEK_MODEL", DEFAULT_DEEPSEEK_MODEL).strip()
+
+
+def deepseek_thinking_mode() -> str:
+    mode = os.environ.get(
+        "DEEPSEEK_THINKING_MODE",
+        DEFAULT_DEEPSEEK_THINKING_MODE,
+    ).strip().lower()
+    if mode not in {"enabled", "disabled"}:
+        raise ValueError(
+            "DEEPSEEK_THINKING_MODE must be either 'enabled' or 'disabled'"
+        )
+    return mode
 
 
 def read_jsonl(path: Path):
@@ -277,12 +295,15 @@ def deepseek_chat(
     max_retries: int = 5,
     retry_sleep: float = 2.0,
 ) -> tuple[str, int]:
+    thinking_mode = deepseek_thinking_mode()
     body = {
         "model": model,
         "messages": messages,
-        "temperature": temperature,
+        "thinking": {"type": thinking_mode},
         "stream": False,
     }
+    if thinking_mode == "disabled":
+        body["temperature"] = temperature
     last_error = None
     for attempt in range(1, max(1, max_retries) + 1):
         req = urllib.request.Request(
@@ -378,7 +399,7 @@ def select_with_agentic_llm(
     if not api_key:
         raise RuntimeError("DEEPSEEK_API_KEY is required for --selector agentic_llm")
     base_url = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
-    model = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
+    model = deepseek_model()
 
     max_candidates = min(max(1, max_candidates), len(candidate_texts))
     visible = candidate_texts[:max_candidates]
@@ -430,7 +451,7 @@ def answer_with_llm(
     if not api_key:
         raise RuntimeError("DEEPSEEK_API_KEY is required for answer generation")
     base_url = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
-    model = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
+    model = deepseek_model()
     context = "\n".join(format_notebook_evidence(item, idx + 1) for idx, item in enumerate(evidence))
     if answer_mode == "json":
         messages = [
@@ -1647,7 +1668,8 @@ def main() -> None:
                             "raw_answer": raw_answer,
                             "answer_tokens": answer_tokens,
                             "answer_latency": answer_latency,
-                            "answer_model": os.environ.get("DEEPSEEK_MODEL", "deepseek-chat"),
+                            "answer_model": deepseek_model(),
+                            "answer_thinking_mode": deepseek_thinking_mode(),
                             "answer_mode": args.answer_mode,
                             "answer_prompt_version": ANSWER_PROMPT_VERSIONS[args.answer_mode],
                         },
@@ -1719,8 +1741,9 @@ def main() -> None:
         "answer_mode": args.answer_mode,
         "generate_answers": bool(args.generate_answers),
         "answer_generator": "deepseek" if args.generate_answers else "",
-        "answer_model": (
-            os.environ.get("DEEPSEEK_MODEL", "deepseek-chat") if args.generate_answers else ""
+        "answer_model": deepseek_model() if args.generate_answers else "",
+        "answer_thinking_mode": (
+            deepseek_thinking_mode() if args.generate_answers else ""
         ),
         "answer_temperature": 0.0 if args.generate_answers else None,
         "answer_prompt_version": (
