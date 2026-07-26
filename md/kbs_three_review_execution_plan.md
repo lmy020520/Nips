@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 2
-current_status: Stage 2.2 smoke accepted; four frozen 3,000-qid HotpotQA runs pending
+current_status: Stage 2.2 full runs and state-vs-query CIs completed; state value passes, v21 non-regression remains unresolved
 ```
 
 This file is the single execution plan synthesized from:
@@ -86,7 +86,7 @@ passes its explicit gate.
 | Stage | Goal | Current status | API | Training |
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
-| 2 | Validate v22 end to end | Step 2.1 and Step 2.2 smoke passed; full runs pending | Yes for final answers | No new model initially |
+| 2 | Validate v22 end to end | Full Hotpot state comparison passed; v21 matched comparison pending | Yes for final answers | No new model initially |
 | 3 | Controlled mechanism baselines | Pending | Yes for final answers | Yes |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
@@ -702,6 +702,12 @@ The paper may be locked only when:
 | `v22-stage2-full-compact-smoke20-attempt1` | 2.2 | v22 Compact, HotpotQA 20 | All answers, API tokens, and API latency are zero; no HTTP answer calls occurred | Reject; make blank key fail loudly |
 | `v22-stage2-full-compact-smoke20-attempt2` | 2.2 | v22 Compact, HotpotQA 20 | Preflight HTTP 400 before retrieval: the retired `deepseek-chat` alias was rejected | Reject; explicitly freeze V4-Flash non-thinking |
 | `v22-stage2-full-compact-smoke20-attempt3` | 2.2 | v22 Compact, HotpotQA 20 | PASS: 20 judged, 0 errors, EM 0.55, F1 0.642857, Alignment@5 0.86, positive API tokens/latency | Authorize frozen 3,000-qid Stage 2.2 runs |
+| `v22-stage2-hotpot-full-compact` | 2.2 | v22 Full-state Compact, HotpotQA 3,000 | PASS: EM 0.579667, F1 0.723282, Alignment@5 0.808114, full-unit 0.698667 | Include in paired state comparison |
+| `v22-stage2-hotpot-query-compact` | 2.2 | v22 Query-only Compact, HotpotQA 3,000 | PASS: EM 0.564, F1 0.705241, Alignment@5 0.817023, full-unit 0.639 | Full state improves answer/coverage but not Alignment@5 |
+| `v22-stage2-hotpot-full-recall` | 2.2 | v22 Full-state Recall, HotpotQA 3,000 | PASS: EM 0.611333, F1 0.760448, Alignment@5 0.781250, full-unit 0.827 | Include in paired state comparison |
+| `v22-stage2-hotpot-query-recall` | 2.2 | v22 Query-only Recall, HotpotQA 3,000 | PASS: EM 0.577, F1 0.721138, Alignment@5 0.851288, full-unit 0.704 | Full state improves answer/coverage but not Alignment@5 |
+| `v22-stage2-state-ci-compact` | 2.3 | Full-state minus Query-only Compact, paired 10,000 bootstrap | F1 +0.018041 [0.008961, 0.027384]; full-unit +0.059667 [0.046992, 0.073000]; Alignment@5 -0.008909 [-0.016708, -0.000826] | State value supported for answer quality and trajectory coverage |
+| `v22-stage2-state-ci-recall` | 2.3 | Full-state minus Query-only Recall, paired 10,000 bootstrap | F1 +0.039310 [0.029927, 0.048772]; full-unit +0.123000 [0.110000, 0.136333]; Alignment@5 -0.070038 [-0.080211, -0.060165] | Strong state benefit with a next-unit-alignment tradeoff |
 
 ## DeepSeek model migration note
 
@@ -723,12 +729,14 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run the four frozen 3,000-qid HotpotQA Stage 2.2 evaluations:
-`full_compact`, `full_recall`, `query_only_compact`, and
-`query_only_recall`. Use separate GPUs and output/cache directories, fresh
-DeepSeek V4-Flash non-thinking calls, and no run suffix. Accept each report
-only after `check_kbs_v22_stage2_report.py` prints PASS. After all four pass,
-run the paired Stage 2.3 bootstrap comparisons before starting 2Wiki.
+Do not tune against the 3,000-qid HotpotQA reports. Resolve Stage 2 acceptance
+criterion 3 by auditing the v21-v22 comparison under matched answer-generation
+conditions. The historical v21 reports used the retired `deepseek-chat` alias,
+whereas the accepted v22 reports explicitly use V4-Flash non-thinking. Either
+rerun the v21 Compact/Recall checkpoints with the current frozen generator and
+fresh caches, or document that strict answer-F1 non-regression cannot be
+attributed solely to retrieval because the historical API backend was not
+snapshot-frozen. Do not begin 2Wiki or Stage 3 until this decision is recorded.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
