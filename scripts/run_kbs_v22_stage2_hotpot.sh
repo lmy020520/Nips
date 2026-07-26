@@ -19,7 +19,9 @@ ALLOW_OVERWRITE="${ALLOW_OVERWRITE:-0}"
 RUN_SUFFIX="${RUN_SUFFIX:-}"
 
 DATA_ROOT="data/hotpotqa_distractor_eval_3000_cand50"
-CHECKPOINT="outputs/ranker/deberta_v3_large_v22_state_focused/best_model.pt"
+CHECKPOINT="${KBS_CHECKPOINT:-outputs/ranker/deberta_v3_large_v22_state_focused/best_model.pt}"
+OUTPUT_NAMESPACE="${KBS_OUTPUT_NAMESPACE:-kbs_v22_stage2_hotpot}"
+EXPECTED_CHECKPOINT_SUFFIX="${KBS_EXPECTED_CHECKPOINT_SUFFIX:-deberta_v3_large_v22_state_focused/best_model.pt}"
 MODEL_DIR="${MODEL_DIR:-models/deberta-v3-large}"
 DENSE_MODEL="${DENSE_MODEL:-models/bge-large-en-v1.5}"
 FROZEN_ALPHA="0.35"
@@ -102,8 +104,8 @@ fi
 samples="$DATA_ROOT/samples/test.jsonl"
 memory="$DATA_ROOT/unit_registry/raw_units_test.jsonl"
 queries="$DATA_ROOT/queries/test.jsonl"
-output="outputs/rag/kbs_v22_stage2_hotpot/${run_tag}.json"
-cache_dir="outputs/rag/cache_kbs_v22_stage2_hotpot/${run_tag}"
+output="outputs/rag/${OUTPUT_NAMESPACE}/${run_tag}.json"
+cache_dir="outputs/rag/cache_${OUTPUT_NAMESPACE}/${run_tag}"
 
 for path in "$samples" "$memory" "$queries" "$CHECKPOINT" "$MODEL_DIR" "$DENSE_MODEL"; do
   if [[ ! -e "$path" ]]; then
@@ -196,4 +198,5 @@ CUDA_VISIBLE_DEVICES="$CUDA_DEVICE" python3 scripts/run_hotpotqa_policy_rag.py \
 python3 scripts/check_kbs_v22_stage2_report.py \
   --report "$output" \
   --run "$RUN" \
+  --expected-checkpoint-suffix "$EXPECTED_CHECKPOINT_SUFFIX" \
   --expected-qids "$max_qids"

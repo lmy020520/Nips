@@ -29,6 +29,10 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--report", type=Path, required=True)
     parser.add_argument("--run", choices=sorted(RUN_CONFIGS), required=True)
+    parser.add_argument(
+        "--expected-checkpoint-suffix",
+        default="deberta_v3_large_v22_state_focused/best_model.pt",
+    )
     parser.add_argument("--expected-qids", type=int, required=True)
     args = parser.parse_args()
 
@@ -70,7 +74,7 @@ def main() -> None:
         require_equal(summary, key, value)
 
     checkpoint = str(summary.get("checkpoint") or "")
-    if not checkpoint.endswith("deberta_v3_large_v22_state_focused/best_model.pt"):
+    if not checkpoint.endswith(args.expected_checkpoint_suffix):
         raise ValueError(f"unexpected checkpoint: {checkpoint!r}")
     if len(results) != args.expected_qids:
         raise ValueError(
