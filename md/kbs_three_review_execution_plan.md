@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 2
-current_status: Stage 2.1 passed; Stage 2.2 runner prepared, smoke and final runs pending
+current_status: Stage 2.2 smoke report created but rejected for 20 empty raw answers; API diagnosis pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -699,14 +699,15 @@ The paper may be locked only when:
 | `v22-state-focused-train-seed42` | 1 | 10,000 train qids, 27,730 rows | Best epoch 2; val acc 0.7017; test acc 0.6632 | Run fixed-pool diagnosis |
 | `state-phase1-v22-full3000` | 1 | v22, HotpotQA 3,000 | Strong state effect; rank reversal 0.7474 | Stage 1 passed |
 | `v22-alpha-sensitivity-val1000` | 2.1 | v22, HotpotQA validation 1,000 | Alpha 0.35 uniquely maximizes Alignment@5 at 0.7971 | Freeze alpha 0.35 |
+| `v22-stage2-full-compact-smoke20-attempt1` | 2.2 | v22 Compact, HotpotQA 20 | Retrieval/report completed, but all 20 raw answers are empty | Reject smoke; diagnose API path |
 
 ## Next authorized run
 
 ```text
-Stage 2.2 preflight: run a 20-qid `full_compact` smoke test, verify 20 judged
-answers and zero answer errors, then run the four budget-matched 3,000-qid
-Full/Query-only Compact/Recall reports with frozen alpha 0.35 and fresh
-DeepSeek calls.
+Stage 2.2 dependency repair: inspect the rejected `full_compact_smoke20`
+report and answer cache, make missing/empty DeepSeek responses fail loudly,
+then rerun the isolated 20-qid smoke. Do not start any 3,000-qid Stage 2.2
+run until the smoke has 20 non-empty raw answers and zero answer errors.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
