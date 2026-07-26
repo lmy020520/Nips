@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 2
-current_status: Stage 2.2 attempt1 root cause confirmed; fail-fast API repair prepared, attempt2 pending
+current_status: Stage 2.2 smoke accepted; four frozen 3,000-qid HotpotQA runs pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -86,7 +86,7 @@ passes its explicit gate.
 | Stage | Goal | Current status | API | Training |
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
-| 2 | Validate v22 end to end | Step 2.1 passed; Step 2.2 next | Yes for final answers | No new model initially |
+| 2 | Validate v22 end to end | Step 2.1 and Step 2.2 smoke passed; full runs pending | Yes for final answers | No new model initially |
 | 3 | Controlled mechanism baselines | Pending | Yes for final answers | Yes |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
@@ -701,6 +701,7 @@ The paper may be locked only when:
 | `v22-alpha-sensitivity-val1000` | 2.1 | v22, HotpotQA validation 1,000 | Alpha 0.35 uniquely maximizes Alignment@5 at 0.7971 | Freeze alpha 0.35 |
 | `v22-stage2-full-compact-smoke20-attempt1` | 2.2 | v22 Compact, HotpotQA 20 | All answers, API tokens, and API latency are zero; no HTTP answer calls occurred | Reject; make blank key fail loudly |
 | `v22-stage2-full-compact-smoke20-attempt2` | 2.2 | v22 Compact, HotpotQA 20 | Preflight HTTP 400 before retrieval: the retired `deepseek-chat` alias was rejected | Reject; explicitly freeze V4-Flash non-thinking |
+| `v22-stage2-full-compact-smoke20-attempt3` | 2.2 | v22 Compact, HotpotQA 20 | PASS: 20 judged, 0 errors, EM 0.55, F1 0.642857, Alignment@5 0.86, positive API tokens/latency | Authorize frozen 3,000-qid Stage 2.2 runs |
 
 ## DeepSeek model migration note
 
@@ -722,12 +723,12 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Stage 2.2 dependency repair: download the explicit V4-Flash non-thinking patch
-and rerun the isolated 20-qid `full_compact` smoke with
-`RUN_SUFFIX=attempt3`. The runner must pass its real DeepSeek preflight before
-retrieval. Do not start any 3,000-qid Stage 2.2 run until the smoke has 20
-non-empty raw answers, positive API tokens/latency, zero answer errors, and
-the frozen model/mode metadata required by the report checker.
+Run the four frozen 3,000-qid HotpotQA Stage 2.2 evaluations:
+`full_compact`, `full_recall`, `query_only_compact`, and
+`query_only_recall`. Use separate GPUs and output/cache directories, fresh
+DeepSeek V4-Flash non-thinking calls, and no run suffix. Accept each report
+only after `check_kbs_v22_stage2_report.py` prints PASS. After all four pass,
+run the paired Stage 2.3 bootstrap comparisons before starting 2Wiki.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
