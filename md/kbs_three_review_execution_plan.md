@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 2
-current_status: Validation diagnosis identifies alpha-objective mismatch; one frozen alpha=0.5 Compact repair pending
+current_status: Alpha=0.5 repair smoke passed; Full-state and Query-only Compact 3,000-qid runs pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -714,6 +714,7 @@ The paper may be locked only when:
 | `v22-vs-v21-recall-ci` | 2.3 | v22 minus matched v21 Recall, paired 10,000 bootstrap | F1 -0.019414 [-0.026912, -0.011984]; full-unit -0.006333 [-0.016667, 0.004333] | F1 non-regression criterion fails |
 | `v21-alpha-diagnostic-val1000` | 2.3 | v21, question-disjoint validation 1,000, no API | Alpha 0.35 maximizes Alignment@5 at 0.814210; alpha 0.5 gives full-unit 0.744 | Compare with v22 validation surface |
 | `v21-v22-alpha-surface-diagnosis` | 2.3 | Matched validation summaries | At alpha 0.5, v22 gains Step@1 +0.051041, MRR +0.023181, full-unit +0.005; loses Alignment@5 -0.024092 | Regression is not uniform; alpha objective is misaligned |
+| `v22-closure-balanced-compact-smoke20` | 2.3 | v22 Full-state Compact, alpha 0.5, HotpotQA 20 | PASS: 20 judged, 0 errors, F1 0.642857, Alignment@5 0.78, full-unit 0.75 | Authorize the two frozen 3,000-qid Compact runs |
 
 ## One-time closure-balance repair
 
