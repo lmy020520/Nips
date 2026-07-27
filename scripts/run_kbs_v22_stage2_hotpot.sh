@@ -18,7 +18,8 @@ SMOKE="${SMOKE:-0}"
 ALLOW_OVERWRITE="${ALLOW_OVERWRITE:-0}"
 RUN_SUFFIX="${RUN_SUFFIX:-}"
 
-DATA_ROOT="data/hotpotqa_distractor_eval_3000_cand50"
+DATA_ROOT="${KBS_DATA_ROOT:-data/hotpotqa_distractor_eval_3000_cand50}"
+FULL_MAX_QIDS="${KBS_MAX_QIDS:-3000}"
 CHECKPOINT="${KBS_CHECKPOINT:-outputs/ranker/deberta_v3_large_v22_state_focused/best_model.pt}"
 OUTPUT_NAMESPACE="${KBS_OUTPUT_NAMESPACE:-kbs_v22_stage2_hotpot}"
 EXPECTED_CHECKPOINT_SUFFIX="${KBS_EXPECTED_CHECKPOINT_SUFFIX:-deberta_v3_large_v22_state_focused/best_model.pt}"
@@ -90,7 +91,7 @@ if [[ "$SMOKE" == "1" ]]; then
   max_qids=20
   run_tag="${RUN}_smoke20"
 else
-  max_qids=3000
+  max_qids="$FULL_MAX_QIDS"
   run_tag="$RUN"
 fi
 if [[ -n "$RUN_SUFFIX" ]]; then
