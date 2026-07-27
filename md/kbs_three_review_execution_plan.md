@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 2
-current_status: Stage 2 state value passes, but matched v22-v21 non-regression fails; validation-only diagnosis pending
+current_status: Validation diagnosis identifies alpha-objective mismatch; one frozen alpha=0.5 Compact repair pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -86,7 +86,7 @@ passes its explicit gate.
 | Stage | Goal | Current status | API | Training |
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
-| 2 | Validate v22 end to end | State comparison passed; matched v21 non-regression failed | No for next diagnostic | Conditional after validation diagnosis |
+| 2 | Validate v22 end to end | Validation-selected closure-balance repair pending | Yes for one frozen repair | Conditional only if repair fails |
 | 3 | Controlled mechanism baselines | Pending | Yes for final answers | Yes |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
@@ -712,6 +712,34 @@ The paper may be locked only when:
 | `v21-matched-stage2-hotpot-recall` | 2.3 | v21 Recall with V4-Flash non-thinking, HotpotQA 3,000 | PASS: EM 0.630667, F1 0.779862, Alignment@5 0.820861, full-unit 0.833333 | Use as matched v21 reference |
 | `v22-vs-v21-compact-ci` | 2.3 | v22 minus matched v21 Compact, paired 10,000 bootstrap | F1 -0.013197 [-0.020671, -0.005771]; full-unit -0.018000 [-0.027333, -0.009000] | Strict non-regression criterion fails |
 | `v22-vs-v21-recall-ci` | 2.3 | v22 minus matched v21 Recall, paired 10,000 bootstrap | F1 -0.019414 [-0.026912, -0.011984]; full-unit -0.006333 [-0.016667, 0.004333] | F1 non-regression criterion fails |
+| `v21-alpha-diagnostic-val1000` | 2.3 | v21, question-disjoint validation 1,000, no API | Alpha 0.35 maximizes Alignment@5 at 0.814210; alpha 0.5 gives full-unit 0.744 | Compare with v22 validation surface |
+| `v21-v22-alpha-surface-diagnosis` | 2.3 | Matched validation summaries | At alpha 0.5, v22 gains Step@1 +0.051041, MRR +0.023181, full-unit +0.005; loses Alignment@5 -0.024092 | Regression is not uniform; alpha objective is misaligned |
+
+## One-time closure-balance repair
+
+The original alpha rule maximized only teacher next-unit Alignment@5. This
+conflicts with the paper's compiled-context closure objective and selected a
+v22 operating point that underuses the state-sensitive policy. For the
+one-time validation-only repair, define:
+
+```text
+closure_balance(alpha)
+  = harmonic_mean(Alignment@5(alpha), full_unit_coverage(alpha))
+```
+
+On the fixed 1,000-qid validation set, the v22 scores are:
+
+| Alpha | Alignment@5 | Full unit | Closure balance |
+|---:|---:|---:|---:|
+| 0.00 | 0.748877 | 0.546 | 0.631545 |
+| 0.20 | 0.777869 | 0.607 | 0.681893 |
+| 0.35 | 0.797060 | 0.678 | 0.732725 |
+| **0.50** | **0.777460** | **0.749** | **0.762965** |
+| 0.80 | 0.649653 | 0.772 | 0.705562 |
+| 1.00 | 0.596570 | 0.767 | 0.671134 |
+
+Freeze `alpha=0.5`. This is the only authorized repaired test operating
+point. No other alpha may be tested if it fails.
 
 ## DeepSeek model migration note
 
@@ -733,14 +761,14 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run a no-API v21 alpha/state diagnostic on the same question-disjoint
-1,000-qid validation split used for v22 alpha selection. Compare the v21 and
-v22 validation summaries without changing the 3,000-qid test configuration.
-Determine whether the matched v22 regression is explained by alpha mismatch
-or by a general ranking/coverage regression from state-focused training. If
-v22 is also dominated on validation, design one replay/mixed-data Student
-variant from validation evidence only; do not sweep or select on test. Do not
-begin 2Wiki or Stage 3 until the Stage 2 failure decision is closed.
+Run an isolated 20-qid smoke, then the frozen 3,000-qid Full-state Compact and
+Query-only Compact reports at alpha 0.5 through
+`run_kbs_v22_closure_balanced_stage2_hotpot.sh`. Use fresh V4-Flash
+non-thinking calls and independent caches. Compute paired state-vs-query and
+v22-vs-v21 intervals. If the repaired Full-state Compact still regresses more
+than 0.01 F1 or full-unit coverage from the matched v21 Compact reference,
+stop alpha experimentation and design one replay/mixed-data Student using
+validation evidence only. Do not begin 2Wiki or Stage 3 before this gate.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is

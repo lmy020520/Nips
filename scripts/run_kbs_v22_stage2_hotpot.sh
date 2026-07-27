@@ -24,7 +24,7 @@ OUTPUT_NAMESPACE="${KBS_OUTPUT_NAMESPACE:-kbs_v22_stage2_hotpot}"
 EXPECTED_CHECKPOINT_SUFFIX="${KBS_EXPECTED_CHECKPOINT_SUFFIX:-deberta_v3_large_v22_state_focused/best_model.pt}"
 MODEL_DIR="${MODEL_DIR:-models/deberta-v3-large}"
 DENSE_MODEL="${DENSE_MODEL:-models/bge-large-en-v1.5}"
-FROZEN_ALPHA="0.35"
+FROZEN_ALPHA="${KBS_POLICY_BLEND_WEIGHT:-0.35}"
 FROZEN_DEEPSEEK_MODEL="deepseek-v4-flash"
 FROZEN_DEEPSEEK_THINKING_MODE="disabled"
 
@@ -199,4 +199,5 @@ python3 scripts/check_kbs_v22_stage2_report.py \
   --report "$output" \
   --run "$RUN" \
   --expected-checkpoint-suffix "$EXPECTED_CHECKPOINT_SUFFIX" \
+  --expected-policy-blend-weight "$FROZEN_ALPHA" \
   --expected-qids "$max_qids"

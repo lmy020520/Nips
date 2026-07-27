@@ -33,6 +33,7 @@ def main() -> None:
         "--expected-checkpoint-suffix",
         default="deberta_v3_large_v22_state_focused/best_model.pt",
     )
+    parser.add_argument("--expected-policy-blend-weight", type=float, default=0.35)
     parser.add_argument("--expected-qids", type=int, required=True)
     args = parser.parse_args()
 
@@ -58,7 +59,7 @@ def main() -> None:
         "candidate_top_k": candidate_top_k,
         "select_top_k": 5,
         "policy_score_mode": "front_policy_blend",
-        "policy_blend_weight": 0.35,
+        "policy_blend_weight": args.expected_policy_blend_weight,
         "answer_mode": "json",
         "generate_answers": True,
         "answer_generator": "deepseek",
