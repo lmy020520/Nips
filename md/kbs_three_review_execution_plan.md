@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 2
-current_status: Stage 2.2 full runs and state-vs-query CIs completed; state value passes, v21 non-regression remains unresolved
+current_status: Stage 2 state value passes, but matched v22-v21 non-regression fails; validation-only diagnosis pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -86,7 +86,7 @@ passes its explicit gate.
 | Stage | Goal | Current status | API | Training |
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
-| 2 | Validate v22 end to end | Full Hotpot state comparison passed; v21 matched comparison pending | Yes for final answers | No new model initially |
+| 2 | Validate v22 end to end | State comparison passed; matched v21 non-regression failed | No for next diagnostic | Conditional after validation diagnosis |
 | 3 | Controlled mechanism baselines | Pending | Yes for final answers | Yes |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
@@ -708,6 +708,10 @@ The paper may be locked only when:
 | `v22-stage2-hotpot-query-recall` | 2.2 | v22 Query-only Recall, HotpotQA 3,000 | PASS: EM 0.577, F1 0.721138, Alignment@5 0.851288, full-unit 0.704 | Full state improves answer/coverage but not Alignment@5 |
 | `v22-stage2-state-ci-compact` | 2.3 | Full-state minus Query-only Compact, paired 10,000 bootstrap | F1 +0.018041 [0.008961, 0.027384]; full-unit +0.059667 [0.046992, 0.073000]; Alignment@5 -0.008909 [-0.016708, -0.000826] | State value supported for answer quality and trajectory coverage |
 | `v22-stage2-state-ci-recall` | 2.3 | Full-state minus Query-only Recall, paired 10,000 bootstrap | F1 +0.039310 [0.029927, 0.048772]; full-unit +0.123000 [0.110000, 0.136333]; Alignment@5 -0.070038 [-0.080211, -0.060165] | Strong state benefit with a next-unit-alignment tradeoff |
+| `v21-matched-stage2-hotpot-compact` | 2.3 | v21 Compact with V4-Flash non-thinking, HotpotQA 3,000 | PASS: EM 0.591667, F1 0.736479, Alignment@5 0.827440, full-unit 0.716667 | Use as matched v21 reference |
+| `v21-matched-stage2-hotpot-recall` | 2.3 | v21 Recall with V4-Flash non-thinking, HotpotQA 3,000 | PASS: EM 0.630667, F1 0.779862, Alignment@5 0.820861, full-unit 0.833333 | Use as matched v21 reference |
+| `v22-vs-v21-compact-ci` | 2.3 | v22 minus matched v21 Compact, paired 10,000 bootstrap | F1 -0.013197 [-0.020671, -0.005771]; full-unit -0.018000 [-0.027333, -0.009000] | Strict non-regression criterion fails |
+| `v22-vs-v21-recall-ci` | 2.3 | v22 minus matched v21 Recall, paired 10,000 bootstrap | F1 -0.019414 [-0.026912, -0.011984]; full-unit -0.006333 [-0.016667, 0.004333] | F1 non-regression criterion fails |
 
 ## DeepSeek model migration note
 
@@ -729,14 +733,14 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Do not tune against the 3,000-qid HotpotQA reports. Resolve Stage 2 acceptance
-criterion 3 by auditing the v21-v22 comparison under matched answer-generation
-conditions. The historical v21 reports used the retired `deepseek-chat` alias,
-whereas the accepted v22 reports explicitly use V4-Flash non-thinking. Either
-rerun the v21 Compact/Recall checkpoints with the current frozen generator and
-fresh caches, or document that strict answer-F1 non-regression cannot be
-attributed solely to retrieval because the historical API backend was not
-snapshot-frozen. Do not begin 2Wiki or Stage 3 until this decision is recorded.
+Run a no-API v21 alpha/state diagnostic on the same question-disjoint
+1,000-qid validation split used for v22 alpha selection. Compare the v21 and
+v22 validation summaries without changing the 3,000-qid test configuration.
+Determine whether the matched v22 regression is explained by alpha mismatch
+or by a general ranking/coverage regression from state-focused training. If
+v22 is also dominated on validation, design one replay/mixed-data Student
+variant from validation evidence only; do not sweep or select on test. Do not
+begin 2Wiki or Stage 3 until the Stage 2 failure decision is closed.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
