@@ -979,12 +979,19 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--state-mode", choices=["dataset", "policy"], default="dataset")
     parser.add_argument(
         "--policy-context-source",
-        choices=["legacy", "online_state", "query_only", "previous_evidence_only"],
+        choices=[
+            "legacy",
+            "online_state",
+            "query_only",
+            "previous_evidence_only",
+            "direct_evidence_only",
+        ],
         default="legacy",
         help=(
             "For --state-mode policy, use legacy selected-evidence notebook, "
             "rendered online K_t, question-only context, or only the previous "
-            "online top-1 prediction as an anchor."
+            "online top-1 prediction as an anchor. direct_evidence_only freezes "
+            "the first online top-1 prediction as the anchor for all later steps."
         ),
     )
     parser.add_argument(
@@ -1233,6 +1240,7 @@ def main() -> None:
         selected_doc_ids: set[str] = set()
         online_state = init_online_state()
         previous_predicted_unit_id = None
+        direct_predicted_unit_id = None
         gold_units: list[str] = []
         gold_doc_ids: set[str] = set()
         target_gold_units: list[str] = []
@@ -1279,6 +1287,25 @@ def main() -> None:
                     notebook = (
                         format_notebook_evidence(previous_item, 1)
                         if previous_item is not None
+                        else ""
+                    )
+                    context = f"Question: {question}\nNotebook:\n{notebook}"
+                elif args.policy_context_source == "direct_evidence_only":
+                    context_anchor_unit_id = direct_predicted_unit_id
+                    if int(row.get("t", 0)) > 0 and not context_anchor_unit_id:
+                        raise RuntimeError(
+                            "direct_evidence_only reached a later state without "
+                            f"a predicted direct anchor: qid={qid}, t={row.get('t')}"
+                        )
+                    direct_item = memory.get(context_anchor_unit_id or "")
+                    if context_anchor_unit_id and direct_item is None:
+                        raise RuntimeError(
+                            "predicted direct anchor is missing from memory: "
+                            f"qid={qid}, unit_id={context_anchor_unit_id}"
+                        )
+                    notebook = (
+                        format_notebook_evidence(direct_item, 1)
+                        if direct_item is not None
                         else ""
                     )
                     context = f"Question: {question}\nNotebook:\n{notebook}"
@@ -1635,12 +1662,27 @@ def main() -> None:
                 step_record["stop_decision"] = stop_decision
             if agentic_decision is not None:
                 step_record["agentic_decision"] = agentic_decision
-            if args.policy_context_source == "previous_evidence_only":
+            if args.policy_context_source in {
+                "previous_evidence_only",
+                "direct_evidence_only",
+            }:
                 step_record["context_anchor_unit_id"] = context_anchor_unit_id
+            if args.policy_context_source == "direct_evidence_only":
+                step_record["direct_evidence_unit_id"] = (
+                    direct_predicted_unit_id
+                    if direct_predicted_unit_id is not None
+                    else pred_id
+                )
             if args.save_online_states:
                 step_record["online_state_before"] = online_state_before
                 step_record["online_state_after"] = online_state
             step_records.append(step_record)
+            if (
+                args.policy_context_source == "direct_evidence_only"
+                and int(row.get("t", 0)) == 0
+                and direct_predicted_unit_id is None
+            ):
+                direct_predicted_unit_id = pred_id
             previous_predicted_unit_id = pred_id
 
         if not step_records:

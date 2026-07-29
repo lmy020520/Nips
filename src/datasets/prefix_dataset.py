@@ -13,7 +13,12 @@ ROLE_TO_ID = {
 
 DEFICIT_KEYS = ["d_br", "d_dis", "d_sup", "d_der"]
 CONTRIBUTION_KEYS = ["c_br", "c_dis", "c_sup", "c_der"]
-CONTEXT_MODES = {"full_state", "query_only", "previous_evidence_only"}
+CONTEXT_MODES = {
+    "direct_evidence_only",
+    "full_state",
+    "previous_evidence_only",
+    "query_only",
+}
 
 
 def read_jsonl(path: Path) -> Iterable[dict]:
@@ -296,6 +301,18 @@ def build_context_text(
         if int(record.get("t", 0)) > 0 and anchor_item is None:
             raise ValueError(
                 "previous_evidence_only requires the last H_t unit in memory: "
+                f"qid={record.get('qid')}, t={record.get('t')}, unit_id={anchor_unit_id}"
+            )
+        notebook = format_notebook_evidence(anchor_item) if anchor_item else ""
+        return f"Question: {question}\nNotebook:\n{notebook}", anchor_unit_id
+
+    if context_mode == "direct_evidence_only":
+        h_ids = get_state_h_ids(record)
+        anchor_unit_id = h_ids[0] if h_ids else None
+        anchor_item = memory_map.get(anchor_unit_id or "")
+        if int(record.get("t", 0)) > 0 and anchor_item is None:
+            raise ValueError(
+                "direct_evidence_only requires the first H_t unit in memory: "
                 f"qid={record.get('qid')}, t={record.get('t')}, unit_id={anchor_unit_id}"
             )
         notebook = format_notebook_evidence(anchor_item) if anchor_item else ""

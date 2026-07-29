@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.1 closed; rollout repair validated but did not beat the trained anchor; Stage 3.2 readiness authorized
+current_status: Stage 3.2 ECDR-inspired readiness tooling prepared; server audit pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -87,7 +87,7 @@ passes its explicit gate.
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
-| 3 | Controlled mechanism baselines | Stage 3.1 closed; Stage 3.2 readiness authorized | Yes for final answers | Yes |
+| 3 | Controlled mechanism baselines | Stage 3.2 readiness audit pending | Yes for final answers | Yes |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
@@ -383,6 +383,25 @@ Implement:
 
 Call it `ECDR-inspired textual direct-indirect baseline`, not a faithful ECDR
 reproduction.
+
+### Frozen Stage 3.2 protocol
+
+The textual adaptation uses one model with stage-dependent context:
+
+1. At `t=0`, rank the direct evidence using `(question, candidate)`.
+2. Freeze the predicted top-1 unit from `t=0` as the direct anchor.
+3. At every `t>0`, score indirect candidates using
+   `(question, frozen predicted direct evidence, candidate)`.
+4. Do not replace the direct anchor with later predictions and do not expose
+   full accumulated history.
+5. Training uses `H_t[0]` as teacher forcing only after verifying that it
+   equals the `t=0` teacher-positive unit for the same qid. Evaluation uses
+   only the predicted `t=0` unit and never a gold supporting fact.
+
+The model uses the same v21 initialization, DeBERTa backbone, v22 fixed
+candidate pools, ranking labels, seed, optimizer, losses, epochs, and
+candidate/final evidence budgets. Its output is isolated under
+`deberta_v3_large_v24_ecdr_direct_indirect`.
 
 ## Baseline 3.3: FiSKE-inspired clue-state policy
 
@@ -763,6 +782,7 @@ The paper may be locked only when:
 | `stage3-acra-hop2-diagnostic` | 3.1 | Anchor minus Full v22 on t>=1 states, qid-clustered 10,000 bootstrap | Anchor gains Step@1 +0.224395 [0.205447, 0.243378] and MRR +0.181735 [0.167487, 0.195786] | Diagnose rollout/state-noise failure before Stage 3.2 |
 | `stage3-acra-failure-diagnosis` | 3.1 | Full v22 versus anchor, t0/hop-2+/type/anchor-conditioning slices | Full wins slightly at t0, but collapses at t>=1; online Full writes top-5 per step while training writes one gold unit; anchor has 2,498 versus 1,118 hop-2+ rank wins | Test a pre-registered top-1 state-update repair on validation only |
 | `stage3-rollout-aligned-state-val1000` | 3.1 | Repaired Full top-1 state write versus trained anchor; alpha 0.5; validation 1,000; no API | Full hop-2+ Step@1 0.403037 versus 0.396135 and MRR 0.565392 versus 0.567883; both paired intervals include zero; full-unit 0.766 versus 0.784 | Repair confirms rollout mismatch but does not beat anchor; do not run repaired Full on evaluation 3,000 |
+| `stage3-ecdr-readiness-tooling` | 3.2 | Query-only direct stage; frozen predicted direct anchor for every indirect stage; matched v22 training protocol | Dataset/runtime mode, matched v24 config, guarded readiness checker, and runner prepared | Run server readiness with `CHECK_ONLY=1`; do not train until status is OK |
 
 ## One-time closure-balance repair
 
@@ -810,13 +830,12 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Prepare Stage 3.2 readiness for an `ECDR-inspired textual direct-indirect
-baseline`. Do not train or call the answer API yet. The readiness audit must
-verify that direct evidence is selected query-only, later evidence is scored
-using only the selected direct-evidence anchor, all train/validation/test qids
-and fixed candidate pools match v22, no gold supporting fact is used at
-inference, and the output checkpoint/directory is independent. Freeze the
-exact direct-to-indirect state transition before training.
+Run `CHECK_ONLY=1 bash scripts/run_kbs_stage3_ecdr_direct_indirect.sh` on the
+server. Do not train or call the answer API. Training is authorized only if
+the report status is `OK`, every indirect row has a resolvable first-history
+anchor matching its qid's t=0 teacher-positive unit, all split/evaluation
+overlaps pass, runtime markers confirm a frozen predicted direct anchor, and
+the v24 configuration matches v22 except for context mode and output path.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
