@@ -6,8 +6,8 @@
 plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
-current_stage: 2
-current_status: 2Wiki state-transfer gate passed; existing Hybrid/BGE paired comparisons pending
+current_stage: 3
+current_status: Stage 2 passed; Stage 3.1 ACRA-style anchor baseline readiness pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -86,8 +86,8 @@ passes its explicit gate.
 | Stage | Goal | Current status | API | Training |
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
-| 2 | Validate v22 end to end | HotpotQA and 2Wiki state gates passed; final baseline CIs pending | No | No |
-| 3 | Controlled mechanism baselines | Pending | Yes for final answers | Yes |
+| 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
+| 3 | Controlled mechanism baselines | Stage 3.1 anchor readiness pending | Yes for final answers | Yes |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
@@ -722,6 +722,9 @@ The paper may be locked only when:
 | `v22-stage2-2wiki-full-recall` | 2.4 | v22 Full-state Recall, alpha 0.5, 2Wiki 1,000, zero-shot | PASS: EM 0.639000, F1 0.727514, Alignment@5 0.711921, full-unit 0.882000 | Accept zero-shot Recall |
 | `v22-stage2-2wiki-query-compact` | 2.4 | v22 Query-only Compact, alpha 0.5, 2Wiki 1,000, zero-shot | PASS: EM 0.491000, F1 0.551609, Alignment@5 0.681291, full-unit 0.409000 | Use for state-transfer comparison |
 | `v22-stage2-2wiki-state-ci` | 2.4 | Full-state minus Query-only Compact, paired 10,000 bootstrap | EM +0.080 [0.058, 0.102]; F1 +0.088109 [0.067209, 0.109832]; Alignment@5 +0.043460 [0.027340, 0.060191]; full-unit +0.224 [0.196, 0.251] | Cross-dataset state value passes |
+| `v22-stage2-2wiki-vs-hybrid-ci` | 2.4 | Compact/Recall minus Hybrid, paired 10,000 bootstrap | Compact F1 +0.137131 [0.113846, 0.160951], full-unit +0.312 [0.283, 0.342]; Recall F1 +0.224927 [0.197323, 0.252026], full-unit +0.561 [0.530, 0.592] | Both operating points significantly outperform Hybrid |
+| `v22-stage2-2wiki-vs-bge-ci` | 2.4 | Compact/Recall minus BGE, paired 10,000 bootstrap | Compact F1 -0.008764 [-0.032967, 0.015400], Alignment@5 +0.060430 [0.040345, 0.080565], full-unit +0.068 [0.034, 0.102]; Recall F1 +0.079032 [0.056608, 0.101730], full-unit +0.317 [0.286, 0.349] | Compact answer quality ties BGE; Recall significantly wins all four metrics |
+| `stage2-final-decision` | 2 | HotpotQA plus zero-shot 2Wiki | All acceptance gates pass with 3,000/1,000 judged answers and zero errors | Close Stage 2; advance to controlled mechanism baselines |
 | `v22-closure-balanced-compact-smoke20` | 2.3 | v22 Full-state Compact, alpha 0.5, HotpotQA 20 | PASS: 20 judged, 0 errors, F1 0.642857, Alignment@5 0.78, full-unit 0.75 | Authorize the two frozen 3,000-qid Compact runs |
 
 ## One-time closure-balance repair
@@ -770,12 +773,14 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Retrieve the existing 1,000-qid 2Wiki `hybrid_rag.json` and
-`bge_reranker_rag.json` per-qid reports from the school server. Do not rerun
-answer generation. Verify identical qids and summary reconstruction, then run
-10,000-sample paired intervals for v22 Compact/Recall minus Hybrid and BGE.
-Record the historical alias/backend caveat for answer metrics. If the reports
-pass, close Stage 2 and advance to Stage 3 controlled mechanism baselines.
+Begin Stage 3.1 with a readiness audit for a separately trained ACRA-style
+anchor policy whose input is `(question, previous evidence, candidate)`.
+Confirm that the final v22 train/validation/test qids, candidate pools,
+teacher-positive labels, DeBERTa initialization, and Compact evidence budget
+can be reused without leakage. The existing previous-evidence-only inference
+intervention is diagnostic evidence only and must not be reported as the
+trained anchor baseline. Do not launch training until the manifest and
+matched-loss configuration pass the readiness check.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
