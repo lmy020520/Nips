@@ -46,12 +46,14 @@ def build_loader(
     shuffle: bool,
     role_targets_path: str = None,
     require_labeled_positive: bool = False,
+    context_mode: str = "full_state",
 ):
     dataset = PrefixRankingDataset(
         samples_path=samples_path,
         memory_path=memory_path,
         role_targets_path=role_targets_path,
         require_labeled_positive=require_labeled_positive,
+        context_mode=context_mode,
     )
     loader = DataLoader(
         dataset,
@@ -496,6 +498,7 @@ def main():
     margin_loss_weight = float(config["train"].get("margin_loss_weight", 0.0))
     margin = float(config["train"].get("margin", 0.2))
     deficit_aux_weight = float(config["train"].get("deficit_aux_weight", 0.0))
+    context_mode = str(config["data"].get("context_mode", "full_state"))
 
     tokenizer = AutoTokenizer.from_pretrained(pretrained_name)
 
@@ -507,6 +510,7 @@ def main():
         shuffle=True,
         role_targets_path=config["data"].get("train_role_targets"),
         require_labeled_positive=bool(config["data"].get("train_require_labeled_positive", False)),
+        context_mode=str(config["data"].get("train_context_mode", context_mode)),
     )
     val_dataset, val_loader = build_loader(
         samples_path=config["data"]["val_samples"],
@@ -515,6 +519,7 @@ def main():
         num_workers=num_workers,
         shuffle=False,
         role_targets_path=config["data"].get("val_role_targets"),
+        context_mode=str(config["data"].get("val_context_mode", context_mode)),
     )
     test_dataset, test_loader = build_loader(
         samples_path=config["data"]["test_samples"],
@@ -523,6 +528,7 @@ def main():
         num_workers=num_workers,
         shuffle=False,
         role_targets_path=config["data"].get("test_role_targets"),
+        context_mode=str(config["data"].get("test_context_mode", context_mode)),
     )
 
     model = CrossEncoderRanker(
@@ -557,6 +563,7 @@ def main():
     print("===== dataset stats =====")
     print(f"train samples: {len(train_dataset)}")
     print(f"train skipped unlabeled positives: {train_dataset.skipped_unlabeled_positive}")
+    print(f"context mode: {context_mode}")
     print(f"val samples:   {len(val_dataset)}")
     print(f"test samples:  {len(test_dataset)}")
     print("===== training =====")

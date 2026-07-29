@@ -13,6 +13,7 @@ ROLE_TO_ID = {
 
 DEFICIT_KEYS = ["d_br", "d_dis", "d_sup", "d_der"]
 CONTRIBUTION_KEYS = ["c_br", "c_dis", "c_sup", "c_der"]
+CONTEXT_MODES = {"full_state", "query_only", "previous_evidence_only"}
 
 
 def read_jsonl(path: Path) -> Iterable[dict]:
@@ -191,6 +192,10 @@ def format_candidate_text(memory_item: dict) -> str:
     return f"{memory_item['title']} [{memory_item['sent_id']}] {memory_item['text']}"
 
 
+def format_notebook_evidence(memory_item: dict, index: int = 1) -> str:
+    return f"[{index}] {memory_item['title']}: {memory_item['text']}"
+
+
 def normalize_derived_payloads(payloads) -> Dict[str, dict]:
     if not payloads:
         return {}
@@ -260,6 +265,45 @@ def get_k_t(record: dict) -> str:
     return str(get_nested(record, ["state", "K_t"], ""))
 
 
+def get_state_h_ids(record: dict) -> List[str]:
+    h_t = get_nested(record, ["state", "H_t"], [])
+    if not isinstance(h_t, list):
+        return []
+
+    unit_ids = []
+    for item in h_t:
+        if isinstance(item, dict) and item.get("unit_id"):
+            unit_ids.append(str(item["unit_id"]))
+        elif isinstance(item, str):
+            unit_ids.append(item)
+    return unit_ids
+
+
+def build_context_text(
+    question: str,
+    k_t: str,
+    record: dict,
+    memory_map: Dict[str, dict],
+    context_mode: str,
+) -> tuple[str, Optional[str]]:
+    if context_mode == "query_only":
+        return f"Question: {question}", None
+
+    if context_mode == "previous_evidence_only":
+        h_ids = get_state_h_ids(record)
+        anchor_unit_id = h_ids[-1] if h_ids else None
+        anchor_item = memory_map.get(anchor_unit_id or "")
+        if int(record.get("t", 0)) > 0 and anchor_item is None:
+            raise ValueError(
+                "previous_evidence_only requires the last H_t unit in memory: "
+                f"qid={record.get('qid')}, t={record.get('t')}, unit_id={anchor_unit_id}"
+            )
+        notebook = format_notebook_evidence(anchor_item) if anchor_item else ""
+        return f"Question: {question}\nNotebook:\n{notebook}", anchor_unit_id
+
+    return f"Question: {question}\nNotebook:\n{k_t}", None
+
+
 class PrefixRankingDataset(Dataset):
     def __init__(
         self,
@@ -267,9 +311,16 @@ class PrefixRankingDataset(Dataset):
         memory_path: str,
         role_targets_path: Optional[str] = None,
         require_labeled_positive: bool = False,
+        context_mode: str = "full_state",
     ):
         self.samples_path = Path(samples_path)
         self.memory_path = Path(memory_path)
+        self.context_mode = str(context_mode)
+        if self.context_mode not in CONTEXT_MODES:
+            raise ValueError(
+                f"unsupported context_mode={self.context_mode}; "
+                f"expected one of {sorted(CONTEXT_MODES)}"
+            )
 
         self.memory_map = load_memory_map(str(self.memory_path))
         self.role_map = load_role_map(role_targets_path)
@@ -305,6 +356,13 @@ class PrefixRankingDataset(Dataset):
                 raise ValueError(f"candidates 必须是非空 list: qid={qid}, row={row_idx}")
             if not positive_unit_id:
                 raise ValueError(f"positive_unit_id 缺失: qid={qid}, row={row_idx}")
+            context_text, context_anchor_unit_id = build_context_text(
+                question=question,
+                k_t=k_t,
+                record=record,
+                memory_map=self.memory_map,
+                context_mode=self.context_mode,
+            )
 
             normalized_candidates = []
             candidate_texts = []
@@ -358,6 +416,9 @@ class PrefixRankingDataset(Dataset):
                     "t": t,
                     "question": question,
                     "K_t": k_t,
+                    "context_text": context_text,
+                    "context_mode": self.context_mode,
+                    "context_anchor_unit_id": context_anchor_unit_id,
                     "candidate_unit_ids": normalized_candidates,
                     "candidate_texts": candidate_texts,
                     "candidate_role_ids": candidate_role_ids,
@@ -403,7 +464,7 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
         deficit_labels.append(item["deficit_label"])
         positive_contribution_labels.append(item["positive_contribution_label"])
 
-        context_text = f"Question: {item['question']}\nNotebook:\n{item['K_t']}"
+        context_text = item["context_text"]
         cand_texts = item["candidate_texts"]
 
         candidate_counts.append(len(cand_texts))

@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 2 passed; Stage 3.1 ACRA-style anchor baseline readiness pending
+current_status: Stage 3.1 readiness tooling prepared; server manifest audit pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -726,6 +726,7 @@ The paper may be locked only when:
 | `v22-stage2-2wiki-vs-bge-ci` | 2.4 | Compact/Recall minus BGE, paired 10,000 bootstrap | Compact F1 -0.008764 [-0.032967, 0.015400], Alignment@5 +0.060430 [0.040345, 0.080565], full-unit +0.068 [0.034, 0.102]; Recall F1 +0.079032 [0.056608, 0.101730], full-unit +0.317 [0.286, 0.349] | Compact answer quality ties BGE; Recall significantly wins all four metrics |
 | `stage2-final-decision` | 2 | HotpotQA plus zero-shot 2Wiki | All acceptance gates pass with 3,000/1,000 judged answers and zero errors | Close Stage 2; advance to controlled mechanism baselines |
 | `v22-closure-balanced-compact-smoke20` | 2.3 | v22 Full-state Compact, alpha 0.5, HotpotQA 20 | PASS: 20 judged, 0 errors, F1 0.642857, Alignment@5 0.78, full-unit 0.75 | Authorize the two frozen 3,000-qid Compact runs |
+| `stage3-acra-anchor-readiness-tooling` | 3.1 | Matched v22 fixed-pool data; previous-evidence-only context | Training context switch, matched config, split/anchor audit, and guarded runner prepared | Run readiness only; do not train until status is OK |
 
 ## One-time closure-balance repair
 
@@ -773,14 +774,13 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Begin Stage 3.1 with a readiness audit for a separately trained ACRA-style
-anchor policy whose input is `(question, previous evidence, candidate)`.
-Confirm that the final v22 train/validation/test qids, candidate pools,
-teacher-positive labels, DeBERTa initialization, and Compact evidence budget
-can be reused without leakage. The existing previous-evidence-only inference
-intervention is diagnostic evidence only and must not be reported as the
-trained anchor baseline. Do not launch training until the manifest and
-matched-loss configuration pass the readiness check.
+Run only the Stage 3.1 ACRA-style anchor readiness audit with
+`CHECK_ONLY=1`. The audit must report `status: OK`, zero split/evaluation
+leakage, fully resolved later-state anchors, fixed size-10 candidate pools,
+the v21 initialization used by v22 Full, and an otherwise identical
+training/loss configuration. The existing previous-evidence-only inference
+intervention remains diagnostic evidence only. Do not launch anchor training
+until the readiness report has been reviewed and recorded in this ledger.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
