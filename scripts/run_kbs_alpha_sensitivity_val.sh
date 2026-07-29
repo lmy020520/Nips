@@ -17,6 +17,8 @@ GPU_LIST="${GPU_LIST:-0}"
 MAX_QIDS="${MAX_QIDS:-1000}"
 GENERATE_ANSWERS="${GENERATE_ANSWERS:-0}"
 REFRESH_ANSWER_CACHE="${REFRESH_ANSWER_CACHE:-0}"
+POLICY_CONTEXT_SOURCE="${POLICY_CONTEXT_SOURCE:-online_state}"
+STATE_UPDATE_TOP_K="${STATE_UPDATE_TOP_K:-0}"
 
 samples="$DATA_ROOT/samples/${SPLIT}.jsonl"
 memory="$DATA_ROOT/unit_registry/raw_units_${SPLIT}.jsonl"
@@ -57,7 +59,7 @@ run_alpha() {
     --checkpoint "$CHECKPOINT"
     --model-dir "$MODEL_DIR"
     --state-mode policy
-    --policy-context-source online_state
+    --policy-context-source "$POLICY_CONTEXT_SOURCE"
     --selector hybrid_policy
     --dense-model "$DENSE_MODEL"
     --dense-query-mode state
@@ -69,6 +71,7 @@ run_alpha() {
     --mmr-same-doc-similarity 0.35
     --candidate-top-k 10
     --select-top-k 5
+    --state-update-top-k "$STATE_UPDATE_TOP_K"
     --policy-score-mode front_policy_blend
     --policy-blend-weight "$alpha"
     --answer-mode json

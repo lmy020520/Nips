@@ -1048,6 +1048,15 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--candidate-top-k", type=int, default=8)
     parser.add_argument("--select-top-k", type=int, default=1)
     parser.add_argument(
+        "--state-update-top-k",
+        type=int,
+        default=0,
+        help=(
+            "Number of top-ranked units written into the next online state. "
+            "Zero preserves legacy behavior and uses --select-top-k."
+        ),
+    )
+    parser.add_argument(
         "--policy-score-mode",
         choices=["rank", "deficit_role", "deficit_contribution", "front_policy_blend"],
         default="rank",
@@ -1558,6 +1567,15 @@ def main() -> None:
             positive_memory = memory[positive_id]
             selected_indices = order[: max(1, args.select_top_k)]
             selected_step_ids = [usable_candidate_ids[index] for index in selected_indices]
+            effective_state_update_top_k = (
+                max(1, args.select_top_k)
+                if args.state_update_top_k <= 0
+                else max(1, min(args.state_update_top_k, args.select_top_k))
+            )
+            state_update_indices = order[:effective_state_update_top_k]
+            state_update_step_ids = [
+                usable_candidate_ids[index] for index in state_update_indices
+            ]
             online_state_before = json.loads(json.dumps(online_state)) if args.save_online_states else None
 
             totals["steps"] += 1
@@ -1567,6 +1585,7 @@ def main() -> None:
             for k in ks:
                 totals[f"step_acc@{k}"] += int(label in order[:k])
 
+            newly_selected_ids = set()
             for selected_id in selected_step_ids:
                 if selected_id in selected_units:
                     continue
@@ -1574,9 +1593,14 @@ def main() -> None:
                 selected_units.append(selected_id)
                 selected_evidence.append(selected_memory)
                 selected_doc_ids.add(selected_memory["doc_id"])
+                newly_selected_ids.add(selected_id)
+            for state_update_id in state_update_step_ids:
+                if state_update_id not in newly_selected_ids:
+                    continue
+                selected_memory = memory[state_update_id]
                 online_state = update_online_state(
                     online_state,
-                    selected_id,
+                    state_update_id,
                     selected_memory,
                     memory,
                     step_id=int(row.get("t", 0)),
@@ -1591,6 +1615,7 @@ def main() -> None:
                 "positive_unit_id": positive_id,
                 "predicted_unit_id": pred_id,
                 "selected_unit_ids": selected_step_ids,
+                "state_update_unit_ids": state_update_step_ids,
                 "correct": step_correct,
                 "selected_contains_gold": positive_id in selected_step_ids,
                 "positive_rank": order.index(label) + 1,
@@ -1734,6 +1759,11 @@ def main() -> None:
         "reranker_max_length": args.reranker_max_length,
         "candidate_top_k": args.candidate_top_k,
         "select_top_k": args.select_top_k,
+        "state_update_top_k": (
+            max(1, args.select_top_k)
+            if args.state_update_top_k <= 0
+            else max(1, min(args.state_update_top_k, args.select_top_k))
+        ),
         "policy_score_mode": args.policy_score_mode,
         "policy_blend_weight": args.policy_blend_weight,
         "deficit_role_weight": args.deficit_role_weight,

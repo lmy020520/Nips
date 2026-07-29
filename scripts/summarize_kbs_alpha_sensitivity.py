@@ -37,6 +37,7 @@ FIXED_CONFIG_KEYS = (
     "mmr_same_doc_similarity",
     "candidate_top_k",
     "select_top_k",
+    "state_update_top_k",
     "policy_score_mode",
     "seed",
 )
