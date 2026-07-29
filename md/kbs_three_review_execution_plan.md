@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.1 readiness tooling prepared; server manifest audit pending
+current_status: Stage 3.1 readiness passed; ACRA-style anchor seed-42 training authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -727,6 +727,7 @@ The paper may be locked only when:
 | `stage2-final-decision` | 2 | HotpotQA plus zero-shot 2Wiki | All acceptance gates pass with 3,000/1,000 judged answers and zero errors | Close Stage 2; advance to controlled mechanism baselines |
 | `v22-closure-balanced-compact-smoke20` | 2.3 | v22 Full-state Compact, alpha 0.5, HotpotQA 20 | PASS: 20 judged, 0 errors, F1 0.642857, Alignment@5 0.78, full-unit 0.75 | Authorize the two frozen 3,000-qid Compact runs |
 | `stage3-acra-anchor-readiness-tooling` | 3.1 | Matched v22 fixed-pool data; previous-evidence-only context | Training context switch, matched config, split/anchor audit, and guarded runner prepared | Run readiness only; do not train until status is OK |
+| `stage3-acra-anchor-readiness` | 3.1 | v22 fixed-pool train/validation/internal-test data and matched v22 Full configuration | PASS: readiness checker returned `status: OK`; training was not started | Authorize independent seed-42 anchor training |
 
 ## One-time closure-balance repair
 
@@ -774,13 +775,14 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run only the Stage 3.1 ACRA-style anchor readiness audit with
-`CHECK_ONLY=1`. The audit must report `status: OK`, zero split/evaluation
-leakage, fully resolved later-state anchors, fixed size-10 candidate pools,
-the v21 initialization used by v22 Full, and an otherwise identical
-training/loss configuration. The existing previous-evidence-only inference
-intervention remains diagnostic evidence only. Do not launch anchor training
-until the readiness report has been reviewed and recorded in this ledger.
+Train only the independently parameterized Stage 3.1 ACRA-style anchor
+policy with seed 42 using
+`configs/train_ranker_deberta_v23_acra_anchor.yaml`. Keep the matched v22
+data, fixed candidate pools, v21 initialization, optimizer, learning rate,
+epoch count, and ranking/margin losses unchanged. The output must remain
+isolated under `outputs/ranker/deberta_v3_large_v23_acra_anchor`. Do not run
+answer-generation evaluation until the best checkpoint and held-out
+training metrics have been reviewed.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
