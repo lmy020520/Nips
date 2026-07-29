@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.1 diagnosis complete; validation-only rollout-aligned top-1 state repair authorized
+current_status: Stage 3.1 closed; rollout repair validated but did not beat the trained anchor; Stage 3.2 readiness authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -87,7 +87,7 @@ passes its explicit gate.
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
-| 3 | Controlled mechanism baselines | Stage 3.1 anchor readiness pending | Yes for final answers | Yes |
+| 3 | Controlled mechanism baselines | Stage 3.1 closed; Stage 3.2 readiness authorized | Yes for final answers | Yes |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
@@ -345,6 +345,34 @@ Input:
 It must be trained as an anchor policy. The v22 intervention that replaces
 full state with previous evidence is a useful diagnostic but is not a
 substitute for a separately trained baseline.
+
+### Stage 3.1 decision
+
+The separately trained anchor significantly outperformed the original v22
+Full rollout on the 3,000-question evaluation set. Diagnosis found a
+train--inference mismatch: v22 training adds one teacher-positive unit per
+state transition, whereas the original online rollout wrote all five selected
+units into the next state.
+
+A single pre-registered validation-only repair changed only the number of
+selected units written into the next state from five to one. On the
+question-disjoint 1,000-qid validation set, this increased Full hop-2+
+Step@1 from `0.171843` to `0.403037` and MRR from `0.385377` to `0.565392`.
+However, repaired Full did not materially outperform the trained anchor:
+
+| Metric | Repaired Full | Trained anchor | Anchor minus Full, 95% CI |
+|---|---:|---:|---:|
+| Hop-2+ Step@1 | 0.403037 | 0.396135 | -0.006901 `[-0.030179, 0.016290]` |
+| Hop-2+ MRR | 0.565392 | 0.567883 | +0.002491 `[-0.013482, 0.018735]` |
+| All-state Step@5 | 0.839118 | 0.850551 | not bootstrapped |
+| Full unit coverage | 0.766000 | 0.784000 | not bootstrapped |
+
+**Decision:** the repair validates rollout mismatch as the main cause of the
+earlier collapse, but it fails the pre-registered originality gate. Do not
+run the repaired selector on the 3,000-question evaluation set. The paper may
+claim that rollout-aligned accumulated state is competitive with the trained
+anchor and clearly stronger than query-only state, but it must not claim that
+full compiled state outperforms the anchor.
 
 ## Baseline 3.2: ECDR-style direct-indirect policy
 
@@ -734,6 +762,7 @@ The paper may be locked only when:
 | `stage3-acra-anchor-vs-full-ci` | 3.1 | Anchor minus Full v22, paired 10,000 bootstrap | Anchor wins: EM +0.017333 [0.008000, 0.026667], F1 +0.017334 [0.009041, 0.025619], Step@5 +0.072231 [0.062674, 0.081413], full-unit +0.031667 [0.020667, 0.042667] | Stage 3 originality gate fails for Full v22 |
 | `stage3-acra-hop2-diagnostic` | 3.1 | Anchor minus Full v22 on t>=1 states, qid-clustered 10,000 bootstrap | Anchor gains Step@1 +0.224395 [0.205447, 0.243378] and MRR +0.181735 [0.167487, 0.195786] | Diagnose rollout/state-noise failure before Stage 3.2 |
 | `stage3-acra-failure-diagnosis` | 3.1 | Full v22 versus anchor, t0/hop-2+/type/anchor-conditioning slices | Full wins slightly at t0, but collapses at t>=1; online Full writes top-5 per step while training writes one gold unit; anchor has 2,498 versus 1,118 hop-2+ rank wins | Test a pre-registered top-1 state-update repair on validation only |
+| `stage3-rollout-aligned-state-val1000` | 3.1 | Repaired Full top-1 state write versus trained anchor; alpha 0.5; validation 1,000; no API | Full hop-2+ Step@1 0.403037 versus 0.396135 and MRR 0.565392 versus 0.567883; both paired intervals include zero; full-unit 0.766 versus 0.784 | Repair confirms rollout mismatch but does not beat anchor; do not run repaired Full on evaluation 3,000 |
 
 ## One-time closure-balance repair
 
@@ -781,15 +810,13 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run one validation-only, no-API Stage 3.1 repair check through
-`scripts/run_kbs_stage3_rollout_aligned_state_val.sh`. Keep alpha 0.5,
-candidate top-10, final evidence top-5, checkpoints, and all retrieval
-settings frozen. Change only online state writing from five selected units
-per step to the top-ranked unit, matching the one-unit-per-step v22 training
-trajectory. Compare against the separately trained anchor on the same
-question-disjoint 1,000-qid validation set. Do not run this repair on the
-3,000-qid evaluation set unless validation shows a material hop-2+ Step@1 or
-MRR improvement over the anchor with a non-degenerate coverage tradeoff.
+Prepare Stage 3.2 readiness for an `ECDR-inspired textual direct-indirect
+baseline`. Do not train or call the answer API yet. The readiness audit must
+verify that direct evidence is selected query-only, later evidence is scored
+using only the selected direct-evidence anchor, all train/validation/test qids
+and fixed candidate pools match v22, no gold supporting fact is used at
+inference, and the output checkpoint/directory is independent. Freeze the
+exact direct-to-indirect state transition before training.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
