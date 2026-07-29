@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.1 anchor trained; matched 20-qid API smoke authorized
+current_status: Stage 3.1 anchor smoke passed; matched 3,000-qid evaluation authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -729,6 +729,7 @@ The paper may be locked only when:
 | `stage3-acra-anchor-readiness-tooling` | 3.1 | Matched v22 fixed-pool data; previous-evidence-only context | Training context switch, matched config, split/anchor audit, and guarded runner prepared | Run readiness only; do not train until status is OK |
 | `stage3-acra-anchor-readiness` | 3.1 | v22 fixed-pool train/validation/internal-test data and matched v22 Full configuration | PASS: readiness checker returned `status: OK`; training was not started | Authorize independent seed-42 anchor training |
 | `stage3-acra-anchor-train-seed42` | 3.1 | Previous-evidence-only input; matched v22 Full initialization/data/losses; 2 epochs | PASS: best epoch 2, validation acc 0.6761, internal-test acc 0.6488; checkpoint saved | Authorize matched 20-qid end-to-end smoke |
+| `stage3-acra-anchor-smoke20` | 3.1 | v23 anchor, previous-evidence-only, Compact alpha 0.5, HotpotQA 20 | PASS: 20 judged, 0 errors, EM 0.6000, F1 0.692857, Alignment@5 0.8400, full-unit 0.8000; positive API tokens/latency | Authorize frozen 3,000-qid evaluation |
 
 ## One-time closure-balance repair
 
@@ -776,13 +777,14 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run only the 20-qid Stage 3.1 ACRA-style anchor end-to-end smoke through
-`scripts/run_kbs_stage3_acra_anchor_eval.sh` with `SMOKE=1`. Use the trained
+Run the frozen 3,000-qid Stage 3.1 ACRA-style anchor evaluation through
+`scripts/run_kbs_stage3_acra_anchor_eval.sh` with `SMOKE=0`. Keep the trained
 v23 anchor checkpoint, previous-evidence-only online context, Compact
 candidate/evidence budgets, alpha 0.5, and fresh DeepSeek V4-Flash
-non-thinking answers. The report must contain 20 judged answers, zero answer
-errors, positive API tokens and latency, and the expected checkpoint/context
-metadata. Do not launch the 3,000-qid run until this smoke passes.
+non-thinking answers. The report must contain 3,000 unique judged qids, zero
+answer errors, no empty raw answers, positive API tokens/latency, and the
+expected checkpoint/context metadata. Do not begin Stage 3.2 until the full
+report and paired comparison against Full v22 have been reviewed.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
