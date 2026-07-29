@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.1 anchor smoke passed; matched 3,000-qid evaluation authorized
+current_status: Stage 3.1 complete; anchor significantly beats Full v22; originality gate failed and offline diagnosis is pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -730,6 +730,9 @@ The paper may be locked only when:
 | `stage3-acra-anchor-readiness` | 3.1 | v22 fixed-pool train/validation/internal-test data and matched v22 Full configuration | PASS: readiness checker returned `status: OK`; training was not started | Authorize independent seed-42 anchor training |
 | `stage3-acra-anchor-train-seed42` | 3.1 | Previous-evidence-only input; matched v22 Full initialization/data/losses; 2 epochs | PASS: best epoch 2, validation acc 0.6761, internal-test acc 0.6488; checkpoint saved | Authorize matched 20-qid end-to-end smoke |
 | `stage3-acra-anchor-smoke20` | 3.1 | v23 anchor, previous-evidence-only, Compact alpha 0.5, HotpotQA 20 | PASS: 20 judged, 0 errors, EM 0.6000, F1 0.692857, Alignment@5 0.8400, full-unit 0.8000; positive API tokens/latency | Authorize frozen 3,000-qid evaluation |
+| `stage3-acra-anchor-hotpot3000` | 3.1 | v23 anchor, previous-evidence-only, Compact alpha 0.5, HotpotQA 3,000 | PASS protocol: 3,000 judged, 0 errors; EM 0.612000, F1 0.757822, Step@1 0.448876, Step@5 0.854167, full-unit 0.792667 | Run paired comparison against Full v22 |
+| `stage3-acra-anchor-vs-full-ci` | 3.1 | Anchor minus Full v22, paired 10,000 bootstrap | Anchor wins: EM +0.017333 [0.008000, 0.026667], F1 +0.017334 [0.009041, 0.025619], Step@5 +0.072231 [0.062674, 0.081413], full-unit +0.031667 [0.020667, 0.042667] | Stage 3 originality gate fails for Full v22 |
+| `stage3-acra-hop2-diagnostic` | 3.1 | Anchor minus Full v22 on t>=1 states, qid-clustered 10,000 bootstrap | Anchor gains Step@1 +0.224395 [0.205447, 0.243378] and MRR +0.181735 [0.167487, 0.195786] | Diagnose rollout/state-noise failure before Stage 3.2 |
 
 ## One-time closure-balance repair
 
@@ -777,14 +780,14 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run the frozen 3,000-qid Stage 3.1 ACRA-style anchor evaluation through
-`scripts/run_kbs_stage3_acra_anchor_eval.sh` with `SMOKE=0`. Keep the trained
-v23 anchor checkpoint, previous-evidence-only online context, Compact
-candidate/evidence budgets, alpha 0.5, and fresh DeepSeek V4-Flash
-non-thinking answers. The report must contain 3,000 unique judged qids, zero
-answer errors, no empty raw answers, positive API tokens/latency, and the
-expected checkpoint/context metadata. Do not begin Stage 3.2 until the full
-report and paired comparison against Full v22 have been reviewed.
+Do not launch another API or training run yet. Complete the offline Stage 3.1
+failure diagnosis using the paired Full-v22 and trained-anchor reports:
+separate t=0 from t>=1 Step@1/5 and MRR, report bridge/comparison slices,
+condition later-hop performance on whether the previous anchor was gold,
+and quantify paired rank wins/losses. Retrieve only the fixed evaluation
+query metadata if it is absent locally. After this diagnosis, explicitly
+choose between a validation-designed state repair and narrowing the paper's
+claim; do not tune a repair directly on the 3,000-qid evaluation results.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
