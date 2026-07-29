@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.1 readiness passed; ACRA-style anchor seed-42 training authorized
+current_status: Stage 3.1 anchor trained; matched 20-qid API smoke authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -728,6 +728,7 @@ The paper may be locked only when:
 | `v22-closure-balanced-compact-smoke20` | 2.3 | v22 Full-state Compact, alpha 0.5, HotpotQA 20 | PASS: 20 judged, 0 errors, F1 0.642857, Alignment@5 0.78, full-unit 0.75 | Authorize the two frozen 3,000-qid Compact runs |
 | `stage3-acra-anchor-readiness-tooling` | 3.1 | Matched v22 fixed-pool data; previous-evidence-only context | Training context switch, matched config, split/anchor audit, and guarded runner prepared | Run readiness only; do not train until status is OK |
 | `stage3-acra-anchor-readiness` | 3.1 | v22 fixed-pool train/validation/internal-test data and matched v22 Full configuration | PASS: readiness checker returned `status: OK`; training was not started | Authorize independent seed-42 anchor training |
+| `stage3-acra-anchor-train-seed42` | 3.1 | Previous-evidence-only input; matched v22 Full initialization/data/losses; 2 epochs | PASS: best epoch 2, validation acc 0.6761, internal-test acc 0.6488; checkpoint saved | Authorize matched 20-qid end-to-end smoke |
 
 ## One-time closure-balance repair
 
@@ -775,14 +776,13 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Train only the independently parameterized Stage 3.1 ACRA-style anchor
-policy with seed 42 using
-`configs/train_ranker_deberta_v23_acra_anchor.yaml`. Keep the matched v22
-data, fixed candidate pools, v21 initialization, optimizer, learning rate,
-epoch count, and ranking/margin losses unchanged. The output must remain
-isolated under `outputs/ranker/deberta_v3_large_v23_acra_anchor`. Do not run
-answer-generation evaluation until the best checkpoint and held-out
-training metrics have been reviewed.
+Run only the 20-qid Stage 3.1 ACRA-style anchor end-to-end smoke through
+`scripts/run_kbs_stage3_acra_anchor_eval.sh` with `SMOKE=1`. Use the trained
+v23 anchor checkpoint, previous-evidence-only online context, Compact
+candidate/evidence budgets, alpha 0.5, and fresh DeepSeek V4-Flash
+non-thinking answers. The report must contain 20 judged answers, zero answer
+errors, positive API tokens and latency, and the expected checkpoint/context
+metadata. Do not launch the 3,000-qid run until this smoke passes.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is

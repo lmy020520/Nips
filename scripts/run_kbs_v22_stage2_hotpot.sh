@@ -17,6 +17,7 @@ CUDA_DEVICE="${CUDA_DEVICE:-0}"
 SMOKE="${SMOKE:-0}"
 ALLOW_OVERWRITE="${ALLOW_OVERWRITE:-0}"
 RUN_SUFFIX="${RUN_SUFFIX:-}"
+SEPARATELY_TRAINED_ANCHOR="${KBS_SEPARATELY_TRAINED_ANCHOR:-0}"
 
 DATA_ROOT="${KBS_DATA_ROOT:-data/hotpotqa_distractor_eval_3000_cand50}"
 FULL_MAX_QIDS="${KBS_MAX_QIDS:-3000}"
@@ -158,7 +159,11 @@ echo "[INFO] frozen_alpha=$FROZEN_ALPHA"
 echo "[INFO] answer_model=$DEEPSEEK_MODEL thinking_mode=$DEEPSEEK_THINKING_MODE"
 echo "[INFO] fresh_answer_calls=required output=$output cache=$cache_dir"
 if [[ "$RUN" == previous_only_* ]]; then
-  echo "[INFO] previous-only is an inference diagnostic, not a separately trained anchor baseline"
+  if [[ "$SEPARATELY_TRAINED_ANCHOR" == "1" ]]; then
+    echo "[INFO] previous-only context uses a separately trained anchor checkpoint"
+  else
+    echo "[INFO] previous-only is an inference diagnostic, not a separately trained anchor baseline"
+  fi
 fi
 
 CUDA_VISIBLE_DEVICES="$CUDA_DEVICE" python3 scripts/run_hotpotqa_policy_rag.py \
