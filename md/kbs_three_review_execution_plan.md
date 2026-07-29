@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.2 readiness checker corrected for expected deep-repeat rows; server rerun pending
+current_status: Stage 3.2 readiness passed; v24 ECDR-inspired seed-42 training authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -87,7 +87,7 @@ passes its explicit gate.
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
-| 3 | Controlled mechanism baselines | Stage 3.2 readiness audit pending | Yes for final answers | Yes |
+| 3 | Controlled mechanism baselines | Stage 3.2 v24 training authorized | Yes for final answers | Yes |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
@@ -784,6 +784,7 @@ The paper may be locked only when:
 | `stage3-rollout-aligned-state-val1000` | 3.1 | Repaired Full top-1 state write versus trained anchor; alpha 0.5; validation 1,000; no API | Full hop-2+ Step@1 0.403037 versus 0.396135 and MRR 0.565392 versus 0.567883; both paired intervals include zero; full-unit 0.766 versus 0.784 | Repair confirms rollout mismatch but does not beat anchor; do not run repaired Full on evaluation 3,000 |
 | `stage3-ecdr-readiness-tooling` | 3.2 | Query-only direct stage; frozen predicted direct anchor for every indirect stage; matched v22 training protocol | Dataset/runtime mode, matched v24 config, guarded readiness checker, and runner prepared | Run server readiness with `CHECK_ONLY=1`; do not train until status is OK |
 | `stage3-ecdr-readiness-attempt1` | 3.2 | v22 fixed-pool data with `deep_repeat=2` | FAILED only because 3,865 expected repeated deep-state rows were treated as duplicate errors; direct-anchor match 1.0, all memory resolved, no split/evaluation leakage | Correct checker to permit structurally identical repeats while rejecting conflicting repeats; rerun readiness only |
+| `stage3-ecdr-readiness` | 3.2 | v22 train 27,730 rows, validation 1,207, internal test 1,247; matched v24 configuration | PASS: failures empty; direct-anchor match 1.0 on all splits; 3,865 expected train repeats and zero conflicting repeats; no qid leakage | Authorize independent v24 seed-42 training; no answer API |
 
 ## One-time closure-balance repair
 
@@ -831,12 +832,12 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run `CHECK_ONLY=1 bash scripts/run_kbs_stage3_ecdr_direct_indirect.sh` on the
-server. Do not train or call the answer API. Training is authorized only if
-the report status is `OK`, every indirect row has a resolvable first-history
-anchor matching its qid's t=0 teacher-positive unit, all split/evaluation
-overlaps pass, runtime markers confirm a frozen predicted direct anchor, and
-the v24 configuration matches v22 except for context mode and output path.
+Train the independent seed-42 v24 ECDR-inspired direct-indirect Student with
+`CHECK_ONLY=0 bash scripts/run_kbs_stage3_ecdr_direct_indirect.sh`. Do not call
+the answer API and do not start the 3,000-qid evaluation. Accept training only
+after `best_model.pt`, best validation accuracy, and internal-test accuracy
+are present. Then run a separate matched 20-qid online smoke in which every
+t>0 `context_anchor_unit_id` must equal that qid's predicted t=0 unit.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
