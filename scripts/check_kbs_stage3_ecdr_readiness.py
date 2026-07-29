@@ -70,11 +70,13 @@ def inspect_samples(path: Path) -> tuple[dict, set[str], set[str]]:
     rows = 0
     qids = set()
     required_memory_ids = set()
-    rows_by_qid = defaultdict(dict)
+    rows_by_qid = defaultdict(lambda: defaultdict(list))
     pools_by_qid = {}
     t_counts = Counter()
     pool_sizes = Counter()
     errors = []
+    duplicate_state_rows = 0
+    conflicting_duplicate_rows = 0
 
     for row in read_jsonl(path):
         rows += 1
@@ -91,12 +93,20 @@ def inspect_samples(path: Path) -> tuple[dict, set[str], set[str]]:
 
         if not qid or t < 0:
             errors.append(f"invalid qid/t at row={rows}")
-        if t in rows_by_qid[qid]:
-            errors.append(f"duplicate qid/t row: qid={qid}, t={t}")
-        rows_by_qid[qid][t] = {
+        state_record = {
             "positive": positive,
             "history": history,
         }
+        existing_states = rows_by_qid[qid][t]
+        if existing_states:
+            duplicate_state_rows += 1
+            if existing_states[0] != state_record:
+                conflicting_duplicate_rows += 1
+                errors.append(
+                    "conflicting repeated qid/t row: "
+                    f"qid={qid}, t={t}, first={existing_states[0]}, current={state_record}"
+                )
+        existing_states.append(state_record)
         if not pool or len(pool) != len(set(pool)):
             errors.append(f"invalid candidate pool: qid={qid}, t={t}")
         if positive not in pool:
@@ -112,35 +122,37 @@ def inspect_samples(path: Path) -> tuple[dict, set[str], set[str]]:
         pools_by_qid[qid] = pool_key
 
     direct_anchors = []
-    initial_positive_by_qid = {}
     direct_anchor_matches = 0
     later_states = 0
     for qid, qid_rows in rows_by_qid.items():
-        initial = qid_rows.get(0)
-        if initial is None:
+        initial_rows = qid_rows.get(0, [])
+        if not initial_rows:
             errors.append(f"qid has no t=0 direct stage: qid={qid}")
             continue
+        if len(initial_rows) != 1:
+            errors.append(f"qid must have exactly one t=0 direct stage: qid={qid}")
+        initial = initial_rows[0]
         direct_id = initial["positive"]
-        initial_positive_by_qid[qid] = direct_id
-        for t, item in sorted(qid_rows.items()):
+        for t, state_rows in sorted(qid_rows.items()):
             if t == 0:
-                if item["history"]:
+                if initial["history"]:
                     errors.append(f"direct stage contains history: qid={qid}")
                 continue
-            later_states += 1
-            history = item["history"]
-            if not history:
-                errors.append(f"indirect stage has no direct anchor: qid={qid}, t={t}")
-                continue
-            anchor_id = history[0]
-            direct_anchors.append((qid, t, anchor_id))
-            if anchor_id == direct_id:
-                direct_anchor_matches += 1
-            else:
-                errors.append(
-                    "first H_t unit does not match t=0 teacher-positive direct anchor: "
-                    f"qid={qid}, t={t}, expected={direct_id}, actual={anchor_id}"
-                )
+            for item in state_rows:
+                later_states += 1
+                history = item["history"]
+                if not history:
+                    errors.append(f"indirect stage has no direct anchor: qid={qid}, t={t}")
+                    continue
+                anchor_id = history[0]
+                direct_anchors.append((qid, t, anchor_id))
+                if anchor_id == direct_id:
+                    direct_anchor_matches += 1
+                else:
+                    errors.append(
+                        "first H_t unit does not match t=0 teacher-positive direct anchor: "
+                        f"qid={qid}, t={t}, expected={direct_id}, actual={anchor_id}"
+                    )
 
     report = {
         "path": str(path),
@@ -150,6 +162,8 @@ def inspect_samples(path: Path) -> tuple[dict, set[str], set[str]]:
         "indirect_stage_rows": later_states,
         "t_distribution": dict(t_counts),
         "candidate_pool_size_distribution": dict(pool_sizes),
+        "repeated_state_rows": duplicate_state_rows,
+        "conflicting_repeated_state_rows": conflicting_duplicate_rows,
         "direct_anchor_matches": direct_anchor_matches,
         "direct_anchor_match_rate": (
             round(direct_anchor_matches / later_states, 6) if later_states else None
