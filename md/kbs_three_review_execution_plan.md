@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 2
-current_status: HotpotQA Stage 2 gates passed with alpha=0.5; 2Wiki zero-shot transfer pending
+current_status: 2Wiki state-transfer gate passed; existing Hybrid/BGE paired comparisons pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -86,7 +86,7 @@ passes its explicit gate.
 | Stage | Goal | Current status | API | Training |
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
-| 2 | Validate v22 end to end | HotpotQA passed; 2Wiki zero-shot transfer pending | Yes for 2Wiki answers | No |
+| 2 | Validate v22 end to end | HotpotQA and 2Wiki state gates passed; final baseline CIs pending | No | No |
 | 3 | Controlled mechanism baselines | Pending | Yes for final answers | Yes |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
@@ -718,6 +718,10 @@ The paper may be locked only when:
 | `v22-closure-balanced-hotpot-query-compact` | 2.3 | v22 Query-only Compact, alpha 0.5, HotpotQA 3,000 | PASS: EM 0.575000, F1 0.717850, Alignment@5 0.835526, full-unit 0.677000 | Use for final state-value comparison |
 | `v22-closure-balanced-state-ci` | 2.3 | Full-state minus Query-only, alpha 0.5, paired 10,000 bootstrap | F1 +0.022638 [0.013072, 0.032147]; full-unit +0.084000 [0.071325, 0.097000]; Alignment@5 -0.053591 [-0.062797, -0.044160] | State improves answer quality and closure with alignment tradeoff |
 | `v22-closure-balanced-vs-v21-ci` | 2.3 | v22 alpha 0.5 minus matched v21 alpha 0.35, paired 10,000 bootstrap | F1 +0.004008 [-0.003646, 0.011568]; full-unit +0.044333 [0.034333, 0.054333] | Non-regression gate passes; closure significantly improves |
+| `v22-stage2-2wiki-full-compact` | 2.4 | v22 Full-state Compact, alpha 0.5, 2Wiki 1,000, zero-shot | PASS: EM 0.571000, F1 0.639719, Alignment@5 0.724752, full-unit 0.633000 | Accept zero-shot Compact |
+| `v22-stage2-2wiki-full-recall` | 2.4 | v22 Full-state Recall, alpha 0.5, 2Wiki 1,000, zero-shot | PASS: EM 0.639000, F1 0.727514, Alignment@5 0.711921, full-unit 0.882000 | Accept zero-shot Recall |
+| `v22-stage2-2wiki-query-compact` | 2.4 | v22 Query-only Compact, alpha 0.5, 2Wiki 1,000, zero-shot | PASS: EM 0.491000, F1 0.551609, Alignment@5 0.681291, full-unit 0.409000 | Use for state-transfer comparison |
+| `v22-stage2-2wiki-state-ci` | 2.4 | Full-state minus Query-only Compact, paired 10,000 bootstrap | EM +0.080 [0.058, 0.102]; F1 +0.088109 [0.067209, 0.109832]; Alignment@5 +0.043460 [0.027340, 0.060191]; full-unit +0.224 [0.196, 0.251] | Cross-dataset state value passes |
 | `v22-closure-balanced-compact-smoke20` | 2.3 | v22 Full-state Compact, alpha 0.5, HotpotQA 20 | PASS: 20 judged, 0 errors, F1 0.642857, Alignment@5 0.78, full-unit 0.75 | Authorize the two frozen 3,000-qid Compact runs |
 
 ## One-time closure-balance repair
@@ -766,13 +770,12 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run Stage 2.4 zero-shot transfer on the fixed 1,000-qid 2Wiki split through
-`run_kbs_v22_stage2_2wiki.sh`: Full-state Compact, Full-state Recall, and
-Query-only Compact. Use the unchanged v22 checkpoint, frozen alpha 0.5, fresh
-V4-Flash non-thinking calls, and independent caches. No 2Wiki fine-tuning is
-allowed. After all three reports pass, compute paired Full-state Compact minus
-Query-only Compact intervals and compare Compact/Recall against the existing
-matched Hybrid and BGE reports. Stage 3 remains blocked until this is recorded.
+Retrieve the existing 1,000-qid 2Wiki `hybrid_rag.json` and
+`bge_reranker_rag.json` per-qid reports from the school server. Do not rerun
+answer generation. Verify identical qids and summary reconstruction, then run
+10,000-sample paired intervals for v22 Compact/Recall minus Hybrid and BGE.
+Record the historical alias/backend caveat for answer metrics. If the reports
+pass, close Stage 2 and advance to Stage 3 controlled mechanism baselines.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
