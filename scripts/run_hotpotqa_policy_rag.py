@@ -28,6 +28,7 @@ from tqdm import tqdm
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 from src.models.ranker import CrossEncoderRanker
+from src.online_state import init_online_state, render_online_k_t, update_online_state
 
 
 ANSWER_PROMPT_VERSIONS = {
@@ -128,115 +129,6 @@ def sample_k_t(row: dict) -> str:
         return str(row["K_t"])
     state = row.get("state") or {}
     return str(state.get("K_t") or "")
-
-
-def init_online_state() -> dict:
-    return {
-        "H_t": [],
-        "A_t": {
-            "raw_unit_ids": [],
-            "doc_ids": [],
-            "unit_doc": {},
-        },
-        "S_t": {
-            "raw_refs": [],
-            "derived_refs": [],
-            "last_added_unit_id": None,
-            "last_updated_step": -1,
-        },
-        "K_t": "",
-    }
-
-
-def render_online_k_t(state: dict, memory: dict[str, dict], *, max_raw: int = 8, max_chars_per_item: int = 260) -> str:
-    """Render the current lightweight notebook state as answer-facing context."""
-    s_t = state.get("S_t") or {}
-    raw_refs = s_t.get("raw_refs") if isinstance(s_t.get("raw_refs"), list) else []
-    ordered_refs = sorted(
-        raw_refs,
-        key=lambda ref: (int(ref.get("added_step", 0)), int(ref.get("selected_count", 0))),
-        reverse=True,
-    )
-
-    parts = []
-    if ordered_refs:
-        parts.append("Evidence:")
-        for index, ref in enumerate(ordered_refs[:max_raw], start=1):
-            unit_id = str(ref.get("unit_id") or "")
-            item = memory.get(unit_id)
-            if not item:
-                continue
-            text = str(item.get("text") or "").strip()
-            if len(text) > max_chars_per_item:
-                text = text[: max_chars_per_item - 3].rstrip() + "..."
-            title = str(item.get("title") or item.get("doc_id") or "")
-            parts.append(f"[{index}] {title}: {text}")
-    return "\n".join(parts).strip()
-
-
-def update_online_state(
-    state: dict,
-    unit_id: str,
-    memory_item: dict,
-    memory: dict[str, dict],
-    *,
-    step_id: int,
-    max_raw: int = 8,
-    max_chars_per_item: int = 260,
-) -> dict:
-    """Deterministically apply Update -> Ledger -> Render for online policy mode."""
-    next_state = {
-        "H_t": list(state.get("H_t") or []),
-        "A_t": {
-            "raw_unit_ids": list((state.get("A_t") or {}).get("raw_unit_ids") or []),
-            "doc_ids": list((state.get("A_t") or {}).get("doc_ids") or []),
-            "unit_doc": dict((state.get("A_t") or {}).get("unit_doc") or {}),
-        },
-        "S_t": {
-            "raw_refs": [dict(ref) for ref in (state.get("S_t") or {}).get("raw_refs") or []],
-            "derived_refs": [dict(ref) for ref in (state.get("S_t") or {}).get("derived_refs") or []],
-            "last_added_unit_id": (state.get("S_t") or {}).get("last_added_unit_id"),
-            "last_updated_step": (state.get("S_t") or {}).get("last_updated_step", -1),
-        },
-        "K_t": str(state.get("K_t") or ""),
-    }
-
-    # Update: keep a prefix trajectory and lightweight notebook refs.
-    if unit_id not in next_state["H_t"]:
-        next_state["H_t"].append(unit_id)
-    raw_refs = next_state["S_t"]["raw_refs"]
-    existing_ref = next((ref for ref in raw_refs if ref.get("unit_id") == unit_id), None)
-    if existing_ref is None:
-        raw_refs.append(
-            {
-                "unit_id": unit_id,
-                "added_step": step_id,
-                "used_in_summary_count": 0,
-                "selected_count": 1,
-            }
-        )
-    else:
-        existing_ref["selected_count"] = int(existing_ref.get("selected_count") or 0) + 1
-    next_state["S_t"]["last_added_unit_id"] = unit_id
-    next_state["S_t"]["last_updated_step"] = step_id
-
-    # Ledger: record raw coverage in a deterministic, inspectable form.
-    doc_id = str(memory_item.get("doc_id") or memory_item.get("title") or "")
-    if unit_id not in next_state["A_t"]["raw_unit_ids"]:
-        next_state["A_t"]["raw_unit_ids"].append(unit_id)
-    if doc_id and doc_id not in next_state["A_t"]["doc_ids"]:
-        next_state["A_t"]["doc_ids"].append(doc_id)
-    if doc_id:
-        next_state["A_t"]["unit_doc"][unit_id] = doc_id
-
-    # Render: expose the compiled notebook context for the next selection step.
-    next_state["K_t"] = render_online_k_t(
-        next_state,
-        memory,
-        max_raw=max_raw,
-        max_chars_per_item=max_chars_per_item,
-    )
-    return next_state
 
 
 def load_queries(path: str) -> dict[str, dict]:
@@ -1238,6 +1130,7 @@ def main() -> None:
         selected_units: list[str] = []
         selected_evidence: list[dict] = []
         selected_doc_ids: set[str] = set()
+        state_written_units: set[str] = set()
         online_state = init_online_state()
         previous_predicted_unit_id = None
         direct_predicted_unit_id = None
@@ -1612,7 +1505,6 @@ def main() -> None:
             for k in ks:
                 totals[f"step_acc@{k}"] += int(label in order[:k])
 
-            newly_selected_ids = set()
             for selected_id in selected_step_ids:
                 if selected_id in selected_units:
                     continue
@@ -1620,9 +1512,12 @@ def main() -> None:
                 selected_units.append(selected_id)
                 selected_evidence.append(selected_memory)
                 selected_doc_ids.add(selected_memory["doc_id"])
-                newly_selected_ids.add(selected_id)
             for state_update_id in state_update_step_ids:
-                if state_update_id not in newly_selected_ids:
+                # The final answer context and the policy state have different
+                # budgets. A unit seen earlier only as a lower-ranked top-k
+                # answer-context item must still be writable when it later
+                # becomes a top state-update item.
+                if state_update_id in state_written_units:
                     continue
                 selected_memory = memory[state_update_id]
                 online_state = update_online_state(
@@ -1634,6 +1529,7 @@ def main() -> None:
                     max_raw=args.online_state_max_raw,
                     max_chars_per_item=args.online_state_max_chars,
                 )
+                state_written_units.add(state_update_id)
             gold_units.append(positive_id)
             gold_doc_ids.add(positive_memory["doc_id"])
             step_record = {

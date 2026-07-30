@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.2 closed; ECDR-inspired baseline beats original Full rollout; Stage 3.3 readiness authorized
+current_status: Stage 3R v25 tooling complete locally; 20-qid data/readiness smoke authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -87,7 +87,7 @@ passes its explicit gate.
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
-| 3 | Controlled mechanism baselines | Stage 3.2 closed; Stage 3.3 readiness authorized | Yes for final answers | Completed for v23/v24 seed 42 |
+| 3 | Controlled mechanism baselines | Stage 3R rollout-aware state repair authorized; Stage 3.3 paused | No until validation gate passes | Completed for v23/v24 seed 42; v25 pending |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
@@ -425,6 +425,82 @@ state-value results, but narrow the main contribution to closure-oriented
 control, explicit state diagnostics, and the candidate/context budget
 frontier.
 
+## Stage 3R: Rollout-aware knowledge-state repair
+
+### Purpose
+
+Before adding another mechanism baseline, repair the identified
+train--inference mismatch in the Full knowledge-state policy. This is a
+targeted optimization of the existing `Knowledge-State-Guided` contribution,
+not a new contribution or a post-hoc test-set search.
+
+### Frozen repair scope
+
+The v25 repair is limited to four already diagnosed mismatches:
+
+1. Replace pure gold-prefix teacher forcing with a deterministic mixture of
+   clean teacher states and frozen-v22 model-rollout states.
+2. Write exactly the online top-1 selection into the next policy state.
+3. Use the same latest-first notebook renderer and the same
+   `max_raw=8`, `max_chars_per_item=260` truncation during data construction
+   and online inference.
+4. Separate the final top-5 answer-context set from the top-1 state-write
+   ledger. A unit previously present only in the answer-context set remains
+   eligible for a later state write.
+
+The model-rollout states must be generated only from the v22
+train/validation/internal-test qids with the frozen v22 checkpoint. The
+3,000-question HotpotQA evaluation subset and the 1,000-question blending
+validation set must not be used to construct v25 training examples.
+
+### Training-data protocol
+
+- Canonicalize v22 rows to one row per `(qid, t)` before rollout.
+- Generate rollouts with the deployed `hybrid_policy` selector,
+  `alpha=0.5`, `candidate_top_k=10`, `select_top_k=5`, and
+  `state_update_top_k=1`.
+- At `t=0`, keep one clean row because clean and rollout state are identical.
+- At `t>=1`, train on one online-rendered teacher state and one frozen-model
+  rollout state.
+- For a rollout state, supervise the first teacher-ordered gold unit not
+  already present in the rollout state. Skip the rollout row if all gold
+  units have already been acquired.
+- Use rollout-only validation and internal-test states so checkpoint
+  selection reflects deployment conditions.
+- Keep the v22 candidate pool, backbone, ranking loss, optimizer, seed, two
+  epochs, and candidate budget. Initialize from the v22 checkpoint and use an
+  independent v25 output directory.
+
+### Leakage and readiness gate
+
+Before training, the readiness report must prove:
+
+- zero duplicate canonical `(qid, t)` states;
+- zero train/validation/internal-test qid overlap;
+- zero overlap between v25 training qids and the 3,000-question evaluation
+  subset;
+- every positive target is present in its fixed candidate pool;
+- no rollout target is already present in the corresponding rollout state;
+- all rendered `K_t` values exactly match the shared online renderer;
+- the rollout source checkpoint and all frozen selector parameters are
+  recorded in the manifest.
+
+### Validation-only acceptance gate
+
+After one seed-42 training run, evaluate v25 Full, v23 anchor, and v24
+direct-indirect on the same question-disjoint 1,000-qid validation set,
+without answer generation. Proceed to one final 3,000-qid v25 evaluation only
+if:
+
+1. v25 significantly improves hop-2+ Step@1 or MRR over at least one of the
+   two chain baselines under qid-clustered paired bootstrap; and
+2. v25 does not show a clear full-unit-coverage regression against that
+   baseline.
+
+If the gate fails, stop v25 test evaluation, retain the negative result, and
+continue with the narrowed closure-control claim. Do not tune additional
+training mixtures or inspect the 3,000-question evaluation set.
+
 ## Baseline 3.3: FiSKE-inspired clue-state policy
 
 Construct an explicit textual clue coverage vector and rank candidates against
@@ -432,6 +508,8 @@ unresolved clues. The clue generator must not use gold supporting facts at
 test time.
 
 Call it `FiSKE-inspired textual clue-state baseline`.
+
+**Status:** paused until Stage 3R is closed.
 
 ## Controlled reporting
 
@@ -814,6 +892,8 @@ The paper may be locked only when:
 | `stage3-ecdr-vs-anchor-ci` | 3.2 | ECDR minus v23 trained anchor; paired 10,000 bootstrap | EM -0.004000 [-0.011000, 0.003000] and F1 -0.002016 [-0.007782, 0.003955] tie; Alignment@5 -0.020833 [-0.026839, -0.014827], full-unit -0.016000 [-0.023333, -0.009000] | ECDR ties answer quality but loses top-5 alignment and coverage |
 | `stage3-ecdr-hop2-bootstrap` | 3.2 | State-weighted metrics with 10,000 qid-clustered bootstrap samples over t>=1 states | ECDR minus Full: Step@1 +0.253259 [0.236464, 0.270310], MRR +0.189514 [0.176816, 0.202210]; ECDR minus anchor: Step@1 +0.028864 [0.014792, 0.042941], MRR +0.007779 [-0.002281, 0.017761] | ECDR improves sharp hop-2 ranking; its MRR gain over anchor is not significant |
 | `stage3-ecdr-type-slices` | 3.2 | Bridge 2,423 qids/3,536 hop-2+ states; comparison 577 qids/760 states | Versus anchor, ECDR bridge Step@1/5/MRR deltas +0.026866/-0.034502/+0.008507; comparison +0.038158/-0.046053/+0.004391 | Consistent Top-1 sharpness versus Top-5 coverage tradeoff; close Stage 3.2 |
+| `stage3r-v25-protocol-authorized` | 3R | Rollout-aware Full-state repair; no evaluation data and no answer API | Frozen clean/model-rollout mixture, exact online renderer, independent top-1 state ledger, and validation-only gate | Implement data/readiness tooling before any training |
+| `stage3r-v25-tooling` | 3R | Shared online state renderer; corrected state-write ledger; canonical rollout collector; mixed-data builder; readiness checker; matched v25 config | Local syntax, import, renderer-order, and rewritten-target smoke checks pass; no server data, training, or API run yet | Authorize isolated 20-qid data/readiness smoke only |
 
 ## One-time closure-balance repair
 
@@ -861,14 +941,12 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Prepare Stage 3.3 readiness for a `FiSKE-inspired textual clue-state
-baseline`. Do not train and do not call the answer API. Freeze a
-question-only clue generator, a deterministic evidence-to-clue coverage
-rule, and an unresolved-clue state renderer. The readiness audit must prove
-that no gold supporting fact, teacher role, answer, or future trajectory unit
-is used to construct clues or update online clue state. Match v22
-train/validation/test qids, fixed candidate pools, initialization, optimizer,
-losses, seed, and Compact budgets, with an independent output directory.
+Run an isolated 20-qid Stage 3R data/readiness smoke with
+`MAX_QIDS=20`, `TRAIN=0`, and the default smoke-specific workspace/data
+directories. Do not train, do not run the 3,000-question evaluation subset,
+and do not call the answer API. Advance to full data construction only if the
+readiness checker returns `status: OK`, all rollout targets are unresolved,
+all renderer checks match, and all split/evaluation overlaps are zero.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
