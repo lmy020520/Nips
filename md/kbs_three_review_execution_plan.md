@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.2 ECDR-inspired smoke passed; frozen 3,000-qid evaluation authorized
+current_status: Stage 3.2 full evaluation passed; bridge/comparison diagnostics pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -87,7 +87,7 @@ passes its explicit gate.
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
-| 3 | Controlled mechanism baselines | Stage 3.2 frozen 3,000-qid evaluation authorized | Yes for final answers | Completed for v24 seed 42 |
+| 3 | Controlled mechanism baselines | Stage 3.2 final diagnostics pending | Yes for final answers | Completed for v24 seed 42 |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
@@ -787,6 +787,10 @@ The paper may be locked only when:
 | `stage3-ecdr-readiness` | 3.2 | v22 train 27,730 rows, validation 1,207, internal test 1,247; matched v24 configuration | PASS: failures empty; direct-anchor match 1.0 on all splits; 3,865 expected train repeats and zero conflicting repeats; no qid leakage | Authorize independent v24 seed-42 training; no answer API |
 | `stage3-ecdr-train-seed42` | 3.2 | Query-only t=0 and frozen teacher-direct context at t>0; matched v22 initialization/data/losses; 2 epochs | PASS training: best epoch 2, validation acc 0.6123, internal-test acc 0.5838; checkpoint saved | Lower offline accuracy than v23 anchor; run protocol-checked 20-qid online smoke before final evaluation |
 | `stage3-ecdr-smoke20` | 3.2 | v24 direct-indirect Compact alpha 0.5; fresh V4-Flash non-thinking answers | PASS: 20 judged, 0 errors, no empty answers, zero direct-anchor violations; EM 0.650000, F1 0.742857, Alignment@5 0.820000, full-unit 0.800000 | Freeze protocol and authorize one 3,000-qid evaluation |
+| `stage3-ecdr-hotpot3000` | 3.2 | v24 direct-indirect Compact alpha 0.5; HotpotQA 3,000; fresh V4-Flash non-thinking answers | PASS: 3,000 judged, 0 errors, zero direct-anchor violations; EM 0.608000, F1 0.755806, Alignment@1/5 0.471902/0.833333, full-unit 0.776667 | Compute paired comparisons and mechanism slices |
+| `stage3-ecdr-vs-full-ci` | 3.2 | ECDR minus v22 Full alpha 0.5; paired 10,000 bootstrap | ECDR wins EM +0.013333 [0.003333, 0.023000], F1 +0.015319 [0.006716, 0.023679], Alignment@5 +0.051398 [0.042173, 0.060710], full-unit +0.015667 [0.005000, 0.026333] | ECDR-inspired chain baseline significantly outperforms the original Full rollout |
+| `stage3-ecdr-vs-anchor-ci` | 3.2 | ECDR minus v23 trained anchor; paired 10,000 bootstrap | EM -0.004000 [-0.011000, 0.003000] and F1 -0.002016 [-0.007782, 0.003955] tie; Alignment@5 -0.020833 [-0.026839, -0.014827], full-unit -0.016000 [-0.023333, -0.009000] | ECDR ties answer quality but loses top-5 alignment and coverage |
+| `stage3-ecdr-hop2-bootstrap` | 3.2 | Qid-clustered 10,000 bootstrap over t>=1 states | ECDR minus Full: Step@1 +0.295094 [0.275533, 0.313950], MRR +0.219231 [0.204592, 0.233469]; ECDR minus anchor: Step@1 +0.041289 [0.028905, 0.053800], MRR +0.016386 [0.008008, 0.024943] | Direct-indirect conditioning improves sharp hop-2 ranking but not top-5 coverage |
 
 ## One-time closure-balance repair
 
@@ -834,13 +838,14 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run one frozen `SMOKE=0 bash
-scripts/run_kbs_stage3_ecdr_direct_indirect_eval.sh` evaluation on the same
-3,000 HotpotQA qids with fresh V4-Flash non-thinking answer calls. Do not tune
-alpha, budgets, checkpoint, prompt, or context behavior. Accept only 3,000
-judged answers, zero errors, positive API tokens/latency, and zero
-direct-anchor protocol violations. Afterward compute paired comparisons
-against v22 Full alpha 0.5 and the v23 trained anchor.
+Run two no-API offline diagnostics with
+`scripts/analyze_kbs_stage3_anchor_vs_full.py`: ECDR versus v22 Full alpha 0.5
+and ECDR versus the v23 trained anchor. Use the fixed 3,000-qid query file and
+10,000 qid-clustered bootstrap samples. Record bridge/comparison hop-2+
+Step@1/5 and MRR. Ignore the analyzer's previous-anchor-conditioning block
+for ECDR because the method freezes the t=0 direct anchor rather than the
+immediately previous prediction. Do not start Stage 3.3 until both reports
+are recorded.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
