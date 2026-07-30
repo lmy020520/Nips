@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.2 readiness passed; v24 ECDR-inspired seed-42 training authorized
+current_status: Stage 3.2 v24 training passed; matched 20-qid direct-anchor smoke authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -87,7 +87,7 @@ passes its explicit gate.
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
-| 3 | Controlled mechanism baselines | Stage 3.2 v24 training authorized | Yes for final answers | Yes |
+| 3 | Controlled mechanism baselines | Stage 3.2 matched smoke authorized | Yes for final answers | Completed for v24 seed 42 |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
@@ -785,6 +785,7 @@ The paper may be locked only when:
 | `stage3-ecdr-readiness-tooling` | 3.2 | Query-only direct stage; frozen predicted direct anchor for every indirect stage; matched v22 training protocol | Dataset/runtime mode, matched v24 config, guarded readiness checker, and runner prepared | Run server readiness with `CHECK_ONLY=1`; do not train until status is OK |
 | `stage3-ecdr-readiness-attempt1` | 3.2 | v22 fixed-pool data with `deep_repeat=2` | FAILED only because 3,865 expected repeated deep-state rows were treated as duplicate errors; direct-anchor match 1.0, all memory resolved, no split/evaluation leakage | Correct checker to permit structurally identical repeats while rejecting conflicting repeats; rerun readiness only |
 | `stage3-ecdr-readiness` | 3.2 | v22 train 27,730 rows, validation 1,207, internal test 1,247; matched v24 configuration | PASS: failures empty; direct-anchor match 1.0 on all splits; 3,865 expected train repeats and zero conflicting repeats; no qid leakage | Authorize independent v24 seed-42 training; no answer API |
+| `stage3-ecdr-train-seed42` | 3.2 | Query-only t=0 and frozen teacher-direct context at t>0; matched v22 initialization/data/losses; 2 epochs | PASS training: best epoch 2, validation acc 0.6123, internal-test acc 0.5838; checkpoint saved | Lower offline accuracy than v23 anchor; run protocol-checked 20-qid online smoke before final evaluation |
 
 ## One-time closure-balance repair
 
@@ -832,12 +833,11 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Train the independent seed-42 v24 ECDR-inspired direct-indirect Student with
-`CHECK_ONLY=0 bash scripts/run_kbs_stage3_ecdr_direct_indirect.sh`. Do not call
-the answer API and do not start the 3,000-qid evaluation. Accept training only
-after `best_model.pt`, best validation accuracy, and internal-test accuracy
-are present. Then run a separate matched 20-qid online smoke in which every
-t>0 `context_anchor_unit_id` must equal that qid's predicted t=0 unit.
+Run `SMOKE=1 bash scripts/run_kbs_stage3_ecdr_direct_indirect_eval.sh` on one
+GPU with fresh V4-Flash non-thinking answer calls. Do not start the 3,000-qid
+evaluation. The smoke passes only if 20 answers are judged with zero errors
+and the checker verifies that every t>0 `context_anchor_unit_id` and
+`direct_evidence_unit_id` equal that qid's predicted t=0 unit.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is

@@ -44,6 +44,7 @@ Core Stage 2.2 runs:
 Optional diagnostic inference runs:
   previous_only_compact
   previous_only_recall
+  direct_only_compact
 
 Set SMOKE=1 for a 20-qid preflight with separate smoke outputs.
 EOF
@@ -80,6 +81,9 @@ case "$RUN" in
     policy_context_source="previous_evidence_only"
     front_pool_k=50
     candidate_top_k=50
+    ;;
+  direct_only_compact)
+    policy_context_source="direct_evidence_only"
     ;;
   *)
     echo "[ERROR] unknown RUN=$RUN" >&2
@@ -164,6 +168,9 @@ if [[ "$RUN" == previous_only_* ]]; then
   else
     echo "[INFO] previous-only is an inference diagnostic, not a separately trained anchor baseline"
   fi
+fi
+if [[ "$RUN" == direct_only_* ]]; then
+  echo "[INFO] direct-only context freezes the predicted t=0 top-1 unit for all later states"
 fi
 
 CUDA_VISIBLE_DEVICES="$CUDA_DEVICE" python3 scripts/run_hotpotqa_policy_rag.py \

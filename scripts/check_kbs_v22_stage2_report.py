@@ -16,6 +16,7 @@ RUN_CONFIGS = {
     "query_only_recall": ("query_only", 50, 50),
     "previous_only_compact": ("previous_evidence_only", 30, 10),
     "previous_only_recall": ("previous_evidence_only", 50, 50),
+    "direct_only_compact": ("direct_evidence_only", 30, 10),
 }
 
 
@@ -106,6 +107,53 @@ def main() -> None:
     if not isinstance(summary.get("runtime_profile"), dict):
         raise ValueError("runtime_profile is missing")
 
+    if context_source == "direct_evidence_only":
+        invalid_direct_anchors = []
+        for result in results:
+            qid = str(result.get("qid") or "")
+            steps = sorted(
+                (step for step in result.get("steps", []) if isinstance(step, dict)),
+                key=lambda step: int(step.get("t", 0)),
+            )
+            if not steps or int(steps[0].get("t", -1)) != 0:
+                invalid_direct_anchors.append(
+                    {"qid": qid, "reason": "missing t=0 direct stage"}
+                )
+                continue
+            predicted_direct = str(steps[0].get("predicted_unit_id") or "")
+            recorded_direct = str(steps[0].get("direct_evidence_unit_id") or "")
+            if not predicted_direct or recorded_direct != predicted_direct:
+                invalid_direct_anchors.append(
+                    {
+                        "qid": qid,
+                        "reason": "t=0 direct record does not match prediction",
+                        "predicted": predicted_direct,
+                        "recorded": recorded_direct,
+                    }
+                )
+                continue
+            for step in steps[1:]:
+                context_anchor = str(step.get("context_anchor_unit_id") or "")
+                frozen_direct = str(step.get("direct_evidence_unit_id") or "")
+                if context_anchor != predicted_direct or frozen_direct != predicted_direct:
+                    invalid_direct_anchors.append(
+                        {
+                            "qid": qid,
+                            "t": step.get("t"),
+                            "reason": "later stage did not retain predicted t=0 anchor",
+                            "expected": predicted_direct,
+                            "context_anchor": context_anchor,
+                            "recorded_direct": frozen_direct,
+                        }
+                    )
+                    break
+        if invalid_direct_anchors:
+            raise ValueError(
+                "direct-anchor protocol violations: "
+                f"count={len(invalid_direct_anchors)}, "
+                f"examples={invalid_direct_anchors[:5]}"
+            )
+
     audit = {
         "status": "PASS",
         "run": args.run,
@@ -128,6 +176,8 @@ def main() -> None:
             "peak_gpu_allocated_mb"
         ),
     }
+    if context_source == "direct_evidence_only":
+        audit["direct_anchor_protocol"] = "PASS"
     print(json.dumps(audit, ensure_ascii=False, indent=2))
 
 
