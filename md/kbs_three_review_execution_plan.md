@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.2 full evaluation passed; bridge/comparison diagnostics pending
+current_status: Stage 3.2 closed; ECDR-inspired baseline beats original Full rollout; Stage 3.3 readiness authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -87,7 +87,7 @@ passes its explicit gate.
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
-| 3 | Controlled mechanism baselines | Stage 3.2 final diagnostics pending | Yes for final answers | Completed for v24 seed 42 |
+| 3 | Controlled mechanism baselines | Stage 3.2 closed; Stage 3.3 readiness authorized | Yes for final answers | Completed for v23/v24 seed 42 |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
@@ -402,6 +402,28 @@ The model uses the same v21 initialization, DeBERTa backbone, v22 fixed
 candidate pools, ranking labels, seed, optimizer, losses, epochs, and
 candidate/final evidence budgets. Its output is isolated under
 `deberta_v3_large_v24_ecdr_direct_indirect`.
+
+### Stage 3.2 decision
+
+The ECDR-inspired baseline significantly outperforms the original v22 Full
+rollout on answer EM/F1, Alignment@5, full unit coverage, and hop-2+
+Step@1/MRR. Against the separately trained v23 anchor, it ties answer EM/F1,
+improves hop-2+ Step@1, ties hop-2+ MRR, and loses Alignment@5 and full unit
+coverage.
+
+The bridge/comparison slices show the same sharpness--coverage tradeoff:
+
+| Slice | ECDR minus anchor Step@1 | Step@5 | MRR |
+|---|---:|---:|---:|
+| Bridge, hop-2+ | +0.026866 | -0.034502 | +0.008507 |
+| Comparison, hop-2+ | +0.038158 | -0.046053 | +0.004391 |
+
+**Decision:** Stage 3.2 is complete. Full compiled state does not outperform
+the controlled chain baselines, so the broad state-superiority originality
+claim is rejected. Retain the significant Full-versus-query-only and 2Wiki
+state-value results, but narrow the main contribution to closure-oriented
+control, explicit state diagnostics, and the candidate/context budget
+frontier.
 
 ## Baseline 3.3: FiSKE-inspired clue-state policy
 
@@ -790,7 +812,8 @@ The paper may be locked only when:
 | `stage3-ecdr-hotpot3000` | 3.2 | v24 direct-indirect Compact alpha 0.5; HotpotQA 3,000; fresh V4-Flash non-thinking answers | PASS: 3,000 judged, 0 errors, zero direct-anchor violations; EM 0.608000, F1 0.755806, Alignment@1/5 0.471902/0.833333, full-unit 0.776667 | Compute paired comparisons and mechanism slices |
 | `stage3-ecdr-vs-full-ci` | 3.2 | ECDR minus v22 Full alpha 0.5; paired 10,000 bootstrap | ECDR wins EM +0.013333 [0.003333, 0.023000], F1 +0.015319 [0.006716, 0.023679], Alignment@5 +0.051398 [0.042173, 0.060710], full-unit +0.015667 [0.005000, 0.026333] | ECDR-inspired chain baseline significantly outperforms the original Full rollout |
 | `stage3-ecdr-vs-anchor-ci` | 3.2 | ECDR minus v23 trained anchor; paired 10,000 bootstrap | EM -0.004000 [-0.011000, 0.003000] and F1 -0.002016 [-0.007782, 0.003955] tie; Alignment@5 -0.020833 [-0.026839, -0.014827], full-unit -0.016000 [-0.023333, -0.009000] | ECDR ties answer quality but loses top-5 alignment and coverage |
-| `stage3-ecdr-hop2-bootstrap` | 3.2 | Qid-clustered 10,000 bootstrap over t>=1 states | ECDR minus Full: Step@1 +0.295094 [0.275533, 0.313950], MRR +0.219231 [0.204592, 0.233469]; ECDR minus anchor: Step@1 +0.041289 [0.028905, 0.053800], MRR +0.016386 [0.008008, 0.024943] | Direct-indirect conditioning improves sharp hop-2 ranking but not top-5 coverage |
+| `stage3-ecdr-hop2-bootstrap` | 3.2 | State-weighted metrics with 10,000 qid-clustered bootstrap samples over t>=1 states | ECDR minus Full: Step@1 +0.253259 [0.236464, 0.270310], MRR +0.189514 [0.176816, 0.202210]; ECDR minus anchor: Step@1 +0.028864 [0.014792, 0.042941], MRR +0.007779 [-0.002281, 0.017761] | ECDR improves sharp hop-2 ranking; its MRR gain over anchor is not significant |
+| `stage3-ecdr-type-slices` | 3.2 | Bridge 2,423 qids/3,536 hop-2+ states; comparison 577 qids/760 states | Versus anchor, ECDR bridge Step@1/5/MRR deltas +0.026866/-0.034502/+0.008507; comparison +0.038158/-0.046053/+0.004391 | Consistent Top-1 sharpness versus Top-5 coverage tradeoff; close Stage 3.2 |
 
 ## One-time closure-balance repair
 
@@ -838,14 +861,14 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run two no-API offline diagnostics with
-`scripts/analyze_kbs_stage3_anchor_vs_full.py`: ECDR versus v22 Full alpha 0.5
-and ECDR versus the v23 trained anchor. Use the fixed 3,000-qid query file and
-10,000 qid-clustered bootstrap samples. Record bridge/comparison hop-2+
-Step@1/5 and MRR. Ignore the analyzer's previous-anchor-conditioning block
-for ECDR because the method freezes the t=0 direct anchor rather than the
-immediately previous prediction. Do not start Stage 3.3 until both reports
-are recorded.
+Prepare Stage 3.3 readiness for a `FiSKE-inspired textual clue-state
+baseline`. Do not train and do not call the answer API. Freeze a
+question-only clue generator, a deterministic evidence-to-clue coverage
+rule, and an unresolved-clue state renderer. The readiness audit must prove
+that no gold supporting fact, teacher role, answer, or future trajectory unit
+is used to construct clues or update online clue state. Match v22
+train/validation/test qids, fixed candidate pools, initialization, optimizer,
+losses, seed, and Compact budgets, with an independent output directory.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
