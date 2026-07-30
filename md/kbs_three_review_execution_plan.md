@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.2 v24 training passed; matched 20-qid direct-anchor smoke authorized
+current_status: Stage 3.2 ECDR-inspired smoke passed; frozen 3,000-qid evaluation authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -87,7 +87,7 @@ passes its explicit gate.
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
-| 3 | Controlled mechanism baselines | Stage 3.2 matched smoke authorized | Yes for final answers | Completed for v24 seed 42 |
+| 3 | Controlled mechanism baselines | Stage 3.2 frozen 3,000-qid evaluation authorized | Yes for final answers | Completed for v24 seed 42 |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
@@ -786,6 +786,7 @@ The paper may be locked only when:
 | `stage3-ecdr-readiness-attempt1` | 3.2 | v22 fixed-pool data with `deep_repeat=2` | FAILED only because 3,865 expected repeated deep-state rows were treated as duplicate errors; direct-anchor match 1.0, all memory resolved, no split/evaluation leakage | Correct checker to permit structurally identical repeats while rejecting conflicting repeats; rerun readiness only |
 | `stage3-ecdr-readiness` | 3.2 | v22 train 27,730 rows, validation 1,207, internal test 1,247; matched v24 configuration | PASS: failures empty; direct-anchor match 1.0 on all splits; 3,865 expected train repeats and zero conflicting repeats; no qid leakage | Authorize independent v24 seed-42 training; no answer API |
 | `stage3-ecdr-train-seed42` | 3.2 | Query-only t=0 and frozen teacher-direct context at t>0; matched v22 initialization/data/losses; 2 epochs | PASS training: best epoch 2, validation acc 0.6123, internal-test acc 0.5838; checkpoint saved | Lower offline accuracy than v23 anchor; run protocol-checked 20-qid online smoke before final evaluation |
+| `stage3-ecdr-smoke20` | 3.2 | v24 direct-indirect Compact alpha 0.5; fresh V4-Flash non-thinking answers | PASS: 20 judged, 0 errors, no empty answers, zero direct-anchor violations; EM 0.650000, F1 0.742857, Alignment@5 0.820000, full-unit 0.800000 | Freeze protocol and authorize one 3,000-qid evaluation |
 
 ## One-time closure-balance repair
 
@@ -833,11 +834,13 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run `SMOKE=1 bash scripts/run_kbs_stage3_ecdr_direct_indirect_eval.sh` on one
-GPU with fresh V4-Flash non-thinking answer calls. Do not start the 3,000-qid
-evaluation. The smoke passes only if 20 answers are judged with zero errors
-and the checker verifies that every t>0 `context_anchor_unit_id` and
-`direct_evidence_unit_id` equal that qid's predicted t=0 unit.
+Run one frozen `SMOKE=0 bash
+scripts/run_kbs_stage3_ecdr_direct_indirect_eval.sh` evaluation on the same
+3,000 HotpotQA qids with fresh V4-Flash non-thinking answer calls. Do not tune
+alpha, budgets, checkpoint, prompt, or context behavior. Accept only 3,000
+judged answers, zero errors, positive API tokens/latency, and zero
+direct-anchor protocol violations. Afterward compute paired comparisons
+against v22 Full alpha 0.5 and the v23 trained anchor.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
