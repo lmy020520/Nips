@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3R v25 20-qid readiness passed; full data construction authorized without training
+current_status: Stage 3R v25 full readiness passed; one seed-42 training run authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -895,6 +895,7 @@ The paper may be locked only when:
 | `stage3r-v25-protocol-authorized` | 3R | Rollout-aware Full-state repair; no evaluation data and no answer API | Frozen clean/model-rollout mixture, exact online renderer, independent top-1 state ledger, and validation-only gate | Implement data/readiness tooling before any training |
 | `stage3r-v25-tooling` | 3R | Shared online state renderer; corrected state-write ledger; canonical rollout collector; mixed-data builder; readiness checker; matched v25 config | Local syntax, import, renderer-order, and rewritten-target smoke checks pass; no server data, training, or API run yet | Authorize isolated 20-qid data/readiness smoke only |
 | `stage3r-v25-readiness-smoke20` | 3R | First 20 qids from each v22 train/validation/internal-test split; frozen v22 hybrid-policy rollout; no API and no training | PASS: canonical rows 46/43/47, zero conflicting repeats and skipped rollout steps; all state writes top-1; reconstructed v25 rows 72/43/47; 162/162 renderer matches; zero acquired-positive violations; split overlap zero. Full v22 source audit already proves train/val/test overlap with the 3,000-qid evaluation subset is zero | Authorize full v25 data construction/readiness only |
+| `stage3r-v25-full-readiness` | 3R | 10,000/500/500 train/validation/internal-test qids; frozen-v22 hybrid-policy top-1 rollout; no API and no training | PASS: 37,730/1,207/1,247 rows; 40,184/40,184 renderer matches; zero acquired-positive, row, pool, and split errors; zero overlap with the 3,000-qid evaluation subset; train mixture contains 23,865 teacher and 13,865 rollout rows; 7,774 rollout targets rewritten | Authorize exactly one matched v25 seed-42 training run |
 
 ## One-time closure-balance repair
 
@@ -942,12 +943,13 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Construct the full Stage 3R v25 train/validation/internal-test data with
-`MAX_QIDS=0` and `TRAIN=0`. Collect frozen-v22 rollouts, build the registered
-teacher/rollout mixture, and run the complete readiness audit. Do not train,
-do not run the 3,000-question evaluation subset, and do not call the answer
-API. Training may be authorized only after the full audit returns
-`status: OK`.
+Run exactly one Stage 3R v25 seed-42 training job using
+`configs/train_ranker_deberta_v25_rollout_aligned.yaml`. Reuse the completed
+full data and rollout files; do not rebuild them. Do not call the answer API
+and do not run the 3,000-question evaluation subset. After training, record
+the best validation and internal-test metrics and stop before any end-to-end
+evaluation. The next gate is validation-only comparison against v23 anchor
+and v24 direct-indirect.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
