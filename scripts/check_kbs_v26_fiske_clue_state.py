@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import itertools
 import json
+import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -103,10 +104,17 @@ def evidence_text(item: dict) -> str:
 
 def load_required_memory(path: Path, required_ids: set[str]) -> dict[str, dict]:
     memory = {}
-    for row in read_jsonl(path):
+    for row_index, row in enumerate(read_jsonl(path), start=1):
         unit_id = str(row.get("unit_id") or "")
         if unit_id in required_ids:
             memory[unit_id] = row
+        if row_index % 100000 == 0:
+            print(
+                f"[CHECK] memory={path.name} scanned={row_index} "
+                f"resolved={len(memory)}/{len(required_ids)}",
+                file=sys.stderr,
+                flush=True,
+            )
     return memory
 
 
@@ -378,16 +386,22 @@ def main() -> None:
 
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     max_qids = int(manifest.get("max_qids", 0))
-    reports = {
-        split: inspect_split(
+    reports = {}
+    for split in ("train", "val", "test"):
+        print(f"[CHECK] split={split} started", file=sys.stderr, flush=True)
+        reports[split] = inspect_split(
             split,
             source_root / "samples" / f"{split}.jsonl",
             data_root / "samples" / f"{split}.jsonl",
             memory_root / f"raw_units_{split}.jsonl",
             max_qids,
         )
-        for split in ("train", "val", "test")
-    }
+        print(
+            f"[CHECK] split={split} paired={reports[split]['paired_rows']} "
+            f"errors={reports[split]['error_count']} completed",
+            file=sys.stderr,
+            flush=True,
+        )
     qid_sets = {split: reports[split].pop("_qid_set") for split in reports}
     overlap = {
         "train_val": len(qid_sets["train"] & qid_sets["val"]),

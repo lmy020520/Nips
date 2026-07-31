@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import json
 import shutil
+import sys
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -60,10 +61,17 @@ def limit_qids(rows, max_qids: int):
 
 def load_required_memory(path: Path, required_ids: set[str]) -> dict[str, dict]:
     memory = {}
-    for row in read_jsonl(path):
+    for row_index, row in enumerate(read_jsonl(path), start=1):
         unit_id = str(row.get("unit_id") or "")
         if unit_id in required_ids:
             memory[unit_id] = row
+        if row_index % 100000 == 0:
+            print(
+                f"[BUILD] memory={path.name} scanned={row_index} "
+                f"resolved={len(memory)}/{len(required_ids)}",
+                file=sys.stderr,
+                flush=True,
+            )
     missing = sorted(required_ids - set(memory))
     if missing:
         raise ValueError(f"{len(missing)} prefix units missing from {path}: {missing[:5]}")
@@ -183,6 +191,7 @@ def main() -> None:
 
     split_stats = {}
     for split in ("train", "val", "test"):
+        print(f"[BUILD] split={split} started", file=sys.stderr, flush=True)
         source_path = source_root / "samples" / f"{split}.jsonl"
         memory_path = memory_root / f"raw_units_{split}.jsonl"
         for required in (source_path, memory_path):
@@ -193,6 +202,12 @@ def main() -> None:
             memory_path,
             output_root / "samples" / f"{split}.jsonl",
             max_qids=args.max_qids,
+        )
+        print(
+            f"[BUILD] split={split} rows={split_stats[split]['rows']} "
+            f"qids={split_stats[split]['qids']} completed",
+            file=sys.stderr,
+            flush=True,
         )
 
     manifest = {
