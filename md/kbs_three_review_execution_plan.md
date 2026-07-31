@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3R v25 seed-42 training complete; validation-only three-way gate authorized
+current_status: Stage 3R closed with a failed validation gate; v25 test evaluation forbidden; Stage 3.3 readiness authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -87,7 +87,7 @@ passes its explicit gate.
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
-| 3 | Controlled mechanism baselines | Stage 3R v25 trained; validation-only gate pending; Stage 3.3 paused | No until validation gate passes | Completed for v23/v24/v25 seed 42 |
+| 3 | Controlled mechanism baselines | Stage 3R closed negative; Stage 3.3 readiness authorized | No for readiness | Completed for v23/v24/v25 seed 42 |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
@@ -501,6 +501,28 @@ If the gate fails, stop v25 test evaluation, retain the negative result, and
 continue with the narrowed closure-control claim. Do not tune additional
 training mixtures or inspect the 3,000-question evaluation set.
 
+### Stage 3R decision
+
+**Failed and closed.** On the fixed 1,000-qid validation set, v25 Full does
+not satisfy the pre-registered chain-baseline gate.
+
+Against v23 anchor, v25 ties full-unit coverage at `0.784`, but loses
+hop-2+ Step@1 by `-0.024845`
+`[-0.048936, -0.000692]` and MRR by `-0.029613`
+`[-0.046304, -0.012383]`. Against v24 direct-indirect, v25 improves
+full-unit coverage by `+0.016` `[0.003, 0.029]`, but loses hop-2+ Step@1
+by `-0.048999` `[-0.072866, -0.026074]` and MRR by `-0.039211`
+`[-0.055932, -0.022727]`.
+
+The repair therefore preserves or improves trajectory completeness but does
+not make accumulated Full state a stronger next-unit ranking mechanism than
+the controlled chain baselines. Do not run v25 on the 3,000-question
+evaluation subset, do not tune another state-mixture ratio, and do not use
+v25 as the paper's main result. Retain it as a negative rollout-alignment
+diagnostic. The supported state claim remains Full versus query-only and
+cross-dataset closure/coverage, not Full-state superiority over anchor or
+direct-indirect policies.
+
 ## Baseline 3.3: FiSKE-inspired clue-state policy
 
 Construct an explicit textual clue coverage vector and rank candidates against
@@ -509,7 +531,7 @@ test time.
 
 Call it `FiSKE-inspired textual clue-state baseline`.
 
-**Status:** paused until Stage 3R is closed.
+**Status:** readiness authorized after the negative closure of Stage 3R.
 
 ## Controlled reporting
 
@@ -898,6 +920,7 @@ The paper may be locked only when:
 | `stage3r-v25-full-readiness` | 3R | 10,000/500/500 train/validation/internal-test qids; frozen-v22 hybrid-policy top-1 rollout; no API and no training | PASS: 37,730/1,207/1,247 rows; 40,184/40,184 renderer matches; zero acquired-positive, row, pool, and split errors; zero overlap with the 3,000-qid evaluation subset; train mixture contains 23,865 teacher and 13,865 rollout rows; 7,774 rollout targets rewritten | Authorize exactly one matched v25 seed-42 training run |
 | `stage3r-v25-train-seed42` | 3R | v25 mixed teacher/rollout train states; rollout-only validation/internal test; v22 initialization; matched optimizer/ranking losses; two epochs | PASS training: epoch 2 selected; train accuracy 0.699655, validation accuracy 0.678542, internal-test accuracy 0.605453; validation loss improved from 0.954928 to 0.942863 | Authorize one question-disjoint 1,000-qid validation-only gate; no answer API |
 | `stage3r-v25-validation-gate-tooling` | 3R | v25 Full versus v23 trained anchor and v24 direct-indirect; same 1,000 qids, alpha 0.5, top-5 evidence budget, top-1 state write | Three-way runner and qid-clustered paired bootstrap analyzer prepared; gate requires significant v25 hop-2+ Step@1 or MRR gain over at least one baseline without significant full-unit regression | Run once without answers; do not inspect the 3,000-qid evaluation subset |
+| `stage3r-v25-validation-gate` | 3R | v25 Full versus v23 anchor and v24 direct-indirect; question-disjoint validation 1,000; 10,000 qid-clustered bootstrap samples; no API | FAIL: v25 ties v23 full-unit but significantly loses hop-2+ Step@1/MRR; v25 significantly improves v24 full-unit by +0.016 [0.003, 0.029] but significantly loses hop-2+ Step@1/MRR | Close Stage 3R; forbid v25 evaluation on 3,000 qids and further mixture tuning |
 
 ## One-time closure-balance repair
 
@@ -945,14 +968,14 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run the frozen Stage 3R validation-only three-way gate on the
-question-disjoint 1,000-qid blending-validation set. Compare v25 Full, v23
-trained anchor, and v24 direct-indirect with alpha 0.5, candidate top-10,
-final evidence top-5, and state-update top-1. Disable answer generation.
-Compute 10,000-sample qid-clustered paired intervals for all-state and
-hop-2+ Step@1, Step@5, MRR, and full-unit coverage. Do not run the
-3,000-question evaluation subset. A final evaluation is authorized only if
-the pre-registered validation gate reports `PASS`.
+Prepare Stage 3.3 readiness for a FiSKE-inspired textual clue-state baseline.
+Do not train and do not call the answer API. Freeze a question-only clue
+generator, a deterministic evidence-to-clue coverage rule, and an unresolved
+clue-state renderer. The audit must prove that no gold supporting fact,
+teacher role, answer, or future trajectory unit is used to construct clues or
+update online clue state. Match the v22 train/validation/internal-test qids,
+fixed candidate pools, v21 initialization, optimizer, ranking losses, seed,
+and Compact budgets, with an independent output directory.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
