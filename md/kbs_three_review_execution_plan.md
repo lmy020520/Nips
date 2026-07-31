@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3R v25 full readiness passed; one seed-42 training run authorized
+current_status: Stage 3R v25 seed-42 training complete; validation-only three-way gate authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -87,7 +87,7 @@ passes its explicit gate.
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
-| 3 | Controlled mechanism baselines | Stage 3R rollout-aware state repair authorized; Stage 3.3 paused | No until validation gate passes | Completed for v23/v24 seed 42; v25 pending |
+| 3 | Controlled mechanism baselines | Stage 3R v25 trained; validation-only gate pending; Stage 3.3 paused | No until validation gate passes | Completed for v23/v24/v25 seed 42 |
 | 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
@@ -896,6 +896,8 @@ The paper may be locked only when:
 | `stage3r-v25-tooling` | 3R | Shared online state renderer; corrected state-write ledger; canonical rollout collector; mixed-data builder; readiness checker; matched v25 config | Local syntax, import, renderer-order, and rewritten-target smoke checks pass; no server data, training, or API run yet | Authorize isolated 20-qid data/readiness smoke only |
 | `stage3r-v25-readiness-smoke20` | 3R | First 20 qids from each v22 train/validation/internal-test split; frozen v22 hybrid-policy rollout; no API and no training | PASS: canonical rows 46/43/47, zero conflicting repeats and skipped rollout steps; all state writes top-1; reconstructed v25 rows 72/43/47; 162/162 renderer matches; zero acquired-positive violations; split overlap zero. Full v22 source audit already proves train/val/test overlap with the 3,000-qid evaluation subset is zero | Authorize full v25 data construction/readiness only |
 | `stage3r-v25-full-readiness` | 3R | 10,000/500/500 train/validation/internal-test qids; frozen-v22 hybrid-policy top-1 rollout; no API and no training | PASS: 37,730/1,207/1,247 rows; 40,184/40,184 renderer matches; zero acquired-positive, row, pool, and split errors; zero overlap with the 3,000-qid evaluation subset; train mixture contains 23,865 teacher and 13,865 rollout rows; 7,774 rollout targets rewritten | Authorize exactly one matched v25 seed-42 training run |
+| `stage3r-v25-train-seed42` | 3R | v25 mixed teacher/rollout train states; rollout-only validation/internal test; v22 initialization; matched optimizer/ranking losses; two epochs | PASS training: epoch 2 selected; train accuracy 0.699655, validation accuracy 0.678542, internal-test accuracy 0.605453; validation loss improved from 0.954928 to 0.942863 | Authorize one question-disjoint 1,000-qid validation-only gate; no answer API |
+| `stage3r-v25-validation-gate-tooling` | 3R | v25 Full versus v23 trained anchor and v24 direct-indirect; same 1,000 qids, alpha 0.5, top-5 evidence budget, top-1 state write | Three-way runner and qid-clustered paired bootstrap analyzer prepared; gate requires significant v25 hop-2+ Step@1 or MRR gain over at least one baseline without significant full-unit regression | Run once without answers; do not inspect the 3,000-qid evaluation subset |
 
 ## One-time closure-balance repair
 
@@ -943,13 +945,14 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run exactly one Stage 3R v25 seed-42 training job using
-`configs/train_ranker_deberta_v25_rollout_aligned.yaml`. Reuse the completed
-full data and rollout files; do not rebuild them. Do not call the answer API
-and do not run the 3,000-question evaluation subset. After training, record
-the best validation and internal-test metrics and stop before any end-to-end
-evaluation. The next gate is validation-only comparison against v23 anchor
-and v24 direct-indirect.
+Run the frozen Stage 3R validation-only three-way gate on the
+question-disjoint 1,000-qid blending-validation set. Compare v25 Full, v23
+trained anchor, and v24 direct-indirect with alpha 0.5, candidate top-10,
+final evidence top-5, and state-update top-1. Disable answer generation.
+Compute 10,000-sample qid-clustered paired intervals for all-state and
+hop-2+ Step@1, Step@5, MRR, and full-unit coverage. Do not run the
+3,000-question evaluation subset. A final evaluation is authorized only if
+the pre-registered validation gate reports `PASS`.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
