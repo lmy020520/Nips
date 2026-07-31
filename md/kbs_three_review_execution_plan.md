@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.3 clue-state tooling complete; isolated 20-qid readiness smoke authorized; training forbidden
+current_status: Stage 3.3 20-qid readiness passed; full data construction/readiness authorized; training forbidden
 ```
 
 This file is the single execution plan synthesized from:
@@ -531,7 +531,8 @@ test time.
 
 Call it `FiSKE-inspired textual clue-state baseline`.
 
-**Status:** tooling complete; isolated 20-qid readiness smoke authorized.
+**Status:** 20-qid readiness passed; full data construction/readiness
+authorized; training remains forbidden.
 
 ### Frozen Stage 3.3 protocol
 
@@ -954,6 +955,7 @@ The paper may be locked only when:
 | `stage3r-v25-validation-gate-tooling` | 3R | v25 Full versus v23 trained anchor and v24 direct-indirect; same 1,000 qids, alpha 0.5, top-5 evidence budget, top-1 state write | Three-way runner and qid-clustered paired bootstrap analyzer prepared; gate requires significant v25 hop-2+ Step@1 or MRR gain over at least one baseline without significant full-unit regression | Run once without answers; do not inspect the 3,000-qid evaluation subset |
 | `stage3r-v25-validation-gate` | 3R | v25 Full versus v23 anchor and v24 direct-indirect; question-disjoint validation 1,000; 10,000 qid-clustered bootstrap samples; no API | FAIL: v25 ties v23 full-unit but significantly loses hop-2+ Step@1/MRR; v25 significantly improves v24 full-unit by +0.016 [0.003, 0.029] but significantly loses hop-2+ Step@1/MRR | Close Stage 3R; forbid v25 evaluation on 3,000 qids and further mixture tuning |
 | `stage3-fiske-clue-state-tooling` | 3.3 | Deterministic question-only clue generator; current-prefix coverage updater; v22 row/pool/label-preserving rewrite; matched v26 config | Local syntax and synthetic paired audit PASS: renderer replay 6/6, zero forbidden fields, zero non-monotonic transitions, zero config mismatches | Authorize isolated 20-qid data/readiness smoke only; no training or API |
+| `stage3-fiske-clue-state-smoke20` | 3.3 | First 20 qids from each v22 train/validation/internal-test split; deterministic clue state; no API and no training | PASS: 52/43/47 source-output rows paired exactly; renderer 142/142; zero forbidden fields, non-monotonic transitions, row errors, split/evaluation overlap, and config mismatches | Authorize full v26 clue-state data construction/readiness only; training remains forbidden |
 
 ## One-time closure-balance repair
 
@@ -1001,17 +1003,17 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run only the isolated Stage 3.3 20-qid data/readiness smoke:
+Run only the full Stage 3.3 data construction/readiness audit:
 
 ```bash
-MAX_QIDS=20 FORCE_DATA=1 CHECK_ONLY=1 \
-DATA_ROOT=data/hotpotqa_distractor_v26_fiske_clue_state_smoke20 \
-READINESS_OUTPUT=outputs/analysis/kbs_stage3_fiske_clue_state_smoke20.json \
+MAX_QIDS=0 FORCE_DATA=1 CHECK_ONLY=1 \
+DATA_ROOT=data/hotpotqa_distractor_v26_fiske_clue_state \
+READINESS_OUTPUT=outputs/analysis/kbs_stage3_fiske_clue_state_readiness.json \
 bash scripts/run_kbs_stage3_fiske_clue_state.sh
 ```
 
-Do not train and do not call the answer API. Full data construction is
-authorized only after the smoke report has `status: OK`, exact paired rows,
+Do not train and do not call the answer API. One seed-42 training run is
+authorized only after the full report has `status: OK`, exact paired rows,
 100% renderer matches, zero forbidden fields, zero non-monotonic transitions,
 zero split/evaluation overlap, and no matched-config failures.
 ```
