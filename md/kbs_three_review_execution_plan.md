@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3R closed with a failed validation gate; v25 test evaluation forbidden; Stage 3.3 readiness authorized
+current_status: Stage 3.3 clue-state tooling complete; isolated 20-qid readiness smoke authorized; training forbidden
 ```
 
 This file is the single execution plan synthesized from:
@@ -531,7 +531,39 @@ test time.
 
 Call it `FiSKE-inspired textual clue-state baseline`.
 
-**Status:** readiness authorized after the negative closure of Stage 3R.
+**Status:** tooling complete; isolated 20-qid readiness smoke authorized.
+
+### Frozen Stage 3.3 protocol
+
+- Call the method `FiSKE-inspired textual clue-state baseline`; it is not a
+  faithful FiSKE reproduction.
+- Extract a frozen list of entity, relation, and answer-type clues using only
+  the question text and deterministic rules. No LLM or API is used.
+- At state `t`, mark clues using only the text of evidence units already
+  present in `H_t`. Gold supporting facts not yet acquired, answers, teacher
+  roles, positive labels, and future trajectory units are forbidden inputs.
+- Render the complete binary coverage vector plus the unresolved clue list
+  into `K_t`.
+- Copy v22 qids, row order, `H_t`, fixed candidate pools, and ranking labels
+  exactly. Keep auxiliary labels masked.
+- Match the v22 seed-42 initialization, optimizer, ranking losses, two epochs,
+  and candidate budget. Use an independent v26 output directory.
+
+Implementation:
+
+```text
+src/clue_state.py
+scripts/build_kbs_v26_fiske_clue_state_data.py
+scripts/check_kbs_v26_fiske_clue_state.py
+scripts/run_kbs_stage3_fiske_clue_state.sh
+configs/train_ranker_deberta_v26_fiske_clue_state.yaml
+```
+
+The readiness audit must pass exact source/output pairing, deterministic
+renderer replay, monotonic clue coverage, zero forbidden clue-state fields,
+split and evaluation disjointness, and matched configuration checks. Run a
+20-qid data/readiness smoke first. Do not train until that report is recorded
+as `status: OK`.
 
 ## Controlled reporting
 
@@ -921,6 +953,7 @@ The paper may be locked only when:
 | `stage3r-v25-train-seed42` | 3R | v25 mixed teacher/rollout train states; rollout-only validation/internal test; v22 initialization; matched optimizer/ranking losses; two epochs | PASS training: epoch 2 selected; train accuracy 0.699655, validation accuracy 0.678542, internal-test accuracy 0.605453; validation loss improved from 0.954928 to 0.942863 | Authorize one question-disjoint 1,000-qid validation-only gate; no answer API |
 | `stage3r-v25-validation-gate-tooling` | 3R | v25 Full versus v23 trained anchor and v24 direct-indirect; same 1,000 qids, alpha 0.5, top-5 evidence budget, top-1 state write | Three-way runner and qid-clustered paired bootstrap analyzer prepared; gate requires significant v25 hop-2+ Step@1 or MRR gain over at least one baseline without significant full-unit regression | Run once without answers; do not inspect the 3,000-qid evaluation subset |
 | `stage3r-v25-validation-gate` | 3R | v25 Full versus v23 anchor and v24 direct-indirect; question-disjoint validation 1,000; 10,000 qid-clustered bootstrap samples; no API | FAIL: v25 ties v23 full-unit but significantly loses hop-2+ Step@1/MRR; v25 significantly improves v24 full-unit by +0.016 [0.003, 0.029] but significantly loses hop-2+ Step@1/MRR | Close Stage 3R; forbid v25 evaluation on 3,000 qids and further mixture tuning |
+| `stage3-fiske-clue-state-tooling` | 3.3 | Deterministic question-only clue generator; current-prefix coverage updater; v22 row/pool/label-preserving rewrite; matched v26 config | Local syntax and synthetic paired audit PASS: renderer replay 6/6, zero forbidden fields, zero non-monotonic transitions, zero config mismatches | Authorize isolated 20-qid data/readiness smoke only; no training or API |
 
 ## One-time closure-balance repair
 
@@ -968,14 +1001,19 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Prepare Stage 3.3 readiness for a FiSKE-inspired textual clue-state baseline.
-Do not train and do not call the answer API. Freeze a question-only clue
-generator, a deterministic evidence-to-clue coverage rule, and an unresolved
-clue-state renderer. The audit must prove that no gold supporting fact,
-teacher role, answer, or future trajectory unit is used to construct clues or
-update online clue state. Match the v22 train/validation/internal-test qids,
-fixed candidate pools, v21 initialization, optimizer, ranking losses, seed,
-and Compact budgets, with an independent output directory.
+Run only the isolated Stage 3.3 20-qid data/readiness smoke:
+
+```bash
+MAX_QIDS=20 FORCE_DATA=1 CHECK_ONLY=1 \
+DATA_ROOT=data/hotpotqa_distractor_v26_fiske_clue_state_smoke20 \
+READINESS_OUTPUT=outputs/analysis/kbs_stage3_fiske_clue_state_smoke20.json \
+bash scripts/run_kbs_stage3_fiske_clue_state.sh
+```
+
+Do not train and do not call the answer API. Full data construction is
+authorized only after the smoke report has `status: OK`, exact paired rows,
+100% renderer matches, zero forbidden fields, zero non-monotonic transitions,
+zero split/evaluation overlap, and no matched-config failures.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
