@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.3 training attempt hit GPU-0 OOM from concurrent memory use; same frozen run may resume once on an empty GPU; API forbidden
+current_status: Stage 3.3 checkpoint audit failed (missing history/test metrics); archive incomplete output and restart the same frozen run on an empty GPU; API forbidden
 ```
 
 This file is the single execution plan synthesized from:
@@ -960,6 +960,7 @@ The paper may be locked only when:
 | `stage3-fiske-clue-state-smoke20` | 3.3 | First 20 qids from each v22 train/validation/internal-test split; deterministic clue state; no API and no training | PASS: 52/43/47 source-output rows paired exactly; renderer 142/142; zero forbidden fields, non-monotonic transitions, row errors, split/evaluation overlap, and config mismatches | Authorize full v26 clue-state data construction/readiness only; training remains forbidden |
 | `stage3-fiske-clue-state-full-readiness` | 3.3 | v22-matched train/validation/internal-test qids and fixed pools rewritten as deterministic clue states; no API and no training | PASS: 27,730/1,207/1,247 rows paired and rendered exactly; 10,000/500/500 qids; zero forbidden fields, non-monotonic transitions, row errors, split/evaluation overlap, and 24-field config mismatches | Authorize exactly one matched v26 seed-42 two-epoch training run; answer API forbidden |
 | `stage3-fiske-clue-state-train-attempt1` | 3.3 | Frozen v26 seed-42 configuration on GPU 0 | FAILED before epoch completion: current process reached about 22.66 GiB while another process occupied 838 MiB; only 52 MiB remained and a 64 MiB allocation failed | Do not change training protocol; resume once on a GPU with no competing process |
+| `stage3-fiske-clue-state-checkpoint-audit` | 3.3 | Existing v26 output after interrupted launch | INCOMPLETE: `best_model.pt` (1,736,267,788 bytes) and `best_val_metrics.json` exist, but `train_history.json` and final `test_metrics.json` are absent | Archive the incomplete directory; restart the identical seed-42 run on an empty GPU; forbid online evaluation |
 
 ## One-time closure-balance repair
 
@@ -1007,10 +1008,13 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Inspect GPU occupancy, then resume the same matched Stage 3.3 seed-42 job on
-an otherwise empty device:
+Archive the incomplete output, inspect GPU occupancy, then restart the same
+matched Stage 3.3 seed-42 job on an otherwise empty device:
 
 ```bash
+stamp=$(date +%Y%m%d-%H%M%S)
+mv outputs/ranker/deberta_v3_large_v26_fiske_clue_state \
+  outputs/ranker/deberta_v3_large_v26_fiske_clue_state_incomplete_$stamp
 BUILD_DATA=0 CHECK_ONLY=0 MAX_QIDS=0 CUDA_DEVICE=<empty-gpu> \
 bash scripts/run_kbs_stage3_fiske_clue_state.sh
 ```
