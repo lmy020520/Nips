@@ -419,6 +419,11 @@ class PrefixRankingDataset(Dataset):
                 )
 
             label_idx = normalized_candidates.index(positive_unit_id)
+            acquired_candidate_indices = [
+                normalized_candidates.index(unit_id)
+                for unit_id in get_state_h_ids(record)
+                if unit_id in normalized_candidates and unit_id != positive_unit_id
+            ]
             positive_memory = self.memory_map.get(positive_unit_id)
             positive_role_id = -100
             if positive_memory:
@@ -439,6 +444,7 @@ class PrefixRankingDataset(Dataset):
                     "candidate_unit_ids": normalized_candidates,
                     "candidate_texts": candidate_texts,
                     "candidate_role_ids": candidate_role_ids,
+                    "acquired_candidate_indices": acquired_candidate_indices,
                     "label_idx": label_idx,
                     "positive_unit_id": positive_unit_id,
                     "positive_role_id": positive_role_id,
@@ -458,6 +464,8 @@ class PrefixRankingDataset(Dataset):
 def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
     flat_text_a: List[str] = []
     flat_text_b: List[str] = []
+    flat_candidate_questions: List[str] = []
+    state_texts: List[str] = []
     candidate_counts: List[int] = []
     labels: List[int] = []
 
@@ -470,6 +478,7 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
     deficit_labels: List[List[float]] = []
     positive_contribution_labels: List[List[float]] = []
     flat_candidate_role_ids: List[int] = []
+    acquired_candidate_indices: List[List[int]] = []
 
     for item in batch:
         qids.append(item["qid"])
@@ -480,8 +489,10 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
         positive_role_ids.append(item["positive_role_id"])
         deficit_labels.append(item["deficit_label"])
         positive_contribution_labels.append(item["positive_contribution_label"])
+        acquired_candidate_indices.append(item["acquired_candidate_indices"])
 
         context_text = item["context_text"]
+        state_texts.append(context_text)
         cand_texts = item["candidate_texts"]
 
         candidate_counts.append(len(cand_texts))
@@ -490,6 +501,7 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
         for cand_text in cand_texts:
             flat_text_a.append(context_text)
             flat_text_b.append(cand_text)
+            flat_candidate_questions.append(item["question"])
         flat_candidate_role_ids.extend(item["candidate_role_ids"])
 
     return {
@@ -497,6 +509,8 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
         "ts": ts,
         "flat_text_a": flat_text_a,
         "flat_text_b": flat_text_b,
+        "flat_candidate_questions": flat_candidate_questions,
+        "state_texts": state_texts,
         "candidate_counts": candidate_counts,
         "labels": labels,
         "candidate_unit_ids": candidate_unit_ids,
@@ -506,4 +520,5 @@ def prefix_ranking_collate_fn(batch: List[dict]) -> dict:
         "deficit_labels": deficit_labels,
         "positive_contribution_labels": positive_contribution_labels,
         "flat_candidate_role_ids": flat_candidate_role_ids,
+        "acquired_candidate_indices": acquired_candidate_indices,
     }

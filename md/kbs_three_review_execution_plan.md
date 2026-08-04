@@ -6,8 +6,8 @@
 plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
-current_stage: 4
-current_status: Stage 4 offline standard-metric tooling implemented and locally validated; server readiness and five-method offline evaluation authorized; no API or training
+current_stage: 3X
+current_status: v27 counterfactual dual-tower tooling implemented; syntax and synthetic data gate pass; server 20-qid data/readiness smoke authorized; Stage 4 paused; no API or training yet
 ```
 
 This file is the single execution plan synthesized from:
@@ -81,14 +81,15 @@ Typed deficit and contribution are diagnostic mechanisms by default. They
 must not be restored as headline performance contributions unless Stage 7
 passes its explicit gate.
 
-## 2. Eight-stage execution overview
+## 2. Execution overview
 
 | Stage | Goal | Current status | API | Training |
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
 | 3 | Controlled mechanism baselines | Closed: v23/v24 outperform Full; v25 and v26 gates failed | No further API | Completed for v23/v24/v25/v26 seed 42 |
-| 4 | Standard and closure-aware metrics | Authorized: implement and validate offline metrics first | Mostly offline | No |
+| 3X | High-cost state architecture repair | Authorized: v27 data/readiness smoke only | No | Not yet |
+| 4 | Standard and closure-aware metrics | Tooling ready; paused until Stage 3X gate closes | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
 | 7 | Decide deficit/contribution status | Pending | No initially | Conditional |
@@ -594,6 +595,64 @@ advantageous.
 
 ---
 
+## Stage 3X: High-cost counterfactual state architecture repair
+
+### Motivation
+
+The v23 anchor and v24 direct-indirect controls outperform the existing Full
+state policy, while v25 rollout mixing and v26 clue-state rendering fail their
+validation gates. The remaining high-cost route must therefore change both
+the learning signal and the state-candidate interaction architecture. Another
+text-only renderer variation is forbidden.
+
+### Frozen v27 protocol
+
+1. Start from the audited v22 fixed-pool train/validation/internal-test data;
+   do not use the 3,000-question evaluation subset or answer API.
+2. Canonicalize to one row per `(qid,t)`. Keep `t=0` once and oversample every
+   train state with `t>=1` exactly twice. Validation and internal test remain
+   canonical and unweighted.
+3. For every later state, identify acquired evidence units in `H_t` that
+   remain in the same candidate pool. Add an explicit margin requiring the
+   current teacher-positive unit to outrank those acquired units.
+4. Use one shared DeBERTa-v3-large backbone in two explicit passes: encode
+   `(q,K_t)` as the state vector and `(q,u)` as the candidate vector. Score
+   their concatenation, element-wise product, and absolute difference through
+   a learned interaction head.
+5. Initialize the shared encoder from v21 Full. Freeze encoder LR at `5e-7`,
+   new interaction-head LR at `5e-5`, projection dimension at 256, two epochs,
+   seed 42, acquired-negative margin 0.20 and weight 0.50. Deficit,
+   contribution, and role auxiliary losses remain disabled.
+6. Report ordinary ranking accuracy and acquired-pair reversal accuracy.
+   Runtime must infer the architecture from checkpoint metadata so training,
+   online rollout, and state intervention use identical scoring.
+
+### Execution gates
+
+1. Run a 20-qid data/readiness smoke with no GPU training.
+2. Build and audit the complete v27 data. Require fixed pools, exact v22
+   labels/state text, all adjacent preference switches, nonzero acquired
+   counterfactual pairs, and zero split/evaluation overlap.
+3. Run exactly one seed-42 training job. If it OOMs, only memory-preserving
+   implementation changes are allowed; objective weights and data protocol
+   remain frozen.
+4. On the question-disjoint 1,000-qid validation set, compare v27 against v22
+   Full, v23 anchor, and v24 direct-indirect without answers. Proceed only if
+   v27 significantly improves hop-2+ Step@1 or MRR over both controlled chain
+   baselines under qid-clustered paired bootstrap and has no significant
+   full-unit-coverage regression.
+5. Only after that gate may seeds 43/44 and one final 3,000-qid/API evaluation
+   be authorized. A failed gate closes v27 and restores the narrowed
+   closure-control claim.
+
+### Current authorization
+
+Only tooling plus the 20-qid data/readiness smoke is authorized. Full data
+construction, training, validation comparison, and answer generation are not
+yet authorized.
+
+---
+
 # Stage 4: Standard and Closure-Aware Evaluation
 
 ## Purpose
@@ -985,6 +1044,8 @@ The paper may be locked only when:
 | `stage3-fiske-clue-state-runtime-smoke20` | 3.3 | v26 clue state vs v22 full state, v23 previous-evidence anchor, and v24 direct/indirect anchor; alpha 0.5; candidate 10; select 5; top-1 state write; no answers | PASS: 20 identical qids and 56 states; zero protocol failures; all 56 clue updates monotonic; all 36 cross-step transitions linked; v26 is competitive against all three controls under the smoke gate | Authorize the same paired gate on the full question-disjoint 1,000-qid validation set; smoke metrics are not paper evidence |
 | `stage3-fiske-clue-state-validation-gate` | 3.3 | Same four methods on 1,000 question-disjoint validation qids and 2,449 states; alpha 0.5; top-1 state write; 10,000 qid-clustered bootstrap samples; no answers | FAIL: zero protocol/transition failures, but v26 full-unit coverage is 0.664 versus 0.782/0.784/0.768; deltas are -0.118 [-0.145,-0.092], -0.120 [-0.148,-0.093], and -0.104 [-0.131,-0.078]. Versus v22, v26 improves hop-2+ Step@1 by +0.037957 [0.004071,0.071179] and MRR by +0.027656 [0.002655,0.052216], but all-state Alignment@5 falls by -0.018375 [-0.034414,-0.002448] | Close v26 as a negative sharp-ranking/completeness tradeoff; forbid 3,000-qid and API evaluation; advance to Stage 4 |
 | `stage4-standard-metric-tooling` | 4 | Per-step top-1 supporting-fact chain; selected-context evidence metrics; official-style answer and joint products; unit-budget ClosureSuccess; source-summary replay; Gold Oracle gate | Local syntax, synthetic oracle, and real v22 Compact replay PASS. Recomputed Answer EM/F1 and full coverage exactly match the source report. Preliminary v22 Compact values: Supporting Fact F1 0.464404, Supporting Fact EM 0.086333, Joint F1 0.356303, Joint EM 0.056667 | Authorize server readiness and one offline five-method evaluation; no API or training |
+| `stage3x-v27-protocol-authorized` | 3X | v22 fixed-pool counterfactual states; shared-backbone dual state/candidate encoder; acquired-evidence reversal margin | Protocol frozen before training; Stage 4 paused at user request; no API, training, validation, or evaluation run yet | Implement tooling and authorize only a 20-qid data/readiness smoke |
+| `stage3x-v27-tooling` | 3X | v27 canonicalizer, counterfactual labels, dual-tower model/trainer/runtime compatibility, config, readiness checker, guarded runner | Python/shell syntax and diff checks pass; isolated synthetic audit passes t>=1 oversampling, acquired-negative pairs, adjacent preference switches, and split disjointness. Local tensor forward was unavailable because the workstation environment has no PyTorch | Authorize server 20-qid data/readiness smoke only; no training or API |
 
 ## One-time closure-balance repair
 
@@ -1032,17 +1093,17 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run Stage 4 readiness and the five-method standard/closure-aware evaluation
-offline, without answer generation or model training:
+Run only the v27 20-qid data/readiness smoke, without answer generation or
+model training:
 
 ```bash
-bash scripts/run_kbs_stage4_standard_metrics.sh
+MAX_QIDS=20 CHECK_ONLY=1 TRAIN=0 bash scripts/run_kbs_v27_counterfactual_dual.sh
 ```
 
-The run must use 3,000 identical qids across KSG-EA Compact/Recall, v23
-anchor, v24 direct-indirect, and Gold Oracle; reproduce source Answer EM/F1
-and full-unit coverage; and make Gold Oracle reach Supporting Fact recall and
-EM of one. Do not proceed to Stage 5 until `summary.json` reports `status: OK`.
+The run must return `status: OK`, preserve every v22 candidate pool, label,
+and `K_t`, record nonzero acquired-negative pairs, verify every adjacent
+preference switch, and prove zero split/evaluation overlap. Do not build full
+data or start training until this smoke report is reviewed and recorded.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is

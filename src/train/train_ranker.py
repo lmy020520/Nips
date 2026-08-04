@@ -4,7 +4,7 @@ import math
 import os
 import random
 from pathlib import Path
-from typing import Dict
+from typing import Dict, List
 
 import torch
 import torch.nn.functional as F
@@ -15,7 +15,7 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, get_linear_schedule_with_warmup
 
 from src.datasets.prefix_dataset import PrefixRankingDataset, prefix_ranking_collate_fn
-from src.models.ranker import CrossEncoderRanker
+from src.models.ranker import CrossEncoderRanker, DualEncoderStateRanker
 
 
 def set_seed(seed: int):
@@ -69,6 +69,72 @@ def move_to_device(batch_tokens: dict, device: torch.device) -> dict:
     return {k: v.to(device) for k, v in batch_tokens.items()}
 
 
+def forward_ranker(
+    model,
+    batch: dict,
+    tokenizer,
+    device: torch.device,
+    architecture: str,
+    max_length: int,
+    state_max_length: int,
+    candidate_max_length: int,
+    return_deficit: bool,
+    return_contribution: bool,
+):
+    if architecture == "dual_state_interaction":
+        state_tokens = move_to_device(
+            tokenizer(
+                batch["state_texts"],
+                padding=True,
+                truncation=True,
+                max_length=state_max_length,
+                return_tensors="pt",
+            ),
+            device,
+        )
+        candidate_tokens = move_to_device(
+            tokenizer(
+                batch["flat_candidate_questions"],
+                batch["flat_text_b"],
+                padding=True,
+                truncation=True,
+                max_length=candidate_max_length,
+                return_tensors="pt",
+            ),
+            device,
+        )
+        return model(
+            state_input_ids=state_tokens["input_ids"],
+            state_attention_mask=state_tokens["attention_mask"],
+            state_token_type_ids=state_tokens.get("token_type_ids"),
+            candidate_input_ids=candidate_tokens["input_ids"],
+            candidate_attention_mask=candidate_tokens["attention_mask"],
+            candidate_token_type_ids=candidate_tokens.get("token_type_ids"),
+            candidate_counts=batch["candidate_counts"],
+            return_deficit=return_deficit,
+            return_contribution=return_contribution,
+        )
+
+    tokens = move_to_device(
+        tokenizer(
+            batch["flat_text_a"],
+            batch["flat_text_b"],
+            padding=True,
+            truncation=True,
+            max_length=max_length,
+            return_tensors="pt",
+        ),
+        device,
+    )
+    return model(
+        input_ids=tokens["input_ids"],
+        attention_mask=tokens["attention_mask"],
+        token_type_ids=tokens.get("token_type_ids"),
+        return_deficit=return_deficit,
+        return_contribution=return_contribution,
+    )
+
+
 def get_positive_flat_indices(candidate_counts, labels, device):
     offsets = []
     cursor = 0
@@ -84,6 +150,55 @@ def compute_margin_loss(packed_scores, labels, margin: float):
     negative_scores.scatter_(1, labels.unsqueeze(1), torch.finfo(packed_scores.dtype).min)
     hardest_negative_scores = negative_scores.max(dim=1).values
     return F.relu(margin - positive_scores + hardest_negative_scores).mean()
+
+
+def compute_acquired_negative_margin_loss(
+    packed_scores: torch.Tensor,
+    labels: torch.Tensor,
+    acquired_candidate_indices: List[List[int]],
+    margin: float,
+):
+    losses = []
+    for row_idx, acquired_indices in enumerate(acquired_candidate_indices):
+        positive_score = packed_scores[row_idx, labels[row_idx]]
+        for candidate_idx in acquired_indices:
+            losses.append(
+                F.relu(
+                    margin
+                    - positive_score
+                    + packed_scores[row_idx, int(candidate_idx)]
+                )
+            )
+    if not losses:
+        return None
+    return torch.stack(losses).mean()
+
+
+def acquired_pair_metrics(
+    packed_scores: torch.Tensor,
+    labels: torch.Tensor,
+    acquired_candidate_indices: List[List[int]],
+):
+    correct = 0
+    total = 0
+    for row_idx, acquired_indices in enumerate(acquired_candidate_indices):
+        positive_score = packed_scores[row_idx, labels[row_idx]]
+        for candidate_idx in acquired_indices:
+            correct += int(positive_score > packed_scores[row_idx, int(candidate_idx)])
+            total += 1
+    return correct, total
+
+
+def load_compatible_state_dict(model, state_dict: dict):
+    current = model.state_dict()
+    compatible = {
+        key: value
+        for key, value in state_dict.items()
+        if key in current and current[key].shape == value.shape
+    }
+    skipped = sorted(set(state_dict) - set(compatible))
+    missing, unexpected = model.load_state_dict(compatible, strict=False)
+    return list(missing), list(unexpected), skipped
 
 
 def mean_pack_vectors(flat_vectors: torch.Tensor, candidate_counts) -> torch.Tensor:
@@ -151,6 +266,9 @@ def run_eval(
     tokenizer,
     device,
     max_length: int,
+    architecture: str = "cross_encoder",
+    state_max_length: int = 320,
+    candidate_max_length: int = 192,
     role_aux_weight: float = 0.0,
     deficit_aux_weight: float = 0.0,
     candidate_role_aux_weight: float = 0.0,
@@ -169,24 +287,22 @@ def run_eval(
     deficit_total = 0
     contribution_abs_error = 0.0
     contribution_total = 0
+    acquired_pair_correct = 0
+    acquired_pair_total = 0
 
     with torch.no_grad():
         for batch in tqdm(loader, desc="eval", leave=False):
-            tokens = tokenizer(
-                batch["flat_text_a"],
-                batch["flat_text_b"],
-                padding=True,
-                truncation=True,
-                max_length=max_length,
-                return_tensors="pt",
-            )
-            tokens = move_to_device(tokens, device)
             labels = torch.tensor(batch["labels"], dtype=torch.long, device=device)
 
-            model_outputs = model(
-                input_ids=tokens["input_ids"],
-                attention_mask=tokens["attention_mask"],
-                token_type_ids=tokens.get("token_type_ids"),
+            model_outputs = forward_ranker(
+                model=model,
+                batch=batch,
+                tokenizer=tokenizer,
+                device=device,
+                architecture=architecture,
+                max_length=max_length,
+                state_max_length=state_max_length,
+                candidate_max_length=candidate_max_length,
                 return_deficit=deficit_aux_weight > 0.0,
                 return_contribution=contribution_aux_weight > 0.0,
             )
@@ -198,6 +314,13 @@ def run_eval(
             if contribution_aux_weight > 0.0:
                 flat_contribution_preds = model_outputs[output_cursor]
             packed_scores, _ = CrossEncoderRanker.pack_scores(flat_scores, batch["candidate_counts"])
+            pair_correct, pair_total = acquired_pair_metrics(
+                packed_scores,
+                labels,
+                batch["acquired_candidate_indices"],
+            )
+            acquired_pair_correct += pair_correct
+            acquired_pair_total += pair_total
 
             loss = F.cross_entropy(packed_scores, labels)
             role_labels = torch.tensor(batch["positive_role_ids"], dtype=torch.long, device=device)
@@ -272,6 +395,8 @@ def run_eval(
         "deficit_labeled": deficit_total,
         "contribution_mae": contribution_abs_error / max(contribution_total, 1),
         "contribution_labeled": contribution_total,
+        "acquired_pair_acc": acquired_pair_correct / max(acquired_pair_total, 1),
+        "acquired_pairs": acquired_pair_total,
     }
 
 
@@ -284,6 +409,9 @@ def train_one_epoch(
     scaler,
     device,
     max_length: int,
+    architecture: str,
+    state_max_length: int,
+    candidate_max_length: int,
     grad_accum_steps: int,
     max_grad_norm: float,
     use_fp16: bool,
@@ -294,6 +422,8 @@ def train_one_epoch(
     deficit_aux_weight: float,
     candidate_role_aux_weight: float,
     contribution_aux_weight: float,
+    acquired_negative_margin_weight: float,
+    acquired_negative_margin: float,
 ):
     model.train()
 
@@ -308,27 +438,25 @@ def train_one_epoch(
     deficit_total = 0
     contribution_abs_error = 0.0
     contribution_total = 0
+    acquired_pair_correct = 0
+    acquired_pair_total = 0
 
     optimizer.zero_grad(set_to_none=True)
 
     progress = tqdm(loader, desc="train", leave=False)
     for step_idx, batch in enumerate(progress, start=1):
-        tokens = tokenizer(
-            batch["flat_text_a"],
-            batch["flat_text_b"],
-            padding=True,
-            truncation=True,
-            max_length=max_length,
-            return_tensors="pt",
-        )
-        tokens = move_to_device(tokens, device)
         labels = torch.tensor(batch["labels"], dtype=torch.long, device=device)
 
         with torch.amp.autocast("cuda", enabled=use_fp16):
-            model_outputs = model(
-                input_ids=tokens["input_ids"],
-                attention_mask=tokens["attention_mask"],
-                token_type_ids=tokens.get("token_type_ids"),
+            model_outputs = forward_ranker(
+                model=model,
+                batch=batch,
+                tokenizer=tokenizer,
+                device=device,
+                architecture=architecture,
+                max_length=max_length,
+                state_max_length=state_max_length,
+                candidate_max_length=candidate_max_length,
                 return_deficit=deficit_aux_weight > 0.0,
                 return_contribution=contribution_aux_weight > 0.0,
             )
@@ -343,6 +471,15 @@ def train_one_epoch(
             loss = F.cross_entropy(packed_scores, labels)
             if margin_loss_weight > 0.0:
                 loss = loss + margin_loss_weight * compute_margin_loss(packed_scores, labels, margin)
+            if acquired_negative_margin_weight > 0.0:
+                acquired_margin_loss = compute_acquired_negative_margin_loss(
+                    packed_scores,
+                    labels,
+                    batch["acquired_candidate_indices"],
+                    acquired_negative_margin,
+                )
+                if acquired_margin_loss is not None:
+                    loss = loss + acquired_negative_margin_weight * acquired_margin_loss
 
             role_labels = torch.tensor(batch["positive_role_ids"], dtype=torch.long, device=device)
             role_mask = role_labels != -100
@@ -382,7 +519,7 @@ def train_one_epoch(
 
         scaler.scale(loss).backward()
 
-        if step_idx % grad_accum_steps == 0:
+        if step_idx % grad_accum_steps == 0 or step_idx == len(loader):
             scaler.unscale_(optimizer)
             torch.nn.utils.clip_grad_norm_(model.parameters(), max_grad_norm)
 
@@ -397,6 +534,13 @@ def train_one_epoch(
             total_loss += loss.item() * grad_accum_steps * bs
             total_samples += bs
             correct += (preds == labels).sum().item()
+            pair_correct, pair_total = acquired_pair_metrics(
+                packed_scores,
+                labels,
+                batch["acquired_candidate_indices"],
+            )
+            acquired_pair_correct += pair_correct
+            acquired_pair_total += pair_total
             if role_aux_weight > 0.0 and role_mask.any():
                 role_correct += (
                     positive_role_logits[role_mask].argmax(dim=-1) == role_labels[role_mask]
@@ -439,6 +583,8 @@ def train_one_epoch(
         "deficit_labeled": deficit_total,
         "contribution_mae": contribution_abs_error / max(contribution_total, 1),
         "contribution_labeled": contribution_total,
+        "acquired_pair_acc": acquired_pair_correct / max(acquired_pair_total, 1),
+        "acquired_pairs": acquired_pair_total,
     }
 
 
@@ -480,6 +626,9 @@ def main():
 
     pretrained_name = config["model"]["pretrained_name"]
     dropout = float(config["model"].get("dropout", 0.1))
+    architecture = str(config["model"].get("architecture", "cross_encoder"))
+    if architecture not in {"cross_encoder", "dual_state_interaction"}:
+        raise ValueError(f"unsupported model architecture: {architecture}")
 
     batch_size = int(config["train"]["batch_size"])
     num_workers = int(config["train"]["num_workers"])
@@ -488,6 +637,8 @@ def main():
     weight_decay = float(config["train"]["weight_decay"])
     warmup_ratio = float(config["train"]["warmup_ratio"])
     max_length = int(config["train"]["max_length"])
+    state_max_length = int(config["train"].get("state_max_length", max_length))
+    candidate_max_length = int(config["train"].get("candidate_max_length", max_length))
     grad_accum_steps = int(config["train"]["grad_accum_steps"])
     max_grad_norm = float(config["train"]["max_grad_norm"])
     log_every = int(config["train"]["log_every"])
@@ -498,6 +649,12 @@ def main():
     margin_loss_weight = float(config["train"].get("margin_loss_weight", 0.0))
     margin = float(config["train"].get("margin", 0.2))
     deficit_aux_weight = float(config["train"].get("deficit_aux_weight", 0.0))
+    acquired_negative_margin_weight = float(
+        config["train"].get("acquired_negative_margin_weight", 0.0)
+    )
+    acquired_negative_margin = float(
+        config["train"].get("acquired_negative_margin", margin)
+    )
     context_mode = str(config["data"].get("context_mode", "full_state"))
 
     tokenizer = AutoTokenizer.from_pretrained(pretrained_name)
@@ -531,22 +688,51 @@ def main():
         context_mode=str(config["data"].get("test_context_mode", context_mode)),
     )
 
-    model = CrossEncoderRanker(
-        pretrained_name=pretrained_name,
-        dropout=dropout,
-    ).to(device)
+    if architecture == "dual_state_interaction":
+        model = DualEncoderStateRanker(
+            pretrained_name=pretrained_name,
+            dropout=dropout,
+            projection_dim=int(config["model"].get("projection_dim", 256)),
+        ).to(device)
+    else:
+        model = CrossEncoderRanker(
+            pretrained_name=pretrained_name,
+            dropout=dropout,
+        ).to(device)
     init_checkpoint = str(config["train"].get("init_checkpoint", "") or "").strip()
     if init_checkpoint:
         checkpoint = torch.load(init_checkpoint, map_location=device)
         state_dict = checkpoint.get("model_state_dict", checkpoint)
-        missing_keys, unexpected_keys = model.load_state_dict(state_dict, strict=False)
+        missing_keys, unexpected_keys, skipped_keys = load_compatible_state_dict(
+            model,
+            state_dict,
+        )
         print(f"Loaded init checkpoint: {init_checkpoint}")
         if missing_keys:
             print(f"  missing_keys: {missing_keys}")
         if unexpected_keys:
             print(f"  unexpected_keys: {unexpected_keys}")
+        if skipped_keys:
+            print(f"  skipped_incompatible_keys: {skipped_keys}")
 
-    optimizer = AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
+    head_lr = float(config["train"].get("head_lr", lr))
+    if architecture == "dual_state_interaction" and head_lr != lr:
+        optimizer = AdamW(
+            [
+                {"params": model.encoder.parameters(), "lr": lr},
+                {
+                    "params": [
+                        parameter
+                        for name, parameter in model.named_parameters()
+                        if not name.startswith("encoder.")
+                    ],
+                    "lr": head_lr,
+                },
+            ],
+            weight_decay=weight_decay,
+        )
+    else:
+        optimizer = AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
 
     num_update_steps_per_epoch = math.ceil(len(train_loader) / max(grad_accum_steps, 1))
     total_train_steps = num_update_steps_per_epoch * epochs
@@ -564,6 +750,7 @@ def main():
     print(f"train samples: {len(train_dataset)}")
     print(f"train skipped unlabeled positives: {train_dataset.skipped_unlabeled_positive}")
     print(f"context mode: {context_mode}")
+    print(f"model architecture: {architecture}")
     print(f"val samples:   {len(val_dataset)}")
     print(f"test samples:  {len(test_dataset)}")
     print("===== training =====")
@@ -584,6 +771,9 @@ def main():
             scaler=scaler,
             device=device,
             max_length=max_length,
+            architecture=architecture,
+            state_max_length=state_max_length,
+            candidate_max_length=candidate_max_length,
             grad_accum_steps=grad_accum_steps,
             max_grad_norm=max_grad_norm,
             use_fp16=use_fp16,
@@ -594,6 +784,8 @@ def main():
             deficit_aux_weight=deficit_aux_weight,
             candidate_role_aux_weight=candidate_role_aux_weight,
             contribution_aux_weight=contribution_aux_weight,
+            acquired_negative_margin_weight=acquired_negative_margin_weight,
+            acquired_negative_margin=acquired_negative_margin,
         )
 
         val_metrics = run_eval(
@@ -602,6 +794,9 @@ def main():
             tokenizer=tokenizer,
             device=device,
             max_length=max_length,
+            architecture=architecture,
+            state_max_length=state_max_length,
+            candidate_max_length=candidate_max_length,
             role_aux_weight=role_aux_weight,
             deficit_aux_weight=deficit_aux_weight,
             candidate_role_aux_weight=candidate_role_aux_weight,
@@ -617,6 +812,7 @@ def main():
             f" val_candidate_role_acc={val_metrics['candidate_role_acc']:.4f}"
             f" val_deficit_mae={val_metrics['deficit_mae']:.4f}"
             f" val_contribution_mae={val_metrics['contribution_mae']:.4f}"
+            f" val_acquired_pair_acc={val_metrics['acquired_pair_acc']:.4f}"
         )
 
         history.append(
@@ -652,6 +848,9 @@ def main():
         tokenizer=tokenizer,
         device=device,
         max_length=max_length,
+        architecture=architecture,
+        state_max_length=state_max_length,
+        candidate_max_length=candidate_max_length,
         role_aux_weight=role_aux_weight,
         deficit_aux_weight=deficit_aux_weight,
         candidate_role_aux_weight=candidate_role_aux_weight,

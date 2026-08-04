@@ -33,7 +33,7 @@ from src.clue_state import (
     format_clue_evidence,
     render_clue_state,
 )
-from src.models.ranker import CrossEncoderRanker
+from src.models.ranker import CrossEncoderRanker, DualEncoderStateRanker
 from src.online_state import init_online_state, render_online_k_t, update_online_state
 
 
@@ -432,10 +432,96 @@ class PolicyModel:
         self.max_length = max_length
         self.batch_size = max(1, batch_size)
         self.tokenizer = AutoTokenizer.from_pretrained(str(model_dir))
-        self.model = CrossEncoderRanker(pretrained_name=str(model_dir), dropout=0.1).to(self.device)
-        checkpoint_obj = torch.load(str(checkpoint), map_location=self.device)
+        checkpoint_obj = torch.load(str(checkpoint), map_location="cpu")
+        checkpoint_config = checkpoint_obj.get("config") or {}
+        model_config = checkpoint_config.get("model") or {}
+        train_config = checkpoint_config.get("train") or {}
+        self.architecture = str(model_config.get("architecture", "cross_encoder"))
+        if self.architecture not in {"cross_encoder", "dual_state_interaction"}:
+            raise ValueError(
+                f"unsupported policy checkpoint architecture: {self.architecture}"
+            )
+        self.state_max_length = int(train_config.get("state_max_length", max_length))
+        self.candidate_max_length = int(train_config.get("candidate_max_length", max_length))
+        if self.architecture == "dual_state_interaction":
+            self.model = DualEncoderStateRanker(
+                pretrained_name=str(model_dir),
+                dropout=float(model_config.get("dropout", 0.1)),
+                projection_dim=int(model_config.get("projection_dim", 256)),
+            ).to(self.device)
+        else:
+            self.model = CrossEncoderRanker(
+                pretrained_name=str(model_dir),
+                dropout=float(model_config.get("dropout", 0.1)),
+            ).to(self.device)
         self.model.load_state_dict(checkpoint_obj.get("model_state_dict", checkpoint_obj), strict=False)
         self.model.eval()
+
+    @staticmethod
+    def _question_from_context(context: str) -> str:
+        first_line = str(context).splitlines()[0].strip()
+        if first_line.lower().startswith("question:"):
+            return first_line.split(":", 1)[1].strip()
+        return first_line
+
+    def _forward_batch(
+        self,
+        context: str,
+        batch_texts: list[str],
+        return_deficit: bool,
+        return_contribution: bool = False,
+    ):
+        if self.architecture == "dual_state_interaction":
+            state_tokens = self.tokenizer(
+                [context],
+                padding=True,
+                truncation=True,
+                max_length=self.state_max_length,
+                return_tensors="pt",
+            )
+            question = self._question_from_context(context)
+            candidate_tokens = self.tokenizer(
+                [question] * len(batch_texts),
+                batch_texts,
+                padding=True,
+                truncation=True,
+                max_length=self.candidate_max_length,
+                return_tensors="pt",
+            )
+            state_tokens = {
+                key: value.to(self.device) for key, value in state_tokens.items()
+            }
+            candidate_tokens = {
+                key: value.to(self.device) for key, value in candidate_tokens.items()
+            }
+            return self.model(
+                state_input_ids=state_tokens["input_ids"],
+                state_attention_mask=state_tokens["attention_mask"],
+                state_token_type_ids=state_tokens.get("token_type_ids"),
+                candidate_input_ids=candidate_tokens["input_ids"],
+                candidate_attention_mask=candidate_tokens["attention_mask"],
+                candidate_token_type_ids=candidate_tokens.get("token_type_ids"),
+                candidate_counts=[len(batch_texts)],
+                return_deficit=return_deficit,
+                return_contribution=return_contribution,
+            )
+
+        tokens = self.tokenizer(
+            [context] * len(batch_texts),
+            batch_texts,
+            padding=True,
+            truncation=True,
+            max_length=self.max_length,
+            return_tensors="pt",
+        )
+        tokens = {key: value.to(self.device) for key, value in tokens.items()}
+        return self.model(
+            input_ids=tokens["input_ids"],
+            attention_mask=tokens["attention_mask"],
+            token_type_ids=tokens.get("token_type_ids"),
+            return_deficit=return_deficit,
+            return_contribution=return_contribution,
+        )
 
     def score(self, context: str, candidate_texts: list[str]) -> np.ndarray:
         scores, _, _ = self.score_with_aux(context, candidate_texts, return_aux=False)
@@ -453,19 +539,9 @@ class PolicyModel:
         with torch.no_grad():
             for start in range(0, len(candidate_texts), self.batch_size):
                 batch_texts = candidate_texts[start : start + self.batch_size]
-                tokens = self.tokenizer(
-                    [context] * len(batch_texts),
-                    batch_texts,
-                    padding=True,
-                    truncation=True,
-                    max_length=self.max_length,
-                    return_tensors="pt",
-                )
-                tokens = {key: value.to(self.device) for key, value in tokens.items()}
-                model_outputs = self.model(
-                    input_ids=tokens["input_ids"],
-                    attention_mask=tokens["attention_mask"],
-                    token_type_ids=tokens.get("token_type_ids"),
+                model_outputs = self._forward_batch(
+                    context=context,
+                    batch_texts=batch_texts,
                     return_deficit=return_aux,
                 )
                 if return_aux:
@@ -521,19 +597,9 @@ class PolicyModel:
         with torch.no_grad():
             for start in range(0, len(candidate_texts), self.batch_size):
                 batch_texts = candidate_texts[start : start + self.batch_size]
-                tokens = self.tokenizer(
-                    [context] * len(batch_texts),
-                    batch_texts,
-                    padding=True,
-                    truncation=True,
-                    max_length=self.max_length,
-                    return_tensors="pt",
-                )
-                tokens = {key: value.to(self.device) for key, value in tokens.items()}
-                output, _, deficit_output, contribution_output = self.model(
-                    input_ids=tokens["input_ids"],
-                    attention_mask=tokens["attention_mask"],
-                    token_type_ids=tokens.get("token_type_ids"),
+                output, _, deficit_output, contribution_output = self._forward_batch(
+                    context=context,
+                    batch_texts=batch_texts,
                     return_deficit=True,
                     return_contribution=True,
                 )
