@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.3 v26 training and online-gate tooling complete; 20-qid no-answer runtime smoke authorized; 1000/3000-qid and API evaluation forbidden
+current_status: Stage 3.3 v26 20-qid runtime smoke passed; question-disjoint 1000-qid no-answer validation gate authorized; 3000-qid and API evaluation forbidden
 ```
 
 This file is the single execution plan synthesized from:
@@ -964,7 +964,8 @@ The paper may be locked only when:
 | `stage3-fiske-clue-state-checkpoint-audit` | 3.3 | Existing v26 output after interrupted launch | INCOMPLETE: `best_model.pt` (1,736,267,788 bytes) and `best_val_metrics.json` exist, but `train_history.json` and final `test_metrics.json` are absent | Archive the incomplete directory; restart the identical seed-42 run on an empty GPU; forbid online evaluation |
 | `stage3-fiske-clue-state-train-attempt2` | 3.3 | Identical frozen v26 run launched in the foreground | INCOMPLETE: training log ends at epoch-1 row 23,131/27,730 (83%) without traceback; no training process remains and GPUs 0-3/5-7 use only 24 MiB | Treat as terminal/session interruption; preserve residuals and restart under `nohup` on an empty GPU |
 | `stage3-fiske-clue-state-train-seed42` | 3.3 | Deterministic clue-state input; matched v21 initialization, v22 pools/qids/losses/optimizer; 2 epochs | PASS training completeness: epoch 2 selected; train accuracy 0.494050, validation accuracy 0.545153, internal-test accuracy 0.503609; all auxiliary labeled counts zero | Offline ranking is substantially below v22; authorize only a question-disjoint 1,000-qid no-answer validation gate before any test/API run |
-| `stage3-fiske-clue-state-online-tooling` | 3.3 | Shared training/online clue renderer; top-1 state-write coverage updates; saved before/after transitions; v26/v22/v23/v24 paired gate | Syntax and synthetic transition/gate audits PASS; initial coverage zero, transitions monotonic and linked, no API path enabled | Authorize four-way 20-qid no-answer runtime smoke only |
+| `stage3-fiske-clue-state-online-tooling` | 3.3 | Shared training/online clue renderer; top-1 state-write coverage updates; saved before/after transitions; v26/v22/v23/v24 paired gate | Syntax and synthetic transition/gate audits PASS; initial coverage zero, transitions monotonic and linked, no API path enabled | Four-way 20-qid no-answer runtime smoke authorized |
+| `stage3-fiske-clue-state-runtime-smoke20` | 3.3 | v26 clue state vs v22 full state, v23 previous-evidence anchor, and v24 direct/indirect anchor; alpha 0.5; candidate 10; select 5; top-1 state write; no answers | PASS: 20 identical qids and 56 states; zero protocol failures; all 56 clue updates monotonic; all 36 cross-step transitions linked; v26 is competitive against all three controls under the smoke gate | Authorize the same paired gate on the full question-disjoint 1,000-qid validation set; smoke metrics are not paper evidence |
 
 ## One-time closure-balance repair
 
@@ -1012,20 +1013,20 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run only the four-way 20-qid Stage 3.3 runtime smoke at alpha 0.5 without
-answer generation:
+Run the four-way question-disjoint 1,000-qid Stage 3.3 validation gate at
+alpha 0.5 without answer generation:
 
 ```bash
-SMOKE=1 MAX_QIDS=20 N_BOOTSTRAP=200 GPU_LIST=0,1,2,3 \
-OUTPUT_ROOT=outputs/analysis/kbs_v26_clue_validation_gate_smoke20 \
+SMOKE=0 MAX_QIDS=1000 N_BOOTSTRAP=10000 GPU_LIST=0,1,2,3 \
+OUTPUT_ROOT=outputs/analysis/kbs_v26_clue_validation_gate_val1000 \
 bash scripts/run_kbs_v26_clue_validation_gate.sh
 ```
 
-The report must contain 20 identical qids per method, zero protocol failures,
-zero clue-transition failures, top-1 state writes, and `answer_judged=0`.
-Only after that smoke is recorded may the same gate run on the full
-question-disjoint 1,000-qid validation set. The 3,000-qid evaluation subset
-and answer API remain forbidden.
+The report must contain 1,000 identical qids per method, zero protocol
+failures, zero clue-transition failures, top-1 state writes, and
+`answer_judged=0`. Bootstrap intervals from this run determine whether v26
+may proceed to any answer-API evaluation. The 3,000-qid evaluation subset and
+answer API remain forbidden until that decision is recorded.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
