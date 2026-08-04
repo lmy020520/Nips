@@ -129,11 +129,16 @@ def evaluate_report(name: str, path: Path, budgets: list[int]) -> tuple[dict, li
 
     records = []
     seen = set()
+    source_replay = {"answer_em": [], "answer_f1": []}
     for source in source_records:
         qid = str(source.get("qid") or "")
         if not qid or qid in seen:
             raise ValueError(f"missing or duplicate qid in {path}: {qid!r}")
         seen.add(qid)
+        for key in source_replay:
+            if source.get(key) is None:
+                raise ValueError(f"qid={qid} is missing source per-qid {key}")
+            source_replay[key].append(float(source[key]))
         answer = answer_metrics(source.get("answer", ""), source.get("gold_answer", ""))
         gold_ids = source.get("gold_unit_ids") or []
         predicted_fact_ids = [
@@ -189,10 +194,14 @@ def evaluate_report(name: str, path: Path, budgets: list[int]) -> tuple[dict, li
         source_value = source_summary.get(source_key)
         if source_value is None:
             continue
-        delta = metrics[computed_key] - float(source_value)
+        if source_key in source_replay:
+            recomputed = round(sum(source_replay[source_key]) / len(records), 6)
+        else:
+            recomputed = metrics[computed_key]
+        delta = recomputed - float(source_value)
         checks[source_key] = {
             "source": round(float(source_value), 6),
-            "recomputed": metrics[computed_key],
+            "recomputed": recomputed,
             "delta": round(delta, 9),
             "match": abs(delta) <= 1e-5,
         }
@@ -204,6 +213,10 @@ def evaluate_report(name: str, path: Path, budgets: list[int]) -> tuple[dict, li
         "closure_cost": "number of unique selected (title, sentence_id) evidence units",
         "closure_budgets": budgets,
         "metrics": metrics,
+        "answer_metric_note": (
+            "metrics use official HotpotQA special-answer handling; source-summary "
+            "checks replay the historical per-qid values stored in each report"
+        ),
         "source_summary_checks": checks,
     }
     return summary, records
