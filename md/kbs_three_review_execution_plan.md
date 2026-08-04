@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3X
-current_status: v27 20-qid counterfactual data/readiness smoke passed; full v27 data construction and readiness audit authorized; Stage 4 paused; no API or training yet
+current_status: Complete v27 counterfactual data/readiness audit passed; exactly one frozen seed-42 dual-tower training run authorized; Stage 4 paused; no API or evaluation yet
 ```
 
 This file is the single execution plan synthesized from:
@@ -1047,6 +1047,7 @@ The paper may be locked only when:
 | `stage3x-v27-protocol-authorized` | 3X | v22 fixed-pool counterfactual states; shared-backbone dual state/candidate encoder; acquired-evidence reversal margin | Protocol frozen before training; Stage 4 paused at user request; no API, training, validation, or evaluation run yet | Implement tooling and authorize only a 20-qid data/readiness smoke |
 | `stage3x-v27-tooling` | 3X | v27 canonicalizer, counterfactual labels, dual-tower model/trainer/runtime compatibility, config, readiness checker, guarded runner | Python/shell syntax and diff checks pass; isolated synthetic audit passes t>=1 oversampling, acquired-negative pairs, adjacent preference switches, and split disjointness. Local tensor forward was unavailable because the workstation environment has no PyTorch | Authorize server 20-qid data/readiness smoke only; no training or API |
 | `stage3x-v27-readiness-smoke20` | 3X | First 20 qids from each v22 train/validation/internal-test split; v27 canonical fixed-pool states; no API and no training | PASS: 72/43/47 output rows from 46/43/47 canonical states; 66/27/36 acquired-negative pairs; adjacent preference switches 26/26, 23/23, and 27/27; zero row errors, split overlap, and overlap with the 3,000-qid evaluation subset | Authorize complete v27 data construction and readiness audit only; training remains forbidden |
+| `stage3x-v27-full-readiness` | 3X | Complete v27 train/validation/internal-test data derived from audited v22 fixed pools; no API and no training | PASS: 37,730/1,207/1,247 rows over 10,000/500/500 qids; 37,642/975/1,085 acquired-negative pairs; adjacent switches 13,865/13,865, 707/707, and 747/747; zero row errors, split overlap, and overlap with the 3,000-qid evaluation subset | Authorize exactly one frozen seed-42 two-epoch dual-tower training run; API and evaluation forbidden |
 
 ## One-time closure-balance repair
 
@@ -1094,17 +1095,17 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Build and audit the complete v27 data, without answer generation or model
-training:
+Run exactly one frozen seed-42 v27 dual-tower training job. Do not generate
+answers or evaluate on the 3,000-question subset:
 
 ```bash
-MAX_QIDS=0 CHECK_ONLY=1 TRAIN=0 bash scripts/run_kbs_v27_counterfactual_dual.sh
+MAX_QIDS=0 BUILD_DATA=0 CHECK_ONLY=0 TRAIN=1 CUDA_DEVICE=0 bash scripts/run_kbs_v27_counterfactual_dual.sh
 ```
 
-The run must return `status: OK`, preserve every v22 candidate pool, label,
-and `K_t`, record nonzero acquired-negative pairs, verify every adjacent
-preference switch, and prove zero split/evaluation overlap. Do not start
-seed-42 training until the complete readiness report is reviewed and recorded.
+The run must produce `best_model.pt`, `best_val_metrics.json`,
+`train_history.json`, and `test_metrics.json`. Record validation/internal-test
+ranking accuracy and acquired-pair reversal accuracy. Do not run the 1,000-qid
+online validation gate until all four files are reviewed and recorded.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
