@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 4
-current_status: Stage 3 controlled mechanism study closed with negative v26 validation result; Stage 4 offline standard-metric implementation authorized; v26 3000-qid and API evaluation forbidden
+current_status: Stage 4 offline standard-metric tooling implemented and locally validated; server readiness and five-method offline evaluation authorized; no API or training
 ```
 
 This file is the single execution plan synthesized from:
@@ -626,6 +626,22 @@ AND all supporting facts covered
 AND acquisition/context cost <= B
 ```
 
+Implementation entry points:
+
+```text
+scripts/check_kbs_stage4_metric_readiness.py
+scripts/evaluate_kbs_standard_metrics.py
+scripts/run_kbs_stage4_standard_metrics.sh
+```
+
+Supporting-fact predictions are the unique per-step top-1
+`predicted_unit_id` chain. The complete unique `selected_unit_ids` set is the
+answer context and is evaluated separately as selected-evidence
+precision/recall/F1 and full coverage. This separation prevents forced top-5
+context distractors from making every Supporting Fact EM and Joint EM zero.
+`ClosureSuccess@B` uses answer exact match, full selected-context support
+coverage, and at most `B` unique selected evidence units.
+
 ## Validation requirements
 
 - Unit IDs must map exactly to `(title, sentence_id)`.
@@ -968,6 +984,7 @@ The paper may be locked only when:
 | `stage3-fiske-clue-state-online-tooling` | 3.3 | Shared training/online clue renderer; top-1 state-write coverage updates; saved before/after transitions; v26/v22/v23/v24 paired gate | Syntax and synthetic transition/gate audits PASS; initial coverage zero, transitions monotonic and linked, no API path enabled | Four-way 20-qid no-answer runtime smoke authorized |
 | `stage3-fiske-clue-state-runtime-smoke20` | 3.3 | v26 clue state vs v22 full state, v23 previous-evidence anchor, and v24 direct/indirect anchor; alpha 0.5; candidate 10; select 5; top-1 state write; no answers | PASS: 20 identical qids and 56 states; zero protocol failures; all 56 clue updates monotonic; all 36 cross-step transitions linked; v26 is competitive against all three controls under the smoke gate | Authorize the same paired gate on the full question-disjoint 1,000-qid validation set; smoke metrics are not paper evidence |
 | `stage3-fiske-clue-state-validation-gate` | 3.3 | Same four methods on 1,000 question-disjoint validation qids and 2,449 states; alpha 0.5; top-1 state write; 10,000 qid-clustered bootstrap samples; no answers | FAIL: zero protocol/transition failures, but v26 full-unit coverage is 0.664 versus 0.782/0.784/0.768; deltas are -0.118 [-0.145,-0.092], -0.120 [-0.148,-0.093], and -0.104 [-0.131,-0.078]. Versus v22, v26 improves hop-2+ Step@1 by +0.037957 [0.004071,0.071179] and MRR by +0.027656 [0.002655,0.052216], but all-state Alignment@5 falls by -0.018375 [-0.034414,-0.002448] | Close v26 as a negative sharp-ranking/completeness tradeoff; forbid 3,000-qid and API evaluation; advance to Stage 4 |
+| `stage4-standard-metric-tooling` | 4 | Per-step top-1 supporting-fact chain; selected-context evidence metrics; official-style answer and joint products; unit-budget ClosureSuccess; source-summary replay; Gold Oracle gate | Local syntax, synthetic oracle, and real v22 Compact replay PASS. Recomputed Answer EM/F1 and full coverage exactly match the source report. Preliminary v22 Compact values: Supporting Fact F1 0.464404, Supporting Fact EM 0.086333, Joint F1 0.356303, Joint EM 0.056667 | Authorize server readiness and one offline five-method evaluation; no API or training |
 
 ## One-time closure-balance repair
 
@@ -1015,18 +1032,17 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Implement and validate the Stage 4 standard and closure-aware metrics without
-answer generation or new model training:
+Run Stage 4 readiness and the five-method standard/closure-aware evaluation
+offline, without answer generation or model training:
 
 ```bash
-python3 scripts/check_kbs_stage4_metric_readiness.py --require-paths
+bash scripts/run_kbs_stage4_standard_metrics.sh
 ```
 
-The readiness implementation must define exact unit-to-`(title, sentence_id)`
-mapping, reproduce report aggregates from per-qid records, and verify the
-Supporting Fact and Joint metric implementation on Gold Oracle before any
-new comparison is reported. This entry point still needs to be implemented;
-do not run the placeholder command until its code is committed.
+The run must use 3,000 identical qids across KSG-EA Compact/Recall, v23
+anchor, v24 direct-indirect, and Gold Oracle; reproduce source Answer EM/F1
+and full-unit coverage; and make Gold Oracle reach Supporting Fact recall and
+EM of one. Do not proceed to Stage 5 until `summary.json` reports `status: OK`.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
