@@ -12,6 +12,7 @@ QUOTED_RE = re.compile(r"""["']([^"']{2,80})["']""")
 CAPITALIZED_RE = re.compile(
     r"\b(?:[A-Z][A-Za-z0-9'’-]*)(?:\s+(?:[A-Z][A-Za-z0-9'’-]*|of|the|and|de)){0,5}\b"
 )
+CLUE_STATE_VERSION = "fiske_inspired_textual_clues_v1"
 
 STOPWORDS = {
     "a",
@@ -66,6 +67,13 @@ def normalize_tokens(text: object) -> list[str]:
 
 def stable_digest(text: object) -> str:
     return hashlib.sha256(str(text).encode("utf-8")).hexdigest()
+
+
+def format_clue_evidence(memory_item: dict) -> str:
+    """Format acquired evidence identically for training and online updates."""
+    title = str(memory_item.get("title") or memory_item.get("doc_id") or "").strip()
+    text = str(memory_item.get("text") or "").strip()
+    return f"{title}: {text}" if title else text
 
 
 def _dedupe_phrases(phrases: Iterable[str]) -> list[str]:
@@ -228,7 +236,7 @@ def build_clue_state(question: str, evidence_texts: Sequence[str]) -> dict:
         resolved.append(item)
 
     return {
-        "version": "fiske_inspired_textual_clues_v1",
+        "version": CLUE_STATE_VERSION,
         "question_sha256": stable_digest(question),
         "generator_inputs": ["question"],
         "coverage_inputs": ["current_prefix_evidence"],

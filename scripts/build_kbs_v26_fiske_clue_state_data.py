@@ -12,7 +12,12 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
-from src.clue_state import build_clue_state, render_clue_state
+from src.clue_state import (
+    CLUE_STATE_VERSION,
+    build_clue_state,
+    format_clue_evidence,
+    render_clue_state,
+)
 
 
 def read_jsonl(path: Path):
@@ -78,12 +83,6 @@ def load_required_memory(path: Path, required_ids: set[str]) -> dict[str, dict]:
     return memory
 
 
-def evidence_text(item: dict) -> str:
-    title = str(item.get("title") or item.get("doc_id") or "").strip()
-    text = str(item.get("text") or "").strip()
-    return f"{title}: {text}" if title else text
-
-
 def rewrite_split(
     source_path: Path,
     memory_path: Path,
@@ -112,7 +111,7 @@ def rewrite_split(
             qid = str(row["qid"])
             t = int(row["t"])
             h_ids = state_h_ids(row)
-            prefix_texts = [evidence_text(memory[unit_id]) for unit_id in h_ids]
+            prefix_texts = [format_clue_evidence(memory[unit_id]) for unit_id in h_ids]
             clue_state = build_clue_state(str(row["question"]), prefix_texts)
             rendered = render_clue_state(clue_state)
 
@@ -221,7 +220,7 @@ def main() -> None:
         "baseline_name": "FiSKE-inspired textual clue-state baseline",
         "faithful_fiske_reproduction": False,
         "question_clue_generator": {
-            "version": "fiske_inspired_textual_clues_v1",
+            "version": CLUE_STATE_VERSION,
             "learned": False,
             "api_calls": 0,
             "inputs": ["question"],

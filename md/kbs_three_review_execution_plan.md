@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.3 foreground restart terminated at epoch-1 83% with no traceback; archive residuals and restart the frozen run under nohup on an empty GPU; API forbidden
+current_status: Stage 3.3 v26 training and online-gate tooling complete; 20-qid no-answer runtime smoke authorized; 1000/3000-qid and API evaluation forbidden
 ```
 
 This file is the single execution plan synthesized from:
@@ -531,10 +531,11 @@ test time.
 
 Call it `FiSKE-inspired textual clue-state baseline`.
 
-**Status:** full readiness passed. The first training launch failed before an
-epoch completed because GPU 0 had only 52 MiB free while another process used
-838 MiB. The same frozen run may be resumed on an otherwise empty GPU;
-hyperparameter changes and answer generation remain forbidden.
+**Status:** matched seed-42 training completed after two interrupted launches.
+Epoch 2 was selected with validation accuracy `0.545153`; internal-test
+accuracy is `0.503609`. Online clue-state runtime and a four-way validation
+gate are implemented. Only a 20-qid, no-answer runtime smoke is authorized;
+the 1,000/3,000-qid runs and answer API remain forbidden.
 
 ### Frozen Stage 3.3 protocol
 
@@ -962,6 +963,8 @@ The paper may be locked only when:
 | `stage3-fiske-clue-state-train-attempt1` | 3.3 | Frozen v26 seed-42 configuration on GPU 0 | FAILED before epoch completion: current process reached about 22.66 GiB while another process occupied 838 MiB; only 52 MiB remained and a 64 MiB allocation failed | Do not change training protocol; resume once on a GPU with no competing process |
 | `stage3-fiske-clue-state-checkpoint-audit` | 3.3 | Existing v26 output after interrupted launch | INCOMPLETE: `best_model.pt` (1,736,267,788 bytes) and `best_val_metrics.json` exist, but `train_history.json` and final `test_metrics.json` are absent | Archive the incomplete directory; restart the identical seed-42 run on an empty GPU; forbid online evaluation |
 | `stage3-fiske-clue-state-train-attempt2` | 3.3 | Identical frozen v26 run launched in the foreground | INCOMPLETE: training log ends at epoch-1 row 23,131/27,730 (83%) without traceback; no training process remains and GPUs 0-3/5-7 use only 24 MiB | Treat as terminal/session interruption; preserve residuals and restart under `nohup` on an empty GPU |
+| `stage3-fiske-clue-state-train-seed42` | 3.3 | Deterministic clue-state input; matched v21 initialization, v22 pools/qids/losses/optimizer; 2 epochs | PASS training completeness: epoch 2 selected; train accuracy 0.494050, validation accuracy 0.545153, internal-test accuracy 0.503609; all auxiliary labeled counts zero | Offline ranking is substantially below v22; authorize only a question-disjoint 1,000-qid no-answer validation gate before any test/API run |
+| `stage3-fiske-clue-state-online-tooling` | 3.3 | Shared training/online clue renderer; top-1 state-write coverage updates; saved before/after transitions; v26/v22/v23/v24 paired gate | Syntax and synthetic transition/gate audits PASS; initial coverage zero, transitions monotonic and linked, no API path enabled | Authorize four-way 20-qid no-answer runtime smoke only |
 
 ## One-time closure-balance repair
 
@@ -1009,28 +1012,20 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Archive the incomplete output and log, then restart the same matched Stage 3.3
-seed-42 job under `nohup` on an otherwise empty device so SSH closure cannot
-terminate it:
+Run only the four-way 20-qid Stage 3.3 runtime smoke at alpha 0.5 without
+answer generation:
 
 ```bash
-stamp=$(date +%Y%m%d-%H%M%S)
-mv outputs/ranker/deberta_v3_large_v26_fiske_clue_state \
-  outputs/ranker/deberta_v3_large_v26_fiske_clue_state_incomplete_$stamp
-mv outputs/logs/kbs_stage3_fiske_clue_state \
-  outputs/logs/kbs_stage3_fiske_clue_state_incomplete_$stamp
-mkdir -p outputs/logs/kbs_stage3_fiske_clue_state
-nohup env BUILD_DATA=0 CHECK_ONLY=0 MAX_QIDS=0 CUDA_DEVICE=<empty-gpu> \
-  bash scripts/run_kbs_stage3_fiske_clue_state.sh \
-  > outputs/logs/kbs_stage3_fiske_clue_state/launcher.log \
-  2>&1 < /dev/null &
-echo $! > outputs/logs/kbs_stage3_fiske_clue_state/launcher.pid
+SMOKE=1 MAX_QIDS=20 N_BOOTSTRAP=200 GPU_LIST=0,1,2,3 \
+OUTPUT_ROOT=outputs/analysis/kbs_v26_clue_validation_gate_smoke20 \
+bash scripts/run_kbs_v26_clue_validation_gate.sh
 ```
 
-Do not kill an unowned process, call the answer API, rebuild data, alter the
-seed, or change the matched v22 hyperparameters. After training, inspect only
-`best_val_metrics.json`, `test_metrics.json`, and `train_history.json` before
-authorizing any online evaluation.
+The report must contain 20 identical qids per method, zero protocol failures,
+zero clue-transition failures, top-1 state writes, and `answer_judged=0`.
+Only after that smoke is recorded may the same gate run on the full
+question-disjoint 1,000-qid validation set. The 3,000-qid evaluation subset
+and answer API remain forbidden.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is

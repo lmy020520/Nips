@@ -19,6 +19,7 @@ GENERATE_ANSWERS="${GENERATE_ANSWERS:-0}"
 REFRESH_ANSWER_CACHE="${REFRESH_ANSWER_CACHE:-0}"
 POLICY_CONTEXT_SOURCE="${POLICY_CONTEXT_SOURCE:-online_state}"
 STATE_UPDATE_TOP_K="${STATE_UPDATE_TOP_K:-0}"
+SAVE_ONLINE_STATES="${SAVE_ONLINE_STATES:-0}"
 
 samples="$DATA_ROOT/samples/${SPLIT}.jsonl"
 memory="$DATA_ROOT/unit_registry/raw_units_${SPLIT}.jsonl"
@@ -85,6 +86,9 @@ run_alpha() {
     if [[ "$REFRESH_ANSWER_CACHE" == "1" ]]; then
       cmd+=(--refresh-answer-cache)
     fi
+  fi
+  if [[ "$SAVE_ONLINE_STATES" == "1" ]]; then
+    cmd+=(--save-online-states)
   fi
   echo "[INFO] alpha=$alpha gpu=$gpu output=$output"
   CUDA_VISIBLE_DEVICES="$gpu" "${cmd[@]}"

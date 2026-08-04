@@ -12,7 +12,12 @@ from pathlib import Path
 
 import yaml
 
-from src.clue_state import build_clue_state, extract_question_clues, render_clue_state
+from src.clue_state import (
+    build_clue_state,
+    extract_question_clues,
+    format_clue_evidence,
+    render_clue_state,
+)
 
 
 FORBIDDEN_CLUE_KEYS = {
@@ -94,12 +99,6 @@ def limit_qids(rows, max_qids: int):
         seen.add(qid)
         kept.append(row)
     return kept
-
-
-def evidence_text(item: dict) -> str:
-    title = str(item.get("title") or item.get("doc_id") or "").strip()
-    text = str(item.get("text") or "").strip()
-    return f"{title}: {text}" if title else text
 
 
 def load_required_memory(path: Path, required_ids: set[str]) -> dict[str, dict]:
@@ -218,7 +217,7 @@ def inspect_split(
             errors.append(f"prefix evidence missing from memory: qid={qid}, {missing_memory[:3]}")
             continue
         prefix_texts = [
-            evidence_text(memory[unit_id])
+            format_clue_evidence(memory[unit_id])
             for unit_id in state_h_ids(output)
         ]
         expected = build_clue_state(question, prefix_texts)

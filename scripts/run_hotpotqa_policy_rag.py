@@ -27,6 +27,12 @@ import torch
 from tqdm import tqdm
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
+from src.clue_state import (
+    CLUE_STATE_VERSION,
+    build_clue_state,
+    format_clue_evidence,
+    render_clue_state,
+)
 from src.models.ranker import CrossEncoderRanker
 from src.online_state import init_online_state, render_online_k_t, update_online_state
 
@@ -877,13 +883,15 @@ def build_parser() -> argparse.ArgumentParser:
             "query_only",
             "previous_evidence_only",
             "direct_evidence_only",
+            "clue_state",
         ],
         default="legacy",
         help=(
             "For --state-mode policy, use legacy selected-evidence notebook, "
-            "rendered online K_t, question-only context, or only the previous "
-            "online top-1 prediction as an anchor. direct_evidence_only freezes "
-            "the first online top-1 prediction as the anchor for all later steps."
+            "rendered online K_t, deterministic textual clue state, question-only "
+            "context, or only the previous online top-1 prediction as an anchor. "
+            "direct_evidence_only freezes the first online top-1 prediction as "
+            "the anchor for all later steps."
         ),
     )
     parser.add_argument(
@@ -1132,6 +1140,8 @@ def main() -> None:
         selected_doc_ids: set[str] = set()
         state_written_units: set[str] = set()
         online_state = init_online_state()
+        clue_evidence_texts: list[str] = []
+        clue_state = None
         previous_predicted_unit_id = None
         direct_predicted_unit_id = None
         gold_units: list[str] = []
@@ -1204,6 +1214,11 @@ def main() -> None:
                     context = f"Question: {question}\nNotebook:\n{notebook}"
                 elif args.policy_context_source == "online_state":
                     notebook = online_state["K_t"]
+                    context = f"Question: {question}\nNotebook:\n{notebook}"
+                elif args.policy_context_source == "clue_state":
+                    if clue_state is None:
+                        clue_state = build_clue_state(question, clue_evidence_texts)
+                    notebook = render_clue_state(clue_state)
                     context = f"Question: {question}\nNotebook:\n{notebook}"
                 else:
                     notebook = "\n".join(
@@ -1497,6 +1512,11 @@ def main() -> None:
                 usable_candidate_ids[index] for index in state_update_indices
             ]
             online_state_before = json.loads(json.dumps(online_state)) if args.save_online_states else None
+            clue_state_before = (
+                json.loads(json.dumps(clue_state))
+                if args.save_online_states and clue_state is not None
+                else None
+            )
 
             totals["steps"] += 1
             step_correct = pred_id == positive_id
@@ -1529,7 +1549,11 @@ def main() -> None:
                     max_raw=args.online_state_max_raw,
                     max_chars_per_item=args.online_state_max_chars,
                 )
+                if args.policy_context_source == "clue_state":
+                    clue_evidence_texts.append(format_clue_evidence(selected_memory))
                 state_written_units.add(state_update_id)
+            if args.policy_context_source == "clue_state":
+                clue_state = build_clue_state(question, clue_evidence_texts)
             gold_units.append(positive_id)
             gold_doc_ids.add(positive_memory["doc_id"])
             step_record = {
@@ -1572,6 +1596,9 @@ def main() -> None:
             if args.save_online_states:
                 step_record["online_state_before"] = online_state_before
                 step_record["online_state_after"] = online_state
+                if args.policy_context_source == "clue_state":
+                    step_record["clue_state_before"] = clue_state_before
+                    step_record["clue_state_after"] = clue_state
             step_records.append(step_record)
             if (
                 args.policy_context_source == "direct_evidence_only"
@@ -1672,6 +1699,12 @@ def main() -> None:
                 "stop_record": stop_record,
                 "steps": step_records,
                 "final_online_state": online_state if args.save_online_states else None,
+                "final_clue_state": (
+                    clue_state
+                    if args.save_online_states
+                    and args.policy_context_source == "clue_state"
+                    else None
+                ),
             }
         )
 
@@ -1684,6 +1717,9 @@ def main() -> None:
         "checkpoint": args.checkpoint,
         "state_mode": args.state_mode,
         "policy_context_source": args.policy_context_source,
+        "clue_state_version": (
+            CLUE_STATE_VERSION if args.policy_context_source == "clue_state" else ""
+        ),
         "selector": args.selector,
         "dense_model": args.dense_model,
         "dense_query_mode": args.dense_query_mode,
