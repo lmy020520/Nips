@@ -6,8 +6,8 @@
 plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
-current_stage: 3
-current_status: Stage 3.3 v26 20-qid runtime smoke passed; question-disjoint 1000-qid no-answer validation gate authorized; 3000-qid and API evaluation forbidden
+current_stage: 4
+current_status: Stage 3 controlled mechanism study closed with negative v26 validation result; Stage 4 offline standard-metric implementation authorized; v26 3000-qid and API evaluation forbidden
 ```
 
 This file is the single execution plan synthesized from:
@@ -87,8 +87,8 @@ passes its explicit gate.
 |---|---|---|---|---|
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
-| 3 | Controlled mechanism baselines | Stage 3R closed negative; Stage 3.3 readiness authorized | No for readiness | Completed for v23/v24/v25 seed 42 |
-| 4 | Standard and closure-aware metrics | Pending | Mostly offline | No |
+| 3 | Controlled mechanism baselines | Closed: v23/v24 outperform Full; v25 and v26 gates failed | No further API | Completed for v23/v24/v25/v26 seed 42 |
+| 4 | Standard and closure-aware metrics | Authorized: implement and validate offline metrics first | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
 | 7 | Decide deficit/contribution status | Pending | No initially | Conditional |
@@ -531,11 +531,12 @@ test time.
 
 Call it `FiSKE-inspired textual clue-state baseline`.
 
-**Status:** matched seed-42 training completed after two interrupted launches.
+**Status:** failed and closed after the pre-registered validation-only gate.
 Epoch 2 was selected with validation accuracy `0.545153`; internal-test
-accuracy is `0.503609`. Online clue-state runtime and a four-way validation
-gate are implemented. Only a 20-qid, no-answer runtime smoke is authorized;
-the 1,000/3,000-qid runs and answer API remain forbidden.
+accuracy is `0.503609`. The 1,000-qid online gate had no protocol or clue
+transition failures, but v26 significantly regressed full-unit coverage
+against v22, v23, and v24. Do not run v26 on the 3,000-qid evaluation subset
+or call the answer API for this checkpoint.
 
 ### Frozen Stage 3.3 protocol
 
@@ -966,6 +967,7 @@ The paper may be locked only when:
 | `stage3-fiske-clue-state-train-seed42` | 3.3 | Deterministic clue-state input; matched v21 initialization, v22 pools/qids/losses/optimizer; 2 epochs | PASS training completeness: epoch 2 selected; train accuracy 0.494050, validation accuracy 0.545153, internal-test accuracy 0.503609; all auxiliary labeled counts zero | Offline ranking is substantially below v22; authorize only a question-disjoint 1,000-qid no-answer validation gate before any test/API run |
 | `stage3-fiske-clue-state-online-tooling` | 3.3 | Shared training/online clue renderer; top-1 state-write coverage updates; saved before/after transitions; v26/v22/v23/v24 paired gate | Syntax and synthetic transition/gate audits PASS; initial coverage zero, transitions monotonic and linked, no API path enabled | Four-way 20-qid no-answer runtime smoke authorized |
 | `stage3-fiske-clue-state-runtime-smoke20` | 3.3 | v26 clue state vs v22 full state, v23 previous-evidence anchor, and v24 direct/indirect anchor; alpha 0.5; candidate 10; select 5; top-1 state write; no answers | PASS: 20 identical qids and 56 states; zero protocol failures; all 56 clue updates monotonic; all 36 cross-step transitions linked; v26 is competitive against all three controls under the smoke gate | Authorize the same paired gate on the full question-disjoint 1,000-qid validation set; smoke metrics are not paper evidence |
+| `stage3-fiske-clue-state-validation-gate` | 3.3 | Same four methods on 1,000 question-disjoint validation qids and 2,449 states; alpha 0.5; top-1 state write; 10,000 qid-clustered bootstrap samples; no answers | FAIL: zero protocol/transition failures, but v26 full-unit coverage is 0.664 versus 0.782/0.784/0.768; deltas are -0.118 [-0.145,-0.092], -0.120 [-0.148,-0.093], and -0.104 [-0.131,-0.078]. Versus v22, v26 improves hop-2+ Step@1 by +0.037957 [0.004071,0.071179] and MRR by +0.027656 [0.002655,0.052216], but all-state Alignment@5 falls by -0.018375 [-0.034414,-0.002448] | Close v26 as a negative sharp-ranking/completeness tradeoff; forbid 3,000-qid and API evaluation; advance to Stage 4 |
 
 ## One-time closure-balance repair
 
@@ -1013,20 +1015,18 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run the four-way question-disjoint 1,000-qid Stage 3.3 validation gate at
-alpha 0.5 without answer generation:
+Implement and validate the Stage 4 standard and closure-aware metrics without
+answer generation or new model training:
 
 ```bash
-SMOKE=0 MAX_QIDS=1000 N_BOOTSTRAP=10000 GPU_LIST=0,1,2,3 \
-OUTPUT_ROOT=outputs/analysis/kbs_v26_clue_validation_gate_val1000 \
-bash scripts/run_kbs_v26_clue_validation_gate.sh
+python3 scripts/check_kbs_stage4_metric_readiness.py --require-paths
 ```
 
-The report must contain 1,000 identical qids per method, zero protocol
-failures, zero clue-transition failures, top-1 state writes, and
-`answer_judged=0`. Bootstrap intervals from this run determine whether v26
-may proceed to any answer-API evaluation. The 3,000-qid evaluation subset and
-answer API remain forbidden until that decision is recorded.
+The readiness implementation must define exact unit-to-`(title, sentence_id)`
+mapping, reproduce report aggregates from per-qid records, and verify the
+Supporting Fact and Joint metric implementation on Gold Oracle before any
+new comparison is reported. This entry point still needs to be implemented;
+do not run the placeholder command until its code is committed.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
