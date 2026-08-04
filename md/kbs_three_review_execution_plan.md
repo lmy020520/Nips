@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3
-current_status: Stage 3.3 checkpoint audit failed (missing history/test metrics); archive incomplete output and restart the same frozen run on an empty GPU; API forbidden
+current_status: Stage 3.3 foreground restart terminated at epoch-1 83% with no traceback; archive residuals and restart the frozen run under nohup on an empty GPU; API forbidden
 ```
 
 This file is the single execution plan synthesized from:
@@ -961,6 +961,7 @@ The paper may be locked only when:
 | `stage3-fiske-clue-state-full-readiness` | 3.3 | v22-matched train/validation/internal-test qids and fixed pools rewritten as deterministic clue states; no API and no training | PASS: 27,730/1,207/1,247 rows paired and rendered exactly; 10,000/500/500 qids; zero forbidden fields, non-monotonic transitions, row errors, split/evaluation overlap, and 24-field config mismatches | Authorize exactly one matched v26 seed-42 two-epoch training run; answer API forbidden |
 | `stage3-fiske-clue-state-train-attempt1` | 3.3 | Frozen v26 seed-42 configuration on GPU 0 | FAILED before epoch completion: current process reached about 22.66 GiB while another process occupied 838 MiB; only 52 MiB remained and a 64 MiB allocation failed | Do not change training protocol; resume once on a GPU with no competing process |
 | `stage3-fiske-clue-state-checkpoint-audit` | 3.3 | Existing v26 output after interrupted launch | INCOMPLETE: `best_model.pt` (1,736,267,788 bytes) and `best_val_metrics.json` exist, but `train_history.json` and final `test_metrics.json` are absent | Archive the incomplete directory; restart the identical seed-42 run on an empty GPU; forbid online evaluation |
+| `stage3-fiske-clue-state-train-attempt2` | 3.3 | Identical frozen v26 run launched in the foreground | INCOMPLETE: training log ends at epoch-1 row 23,131/27,730 (83%) without traceback; no training process remains and GPUs 0-3/5-7 use only 24 MiB | Treat as terminal/session interruption; preserve residuals and restart under `nohup` on an empty GPU |
 
 ## One-time closure-balance repair
 
@@ -1008,15 +1009,22 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Archive the incomplete output, inspect GPU occupancy, then restart the same
-matched Stage 3.3 seed-42 job on an otherwise empty device:
+Archive the incomplete output and log, then restart the same matched Stage 3.3
+seed-42 job under `nohup` on an otherwise empty device so SSH closure cannot
+terminate it:
 
 ```bash
 stamp=$(date +%Y%m%d-%H%M%S)
 mv outputs/ranker/deberta_v3_large_v26_fiske_clue_state \
   outputs/ranker/deberta_v3_large_v26_fiske_clue_state_incomplete_$stamp
-BUILD_DATA=0 CHECK_ONLY=0 MAX_QIDS=0 CUDA_DEVICE=<empty-gpu> \
-bash scripts/run_kbs_stage3_fiske_clue_state.sh
+mv outputs/logs/kbs_stage3_fiske_clue_state \
+  outputs/logs/kbs_stage3_fiske_clue_state_incomplete_$stamp
+mkdir -p outputs/logs/kbs_stage3_fiske_clue_state
+nohup env BUILD_DATA=0 CHECK_ONLY=0 MAX_QIDS=0 CUDA_DEVICE=<empty-gpu> \
+  bash scripts/run_kbs_stage3_fiske_clue_state.sh \
+  > outputs/logs/kbs_stage3_fiske_clue_state/launcher.log \
+  2>&1 < /dev/null &
+echo $! > outputs/logs/kbs_stage3_fiske_clue_state/launcher.pid
 ```
 
 Do not kill an unowned process, call the answer API, rebuild data, alter the
