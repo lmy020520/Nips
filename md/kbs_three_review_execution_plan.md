@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3X
-current_status: v27 counterfactual dual-tower tooling implemented; syntax and synthetic data gate pass; server 20-qid data/readiness smoke authorized; Stage 4 paused; no API or training yet
+current_status: v27 20-qid counterfactual data/readiness smoke passed; full v27 data construction and readiness audit authorized; Stage 4 paused; no API or training yet
 ```
 
 This file is the single execution plan synthesized from:
@@ -1046,6 +1046,7 @@ The paper may be locked only when:
 | `stage4-standard-metric-tooling` | 4 | Per-step top-1 supporting-fact chain; selected-context evidence metrics; official-style answer and joint products; unit-budget ClosureSuccess; source-summary replay; Gold Oracle gate | Local syntax, synthetic oracle, and real v22 Compact replay PASS. Recomputed Answer EM/F1 and full coverage exactly match the source report. Preliminary v22 Compact values: Supporting Fact F1 0.464404, Supporting Fact EM 0.086333, Joint F1 0.356303, Joint EM 0.056667 | Authorize server readiness and one offline five-method evaluation; no API or training |
 | `stage3x-v27-protocol-authorized` | 3X | v22 fixed-pool counterfactual states; shared-backbone dual state/candidate encoder; acquired-evidence reversal margin | Protocol frozen before training; Stage 4 paused at user request; no API, training, validation, or evaluation run yet | Implement tooling and authorize only a 20-qid data/readiness smoke |
 | `stage3x-v27-tooling` | 3X | v27 canonicalizer, counterfactual labels, dual-tower model/trainer/runtime compatibility, config, readiness checker, guarded runner | Python/shell syntax and diff checks pass; isolated synthetic audit passes t>=1 oversampling, acquired-negative pairs, adjacent preference switches, and split disjointness. Local tensor forward was unavailable because the workstation environment has no PyTorch | Authorize server 20-qid data/readiness smoke only; no training or API |
+| `stage3x-v27-readiness-smoke20` | 3X | First 20 qids from each v22 train/validation/internal-test split; v27 canonical fixed-pool states; no API and no training | PASS: 72/43/47 output rows from 46/43/47 canonical states; 66/27/36 acquired-negative pairs; adjacent preference switches 26/26, 23/23, and 27/27; zero row errors, split overlap, and overlap with the 3,000-qid evaluation subset | Authorize complete v27 data construction and readiness audit only; training remains forbidden |
 
 ## One-time closure-balance repair
 
@@ -1093,17 +1094,17 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run only the v27 20-qid data/readiness smoke, without answer generation or
-model training:
+Build and audit the complete v27 data, without answer generation or model
+training:
 
 ```bash
-MAX_QIDS=20 CHECK_ONLY=1 TRAIN=0 bash scripts/run_kbs_v27_counterfactual_dual.sh
+MAX_QIDS=0 CHECK_ONLY=1 TRAIN=0 bash scripts/run_kbs_v27_counterfactual_dual.sh
 ```
 
 The run must return `status: OK`, preserve every v22 candidate pool, label,
 and `K_t`, record nonzero acquired-negative pairs, verify every adjacent
-preference switch, and prove zero split/evaluation overlap. Do not build full
-data or start training until this smoke report is reviewed and recorded.
+preference switch, and prove zero split/evaluation overlap. Do not start
+seed-42 training until the complete readiness report is reviewed and recorded.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
