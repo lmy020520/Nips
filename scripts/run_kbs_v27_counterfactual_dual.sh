@@ -27,6 +27,11 @@ TRAIN="${TRAIN:-0}"
 FORCE_TRAIN="${FORCE_TRAIN:-0}"
 OUTPUT_DIR="${OUTPUT_DIR:-outputs/ranker/deberta_v3_large_v27_counterfactual_dual}"
 LOG_DIR="${LOG_DIR:-outputs/logs/kbs_v27_counterfactual_dual}"
+if [[ "$MAX_QIDS" == "0" ]]; then
+  READINESS_OUTPUT="${READINESS_OUTPUT:-outputs/analysis/kbs_v27_counterfactual_dual/readiness.json}"
+else
+  READINESS_OUTPUT="${READINESS_OUTPUT:-outputs/analysis/kbs_v27_counterfactual_dual_smoke${MAX_QIDS}/readiness.json}"
+fi
 
 if [[ "$BUILD_DATA" == "1" ]]; then
   if [[ -f "$DATA_ROOT/manifest.json" && "$FORCE_DATA" != "1" ]]; then
@@ -46,11 +51,12 @@ if [[ "$BUILD_DATA" == "1" ]]; then
   fi
 fi
 
+mkdir -p "$(dirname "$READINESS_OUTPUT")"
 python3 scripts/check_kbs_v27_counterfactual_dual.py \
   --data-root "$DATA_ROOT" \
   --source-root "$SOURCE_ROOT" \
   --config "$CONFIG" \
-  --require-paths
+  --require-paths | tee "$READINESS_OUTPUT"
 
 if [[ "$CHECK_ONLY" == "1" || "$TRAIN" != "1" ]]; then
   echo "[OK] v27 data/readiness passed; training was not started"
