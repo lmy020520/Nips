@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3X
-current_status: v27 seed-42 training completed with strong acquired-pair reversal but mixed ranking accuracy; four-method 20-qid no-answer validation-runtime smoke authorized; Stage 4 paused
+current_status: v27 four-method 20-qid no-answer runtime smoke passed; complete question-disjoint 1,000-qid validation gate authorized; Stage 4 paused; API and evaluation forbidden
 ```
 
 This file is the single execution plan synthesized from:
@@ -647,10 +647,10 @@ text-only renderer variation is forbidden.
 
 ### Current authorization
 
-The seed-42 checkpoint is complete. Only a 20-qid four-method runtime smoke on
-the question-disjoint blending-validation set is authorized next. The full
-1,000-qid gate, 3,000-qid evaluation, additional seeds, and answer generation
-remain forbidden until that smoke is reviewed.
+The seed-42 checkpoint and 20-qid runtime smoke are complete. Exactly one
+four-method 1,000-qid validation gate without answers is authorized next. The
+3,000-qid evaluation, additional seeds, and answer generation remain forbidden
+until that gate is reviewed.
 
 ---
 
@@ -1051,6 +1051,7 @@ The paper may be locked only when:
 | `stage3x-v27-full-readiness` | 3X | Complete v27 train/validation/internal-test data derived from audited v22 fixed pools; no API and no training | PASS: 37,730/1,207/1,247 rows over 10,000/500/500 qids; 37,642/975/1,085 acquired-negative pairs; adjacent switches 13,865/13,865, 707/707, and 747/747; zero row errors, split overlap, and overlap with the 3,000-qid evaluation subset | Authorize exactly one frozen seed-42 two-epoch dual-tower training run; API and evaluation forbidden |
 | `stage3x-v27-train-seed42` | 3X | Shared-backbone dual state/candidate encoder; v21 initialization; v27 counterfactual data; two epochs; auxiliary heads disabled | PASS training completeness: epoch 2 selected; validation accuracy 0.664457 and acquired-pair accuracy 0.902564 over 975 pairs; internal-test accuracy 0.607057 and acquired-pair accuracy 0.886636 over 1,085 pairs. Reversal learning is strong, but ordinary accuracy remains below historical v22/v23 values | Implement paired no-answer gate and authorize only a 20-qid runtime smoke before the 1,000-qid validation gate |
 | `stage3x-v27-validation-gate-tooling` | 3X | v27 dual versus v22 Full, v23 anchor, and v24 direct-indirect; alpha 0.5; top-1 state write; qid-clustered bootstrap | Syntax and synthetic four-method pairing/protocol audit pass. Frozen gate requires significant v27 hop-2+ Step@1 or MRR gains over both chain baselines with no significant full-unit regression against either | Authorize 20-qid no-answer runtime smoke only |
+| `stage3x-v27-validation-runtime-smoke20` | 3X | v27 dual, v22 Full, v23 anchor, and v24 direct-indirect; same 20 validation qids; alpha 0.5; top-1 state write; no answers | PASS runtime: `SMOKE_OK`, zero protocol failures, and exact qid/step pairing. v27 has higher hop-2+ Step@1/MRR point estimates than all three references; intervals are inconclusive as expected at 20 qids. Full-unit point estimate ties v22/direct and is -0.05 versus anchor without significant regression | Authorize exactly one complete 1,000-qid no-answer validation gate; smoke metrics are not paper evidence |
 
 ## One-time closure-balance repair
 
@@ -1098,16 +1099,18 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run the four-method 20-qid validation-runtime smoke. Do not generate answers:
+Run the complete four-method 1,000-qid validation gate. Do not generate
+answers:
 
 ```bash
-SMOKE=1 GPU_LIST=0,1,2,3 bash scripts/run_kbs_v27_validation_gate.sh
+SMOKE=0 GPU_LIST=0,1,2,3 bash scripts/run_kbs_v27_validation_gate.sh
 ```
 
-The run must produce four paired 20-qid reports and a `validation_gate.json`
-with `status: SMOKE_OK` and no protocol failures. Smoke metric significance is
-not evidence. Do not run the full 1,000-qid gate until the smoke report is
-reviewed and recorded.
+The run must produce four paired 1,000-qid reports and a
+`validation_gate.json` with no protocol failures. The gate passes only if v27
+significantly improves hop-2+ Step@1 or MRR over both v23 and v24 while its
+full-unit coverage does not significantly regress against either. Do not run
+additional seeds, 3,000-qid evaluation, or answer generation until reviewed.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
