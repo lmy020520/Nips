@@ -27,6 +27,7 @@ EXPECTED_CHECKPOINT_SUFFIX="${KBS_EXPECTED_CHECKPOINT_SUFFIX:-deberta_v3_large_v
 MODEL_DIR="${MODEL_DIR:-models/deberta-v3-large}"
 DENSE_MODEL="${DENSE_MODEL:-models/bge-large-en-v1.5}"
 FROZEN_ALPHA="${KBS_POLICY_BLEND_WEIGHT:-0.35}"
+STATE_UPDATE_TOP_K="${KBS_STATE_UPDATE_TOP_K:-0}"
 FROZEN_DEEPSEEK_MODEL="deepseek-v4-flash"
 FROZEN_DEEPSEEK_THINKING_MODE="disabled"
 
@@ -160,6 +161,7 @@ echo "[INFO] checkpoint=$CHECKPOINT"
 echo "[INFO] context_source=$policy_context_source"
 echo "[INFO] front_pool_k=$front_pool_k candidate_top_k=$candidate_top_k select_top_k=5"
 echo "[INFO] frozen_alpha=$FROZEN_ALPHA"
+echo "[INFO] state_update_top_k=$STATE_UPDATE_TOP_K (0 means legacy select_top_k)"
 echo "[INFO] answer_model=$DEEPSEEK_MODEL thinking_mode=$DEEPSEEK_THINKING_MODE"
 echo "[INFO] fresh_answer_calls=required output=$output cache=$cache_dir"
 if [[ "$RUN" == previous_only_* ]]; then
@@ -192,6 +194,7 @@ CUDA_VISIBLE_DEVICES="$CUDA_DEVICE" python3 scripts/run_hotpotqa_policy_rag.py \
   --mmr-same-doc-similarity 0.35 \
   --candidate-top-k "$candidate_top_k" \
   --select-top-k 5 \
+  --state-update-top-k "$STATE_UPDATE_TOP_K" \
   --policy-score-mode front_policy_blend \
   --policy-blend-weight "$FROZEN_ALPHA" \
   --answer-mode json \
@@ -213,4 +216,5 @@ python3 scripts/check_kbs_v22_stage2_report.py \
   --run "$RUN" \
   --expected-checkpoint-suffix "$EXPECTED_CHECKPOINT_SUFFIX" \
   --expected-policy-blend-weight "$FROZEN_ALPHA" \
+  --expected-state-update-top-k "$STATE_UPDATE_TOP_K" \
   --expected-qids "$max_qids"

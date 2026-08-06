@@ -35,6 +35,12 @@ def main() -> None:
         default="deberta_v3_large_v22_state_focused/best_model.pt",
     )
     parser.add_argument("--expected-policy-blend-weight", type=float, default=0.35)
+    parser.add_argument(
+        "--expected-state-update-top-k",
+        type=int,
+        default=0,
+        help="Zero expects the legacy behavior, which writes select_top_k units.",
+    )
     parser.add_argument("--expected-qids", type=int, required=True)
     args = parser.parse_args()
 
@@ -59,6 +65,11 @@ def main() -> None:
         "local_expansion_window": 1,
         "candidate_top_k": candidate_top_k,
         "select_top_k": 5,
+        "state_update_top_k": (
+            5
+            if args.expected_state_update_top_k <= 0
+            else args.expected_state_update_top_k
+        ),
         "policy_score_mode": "front_policy_blend",
         "policy_blend_weight": args.expected_policy_blend_weight,
         "answer_mode": "json",

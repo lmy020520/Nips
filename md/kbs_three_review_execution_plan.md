@@ -1068,6 +1068,7 @@ The paper may be locked only when:
 | `stage3x-v27-train-seeds43-44` | 3X | Matched v27 dual training with seeds 43 and 44; two epochs; independent outputs | PASS training completeness for both. Across seeds 42/43/44, validation accuracy is 0.661419 +/- 0.003348 and acquired-pair accuracy 0.908718 +/- 0.005427; internal-test accuracy is 0.609195 +/- 0.002018 and acquired-pair accuracy 0.892780 +/- 0.007674 (sample standard deviation) | Authorize seed-43/44 1,000-qid no-answer robustness gates using frozen baseline reports |
 | `stage3x-v27-multiseed-gate-tooling` | 3X | Run only v27 seeds 43/44 online; reuse seed-42 gate's v22/v23/v24 reports; separate 10,000-bootstrap gates and three-seed aggregate | Syntax and synthetic aggregate audits pass; analyzer accepts an explicit expected checkpoint per seed and the summary requires all three strict gates to pass | Run once without answers; no 3,000-qid/API work yet |
 | `stage3x-v27-multiseed-validation-gate` | 3X | Seeds 42/43/44 on the same 1,000 question-disjoint validation qids; alpha 0.5; top-1 state write; no answers; 10,000 qid-clustered bootstrap samples per gate | PASS for all seeds with zero protocol failures. Three-seed hop-2+ Step@1/Alignment@5/MRR are 0.533241 +/- 0.005788, 0.858293 +/- 0.002218, and 0.676870 +/- 0.002974. Mean Step@1/MRR gains are +0.137106/+0.108987 versus v23 and +0.112951/+0.099390 versus v24; no seed has significant full-unit regression | Close the robustness gate; retain seed 42 as the pre-registered primary model and authorize only a 20-qid fresh-answer final-protocol smoke |
+| `stage3x-v27-final-hotpot-tooling` | 3X | Seed-42 v27 checkpoint; Compact alpha 0.5; candidate/select/state-write budgets 10/5/1; fresh V4-Flash answers | Dedicated guarded runner reuses the strict end-to-end report audit, explicitly checks top-1 state writes, isolates v27 reports/caches, and keeps `final3000` locked behind post-smoke authorization; shell/Python syntax and diff checks pass | Run `MODE=smoke20` once; final 3,000-qid/API mode remains locked |
 
 ## One-time closure-balance repair
 
@@ -1121,6 +1122,10 @@ V4-Flash non-thinking, temperature 0.0, and a new answer cache. The smoke must
 produce 20 judged answers, zero answer errors, no empty raw answers, positive
 API token/latency measurements, and a protocol-complete per-qid report. Do not
 launch the 3,000-qid/API evaluation until this smoke is reviewed.
+
+```bash
+MODE=smoke20 CUDA_DEVICE=0 bash scripts/run_kbs_v27_final_hotpot.sh
+```
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
