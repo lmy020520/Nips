@@ -6,8 +6,8 @@
 plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
-current_stage: 4
-current_status: v27 seed-42 final HotpotQA 3,000-qid Compact run passed and Stage 3X is closed; authorize one offline Stage-4 standard/closure metric evaluation using the final v27 report; no API or training
+current_stage: 5
+current_status: Stage 4 passed with final-v27 standard evidence and joint metrics plus paired confidence intervals; prepare and freeze the Stage-5 multiseed end-to-end protocol before any additional API run
 ```
 
 This file is the single execution plan synthesized from:
@@ -89,8 +89,8 @@ passes its explicit gate.
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
 | 3 | Controlled mechanism baselines | Closed: v23/v24 outperform Full; v25 and v26 gates failed | No further API | Completed for v23/v24/v25/v26 seed 42 |
 | 3X | High-cost state architecture repair | Passed and closed with final v27 Compact evaluation | Completed | Completed for seeds 42/43/44 |
-| 4 | Standard and closure-aware metrics | Final-v27 offline evaluation authorized | No | No |
-| 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
+| 4 | Standard and closure-aware metrics | Passed and closed with final v27 | Completed offline | No |
+| 5 | Multi-seed robustness | Seed training and no-answer gates passed; end-to-end protocol pending | Not yet authorized | Completed for seeds 42/43/44 |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
 | 7 | Decide deficit/contribution status | Pending | No initially | Conditional |
 | 8 | Rewrite and submission audit | Pending | No | No |
@@ -1076,6 +1076,8 @@ The paper may be locked only when:
 | `stage3x-v27-final-hotpot3000` | 3X | Pre-registered seed-42 v27 Compact; HotpotQA 3,000; alpha 0.5; candidate/select/state-write budgets 10/5/1; fresh V4-Flash answers | PASS strict audit: 3,000 judged, zero errors and empty answers; EM 0.621000, F1 0.767798, Alignment@1/5 0.551535/0.867736, full-doc/unit 0.939333/0.782333, trajectory-all-correct 0.362333, average API tokens 403.98 and latency 0.803 s. Selection is 999.103 ms/qid (1.0009 qid/s), with 3,678.55 MB peak allocated GPU memory | Accept v27 Compact as the final primary checkpoint and close Stage 3X |
 | `stage3x-v27-final-end-to-end-ci` | 3X | Final v27 Compact paired by qid against v22 Full, v23 anchor, and v24 direct-indirect; 10,000 bootstrap samples | Versus v22, EM/F1/Alignment@5/full-unit gains are +0.026333/+0.027311/+0.085800/+0.021333 and all CIs are positive. Versus v23, F1 and Alignment@5 improve +0.009976 [0.002658,0.017286] and +0.013569 [0.007784,0.019365], while full-unit is -0.010333 [-0.018000,-0.002667]. Versus v24, EM/F1/Alignment@5 improve significantly and full-unit ties | State architecture repair succeeds with a small completeness tradeoff versus the anchor baseline; advance to Stage 4 and preserve the tradeoff in the paper |
 | `stage3x-v27-final-mechanism-retrospective` | 3X | Descriptive hop-2+ comparison on the 3,000 evaluation qids | v27 hop-2+ Step@1/MRR are 0.529097/0.671412, with deltas +0.133380/+0.106831 versus v23 and +0.104516/+0.099052 versus v24; all corresponding CIs are positive. This is not an exact frozen-protocol gate because historical v22/v23/v24 answer reports have missing/different state-write metadata | Use only as protocol-qualified mechanism evidence; retain the question-disjoint multiseed validation gate as the primary causal evidence |
+| `stage4-v27-standard-closure-metrics` | 4 | Final v27 Compact, historical v22 Recall, v23 Anchor, v24 Direct-Indirect, and Gold Oracle; same 3,000 qids; fully offline replay | PASS readiness and summary with zero failures. Gold Oracle Supporting Fact Recall/EM are 1.0. Final v27 Compact obtains Supporting Fact F1/EM 0.656101/0.362333, Joint F1/EM 0.529322/0.252000, full support coverage 0.782333, and ClosureSuccess@10 0.515333. Every source EM/F1/coverage aggregate is exactly reproduced | Standard, non-teacher-defined evidence supports the primary conclusion; close Stage 4 |
+| `stage4-v27-standard-metric-ci` | 4 | Qid-paired 10,000-bootstrap comparison using the Stage-4 per-qid records | Versus Anchor, v27 improves Supporting Fact F1 +0.045143 [0.035889,0.054350], Joint F1 +0.042644 [0.033752,0.051593], and ClosureSuccess@10 +0.012000 [0.001667,0.022000], while full support coverage is -0.010333 [-0.018000,-0.002667]. Versus Direct-Indirect, Supporting Fact F1 +0.022555 [0.013981,0.031081] and Joint F1 +0.024596 [0.015585,0.033286] are significant; full coverage ties | Main conclusion survives standard metrics; disclose the small anchor coverage tradeoff and advance to Stage 5 |
 
 ## One-time closure-balance repair
 
@@ -1123,20 +1125,15 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run the Stage-4 standard and closure-aware evaluator once using final v27
-Compact and the frozen historical reports. This run is offline and must not
-call the answer API or train a model. The historical Recall report remains
-explicitly labeled v22; it must not be presented as v27.
+No server experiment is authorized yet. First freeze a Stage-5 protocol that
+evaluates the already trained seeds 43/44 without selecting a seed by test
+performance, uses fresh isolated answer caches, and reports the three-seed
+mean/sample standard deviation for final-v27 Compact. The historical v22
+Recall result must remain version-labeled unless a separate v27 Recall
+multiseed protocol is explicitly pre-registered.
 
-```bash
-OUTPUT_DIR=outputs/analysis/kbs_stage4_v27_final \
-COMPACT_REPORT=outputs/rag/kbs_v27_final_hotpot/full_compact.json \
-RECALL_REPORT=outputs/rag/kbs_v22_stage2_hotpot/full_recall.json \
-ANCHOR_REPORT=outputs/rag/kbs_stage3_acra_anchor_hotpot/previous_only_compact.json \
-DIRECT_REPORT=outputs/rag/kbs_stage3_ecdr_direct_indirect_hotpot/direct_only_compact.json \
-GOLD_REPORT=outputs/rag/full3000_gold_oracle.json \
-bash scripts/run_kbs_stage4_standard_metrics.sh
-```
+Implementation/tooling only; do not launch an API run until the guarded
+Stage-5 runner and its completion audit are recorded here.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
