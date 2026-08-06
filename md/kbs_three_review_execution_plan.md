@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 5
-current_status: Stage 4 passed with final-v27 standard evidence and joint metrics plus paired confidence intervals; prepare and freeze the Stage-5 multiseed end-to-end protocol before any additional API run
+current_status: Stages 1-4 re-audited complete; Stage-5 guarded readiness and per-seed runner implemented; authorize server readiness only, then Compact seed 43/44 if and only if readiness is OK; Recall remains locked
 ```
 
 This file is the single execution plan synthesized from:
@@ -1078,6 +1078,8 @@ The paper may be locked only when:
 | `stage3x-v27-final-mechanism-retrospective` | 3X | Descriptive hop-2+ comparison on the 3,000 evaluation qids | v27 hop-2+ Step@1/MRR are 0.529097/0.671412, with deltas +0.133380/+0.106831 versus v23 and +0.104516/+0.099052 versus v24; all corresponding CIs are positive. This is not an exact frozen-protocol gate because historical v22/v23/v24 answer reports have missing/different state-write metadata | Use only as protocol-qualified mechanism evidence; retain the question-disjoint multiseed validation gate as the primary causal evidence |
 | `stage4-v27-standard-closure-metrics` | 4 | Final v27 Compact, historical v22 Recall, v23 Anchor, v24 Direct-Indirect, and Gold Oracle; same 3,000 qids; fully offline replay | PASS readiness and summary with zero failures. Gold Oracle Supporting Fact Recall/EM are 1.0. Final v27 Compact obtains Supporting Fact F1/EM 0.656101/0.362333, Joint F1/EM 0.529322/0.252000, full support coverage 0.782333, and ClosureSuccess@10 0.515333. Every source EM/F1/coverage aggregate is exactly reproduced | Standard, non-teacher-defined evidence supports the primary conclusion; close Stage 4 |
 | `stage4-v27-standard-metric-ci` | 4 | Qid-paired 10,000-bootstrap comparison using the Stage-4 per-qid records | Versus Anchor, v27 improves Supporting Fact F1 +0.045143 [0.035889,0.054350], Joint F1 +0.042644 [0.033752,0.051593], and ClosureSuccess@10 +0.012000 [0.001667,0.022000], while full support coverage is -0.010333 [-0.018000,-0.002667]. Versus Direct-Indirect, Supporting Fact F1 +0.022555 [0.013981,0.031081] and Joint F1 +0.024596 [0.015585,0.033286] are significant; full coverage ties | Main conclusion survives standard metrics; disclose the small anchor coverage tradeoff and advance to Stage 5 |
+| `stage5-predecessor-audit` | 5 | Plan ledger plus locally archived Stage-1 diagnostics, Stage-2 HotpotQA/2Wiki reports, Stage-3 anchor/direct controls, v27 final report, and Stage-4 readiness/summary/records | PASS for experimental completion and acceptance criteria. Stages 1-4 are closed. The workstation copy of the previously reviewed seed-43/44 gate bundle is no longer at `md/服务器输出/4344`, so Stage-5 readiness requires the authoritative server copies before any API call | Do not rerun old experiments; restore/verify gate artifacts from the server and begin Stage 5 |
+| `stage5-v27-multiseed-tooling` | 5 | Frozen v27 Compact/Recall protocol for seeds 42/43/44; independent checkpoints, reports, caches, and strict end-to-end checker | Readiness checker audits all three configs/checkpoints, exact config equivalence except seed/output path, seed-42 final Compact, and clean three-seed validation gates. Runner supports Compact seed 43/44 and all Recall seeds but keeps Recall behind a separate authorization flag. Python/shell syntax and diff checks pass; local readiness correctly fails closed because server-only data/checkpoints are absent | Run server `CHECK_ONLY=1`; authorize Compact seed 43/44 only if readiness status is OK; no Recall yet |
 
 ## One-time closure-balance repair
 
@@ -1125,15 +1127,17 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-No server experiment is authorized yet. First freeze a Stage-5 protocol that
-evaluates the already trained seeds 43/44 without selecting a seed by test
-performance, uses fresh isolated answer caches, and reports the three-seed
-mean/sample standard deviation for final-v27 Compact. The historical v22
-Recall result must remain version-labeled unless a separate v27 Recall
-multiseed protocol is explicitly pre-registered.
+First run the Stage-5 server readiness audit. It must return `status: OK` and
+verify the authoritative seed-43/44 validation gates before any API call.
 
-Implementation/tooling only; do not launch an API run until the guarded
-Stage-5 runner and its completion audit are recorded here.
+```bash
+CHECK_ONLY=1 bash scripts/run_kbs_v27_stage5_multiseed.sh
+```
+
+If and only if readiness passes, run `compact_seed43` and `compact_seed44`
+with fresh isolated answer caches. These two runs are pre-registered and both
+must be retained; no seed selection is allowed. Recall remains locked until
+the two Compact reports are reviewed.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
