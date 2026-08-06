@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3X
-current_status: v27 seeds 42/43/44 training completed with stable offline metrics; seed-43/44 1,000-qid no-answer robustness gates authorized using frozen baseline reports; 3,000-qid/API evaluation forbidden
+current_status: v27 seeds 42/43/44 all passed the strict 1,000-qid no-answer gate with low variance; seed 42 remains the pre-registered primary checkpoint; authorize only a 20-qid fresh-answer final-protocol smoke before the single 3,000-qid/API evaluation
 ```
 
 This file is the single execution plan synthesized from:
@@ -88,7 +88,7 @@ passes its explicit gate.
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
 | 3 | Controlled mechanism baselines | Closed: v23/v24 outperform Full; v25 and v26 gates failed | No further API | Completed for v23/v24/v25/v26 seed 42 |
-| 3X | High-cost state architecture repair | Authorized: v27 data/readiness smoke only | No | Not yet |
+| 3X | High-cost state architecture repair | Multiseed validation gate passed; final API protocol smoke authorized | Smoke only | Completed for seeds 42/43/44 |
 | 4 | Standard and closure-aware metrics | Tooling ready; paused until Stage 3X gate closes | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
@@ -647,11 +647,21 @@ text-only renderer variation is forbidden.
 
 ### Current authorization
 
-All three checkpoints are complete. Seed-43 and seed-44 may now be evaluated
-on the same 1,000 question-disjoint validation qids without answers, reusing
-the frozen v22/v23/v24 baseline reports from the seed-42 gate. The 3,000-qid
-evaluation and answer generation remain forbidden until all three validation
-gates and the multiseed summary are reviewed.
+The three-seed validation review is complete. Seeds 42, 43, and 44 all pass
+the same strict gate with zero protocol failures. Across the three runs,
+hop-2+ Step@1 is `0.533241 +/- 0.005788`, Alignment@5 is
+`0.858293 +/- 0.002218`, and MRR is `0.676870 +/- 0.002974` (mean and sample
+standard deviation). Relative to v23 anchor, the mean hop-2+ Step@1/MRR gains
+are `+0.137106/+0.108987`; relative to v24 direct-indirect, they are
+`+0.112951/+0.099390`. Mean full-unit differences are `-0.004333` and
+`+0.011667`, respectively, and no individual seed has a significant
+full-unit regression against either baseline.
+
+Seed 42 remains the pre-registered primary checkpoint; seeds 43/44 are
+robustness evidence and must not be selected by their validation scores. A
+20-qid fresh-answer smoke using the exact final HotpotQA protocol is now
+authorized. Only after that smoke passes may the single final 3,000-qid/API
+evaluation be launched.
 
 ---
 
@@ -1057,6 +1067,7 @@ The paper may be locked only when:
 | `stage3x-v27-multiseed-configs` | 3X | Seed 43 and 44 configurations with independent output directories | Config audit confirms both are byte-equivalent in parsed protocol to seed 42 except seed/output directory; data, initialization, architecture, optimizer, losses, epochs, and margins remain frozen | Authorize parallel seed-43/44 training; no evaluation or API yet |
 | `stage3x-v27-train-seeds43-44` | 3X | Matched v27 dual training with seeds 43 and 44; two epochs; independent outputs | PASS training completeness for both. Across seeds 42/43/44, validation accuracy is 0.661419 +/- 0.003348 and acquired-pair accuracy 0.908718 +/- 0.005427; internal-test accuracy is 0.609195 +/- 0.002018 and acquired-pair accuracy 0.892780 +/- 0.007674 (sample standard deviation) | Authorize seed-43/44 1,000-qid no-answer robustness gates using frozen baseline reports |
 | `stage3x-v27-multiseed-gate-tooling` | 3X | Run only v27 seeds 43/44 online; reuse seed-42 gate's v22/v23/v24 reports; separate 10,000-bootstrap gates and three-seed aggregate | Syntax and synthetic aggregate audits pass; analyzer accepts an explicit expected checkpoint per seed and the summary requires all three strict gates to pass | Run once without answers; no 3,000-qid/API work yet |
+| `stage3x-v27-multiseed-validation-gate` | 3X | Seeds 42/43/44 on the same 1,000 question-disjoint validation qids; alpha 0.5; top-1 state write; no answers; 10,000 qid-clustered bootstrap samples per gate | PASS for all seeds with zero protocol failures. Three-seed hop-2+ Step@1/Alignment@5/MRR are 0.533241 +/- 0.005788, 0.858293 +/- 0.002218, and 0.676870 +/- 0.002974. Mean Step@1/MRR gains are +0.137106/+0.108987 versus v23 and +0.112951/+0.099390 versus v24; no seed has significant full-unit regression | Close the robustness gate; retain seed 42 as the pre-registered primary model and authorize only a 20-qid fresh-answer final-protocol smoke |
 
 ## One-time closure-balance repair
 
@@ -1104,17 +1115,12 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run seed-43 and seed-44 on the same 1,000-qid validation set without answers,
-reusing the frozen baseline reports:
-
-```bash
-GPU_LIST=0,1 bash scripts/run_kbs_v27_multiseed_validation.sh
-```
-
-The run must produce seed-43/44 gate reports plus `summary.json`. Every seed
-must pass the same strict chain-baseline rule and have zero protocol failures.
-Do not run the 3,000-qid evaluation or answer generation until the multiseed
-summary is reviewed.
+Prepare and run one 20-qid fresh-answer smoke with the seed-42 v27 checkpoint,
+alpha 0.5, candidate budget 10, selected-evidence budget 5, top-1 state write,
+V4-Flash non-thinking, temperature 0.0, and a new answer cache. The smoke must
+produce 20 judged answers, zero answer errors, no empty raw answers, positive
+API token/latency measurements, and a protocol-complete per-qid report. Do not
+launch the 3,000-qid/API evaluation until this smoke is reviewed.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
