@@ -6,8 +6,8 @@
 plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
-current_stage: 3X
-current_status: v27 multiseed gate and seed-42 20-qid fresh-answer protocol smoke passed; authorize exactly one final 3,000-qid/API evaluation with the frozen Compact protocol
+current_stage: 4
+current_status: v27 seed-42 final HotpotQA 3,000-qid Compact run passed and Stage 3X is closed; authorize one offline Stage-4 standard/closure metric evaluation using the final v27 report; no API or training
 ```
 
 This file is the single execution plan synthesized from:
@@ -88,8 +88,8 @@ passes its explicit gate.
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
 | 3 | Controlled mechanism baselines | Closed: v23/v24 outperform Full; v25 and v26 gates failed | No further API | Completed for v23/v24/v25/v26 seed 42 |
-| 3X | High-cost state architecture repair | Multiseed gate and API smoke passed; final 3,000-qid run authorized | One final run | Completed for seeds 42/43/44 |
-| 4 | Standard and closure-aware metrics | Tooling ready; paused until Stage 3X gate closes | Mostly offline | No |
+| 3X | High-cost state architecture repair | Passed and closed with final v27 Compact evaluation | Completed | Completed for seeds 42/43/44 |
+| 4 | Standard and closure-aware metrics | Final-v27 offline evaluation authorized | No | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
 | 7 | Decide deficit/contribution status | Pending | No initially | Conditional |
@@ -1073,6 +1073,9 @@ The paper may be locked only when:
 | `stage3x-v27-multiseed-validation-gate` | 3X | Seeds 42/43/44 on the same 1,000 question-disjoint validation qids; alpha 0.5; top-1 state write; no answers; 10,000 qid-clustered bootstrap samples per gate | PASS for all seeds with zero protocol failures. Three-seed hop-2+ Step@1/Alignment@5/MRR are 0.533241 +/- 0.005788, 0.858293 +/- 0.002218, and 0.676870 +/- 0.002974. Mean Step@1/MRR gains are +0.137106/+0.108987 versus v23 and +0.112951/+0.099390 versus v24; no seed has significant full-unit regression | Close the robustness gate; retain seed 42 as the pre-registered primary model and authorize only a 20-qid fresh-answer final-protocol smoke |
 | `stage3x-v27-final-hotpot-tooling` | 3X | Seed-42 v27 checkpoint; Compact alpha 0.5; candidate/select/state-write budgets 10/5/1; fresh V4-Flash answers | Dedicated guarded runner reuses the strict end-to-end report audit, explicitly checks top-1 state writes, isolates v27 reports/caches, and keeps `final3000` locked behind post-smoke authorization; shell/Python syntax and diff checks pass | Run `MODE=smoke20` once; final 3,000-qid/API mode remains locked |
 | `stage3x-v27-final-hotpot-smoke20` | 3X | Seed-42 v27 Compact; HotpotQA first 20 evaluation qids; alpha 0.5; candidate/select/state-write budgets 10/5/1; fresh V4-Flash answers | PASS strict report audit: 20 judged, zero errors and empty answers; EM 0.600000, F1 0.692857, Alignment@1/5 0.480000/0.900000, full-unit 0.850000, average API tokens 412.0 and latency 0.730 s; checkpoint and all frozen protocol fields match | Authorize exactly one final 3,000-qid/API evaluation using seed 42 and a fresh isolated cache |
+| `stage3x-v27-final-hotpot3000` | 3X | Pre-registered seed-42 v27 Compact; HotpotQA 3,000; alpha 0.5; candidate/select/state-write budgets 10/5/1; fresh V4-Flash answers | PASS strict audit: 3,000 judged, zero errors and empty answers; EM 0.621000, F1 0.767798, Alignment@1/5 0.551535/0.867736, full-doc/unit 0.939333/0.782333, trajectory-all-correct 0.362333, average API tokens 403.98 and latency 0.803 s. Selection is 999.103 ms/qid (1.0009 qid/s), with 3,678.55 MB peak allocated GPU memory | Accept v27 Compact as the final primary checkpoint and close Stage 3X |
+| `stage3x-v27-final-end-to-end-ci` | 3X | Final v27 Compact paired by qid against v22 Full, v23 anchor, and v24 direct-indirect; 10,000 bootstrap samples | Versus v22, EM/F1/Alignment@5/full-unit gains are +0.026333/+0.027311/+0.085800/+0.021333 and all CIs are positive. Versus v23, F1 and Alignment@5 improve +0.009976 [0.002658,0.017286] and +0.013569 [0.007784,0.019365], while full-unit is -0.010333 [-0.018000,-0.002667]. Versus v24, EM/F1/Alignment@5 improve significantly and full-unit ties | State architecture repair succeeds with a small completeness tradeoff versus the anchor baseline; advance to Stage 4 and preserve the tradeoff in the paper |
+| `stage3x-v27-final-mechanism-retrospective` | 3X | Descriptive hop-2+ comparison on the 3,000 evaluation qids | v27 hop-2+ Step@1/MRR are 0.529097/0.671412, with deltas +0.133380/+0.106831 versus v23 and +0.104516/+0.099052 versus v24; all corresponding CIs are positive. This is not an exact frozen-protocol gate because historical v22/v23/v24 answer reports have missing/different state-write metadata | Use only as protocol-qualified mechanism evidence; retain the question-disjoint multiseed validation gate as the primary causal evidence |
 
 ## One-time closure-balance repair
 
@@ -1120,14 +1123,19 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Run exactly one final 3,000-qid/API evaluation with the seed-42 v27 checkpoint,
-alpha 0.5, candidate budget 10, selected-evidence budget 5, top-1 state write,
-V4-Flash non-thinking, temperature 0.0, and a new isolated answer cache. Do
-not launch seeds 43/44 or another alpha on the evaluation subset.
+Run the Stage-4 standard and closure-aware evaluator once using final v27
+Compact and the frozen historical reports. This run is offline and must not
+call the answer API or train a model. The historical Recall report remains
+explicitly labeled v22; it must not be presented as v27.
 
 ```bash
-KBS_V27_FINAL_AUTHORIZED=1 MODE=final3000 CUDA_DEVICE=0 \
-  bash scripts/run_kbs_v27_final_hotpot.sh
+OUTPUT_DIR=outputs/analysis/kbs_stage4_v27_final \
+COMPACT_REPORT=outputs/rag/kbs_v27_final_hotpot/full_compact.json \
+RECALL_REPORT=outputs/rag/kbs_v22_stage2_hotpot/full_recall.json \
+ANCHOR_REPORT=outputs/rag/kbs_stage3_acra_anchor_hotpot/previous_only_compact.json \
+DIRECT_REPORT=outputs/rag/kbs_stage3_ecdr_direct_indirect_hotpot/direct_only_compact.json \
+GOLD_REPORT=outputs/rag/full3000_gold_oracle.json \
+bash scripts/run_kbs_stage4_standard_metrics.sh
 ```
 ```
 
