@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 3X
-current_status: v27 seeds 42/43/44 all passed the strict 1,000-qid no-answer gate with low variance; seed 42 remains the pre-registered primary checkpoint; authorize only a 20-qid fresh-answer final-protocol smoke before the single 3,000-qid/API evaluation
+current_status: v27 multiseed gate and seed-42 20-qid fresh-answer protocol smoke passed; authorize exactly one final 3,000-qid/API evaluation with the frozen Compact protocol
 ```
 
 This file is the single execution plan synthesized from:
@@ -88,7 +88,7 @@ passes its explicit gate.
 | 1 | Establish causal state use | Passed with v22 | No | Completed |
 | 2 | Validate v22 end to end | Passed on HotpotQA and zero-shot 2Wiki | Completed | Completed |
 | 3 | Controlled mechanism baselines | Closed: v23/v24 outperform Full; v25 and v26 gates failed | No further API | Completed for v23/v24/v25/v26 seed 42 |
-| 3X | High-cost state architecture repair | Multiseed validation gate passed; final API protocol smoke authorized | Smoke only | Completed for seeds 42/43/44 |
+| 3X | High-cost state architecture repair | Multiseed gate and API smoke passed; final 3,000-qid run authorized | One final run | Completed for seeds 42/43/44 |
 | 4 | Standard and closure-aware metrics | Tooling ready; paused until Stage 3X gate closes | Mostly offline | No |
 | 5 | Multi-seed robustness | Pending | Yes for end-to-end tables | Yes |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
@@ -658,10 +658,13 @@ are `+0.137106/+0.108987`; relative to v24 direct-indirect, they are
 full-unit regression against either baseline.
 
 Seed 42 remains the pre-registered primary checkpoint; seeds 43/44 are
-robustness evidence and must not be selected by their validation scores. A
-20-qid fresh-answer smoke using the exact final HotpotQA protocol is now
-authorized. Only after that smoke passes may the single final 3,000-qid/API
-evaluation be launched.
+robustness evidence and must not be selected by their validation scores. The
+20-qid fresh-answer smoke passed the exact frozen protocol: 20 judged answers,
+zero answer errors, zero empty raw answers, EM 0.600000, F1 0.692857,
+Alignment@5 0.900000, full-unit coverage 0.850000, positive API token/latency
+measurements, and the expected v27 checkpoint, alpha 0.5, 10/5 evidence
+budgets, and top-1 state write. Exactly one final 3,000-qid/API evaluation is
+now authorized with a fresh cache.
 
 ---
 
@@ -1069,6 +1072,7 @@ The paper may be locked only when:
 | `stage3x-v27-multiseed-gate-tooling` | 3X | Run only v27 seeds 43/44 online; reuse seed-42 gate's v22/v23/v24 reports; separate 10,000-bootstrap gates and three-seed aggregate | Syntax and synthetic aggregate audits pass; analyzer accepts an explicit expected checkpoint per seed and the summary requires all three strict gates to pass | Run once without answers; no 3,000-qid/API work yet |
 | `stage3x-v27-multiseed-validation-gate` | 3X | Seeds 42/43/44 on the same 1,000 question-disjoint validation qids; alpha 0.5; top-1 state write; no answers; 10,000 qid-clustered bootstrap samples per gate | PASS for all seeds with zero protocol failures. Three-seed hop-2+ Step@1/Alignment@5/MRR are 0.533241 +/- 0.005788, 0.858293 +/- 0.002218, and 0.676870 +/- 0.002974. Mean Step@1/MRR gains are +0.137106/+0.108987 versus v23 and +0.112951/+0.099390 versus v24; no seed has significant full-unit regression | Close the robustness gate; retain seed 42 as the pre-registered primary model and authorize only a 20-qid fresh-answer final-protocol smoke |
 | `stage3x-v27-final-hotpot-tooling` | 3X | Seed-42 v27 checkpoint; Compact alpha 0.5; candidate/select/state-write budgets 10/5/1; fresh V4-Flash answers | Dedicated guarded runner reuses the strict end-to-end report audit, explicitly checks top-1 state writes, isolates v27 reports/caches, and keeps `final3000` locked behind post-smoke authorization; shell/Python syntax and diff checks pass | Run `MODE=smoke20` once; final 3,000-qid/API mode remains locked |
+| `stage3x-v27-final-hotpot-smoke20` | 3X | Seed-42 v27 Compact; HotpotQA first 20 evaluation qids; alpha 0.5; candidate/select/state-write budgets 10/5/1; fresh V4-Flash answers | PASS strict report audit: 20 judged, zero errors and empty answers; EM 0.600000, F1 0.692857, Alignment@1/5 0.480000/0.900000, full-unit 0.850000, average API tokens 412.0 and latency 0.730 s; checkpoint and all frozen protocol fields match | Authorize exactly one final 3,000-qid/API evaluation using seed 42 and a fresh isolated cache |
 
 ## One-time closure-balance repair
 
@@ -1116,15 +1120,14 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Prepare and run one 20-qid fresh-answer smoke with the seed-42 v27 checkpoint,
+Run exactly one final 3,000-qid/API evaluation with the seed-42 v27 checkpoint,
 alpha 0.5, candidate budget 10, selected-evidence budget 5, top-1 state write,
-V4-Flash non-thinking, temperature 0.0, and a new answer cache. The smoke must
-produce 20 judged answers, zero answer errors, no empty raw answers, positive
-API token/latency measurements, and a protocol-complete per-qid report. Do not
-launch the 3,000-qid/API evaluation until this smoke is reviewed.
+V4-Flash non-thinking, temperature 0.0, and a new isolated answer cache. Do
+not launch seeds 43/44 or another alpha on the evaluation subset.
 
 ```bash
-MODE=smoke20 CUDA_DEVICE=0 bash scripts/run_kbs_v27_final_hotpot.sh
+KBS_V27_FINAL_AUTHORIZED=1 MODE=final3000 CUDA_DEVICE=0 \
+  bash scripts/run_kbs_v27_final_hotpot.sh
 ```
 ```
 
