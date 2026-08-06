@@ -114,6 +114,10 @@ def parse_args():
     parser.add_argument("--expected-qids", type=int, required=True)
     parser.add_argument("--n-bootstrap", type=int, required=True)
     parser.add_argument("--seed", type=int, default=20260805)
+    parser.add_argument(
+        "--expected-v27-checkpoint",
+        default="outputs/ranker/deberta_v3_large_v27_counterfactual_dual/best_model.pt",
+    )
     parser.add_argument("--smoke", action="store_true")
     parser.add_argument("--output", type=Path, required=True)
     return parser.parse_args()
@@ -191,7 +195,7 @@ def main():
 
     expected_protocol = {
         "v27_dual": (
-            "outputs/ranker/deberta_v3_large_v27_counterfactual_dual/best_model.pt",
+            args.expected_v27_checkpoint,
             "online_state",
         ),
         "v22_full": (
