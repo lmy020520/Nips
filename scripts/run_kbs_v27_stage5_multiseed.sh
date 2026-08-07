@@ -24,11 +24,12 @@ if [[ -z "$RUN" ]]; then
 [ERROR] RUN is required. Currently authorized runs:
   compact_seed43
   compact_seed44
-
-Recall runs are implemented but remain locked until Compact is reviewed:
   recall_seed42
   recall_seed43
   recall_seed44
+
+Each operating point still requires its explicit authorization environment
+variable. The execution plan is the source of truth for authorization.
 EOF
   exit 2
 fi
@@ -77,7 +78,7 @@ if [[ "$operating_point" == "compact" ]]; then
   fi
 else
   if [[ "${KBS_STAGE5_RECALL_AUTHORIZED:-0}" != "1" ]]; then
-    echo "[ERROR] Recall remains locked until Compact seed 43/44 is reviewed" >&2
+    echo "[ERROR] Recall Stage-5 API run is locked" >&2
     exit 1
   fi
 fi
