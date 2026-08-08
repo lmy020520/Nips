@@ -26,6 +26,8 @@ SUMMARY_METRICS = (
     "hop2_plus_step_at_1",
     "hop2_plus_step_at_5",
     "hop2_plus_mrr",
+    "avg_answer_tokens",
+    "selection_avg_ms_per_qid",
 )
 
 
@@ -44,7 +46,11 @@ def mean_std(values: list[float]) -> dict:
     }
 
 
-def report_metrics(seed: str, path: Path) -> tuple[dict, list[str], list[str]]:
+def report_metrics(
+    seed: str,
+    path: Path,
+    operating_point: str,
+) -> tuple[dict, list[str], list[str]]:
     obj = json.loads(path.read_text(encoding="utf-8"))
     summary = obj.get("summary")
     records = obj.get("results")
@@ -58,10 +64,11 @@ def report_metrics(seed: str, path: Path) -> tuple[dict, list[str], list[str]]:
         failures.append(f"seed {seed}: answer_judged != 3000")
     if int(summary.get("answer_errors", -1)) != 0:
         failures.append(f"seed {seed}: answer_errors != 0")
+    expected_candidate_top_k = 10 if operating_point == "compact" else 50
     for key, expected in (
         ("policy_blend_weight", 0.5),
         ("state_update_top_k", 1),
-        ("candidate_top_k", 10),
+        ("candidate_top_k", expected_candidate_top_k),
         ("select_top_k", 5),
     ):
         if summary.get(key) != expected:
@@ -114,6 +121,10 @@ def report_metrics(seed: str, path: Path) -> tuple[dict, list[str], list[str]]:
         "hop2_plus_mrr": sum(
             1.0 / rank(step) if rank(step) else 0.0 for step in later_steps
         ) / hop_count,
+        "avg_answer_tokens": float(summary["avg_answer_tokens"]),
+        "selection_avg_ms_per_qid": float(
+            summary["runtime_profile"]["selection_avg_ms_per_qid"]
+        ),
         "hop2_plus_states": hop_count,
     }
     protocol = {
@@ -132,6 +143,11 @@ def report_metrics(seed: str, path: Path) -> tuple[dict, list[str], list[str]]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--report", action="append", type=parse_named_path, required=True)
+    parser.add_argument(
+        "--operating-point",
+        choices=("compact", "recall"),
+        default="compact",
+    )
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
 
@@ -144,7 +160,7 @@ def main() -> None:
     failures = []
     for seed in EXPECTED_SEEDS:
         per_seed[seed], qids_by_seed[seed], seed_failures = report_metrics(
-            seed, paths[seed]
+            seed, paths[seed], args.operating_point
         )
         failures.extend(seed_failures)
 
@@ -161,7 +177,11 @@ def main() -> None:
     }
     result = {
         "status": "PASS" if not failures else "FAIL",
-        "scope": "v27 Stage-5 Compact end-to-end multiseed audit",
+        "scope": (
+            f"v27 Stage-5 {args.operating_point.title()} end-to-end "
+            "multiseed audit"
+        ),
+        "operating_point": args.operating_point,
         "seeds": list(EXPECTED_SEEDS),
         "identical_qid_order": all(
             qids_by_seed[seed] == reference for seed in EXPECTED_SEEDS

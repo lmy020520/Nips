@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 5
-current_status: Stages 1-4 complete; Stage-5 Compact seeds 42/43/44 pass strict end-to-end audit and are stable; authorize matched Recall seeds 42/43/44, while rank-reversal and matched-baseline evidence remain pending
+current_status: Stages 1-4 complete; Stage-5 Compact and Recall seeds 42/43/44 pass strict end-to-end audits and are stable; fixed-pool rank-reversal and a matched multiseed chain baseline remain before Stage 5 can close
 ```
 
 This file is the single execution plan synthesized from:
@@ -90,7 +90,7 @@ passes its explicit gate.
 | 3 | Controlled mechanism baselines | Closed: v23/v24 outperform Full; v25 and v26 gates failed | No further API | Completed for v23/v24/v25/v26 seed 42 |
 | 3X | High-cost state architecture repair | Passed and closed with final v27 Compact evaluation | Completed | Completed for seeds 42/43/44 |
 | 4 | Standard and closure-aware metrics | Passed and closed with final v27 | Completed offline | No |
-| 5 | Multi-seed robustness | Seed training and no-answer gates passed; end-to-end protocol pending | Not yet authorized | Completed for seeds 42/43/44 |
+| 5 | Multi-seed robustness | Compact and Recall end-to-end multiseed audits passed; rank-reversal and matched baseline pending | Completed for Compact/Recall | Completed for seeds 42/43/44 |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
 | 7 | Decide deficit/contribution status | Pending | No initially | Conditional |
 | 8 | Rewrite and submission audit | Pending | No | No |
@@ -803,6 +803,33 @@ the same three checkpoints under the frozen Recall operating point. Stage 5
 does not close until Recall is summarized and fixed-pool rank-reversal plus a
 matched multiseed chain baseline are accounted for.
 
+## Recall multiseed evidence
+
+The frozen v27 Recall protocol was evaluated on the same ordered 3,000 qids
+for all three checkpoints. Every report passes the strict checkpoint, budget,
+answer-completeness, and per-qid replay checks.
+
+| Metric | Seed 42 | Seed 43 | Seed 44 | Mean +/- std |
+|---|---:|---:|---:|---:|
+| Answer EM | 0.647333 | 0.641000 | 0.641333 | 0.643222 +/- 0.003564 |
+| Answer F1 | 0.790380 | 0.787404 | 0.787283 | 0.788356 +/- 0.001754 |
+| Alignment@5 | 0.924205 | 0.923246 | 0.919819 | 0.922423 +/- 0.002306 |
+| Full unit coverage | 0.873000 | 0.874000 | 0.871667 | 0.872889 +/- 0.001170 |
+| Supporting Fact F1 | 0.711271 | 0.715929 | 0.713861 | 0.713687 +/- 0.002334 |
+| Joint F1 | 0.579409 | 0.580462 | 0.578622 | 0.579498 +/- 0.000923 |
+| Hop-2+ Step@1 | 0.578911 | 0.573790 | 0.566806 | 0.573169 +/- 0.006076 |
+| Selection ms/qid | 1587.1265 | 1587.2384 | 1576.8640 | 1583.7430 +/- 5.9576 |
+
+Compared with the Compact three-seed mean, Recall improves answer F1 by
+0.021477, Alignment@5 by 0.053819, full unit coverage by 0.092111,
+Supporting Fact F1 by 0.055888, and Joint F1 by 0.050295. Its selection time
+is about 1.59 seconds per qid rather than about 1.00 second for Compact.
+
+**Decision:** Recall is also robust to training seed and establishes a stable
+accuracy/completeness operating point. No further answer-API run is required
+for the Stage-5 operating-point comparison. Fixed-pool rank reversal and a
+matched multiseed chain baseline remain required before Stage 5 closes.
+
 ---
 
 # Stage 6: Closure, Compression, and Cost Evidence
@@ -1105,6 +1132,7 @@ The paper may be locked only when:
 | `stage5-predecessor-audit` | 5 | Plan ledger plus locally archived Stage-1 diagnostics, Stage-2 HotpotQA/2Wiki reports, Stage-3 anchor/direct controls, v27 final report, and Stage-4 readiness/summary/records | PASS for experimental completion and acceptance criteria. Stages 1-4 are closed. The workstation copy of the previously reviewed seed-43/44 gate bundle is no longer at `md/服务器输出/4344`, so Stage-5 readiness requires the authoritative server copies before any API call | Do not rerun old experiments; restore/verify gate artifacts from the server and begin Stage 5 |
 | `stage5-v27-multiseed-tooling` | 5 | Frozen v27 Compact/Recall protocol for seeds 42/43/44; independent checkpoints, reports, caches, and strict end-to-end checker | Readiness checker audits all three configs/checkpoints, exact config equivalence except seed/output path, seed-42 final Compact, and clean three-seed validation gates. Runner supports Compact seed 43/44 and all Recall seeds but keeps Recall behind a separate authorization flag. Python/shell syntax and diff checks pass; local readiness correctly fails closed because server-only data/checkpoints are absent | Run server `CHECK_ONLY=1`; authorize Compact seed 43/44 only if readiness status is OK; no Recall yet |
 | `stage5-v27-compact-multiseed3000` | 5 | v27 Compact seeds 42/43/44; identical ordered HotpotQA 3,000 qids; alpha 0.5; candidate/select/state-write budgets 10/5/1; fresh isolated V4-Flash caches | PASS strict audit for all seeds with zero answer errors or empty answers. EM 0.621444 +/- 0.000770, F1 0.766879 +/- 0.000992, Alignment@5 0.868604 +/- 0.001065, full-unit coverage 0.780778 +/- 0.002411, Supporting Fact F1 0.657799 +/- 0.001988, Joint F1 0.529203 +/- 0.000155, and hop-2+ Step@1 0.526071 +/- 0.002917 | Compact is robust to training seed; authorize matched Recall seeds 42/43/44, then complete rank-reversal and matched-baseline accounting before closing Stage 5 |
+| `stage5-v27-recall-multiseed3000` | 5 | v27 Recall seeds 42/43/44; identical ordered HotpotQA 3,000 qids; alpha 0.5; candidate/select/state-write budgets 50/5/1; fresh isolated V4-Flash caches | PASS strict audit for all seeds with zero answer errors or empty answers. EM 0.643222 +/- 0.003564, F1 0.788356 +/- 0.001754, Alignment@5 0.922423 +/- 0.002306, full-unit coverage 0.872889 +/- 0.001170, Supporting Fact F1 0.713687 +/- 0.002334, Joint F1 0.579498 +/- 0.000923, and hop-2+ Step@1 0.573169 +/- 0.006076 | Recall is robust and improves accuracy/completeness over Compact at higher selection cost; no further Stage-5 answer API is needed |
 
 ## One-time closure-balance repair
 
@@ -1152,24 +1180,12 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-The Stage-5 readiness audit and all three Compact evaluations have passed.
-The next authorized runs are the three Recall evaluations. They must use the
-same ordered 3,000 qids, frozen alpha 0.5, state-write top-1, and isolated
-fresh answer caches.
-
-```bash
-RUN=recall_seed42 KBS_STAGE5_RECALL_AUTHORIZED=1 CUDA_DEVICE=<gpu> \
-  bash scripts/run_kbs_v27_stage5_multiseed.sh
-RUN=recall_seed43 KBS_STAGE5_RECALL_AUTHORIZED=1 CUDA_DEVICE=<gpu> \
-  bash scripts/run_kbs_v27_stage5_multiseed.sh
-RUN=recall_seed44 KBS_STAGE5_RECALL_AUTHORIZED=1 CUDA_DEVICE=<gpu> \
-  bash scripts/run_kbs_v27_stage5_multiseed.sh
-```
-
-Retain all three Recall reports; no seed selection is allowed. Run no more
-than two API jobs concurrently. After Recall review, run the no-API fixed-pool
-rank-reversal audit and account for a matched multiseed anchor or ranking-only
-baseline before closing Stage 5.
+Compact and Recall end-to-end evaluations have passed for all three seeds.
+The next authorized work is to implement and smoke-test a no-API fixed-pool
+rank-reversal audit for seeds 42/43/44, reusing the exact Stage-1 intervention
+definitions. Do not launch further answer generation. After the intervention
+audit, account for a matched multiseed anchor or ranking-only baseline before
+closing Stage 5.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
