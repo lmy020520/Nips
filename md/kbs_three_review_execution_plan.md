@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 5
-current_status: Stages 1-4 complete; Stage-5 Compact and Recall seeds 42/43/44 pass strict end-to-end audits and are stable; fixed-pool rank-reversal and a matched multiseed chain baseline remain before Stage 5 can close
+current_status: Stages 1-4 complete; Stage-5 Compact and Recall multiseed audits pass; fixed-pool rank-reversal tooling passes syntax/synthetic tests and awaits server readiness plus seed-42 smoke; matched multiseed baseline remains pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -1133,6 +1133,7 @@ The paper may be locked only when:
 | `stage5-v27-multiseed-tooling` | 5 | Frozen v27 Compact/Recall protocol for seeds 42/43/44; independent checkpoints, reports, caches, and strict end-to-end checker | Readiness checker audits all three configs/checkpoints, exact config equivalence except seed/output path, seed-42 final Compact, and clean three-seed validation gates. Runner supports Compact seed 43/44 and all Recall seeds but keeps Recall behind a separate authorization flag. Python/shell syntax and diff checks pass; local readiness correctly fails closed because server-only data/checkpoints are absent | Run server `CHECK_ONLY=1`; authorize Compact seed 43/44 only if readiness status is OK; no Recall yet |
 | `stage5-v27-compact-multiseed3000` | 5 | v27 Compact seeds 42/43/44; identical ordered HotpotQA 3,000 qids; alpha 0.5; candidate/select/state-write budgets 10/5/1; fresh isolated V4-Flash caches | PASS strict audit for all seeds with zero answer errors or empty answers. EM 0.621444 +/- 0.000770, F1 0.766879 +/- 0.000992, Alignment@5 0.868604 +/- 0.001065, full-unit coverage 0.780778 +/- 0.002411, Supporting Fact F1 0.657799 +/- 0.001988, Joint F1 0.529203 +/- 0.000155, and hop-2+ Step@1 0.526071 +/- 0.002917 | Compact is robust to training seed; authorize matched Recall seeds 42/43/44, then complete rank-reversal and matched-baseline accounting before closing Stage 5 |
 | `stage5-v27-recall-multiseed3000` | 5 | v27 Recall seeds 42/43/44; identical ordered HotpotQA 3,000 qids; alpha 0.5; candidate/select/state-write budgets 50/5/1; fresh isolated V4-Flash caches | PASS strict audit for all seeds with zero answer errors or empty answers. EM 0.643222 +/- 0.003564, F1 0.788356 +/- 0.001754, Alignment@5 0.922423 +/- 0.002306, full-unit coverage 0.872889 +/- 0.001170, Supporting Fact F1 0.713687 +/- 0.002334, Joint F1 0.579498 +/- 0.000923, and hop-2+ Step@1 0.573169 +/- 0.006076 | Recall is robust and improves accuracy/completeness over Compact at higher selection cost; no further Stage-5 answer API is needed |
+| `stage5-v27-rank-reversal-tooling` | 5 | v27 seeds 42/43/44; exact Stage-1 fixed-pool state interventions; policy-only scoring; no answers or training | Dedicated readiness/report checker, guarded per-seed runner, and multiseed summarizer pass Python/shell syntax and synthetic identical-pair/delta tests. The runner refuses output overwrite and full runs remain gated behind seed-42 smoke | Run server readiness, then exactly one seed-42 20-qid smoke; authorize full multiseed diagnostics only after strict smoke PASS |
 
 ## One-time closure-balance repair
 
@@ -1181,11 +1182,12 @@ notes because the API does not expose a frozen historical backend snapshot.
 
 ```text
 Compact and Recall end-to-end evaluations have passed for all three seeds.
-The next authorized work is to implement and smoke-test a no-API fixed-pool
-rank-reversal audit for seeds 42/43/44, reusing the exact Stage-1 intervention
-definitions. Do not launch further answer generation. After the intervention
-audit, account for a matched multiseed anchor or ranking-only baseline before
-closing Stage 5.
+Stage-5 fixed-pool rank-reversal readiness, per-seed execution, strict report
+audit, and multiseed summarization are implemented. First run readiness, then
+exactly one seed-42 20-qid smoke. Only if that smoke passes may seeds 42/43/44
+run on all 3,000 qids. This work makes no API calls and reuses the exact
+Stage-1 intervention definitions. After the intervention audit, account for a
+matched multiseed anchor or ranking-only baseline before closing Stage 5.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
