@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 5
-current_status: Stages 1-4 complete; Stage-5 Compact and Recall multiseed audits pass; fixed-pool rank-reversal tooling passes syntax/synthetic tests and awaits server readiness plus seed-42 smoke; matched multiseed baseline remains pending
+current_status: Stages 1-4 complete; Stage-5 Compact and Recall multiseed audits pass; seed-42 fixed-pool rank-reversal smoke passes strict audit and authorizes full seeds 42/43/44; matched multiseed baseline remains pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -1134,6 +1134,7 @@ The paper may be locked only when:
 | `stage5-v27-compact-multiseed3000` | 5 | v27 Compact seeds 42/43/44; identical ordered HotpotQA 3,000 qids; alpha 0.5; candidate/select/state-write budgets 10/5/1; fresh isolated V4-Flash caches | PASS strict audit for all seeds with zero answer errors or empty answers. EM 0.621444 +/- 0.000770, F1 0.766879 +/- 0.000992, Alignment@5 0.868604 +/- 0.001065, full-unit coverage 0.780778 +/- 0.002411, Supporting Fact F1 0.657799 +/- 0.001988, Joint F1 0.529203 +/- 0.000155, and hop-2+ Step@1 0.526071 +/- 0.002917 | Compact is robust to training seed; authorize matched Recall seeds 42/43/44, then complete rank-reversal and matched-baseline accounting before closing Stage 5 |
 | `stage5-v27-recall-multiseed3000` | 5 | v27 Recall seeds 42/43/44; identical ordered HotpotQA 3,000 qids; alpha 0.5; candidate/select/state-write budgets 50/5/1; fresh isolated V4-Flash caches | PASS strict audit for all seeds with zero answer errors or empty answers. EM 0.643222 +/- 0.003564, F1 0.788356 +/- 0.001754, Alignment@5 0.922423 +/- 0.002306, full-unit coverage 0.872889 +/- 0.001170, Supporting Fact F1 0.713687 +/- 0.002334, Joint F1 0.579498 +/- 0.000923, and hop-2+ Step@1 0.573169 +/- 0.006076 | Recall is robust and improves accuracy/completeness over Compact at higher selection cost; no further Stage-5 answer API is needed |
 | `stage5-v27-rank-reversal-tooling` | 5 | v27 seeds 42/43/44; exact Stage-1 fixed-pool state interventions; policy-only scoring; no answers or training | Dedicated readiness/report checker, guarded per-seed runner, and multiseed summarizer pass Python/shell syntax and synthetic identical-pair/delta tests. The runner refuses output overwrite and full runs remain gated behind seed-42 smoke | Run server readiness, then exactly one seed-42 20-qid smoke; authorize full multiseed diagnostics only after strict smoke PASS |
+| `stage5-v27-rank-reversal-smoke20` | 5 | v27 seed 42; first 20 evaluation qids and 44 states; fixed candidate pool; seven state interventions; 200 bootstrap samples; no API | PASS strict report audit with zero skipped states. The fixed pool retains the positive in 93.18% of states. Across 23 eligible transitions, correct-state conditional rank reversal is 0.913043 versus 0 for query-only/frozen; correct-state later-hop Step@1 is 0.727273 versus 0.500000 for query-only given retention. Previous-only ties correct on this small smoke and must be decided on the full set | Runtime and dual-checkpoint compatibility are confirmed; authorize full seeds 42/43/44 with independent outputs and retain every result |
 
 ## One-time closure-balance repair
 
@@ -1182,12 +1183,12 @@ notes because the API does not expose a frozen historical backend snapshot.
 
 ```text
 Compact and Recall end-to-end evaluations have passed for all three seeds.
-Stage-5 fixed-pool rank-reversal readiness, per-seed execution, strict report
-audit, and multiseed summarization are implemented. First run readiness, then
-exactly one seed-42 20-qid smoke. Only if that smoke passes may seeds 42/43/44
-run on all 3,000 qids. This work makes no API calls and reuses the exact
-Stage-1 intervention definitions. After the intervention audit, account for a
-matched multiseed anchor or ranking-only baseline before closing Stage 5.
+Stage-5 fixed-pool rank-reversal readiness and the seed-42 20-qid smoke pass.
+Run seeds 42/43/44 on all 3,000 qids with independent output directories and
+retain every result. These diagnostics make no API calls and reuse the exact
+Stage-1 intervention definitions. After their strict audits and multiseed
+summary, account for a matched multiseed anchor or ranking-only baseline
+before closing Stage 5.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
