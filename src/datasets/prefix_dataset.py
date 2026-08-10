@@ -284,6 +284,16 @@ def get_state_h_ids(record: dict) -> List[str]:
     return unit_ids
 
 
+def get_acquired_negative_unit_ids(record: dict) -> List[str]:
+    counterfactual = get_nested(record, ["labels", "counterfactual_ranking"])
+    if isinstance(counterfactual, dict) and "acquired_negative_unit_ids" in counterfactual:
+        unit_ids = counterfactual.get("acquired_negative_unit_ids") or []
+        if not isinstance(unit_ids, list):
+            raise ValueError("acquired_negative_unit_ids must be a list")
+        return [str(unit_id) for unit_id in unit_ids]
+    return get_state_h_ids(record)
+
+
 def build_context_text(
     question: str,
     k_t: str,
@@ -421,7 +431,7 @@ class PrefixRankingDataset(Dataset):
             label_idx = normalized_candidates.index(positive_unit_id)
             acquired_candidate_indices = [
                 normalized_candidates.index(unit_id)
-                for unit_id in get_state_h_ids(record)
+                for unit_id in get_acquired_negative_unit_ids(record)
                 if unit_id in normalized_candidates and unit_id != positive_unit_id
             ]
             positive_memory = self.memory_map.get(positive_unit_id)

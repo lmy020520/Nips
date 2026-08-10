@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 5
-current_status: Stages 1-4 complete; Stage-5 Compact, Recall, and fixed-pool state-intervention/rank-reversal multiseed audits pass; a matched multiseed chain baseline and sampling-robustness evaluation remain before Stage 5 can close
+current_status: Stages 1-4 complete; Stage-5 Compact, Recall, and fixed-pool state-intervention/rank-reversal multiseed audits pass; v27-matched previous-evidence-only Anchor tooling is implemented and awaiting server data/readiness audit; sampling robustness remains pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -90,7 +90,7 @@ passes its explicit gate.
 | 3 | Controlled mechanism baselines | Closed: v23/v24 outperform Full; v25 and v26 gates failed | No further API | Completed for v23/v24/v25/v26 seed 42 |
 | 3X | High-cost state architecture repair | Passed and closed with final v27 Compact evaluation | Completed | Completed for seeds 42/43/44 |
 | 4 | Standard and closure-aware metrics | Passed and closed with final v27 | Completed offline | No |
-| 5 | Multi-seed robustness | Compact, Recall, and fixed-pool state audits passed; matched baseline and sampling robustness pending | No further API currently | Completed for v27 seeds 42/43/44 |
+| 5 | Multi-seed robustness | Compact, Recall, and fixed-pool state audits passed; matched Anchor readiness pending, then sampling robustness | No further API currently | Completed for v27 seeds 42/43/44 |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
 | 7 | Decide deficit/contribution status | Pending | No initially | Conditional |
 | 8 | Rewrite and submission audit | Pending | No | No |
@@ -867,6 +867,25 @@ two-positive reversal criterion. The paper must claim improved later-hop
 ranking, not universal additional top-five recall or order-sensitive
 reasoning.
 
+## Matched previous-evidence-only Anchor protocol
+
+The remaining chain baseline is a separately trained
+`v27-matched previous-evidence-only dual Anchor`, not the earlier v23 model
+and not the inference-only previous-state intervention. It uses the same
+ordered rows, qid splits, fixed candidate pools, ranking positives, row
+repetitions, v21 initialization, dual-state architecture, optimizer, losses,
+epochs, and seeds 42/43/44 as v27. The intended change is limited to the
+policy context: Full sees accumulated state, whereas Anchor sees only the
+latest acquired evidence.
+
+For fairness, the acquired-evidence reversal margin for Anchor may contain
+only the previous evidence visible in that input. Penalizing earlier history
+units hidden from Anchor would give Full privileged supervision. The dataset
+therefore records explicit `acquired_negative_unit_ids`, and the DataLoader
+uses those labels when present while retaining the historical `H_t` fallback
+for older datasets. Data and configuration readiness must pass before any
+Anchor training starts.
+
 ---
 
 # Stage 6: Closure, Compression, and Cost Evidence
@@ -1173,6 +1192,7 @@ The paper may be locked only when:
 | `stage5-v27-rank-reversal-tooling` | 5 | v27 seeds 42/43/44; exact Stage-1 fixed-pool state interventions; policy-only scoring; no answers or training | Dedicated readiness/report checker, guarded per-seed runner, and multiseed summarizer pass Python/shell syntax and synthetic identical-pair/delta tests. The runner refuses output overwrite and full runs remain gated behind seed-42 smoke | Run server readiness, then exactly one seed-42 20-qid smoke; authorize full multiseed diagnostics only after strict smoke PASS |
 | `stage5-v27-rank-reversal-smoke20` | 5 | v27 seed 42; first 20 evaluation qids and 44 states; fixed candidate pool; seven state interventions; 200 bootstrap samples; no API | PASS strict report audit with zero skipped states. The fixed pool retains the positive in 93.18% of states. Across 23 eligible transitions, correct-state conditional rank reversal is 0.913043 versus 0 for query-only/frozen; correct-state later-hop Step@1 is 0.727273 versus 0.500000 for query-only given retention. Previous-only ties correct on this small smoke and must be decided on the full set | Runtime and dual-checkpoint compatibility are confirmed; authorize full seeds 42/43/44 with independent outputs and retain every result |
 | `stage5-v27-rank-reversal-multiseed3000` | 5 | v27 seeds 42/43/44; same 3,000 qids, 7,296 states, 4,181 eligible pairs; fixed candidate pools; seven state interventions; 10,000 qid bootstrap samples per seed; no API | PASS all strict audits and identical-pair check. Correct-state conditional reversal is 0.669457 +/- 0.001266 versus 0 for query-only/frozen and 0.670414 +/- 0.002193 for previous-only. On retained later-hop states, correct minus query-only Step@1/MRR are +0.428191/+0.293831; correct minus previous-only are +0.017705/+0.011358, with positive CIs for every seed. Previous-only ties Step@5 and narrow rank reversal | Dynamic state use and the smaller full-history fine-ranking benefit are seed-robust; close the rank-reversal subtask without claiming universal Top-5 or reversal gains over previous-only |
+| `stage5-v28-matched-anchor-tooling` | 5 | v27 rows and dual architecture; previous-evidence-only input; explicit reversal negatives restricted to visible previous evidence; seeds 42/43/44 | Builder, strict row/config/loader readiness checker, three matched configs, and guarded runner implemented. Static Python/Shell checks and exact parsed config-difference audit pass locally; no data, training, validation, or API run performed | Build once on the server and run readiness only. Training remains forbidden until the readiness report is reviewed |
 
 ## One-time closure-balance repair
 
@@ -1220,14 +1240,13 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Compact and Recall end-to-end evaluations have passed for all three seeds.
-The fixed-pool rank-reversal multiseed audit has passed and is closed. The
-next authorized work is to define a matched multiseed anchor or ranking-only
-baseline using the same initialization, architecture family, qid splits, and
-training seeds. Audit the baseline protocol and run a small no-answer
-validation gate before any new 3,000-qid answer generation. Do not treat the
-inference-only previous-state intervention as a separately trained baseline.
-After that comparison, complete sampling robustness on additional fixed,
+Compact and Recall end-to-end evaluations and the fixed-pool rank-reversal
+audit have passed for all three seeds. The next authorized run is only the
+server data build and strict readiness audit for the v27-matched
+previous-evidence-only dual Anchor. Do not start training until that report is
+reviewed. If readiness passes, train seeds 42/43/44 and run a small no-answer
+validation gate before any 3,000-qid answer generation. After the matched
+comparison, complete sampling robustness on additional fixed,
 question-disjoint subsets without answer generation before closing Stage 5.
 ```
 
