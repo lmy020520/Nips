@@ -16,6 +16,16 @@ METRICS = (
     "next_preference_accuracy",
     "conditional_rank_reversal_accuracy",
 )
+PAIRED_BASELINES = ("query_only", "frozen", "previous_evidence_only")
+PAIRED_METRICS = ("step_at_1", "step_at_5", "mrr", "gold_margin")
+NECESSITY_FIELDS = (
+    "rescued_at_1",
+    "harmed_at_1",
+    "rescued_at_5",
+    "harmed_at_5",
+    "rank_improved",
+    "rank_degraded",
+)
 
 
 def parse_named_path(value: str) -> tuple[str, Path]:
@@ -88,6 +98,10 @@ def main() -> None:
             "evaluated_states": obj.get("evaluated_states"),
             "eligible_pairs": reversal.get("eligible_pairs"),
             "modes": {mode: modes.get(mode) for mode in MODES},
+            "state_necessity": obj.get("state_necessity"),
+            "paired_bootstrap_t_ge_1_given_pool": obj.get(
+                "paired_bootstrap_t_ge_1_given_pool"
+            ),
         }
 
     reference_keys = [pair_key(record) for record in records_by_seed["42"]]
@@ -116,6 +130,51 @@ def main() -> None:
             "positive_for_every_seed": all(value > 0 for value in values),
         }
 
+    state_necessity = {
+        field: mean_std(
+            [
+                float(per_seed[seed]["state_necessity"][field]["rate"])
+                for seed in SEEDS
+            ]
+        )
+        for field in NECESSITY_FIELDS
+    }
+    state_necessity["mean_query_rank_minus_correct_rank"] = mean_std(
+        [
+            float(
+                per_seed[seed]["state_necessity"][
+                    "mean_query_rank_minus_correct_rank"
+                ]
+            )
+            for seed in SEEDS
+        ]
+    )
+
+    paired_deltas = {}
+    for baseline in PAIRED_BASELINES:
+        paired_deltas[f"correct_minus_{baseline}"] = {}
+        for metric in PAIRED_METRICS:
+            entries = [
+                per_seed[seed]["paired_bootstrap_t_ge_1_given_pool"][baseline][
+                    "metrics"
+                ][metric]
+                for seed in SEEDS
+            ]
+            values = [float(entry["observed_delta"]) for entry in entries]
+            paired_deltas[f"correct_minus_{baseline}"][metric] = {
+                **mean_std(values),
+                "ci95_by_seed": {
+                    seed: [
+                        float(entry["ci95_low"]),
+                        float(entry["ci95_high"]),
+                    ]
+                    for seed, entry in zip(SEEDS, entries)
+                },
+                "positive_ci_for_every_seed": all(
+                    float(entry["ci95_low"]) > 0 for entry in entries
+                ),
+            }
+
     result = {
         "status": "PASS" if not failures else "FAIL",
         "scope": "v27 Stage-5 fixed-pool rank-reversal multiseed audit",
@@ -128,6 +187,8 @@ def main() -> None:
         "per_seed": per_seed,
         "aggregate": aggregate,
         "rank_reversal_deltas": deltas,
+        "state_necessity": state_necessity,
+        "paired_state_deltas_t_ge_1_given_pool": paired_deltas,
         "failures": failures,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

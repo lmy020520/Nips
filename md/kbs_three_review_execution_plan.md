@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 5
-current_status: Stages 1-4 complete; Stage-5 Compact and Recall multiseed audits pass; seed-42 fixed-pool rank-reversal smoke passes strict audit and authorizes full seeds 42/43/44; matched multiseed baseline remains pending
+current_status: Stages 1-4 complete; Stage-5 Compact, Recall, and fixed-pool state-intervention/rank-reversal multiseed audits pass; a matched multiseed chain baseline and sampling-robustness evaluation remain before Stage 5 can close
 ```
 
 This file is the single execution plan synthesized from:
@@ -90,7 +90,7 @@ passes its explicit gate.
 | 3 | Controlled mechanism baselines | Closed: v23/v24 outperform Full; v25 and v26 gates failed | No further API | Completed for v23/v24/v25/v26 seed 42 |
 | 3X | High-cost state architecture repair | Passed and closed with final v27 Compact evaluation | Completed | Completed for seeds 42/43/44 |
 | 4 | Standard and closure-aware metrics | Passed and closed with final v27 | Completed offline | No |
-| 5 | Multi-seed robustness | Compact and Recall end-to-end multiseed audits passed; rank-reversal and matched baseline pending | Completed for Compact/Recall | Completed for seeds 42/43/44 |
+| 5 | Multi-seed robustness | Compact, Recall, and fixed-pool state audits passed; matched baseline and sampling robustness pending | No further API currently | Completed for v27 seeds 42/43/44 |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
 | 7 | Decide deficit/contribution status | Pending | No initially | Conditional |
 | 8 | Rewrite and submission audit | Pending | No | No |
@@ -827,8 +827,45 @@ is about 1.59 seconds per qid rather than about 1.00 second for Compact.
 
 **Decision:** Recall is also robust to training seed and establishes a stable
 accuracy/completeness operating point. No further answer-API run is required
-for the Stage-5 operating-point comparison. Fixed-pool rank reversal and a
-matched multiseed chain baseline remain required before Stage 5 closes.
+for the Stage-5 operating-point comparison. Fixed-pool state evidence is
+reported below; matched-baseline and sampling-robustness evidence remain
+required before Stage 5 closes.
+
+## Fixed-pool state and rank-reversal evidence
+
+All three v27 checkpoints were evaluated over the same 3,000 qids, 7,296
+states, and 4,181 consecutive-positive pairs. Candidate pools and front-end
+scores were fixed before changing policy context, so the differences isolate
+state use rather than retrieval recall. Every report and pair-order audit
+passes.
+
+| Condition | Conditional rank reversal, mean +/- std |
+|---|---:|
+| Correct state | 0.669457 +/- 0.001266 |
+| Query only | 0.000000 +/- 0.000000 |
+| Frozen initial state | 0.000000 +/- 0.000000 |
+| Previous evidence only | 0.670414 +/- 0.002193 |
+
+For `t>=1` states with the teacher positive retained in the fixed pool, the
+qid-paired correct-state differences are:
+
+| Baseline | Step@1 delta | Step@5 delta | MRR delta | Three-seed CI result |
+|---|---:|---:|---:|---|
+| Query only | +0.428191 +/- 0.003066 | +0.062750 +/- 0.008625 | +0.293831 +/- 0.004588 | All three CIs positive for all metrics |
+| Frozen state | +0.426112 +/- 0.003825 | +0.061215 +/- 0.008048 | +0.292750 +/- 0.004900 | All three CIs positive for all metrics |
+| Previous evidence only | +0.017705 +/- 0.003104 | +0.000576 +/- 0.000484 | +0.011358 +/- 0.002097 | Step@1/MRR positive for every seed; Step@5 ties |
+
+The correct state rescues a query-only Step@1 error in
+0.444812 +/- 0.001416 of eligible later-hop states, while harming Step@1 in
+0.073499 +/- 0.002217. The positive rank improves in
+0.554001 +/- 0.002133 of states and degrades in 0.111987 +/- 0.002813.
+
+**Decision:** v27 uses dynamic state content robustly across seeds. Full
+accumulated state adds a smaller but significant fine-ranking benefit over a
+previous-evidence anchor at Step@1 and MRR, but not at Step@5 or on the narrow
+two-positive reversal criterion. The paper must claim improved later-hop
+ranking, not universal additional top-five recall or order-sensitive
+reasoning.
 
 ---
 
@@ -1135,6 +1172,7 @@ The paper may be locked only when:
 | `stage5-v27-recall-multiseed3000` | 5 | v27 Recall seeds 42/43/44; identical ordered HotpotQA 3,000 qids; alpha 0.5; candidate/select/state-write budgets 50/5/1; fresh isolated V4-Flash caches | PASS strict audit for all seeds with zero answer errors or empty answers. EM 0.643222 +/- 0.003564, F1 0.788356 +/- 0.001754, Alignment@5 0.922423 +/- 0.002306, full-unit coverage 0.872889 +/- 0.001170, Supporting Fact F1 0.713687 +/- 0.002334, Joint F1 0.579498 +/- 0.000923, and hop-2+ Step@1 0.573169 +/- 0.006076 | Recall is robust and improves accuracy/completeness over Compact at higher selection cost; no further Stage-5 answer API is needed |
 | `stage5-v27-rank-reversal-tooling` | 5 | v27 seeds 42/43/44; exact Stage-1 fixed-pool state interventions; policy-only scoring; no answers or training | Dedicated readiness/report checker, guarded per-seed runner, and multiseed summarizer pass Python/shell syntax and synthetic identical-pair/delta tests. The runner refuses output overwrite and full runs remain gated behind seed-42 smoke | Run server readiness, then exactly one seed-42 20-qid smoke; authorize full multiseed diagnostics only after strict smoke PASS |
 | `stage5-v27-rank-reversal-smoke20` | 5 | v27 seed 42; first 20 evaluation qids and 44 states; fixed candidate pool; seven state interventions; 200 bootstrap samples; no API | PASS strict report audit with zero skipped states. The fixed pool retains the positive in 93.18% of states. Across 23 eligible transitions, correct-state conditional rank reversal is 0.913043 versus 0 for query-only/frozen; correct-state later-hop Step@1 is 0.727273 versus 0.500000 for query-only given retention. Previous-only ties correct on this small smoke and must be decided on the full set | Runtime and dual-checkpoint compatibility are confirmed; authorize full seeds 42/43/44 with independent outputs and retain every result |
+| `stage5-v27-rank-reversal-multiseed3000` | 5 | v27 seeds 42/43/44; same 3,000 qids, 7,296 states, 4,181 eligible pairs; fixed candidate pools; seven state interventions; 10,000 qid bootstrap samples per seed; no API | PASS all strict audits and identical-pair check. Correct-state conditional reversal is 0.669457 +/- 0.001266 versus 0 for query-only/frozen and 0.670414 +/- 0.002193 for previous-only. On retained later-hop states, correct minus query-only Step@1/MRR are +0.428191/+0.293831; correct minus previous-only are +0.017705/+0.011358, with positive CIs for every seed. Previous-only ties Step@5 and narrow rank reversal | Dynamic state use and the smaller full-history fine-ranking benefit are seed-robust; close the rank-reversal subtask without claiming universal Top-5 or reversal gains over previous-only |
 
 ## One-time closure-balance repair
 
@@ -1183,12 +1221,14 @@ notes because the API does not expose a frozen historical backend snapshot.
 
 ```text
 Compact and Recall end-to-end evaluations have passed for all three seeds.
-Stage-5 fixed-pool rank-reversal readiness and the seed-42 20-qid smoke pass.
-Run seeds 42/43/44 on all 3,000 qids with independent output directories and
-retain every result. These diagnostics make no API calls and reuse the exact
-Stage-1 intervention definitions. After their strict audits and multiseed
-summary, account for a matched multiseed anchor or ranking-only baseline
-before closing Stage 5.
+The fixed-pool rank-reversal multiseed audit has passed and is closed. The
+next authorized work is to define a matched multiseed anchor or ranking-only
+baseline using the same initialization, architecture family, qid splits, and
+training seeds. Audit the baseline protocol and run a small no-answer
+validation gate before any new 3,000-qid answer generation. Do not treat the
+inference-only previous-state intervention as a separately trained baseline.
+After that comparison, complete sampling robustness on additional fixed,
+question-disjoint subsets without answer generation before closing Stage 5.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
