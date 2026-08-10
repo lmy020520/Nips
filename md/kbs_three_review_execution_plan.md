@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 5
-current_status: Stages 1-4 complete; Stage-5 Compact, Recall, and fixed-pool state-intervention/rank-reversal multiseed audits pass; v27-matched previous-evidence-only Anchor tooling is implemented and awaiting server data/readiness audit; sampling robustness remains pending
+current_status: Stages 1-4 complete; Stage-5 Compact, Recall, fixed-pool state audits, and v28 matched-Anchor readiness pass; matched Anchor seeds 42/43/44 are authorized for training; sampling robustness remains pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -90,7 +90,7 @@ passes its explicit gate.
 | 3 | Controlled mechanism baselines | Closed: v23/v24 outperform Full; v25 and v26 gates failed | No further API | Completed for v23/v24/v25/v26 seed 42 |
 | 3X | High-cost state architecture repair | Passed and closed with final v27 Compact evaluation | Completed | Completed for seeds 42/43/44 |
 | 4 | Standard and closure-aware metrics | Passed and closed with final v27 | Completed offline | No |
-| 5 | Multi-seed robustness | Compact, Recall, and fixed-pool state audits passed; matched Anchor readiness pending, then sampling robustness | No further API currently | Completed for v27 seeds 42/43/44 |
+| 5 | Multi-seed robustness | Compact, Recall, fixed-pool state audits, and matched Anchor readiness passed; Anchor training then sampling robustness pending | No further API currently | v27 seeds complete; v28 Anchor seeds authorized |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
 | 7 | Decide deficit/contribution status | Pending | No initially | Conditional |
 | 8 | Rewrite and submission audit | Pending | No | No |
@@ -1193,6 +1193,7 @@ The paper may be locked only when:
 | `stage5-v27-rank-reversal-smoke20` | 5 | v27 seed 42; first 20 evaluation qids and 44 states; fixed candidate pool; seven state interventions; 200 bootstrap samples; no API | PASS strict report audit with zero skipped states. The fixed pool retains the positive in 93.18% of states. Across 23 eligible transitions, correct-state conditional rank reversal is 0.913043 versus 0 for query-only/frozen; correct-state later-hop Step@1 is 0.727273 versus 0.500000 for query-only given retention. Previous-only ties correct on this small smoke and must be decided on the full set | Runtime and dual-checkpoint compatibility are confirmed; authorize full seeds 42/43/44 with independent outputs and retain every result |
 | `stage5-v27-rank-reversal-multiseed3000` | 5 | v27 seeds 42/43/44; same 3,000 qids, 7,296 states, 4,181 eligible pairs; fixed candidate pools; seven state interventions; 10,000 qid bootstrap samples per seed; no API | PASS all strict audits and identical-pair check. Correct-state conditional reversal is 0.669457 +/- 0.001266 versus 0 for query-only/frozen and 0.670414 +/- 0.002193 for previous-only. On retained later-hop states, correct minus query-only Step@1/MRR are +0.428191/+0.293831; correct minus previous-only are +0.017705/+0.011358, with positive CIs for every seed. Previous-only ties Step@5 and narrow rank reversal | Dynamic state use and the smaller full-history fine-ranking benefit are seed-robust; close the rank-reversal subtask without claiming universal Top-5 or reversal gains over previous-only |
 | `stage5-v28-matched-anchor-tooling` | 5 | v27 rows and dual architecture; previous-evidence-only input; explicit reversal negatives restricted to visible previous evidence; seeds 42/43/44 | Builder, strict row/config/loader readiness checker, three matched configs, and guarded runner implemented. Static Python/Shell checks and exact parsed config-difference audit pass locally; no data, training, validation, or API run performed | Build once on the server and run readiness only. Training remains forbidden until the readiness report is reviewed |
+| `stage5-v28-matched-anchor-readiness` | 5 | Full v27-derived v28 train/validation/internal-test data; exact row/config/loader audit; no training or API | PASS with zero row errors, split overlap, or overlap with the 3,000-qid evaluation subset. Rows/qids are 37,730/10,000, 1,207/500, and 1,247/500. The Anchor retains 27,730/707/747 visible acquired-negative pairs and removes 9,912/268/338 hidden-history constraints. All three configs match their v27 seed counterpart outside the pre-registered context/data/output changes, and all loader-contract checks pass | Authorize independent seed-42/43/44 training. After completeness review, run a small no-answer validation gate before any 3,000-qid answer generation |
 
 ## One-time closure-balance repair
 
@@ -1240,14 +1241,12 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Compact and Recall end-to-end evaluations and the fixed-pool rank-reversal
-audit have passed for all three seeds. The next authorized run is only the
-server data build and strict readiness audit for the v27-matched
-previous-evidence-only dual Anchor. Do not start training until that report is
-reviewed. If readiness passes, train seeds 42/43/44 and run a small no-answer
-validation gate before any 3,000-qid answer generation. After the matched
-comparison, complete sampling robustness on additional fixed,
-question-disjoint subsets without answer generation before closing Stage 5.
+The v28 matched-Anchor data, configuration, split, evaluation-overlap, and
+loader audits pass. The next authorized work is independent training for
+seeds 42/43/44 on separate GPUs and output directories. No answer API is
+allowed. After all checkpoints and metric histories pass completeness review,
+run one seed-42 20-qid no-answer validation smoke before the full 1,000-qid
+multiseed validation comparison. No 3,000-qid answer generation is authorized.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
