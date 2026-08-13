@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 5
-current_status: Stages 1-4 complete; Stage-5 Compact, Recall, fixed-pool state audits, and v28 matched-Anchor readiness pass; matched Anchor seeds 42/43/44 are authorized for training; sampling robustness remains pending
+current_status: Stages 1-4 complete; Stage-5 Compact, Recall, fixed-pool state audits, v28 matched-Anchor readiness, and matched-Anchor training pass; seed-42 no-answer matched validation smoke is authorized; sampling robustness remains pending
 ```
 
 This file is the single execution plan synthesized from:
@@ -90,7 +90,7 @@ passes its explicit gate.
 | 3 | Controlled mechanism baselines | Closed: v23/v24 outperform Full; v25 and v26 gates failed | No further API | Completed for v23/v24/v25/v26 seed 42 |
 | 3X | High-cost state architecture repair | Passed and closed with final v27 Compact evaluation | Completed | Completed for seeds 42/43/44 |
 | 4 | Standard and closure-aware metrics | Passed and closed with final v27 | Completed offline | No |
-| 5 | Multi-seed robustness | Compact, Recall, fixed-pool state audits, and matched Anchor readiness passed; Anchor training then sampling robustness pending | No further API currently | v27 seeds complete; v28 Anchor seeds authorized |
+| 5 | Multi-seed robustness | Compact, Recall, fixed-pool state audits, and matched Anchor training passed; no-answer gate then sampling robustness pending | No further API currently | v27 and v28 Anchor seeds 42/43/44 complete |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
 | 7 | Decide deficit/contribution status | Pending | No initially | Conditional |
 | 8 | Rewrite and submission audit | Pending | No | No |
@@ -1194,6 +1194,8 @@ The paper may be locked only when:
 | `stage5-v27-rank-reversal-multiseed3000` | 5 | v27 seeds 42/43/44; same 3,000 qids, 7,296 states, 4,181 eligible pairs; fixed candidate pools; seven state interventions; 10,000 qid bootstrap samples per seed; no API | PASS all strict audits and identical-pair check. Correct-state conditional reversal is 0.669457 +/- 0.001266 versus 0 for query-only/frozen and 0.670414 +/- 0.002193 for previous-only. On retained later-hop states, correct minus query-only Step@1/MRR are +0.428191/+0.293831; correct minus previous-only are +0.017705/+0.011358, with positive CIs for every seed. Previous-only ties Step@5 and narrow rank reversal | Dynamic state use and the smaller full-history fine-ranking benefit are seed-robust; close the rank-reversal subtask without claiming universal Top-5 or reversal gains over previous-only |
 | `stage5-v28-matched-anchor-tooling` | 5 | v27 rows and dual architecture; previous-evidence-only input; explicit reversal negatives restricted to visible previous evidence; seeds 42/43/44 | Builder, strict row/config/loader readiness checker, three matched configs, and guarded runner implemented. Static Python/Shell checks and exact parsed config-difference audit pass locally; no data, training, validation, or API run performed | Build once on the server and run readiness only. Training remains forbidden until the readiness report is reviewed |
 | `stage5-v28-matched-anchor-readiness` | 5 | Full v27-derived v28 train/validation/internal-test data; exact row/config/loader audit; no training or API | PASS with zero row errors, split overlap, or overlap with the 3,000-qid evaluation subset. Rows/qids are 37,730/10,000, 1,207/500, and 1,247/500. The Anchor retains 27,730/707/747 visible acquired-negative pairs and removes 9,912/268/338 hidden-history constraints. All three configs match their v27 seed counterpart outside the pre-registered context/data/output changes, and all loader-contract checks pass | Authorize independent seed-42/43/44 training. After completeness review, run a small no-answer validation gate before any 3,000-qid answer generation |
+| `stage5-v28-matched-anchor-training` | 5 | v27-matched previous-evidence-only dual Anchor; seeds 42/43/44; two epochs; visible acquired-negative supervision; no API | PASS completeness for all nine metric/history files; epoch 2 selected for every seed. Validation accuracy is 0.643192 +/- 0.002663 and internal-test accuracy 0.587811 +/- 0.003208. The corresponding v27 means are 0.661419 and 0.609195, giving stable descriptive Full advantages of about 0.0182 and 0.0214. Anchor acquired-pair accuracy is not directly compared because its pair scope intentionally excludes hidden history | Implement and run one seed-42 20-qid no-answer paired runtime smoke before the 1,000-qid multiseed validation gate |
+| `stage5-v28-matched-anchor-gate-tooling` | 5 | v27 Full versus v28 matched Anchor; same validation qids/front end/alpha/budgets/state-write; paired all-state and hop-2+ metrics; no answers | Dedicated paired analyzer and guarded runner implemented. Full validation is locked until smoke review; smoke validates runtime, checkpoint/context protocol, ordered qids, and teacher-positive step pairing without using 20-qid significance as evidence | Run exactly one seed-42 20-qid smoke; no full validation or answer generation yet |
 
 ## One-time closure-balance repair
 
@@ -1241,12 +1243,11 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-The v28 matched-Anchor data, configuration, split, evaluation-overlap, and
-loader audits pass. The next authorized work is independent training for
-seeds 42/43/44 on separate GPUs and output directories. No answer API is
-allowed. After all checkpoints and metric histories pass completeness review,
-run one seed-42 20-qid no-answer validation smoke before the full 1,000-qid
-multiseed validation comparison. No 3,000-qid answer generation is authorized.
+The v28 matched-Anchor data/readiness and seed-42/43/44 training-completeness
+audits pass. The next authorized run is exactly one seed-42 20-qid paired
+no-answer smoke comparing v27 Full with v28 matched Anchor under the same
+validation front end and budgets. Review `validation_gate.json` before
+unlocking the 1,000-qid multiseed gate. No answer generation is authorized.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
