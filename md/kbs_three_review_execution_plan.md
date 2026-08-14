@@ -6,8 +6,8 @@
 plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
-current_stage: 5
-current_status: Stages 1-4 complete; Stage-5 matched-Anchor is closed negative and 6,903-qid full-validation readiness passes; seeds 42/43/44 fixed-pool diagnostics are authorized
+current_stage: 6
+current_status: Stages 1-5 complete; full-validation multiseed evidence confirms robust dynamic-state value with bounded previous-only gains; Stage-6 teacher/compression/cost readiness is next
 ```
 
 This file is the single execution plan synthesized from:
@@ -90,8 +90,8 @@ passes its explicit gate.
 | 3 | Controlled mechanism baselines | Closed: v23/v24 outperform Full; v25 and v26 gates failed | No further API | Completed for v23/v24/v25/v26 seed 42 |
 | 3X | High-cost state architecture repair | Passed and closed with final v27 Compact evaluation | Completed | Completed for seeds 42/43/44 |
 | 4 | Standard and closure-aware metrics | Passed and closed with final v27 | Completed offline | No |
-| 5 | Multi-seed robustness | Compact/Recall/state audits passed; matched Anchor closed negative; 6,903-qid full-validation diagnostics authorized | No further API currently | v27 and v28 Anchor seeds 42/43/44 complete |
-| 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
+| 5 | Multi-seed robustness | Completed; sampling and seed robustness pass, matched Anchor retained as negative | No further API | Completed for seeds 42/43/44 |
+| 6 | Teacher, compression, and cost evidence | Readiness and artifact inventory pending | Mixed; locked until offline audit | Possibly |
 | 7 | Decide deficit/contribution status | Pending | No initially | Conditional |
 | 8 | Rewrite and submission audit | Pending | No | No |
 
@@ -933,6 +933,32 @@ qid-clustered bootstrap samples. This experiment tests whether the state-use
 and rank-reversal conclusions survive the full available validation sample;
 it does not reopen alpha selection or matched-Anchor tuning.
 
+## Full-validation multiseed evidence
+
+All three v27 checkpoints were evaluated on the same 6,903 qids, 16,752
+states, and 9,607 eligible consecutive-positive pairs. Pair order is
+identical, every per-seed audit passes, and no API call is used.
+
+| Comparison at `t>=1`, positive retained | Step@1 delta | Step@5 delta | MRR delta | Seed-level inference |
+|---|---:|---:|---:|---|
+| Correct state - query only | +0.423601 +/- 0.002146 | +0.058563 +/- 0.007864 | +0.289256 +/- 0.003645 | Every CI positive |
+| Correct state - frozen state | +0.422053 +/- 0.001577 | +0.057975 +/- 0.007217 | +0.288287 +/- 0.003664 | Every CI positive |
+| Correct state - previous evidence only | +0.019378 +/- 0.002462 | +0.001029 +/- 0.000461 | +0.012286 +/- 0.001513 | Step@1/MRR CIs positive; Step@5 not consistent |
+
+Correct-state conditional rank reversal is 0.657576 +/- 0.003645, versus
+zero for query-only and frozen state. Previous-evidence-only obtains
+0.659033 +/- 0.005271, so full history does not improve the narrow reversal
+criterion. Correct state rescues 43.9894% of query-only Step@1 errors and
+harms 7.6304%; positive rank improves in 54.8225% of eligible states and
+degrades in 11.1763%.
+
+**Decision:** Stage 5 passes and closes. Dynamic state use, query/frozen-state
+advantages, and the smaller Step@1/MRR benefit over previous-only inference
+are robust to both sampling and training seed. Together with the separately
+trained matched Anchor negative result, the paper must not claim universal
+full-history superiority, consistent Step@5 improvement over previous-only,
+or an advantage on the narrow two-positive reversal test.
+
 ---
 
 # Stage 6: Closure, Compression, and Cost Evidence
@@ -1249,6 +1275,7 @@ The paper may be locked only when:
 | `stage5-full-validation-sampling-tooling` | 5 | Every usable HotpotQA distractor validation qid; explicit all-row manifest; strict candidate/state/disjointness audit; frozen v27 seeds; fixed-pool no-answer diagnostics | Builder now supports `size=0` for all usable rows. A dedicated readiness checker, guarded runner, and qid-count-aware multiseed summarizer are implemented; no full-validation data or model diagnostic has yet been run | Build the full-validation dataset and run readiness only. Model diagnostics remain unauthorized until the readiness report is reviewed |
 | `stage5-full-validation-readiness-attempt1` | 5 | All 7,405 HotpotQA distractor validation source rows; 6,903 usable and training-disjoint qids; 16,752 states; 286,115 memory units; no API | Data construction and every structural audit pass with zero sample errors and exact source-row accounting. The checker alone reports FAIL because its fixed `qids>=7000` guard is incompatible with the observed 6,903 usable rows. The usable fraction is 93.22%, and both the primary 3,000-qid evaluation and 1,000-qid alpha subset are contained in this dataset | Replace the arbitrary final-qid threshold with source-size, accounting, and usable-fraction guards, then rerun readiness without rebuilding data |
 | `stage5-full-validation-readiness` | 5 | 7,405 source rows; 6,903 usable qids (93.2208%); 16,752 states; 286,115 memory units; cand50; no API | PASS corrected audit with zero failures and sample errors. Exactly 500 existing/internal qids are excluded, one row lacks a mapped support sentence, and one has no distractor sentence. Training overlap is zero; the primary 3,000-qid evaluation and alpha 1,000-qid validation sets are both contained in the full sample | Authorize frozen v27 seeds 42/43/44 under the full-validation fixed-pool diagnostic protocol; run independently and retain all directions |
+| `stage5-full-validation-multiseed6903` | 5 | v27 seeds 42/43/44; identical 6,903 qids, 16,752 states, and 9,607 eligible pairs; fixed pools; 10,000 qid bootstrap samples; no API | PASS all audits and identical-pair check. Correct-minus-query-only Step@1/Step@5/MRR are +0.423601/+0.058563/+0.289256; correct-minus-previous-only are +0.019378/+0.001029/+0.012286. Every seed CI is positive for previous-only Step@1/MRR but not Step@5. Correct reversal is 0.657576 versus 0 for query/frozen and 0.659033 for previous-only | Close Stage 5. Preserve strong dynamic-state evidence and the bounded previous-only conclusion; advance to Stage 6 without further Stage-5 runs |
 
 ## One-time closure-balance repair
 
@@ -1296,12 +1323,12 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-The corrected full-validation readiness audit passes on 6,903 usable qids.
-The only authorized next runs are the frozen v27 seed-42/43/44 fixed-pool
-state-mechanism diagnostics on this exact dataset, with 10,000 qid bootstrap
-samples and independent output directories. Retain every result regardless
-of direction, then run the strict multiseed summary. No answer generation,
-training, alpha retuning, or matched-Anchor evaluation is authorized.
+Stage 5 is complete. The only authorized next action is a Stage-6 offline
+readiness and artifact inventory covering the final teacher trajectory code,
+available trajectory/debug records, compression traces, and existing timing
+reports. Do not rebuild teacher trajectories, train students, or call any API
+until that inventory identifies exactly which Stage-6 evidence can be derived
+offline and which comparison, if any, requires a new controlled run.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
