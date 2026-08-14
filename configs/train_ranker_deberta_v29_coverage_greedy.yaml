@@ -1,0 +1,45 @@
+seed: 42
+output_dir: outputs/ranker/deberta_v3_large_v29_coverage_greedy
+
+model:
+  architecture: dual_state_interaction
+  pretrained_name: models/deberta-v3-large
+  dropout: 0.1
+  projection_dim: 256
+
+data:
+  context_mode: full_state
+  train_samples: data/hotpotqa_distractor_v29_coverage_greedy/samples/train.jsonl
+  val_samples: data/hotpotqa_distractor_v29_coverage_greedy/samples/val.jsonl
+  test_samples: data/hotpotqa_distractor_v29_coverage_greedy/samples/test.jsonl
+  train_memory: data/hotpotqa_distractor_v7_10k_llm_prestep/unit_registry/raw_units_train.jsonl
+  val_memory: data/hotpotqa_distractor_v7_10k_llm_prestep/unit_registry/raw_units_val.jsonl
+  test_memory: data/hotpotqa_distractor_v7_10k_llm_prestep/unit_registry/raw_units_test.jsonl
+  train_role_targets: data/hotpotqa_distractor_v7_10k_llm_prestep/targets/train.jsonl
+  val_role_targets: data/hotpotqa_distractor_v7_10k_llm_prestep/targets/val.jsonl
+  test_role_targets: data/hotpotqa_distractor_v7_10k_llm_prestep/targets/test.jsonl
+
+train:
+  init_checkpoint: outputs/ranker/deberta_v3_large_v21_unified_full/best_model.pt
+  batch_size: 1
+  num_workers: 0
+  epochs: 2
+  lr: 5.0e-7
+  head_lr: 5.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.10
+  max_length: 320
+  state_max_length: 320
+  candidate_max_length: 192
+  grad_accum_steps: 16
+  max_grad_norm: 1.0
+  log_every: 20
+  fp16: true
+  margin_loss_weight: 0.20
+  margin: 0.20
+  acquired_negative_margin_weight: 0.50
+  acquired_negative_margin: 0.20
+  role_aux_weight: 0.0
+  candidate_role_aux_weight: 0.0
+  deficit_aux_weight: 0.0
+  contribution_aux_weight: 0.0
