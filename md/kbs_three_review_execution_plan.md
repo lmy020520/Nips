@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 6
-current_status: Stages 1-5 complete; full-validation multiseed evidence confirms robust dynamic-state value with bounded previous-only gains; Stage-6 teacher/compression/cost readiness is next
+current_status: Stages 1-5 complete; Stage-6 offline teacher/compression/cost inventory tooling is implemented and awaiting server audit
 ```
 
 This file is the single execution plan synthesized from:
@@ -91,7 +91,7 @@ passes its explicit gate.
 | 3X | High-cost state architecture repair | Passed and closed with final v27 Compact evaluation | Completed | Completed for seeds 42/43/44 |
 | 4 | Standard and closure-aware metrics | Passed and closed with final v27 | Completed offline | No |
 | 5 | Multi-seed robustness | Completed; sampling and seed robustness pass, matched Anchor retained as negative | No further API | Completed for seeds 42/43/44 |
-| 6 | Teacher, compression, and cost evidence | Readiness and artifact inventory pending | Mixed; locked until offline audit | Possibly |
+| 6 | Teacher, compression, and cost evidence | Offline inventory tooling implemented; server audit pending | No API authorized | No training authorized |
 | 7 | Decide deficit/contribution status | Pending | No initially | Conditional |
 | 8 | Rewrite and submission audit | Pending | No | No |
 
@@ -1276,6 +1276,7 @@ The paper may be locked only when:
 | `stage5-full-validation-readiness-attempt1` | 5 | All 7,405 HotpotQA distractor validation source rows; 6,903 usable and training-disjoint qids; 16,752 states; 286,115 memory units; no API | Data construction and every structural audit pass with zero sample errors and exact source-row accounting. The checker alone reports FAIL because its fixed `qids>=7000` guard is incompatible with the observed 6,903 usable rows. The usable fraction is 93.22%, and both the primary 3,000-qid evaluation and 1,000-qid alpha subset are contained in this dataset | Replace the arbitrary final-qid threshold with source-size, accounting, and usable-fraction guards, then rerun readiness without rebuilding data |
 | `stage5-full-validation-readiness` | 5 | 7,405 source rows; 6,903 usable qids (93.2208%); 16,752 states; 286,115 memory units; cand50; no API | PASS corrected audit with zero failures and sample errors. Exactly 500 existing/internal qids are excluded, one row lacks a mapped support sentence, and one has no distractor sentence. Training overlap is zero; the primary 3,000-qid evaluation and alpha 1,000-qid validation sets are both contained in the full sample | Authorize frozen v27 seeds 42/43/44 under the full-validation fixed-pool diagnostic protocol; run independently and retain all directions |
 | `stage5-full-validation-multiseed6903` | 5 | v27 seeds 42/43/44; identical 6,903 qids, 16,752 states, and 9,607 eligible pairs; fixed pools; 10,000 qid bootstrap samples; no API | PASS all audits and identical-pair check. Correct-minus-query-only Step@1/Step@5/MRR are +0.423601/+0.058563/+0.289256; correct-minus-previous-only are +0.019378/+0.001029/+0.012286. Every seed CI is positive for previous-only Step@1/MRR but not Step@5. Correct reversal is 0.657576 versus 0 for query/frozen and 0.659033 for previous-only | Close Stage 5. Preserve strong dynamic-state evidence and the bounded previous-only conclusion; advance to Stage 6 without further Stage-5 runs |
+| `stage6-offline-inventory-tooling` | 6 | Final v4 Teacher source; v7 train/val/test full trajectories; final v27 checkpoint/data; discovered compression, candidate-budget, runtime, and agentic reports | Static Teacher contract extraction, trajectory event/label-agreement audit, version-aware report inventory, and explicit gap classification implemented. The audit performs no API call, GPU inference, training, or artifact mutation | Run once on the authoritative server and review `artifact_inventory.json` before authorizing any Stage-6 experiment |
 
 ## One-time closure-balance repair
 
@@ -1323,12 +1324,11 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Stage 5 is complete. The only authorized next action is a Stage-6 offline
-readiness and artifact inventory covering the final teacher trajectory code,
-available trajectory/debug records, compression traces, and existing timing
-reports. Do not rebuild teacher trajectories, train students, or call any API
-until that inventory identifies exactly which Stage-6 evidence can be derived
-offline and which comparison, if any, requires a new controlled run.
+Stage 5 is complete. The only authorized next action is the Stage-6 offline
+artifact inventory using `scripts/run_kbs_stage6_readiness.sh`. It may read
+the final Teacher source, v7 trajectory/debug records, and existing reports,
+but must not rebuild trajectories, run GPU inference, train a model, or call
+an API. Review `artifact_inventory.json` before authorizing any experiment.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
