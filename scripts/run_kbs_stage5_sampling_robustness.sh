@@ -31,14 +31,29 @@ if [[ "$BUILD_DATA" == "1" ]]; then
 fi
 
 mkdir -p "$OUTPUT_ROOT"
-python3 scripts/check_kbs_stage5_sampling_data.py \
-  --data-root "$DATA_ROOT" \
-  --output "$OUTPUT_ROOT/readiness.json"
-
 if [[ "$CHECK_ONLY" == "1" ]]; then
+  python3 scripts/check_kbs_stage5_sampling_data.py \
+    --data-root "$DATA_ROOT" \
+    --output "$OUTPUT_ROOT/readiness.json"
   echo "[OK] Stage 5 sampling-data readiness passed; no model diagnostic was started"
   exit 0
 fi
+
+python3 - "$OUTPUT_ROOT/readiness.json" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+if not path.is_file():
+    raise SystemExit(f"[ERROR] missing reviewed readiness report: {path}")
+report = json.loads(path.read_text(encoding="utf-8"))
+if report.get("status") != "OK" or report.get("failures"):
+    raise SystemExit(f"[ERROR] readiness report is not a clean OK: {path}")
+if int(report.get("queries", 0)) != 6903:
+    raise SystemExit(f"[ERROR] readiness qids changed: {report.get('queries')}")
+print(f"[OK] reusing reviewed readiness report: {path}")
+PY
 
 case "$RUN" in
   seed42)
