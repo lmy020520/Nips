@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 6
-current_status: Stages 1-5 complete; Stage-6 server inventory reached dependency FAIL because the three v7 full-trajectory files are absent; upload and rerun are authorized
+current_status: Stages 1-5 complete; Stage-6 inventory passed; same-state Teacher objective audit tooling is implemented and awaiting server run
 ```
 
 This file is the single execution plan synthesized from:
@@ -1278,6 +1278,8 @@ The paper may be locked only when:
 | `stage5-full-validation-multiseed6903` | 5 | v27 seeds 42/43/44; identical 6,903 qids, 16,752 states, and 9,607 eligible pairs; fixed pools; 10,000 qid bootstrap samples; no API | PASS all audits and identical-pair check. Correct-minus-query-only Step@1/Step@5/MRR are +0.423601/+0.058563/+0.289256; correct-minus-previous-only are +0.019378/+0.001029/+0.012286. Every seed CI is positive for previous-only Step@1/MRR but not Step@5. Correct reversal is 0.657576 versus 0 for query/frozen and 0.659033 for previous-only | Close Stage 5. Preserve strong dynamic-state evidence and the bounded previous-only conclusion; advance to Stage 6 without further Stage-5 runs |
 | `stage6-offline-inventory-tooling` | 6 | Final v4 Teacher source; v7 train/val/test full trajectories; final v27 checkpoint/data; discovered compression, candidate-budget, runtime, and agentic reports | Static Teacher contract extraction, trajectory event/label-agreement audit, version-aware report inventory, and explicit gap classification implemented. The audit performs no API call, GPU inference, training, or artifact mutation | Run once on the authoritative server and review `artifact_inventory.json` before authorizing any Stage-6 experiment |
 | `stage6-offline-inventory-attempt1` | 6 | Authoritative server artifact inventory; final v27 answer reports; historical compression, candidate-budget, runtime, and agentic reports; no API/GPU/training | Dependency FAIL only: the server lacks `full_train.jsonl`, `full_val.jsonl`, and `full_test.jsonl` under the v7 trajectory directory. Final v27 Compact/Recall reports are reusable, but no compression funnel or unified runtime profile is tied to v27/alpha=0.5, and the final-v27 budget frontier lacks cand15/cand20. Historical v17/v21 artifacts are version-mismatched. The local verified copies of the three missing trajectories total 217 MB and contain 10,000/500/500 qids | Upload only the three missing trajectory files and rerun the same offline inventory. No Stage-6 GPU run, training, trajectory rebuild, or API call is authorized until the rerun is reviewed |
+| `stage6-offline-inventory` | 6 | Final Teacher code and all 11,000 v7 trajectories; final v27 answer reports; historical compression, candidate-budget, runtime, and agentic reports; no API/GPU/training | PASS with 9,703 stored decision steps and zero missing paths. Full and base Closure agree on every stored state; repair attempts, false stops, and derived selections are all zero, so a Full-Repair benefit is unsupported. Final v27 lacks a compression funnel, unified alpha-0.5 runtime profile, and cand15/cand20 frontier points; v17/v21 reports are version-mismatched | Run the pre-registered same-state four-objective label audit. Do not infer counterfactual rollout outcomes or authorize training until its validation-only materiality gate is reviewed |
+| `stage6-teacher-objective-audit-tooling` | 6.1 | Relevance-front, visible target-coverage greedy, base Closure utility, and actual Full selection; identical stored states and candidate pools; validation-only 5%/25-state materiality gate | Analyzer and foreground runner implemented. It reports label agreement, uncovered-target selection, t slices, repair activation, and explicit causal limitations without API, GPU, training, or trajectory mutation | Run once on the authoritative server and review `objective_audit.json`; only a passing validation materiality gate may authorize a matched Coverage-student pilot |
 
 ## One-time closure-balance repair
 
@@ -1325,13 +1327,13 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Stage 5 is complete. Stage-6 inventory attempt 1 reached a dependency FAIL
-because the authoritative server lacks the three v7 full-trajectory files.
-The only authorized next action is to upload `full_train.jsonl`,
-`full_val.jsonl`, and `full_test.jsonl` into the expected trajectory directory
-and rerun `scripts/run_kbs_stage6_readiness.sh`. Do not rebuild trajectories,
-run GPU inference, train a model, or call an API. Review the replacement
-`artifact_inventory.json` before authorizing any Stage-6 experiment.
+Stage 5 is complete and the Stage-6 artifact inventory passes. The only
+authorized next action is the same-state Teacher objective audit using
+`scripts/run_kbs_stage6_teacher_objectives.sh`. It compares four observable
+selection rules on identical stored states and uses only the validation split
+to decide whether Coverage labels materially differ from Closure labels. Do
+not rebuild trajectories, run GPU inference, train a model, or call an API.
+Review `objective_audit.json` before authorizing any Coverage-student pilot.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
