@@ -130,16 +130,22 @@ def main():
     for key, expected in expected_manifest.items():
         if manifest.get(key) != expected:
             failures.append(f"manifest {key}: {manifest.get(key)!r} != {expected!r}")
+    source_rows = int(manifest.get("source_rows", -1))
+    usable_fraction = len(query_qids) / source_rows if source_rows > 0 else 0.0
     if len(query_order) != len(query_qids):
         failures.append("queries contain duplicate qids")
-    if len(query_qids) < 7000:
-        failures.append(f"full validation set unexpectedly small: {len(query_qids)}")
+    if source_rows < 7000:
+        failures.append(f"source validation split unexpectedly small: {source_rows}")
+    if usable_fraction < 0.9:
+        failures.append(
+            f"usable validation fraction unexpectedly small: {usable_fraction:.6f}"
+        )
     if int(manifest.get("size", -1)) != len(query_qids):
         failures.append(f"manifest size {manifest.get('size')} != query qids {len(query_qids)}")
     if int((manifest.get("stats") or {}).get("qids", -1)) != len(query_qids):
         failures.append("manifest stats.qids does not match queries")
     accounted = len(query_qids) + sum(int(value) for value in (manifest.get("skip_reasons") or {}).values())
-    if int(manifest.get("source_rows", -1)) != accounted:
+    if source_rows != accounted:
         failures.append(
             f"source-row accounting mismatch: source={manifest.get('source_rows')} accounted={accounted}"
         )
@@ -190,6 +196,8 @@ def main():
             )
         },
         "queries": len(query_qids),
+        "usable_fraction": round(usable_fraction, 6),
+        "skip_reasons": manifest.get("skip_reasons") or {},
         "memory_rows": memory_rows,
         "samples": sample_report,
         "qid_overlap": overlap,
