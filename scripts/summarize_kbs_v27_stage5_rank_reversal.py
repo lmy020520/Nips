@@ -61,6 +61,7 @@ def pair_key(record: dict) -> tuple:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--summary", action="append", type=parse_named_path, required=True)
+    parser.add_argument("--expected-qids", type=int, default=3000)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
 
@@ -78,8 +79,8 @@ def main() -> None:
         modes = reversal.get("modes") or {}
         if obj.get("status") != "OK":
             failures.append(f"seed {seed}: summary status is not OK")
-        if int((obj.get("data_diagnostics") or {}).get("qids", 0)) != 3000:
-            failures.append(f"seed {seed}: qids != 3000")
+        if int((obj.get("data_diagnostics") or {}).get("qids", 0)) != args.expected_qids:
+            failures.append(f"seed {seed}: qids != {args.expected_qids}")
         if set(MODES) - set(modes):
             failures.append(f"seed {seed}: missing rank-reversal modes")
         record_path = path.parent / "rank_reversal_records.jsonl"
@@ -179,6 +180,7 @@ def main() -> None:
         "status": "PASS" if not failures else "FAIL",
         "scope": "v27 Stage-5 fixed-pool rank-reversal multiseed audit",
         "seeds": list(SEEDS),
+        "qids_per_seed": args.expected_qids,
         "api_calls": 0,
         "identical_pair_order": all(
             [pair_key(record) for record in records_by_seed[seed]] == reference_keys

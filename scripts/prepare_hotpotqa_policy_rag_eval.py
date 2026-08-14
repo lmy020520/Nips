@@ -371,7 +371,12 @@ def build_outputs(
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output-root", type=Path, default=Path("data/hotpotqa_distractor_eval_3000"))
-    parser.add_argument("--size", type=int, default=3000)
+    parser.add_argument(
+        "--size",
+        type=int,
+        default=3000,
+        help="Number of qids to select; 0 selects every usable source row.",
+    )
     parser.add_argument("--seed", type=int, default=20260609)
     parser.add_argument("--source-split", choices=["validation", "train"], default="validation")
     parser.add_argument(
@@ -391,6 +396,8 @@ def main() -> None:
     )
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
+    if args.size < 0:
+        raise ValueError("--size must be >= 0")
 
     output_root = args.output_root
     manifest_path = output_root / "manifest.json"
@@ -432,10 +439,10 @@ def main() -> None:
             skip_reasons[reason] += 1
             continue
         selected.append(row)
-        if len(selected) >= args.size:
+        if args.size > 0 and len(selected) >= args.size:
             break
 
-    if len(selected) < args.size:
+    if args.size > 0 and len(selected) < args.size:
         raise RuntimeError(f"not enough usable rows: requested={args.size}, selected={len(selected)}")
 
     stats = build_outputs(
@@ -454,7 +461,10 @@ def main() -> None:
         "output_split": args.output_split,
         "seed": args.seed,
         "output_root": str(output_root),
-        "size": args.size,
+        "requested_size": args.size,
+        "selection_mode": "all_usable_rows" if args.size == 0 else "fixed_size",
+        "source_rows": len(source_rows),
+        "size": len(selected),
         "max_candidates": args.max_candidates,
         "excluded_roots": [str(root) for root in exclude_roots],
         "excluded_qids": excluded["qids"],

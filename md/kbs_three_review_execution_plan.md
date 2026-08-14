@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 5
-current_status: Stages 1-4 complete; Stage-5 Compact, Recall, fixed-pool state audits, v28 matched-Anchor training, and seed-42 matched-Anchor smoke pass; full 1,000-qid matched multiseed validation is authorized; sampling robustness remains pending
+current_status: Stages 1-4 complete; Stage-5 matched-Anchor multiseed validation is complete with a valid negative result; full-validation sampling-robustness tooling is implemented and awaiting data/readiness audit
 ```
 
 This file is the single execution plan synthesized from:
@@ -90,7 +90,7 @@ passes its explicit gate.
 | 3 | Controlled mechanism baselines | Closed: v23/v24 outperform Full; v25 and v26 gates failed | No further API | Completed for v23/v24/v25/v26 seed 42 |
 | 3X | High-cost state architecture repair | Passed and closed with final v27 Compact evaluation | Completed | Completed for seeds 42/43/44 |
 | 4 | Standard and closure-aware metrics | Passed and closed with final v27 | Completed offline | No |
-| 5 | Multi-seed robustness | Compact, Recall, fixed-pool state audits, matched Anchor training/smoke passed; full no-answer gate then sampling robustness pending | No further API currently | v27 and v28 Anchor seeds 42/43/44 complete |
+| 5 | Multi-seed robustness | Compact/Recall/state audits passed; matched Anchor gate closed negative; full-validation sampling readiness pending | No further API currently | v27 and v28 Anchor seeds 42/43/44 complete |
 | 6 | Teacher, compression, and cost evidence | Pending | Mixed | Possibly |
 | 7 | Decide deficit/contribution status | Pending | No initially | Conditional |
 | 8 | Rewrite and submission audit | Pending | No | No |
@@ -886,6 +886,53 @@ uses those labels when present while retaining the historical `H_t` fallback
 for older datasets. Data and configuration readiness must pass before any
 Anchor training starts.
 
+## Matched Anchor multiseed evidence
+
+The separately trained v28 Anchor and v27 Full models were compared on the
+same 1,000 question-disjoint validation qids for seeds 42, 43, and 44. The
+front end, alpha, candidate/select/state-write budgets, ordered qids, and
+bootstrap protocol were identical. All protocol audits pass, so the result is
+a valid scientific negative rather than an execution failure.
+
+| Metric | v27 Full mean +/- std | v28 Anchor mean +/- std | Full - Anchor |
+|---|---:|---:|---:|
+| All-state Step@1 | 0.550973 +/- 0.001546 | 0.550020 +/- 0.003560 | +0.000953 |
+| All-state Step@5 | 0.869743 +/- 0.001080 | 0.874915 +/- 0.001434 | -0.005172 |
+| All-state MRR | 0.692586 +/- 0.000418 | 0.694073 +/- 0.002316 | -0.001486 |
+| Full unit coverage | 0.779667 +/- 0.003215 | 0.781667 +/- 0.004041 | -0.002000 |
+| Hop-2+ Step@1 | 0.533241 +/- 0.005788 | 0.529791 +/- 0.001594 | +0.003451 |
+| Hop-2+ Step@5 | 0.858293 +/- 0.002218 | 0.867265 +/- 0.002219 | -0.008972 |
+| Hop-2+ MRR | 0.676870 +/- 0.002974 | 0.678771 +/- 0.002041 | -0.001900 |
+
+The paired 95% intervals for the small Full advantages on hop-2+ Step@1 and
+MRR include zero for every seed, while Anchor has the consistent Step@5
+advantage. The pre-registered scientific gate therefore fails for all three
+seeds even though `experiment_complete=true` and every protocol audit passes.
+
+**Decision:** close this matched-baseline subtask and retain the negative
+result. Do not retune, retrain, call the answer API, or run the matched Anchor
+on the 3,000-qid evaluation subset. The paper may claim that dynamic state is
+causally used and strongly improves over query-only/frozen-state controls,
+with a smaller fixed-pool fine-ranking benefit over previous-only inference.
+It must not claim that a separately trained full-history policy universally
+outperforms a matched previous-evidence chain policy.
+
+## Full-validation sampling robustness protocol
+
+The preferred sampling check uses every usable row from the HotpotQA
+distractor validation split rather than choosing another post-hoc 3,000-qid
+subset. The data builder records `requested_size=0`,
+`selection_mode=all_usable_rows`, the source-row count, all skip reasons, and
+the actual selected qid count. A strict readiness audit must verify candidate
+integrity, state indexing, train/evaluation disjointness, and source-row
+accounting before any checkpoint is evaluated.
+
+After readiness review, run the frozen v27 seeds 42/43/44 with the Stage-1
+fixed-pool state-mechanism protocol, no answer generation, and 10,000
+qid-clustered bootstrap samples. This experiment tests whether the state-use
+and rank-reversal conclusions survive the full available validation sample;
+it does not reopen alpha selection or matched-Anchor tuning.
+
 ---
 
 # Stage 6: Closure, Compression, and Cost Evidence
@@ -1198,6 +1245,8 @@ The paper may be locked only when:
 | `stage5-v28-matched-anchor-gate-tooling` | 5 | v27 Full versus v28 matched Anchor; same validation qids/front end/alpha/budgets/state-write; paired all-state and hop-2+ metrics; no answers | Dedicated paired analyzer and guarded runner implemented. Full validation is locked until smoke review; smoke validates runtime, checkpoint/context protocol, ordered qids, and teacher-positive step pairing without using 20-qid significance as evidence | Run exactly one seed-42 20-qid smoke; no full validation or answer generation yet |
 | `stage5-v28-matched-anchor-smoke20` | 5 | Seed-42 v27 Full versus seed-42 v28 matched Anchor; first 20 validation qids; alpha 0.5; candidate/select/state-write 10/5/1; no answers | `SMOKE_OK` with zero protocol failures and exact qid/step pairing. Full-minus-Anchor hop-2+ Step@1/MRR point estimates are +0.027778/+0.016758, while Step@5/full-unit are -0.027778/-0.050000. The 20-qid acceptance gate is intentionally not evaluated | Runtime is validated; authorize all three 1,000-qid no-answer paired gates. Retain every result regardless of scientific direction |
 | `stage5-v28-matched-anchor-multiseed-summary-tooling` | 5 | Three 1,000-qid paired gates; method means/std, Full-minus-Anchor deltas, seed-direction consistency, separate audit/scientific status | Summarizer implemented so a valid negative scientific result remains `experiment_complete=true` and is not confused with protocol failure | Run seeds 42/43/44 independently, then produce one summary; no API or 3,000-qid answer generation |
+| `stage5-v28-matched-anchor-validation1000` | 5 | v27 Full versus independently trained v28 previous-evidence-only Anchor; seeds 42/43/44; same 1,000 validation qids/front end/alpha/budgets/state-write; 10,000 paired bootstrap samples; no answers | Experiment complete with zero protocol failures, but the scientific gate fails for all seeds. Full-minus-Anchor mean deltas are +0.003451 hop-2+ Step@1, -0.008972 Step@5, -0.001900 MRR, and -0.002000 full-unit coverage; every seed-level CI for the small Step@1/MRR Full advantage crosses zero | Retain as a credible negative result. Close the matched-baseline subtask; do not retune, retrain, call the API, or run a 3,000-qid matched-Anchor test |
+| `stage5-full-validation-sampling-tooling` | 5 | Every usable HotpotQA distractor validation qid; explicit all-row manifest; strict candidate/state/disjointness audit; frozen v27 seeds; fixed-pool no-answer diagnostics | Builder now supports `size=0` for all usable rows. A dedicated readiness checker, guarded runner, and qid-count-aware multiseed summarizer are implemented; no full-validation data or model diagnostic has yet been run | Build the full-validation dataset and run readiness only. Model diagnostics remain unauthorized until the readiness report is reviewed |
 
 ## One-time closure-balance repair
 
@@ -1245,12 +1294,12 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-The seed-42 matched-Anchor smoke passes with zero protocol failures. The next
-authorized work is the 1,000-qid no-answer paired gate for seeds 42/43/44,
-using independent outputs and the same validation front end, alpha 0.5, and
-10/5/1 candidate/select/state-write budgets. Summarize all seeds regardless
-of whether the scientific acceptance gate passes. No answer generation or
-3,000-qid matched-Anchor run is authorized.
+The matched-Anchor multiseed gate is complete and closed as a valid negative
+result. The only authorized next action is to build the all-usable-row
+HotpotQA distractor-validation dataset and run the Stage-5 sampling readiness
+audit. Do not start checkpoint diagnostics until that readiness JSON has been
+reviewed. No answer generation, alpha retuning, matched-Anchor retraining, or
+3,000-qid matched-Anchor evaluation is authorized.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
