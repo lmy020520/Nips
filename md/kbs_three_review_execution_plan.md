@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 6
-current_status: Stages 1-5 and 6.1 complete; Stage 6.2 authoritative readiness passed; exactly one 20-qid GPU smoke is authorized
+current_status: Stages 1-5 and 6.1 complete; Stage 6.2 readiness and 20-qid smoke passed; exactly one full 3,000-qid no-API compression-funnel run is authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -1286,6 +1286,7 @@ The paper may be locked only when:
 | `stage6-coverage-student-seed42` | 6.1 | Matched v29 Coverage-greedy Student; seed 42; v21 initialization; v27 rows/state/pools/repetitions/architecture/optimizer/losses; only ranking targets and dependent metadata changed; two epochs; no API | Training completed with epoch 2 selected. Validation accuracy is 0.202983 versus 0.664457 for matched v27 Full Closure (delta -0.461474); internal-test accuracy is 0.206897 versus 0.607057 (delta -0.400160). Validation acquired-pair accuracy is 0.859487 versus 0.902564 (delta -0.043077), and internal-test acquired-pair accuracy is 0.842396 versus 0.886636 (delta -0.044240). Coverage supervision is therefore substantially inferior even though it preserves much of the reversal signal | Close the Coverage pilot as a controlled negative result supporting answer-facing Closure supervision. Do not run v29 runtime gates, answers, API calls, or extra seeds; advance to Stage 6.2 compression-funnel tooling/readiness |
 | `stage6-compression-funnel-tooling` | 6.2 | Final v27 dual-state checkpoint; HotpotQA 3,000/7,296 states; online-state updates; alpha 0.5; fixed 30/10/5/1 front/candidate/select/state-write budgets; no answers/API | Added a guarded analyzer, static/data readiness checker, and runner. The registered interventions are RRF-top30, actual RRF+local+MMR cand10, BGE-top10, no compression, and oracle target-preserving MMR cand10. Each intervention maintains an independent online state. Raw-pool target recall is a membership ceiling only; policy Alignment@1/5 and full-unit coverage are computed after retained-pool scoring. Local syntax, shell syntax, static no-API audit, and a one-state synthetic readiness fixture pass; local model inference is unavailable because the workstation lacks torch/models | Run authoritative-server readiness only (`RUN=0`). Review exact qid/state/memory integrity before authorizing a 20-qid GPU smoke; no full 3,000 run or API call is authorized yet |
 | `stage6-compression-funnel-readiness` | 6.2 | Authoritative HotpotQA evaluation data and final v27 paths; 3,000 qids/7,296 states; registered five-intervention protocol; no GPU/API | PASS with zero failures. Sample/query qid sets match; every state has an in-pool positive; every candidate reference resolves in memory. Static analyzer audit finds all registered variants and no DeepSeek/API tokens. Candidate-pool sizes range from 2 to 50, so each compression limit is applied as `min(limit, pool size)` | Authorize exactly one 20-qid GPU smoke in an isolated output directory. Review all variant outputs and standard MMR behavior before any 3,000-qid run |
+| `stage6-compression-funnel-smoke20` | 6.2 | Final v27, alpha 0.5, five interventions, first 20 sorted qids/50 states, independent online state, no answers/API | PASS with zero skipped states. Standard RRF+local+MMR cand10 obtains target recall 0.94, Alignment@5 0.90, and full-unit coverage 0.85. Its Alignment@5 and full-unit coverage exactly reproduce the same 20 qids in the existing final-v27 Compact report. No compression obtains 0.92/0.85 at 39.06 retained units and 1,863 ms/qid; standard MMR obtains 0.90/0.85 at 10 units and 1,068 ms/qid. Oracle target preservation reaches recall 1.0, Alignment@5 0.94, and coverage 0.90. Peak allocated GPU memory is 3,580.906 MB | Authorize one background full 3,000-qid selection-only run. Do not generate answers or call an API. Review summary and record counts before closing Stage 6.2 |
 
 ## One-time closure-balance repair
 
@@ -1333,11 +1334,11 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Stage 6.2 authoritative readiness passes with 3,000 qids, 7,296 states,
-zero missing positives, and zero missing memory references. Run exactly one
-20-qid GPU smoke with final v27 and alpha 0.5 in an isolated output directory.
-Review summary.json before authorizing full 3,000-qid inference. No answer
-generation or API call is authorized.
+Stage 6.2 readiness and the 20-qid smoke pass. The standard MMR branch exactly
+reproduces existing final-v27 metrics on the same 20 qids. Run exactly one
+background full 3,000-qid compression-funnel analysis with final v27 and alpha
+0.5. No answer generation or API call is authorized. Review summary.json and
+the records count before closing Stage 6.2 or advancing to Stage 6.3.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
