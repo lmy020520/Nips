@@ -27,6 +27,7 @@ run_selection() {
   local budget="$1"
   local max_qids="$2"
   local output="$3"
+  local warmup_qids="$4"
   local front_pool=30
   if [[ "$budget" == "50" ]]; then
     front_pool=50
@@ -62,7 +63,7 @@ run_selection() {
     --ks 1,2,3,5 \
     --save-online-states \
     --profile-runtime \
-    --profile-warmup-qids 5 \
+    --profile-warmup-qids "$warmup_qids" \
     --seed 20260608 \
     --output "$output"
   echo "[DONE] $output"
@@ -75,8 +76,8 @@ case "$ACTION" in
     ;;
   smoke20)
     run_readiness
-    run_selection 15 20 "$OUTPUT_DIR/cand15_smoke20.json"
-    run_selection 20 20 "$OUTPUT_DIR/cand20_smoke20.json"
+    run_selection 15 20 "$OUTPUT_DIR/cand15_smoke20.json" 5
+    run_selection 20 20 "$OUTPUT_DIR/cand20_smoke20.json" 5
     echo "[DONE] Stage 6.3 cand15/cand20 selection-only smoke"
     ;;
   selection3000)
@@ -85,12 +86,24 @@ case "$ACTION" in
       exit 1
     fi
     run_readiness
-    run_selection 15 3000 "$OUTPUT_DIR/cand15_selection3000.json"
-    run_selection 20 3000 "$OUTPUT_DIR/cand20_selection3000.json"
+    run_selection 15 3000 "$OUTPUT_DIR/cand15_selection3000.json" 20
+    run_selection 20 3000 "$OUTPUT_DIR/cand20_selection3000.json" 20
     echo "[DONE] Stage 6.3 cand15/cand20 full selection-only reports"
     ;;
+  profile500)
+    if [[ "${KBS_STAGE6_COST_PROFILE_AUTHORIZED:-0}" != "1" ]]; then
+      echo "[ERROR] unified four-budget runtime profile is locked by the execution plan" >&2
+      exit 1
+    fi
+    run_readiness
+    run_selection 10 500 "$OUTPUT_DIR/cand10_profile500.json" 20
+    run_selection 15 500 "$OUTPUT_DIR/cand15_profile500.json" 20
+    run_selection 20 500 "$OUTPUT_DIR/cand20_profile500.json" 20
+    run_selection 50 500 "$OUTPUT_DIR/cand50_profile500.json" 20
+    echo "[DONE] Stage 6.3 unified four-budget runtime profile"
+    ;;
   *)
-    echo "[ERROR] ACTION must be readiness, smoke20, or selection3000" >&2
+    echo "[ERROR] ACTION must be readiness, smoke20, selection3000, or profile500" >&2
     exit 2
     ;;
 esac
