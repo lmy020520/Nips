@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 6
-current_status: Stages 1-5, 6.1, and 6.2 complete; Stage 6.3 authoritative readiness passed; exactly one cand15/cand20 20-qid no-answer smoke is authorized
+current_status: Stages 1-5, 6.1, and 6.2 complete; Stage 6.3 readiness and cand15/cand20 smoke passed; exactly one background 3,000-qid selection-only run is authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -1290,6 +1290,7 @@ The paper may be locked only when:
 | `stage6-compression-funnel-full3000` | 6.2 | Final v27, alpha 0.5, five independent online interventions, 3,000 qids/7,296 states, no answers/API | Summary PASS with zero skipped states. RRF-top30 obtains target recall/Alignment@5/full-unit coverage 0.990132/0.918174/0.862000. Standard MMR-10 obtains 0.895559/0.867736/0.782333 at 980.213 ms/qid. BGE-top10 is similar at 0.891173/0.869792/0.779333. No compression reaches 1.0/0.924205/0.873000 at 1,736.213 ms/qid. Oracle MMR-10 restores 1.0/0.912281/0.848000 at 985.238 ms/qid. Thus MMR-10 cuts selection latency by 43.54% versus no compression but loses 9.07 points of full-unit coverage; oracle preservation recovers 6.57 points | Require the Stage 6.3 readiness checker to verify exactly 15,000 records and 3,000 qids per intervention before treating Stage 6.2 as artifact-complete |
 | `stage6-cost-frontier-tooling` | 6.3 | Final v27 system operating points cand10/15/20/50; front-pool schedule 30/30/30/50; alpha 0.5; state-write top1; fixed answer model/prompt | Added a strict readiness/inventory checker and guarded runner. Existing cand10 and cand50 seed-42 reports are reused only after checking checkpoint, qids/states, answer completeness, runtime fields, model/prompt, alpha, and budgets. Cand15/cand20 are missing. The runner defaults to readiness and permits only no-answer smoke/full-selection actions; full selection remains explicitly locked. Local audits of the existing cand10/cand50 reports pass | Run authoritative `ACTION=readiness` only. It must validate Stage 6.2 records and existing endpoint reports before any cand15/cand20 smoke, GPU work, or API call |
 | `stage6-cost-frontier-readiness` | 6.3 | Final-v27 cand10/cand50 endpoint reports; complete Stage 6.2 summary/records; cand10/15/20/50 operating-point protocol; no GPU/API | PASS with zero failures. Stage 6.2 has exactly 15,000 records and 3,000 qids for each of five variants. Existing cand10 and cand50 reports each contain 3,000 judged answers, zero errors, the frozen V4-Flash non-thinking prompt, complete selection runtime, and peak-memory fields. Cand10 F1/full-unit/selection-ms are 0.767798/0.782333/999.103; cand50 values are 0.790380/0.873000/1,587.127. Only cand15/cand20 are missing | Authorize one foreground cand15/cand20 20-qid selection-only smoke. Do not generate answers, call an API, or start full 3,000-qid runs until both smoke reports are reviewed |
+| `stage6-cost-frontier-smoke20` | 6.3 | Final v27 cand15/cand20; front pool 30; alpha 0.5; first 20 sorted qids/50 states; selection-only runtime; no answers/API | PASS for both budgets with zero skipped states and exact protocol fields. Cand15 obtains Alignment@1/5 0.52/0.94, full-unit coverage 0.85, 1,348.849 ms/qid, and 3,353.68 MB peak allocation. Cand20 obtains 0.54/0.94, 0.85, 1,930.454 ms/qid, and 3,380.73 MB. Small-smoke latency is not used as a final estimate. Exact ordered selected-context reuse versus cand10/cand50 is only 6/20 and 2/20 for cand15, and 5/20 and 3/20 for cand20 | Authorize one background cand15/cand20 3,000-qid selection-only run. Use it to obtain stable runtime/coverage and exact answer-cache reuse counts before any API authorization |
 
 ## One-time closure-balance repair
 
@@ -1337,11 +1338,11 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Stage 6.3 authoritative readiness passes with the complete Stage 6.2 records
-and valid final-v27 cand10/cand50 endpoint reports. Run exactly one foreground
-cand15/cand20 20-qid selection-only smoke using ACTION=smoke20. Review both
-reports before authorizing full selection. No answer generation or API call is
-authorized.
+Stage 6.3 cand15/cand20 selection-only smoke passes. Run exactly one background
+3,000-qid selection-only pass for both budgets using ACTION=selection3000 and
+the explicit selection authorization flag. Use isolated outputs and review both
+reports plus exact cand10/cand50 context-reuse counts. No answer generation or
+API call is authorized.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
