@@ -102,8 +102,17 @@ case "$ACTION" in
     run_selection 50 500 "$OUTPUT_DIR/cand50_profile500.json" 20
     echo "[DONE] Stage 6.3 unified four-budget runtime profile"
     ;;
+  cache-prep)
+    if [[ "${KBS_STAGE6_CACHE_PREP_AUTHORIZED:-0}" != "1" ]]; then
+      echo "[ERROR] exact-context answer-cache preparation is locked by the execution plan" >&2
+      exit 1
+    fi
+    python3 scripts/prepare_kbs_stage6_cost_answer_caches.py \
+      --output "$OUTPUT_DIR/cache_reuse_readiness.json"
+    echo "[DONE] Stage 6.3 exact-context answer-cache preparation; no API was called"
+    ;;
   *)
-    echo "[ERROR] ACTION must be readiness, smoke20, selection3000, or profile500" >&2
+    echo "[ERROR] ACTION must be readiness, smoke20, selection3000, profile500, or cache-prep" >&2
     exit 2
     ;;
 esac

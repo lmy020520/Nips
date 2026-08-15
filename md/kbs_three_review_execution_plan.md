@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 6
-current_status: Stages 1-5, 6.1, and 6.2 complete; Stage 6.3 cand15/cand20 full selection passed; one unified four-budget 500-qid no-answer runtime profile is authorized
+current_status: Stages 1-5, 6.1, and 6.2 complete; Stage 6.3 unified runtime profile passed; exact-context cand15/cand20 answer-cache preparation is authorized without API
 ```
 
 This file is the single execution plan synthesized from:
@@ -1292,6 +1292,7 @@ The paper may be locked only when:
 | `stage6-cost-frontier-readiness` | 6.3 | Final-v27 cand10/cand50 endpoint reports; complete Stage 6.2 summary/records; cand10/15/20/50 operating-point protocol; no GPU/API | PASS with zero failures. Stage 6.2 has exactly 15,000 records and 3,000 qids for each of five variants. Existing cand10 and cand50 reports each contain 3,000 judged answers, zero errors, the frozen V4-Flash non-thinking prompt, complete selection runtime, and peak-memory fields. Cand10 F1/full-unit/selection-ms are 0.767798/0.782333/999.103; cand50 values are 0.790380/0.873000/1,587.127. Only cand15/cand20 are missing | Authorize one foreground cand15/cand20 20-qid selection-only smoke. Do not generate answers, call an API, or start full 3,000-qid runs until both smoke reports are reviewed |
 | `stage6-cost-frontier-smoke20` | 6.3 | Final v27 cand15/cand20; front pool 30; alpha 0.5; first 20 sorted qids/50 states; selection-only runtime; no answers/API | PASS for both budgets with zero skipped states and exact protocol fields. Cand15 obtains Alignment@1/5 0.52/0.94, full-unit coverage 0.85, 1,348.849 ms/qid, and 3,353.68 MB peak allocation. Cand20 obtains 0.54/0.94, 0.85, 1,930.454 ms/qid, and 3,380.73 MB. Small-smoke latency is not used as a final estimate. Exact ordered selected-context reuse versus cand10/cand50 is only 6/20 and 2/20 for cand15, and 5/20 and 3/20 for cand20 | Authorize one background cand15/cand20 3,000-qid selection-only run. Use it to obtain stable runtime/coverage and exact answer-cache reuse counts before any API authorization |
 | `stage6-cost-frontier-selection3000` | 6.3 | Final v27 cand15/cand20; 3,000 qids/7,296 states; front pool 30; alpha 0.5; selection-only runtime; no answers/API | PASS with zero skipped states. Cand15 Alignment@1/5/full-unit coverage is 0.570724/0.899945/0.831333 with 1,215.981 historical-run ms/qid. Cand20 is 0.579633/0.909265/0.848000 with 1,740.172 ms/qid. Exact ordered context reuse from either cand10 or cand50 is 1,259 qids for cand15 and 1,126 for cand20, leaving 1,741 and 1,874 new answers respectively. Because cand20 appears slower than the historical cand50 endpoint, cross-run latency is not accepted as the final cost curve | Run a single same-session, same-GPU, sequential 500-qid profile for cand10/15/20/50 with 20-qid warmup. No API. Use those timings for the paper and retain the 3,000-qid reports for quality/reuse metrics |
+| `stage6-cost-frontier-profile500` | 6.3 | Final v27 cand10/15/20/50; same 500 qids/1,254 states; one GPU/session; sequential runs with 20-qid warmup; no answers/API | PASS. Alignment@5 is 0.860447/0.884370/0.893939/0.911483 and full-unit coverage is 0.768/0.802/0.814/0.836. Unified selection latency is 1,026.706/1,258.163/1,832.703/1,632.333 ms/qid; throughput is 0.9740/0.7948/0.5456/0.6126 qids/s. Peak allocation is flat at 3,677.25 MB. Cand20 is slower than cand50 because MMR-20 performs iterative selection whereas cand50 commonly takes the retained-pool passthrough path; the operating-point cost curve is therefore non-monotonic and must be reported as measured | Authorize exact-context cache preparation only. Reuse an endpoint answer only when question, gold answer, and the full ordered selected-unit sequence match. Review cache audit before any API call |
 
 ## One-time closure-balance repair
 
@@ -1339,11 +1340,11 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Stage 6.3 cand15/cand20 full selection-only reports pass. Cross-run latency is
-not accepted because cand20 appears slower than the historical cand50 report.
-Run exactly one same-session sequential cand10/15/20/50 profile on 500 qids
-using ACTION=profile500 and the explicit profile authorization flag. No answer
-generation or API call is authorized.
+Stage 6.3 unified 500-qid runtime profiling passes. Prepare the cand15/cand20
+answer caches using only exact ordered-context matches from the audited cand10
+and cand50 endpoint reports. The preparation must reproduce 1,259 reusable
+cand15 qids and 1,126 reusable cand20 qids, write a strict audit, and make zero
+API calls. Fresh answer generation remains locked until that audit is reviewed.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
