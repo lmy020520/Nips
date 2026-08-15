@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 6
-current_status: Stages 1-5 complete; Stage-6.1 Coverage Student readiness passed; exactly one seed-42 matched pilot training is authorized
+current_status: Stages 1-5 complete; Stage 6.1 complete and closed; Stage 6.2 compression-funnel tooling implemented and locally audited; authoritative-server readiness is next
 ```
 
 This file is the single execution plan synthesized from:
@@ -1283,6 +1283,8 @@ The paper may be locked only when:
 | `stage6-teacher-objective-audit` | 6.1 | All 11,000 stored trajectories and 9,703 observed Teacher decisions; identical state/pool comparison; validation-only materiality decision | PASS with zero invalid states. Validation Coverage-versus-Closure disagreement is 56/452 (12.3894%), exceeding the 5%/25-state gate. Train/validation/test agreements are 90.1501%/87.6106%/89.7603%. Both methods select an uncovered target on exactly the same states, so their difference is primarily within-target evidence choice. Full Repair and base Closure agree 100%, with zero repair/false-stop/derived-selection events | Authorize a seed-42 matched Coverage Student pilot against the existing seed-42 v27 Full Closure model. Build and audit data first; training remains forbidden until readiness passes |
 | `stage6-coverage-student-readiness-tooling` | 6.1 | v27 rows, state, candidate pools/order, repetitions, architecture, initialization, optimizer, and losses; only ranking positives and dependent metadata change to deterministic Coverage-greedy | Builder, strict paired-row checker, matched config, and guarded runner implemented. Coverage chooses the first legal unacquired candidate covering a visible uncovered target and otherwise the first legal unacquired candidate in C_t, preserving acquired-evidence reversal semantics. Existing v27 seed42 is the Full Closure comparator; no duplicate Full training is needed | Build the complete v29 dataset and run readiness only. Review changed-label counts, split/evaluation disjointness, and config parity before authorizing seed-42 training |
 | `stage6-coverage-student-readiness` | 6.1 | Full v29 train/validation/internal-test data; exact paired row/state/pool audit against v27; matched seed-42 config; no API/training | PASS with zero row errors, split overlap, evaluation overlap, or config mismatches. Rows/qids are 37,730/10,000, 1,207/500, and 1,247/500. Coverage changes 77.4477%/76.3877%/76.6640% of labels. On validation, 405 changes remain within the same target parent and 517 change the target parent. This fixed-pool rollout-state distribution is distinct from the earlier stored-Teacher-state audit and must not be conflated with its 12.3894% disagreement rate | Authorize exactly one seed-42 Coverage Student training run. Compare its training/validation/internal-test outputs with existing v27 seed42 before any runtime gate, answer generation, extra seed, or API call |
+| `stage6-coverage-student-seed42` | 6.1 | Matched v29 Coverage-greedy Student; seed 42; v21 initialization; v27 rows/state/pools/repetitions/architecture/optimizer/losses; only ranking targets and dependent metadata changed; two epochs; no API | Training completed with epoch 2 selected. Validation accuracy is 0.202983 versus 0.664457 for matched v27 Full Closure (delta -0.461474); internal-test accuracy is 0.206897 versus 0.607057 (delta -0.400160). Validation acquired-pair accuracy is 0.859487 versus 0.902564 (delta -0.043077), and internal-test acquired-pair accuracy is 0.842396 versus 0.886636 (delta -0.044240). Coverage supervision is therefore substantially inferior even though it preserves much of the reversal signal | Close the Coverage pilot as a controlled negative result supporting answer-facing Closure supervision. Do not run v29 runtime gates, answers, API calls, or extra seeds; advance to Stage 6.2 compression-funnel tooling/readiness |
+| `stage6-compression-funnel-tooling` | 6.2 | Final v27 dual-state checkpoint; HotpotQA 3,000/7,296 states; online-state updates; alpha 0.5; fixed 30/10/5/1 front/candidate/select/state-write budgets; no answers/API | Added a guarded analyzer, static/data readiness checker, and runner. The registered interventions are RRF-top30, actual RRF+local+MMR cand10, BGE-top10, no compression, and oracle target-preserving MMR cand10. Each intervention maintains an independent online state. Raw-pool target recall is a membership ceiling only; policy Alignment@1/5 and full-unit coverage are computed after retained-pool scoring. Local syntax, shell syntax, static no-API audit, and a one-state synthetic readiness fixture pass; local model inference is unavailable because the workstation lacks torch/models | Run authoritative-server readiness only (`RUN=0`). Review exact qid/state/memory integrity before authorizing a 20-qid GPU smoke; no full 3,000 run or API call is authorized yet |
 
 ## One-time closure-balance repair
 
@@ -1330,13 +1332,11 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Stage 6.1 Coverage Student readiness passes. The only authorized next action
-is exactly one seed-42 matched pilot training run using
-`scripts/run_kbs_stage6_coverage_student.sh` with `BUILD_DATA=0`,
-`CHECK_ONLY=0`, and `TRAIN=1`. Do not run a validation runtime gate, train
-additional seeds, generate answers, or call an API. Review
-`best_val_metrics.json`, `test_metrics.json`, and `train_history.json` against
-the existing seed-42 v27 Full Closure outputs before authorizing further work.
+Stage 6.1 is complete and closed. Stage 6.2 compression-funnel tooling is
+implemented and locally audited. Run only the authoritative-server readiness
+path with RUN=0, tied to final v27 and alpha 0.5. Review readiness.json before
+authorizing a 20-qid GPU smoke. No full 3,000-qid inference, answer generation,
+or API call is authorized yet.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
