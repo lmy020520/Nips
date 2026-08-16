@@ -7,7 +7,7 @@ plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
 current_stage: 6
-current_status: Stages 1-5, 6.1, and 6.2 complete; Stage 6.3 cache audit passed; one sequential cand15/cand20 answer run is authorized with 3,615 fresh answers
+current_status: Stages 1-5, 6.1, and 6.2 complete; Stage 6.3 answer reports passed; final offline cost-closure aggregation is authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -1294,6 +1294,7 @@ The paper may be locked only when:
 | `stage6-cost-frontier-selection3000` | 6.3 | Final v27 cand15/cand20; 3,000 qids/7,296 states; front pool 30; alpha 0.5; selection-only runtime; no answers/API | PASS with zero skipped states. Cand15 Alignment@1/5/full-unit coverage is 0.570724/0.899945/0.831333 with 1,215.981 historical-run ms/qid. Cand20 is 0.579633/0.909265/0.848000 with 1,740.172 ms/qid. Exact ordered context reuse from either cand10 or cand50 is 1,259 qids for cand15 and 1,126 for cand20, leaving 1,741 and 1,874 new answers respectively. Because cand20 appears slower than the historical cand50 endpoint, cross-run latency is not accepted as the final cost curve | Run a single same-session, same-GPU, sequential 500-qid profile for cand10/15/20/50 with 20-qid warmup. No API. Use those timings for the paper and retain the 3,000-qid reports for quality/reuse metrics |
 | `stage6-cost-frontier-profile500` | 6.3 | Final v27 cand10/15/20/50; same 500 qids/1,254 states; one GPU/session; sequential runs with 20-qid warmup; no answers/API | PASS. Alignment@5 is 0.860447/0.884370/0.893939/0.911483 and full-unit coverage is 0.768/0.802/0.814/0.836. Unified selection latency is 1,026.706/1,258.163/1,832.703/1,632.333 ms/qid; throughput is 0.9740/0.7948/0.5456/0.6126 qids/s. Peak allocation is flat at 3,677.25 MB. Cand20 is slower than cand50 because MMR-20 performs iterative selection whereas cand50 commonly takes the retained-pool passthrough path; the operating-point cost curve is therefore non-monotonic and must be reported as measured | Authorize exact-context cache preparation only. Reuse an endpoint answer only when question, gold answer, and the full ordered selected-unit sequence match. Review cache audit before any API call |
 | `stage6-cost-frontier-cache-prep` | 6.3 | Cand15/cand20 frozen 3,000-qid selection reports; audited cand10/cand50 answer reports; exact ordered selected-context reuse; no API | PASS with zero failures. Cand15 reuses 1,259 answers (1,028 from cand10 and 231 from cand50) and requires 1,741 fresh calls. Cand20 reuses 1,126 (621/505) and requires 1,874. All expected cache files were newly written. Four qids per budget match both endpoints but have different raw API outputs; the preregistered deterministic cand10 preference is retained rather than selecting by outcome | Authorize one sequential background cand15/cand20 answer run: 3,615 fresh answer calls plus one connectivity preflight. Never refresh the 2,385 exact-context caches. Each completed report must exactly reproduce the frozen selection report and pass cache/protocol/answer audits |
+| `stage6-cost-frontier-middle-answers` | 6.3 | Final v27 cand15/cand20; frozen 3,000 qids and selected contexts; DeepSeek V4-Flash non-thinking; 2,385 exact-context reused answers and 3,615 fresh answers | PASS both strict audits. Cand15 EM/F1/Alignment@5/full-unit coverage is 0.630000/0.775640/0.899945/0.831333; cand20 is 0.638000/0.783463/0.909265/0.848000. Average API tokens are 401.06/400.34 and measured answer latency is 0.695/0.714 s. All 6,000 cache files resolve, with expected reused/fresh splits and zero invalid entries, empty answers, protocol failures, or context drift | Authorize one offline final aggregation over cand10/15/20/50. Compute standard Joint F1 and ClosureSuccess@B, context lexical tokens, and E2E latency using the unified 500-qid selection profile. No API or GPU work |
 
 ## One-time closure-balance repair
 
@@ -1341,12 +1342,11 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Stage 6.3 exact-context cache preparation passes. Run cand15 and cand20
-sequentially with ACTION=answers3000 and the explicit answer authorization.
-Reuse the 2,385 audited cache entries without refresh and issue exactly 3,615
-fresh answer requests, plus one connectivity preflight. A budget is complete
-only after its report reproduces the frozen selection contexts and its strict
-post-run audit reports status OK.
+Stage 6.3 cand15/cand20 answer reports pass. Run only the offline final
+aggregation with ACTION=finalize and its explicit authorization. It must merge
+the four final answer reports, standard Joint/Closure metrics, selected-context
+length, and the same-session 500-qid runtime profile. No API, GPU inference, or
+training is authorized.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
