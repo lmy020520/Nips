@@ -6,8 +6,8 @@
 plan_id: kbs-three-review-plan-v1
 created_at: 2026-07-25
 plan_read_required_before_every_run: true
-current_stage: 6
-current_status: Stages 1-5 and 6.1-6.3 complete; Stage 6.4 stored agentic-cost audit is authorized without API
+current_stage: 8
+current_status: Stages 1-7 complete; Stage 8 paper rewrite and submission audit is authorized
 ```
 
 This file is the single execution plan synthesized from:
@@ -91,9 +91,9 @@ passes its explicit gate.
 | 3X | High-cost state architecture repair | Passed and closed with final v27 Compact evaluation | Completed | Completed for seeds 42/43/44 |
 | 4 | Standard and closure-aware metrics | Passed and closed with final v27 | Completed offline | No |
 | 5 | Multi-seed robustness | Completed; sampling and seed robustness pass, matched Anchor retained as negative | No further API | Completed for seeds 42/43/44 |
-| 6 | Teacher, compression, and cost evidence | Stage 6.1-6.3 complete; Stage 6.4 offline audit authorized | No API authorized | No training authorized |
-| 7 | Decide deficit/contribution status | Pending | No initially | Conditional |
-| 8 | Rewrite and submission audit | Pending | No | No |
+| 6 | Teacher, compression, and cost evidence | Completed, including stored agentic cost audit | Completed | Completed |
+| 7 | Decide deficit/contribution status | Completed: diagnostic downgrade | No | No further training |
+| 8 | Rewrite and submission audit | Authorized | No | No |
 
 Stages must be executed in order. Work within the same stage may run in
 parallel only when it uses independent output directories and GPUs.
@@ -1296,6 +1296,8 @@ The paper may be locked only when:
 | `stage6-cost-frontier-cache-prep` | 6.3 | Cand15/cand20 frozen 3,000-qid selection reports; audited cand10/cand50 answer reports; exact ordered selected-context reuse; no API | PASS with zero failures. Cand15 reuses 1,259 answers (1,028 from cand10 and 231 from cand50) and requires 1,741 fresh calls. Cand20 reuses 1,126 (621/505) and requires 1,874. All expected cache files were newly written. Four qids per budget match both endpoints but have different raw API outputs; the preregistered deterministic cand10 preference is retained rather than selecting by outcome | Authorize one sequential background cand15/cand20 answer run: 3,615 fresh answer calls plus one connectivity preflight. Never refresh the 2,385 exact-context caches. Each completed report must exactly reproduce the frozen selection report and pass cache/protocol/answer audits |
 | `stage6-cost-frontier-middle-answers` | 6.3 | Final v27 cand15/cand20; frozen 3,000 qids and selected contexts; DeepSeek V4-Flash non-thinking; 2,385 exact-context reused answers and 3,615 fresh answers | PASS both strict audits. Cand15 EM/F1/Alignment@5/full-unit coverage is 0.630000/0.775640/0.899945/0.831333; cand20 is 0.638000/0.783463/0.909265/0.848000. Average API tokens are 401.06/400.34 and measured answer latency is 0.695/0.714 s. All 6,000 cache files resolve, with expected reused/fresh splits and zero invalid entries, empty answers, protocol failures, or context drift | Authorize one offline final aggregation over cand10/15/20/50. Compute standard Joint F1 and ClosureSuccess@B, context lexical tokens, and E2E latency using the unified 500-qid selection profile. No API or GPU work |
 | `stage6-cost-frontier-final` | 6.3 | Final v27 cand10/15/20/50; 3,000-qid quality and 500-qid unified runtime; standard Joint/Closure metrics; no API/GPU | PASS with zero failures. Answer F1 rises 0.767798/0.775640/0.783463/0.790380; Joint F1 rises 0.529322/0.549343/0.559083/0.579409; full-unit coverage is 0.782333/0.831333/0.848000/0.873000; and ClosureSuccess@B is 0.515333/0.555333/0.568667/0.587333. E2E latency is 1,829.706/1,953.163/2,546.703/2,589.333 ms/qid with flat 3,677.25 MB peak allocation. Cand15 is the empirical knee: versus cand10 it adds 0.020021 Joint F1 and 4.9 coverage points for 123.457 ms E2E | Close Stage 6.3. Keep cand10 as the strict efficiency Compact point, cand15 as the balanced knee, and cand50 as Recall. Do not assume monotonic latency. Run only the stored Stage 6.4 agentic-cost audit next |
+| `stage6-agentic-cost` | 6.4 | Stored 3,000-qid LLM-guided iterative-selection report; 7,296 selection decisions; offline accounting only | PASS with zero terminal failures. The baseline makes 2.432 selection calls and 3.432 total LLM calls per qid, consumes 4,672.424 selection and 5,139.888 total API tokens per qid, and spends 3.361 s/qid in stored sequential API latency. Its F1/Alignment@5/full-unit coverage is 0.788251/0.807703/0.772667. Final v27 Recall is +0.002129 F1, +0.116502 Alignment@5, and +0.100333 coverage while using 400.62 answer tokens, 12.83x fewer than the agentic total. Historical prompt/completion splits, retry counts, requested model, and exact monetary cost are not recoverable and must remain disclosed limitations | Close Stage 6. Report this method as LLM-guided iterative selection, not faithful IRCoT. Do not compare exact monetary cost or claim a frozen answer-model match |
+| `stage7-diagnostic-downgrade` | 7 | Matched v21 ranking-only/without-deficit/without-contribution ablations; deficit/contribution diagnostics; final v27 architecture | CLOSED via default route. Full v21 F1/Alignment@5 is 0.740117/0.827714; removing deficit gives 0.743097/0.830044 and removing contribution gives 0.740701/0.827577. Deficit MAE/Pearson/monotonicity is 0.261983/0.165130/0.697368; contribution MAE is 0.215344. Final v27 disables these heads. The evidence fails the performance, calibration, and online-utility prerequisites for restoring them to the core method | Do not train a post-hoc 2.0 variant or sweep auxiliary weights. Downgrade both signals to exploratory diagnostics, move details/negative results to the appendix, and begin Stage 8 rewrite |
 
 ## One-time closure-balance repair
 
@@ -1343,12 +1345,13 @@ notes because the API does not expose a frozen historical backend snapshot.
 ## Next authorized run
 
 ```text
-Stage 6.3 is complete. Audit the existing 3,000-qid LLM-guided iterative
-selection report for Stage 6.4. Recover total selection/final-answer calls,
-stored total tokens, terminal failures, and measured API latency. Mark
-prompt/completion token splits, retry attempts, and exact monetary cost as not
-recoverable when absent from the historical schema. Do not rerun the baseline
-or call an API.
+Stages 1-7 are complete. Begin Stage 8 by constructing a section-by-section
+paper rewrite against the final v27 evidence registry. Replace stale v17/v21
+main results, preserve version labels for diagnostic-only evidence, downgrade
+deficit/contribution according to `md/kbs_stage7_deficit_contribution_decision.md`,
+and add the final state mechanism, controlled baselines, compression funnel,
+cost frontier, agentic accounting, multi-seed evidence, and limitations. No
+new experiment, API call, or training is authorized during the rewrite audit.
 ```
 
 No Stage 3 or later experiment should begin before Stage 2 acceptance is
