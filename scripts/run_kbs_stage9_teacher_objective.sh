@@ -33,6 +33,36 @@ run_readiness() {
     --output "$READINESS_DIR/${mode}_readiness.json"
 }
 
+training_status() {
+  local seed="$1"
+  local pid_file="$LOG_DIR/seed${seed}.pid"
+  local output_dir="outputs/ranker/deberta_v3_large_v29_coverage_greedy_seed${seed}"
+  local artifact
+  local complete=1
+
+  for artifact in best_model.pt best_val_metrics.json test_metrics.json train_history.json; do
+    if [[ ! -s "$output_dir/$artifact" ]]; then
+      complete=0
+    fi
+  done
+
+  if [[ -s "$pid_file" ]]; then
+    local pid
+    pid="$(cat "$pid_file")"
+    if [[ "$pid" =~ ^[0-9]+$ ]] && kill -0 "$pid" 2>/dev/null; then
+      echo "seed${seed}: RUNNING pid=$pid"
+      return
+    fi
+  fi
+
+  if [[ "$complete" == "1" ]]; then
+    echo "seed${seed}: FINISHED_OK"
+  else
+    echo "seed${seed}: FAILED_OR_INCOMPLETE"
+    echo "  inspect: $LOG_DIR/seed${seed}_launcher.log"
+  fi
+}
+
 case "$ACTION" in
   readiness)
     run_readiness pretrain
@@ -72,8 +102,13 @@ case "$ACTION" in
     echo "status=POSTTRAIN_READINESS_OK"
     echo "No API call was started."
     ;;
+  status)
+    training_status 43
+    training_status 44
+    echo "Status check completed; no training or API call was started."
+    ;;
   *)
-    echo "[ERROR] ACTION must be readiness, train_seed43, train_seed44, or check_training" >&2
+    echo "[ERROR] ACTION must be readiness, train_seed43, train_seed44, check_training, or status" >&2
     exit 2
     ;;
 esac
