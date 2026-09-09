@@ -130,8 +130,15 @@ Do not use another DeepSeek service tier as an independent generator family.
 - Do not mix v22 transfer, historical DeepSeek aliases, or v21 auxiliary
   heads into final-v27 inferential claims.
 
+## Stage 9 run ledger
+
+| Date | Stage | Gate | Result | Evidence |
+|---|---|---|---|---|
+| 2026-09-09 | 9.1 | Coverage pre-training readiness | Passed | No missing paths; seed parity and Closure--Coverage config parity audits contain no unexpected differences; v29 seed 42 and v27 seeds 42/43/44 are complete. |
+
 ## Current authorized action
 
-Only Stage 9.1 `pretrain_readiness` is authorized. After its report is
-reviewed, v29 seed-43/44 training may be authorized. No new API calls are
-authorized yet.
+Stage 9.1 v29 Coverage-teacher training for seeds 43 and 44 is authorized.
+The runs must use separate GPUs, logs, and output directories. After both
+finish, run `posttrain_readiness`; do not start selection inference or answer
+generation before that report is reviewed. No new API calls are authorized.
