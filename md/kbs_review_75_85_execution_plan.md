@@ -135,10 +135,12 @@ Do not use another DeepSeek service tier as an independent generator family.
 | Date | Stage | Gate | Result | Evidence |
 |---|---|---|---|---|
 | 2026-09-09 | 9.1 | Coverage pre-training readiness | Passed | No missing paths; seed parity and Closure--Coverage config parity audits contain no unexpected differences; v29 seed 42 and v27 seeds 42/43/44 are complete. |
+| 2026-09-10 | 9.1 | Coverage post-training readiness | Passed | v29 seeds 42/43/44 and v27 seeds 42/43/44 each contain a non-empty checkpoint, validation metrics, internal-test metrics, and training history; no protocol failures. |
 
 ## Current authorized action
 
-Stage 9.1 v29 Coverage-teacher training for seeds 43 and 44 is authorized.
-The runs must use separate GPUs, logs, and output directories. After both
-finish, run `posttrain_readiness`; do not start selection inference or answer
-generation before that report is reviewed. No new API calls are authorized.
+Only the Stage 9.1 seed-42, 20-qid, paired selection smoke is authorized.
+It must compare v27 Closure and v29 Coverage under the frozen Compact
+protocol, with answers disabled. Do not start 3,000-qid inference or answer
+generation before the smoke report is reviewed. No new API calls are
+authorized.
