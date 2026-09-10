@@ -140,12 +140,12 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-10 | 9.1 | Three-seed paired selection | Passed | All seeds share identical ordered-qid and step-target hashes. Closure exceeds Coverage for Alignment@1, Alignment@5, MRR, full unit coverage, and full document coverage for every seed; Coverage has more acquired-evidence reselection for every seed. All per-seed paired intervals exclude zero for these contrasts. |
 | 2026-09-10 | 9.1 | Exact-context cache preparation | Passed | The historical Closure answer reports match the frozen generator and rerun selection protocols. Exact ordered-context reuse is 32/37/38 qids for seeds 42/43/44, leaving 8,893 fresh answers across the registered three-seed evaluation. |
 | 2026-09-10 | 9.1 | Coverage answer smoke | Passed | Seed 42 completed 20/20 answers with the frozen V4-Flash protocol; all 20 cache files and ordered selection contexts passed audit, with no empty/error answers or invalid reuse metadata. Smoke EM/F1 are execution diagnostics only. |
+| 2026-09-10 | 9.1 | Three-seed Coverage answers | Passed | Seeds 42/43/44 each completed all 3,000 qids with no answer errors or invalid cache entries. Exact Closure-context reuse was 32/37/38 qids; the remaining 2,968/2,963/2,962 answers were generated for Coverage contexts under the frozen protocol. |
 
 ## Current authorized action
 
-The Stage 9.1 Coverage answer reports for seeds 42/43/44 are authorized at
-the registered 3,000-qid Compact operating point. Each run must use its
-frozen selection report, matched Coverage checkpoint, audited exact-context
-cache, and the frozen DeepSeek V4-Flash protocol. Do not rerun Closure or
-start Stage 9.2 until all three Coverage reports pass their per-seed audits
-and the paired downstream summary has been reviewed.
+Only offline Stage 9.1 downstream finalization is authorized. Compute the
+standard answer/support/joint/closure metrics and per-seed paired bootstrap
+intervals from the six audited Closure/Coverage reports. Do not rerun either
+method, make additional API calls, or start Stage 9.2 until the downstream
+summary has been reviewed.

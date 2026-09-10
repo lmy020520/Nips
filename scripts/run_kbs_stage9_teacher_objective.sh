@@ -487,6 +487,96 @@ PY
   echo "status=COVERAGE_SEED_${seed}_ANSWER_OK"
 }
 
+finalize_answers() {
+  local output_dir="$READINESS_DIR/downstream3000"
+  local standard_summary="$output_dir/standard_metrics.json"
+  local standard_records="$output_dir/standard_metric_records.jsonl"
+  local selection_summary="$READINESS_DIR/selection3000/multiseed_summary.json"
+  local gold_report="outputs/rag/full3000_gold_oracle.json"
+  local seed
+  local path
+
+  for path in "$selection_summary" "$gold_report"; do
+    if [[ ! -s "$path" ]]; then
+      echo "[ERROR] missing downstream prerequisite: $path" >&2
+      exit 1
+    fi
+  done
+  for seed in 42 43 44; do
+    local audit="$READINESS_DIR/coverage_seed${seed}_answer_full3000.json"
+    local coverage="outputs/rag/kbs_stage9_teacher_objective/coverage_seed${seed}_full3000.json"
+    for path in "$audit" "$coverage"; do
+      if [[ ! -s "$path" ]]; then
+        echo "[ERROR] missing seed-$seed downstream prerequisite: $path" >&2
+        exit 1
+      fi
+    done
+    python3 - "$audit" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+report = json.loads(path.read_text(encoding="utf-8"))
+if report.get("status") != "OK" or report.get("failures"):
+    raise SystemExit(f"answer report audit is not a clean OK: {path}")
+PY
+  done
+
+  local closure42="outputs/rag/kbs_v27_final_hotpot/full_compact.json"
+  local closure43="outputs/rag/kbs_v27_stage5_multiseed/seed43/full_compact.json"
+  local closure44="outputs/rag/kbs_v27_stage5_multiseed/seed44/full_compact.json"
+  for path in "$closure42" "$closure43" "$closure44"; do
+    if [[ ! -s "$path" ]]; then
+      echo "[ERROR] missing matched Closure report: $path" >&2
+      exit 1
+    fi
+  done
+  if [[ -e "$output_dir" ]]; then
+    echo "[ERROR] downstream output directory already exists; refusing overwrite: $output_dir" >&2
+    exit 1
+  fi
+  mkdir -p "$output_dir"
+
+  python3 scripts/evaluate_kbs_standard_metrics.py \
+    --report "Closure-s42=$closure42" \
+    --report "Coverage-s42=outputs/rag/kbs_stage9_teacher_objective/coverage_seed42_full3000.json" \
+    --report "Closure-s43=$closure43" \
+    --report "Coverage-s43=outputs/rag/kbs_stage9_teacher_objective/coverage_seed43_full3000.json" \
+    --report "Closure-s44=$closure44" \
+    --report "Coverage-s44=outputs/rag/kbs_stage9_teacher_objective/coverage_seed44_full3000.json" \
+    --report "Gold-Oracle=$gold_report" \
+    --gold-oracle-name Gold-Oracle \
+    --expected-qids 3000 \
+    --closure-unit-budgets 10 \
+    --output "$standard_summary" \
+    --records-output "$standard_records"
+
+  local metrics="answer_em,answer_f1,supporting_fact_f1,supporting_fact_em,joint_f1,joint_em,full_support_coverage,closure_success_at_10"
+  for seed in 42 43 44; do
+    python3 scripts/bootstrap_kbs_stage4_metrics.py \
+      --records "$standard_records" \
+      --primary "Coverage-s${seed}" \
+      --baseline "Closure-s${seed}" \
+      --metrics "$metrics" \
+      --n-bootstrap 10000 \
+      --seed "$((20260910 + seed))" \
+      --output "$output_dir/seed${seed}_paired_bootstrap.json"
+  done
+
+  python3 scripts/summarize_kbs_stage9_teacher_objective_downstream.py \
+    --standard-summary "$standard_summary" \
+    --selection-summary "$selection_summary" \
+    --bootstrap "42=$output_dir/seed42_paired_bootstrap.json" \
+    --bootstrap "43=$output_dir/seed43_paired_bootstrap.json" \
+    --bootstrap "44=$output_dir/seed44_paired_bootstrap.json" \
+    --output "$output_dir/multiseed_summary.json"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_1_DOWNSTREAM_OK"
+  echo "summary=$output_dir/multiseed_summary.json"
+  echo "No GPU inference or API call was started."
+}
+
 case "$ACTION" in
   readiness)
     run_readiness pretrain
@@ -550,8 +640,11 @@ case "$ACTION" in
   answer_status)
     answer_status
     ;;
+  finalize_answers)
+    finalize_answers
+    ;;
   *)
-    echo "[ERROR] ACTION must be readiness, train_seed43, train_seed44, check_training, status, smoke_selection, full_selection, prepare_answer_caches, answer_smoke, answer_seed42, answer_seed43, answer_seed44, or answer_status" >&2
+    echo "[ERROR] ACTION must be readiness, train_seed43, train_seed44, check_training, status, smoke_selection, full_selection, prepare_answer_caches, answer_smoke, answer_seed42, answer_seed43, answer_seed44, answer_status, or finalize_answers" >&2
     exit 2
     ;;
 esac
