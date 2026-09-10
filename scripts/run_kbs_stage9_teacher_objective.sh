@@ -532,11 +532,27 @@ PY
       exit 1
     fi
   done
-  if [[ -e "$output_dir" ]]; then
-    echo "[ERROR] downstream output directory already exists; refusing overwrite: $output_dir" >&2
-    exit 1
+  if [[ -s "$output_dir/multiseed_summary.json" ]] && \
+    python3 - "$output_dir/multiseed_summary.json" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+report = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+raise SystemExit(0 if report.get("status") == "OK" and not report.get("failures") else 1)
+PY
+  then
+    echo "FINISHED_OK"
+    echo "status=STAGE9_1_DOWNSTREAM_OK"
+    echo "summary=$output_dir/multiseed_summary.json"
+    echo "Existing clean summary was retained; no GPU inference or API call was started."
+    return
   fi
-  mkdir -p "$output_dir"
+  if [[ -d "$output_dir" ]]; then
+    echo "[RESUME] replacing incomplete deterministic offline artifacts in: $output_dir"
+  else
+    mkdir -p "$output_dir"
+  fi
 
   python3 scripts/evaluate_kbs_standard_metrics.py \
     --report "Closure-s42=$closure42" \
