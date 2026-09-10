@@ -250,6 +250,20 @@ run_full_selection() {
   echo "status=FULL_SELECTION_OK"
 }
 
+prepare_answer_caches() {
+  if [[ "${KBS_STAGE9_CACHE_PREP_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] answer-cache preparation is locked pending selection review" >&2
+    exit 1
+  fi
+  python3 scripts/prepare_kbs_stage9_teacher_objective_answer_caches.py \
+    --selection-root "$READINESS_DIR/selection3000" \
+    --cache-root outputs/rag/cache_kbs_stage9_teacher_objective \
+    --output "$READINESS_DIR/answer_cache_readiness.json"
+  echo "FINISHED_OK"
+  echo "status=ANSWER_CACHE_READINESS_OK"
+  echo "No API call was started."
+}
+
 case "$ACTION" in
   readiness)
     run_readiness pretrain
@@ -300,8 +314,11 @@ case "$ACTION" in
   full_selection)
     run_full_selection
     ;;
+  prepare_answer_caches)
+    prepare_answer_caches
+    ;;
   *)
-    echo "[ERROR] ACTION must be readiness, train_seed43, train_seed44, check_training, status, smoke_selection, or full_selection" >&2
+    echo "[ERROR] ACTION must be readiness, train_seed43, train_seed44, check_training, status, smoke_selection, full_selection, or prepare_answer_caches" >&2
     exit 2
     ;;
 esac
