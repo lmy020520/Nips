@@ -136,11 +136,12 @@ Do not use another DeepSeek service tier as an independent generator family.
 |---|---|---|---|---|
 | 2026-09-09 | 9.1 | Coverage pre-training readiness | Passed | No missing paths; seed parity and Closure--Coverage config parity audits contain no unexpected differences; v29 seed 42 and v27 seeds 42/43/44 are complete. |
 | 2026-09-10 | 9.1 | Coverage post-training readiness | Passed | v29 seeds 42/43/44 and v27 seeds 42/43/44 each contain a non-empty checkpoint, validation metrics, internal-test metrics, and training history; no protocol failures. |
+| 2026-09-10 | 9.1 | Paired selection smoke | Passed | On the same 20 qids, both methods completed the frozen Compact protocol with no API calls or protocol failures. The observed metric direction is diagnostic only and is not used as a scientific gate. |
 
 ## Current authorized action
 
-Only the Stage 9.1 seed-42, 20-qid, paired selection smoke is authorized.
-It must compare v27 Closure and v29 Coverage under the frozen Compact
-protocol, with answers disabled. Do not start 3,000-qid inference or answer
-generation before the smoke report is reviewed. No new API calls are
-authorized.
+Only the Stage 9.1 three-seed, 3,000-qid paired selection evaluation is
+authorized. It must run Closure and Coverage from the same runtime revision
+under the frozen Compact protocol, with answers disabled. Do not prepare
+answer caches or start answer generation before the multiseed selection
+report is reviewed. No new API calls are authorized.

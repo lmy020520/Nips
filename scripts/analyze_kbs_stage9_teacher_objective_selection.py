@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 from typing import Any
@@ -164,6 +165,11 @@ def protocol_audit(
     ]
 
 
+def sequence_hash(values: list[str]) -> str:
+    payload = "\n".join(values).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--closure-report", type=Path, required=True)
@@ -193,6 +199,7 @@ def main() -> None:
         )
 
     shared_qids = [qid for qid in closure_qids if qid in coverage_records]
+    paired_targets: list[str] = []
     for qid in shared_qids:
         closure_steps = closure_records[qid].get("steps") or []
         coverage_steps = coverage_records[qid].get("steps") or []
@@ -200,6 +207,10 @@ def main() -> None:
             failures.append(f"step count differs for qid={qid}")
             continue
         for left, right in zip(closure_steps, coverage_steps):
+            paired_targets.append(
+                f"{qid}\t{int(left.get('t') or 0)}\t"
+                f"{str(left.get('positive_unit_id') or '')}"
+            )
             if (
                 int(left.get("t") or 0) != int(right.get("t") or 0)
                 or left.get("positive_unit_id") != right.get("positive_unit_id")
@@ -241,6 +252,8 @@ def main() -> None:
         "mode": "paired_selection_smoke" if args.smoke else "paired_selection",
         "api_calls": 0,
         "qids": len(shared_qids),
+        "ordered_qids_sha256": sequence_hash(shared_qids),
+        "paired_step_targets_sha256": sequence_hash(paired_targets),
         "n_bootstrap": args.n_bootstrap,
         "protocol": {
             "operating_point": "Compact",

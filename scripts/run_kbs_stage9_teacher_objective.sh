@@ -140,6 +140,116 @@ run_selection_smoke() {
   echo "status=SELECTION_SMOKE_OK"
 }
 
+run_full_selection() {
+  if [[ "${KBS_STAGE9_FULL_SELECTION_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] full selection is locked pending smoke review" >&2
+    exit 1
+  fi
+  run_readiness posttrain
+
+  local data_root="data/hotpotqa_distractor_eval_3000_cand50"
+  local output_root="$READINESS_DIR/selection3000"
+  local -a seeds=(42 43 44)
+  local -a methods=(closure coverage)
+  local -a gpus
+  IFS=',' read -r -a gpus <<< "$GPU_LIST"
+  if [[ "${#gpus[@]}" -lt 6 ]]; then
+    echo "[ERROR] GPU_LIST must contain six GPUs, for example 2,3,4,5,6,7" >&2
+    exit 1
+  fi
+
+  checkpoint_for() {
+    local method="$1"
+    local seed="$2"
+    local suffix=""
+    if [[ "$seed" != "42" ]]; then
+      suffix="_seed${seed}"
+    fi
+    if [[ "$method" == "closure" ]]; then
+      echo "outputs/ranker/deberta_v3_large_v27_counterfactual_dual${suffix}/best_model.pt"
+    else
+      echo "outputs/ranker/deberta_v3_large_v29_coverage_greedy${suffix}/best_model.pt"
+    fi
+  }
+
+  local method
+  local seed
+  for method in "${methods[@]}"; do
+    for seed in "${seeds[@]}"; do
+      local existing_report="$output_root/${method}_seed${seed}/alpha_0p50.json"
+      if [[ -e "$existing_report" ]]; then
+        echo "[ERROR] report already exists; refusing silent reuse: $existing_report" >&2
+        exit 1
+      fi
+    done
+  done
+
+  run_full_method() {
+    local method="$1"
+    local seed="$2"
+    local gpu="$3"
+    local checkpoint
+    checkpoint="$(checkpoint_for "$method" "$seed")"
+    local output_dir="$output_root/${method}_seed${seed}"
+    DATA_ROOT="$data_root" \
+    SPLIT=test \
+    CHECKPOINT="$checkpoint" \
+    OUTPUT_DIR="$output_dir" \
+    ALPHAS="0.5" \
+    GPU_LIST="$gpu" \
+    MAX_QIDS=3000 \
+    GENERATE_ANSWERS=0 \
+    POLICY_CONTEXT_SOURCE=online_state \
+    STATE_UPDATE_TOP_K=1 \
+    SAVE_ONLINE_STATES=0 \
+    bash scripts/run_kbs_alpha_sensitivity_val.sh
+  }
+
+  mkdir -p "$output_root"
+  echo "[START] Stage 9.1 six-run paired selection evaluation; answers disabled"
+  local -a pids=()
+  local index=0
+  for method in "${methods[@]}"; do
+    for seed in "${seeds[@]}"; do
+      run_full_method "$method" "$seed" "${gpus[$index]}" &
+      pids+=("$!")
+      index=$((index + 1))
+    done
+  done
+  local status=0
+  local pid
+  for pid in "${pids[@]}"; do
+    if ! wait "$pid"; then
+      status=1
+    fi
+  done
+  if [[ "$status" != "0" ]]; then
+    echo "[ERROR] at least one full selection run failed" >&2
+    exit 1
+  fi
+
+  for seed in "${seeds[@]}"; do
+    python3 scripts/analyze_kbs_stage9_teacher_objective_selection.py \
+      --closure-report "$output_root/closure_seed${seed}/alpha_0p50.json" \
+      --coverage-report "$output_root/coverage_seed${seed}/alpha_0p50.json" \
+      --closure-checkpoint "$(checkpoint_for closure "$seed")" \
+      --coverage-checkpoint "$(checkpoint_for coverage "$seed")" \
+      --expected-qids 3000 \
+      --n-bootstrap 10000 \
+      --seed "$((20260910 + seed))" \
+      --output "$output_root/seed${seed}_paired.json"
+  done
+
+  python3 scripts/summarize_kbs_stage9_teacher_objective_multiseed.py \
+    --summary "42=$output_root/seed42_paired.json" \
+    --summary "43=$output_root/seed43_paired.json" \
+    --summary "44=$output_root/seed44_paired.json" \
+    --expected-qids 3000 \
+    --output "$output_root/multiseed_summary.json"
+  echo "FINISHED_OK"
+  echo "status=FULL_SELECTION_OK"
+}
+
 case "$ACTION" in
   readiness)
     run_readiness pretrain
@@ -187,8 +297,11 @@ case "$ACTION" in
   smoke_selection)
     run_selection_smoke
     ;;
+  full_selection)
+    run_full_selection
+    ;;
   *)
-    echo "[ERROR] ACTION must be readiness, train_seed43, train_seed44, check_training, status, or smoke_selection" >&2
+    echo "[ERROR] ACTION must be readiness, train_seed43, train_seed44, check_training, status, smoke_selection, or full_selection" >&2
     exit 2
     ;;
 esac
