@@ -353,6 +353,140 @@ PY
   echo "status=ANSWER_SMOKE_OK"
 }
 
+answer_checkpoint_for() {
+  local seed="$1"
+  local suffix=""
+  if [[ "$seed" != "42" ]]; then
+    suffix="_seed${seed}"
+  fi
+  echo "outputs/ranker/deberta_v3_large_v29_coverage_greedy${suffix}/best_model.pt"
+}
+
+answer_status() {
+  local seed
+  for seed in 42 43 44; do
+    local output="outputs/rag/kbs_stage9_teacher_objective/coverage_seed${seed}_full3000.json"
+    local audit="$READINESS_DIR/coverage_seed${seed}_answer_full3000.json"
+    local pid_file="$LOG_DIR/coverage_seed${seed}_answer.pid"
+    if [[ -s "$pid_file" ]]; then
+      local pid
+      pid="$(cat "$pid_file")"
+      if [[ "$pid" =~ ^[0-9]+$ ]] && kill -0 "$pid" 2>/dev/null; then
+        echo "seed${seed}: RUNNING pid=$pid"
+        continue
+      fi
+    fi
+    if [[ -s "$output" && -s "$audit" ]] && python3 - "$audit" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+report = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+raise SystemExit(0 if report.get("status") == "OK" and not report.get("failures") else 1)
+PY
+    then
+      echo "seed${seed}: FINISHED_OK"
+    else
+      echo "seed${seed}: FAILED_OR_INCOMPLETE"
+      echo "  inspect: $LOG_DIR/coverage_seed${seed}_answer_launcher.log"
+    fi
+  done
+  echo "Status check completed; no GPU inference or API call was started."
+}
+
+run_full_answer() {
+  local seed="$1"
+  if [[ "${KBS_STAGE9_FULL_ANSWER_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] full Coverage answers are locked pending smoke review" >&2
+    exit 1
+  fi
+  if [[ -z "${DEEPSEEK_API_KEY:-}" || -z "${DEEPSEEK_API_KEY//[[:space:]]/}" ]]; then
+    echo "[ERROR] export a non-empty DEEPSEEK_API_KEY" >&2
+    exit 1
+  fi
+  export DEEPSEEK_MODEL=deepseek-v4-flash
+  export DEEPSEEK_THINKING_MODE=disabled
+
+  local readiness="$READINESS_DIR/answer_cache_readiness.json"
+  local selection="$READINESS_DIR/selection3000/coverage_seed${seed}/alpha_0p50.json"
+  local checkpoint
+  checkpoint="$(answer_checkpoint_for "$seed")"
+  local cache_dir="outputs/rag/cache_kbs_stage9_teacher_objective/coverage_seed${seed}"
+  local output="outputs/rag/kbs_stage9_teacher_objective/coverage_seed${seed}_full3000.json"
+  local audit="$READINESS_DIR/coverage_seed${seed}_answer_full3000.json"
+  local smoke_audit="$READINESS_DIR/coverage_seed42_answer_smoke20.json"
+  local path
+  for path in "$readiness" "$selection" "$checkpoint" "$cache_dir" "$smoke_audit"; do
+    if [[ ! -e "$path" ]]; then
+      echo "[ERROR] missing full-answer prerequisite: $path" >&2
+      exit 1
+    fi
+  done
+  python3 - "$readiness" "$smoke_audit" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+for raw_path, expected in ((sys.argv[1], "OK"), (sys.argv[2], "SMOKE_OK")):
+    path = Path(raw_path)
+    report = json.loads(path.read_text(encoding="utf-8"))
+    if report.get("status") != expected or report.get("failures"):
+        raise SystemExit(f"prerequisite is not a clean {expected}: {path}")
+PY
+  if [[ -e "$output" || -e "$audit" ]]; then
+    echo "[ERROR] full-answer output already exists; refusing overwrite: $output" >&2
+    exit 1
+  fi
+
+  echo "[INFO] checking frozen DeepSeek endpoint before seed=$seed"
+  python3 scripts/check_deepseek_api.py
+  echo "[START] Stage 9.1 Coverage answer report seed=$seed qids=3000"
+  CUDA_VISIBLE_DEVICES="$CUDA_DEVICE" python3 scripts/run_hotpotqa_policy_rag.py \
+    --samples data/hotpotqa_distractor_eval_3000_cand50/samples/test.jsonl \
+    --memory data/hotpotqa_distractor_eval_3000_cand50/unit_registry/raw_units_test.jsonl \
+    --queries data/hotpotqa_distractor_eval_3000_cand50/queries/test.jsonl \
+    --checkpoint "$checkpoint" \
+    --model-dir models/deberta-v3-large \
+    --state-mode policy \
+    --policy-context-source online_state \
+    --selector hybrid_policy \
+    --dense-model models/bge-large-en-v1.5 \
+    --dense-query-mode state \
+    --hybrid-alpha 0.5 \
+    --front-pool-k 30 \
+    --front-fusion rrf \
+    --local-expansion-window 1 \
+    --mmr-lambda 0.7 \
+    --mmr-same-doc-similarity 0.35 \
+    --candidate-top-k 10 \
+    --select-top-k 5 \
+    --state-update-top-k 1 \
+    --policy-score-mode front_policy_blend \
+    --policy-blend-weight 0.5 \
+    --answer-mode json \
+    --generate-answers \
+    --answer-cache-dir "$cache_dir" \
+    --max-qids 3000 \
+    --ks 1,2,3,5 \
+    --save-online-states \
+    --profile-runtime \
+    --profile-warmup-qids 20 \
+    --llm-max-retries 8 \
+    --llm-retry-sleep 2.0 \
+    --seed 20260608 \
+    --output "$output"
+
+  python3 scripts/check_kbs_stage9_teacher_objective_answer_report.py \
+    --seed "$seed" \
+    --report "$output" \
+    --selection-report "$selection" \
+    --cache-dir "$cache_dir" \
+    --expected-qids 3000 \
+    --output "$audit"
+  echo "FINISHED_OK"
+  echo "status=COVERAGE_SEED_${seed}_ANSWER_OK"
+}
+
 case "$ACTION" in
   readiness)
     run_readiness pretrain
@@ -409,8 +543,15 @@ case "$ACTION" in
   answer_smoke)
     run_answer_smoke
     ;;
+  answer_seed42|answer_seed43|answer_seed44)
+    seed="${ACTION#answer_seed}"
+    run_full_answer "$seed"
+    ;;
+  answer_status)
+    answer_status
+    ;;
   *)
-    echo "[ERROR] ACTION must be readiness, train_seed43, train_seed44, check_training, status, smoke_selection, full_selection, prepare_answer_caches, or answer_smoke" >&2
+    echo "[ERROR] ACTION must be readiness, train_seed43, train_seed44, check_training, status, smoke_selection, full_selection, prepare_answer_caches, answer_smoke, answer_seed42, answer_seed43, answer_seed44, or answer_status" >&2
     exit 2
     ;;
 esac

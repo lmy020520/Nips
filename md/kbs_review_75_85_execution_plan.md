@@ -139,11 +139,13 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-10 | 9.1 | Paired selection smoke | Passed | On the same 20 qids, both methods completed the frozen Compact protocol with no API calls or protocol failures. The observed metric direction is diagnostic only and is not used as a scientific gate. |
 | 2026-09-10 | 9.1 | Three-seed paired selection | Passed | All seeds share identical ordered-qid and step-target hashes. Closure exceeds Coverage for Alignment@1, Alignment@5, MRR, full unit coverage, and full document coverage for every seed; Coverage has more acquired-evidence reselection for every seed. All per-seed paired intervals exclude zero for these contrasts. |
 | 2026-09-10 | 9.1 | Exact-context cache preparation | Passed | The historical Closure answer reports match the frozen generator and rerun selection protocols. Exact ordered-context reuse is 32/37/38 qids for seeds 42/43/44, leaving 8,893 fresh answers across the registered three-seed evaluation. |
+| 2026-09-10 | 9.1 | Coverage answer smoke | Passed | Seed 42 completed 20/20 answers with the frozen V4-Flash protocol; all 20 cache files and ordered selection contexts passed audit, with no empty/error answers or invalid reuse metadata. Smoke EM/F1 are execution diagnostics only. |
 
 ## Current authorized action
 
-Only the Stage 9.1 seed-42, 20-qid Coverage answer smoke is authorized. It
-must use the frozen DeepSeek V4-Flash protocol and the audited seed-42 cache;
-fresh calls are permitted only for smoke qids without an exact cached
-context. Do not start any 3,000-qid answer run before the smoke audit is
-reviewed.
+The Stage 9.1 Coverage answer reports for seeds 42/43/44 are authorized at
+the registered 3,000-qid Compact operating point. Each run must use its
+frozen selection report, matched Coverage checkpoint, audited exact-context
+cache, and the frozen DeepSeek V4-Flash protocol. Do not rerun Closure or
+start Stage 9.2 until all three Coverage reports pass their per-seed audits
+and the paired downstream summary has been reviewed.
