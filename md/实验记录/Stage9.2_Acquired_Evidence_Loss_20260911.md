@@ -2,8 +2,8 @@
 
 ## Current status
 
-- Status: all matched training runs completed; training-metric review passed;
-  selection smoke authorized.
+- Status: all matched training runs completed; training-metric review and
+  selection smoke passed; full no-answer selection authorized.
 - Post-training readiness date: 2026-09-11.
 - API calls during readiness: 0.
 - GPU inference runs during readiness: 0.
@@ -59,11 +59,16 @@ less online reselection or better downstream compiled contexts.
 
 ## Remaining gates
 
-1. Run a 20-qid no-answer selection smoke under the frozen Compact protocol.
-2. Run 3,000-qid no-answer selection diagnostics for all variants and seeds.
-3. Report teacher alignment, acquired-pair accuracy, and acquired-evidence
+The 20-qid seed-42 smoke passed with identical qid/target hashes, the frozen
+Compact protocol, no answer generation, and no failures. Full and CE+Margin
+tie Step@1, Step@5, MRR, and coverage in this smoke. Full reduces top-1
+acquired-evidence reselection from 0.36 to 0.26. This is an execution signal,
+not a scientific result.
+
+1. Run 3,000-qid no-answer selection diagnostics for all variants and seeds.
+2. Report teacher alignment, acquired-pair accuracy, and acquired-evidence
    reselection before deciding whether answer generation is justified.
-4. If authorized, compute downstream support, joint, coverage, closure, and
+3. If authorized, compute downstream support, joint, coverage, closure, and
    paired-bootstrap results using exact-context answer-cache rules.
 
 The completed-training audit does not by itself establish a scientific gain.
