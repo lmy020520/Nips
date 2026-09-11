@@ -100,11 +100,14 @@ answer requirements are 984, 1,053, and 1,034, totaling 3,071 API calls. Thus,
 the same seed, question, gold answer, frozen generator protocol, and full
 ordered selected-unit sequence.
 
-1. Run one seed-42 20-qid CE+Margin answer smoke and audit both reused and
-   freshly generated cache entries.
-2. If the smoke passes, run the three 3,000-qid CE+Margin reports in the
-   background. Do not generate answers for Ranking-only or CE+Acquired.
-3. Compute downstream support, joint, coverage, closure, and paired intervals
+The seed-42 20-qid answer smoke passed under the frozen V4-Flash protocol. It
+audited 11 exact-context Full answer reuses and 9 fresh CE+Margin answers, with
+no empty answers, API errors, context mismatches, or invalid cache metadata.
+Its EM and F1 values are execution diagnostics and are not scientific results.
+
+1. Run the three 3,000-qid CE+Margin reports in the background. Do not
+   generate answers for Ranking-only or CE+Acquired.
+2. Compute downstream support, joint, coverage, closure, and paired intervals
    against the existing matched Full reports.
 
 Ranking-only and CE+Acquired remain factorial selection diagnostics; they do

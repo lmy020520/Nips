@@ -148,11 +148,12 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-11 | 9.2 | Four-variant selection smoke | Passed; full selection authorized | The same 20 qids and teacher targets pass the frozen Compact protocol for Full, Ranking-only, CE+Margin, and CE+Acquired with no API calls or failures. Full and CE+Margin tie alignment and coverage; Full top-1 acquired-evidence reselection is 0.26 versus 0.36 for CE+Margin. These values validate execution only and are not used as scientific evidence. |
 | 2026-09-12 | 9.2 | Three-seed 3,000-qid selection | Passed; primary cache audit authorized | All methods and seeds share identical ordered-qid and step-target hashes. In the registered Full-minus-CE+Margin contrast, Full reduces Top-1 acquired-evidence reselection by 0.0179 on average, with every seed's paired 95% CI strictly below zero. Step@5, coverage, and MRR are tied or mixed; CE+Acquired alone has the lowest reselection rate. This supports a targeted anti-reselection effect, not a broad retrieval-quality gain. No API calls were made. |
 | 2026-09-12 | 9.2 | Primary exact-context cache audit | Passed; answer smoke authorized | Full answers can be reused for exactly matching ordered CE+Margin contexts on 2,016/1,947/1,966 qids for seeds 42/43/44. This leaves 984/1,053/1,034 fresh answers, or 3,071 total API calls instead of 9,000. Protocol, qid, question, answer target, and ordered-context checks passed with no API calls or failures. |
+| 2026-09-12 | 9.2 | CE+Margin answer smoke | Passed; full answers authorized | Seed 42 completed the frozen 20-qid answer smoke with no errors or invalid cache records. The audit exercised both paths: 11 exact Full-context answers were reused and 9 CE+Margin-context answers were freshly generated. Smoke EM/F1 are execution diagnostics only. |
 
 ## Current authorized action
 
-Stage 9.1 is closed. Stage 9.2 training, three-seed selection, and the primary
-exact-context cache audit are complete. The next authorized action is one
-seed-42 20-qid CE+Margin answer smoke using the frozen answer protocol. Full
-three-seed answer generation remains locked until this smoke passes. Ranking-
-only and CE+Acquired remain selection diagnostics and require no answer calls.
+Stage 9.1 is closed. Stage 9.2 training, selection, cache audit, and the
+CE+Margin answer smoke are complete. The next authorized action is the three-
+seed 3,000-qid CE+Margin answer evaluation under the frozen protocol, followed
+by offline standard metrics and paired bootstrap finalization. Ranking-only
+and CE+Acquired remain selection diagnostics and require no answer calls.
