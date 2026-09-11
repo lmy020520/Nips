@@ -468,6 +468,20 @@ PY
   return 1
 }
 
+prepare_primary_answer_caches() {
+  if [[ "${KBS_STAGE9_ACQUIRED_CACHE_PREP_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] Stage 9.2 cache preparation is locked pending selection review" >&2
+    exit 1
+  fi
+  python3 scripts/prepare_kbs_stage9_acquired_loss_answer_caches.py \
+    --selection-root "$OUTPUT_ROOT/selection3000" \
+    --cache-root outputs/rag/cache_kbs_stage9_acquired_loss \
+    --output "$OUTPUT_ROOT/answer_cache_readiness.json"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_2_PRIMARY_ANSWER_CACHE_READINESS_OK"
+  echo "No training, GPU inference, or API call was started."
+}
+
 case "$ACTION" in
   readiness)
     run_readiness pretrain
@@ -501,6 +515,9 @@ case "$ACTION" in
   selection_status)
     full_selection_status
     ;;
+  prepare_primary_answer_caches)
+    prepare_primary_answer_caches
+    ;;
   status)
     show_status
     ;;
@@ -514,7 +531,7 @@ case "$ACTION" in
     ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, status, check_training, summarize_training, selection_smoke, selection_full_start, selection_full_worker, selection_status, train_{ranking_only,ce_margin,ce_acquired}_seed{42,43,44}" >&2
+    echo "Allowed: readiness, status, check_training, summarize_training, selection_smoke, selection_full_start, selection_full_worker, selection_status, prepare_primary_answer_caches, train_{ranking_only,ce_margin,ce_acquired}_seed{42,43,44}" >&2
     exit 2
     ;;
 esac
