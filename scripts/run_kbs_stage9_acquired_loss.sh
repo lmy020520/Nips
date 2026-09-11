@@ -131,6 +131,14 @@ case "$ACTION" in
     echo "status=STAGE9_2_POSTTRAIN_READINESS_OK"
     echo "No training, GPU inference, or API call was started."
     ;;
+  summarize_training)
+    run_readiness posttrain
+    python3 scripts/summarize_kbs_stage9_acquired_loss_training.py \
+      --output "$OUTPUT_ROOT/training_metrics_summary.json"
+    echo "FINISHED_OK"
+    echo "status=STAGE9_2_TRAINING_METRICS_OK"
+    echo "No training, GPU inference, or API call was started."
+    ;;
   status)
     show_status
     ;;
@@ -144,7 +152,7 @@ case "$ACTION" in
     ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, status, check_training, train_{ranking_only,ce_margin,ce_acquired}_seed{42,43,44}" >&2
+    echo "Allowed: readiness, status, check_training, summarize_training, train_{ranking_only,ce_margin,ce_acquired}_seed{42,43,44}" >&2
     exit 2
     ;;
 esac
