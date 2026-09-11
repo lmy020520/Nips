@@ -144,13 +144,12 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-10 | 9.1 | Matched downstream objective comparison | Passed; Stage 9.1 closed | Closure beats Coverage for every seed on Answer F1, Supporting-Fact F1/EM, Joint F1/EM, full support coverage, and ClosureSuccess@10. Mean Coverage-minus-Closure deltas are -0.0078 Answer F1, -0.1772 Supporting-Fact F1, -0.1481 Joint F1, -0.0413 full coverage, and -0.0198 ClosureSuccess@10. The latter four evidence/joint/closure metrics have per-seed paired 95% CIs strictly below zero; Answer F1 CIs cross zero, and Answer EM is indistinguishable. Coverage also increases top-1 acquired-evidence reselection by +0.1161. The registered interpretation gate is `CLOSURE_SUPERIOR`. |
 | 2026-09-10 | 9.2 | Acquired-loss pre-training readiness | Passed | The matched v27 data contain 37,730/1,207/1,247 train/validation/internal-test rows and 37,642/975/1,085 acquired-negative pairs, with no split or primary-evaluation qid overlap. Full seeds 42/43/44 are complete. Nine resolved configs differ only in output directory and the registered ordinary/acquired margin weights; all hashes are frozen and no partial variant artifacts exist. |
 | 2026-09-11 | 9.2 | Acquired-loss post-training readiness | Passed | All nine registered Ranking-only, CE+Margin, and CE+Acquired runs for seeds 42/43/44 contain non-empty checkpoints, best-validation metrics, internal-test metrics, and training histories. Together with the three existing Full v27 seeds, all 12 matched model instances are complete; no paths, runs, or protocol checks are missing. No inference or API call was made by this audit. |
+| 2026-09-11 | 9.2 | Training-metric review | Passed; selection smoke authorized | In the primary Full-minus-CE+Margin contrast, acquired-pair accuracy improves for every seed: mean +0.0202 on validation and +0.0301 on internal test. Ordinary ranking accuracy changes are small and mixed (-0.0025 validation, +0.0040 internal test). CE+Acquired similarly exceeds Ranking-only acquired-pair accuracy by +0.0236/+0.0338. This is a targeted discrimination signal only; online reselection and downstream effects remain untested. |
 
 ## Current authorized action
 
 Stage 9.1 is closed and all twelve matched Stage 9.2 model instances are
-complete. The next authorized action is a no-inference summary and review of
-the validation/internal-test training metrics. After that review, run the
-registered no-answer selection diagnostics (first a 20-qid smoke, then the
-3,000-qid reports) for all four loss variants and three seeds. Do not make
-answer API calls until teacher alignment, acquired-pair accuracy, and
-acquired-evidence reselection have been audited.
+complete. The training-metric review passed and authorizes the 20-qid,
+four-variant, no-answer selection smoke for seed 42. Smoke results validate
+execution only. Do not run the 3,000-qid selection reports or make answer API
+calls until the smoke report passes protocol and pairing audit.

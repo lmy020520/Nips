@@ -2,7 +2,8 @@
 
 ## Current status
 
-- Status: all matched training runs completed; training-metric review pending.
+- Status: all matched training runs completed; training-metric review passed;
+  selection smoke authorized.
 - Post-training readiness date: 2026-09-11.
 - API calls during readiness: 0.
 - GPU inference runs during readiness: 0.
@@ -39,15 +40,30 @@ and the three existing Full models contains `best_model.pt`,
 There are no pending runs, missing paths, partial artifacts, or readiness
 failures.
 
+## Training diagnostics
+
+| Variant | Validation rank acc. | Validation acquired-pair acc. | Test rank acc. | Test acquired-pair acc. |
+|---|---:|---:|---:|---:|
+| Ranking only | 0.6689 | 0.8892 | 0.6041 | 0.8670 |
+| CE + margin | 0.6639 | 0.8885 | 0.6052 | 0.8627 |
+| CE + acquired | 0.6636 | 0.9128 | 0.6127 | 0.9008 |
+| Full v27 | 0.6614 | 0.9087 | 0.6092 | 0.8928 |
+
+For the registered Full-minus-CE+Margin contrast, acquired-pair accuracy
+improves for every seed, with mean deltas of +0.0202 on validation and
++0.0301 on internal test. Ranking accuracy changes by -0.0025 and +0.0040,
+respectively. CE+Acquired minus Ranking-only yields acquired-pair gains of
++0.0236 and +0.0338. These results establish that the acquired-evidence loss
+targets its intended pairwise discrimination, but they do not yet establish
+less online reselection or better downstream compiled contexts.
+
 ## Remaining gates
 
-1. Summarize and review best-validation and internal-test metrics for all 12
-   model instances without inference.
-2. Run a 20-qid no-answer selection smoke under the frozen Compact protocol.
-3. Run 3,000-qid no-answer selection diagnostics for all variants and seeds.
-4. Report teacher alignment, acquired-pair accuracy, and acquired-evidence
+1. Run a 20-qid no-answer selection smoke under the frozen Compact protocol.
+2. Run 3,000-qid no-answer selection diagnostics for all variants and seeds.
+3. Report teacher alignment, acquired-pair accuracy, and acquired-evidence
    reselection before deciding whether answer generation is justified.
-5. If authorized, compute downstream support, joint, coverage, closure, and
+4. If authorized, compute downstream support, joint, coverage, closure, and
    paired-bootstrap results using exact-context answer-cache rules.
 
 The completed-training audit does not by itself establish a scientific gain.
