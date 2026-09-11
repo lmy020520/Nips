@@ -93,12 +93,19 @@ tie Step@1, Step@5, MRR, and coverage in this smoke. Full reduces top-1
 acquired-evidence reselection from 0.36 to 0.26. This is an execution signal,
 not a scientific result.
 
-1. Audit exact ordered-context reuse for the primary Full versus CE+Margin
-   contrast without API calls.
-2. Review the resulting fresh-answer requirement and decide whether the narrow
-   but significant Top-1 behavior effect justifies downstream answer calls.
-3. If authorized, run one 20-qid answer smoke before any full report, then
-   compute downstream support, joint, coverage, closure, and paired intervals.
+The exact-context audit passed. Full answers can be reused for 2,016, 1,947,
+and 1,966 CE+Margin contexts for seeds 42, 43, and 44. The corresponding fresh
+answer requirements are 984, 1,053, and 1,034, totaling 3,071 API calls. Thus,
+65.9% of the 9,000 seed--qid answers require no new generation. Reuse requires
+the same seed, question, gold answer, frozen generator protocol, and full
+ordered selected-unit sequence.
+
+1. Run one seed-42 20-qid CE+Margin answer smoke and audit both reused and
+   freshly generated cache entries.
+2. If the smoke passes, run the three 3,000-qid CE+Margin reports in the
+   background. Do not generate answers for Ranking-only or CE+Acquired.
+3. Compute downstream support, joint, coverage, closure, and paired intervals
+   against the existing matched Full reports.
 
 Ranking-only and CE+Acquired remain factorial selection diagnostics; they do
 not require answer generation unless a later registered analysis needs them.

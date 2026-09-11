@@ -147,12 +147,12 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-11 | 9.2 | Training-metric review | Passed; selection smoke authorized | In the primary Full-minus-CE+Margin contrast, acquired-pair accuracy improves for every seed: mean +0.0202 on validation and +0.0301 on internal test. Ordinary ranking accuracy changes are small and mixed (-0.0025 validation, +0.0040 internal test). CE+Acquired similarly exceeds Ranking-only acquired-pair accuracy by +0.0236/+0.0338. This is a targeted discrimination signal only; online reselection and downstream effects remain untested. |
 | 2026-09-11 | 9.2 | Four-variant selection smoke | Passed; full selection authorized | The same 20 qids and teacher targets pass the frozen Compact protocol for Full, Ranking-only, CE+Margin, and CE+Acquired with no API calls or failures. Full and CE+Margin tie alignment and coverage; Full top-1 acquired-evidence reselection is 0.26 versus 0.36 for CE+Margin. These values validate execution only and are not used as scientific evidence. |
 | 2026-09-12 | 9.2 | Three-seed 3,000-qid selection | Passed; primary cache audit authorized | All methods and seeds share identical ordered-qid and step-target hashes. In the registered Full-minus-CE+Margin contrast, Full reduces Top-1 acquired-evidence reselection by 0.0179 on average, with every seed's paired 95% CI strictly below zero. Step@5, coverage, and MRR are tied or mixed; CE+Acquired alone has the lowest reselection rate. This supports a targeted anti-reselection effect, not a broad retrieval-quality gain. No API calls were made. |
+| 2026-09-12 | 9.2 | Primary exact-context cache audit | Passed; answer smoke authorized | Full answers can be reused for exactly matching ordered CE+Margin contexts on 2,016/1,947/1,966 qids for seeds 42/43/44. This leaves 984/1,053/1,034 fresh answers, or 3,071 total API calls instead of 9,000. Protocol, qid, question, answer target, and ordered-context checks passed with no API calls or failures. |
 
 ## Current authorized action
 
-Stage 9.1 is closed. Stage 9.2 training and three-seed selection are complete.
-The next authorized action is a no-API exact-context answer-cache audit for
-the registered Full versus CE+Margin contrast. Ranking-only and CE+Acquired
-remain selection diagnostics. Do not make answer API calls until the cache
-audit reports the exact reuse and fresh-call requirement and that requirement
-has been reviewed.
+Stage 9.1 is closed. Stage 9.2 training, three-seed selection, and the primary
+exact-context cache audit are complete. The next authorized action is one
+seed-42 20-qid CE+Margin answer smoke using the frozen answer protocol. Full
+three-seed answer generation remains locked until this smoke passes. Ranking-
+only and CE+Acquired remain selection diagnostics and require no answer calls.

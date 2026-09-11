@@ -482,6 +482,283 @@ prepare_primary_answer_caches() {
   echo "No training, GPU inference, or API call was started."
 }
 
+require_clean_json_status() {
+  local path="$1"
+  local expected="$2"
+  python3 - "$path" "$expected" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+expected = sys.argv[2]
+if not path.is_file() or path.stat().st_size == 0:
+    raise SystemExit(f"missing prerequisite: {path}")
+report = json.loads(path.read_text(encoding="utf-8"))
+if report.get("status") != expected or report.get("failures"):
+    raise SystemExit(f"prerequisite is not a clean {expected}: {path}")
+PY
+}
+
+run_ce_margin_answer() {
+  local seed="$1"
+  local expected_qids="$2"
+  local smoke="$3"
+  if [[ "${KBS_STAGE9_ACQUIRED_ANSWER_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] Stage 9.2 answer generation is locked" >&2
+    exit 1
+  fi
+  if [[ -z "${DEEPSEEK_API_KEY:-}" || -z "${DEEPSEEK_API_KEY//[[:space:]]/}" ]]; then
+    echo "[ERROR] export a non-empty DEEPSEEK_API_KEY" >&2
+    exit 1
+  fi
+  export DEEPSEEK_API_KEY
+  export DEEPSEEK_MODEL=deepseek-v4-flash
+  export DEEPSEEK_THINKING_MODE=disabled
+
+  local readiness="$OUTPUT_ROOT/answer_cache_readiness.json"
+  local selection="$OUTPUT_ROOT/selection3000/ce_margin_seed${seed}/alpha_0p50.json"
+  local checkpoint
+  checkpoint="$(checkpoint_for ce_margin "$seed")"
+  local cache_dir="outputs/rag/cache_kbs_stage9_acquired_loss/ce_margin_seed${seed}"
+  local output audit
+  if [[ "$smoke" == "1" ]]; then
+    output="outputs/rag/kbs_stage9_acquired_loss/ce_margin_seed${seed}_smoke20.json"
+    audit="$OUTPUT_ROOT/ce_margin_seed${seed}_answer_smoke20.json"
+  else
+    output="outputs/rag/kbs_stage9_acquired_loss/ce_margin_seed${seed}_full3000.json"
+    audit="$OUTPUT_ROOT/ce_margin_seed${seed}_answer_full3000.json"
+    require_clean_json_status "$OUTPUT_ROOT/ce_margin_seed42_answer_smoke20.json" SMOKE_OK
+  fi
+  require_clean_json_status "$readiness" OK
+  for path in "$selection" "$checkpoint" "$cache_dir"; do
+    if [[ ! -e "$path" ]]; then
+      echo "[ERROR] missing answer prerequisite: $path" >&2
+      exit 1
+    fi
+  done
+  if [[ -e "$output" || -e "$audit" ]]; then
+    echo "[ERROR] answer output already exists; refusing overwrite: $output" >&2
+    exit 1
+  fi
+
+  echo "[INFO] checking frozen DeepSeek endpoint before seed=$seed qids=$expected_qids"
+  python3 scripts/check_deepseek_api.py
+  echo "[START] Stage 9.2 CE+Margin answer run seed=$seed qids=$expected_qids"
+  CUDA_VISIBLE_DEVICES="$CUDA_DEVICE" python3 scripts/run_hotpotqa_policy_rag.py \
+    --samples data/hotpotqa_distractor_eval_3000_cand50/samples/test.jsonl \
+    --memory data/hotpotqa_distractor_eval_3000_cand50/unit_registry/raw_units_test.jsonl \
+    --queries data/hotpotqa_distractor_eval_3000_cand50/queries/test.jsonl \
+    --checkpoint "$checkpoint" \
+    --model-dir models/deberta-v3-large \
+    --state-mode policy \
+    --policy-context-source online_state \
+    --selector hybrid_policy \
+    --dense-model models/bge-large-en-v1.5 \
+    --dense-query-mode state \
+    --hybrid-alpha 0.5 \
+    --front-pool-k 30 \
+    --front-fusion rrf \
+    --local-expansion-window 1 \
+    --mmr-lambda 0.7 \
+    --mmr-same-doc-similarity 0.35 \
+    --candidate-top-k 10 \
+    --select-top-k 5 \
+    --state-update-top-k 1 \
+    --policy-score-mode front_policy_blend \
+    --policy-blend-weight 0.5 \
+    --answer-mode json \
+    --generate-answers \
+    --answer-cache-dir "$cache_dir" \
+    --max-qids "$expected_qids" \
+    --ks 1,2,3,5 \
+    --save-online-states \
+    --profile-runtime \
+    --profile-warmup-qids 20 \
+    --llm-max-retries 8 \
+    --llm-retry-sleep 2.0 \
+    --seed 20260608 \
+    --output "$output"
+
+  local -a smoke_flag=()
+  if [[ "$smoke" == "1" ]]; then
+    smoke_flag+=(--smoke)
+  fi
+  python3 scripts/check_kbs_stage9_acquired_loss_answer_report.py \
+    --seed "$seed" \
+    --report "$output" \
+    --selection-report "$selection" \
+    --cache-readiness "$readiness" \
+    --cache-dir "$cache_dir" \
+    --expected-qids "$expected_qids" \
+    "${smoke_flag[@]}" \
+    --output "$audit"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_2_CE_MARGIN_SEED${seed}_ANSWER_OK"
+}
+
+run_primary_answer_smoke() {
+  if [[ "${KBS_STAGE9_ACQUIRED_ANSWER_SMOKE_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] Stage 9.2 answer smoke is locked pending cache review" >&2
+    exit 1
+  fi
+  KBS_STAGE9_ACQUIRED_ANSWER_AUTHORIZED=1 run_ce_margin_answer 42 20 1
+}
+
+answer_report_is_clean() {
+  local seed="$1"
+  local audit="$OUTPUT_ROOT/ce_margin_seed${seed}_answer_full3000.json"
+  if [[ ! -s "$audit" ]]; then
+    return 1
+  fi
+  require_clean_json_status "$audit" OK
+}
+
+start_primary_answers() {
+  if [[ "${KBS_STAGE9_ACQUIRED_FULL_ANSWER_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] Stage 9.2 full answers are locked pending smoke review" >&2
+    exit 1
+  fi
+  if [[ -z "${DEEPSEEK_API_KEY:-}" || -z "${DEEPSEEK_API_KEY//[[:space:]]/}" ]]; then
+    echo "[ERROR] export a non-empty DEEPSEEK_API_KEY" >&2
+    exit 1
+  fi
+  export DEEPSEEK_API_KEY
+  require_clean_json_status "$OUTPUT_ROOT/ce_margin_seed42_answer_smoke20.json" SMOKE_OK
+  IFS=',' read -r -a gpus <<< "$GPU_LIST"
+  if [[ "${#gpus[@]}" -lt 3 ]]; then
+    echo "[ERROR] GPU_LIST must contain three GPUs, for example 0,1,2" >&2
+    exit 1
+  fi
+
+  local index=0 seed pid_file log_file pid
+  for seed in 42 43 44; do
+    if answer_report_is_clean "$seed"; then
+      continue
+    fi
+    pid_file="$LOG_ROOT/ce_margin_seed${seed}_answer.pid"
+    if [[ -s "$pid_file" ]]; then
+      pid="$(cat "$pid_file")"
+      if [[ "$pid" =~ ^[0-9]+$ ]] && kill -0 "$pid" 2>/dev/null; then
+        echo "[ERROR] seed${seed} answer run is already active pid=$pid" >&2
+        exit 1
+      fi
+    fi
+    if [[ -e "outputs/rag/kbs_stage9_acquired_loss/ce_margin_seed${seed}_full3000.json" || \
+          -e "$OUTPUT_ROOT/ce_margin_seed${seed}_answer_full3000.json" ]]; then
+      echo "[ERROR] incomplete answer artifact exists for seed${seed}; refusing overwrite" >&2
+      exit 1
+    fi
+  done
+
+  for seed in 42 43 44; do
+    if answer_report_is_clean "$seed"; then
+      echo "[SKIP] seed${seed} already FINISHED_OK"
+      index=$((index + 1))
+      continue
+    fi
+    pid_file="$LOG_ROOT/ce_margin_seed${seed}_answer.pid"
+    log_file="$LOG_ROOT/ce_margin_seed${seed}_answer_launcher.log"
+    nohup env \
+      KBS_STAGE9_ACQUIRED_ANSWER_AUTHORIZED=1 \
+      ACTION="answer_seed${seed}_worker" \
+      CUDA_DEVICE="${gpus[$index]}" \
+      bash "$SCRIPT_DIR/run_kbs_stage9_acquired_loss.sh" \
+      > "$log_file" 2>&1 < /dev/null &
+    pid=$!
+    echo "$pid" > "$pid_file"
+    echo "seed${seed}: RUNNING pid=$pid gpu=${gpus[$index]}"
+    index=$((index + 1))
+  done
+  echo "Check completion with: ACTION=answer_status bash scripts/run_kbs_stage9_acquired_loss.sh"
+}
+
+primary_answer_status() {
+  local seed pid_file pid
+  for seed in 42 43 44; do
+    if answer_report_is_clean "$seed"; then
+      echo "seed${seed}: FINISHED_OK"
+      continue
+    fi
+    pid_file="$LOG_ROOT/ce_margin_seed${seed}_answer.pid"
+    if [[ -s "$pid_file" ]]; then
+      pid="$(cat "$pid_file")"
+      if [[ "$pid" =~ ^[0-9]+$ ]] && kill -0 "$pid" 2>/dev/null; then
+        echo "seed${seed}: RUNNING pid=$pid"
+        continue
+      fi
+    fi
+    echo "seed${seed}: FAILED_OR_INCOMPLETE"
+    echo "  inspect: $LOG_ROOT/ce_margin_seed${seed}_answer_launcher.log"
+  done
+  echo "Status check completed; no GPU inference or API call was started."
+}
+
+finalize_primary_answers() {
+  local output_dir="$OUTPUT_ROOT/downstream3000"
+  local standard_summary="$output_dir/standard_metrics.json"
+  local standard_records="$output_dir/standard_metric_records.jsonl"
+  local selection_summary="$OUTPUT_ROOT/selection3000/multiseed_summary.json"
+  local gold_report="outputs/rag/full3000_gold_oracle.json"
+  local seed
+  for seed in 42 43 44; do
+    answer_report_is_clean "$seed" || {
+      echo "[ERROR] seed${seed} answer report is incomplete" >&2
+      exit 1
+    }
+  done
+  require_clean_json_status "$selection_summary" OK
+  if [[ ! -s "$gold_report" ]]; then
+    echo "[ERROR] missing gold report: $gold_report" >&2
+    exit 1
+  fi
+  if [[ -s "$output_dir/multiseed_summary.json" ]]; then
+    require_clean_json_status "$output_dir/multiseed_summary.json" OK
+    echo "FINISHED_OK"
+    echo "summary=$output_dir/multiseed_summary.json"
+    echo "Existing clean summary was retained; no API call was started."
+    return
+  fi
+  mkdir -p "$output_dir"
+
+  python3 scripts/evaluate_kbs_standard_metrics.py \
+    --report "Full-s42=outputs/rag/kbs_v27_final_hotpot/full_compact.json" \
+    --report "CE-Margin-s42=outputs/rag/kbs_stage9_acquired_loss/ce_margin_seed42_full3000.json" \
+    --report "Full-s43=outputs/rag/kbs_v27_stage5_multiseed/seed43/full_compact.json" \
+    --report "CE-Margin-s43=outputs/rag/kbs_stage9_acquired_loss/ce_margin_seed43_full3000.json" \
+    --report "Full-s44=outputs/rag/kbs_v27_stage5_multiseed/seed44/full_compact.json" \
+    --report "CE-Margin-s44=outputs/rag/kbs_stage9_acquired_loss/ce_margin_seed44_full3000.json" \
+    --report "Gold-Oracle=$gold_report" \
+    --gold-oracle-name Gold-Oracle \
+    --expected-qids 3000 \
+    --closure-unit-budgets 10 \
+    --output "$standard_summary" \
+    --records-output "$standard_records"
+
+  local metrics="answer_em,answer_f1,supporting_fact_f1,supporting_fact_em,joint_f1,joint_em,full_support_coverage,closure_success_at_10"
+  for seed in 42 43 44; do
+    python3 scripts/bootstrap_kbs_stage4_metrics.py \
+      --records "$standard_records" \
+      --primary "Full-s${seed}" \
+      --baseline "CE-Margin-s${seed}" \
+      --metrics "$metrics" \
+      --n-bootstrap 10000 \
+      --seed "$((20260912 + seed))" \
+      --output "$output_dir/seed${seed}_paired_bootstrap.json"
+  done
+  python3 scripts/summarize_kbs_stage9_acquired_loss_downstream.py \
+    --standard-summary "$standard_summary" \
+    --selection-summary "$selection_summary" \
+    --bootstrap "42=$output_dir/seed42_paired_bootstrap.json" \
+    --bootstrap "43=$output_dir/seed43_paired_bootstrap.json" \
+    --bootstrap "44=$output_dir/seed44_paired_bootstrap.json" \
+    --output "$output_dir/multiseed_summary.json"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_2_DOWNSTREAM_OK"
+  echo "summary=$output_dir/multiseed_summary.json"
+  echo "No GPU inference or API call was started by finalization."
+}
+
 case "$ACTION" in
   readiness)
     run_readiness pretrain
@@ -518,6 +795,23 @@ case "$ACTION" in
   prepare_primary_answer_caches)
     prepare_primary_answer_caches
     ;;
+  answer_smoke)
+    run_primary_answer_smoke
+    ;;
+  answer_start)
+    start_primary_answers
+    ;;
+  answer_seed42_worker|answer_seed43_worker|answer_seed44_worker)
+    seed="${ACTION#answer_seed}"
+    seed="${seed%_worker}"
+    run_ce_margin_answer "$seed" 3000 0
+    ;;
+  answer_status)
+    primary_answer_status
+    ;;
+  finalize_answers)
+    finalize_primary_answers
+    ;;
   status)
     show_status
     ;;
@@ -531,7 +825,7 @@ case "$ACTION" in
     ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, status, check_training, summarize_training, selection_smoke, selection_full_start, selection_full_worker, selection_status, prepare_primary_answer_caches, train_{ranking_only,ce_margin,ce_acquired}_seed{42,43,44}" >&2
+    echo "Allowed: readiness, status, check_training, summarize_training, selection_smoke, selection_full_start, selection_full_worker, selection_status, prepare_primary_answer_caches, answer_smoke, answer_start, answer_status, finalize_answers, train_{ranking_only,ce_margin,ce_acquired}_seed{42,43,44}" >&2
     exit 2
     ;;
 esac
