@@ -7,4 +7,4 @@ protocol, principal numbers, uncertainty, conclusion, and claim boundary.
 | Stage | Experiment | Status | Record |
 |---|---|---|---|
 | 9.1 | Closure teacher vs Coverage teacher | Closed: `CLOSURE_SUPERIOR` | [Stage9.1_Closure_vs_Coverage_Teacher_20260910.md](Stage9.1_Closure_vs_Coverage_Teacher_20260910.md) |
-
+| 9.2 | Acquired-evidence loss ablation | Training complete; diagnostics pending | [Stage9.2_Acquired_Evidence_Loss_20260911.md](Stage9.2_Acquired_Evidence_Loss_20260911.md) |
