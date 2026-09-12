@@ -158,6 +158,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-12 | 9.3 | Five-baseline complete answers | Passed; offline finalization authorized | All five methods completed 3,000 qids with no answer or cache-audit failures. BM25/Dense/Hybrid/Iterative-Hybrid/BGE Answer F1 is 0.6686/0.7046/0.7185/0.7114/0.7709. The fixed answer chain made exactly 13,839 fresh calls and reused 1,161 exact contexts, fully realizing the registered cross-method deduplication. |
 | 2026-09-12 | 9.3 | Final-protocol downstream comparison | Passed; Stage 9.3 closed | Compact is statistically tied with BGE-Reranker on Answer EM/F1 but significantly improves Supporting-Fact F1 by 0.1805, Joint F1 by 0.1537, full support coverage by 0.0470, and ClosureSuccess@10 by 0.0397. Recall exceeds all five baselines on all 40 registered metric--baseline comparisons; versus BGE it gains 0.0195 Answer F1, 0.2356 Supporting-Fact F1, 0.2038 Joint F1, 0.1377 full coverage, and 0.0847 ClosureSuccess@50. All reports contain the same 3,000 qids, all source-summary checks pass, and the Gold Oracle reaches 1.0 supporting-fact recall/EM. Decision: `FINAL_PROTOCOL_BASELINES_COMPLETE`. |
 | 2026-09-12 | 9.4 | Final-policy 2Wiki readiness | Passed; selection smoke authorized | The fixed 2Wiki transfer set contains 1,000 matching query/sample qids, 2,416 states, and 31,522 memory units. All v27 seeds, model assets, and required selectors are present; no output collision exists. v22 KSG reports may seed only exact-context caches, while legacy Hybrid/BGE/Gold reports lack the frozen generator metadata and are not reusable. No training, inference, or API call was made. |
+| 2026-09-12 | 9.4 | Five-method selection smoke | Passed; full multiseed selection authorized | Seed-42 Compact/Balanced/Recall and Hybrid/BGE completed the same 20 qids/50 states with identical ordered-qid and target hashes, zero skipped states, and no API calls. Recall has the strongest smoke Step@5/full-unit values (0.82/0.70), but all smoke metrics remain execution diagnostics only. |
 
 ## Current authorized action
 
@@ -165,7 +166,7 @@ Stages 9.1--9.3 are closed. Stage 9.2 supports a replicated targeted anti-
 reselection effect but not a broad end-to-end gain. Stage 9.3 establishes
 same-generator final-protocol superiority in evidence, joint, coverage, and
 closure metrics, with Recall also significantly improving answer quality over
-the strongest BGE-Reranker baseline. Stage 9.4 readiness also passed. The next
-authorized action is one five-method, 20-qid 2Wiki selection-only smoke for
-seed-42 Compact/Balanced/Recall, Hybrid, and BGE-Reranker. No answer API call
-is authorized at this gate.
+the strongest BGE-Reranker baseline. Stage 9.4 readiness and selection smoke
+also passed. The next authorized action is the complete 1,000-qid selection-
+only evaluation for all three operating points across seeds 42/43/44, plus
+Hybrid and BGE-Reranker. No answer API call is authorized at this gate.

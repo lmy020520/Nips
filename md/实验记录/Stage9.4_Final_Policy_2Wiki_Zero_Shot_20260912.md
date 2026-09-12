@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: readiness passed; five-method selection smoke authorized.
+- Status: five-method selection smoke passed; full multiseed selection authorized.
 - Primary model: v27 seed 42, trained only on HotpotQA.
 - Robustness models: v27 seeds 43 and 44, selection-only until reviewed.
 - Transfer dataset: fixed 1,000-qid 2Wiki question-local evaluation memory.
@@ -39,3 +39,21 @@ generator metadata and cannot seed answer caches.
 
 Run one 20-qid selection-only smoke for seed-42 Compact/Balanced/Recall,
 Hybrid, and BGE-Reranker. No answer API call is authorized at this gate.
+
+## Selection smoke
+
+All five methods completed the same 20 qids and 50 teacher states. Ordered-qid
+and teacher-target hashes match exactly, with no skipped states, failures, or
+API calls.
+
+| Method | Step@1 | Step@5 | Full doc | Full unit |
+|---|---:|---:|---:|---:|
+| KSG-EA-Compact | 0.40 | 0.74 | 0.70 | 0.55 |
+| KSG-EA-Balanced | 0.44 | 0.76 | 0.70 | 0.60 |
+| KSG-EA-Recall | 0.46 | 0.82 | 0.85 | 0.70 |
+| Hybrid-RAG | 0.24 | 0.60 | 0.35 | 0.30 |
+| BGE-Reranker-RAG | 0.28 | 0.76 | 0.70 | 0.65 |
+
+These values validate execution only and are not scientific estimates. The
+next gate is the complete 1,000-qid selection-only evaluation for all three
+operating points and all three v27 seeds, plus Hybrid and BGE-Reranker.

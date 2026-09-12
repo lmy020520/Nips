@@ -6,35 +6,34 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import statistics
 from pathlib import Path
 from typing import Any
 
 
-METHODS = {
-    "compact_seed42": {
+CHECKPOINTS = {
+    42: "outputs/ranker/deberta_v3_large_v27_counterfactual_dual/best_model.pt",
+    43: "outputs/ranker/deberta_v3_large_v27_counterfactual_dual_seed43/best_model.pt",
+    44: "outputs/ranker/deberta_v3_large_v27_counterfactual_dual_seed44/best_model.pt",
+}
+OPERATING_POINTS = {
+    "compact": {
         "reported_name": "KSG-EA-Compact",
-        "selector": "hybrid_policy",
-        "checkpoint": "outputs/ranker/deberta_v3_large_v27_counterfactual_dual/best_model.pt",
         "candidate_top_k": 10,
         "front_pool_k": 30,
-        "state_update_top_k": 1,
     },
-    "balanced_knee_seed42": {
+    "balanced_knee": {
         "reported_name": "KSG-EA-Balanced",
-        "selector": "hybrid_policy",
-        "checkpoint": "outputs/ranker/deberta_v3_large_v27_counterfactual_dual/best_model.pt",
         "candidate_top_k": 15,
         "front_pool_k": 30,
-        "state_update_top_k": 1,
     },
-    "recall_seed42": {
+    "recall": {
         "reported_name": "KSG-EA-Recall",
-        "selector": "hybrid_policy",
-        "checkpoint": "outputs/ranker/deberta_v3_large_v27_counterfactual_dual/best_model.pt",
         "candidate_top_k": 50,
         "front_pool_k": 50,
-        "state_update_top_k": 1,
     },
+}
+METHODS = {
     "hybrid": {
         "reported_name": "Hybrid-RAG",
         "selector": "hybrid",
@@ -52,6 +51,30 @@ METHODS = {
         "state_update_top_k": 5,
     },
 }
+for seed, checkpoint in CHECKPOINTS.items():
+    for operating_point, spec in OPERATING_POINTS.items():
+        METHODS[f"{operating_point}_seed{seed}"] = {
+            **spec,
+            "selector": "hybrid_policy",
+            "checkpoint": checkpoint,
+            "state_update_top_k": 1,
+            "seed": seed,
+            "operating_point": operating_point,
+        }
+
+SMOKE_METHODS = {
+    "compact_seed42",
+    "balanced_knee_seed42",
+    "recall_seed42",
+    "hybrid",
+    "bge_reranker",
+}
+SELECTION_METRICS = (
+    "step_acc@1",
+    "step_acc@5",
+    "full_gold_doc_coverage",
+    "full_gold_unit_coverage",
+)
 
 
 def read_report(path: Path) -> tuple[dict[str, Any], list[dict[str, Any]]]:
@@ -87,17 +110,18 @@ def main() -> None:
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
 
+    expected_methods = SMOKE_METHODS if args.smoke else set(METHODS)
     paths = {}
     for item in args.report:
         if "=" not in item:
             raise ValueError(f"--report must be name=path: {item}")
         name, raw_path = item.split("=", 1)
-        if name not in METHODS or name in paths:
+        if name not in expected_methods or name in paths:
             raise ValueError(f"unknown or duplicate method: {name}")
         paths[name] = Path(raw_path)
 
     failures = []
-    missing = sorted(set(METHODS) - set(paths))
+    missing = sorted(expected_methods - set(paths))
     if missing:
         failures.append(f"missing method reports: {missing}")
     metrics: dict[str, Any] = {}
@@ -105,7 +129,8 @@ def main() -> None:
     target_hashes = {}
     data_root = "data/2wiki_multihopqa_eval_1000_cand50"
 
-    for name, spec in METHODS.items():
+    for name in sorted(expected_methods):
+        spec = METHODS[name]
         path = paths.get(name)
         if path is None:
             continue
@@ -181,6 +206,15 @@ def main() -> None:
             "step_acc@5": summary.get("step_acc@5"),
             "full_gold_doc_coverage": summary.get("full_gold_doc_coverage"),
             "full_gold_unit_coverage": summary.get("full_gold_unit_coverage"),
+            "selection_ms_per_qid": (summary.get("runtime_profile") or {}).get(
+                "selection_avg_ms_per_qid"
+            ),
+            "selection_throughput_qids_per_second": (
+                summary.get("runtime_profile") or {}
+            ).get("selection_throughput_qids_per_second"),
+            "peak_gpu_allocated_mb": (summary.get("runtime_profile") or {}).get(
+                "peak_gpu_allocated_mb"
+            ),
         }
 
     if len(set(qid_hashes.values())) > 1:
@@ -189,6 +223,24 @@ def main() -> None:
         failures.append("ordered teacher-target hashes differ across methods")
 
     is_smoke = args.smoke
+    multiseed = {}
+    if not is_smoke and not failures:
+        for operating_point in OPERATING_POINTS:
+            multiseed[operating_point] = {}
+            for metric in SELECTION_METRICS:
+                values = [
+                    float(metrics[f"{operating_point}_seed{seed}"][metric])
+                    for seed in CHECKPOINTS
+                ]
+                multiseed[operating_point][metric] = {
+                    "values_by_seed": {
+                        str(seed): value for seed, value in zip(CHECKPOINTS, values)
+                    },
+                    "mean": round(statistics.mean(values), 6),
+                    "sample_std": round(statistics.stdev(values), 6),
+                    "range": round(max(values) - min(values), 6),
+                }
+
     result = {
         "status": "SMOKE_OK" if is_smoke and not failures else (
             "OK" if not failures else "FAIL"
@@ -203,6 +255,7 @@ def main() -> None:
         "ordered_qids_sha256": qid_hashes,
         "ordered_teacher_targets_sha256": target_hashes,
         "method_metrics": metrics,
+        "ksg_multiseed_robustness": multiseed,
         "interpretation": (
             "Smoke metrics validate execution only and are not scientific results."
             if is_smoke
