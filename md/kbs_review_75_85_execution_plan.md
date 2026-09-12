@@ -162,6 +162,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-13 | 9.4 | Complete multiseed 1,000-qid selection | Passed; exact-context cache audit authorized | All 11 reports share identical ordered-qid and target hashes and contain 1,000 qids/2,416 states with no skips or API calls. Compact/Balanced/Recall mean Step@5 is 0.7689/0.8005/0.8462 and mean full-unit coverage is 0.6103/0.6623/0.7500 across seeds 42/43/44. Seed-42 Step@5 exceeds BGE by 0.1126/0.1457/0.1970 at the three operating points. These are selection-only results. |
 | 2026-09-13 | 9.4 | Exact-context answer-cache audit | Passed; bounded Compact answer smoke authorized | Two protocol-complete v22 reports provide 1,919 eligible source contexts, but exact reuse covers only 48 of 5,000 final target files. Cross-method deduplication reduces the remaining requirement from 4,952 target files to 4,431 unique fresh contexts by eliminating 521 duplicates. There are no protocol differences, answer disagreements, invalid caches, failures, or API calls. |
 | 2026-09-13 | 9.4 | Seed-42 Compact answer smoke | Passed; complete five-method answer chain authorized | The frozen 20-qid run completed without answer, context, protocol, or cache failures. It exercised one exact historical reuse and 19 fresh answers. Smoke EM/F1 0.6500/0.7207 are execution diagnostics only. The full chain must run sequentially with cache propagation before each method. |
+| 2026-09-13 | 9.4 | Complete five-method answers | Passed; offline finalization authorized | Compact/Balanced/Recall/Hybrid/BGE completed 1,000 qids with Answer F1 0.6711/0.6999/0.7330/0.5475/0.6912 and no answer, context, protocol, or cache failures. The chain made exactly 4,431 fresh calls and 569 exact-context reuses, accounting for all 5,000 method--qid targets. |
 
 ## Current authorized action
 
@@ -173,6 +174,7 @@ the strongest BGE-Reranker baseline. Stage 9.4 complete multiseed selection
 also passed and shows stable Compact--Balanced--Recall ordering. Its strict
 exact-context cache audit leaves 4,431 unique fresh contexts across five final
 answer methods. The bounded seed-42 Compact answer smoke also passed. The next
-authorized action is the sequential five-method 1,000-qid answer chain with
-exact-context propagation before every method. Seeds 43/44 remain selection-
-only robustness runs. Downstream claims remain locked pending finalization.
+authorized action is offline Stage 9.4 finalization: standard answer/support/
+joint/coverage/closure metrics plus 10,000-sample paired intervals for each
+seed-42 operating point against Hybrid and BGE-Reranker. Seeds 43/44 remain
+selection-only robustness runs. This action must make no API calls.

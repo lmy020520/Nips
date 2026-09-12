@@ -819,6 +819,125 @@ PY
   echo "Status check completed; no GPU inference or API call was started."
 }
 
+finalize_answers() {
+  local output_dir="$OUTPUT_ROOT/downstream1000"
+  local standard_summary="$output_dir/standard_metrics.json"
+  local standard_records="$output_dir/standard_metric_records.jsonl"
+  local selection_summary="$OUTPUT_ROOT/selection1000/summary.json"
+  local cache_summary="$OUTPUT_ROOT/cache_propagation/after_all.json"
+  local gold_report="outputs/rag/2wiki_generalization_1000/gold_oracle.json"
+  local method path audit report
+
+  for path in "$selection_summary" "$cache_summary" "$gold_report"; do
+    if [[ ! -s "$path" ]]; then
+      echo "[ERROR] missing finalization prerequisite: $path" >&2
+      exit 1
+    fi
+  done
+  for method in \
+    compact_seed42 balanced_knee_seed42 recall_seed42 hybrid bge_reranker; do
+    audit="$OUTPUT_ROOT/${method}_answer_full1000.json"
+    report="outputs/rag/kbs_stage9_2wiki/${method}_full1000.json"
+    for path in "$audit" "$report"; do
+      if [[ ! -s "$path" ]]; then
+        echo "[ERROR] missing $method finalization prerequisite: $path" >&2
+        exit 1
+      fi
+    done
+    python3 - "$audit" "$method" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+report = json.loads(path.read_text(encoding="utf-8"))
+if (
+    report.get("status") != "OK"
+    or report.get("method") != sys.argv[2]
+    or report.get("qids") != 1000
+    or report.get("failures")
+):
+    raise SystemExit(f"answer audit is not a clean matching OK: {path}")
+PY
+  done
+
+  if [[ -s "$output_dir/final_summary.json" ]] && \
+    python3 - "$output_dir/final_summary.json" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+report = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+raise SystemExit(0 if report.get("status") == "OK" and not report.get("failures") else 1)
+PY
+  then
+    echo "FINISHED_OK"
+    echo "status=STAGE9_4_DOWNSTREAM_OK"
+    echo "summary=$output_dir/final_summary.json"
+    echo "Existing clean summary was retained; no GPU inference or API call was started."
+    return
+  fi
+  mkdir -p "$output_dir"
+
+  python3 scripts/evaluate_kbs_standard_metrics.py \
+    --report "KSG-EA-Compact=outputs/rag/kbs_stage9_2wiki/compact_seed42_full1000.json" \
+    --report "KSG-EA-Balanced=outputs/rag/kbs_stage9_2wiki/balanced_knee_seed42_full1000.json" \
+    --report "KSG-EA-Recall=outputs/rag/kbs_stage9_2wiki/recall_seed42_full1000.json" \
+    --report "Hybrid-RAG=outputs/rag/kbs_stage9_2wiki/hybrid_full1000.json" \
+    --report "BGE-Reranker-RAG=outputs/rag/kbs_stage9_2wiki/bge_reranker_full1000.json" \
+    --report "Gold-Oracle=$gold_report" \
+    --gold-oracle-name Gold-Oracle \
+    --expected-qids 1000 \
+    --closure-unit-budgets 10,15,50 \
+    --output "$standard_summary" \
+    --records-output "$standard_records"
+
+  local metrics_common="answer_em,answer_f1,supporting_fact_f1,supporting_fact_em,joint_f1,joint_em,full_support_coverage"
+  local -a baseline_args=(--baseline Hybrid-RAG --baseline BGE-Reranker-RAG)
+  python3 scripts/bootstrap_kbs_stage4_metrics.py \
+    --records "$standard_records" \
+    --primary KSG-EA-Compact \
+    "${baseline_args[@]}" \
+    --metrics "$metrics_common,closure_success_at_10" \
+    --n-bootstrap 10000 \
+    --seed 20260918 \
+    --output "$output_dir/compact_paired_bootstrap.json"
+  python3 scripts/bootstrap_kbs_stage4_metrics.py \
+    --records "$standard_records" \
+    --primary KSG-EA-Balanced \
+    "${baseline_args[@]}" \
+    --metrics "$metrics_common,closure_success_at_15" \
+    --n-bootstrap 10000 \
+    --seed 20260919 \
+    --output "$output_dir/balanced_paired_bootstrap.json"
+  python3 scripts/bootstrap_kbs_stage4_metrics.py \
+    --records "$standard_records" \
+    --primary KSG-EA-Recall \
+    "${baseline_args[@]}" \
+    --metrics "$metrics_common,closure_success_at_50" \
+    --n-bootstrap 10000 \
+    --seed 20260920 \
+    --output "$output_dir/recall_paired_bootstrap.json"
+
+  python3 scripts/summarize_kbs_stage9_2wiki.py \
+    --standard-summary "$standard_summary" \
+    --selection-summary "$selection_summary" \
+    --compact-bootstrap "$output_dir/compact_paired_bootstrap.json" \
+    --balanced-bootstrap "$output_dir/balanced_paired_bootstrap.json" \
+    --recall-bootstrap "$output_dir/recall_paired_bootstrap.json" \
+    --cache-summary "$cache_summary" \
+    --answer-audit "compact_seed42=$OUTPUT_ROOT/compact_seed42_answer_full1000.json" \
+    --answer-audit "balanced_knee_seed42=$OUTPUT_ROOT/balanced_knee_seed42_answer_full1000.json" \
+    --answer-audit "recall_seed42=$OUTPUT_ROOT/recall_seed42_answer_full1000.json" \
+    --answer-audit "hybrid=$OUTPUT_ROOT/hybrid_answer_full1000.json" \
+    --answer-audit "bge_reranker=$OUTPUT_ROOT/bge_reranker_answer_full1000.json" \
+    --output "$output_dir/final_summary.json"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_4_DOWNSTREAM_OK"
+  echo "summary=$output_dir/final_summary.json"
+  echo "No training, GPU inference, or API call was started by finalization."
+}
+
 case "$ACTION" in
   readiness)
     python3 scripts/check_kbs_stage9_2wiki_readiness.py \
@@ -858,9 +977,12 @@ case "$ACTION" in
   answer_status)
     show_answer_status
     ;;
+  finalize_answers)
+    finalize_answers
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, prepare_answer_caches, answer_smoke, answer_full_start, answer_full_chain, answer_status" >&2
+    echo "Allowed: readiness, selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, prepare_answer_caches, answer_smoke, answer_full_start, answer_full_chain, answer_status, finalize_answers" >&2
     exit 2
     ;;
 esac

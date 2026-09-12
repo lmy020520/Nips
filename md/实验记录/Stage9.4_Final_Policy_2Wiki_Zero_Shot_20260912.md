@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: bounded answer smoke passed; complete five-method answer chain authorized.
+- Status: complete five-method answers passed; offline finalization authorized.
 - Primary model: v27 seed 42, trained only on HotpotQA.
 - Robustness models: v27 seeds 43 and 44, selection-only until reviewed.
 - Transfer dataset: fixed 1,000-qid 2Wiki question-local evaluation memory.
@@ -109,3 +109,21 @@ The complete sequential five-method answer chain is now authorized. It must
 re-run exact-context propagation before each method and preserve the fixed
 method order; final downstream claims remain locked until all reports and
 paired confidence intervals pass offline finalization.
+
+## Complete answer reports
+
+All five final methods completed 1,000 qids with no answer, protocol, context,
+or cache failures. The chain used exactly 4,431 fresh answers and 569 exact
+context reuses, matching all 5,000 method--qid targets.
+
+| Method | Answer EM | Answer F1 | Full unit | Avg. API tokens | API latency (s/qid) |
+|---|---:|---:|---:|---:|---:|
+| KSG-EA-Compact | 0.609 | 0.6711 | 0.619 | 384.05 | 0.680 |
+| KSG-EA-Balanced | 0.631 | 0.6999 | 0.676 | 385.29 | 0.683 |
+| KSG-EA-Recall | 0.658 | 0.7330 | 0.770 | 388.79 | 0.666 |
+| Hybrid-RAG | 0.497 | 0.5475 | 0.321 | 330.31 | 0.649 |
+| BGE-Reranker-RAG | 0.619 | 0.6912 | 0.565 | 384.25 | 0.669 |
+
+These point estimates are not yet the final paper table. Offline standard
+Supporting-Fact, Joint, ClosureSuccess, and paired-bootstrap reports must pass
+before Stage 9.4 is closed.
