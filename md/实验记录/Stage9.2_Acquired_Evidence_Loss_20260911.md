@@ -2,8 +2,7 @@
 
 ## Current status
 
-- Status: all matched training runs and the three-seed 3,000-qid no-answer
-  selection evaluation completed; primary exact-context cache audit authorized.
+- Status: completed and closed with `TARGETED_ANTI_RESELECTION_ONLY`.
 - Post-training readiness date: 2026-09-11.
 - API calls during readiness: 0.
 - GPU inference runs during readiness: 0.
@@ -112,3 +111,33 @@ Its EM and F1 values are execution diagnostics and are not scientific results.
 
 Ranking-only and CE+Acquired remain factorial selection diagnostics; they do
 not require answer generation unless a later registered analysis needs them.
+
+## Downstream results and final decision
+
+The three 3,000-qid CE+Margin answer reports completed under the same frozen
+generator protocol as Full. Per-qid uncertainty uses 10,000 paired bootstrap
+samples independently for each training seed.
+
+| Metric | Full mean | CE+Margin mean | Full minus CE+Margin |
+|---|---:|---:|---:|
+| Answer EM | 0.6214 | 0.6226 | -0.0011 |
+| Answer F1 | 0.7669 | 0.7658 | +0.0011 |
+| Supporting-Fact F1 | 0.6578 | 0.6526 | +0.0052 |
+| Supporting-Fact EM | 0.3650 | 0.3630 | +0.0020 |
+| Joint F1 | 0.5292 | 0.5247 | +0.0045 |
+| Joint EM | 0.2524 | 0.2508 | +0.0017 |
+| Full support coverage | 0.7808 | 0.7806 | +0.0002 |
+| ClosureSuccess@10 | 0.5140 | 0.5152 | -0.0012 |
+
+Supporting-Fact F1 favors Full for every seed, with paired intervals excluding
+zero for seeds 42 and 43 but narrowly crossing zero for seed 44. Joint F1 also
+favors Full for every seed, but only seed 42 excludes zero. Answer F1 is mixed
+and all intervals cross zero. Full support coverage and ClosureSuccess@10 are
+effectively tied.
+
+The final registered decision is `TARGETED_ANTI_RESELECTION_ONLY`. The acquired-
+evidence loss reproducibly reduces the Top-1 already-acquired item written into
+the next state and yields small evidence/joint improvements, but it does not
+establish a broad answer, coverage, or closure improvement. It should be
+reported as a targeted auxiliary control rather than a headline performance
+contribution.

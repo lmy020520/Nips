@@ -149,11 +149,13 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-12 | 9.2 | Three-seed 3,000-qid selection | Passed; primary cache audit authorized | All methods and seeds share identical ordered-qid and step-target hashes. In the registered Full-minus-CE+Margin contrast, Full reduces Top-1 acquired-evidence reselection by 0.0179 on average, with every seed's paired 95% CI strictly below zero. Step@5, coverage, and MRR are tied or mixed; CE+Acquired alone has the lowest reselection rate. This supports a targeted anti-reselection effect, not a broad retrieval-quality gain. No API calls were made. |
 | 2026-09-12 | 9.2 | Primary exact-context cache audit | Passed; answer smoke authorized | Full answers can be reused for exactly matching ordered CE+Margin contexts on 2,016/1,947/1,966 qids for seeds 42/43/44. This leaves 984/1,053/1,034 fresh answers, or 3,071 total API calls instead of 9,000. Protocol, qid, question, answer target, and ordered-context checks passed with no API calls or failures. |
 | 2026-09-12 | 9.2 | CE+Margin answer smoke | Passed; full answers authorized | Seed 42 completed the frozen 20-qid answer smoke with no errors or invalid cache records. The audit exercised both paths: 11 exact Full-context answers were reused and 9 CE+Margin-context answers were freshly generated. Smoke EM/F1 are execution diagnostics only. |
+| 2026-09-12 | 9.2 | Matched downstream acquired-loss comparison | Passed; Stage 9.2 closed with targeted-only decision | Full reduces Top-1 acquired-evidence reselection by 0.0179 with every seed's paired CI below zero. Full also improves Supporting-Fact F1 by 0.0052 on average for every seed, although only seeds 42/43 exclude zero, and improves Joint F1 by 0.0045 on average with only seed 42 excluding zero. Answer F1, full coverage, and ClosureSuccess are mixed or tied. The registered decision is `TARGETED_ANTI_RESELECTION_ONLY`; no broad downstream gain is claimed. |
 
 ## Current authorized action
 
-Stage 9.1 is closed. Stage 9.2 training, selection, cache audit, and the
-CE+Margin answer smoke are complete. The next authorized action is the three-
-seed 3,000-qid CE+Margin answer evaluation under the frozen protocol, followed
-by offline standard metrics and paired bootstrap finalization. Ranking-only
-and CE+Acquired remain selection diagnostics and require no answer calls.
+Stages 9.1 and 9.2 are closed. Stage 9.2 supports a replicated targeted anti-
+reselection effect but not a broad end-to-end gain. The next authorized action
+is the Stage 9.3 no-inference, no-API readiness audit for BM25-RAG, Dense-RAG,
+Hybrid-RAG, Iterative-Hybrid-RAG, and BGE-Reranker-RAG under the final answer
+protocol. Do not start baseline selection or answer generation until readiness
+is reviewed.
