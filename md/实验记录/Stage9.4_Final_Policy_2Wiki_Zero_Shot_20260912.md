@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: readiness implementation prepared; no Stage 9.4 run has started.
+- Status: readiness passed; five-method selection smoke authorized.
 - Primary model: v27 seed 42, trained only on HotpotQA.
 - Robustness models: v27 seeds 43 and 44, selection-only until reviewed.
 - Transfer dataset: fixed 1,000-qid 2Wiki question-local evaluation memory.
@@ -26,7 +26,16 @@ exact-context cache sources after a complete protocol audit.
 
 ## Next gate
 
-Run readiness only. If the data, three checkpoints, model assets, selector
-implementations, and proposed output paths pass, authorize one 20-qid
-selection-only smoke for seed-42 Compact/Balanced/Recall and the two strong
-baselines. No answer API call is authorized at readiness.
+The readiness audit passed with no failures, training, inference, or API calls.
+The fixed 2Wiki set contains 1,000 qids, 2,416 states, and 31,522 memory units;
+sample and query qid sets match exactly. All three v27 checkpoints and all
+required model and selector implementations are present.
+
+The historical v22 Compact and Recall reports match the frozen answer protocol
+and may be considered only for exact ordered-context cache reuse. They remain
+ineligible as final v27 results because their checkpoint and state-write
+protocol differ. Legacy Hybrid, BGE, and Gold reports also lack the frozen
+generator metadata and cannot seed answer caches.
+
+Run one 20-qid selection-only smoke for seed-42 Compact/Balanced/Recall,
+Hybrid, and BGE-Reranker. No answer API call is authorized at this gate.
