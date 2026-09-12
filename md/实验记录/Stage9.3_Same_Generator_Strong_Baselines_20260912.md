@@ -58,11 +58,29 @@ was skipped, no answer was generated, and no API call was made.
 These small-sample values are execution diagnostics only. They are not used
 for method selection, scientific claims, or paper tables.
 
+## Full selection results
+
+All five methods completed the same 3,000 qids and 7,296 teacher states with
+identical ordered-qid and teacher-target hashes, zero skipped states, and no
+answer/API calls.
+
+| Method | Step@1 | Step@5 | Full doc | Full unit | Selection ms/qid | QID/s | Peak GPU MB |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| BM25-RAG | 0.3261 | 0.6473 | 0.6230 | 0.3697 | 9.00 | 111.126 | 0.00 |
+| Dense-RAG | 0.3529 | 0.7560 | 0.7523 | 0.5700 | 484.05 | 2.066 | 2018.61 |
+| Hybrid-RAG | **0.3912** | **0.7767** | 0.7877 | 0.5810 | 492.05 | 2.032 | 2018.61 |
+| Iterative-Hybrid-RAG | 0.3458 | 0.7758 | 0.7807 | 0.5810 | 484.85 | 2.063 | 2018.61 |
+| BGE-Reranker-RAG | 0.3355 | 0.7166 | **0.9217** | **0.7353** | 1011.14 | 0.989 | 2500.20 |
+
+Hybrid has the strongest teacher-alignment values, whereas BGE-Reranker has
+the strongest complete evidence coverage. This tradeoff must be resolved with
+the frozen downstream answer, support, joint, and closure metrics; selection
+metrics alone do not establish the final method ordering.
+
 ## Authorized next gate
 
-Run five 3,000-qid selection-only reports in parallel with local runtime
-profiling. After all workers finish, audit the complete reports and their
-ordered qid and teacher-target hashes.
+Audit exact-context reuse from existing reports that contain the complete
+frozen V4-Flash answer protocol. Report both the naive fresh target count and
+the unique count after cross-baseline context deduplication.
 
-Do not generate answers or prepare caches until the full selection summary has
-been reviewed.
+Do not generate answers until the cache-readiness report has been reviewed.

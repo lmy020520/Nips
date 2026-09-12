@@ -152,11 +152,12 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-12 | 9.2 | Matched downstream acquired-loss comparison | Passed; Stage 9.2 closed with targeted-only decision | Full reduces Top-1 acquired-evidence reselection by 0.0179 with every seed's paired CI below zero. Full also improves Supporting-Fact F1 by 0.0052 on average for every seed, although only seeds 42/43 exclude zero, and improves Joint F1 by 0.0045 on average with only seed 42 excluding zero. Answer F1, full coverage, and ClosureSuccess are mixed or tied. The registered decision is `TARGETED_ANTI_RESELECTION_ONLY`; no broad downstream gain is claimed. |
 | 2026-09-12 | 9.3 | Same-generator strong-baseline readiness | Passed; selection smoke authorized | The 3,000-qid/7,296-state/124,523-unit HotpotQA evaluation data and all five selector implementations are present. The answer protocol is frozen to DeepSeek V4-Flash, thinking disabled, JSON prompt v1, and temperature 0. Historical reports omit required generator-protocol metadata and are descriptive only; none qualifies for final-protocol reuse. No GPU inference or API call was made. |
 | 2026-09-12 | 9.3 | Five-baseline selection smoke | Passed; full selection authorized | All five methods completed the same 20 qids and 50 teacher states with identical ordered-qid and teacher-target hashes, zero skipped states, and no answer/API calls. BM25/Dense/Hybrid/Iterative-Hybrid/BGE Step@5 values are 0.58/0.70/0.76/0.76/0.64; these are execution diagnostics only. |
+| 2026-09-12 | 9.3 | Five-baseline 3,000-qid selection | Passed; exact-context cache audit authorized | All methods completed the same 3,000 qids/7,296 states with identical ordered qids and targets, zero skipped states, and no API calls. Hybrid has the highest Step@1/5 (0.3912/0.7767), while BGE-Reranker has the highest full-unit coverage (0.7353). Selection latency is 9.00/484.05/492.05/484.85/1,011.14 ms/qid for BM25/Dense/Hybrid/Iterative-Hybrid/BGE. Downstream ordering remains untested. |
 
 ## Current authorized action
 
 Stages 9.1 and 9.2 are closed. Stage 9.2 supports a replicated targeted anti-
-reselection effect but not a broad end-to-end gain. Stage 9.3 readiness and
-selection smoke passed. The next authorized action is five parallel 3,000-qid
-selection-only runs with local runtime profiling. Do not prepare answer caches
-or call the answer API until the full selection reports pass audit.
+reselection effect but not a broad end-to-end gain. Stage 9.3 readiness,
+selection smoke, and five complete selection reports passed. The next
+authorized action is an offline exact-context answer-cache audit. Do not call
+the answer API until cache reuse and unique fresh-call counts are reviewed.

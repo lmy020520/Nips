@@ -201,9 +201,13 @@ def main() -> None:
             else "Full-run selection metrics precede the answer-cache gate."
         ),
         "next_gate": (
-            "Run five 3,000-qid selection-only reports; do not call the answer API."
-            if args.smoke and not failures
-            else "Resolve failures before proceeding."
+            "Resolve failures before proceeding."
+            if failures
+            else (
+                "Run five 3,000-qid selection-only reports; do not call the answer API."
+                if args.smoke
+                else "Prepare and review exact-context answer caches; do not call the API."
+            )
         ),
         "failures": failures,
     }
