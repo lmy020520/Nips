@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: 20-qid selection-only smoke passed; full selection authorized.
+- Status: all five 3,000-qid answer reports passed; offline finalization authorized.
 - Readiness date: 2026-09-12.
 - API calls during readiness: 0.
 - GPU inference runs during readiness: 0.
@@ -110,12 +110,29 @@ fresh calls, with zero empty/error answers and zero invalid cache entries.
 Smoke EM/F1 are 0.5500/0.6429, average API tokens are 367.05, and average API
 latency is 0.739 seconds. These are execution diagnostics only.
 
+## Complete answer reports
+
+All five methods completed the frozen 3,000-qid answer protocol with no empty
+answers, answer errors, context mismatches, or invalid cache records.
+
+| Method | Answer EM | Answer F1 | Avg API tokens | Avg API latency (s) | Exact reuse | Fresh calls |
+|---|---:|---:|---:|---:|---:|---:|
+| BM25-RAG | 0.5373 | 0.6686 | 357.30 | 0.788 | 3 | 2,997 |
+| Dense-RAG | 0.5763 | 0.7046 | 363.61 | 0.782 | 15 | 2,985 |
+| Hybrid-RAG | 0.5897 | 0.7185 | 362.84 | 0.761 | 66 | 2,934 |
+| Iterative-Hybrid-RAG | 0.5813 | 0.7114 | 359.22 | 0.718 | 1,071 | 1,929 |
+| BGE-Reranker-RAG | **0.6290** | **0.7709** | 421.68 | 0.731 | 6 | 2,994 |
+
+The chain made exactly 13,839 fresh API calls, matching the pre-run
+cross-baseline deduplication estimate. The remaining 1,161 target reports used
+exactly matched contexts: 111 were available before the chain and 1,050 were
+propagated across completed baselines. The final cache audit covers all 15,000
+method--qid targets. These answer-only point estimates do not replace the
+registered supporting-fact, joint, closure, and paired-bootstrap analysis.
+
 ## Authorized next gate
 
-Run the five complete answer reports in fixed registry order. Before each
-method, propagate exact-context answers from already completed methods into
-the remaining caches. This realizes cross-method deduplication without
-selecting sources by correctness.
-
-After all five reports pass their individual audits, compute standard metrics
-and paired confidence intervals against Compact and Recall.
+Compute standard Supporting-Fact, Joint, Full Coverage, and ClosureSuccess
+metrics from the completed raw reports, then run 10,000-sample paired qid
+bootstrap comparisons against KSG-EA-Compact and KSG-EA-Recall. This is an
+offline-only action and must not start training, GPU inference, or API calls.

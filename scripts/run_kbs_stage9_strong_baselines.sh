@@ -675,6 +675,131 @@ PY
   echo "Status check completed; no GPU inference or API call was started."
 }
 
+finalize_answers() {
+  local output_dir="$OUTPUT_ROOT/downstream3000"
+  local standard_summary="$output_dir/standard_metrics.json"
+  local standard_records="$output_dir/standard_metric_records.jsonl"
+  local selection_summary="$OUTPUT_ROOT/selection3000/summary.json"
+  local cache_summary="$OUTPUT_ROOT/cache_propagation/after_all.json"
+  local compact_report="outputs/rag/kbs_v27_final_hotpot/full_compact.json"
+  local recall_report="outputs/rag/kbs_v27_stage5_multiseed/seed42/full_recall.json"
+  local gold_report="outputs/rag/full3000_gold_oracle.json"
+  local method path audit report
+
+  for path in \
+    "$selection_summary" \
+    "$cache_summary" \
+    "$compact_report" \
+    "$recall_report" \
+    "$gold_report"; do
+    if [[ ! -s "$path" ]]; then
+      echo "[ERROR] missing finalization prerequisite: $path" >&2
+      exit 1
+    fi
+  done
+  for method in bm25 dense hybrid iterative_hybrid bge_reranker; do
+    audit="$OUTPUT_ROOT/${method}_answer_full3000.json"
+    report="outputs/rag/kbs_stage9_strong_baselines/${method}_full3000.json"
+    for path in "$audit" "$report"; do
+      if [[ ! -s "$path" ]]; then
+        echo "[ERROR] missing $method finalization prerequisite: $path" >&2
+        exit 1
+      fi
+    done
+    python3 - "$audit" "$method" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+method = sys.argv[2]
+report = json.loads(path.read_text(encoding="utf-8"))
+if (
+    report.get("status") != "OK"
+    or report.get("method") != method
+    or report.get("qids") != 3000
+    or report.get("failures")
+):
+    raise SystemExit(f"answer audit is not a clean matching OK: {path}")
+PY
+  done
+
+  if [[ -s "$output_dir/final_summary.json" ]] && \
+    python3 - "$output_dir/final_summary.json" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+report = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+raise SystemExit(0 if report.get("status") == "OK" and not report.get("failures") else 1)
+PY
+  then
+    echo "FINISHED_OK"
+    echo "status=STAGE9_3_DOWNSTREAM_OK"
+    echo "summary=$output_dir/final_summary.json"
+    echo "Existing clean summary was retained; no GPU inference or API call was started."
+    return
+  fi
+  mkdir -p "$output_dir"
+
+  python3 scripts/evaluate_kbs_standard_metrics.py \
+    --report "KSG-EA-Compact=$compact_report" \
+    --report "KSG-EA-Recall=$recall_report" \
+    --report "BM25-RAG=outputs/rag/kbs_stage9_strong_baselines/bm25_full3000.json" \
+    --report "Dense-RAG=outputs/rag/kbs_stage9_strong_baselines/dense_full3000.json" \
+    --report "Hybrid-RAG=outputs/rag/kbs_stage9_strong_baselines/hybrid_full3000.json" \
+    --report "Iterative-Hybrid-RAG=outputs/rag/kbs_stage9_strong_baselines/iterative_hybrid_full3000.json" \
+    --report "BGE-Reranker-RAG=outputs/rag/kbs_stage9_strong_baselines/bge_reranker_full3000.json" \
+    --report "Gold-Oracle=$gold_report" \
+    --gold-oracle-name Gold-Oracle \
+    --expected-qids 3000 \
+    --closure-unit-budgets 10,50 \
+    --output "$standard_summary" \
+    --records-output "$standard_records"
+
+  local metrics_common="answer_em,answer_f1,supporting_fact_f1,supporting_fact_em,joint_f1,joint_em,full_support_coverage"
+  local -a baseline_args=(
+    --baseline BM25-RAG
+    --baseline Dense-RAG
+    --baseline Hybrid-RAG
+    --baseline Iterative-Hybrid-RAG
+    --baseline BGE-Reranker-RAG
+  )
+  python3 scripts/bootstrap_kbs_stage4_metrics.py \
+    --records "$standard_records" \
+    --primary KSG-EA-Compact \
+    "${baseline_args[@]}" \
+    --metrics "$metrics_common,closure_success_at_10" \
+    --n-bootstrap 10000 \
+    --seed 20260913 \
+    --output "$output_dir/compact_paired_bootstrap.json"
+  python3 scripts/bootstrap_kbs_stage4_metrics.py \
+    --records "$standard_records" \
+    --primary KSG-EA-Recall \
+    "${baseline_args[@]}" \
+    --metrics "$metrics_common,closure_success_at_50" \
+    --n-bootstrap 10000 \
+    --seed 20260914 \
+    --output "$output_dir/recall_paired_bootstrap.json"
+
+  python3 scripts/summarize_kbs_stage9_strong_baselines.py \
+    --standard-summary "$standard_summary" \
+    --selection-summary "$selection_summary" \
+    --compact-bootstrap "$output_dir/compact_paired_bootstrap.json" \
+    --recall-bootstrap "$output_dir/recall_paired_bootstrap.json" \
+    --cache-summary "$cache_summary" \
+    --answer-audit "bm25=$OUTPUT_ROOT/bm25_answer_full3000.json" \
+    --answer-audit "dense=$OUTPUT_ROOT/dense_answer_full3000.json" \
+    --answer-audit "hybrid=$OUTPUT_ROOT/hybrid_answer_full3000.json" \
+    --answer-audit "iterative_hybrid=$OUTPUT_ROOT/iterative_hybrid_answer_full3000.json" \
+    --answer-audit "bge_reranker=$OUTPUT_ROOT/bge_reranker_answer_full3000.json" \
+    --output "$output_dir/final_summary.json"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_3_DOWNSTREAM_OK"
+  echo "summary=$output_dir/final_summary.json"
+  echo "No training, GPU inference, or API call was started by finalization."
+}
+
 case "$ACTION" in
   readiness)
     python3 scripts/check_kbs_stage9_strong_baselines_readiness.py \
@@ -714,9 +839,12 @@ case "$ACTION" in
   answer_status)
     show_answer_status
     ;;
+  finalize_answers)
+    finalize_answers
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, prepare_answer_caches, answer_smoke, answer_full_start, answer_full_chain, answer_status" >&2
+    echo "Allowed: readiness, selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, prepare_answer_caches, answer_smoke, answer_full_start, answer_full_chain, answer_status, finalize_answers" >&2
     exit 2
     ;;
 esac

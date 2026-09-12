@@ -155,12 +155,12 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-12 | 9.3 | Five-baseline 3,000-qid selection | Passed; exact-context cache audit authorized | All methods completed the same 3,000 qids/7,296 states with identical ordered qids and targets, zero skipped states, and no API calls. Hybrid has the highest Step@1/5 (0.3912/0.7767), while BGE-Reranker has the highest full-unit coverage (0.7353). Selection latency is 9.00/484.05/492.05/484.85/1,011.14 ms/qid for BM25/Dense/Hybrid/Iterative-Hybrid/BGE. Downstream ordering remains untested. |
 | 2026-09-12 | 9.3 | Exact-context answer-cache audit | Passed; bounded answer smoke authorized | Ten frozen-protocol reports provide 15,143 unique source contexts, but only 3/14/43/45/6 target contexts can be reused for BM25/Dense/Hybrid/Iterative-Hybrid/BGE. The naive fresh requirement is 14,889; cross-baseline context deduplication lowers the theoretical minimum to 13,839 by removing 1,050 duplicate targets. The deterministic source priority resolves 413 duplicate-source raw-answer disagreements without outcome selection. No API call was made. |
 | 2026-09-12 | 9.3 | BM25 bounded answer smoke | Passed; full answer chain authorized | The registry-first method completed 20/20 frozen-protocol answers with zero context mismatches, empty/error answers, or invalid caches. All 20 were fresh calls. Smoke EM/F1 0.5500/0.6429 and 367.05 tokens are execution diagnostics only. |
+| 2026-09-12 | 9.3 | Five-baseline complete answers | Passed; offline finalization authorized | All five methods completed 3,000 qids with no answer or cache-audit failures. BM25/Dense/Hybrid/Iterative-Hybrid/BGE Answer F1 is 0.6686/0.7046/0.7185/0.7114/0.7709. The fixed answer chain made exactly 13,839 fresh calls and reused 1,161 exact contexts, fully realizing the registered cross-method deduplication. |
 
 ## Current authorized action
 
 Stages 9.1 and 9.2 are closed. Stage 9.2 supports a replicated targeted anti-
 reselection effect but not a broad end-to-end gain. Stage 9.3 readiness,
-selection smoke, full selection, cache audit, and bounded answer smoke passed.
-The next authorized action is the background five-method answer chain in fixed
-registry order, with exact-context propagation after each completed method.
-After all five audits pass, compute standard downstream metrics and paired CIs.
+selection, cache audit, answer smoke, and all five complete answer reports
+passed. The next authorized action is offline standard-metric evaluation and
+10,000-sample paired qid Bootstrap comparisons against Compact and Recall.
