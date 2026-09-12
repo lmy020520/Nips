@@ -150,12 +150,12 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-12 | 9.2 | Primary exact-context cache audit | Passed; answer smoke authorized | Full answers can be reused for exactly matching ordered CE+Margin contexts on 2,016/1,947/1,966 qids for seeds 42/43/44. This leaves 984/1,053/1,034 fresh answers, or 3,071 total API calls instead of 9,000. Protocol, qid, question, answer target, and ordered-context checks passed with no API calls or failures. |
 | 2026-09-12 | 9.2 | CE+Margin answer smoke | Passed; full answers authorized | Seed 42 completed the frozen 20-qid answer smoke with no errors or invalid cache records. The audit exercised both paths: 11 exact Full-context answers were reused and 9 CE+Margin-context answers were freshly generated. Smoke EM/F1 are execution diagnostics only. |
 | 2026-09-12 | 9.2 | Matched downstream acquired-loss comparison | Passed; Stage 9.2 closed with targeted-only decision | Full reduces Top-1 acquired-evidence reselection by 0.0179 with every seed's paired CI below zero. Full also improves Supporting-Fact F1 by 0.0052 on average for every seed, although only seeds 42/43 exclude zero, and improves Joint F1 by 0.0045 on average with only seed 42 excluding zero. Answer F1, full coverage, and ClosureSuccess are mixed or tied. The registered decision is `TARGETED_ANTI_RESELECTION_ONLY`; no broad downstream gain is claimed. |
+| 2026-09-12 | 9.3 | Same-generator strong-baseline readiness | Passed; selection smoke authorized | The 3,000-qid/7,296-state/124,523-unit HotpotQA evaluation data and all five selector implementations are present. The answer protocol is frozen to DeepSeek V4-Flash, thinking disabled, JSON prompt v1, and temperature 0. Historical reports omit required generator-protocol metadata and are descriptive only; none qualifies for final-protocol reuse. No GPU inference or API call was made. |
 
 ## Current authorized action
 
 Stages 9.1 and 9.2 are closed. Stage 9.2 supports a replicated targeted anti-
-reselection effect but not a broad end-to-end gain. The next authorized action
-is the Stage 9.3 no-inference, no-API readiness audit for BM25-RAG, Dense-RAG,
-Hybrid-RAG, Iterative-Hybrid-RAG, and BGE-Reranker-RAG under the final answer
-protocol. Do not start baseline selection or answer generation until readiness
-is reviewed.
+reselection effect but not a broad end-to-end gain. Stage 9.3 readiness passed.
+The next authorized action is one five-method, 20-qid selection-only smoke for
+BM25-RAG, Dense-RAG, Hybrid-RAG, Iterative-Hybrid-RAG, and BGE-Reranker-RAG.
+Do not start full selection or answer generation until the smoke is reviewed.
