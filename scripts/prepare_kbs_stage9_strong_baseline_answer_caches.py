@@ -29,6 +29,11 @@ SOURCE_REPORTS = (
     Path("outputs/rag/kbs_stage9_acquired_loss/ce_margin_seed42_full3000.json"),
     Path("outputs/rag/kbs_stage9_acquired_loss/ce_margin_seed43_full3000.json"),
     Path("outputs/rag/kbs_stage9_acquired_loss/ce_margin_seed44_full3000.json"),
+    Path("outputs/rag/kbs_stage9_strong_baselines/bm25_full3000.json"),
+    Path("outputs/rag/kbs_stage9_strong_baselines/dense_full3000.json"),
+    Path("outputs/rag/kbs_stage9_strong_baselines/hybrid_full3000.json"),
+    Path("outputs/rag/kbs_stage9_strong_baselines/iterative_hybrid_full3000.json"),
+    Path("outputs/rag/kbs_stage9_strong_baselines/bge_reranker_full3000.json"),
 )
 
 
@@ -211,6 +216,7 @@ def main() -> None:
             failures.append("ordered qids differ across target baseline reports")
 
     existing_identical = {method: 0 for method in METHODS}
+    existing_valid_fresh = {method: 0 for method in METHODS}
     if not failures:
         for method in METHODS:
             cache_dir = args.cache_root / method
@@ -218,18 +224,37 @@ def main() -> None:
             if not cache_dir.exists():
                 continue
             for path in cache_dir.glob("*.json"):
-                if path not in expected:
-                    failures.append(f"unexpected pre-existing cache: {path}")
-                    continue
                 try:
                     current = json.loads(path.read_text(encoding="utf-8"))
                 except (OSError, json.JSONDecodeError) as exc:
                     failures.append(f"invalid pre-existing cache {path}: {exc}")
                     continue
-                if current != expected[path]:
-                    failures.append(f"pre-existing cache payload differs: {path}")
-                else:
+                qid = str(current.get("qid") or "")
+                target = targets_by_method.get(method, {}).get(qid)
+                if target is None or path.name != f"{qid}.json":
+                    failures.append(f"cache does not map to a target qid: {path}")
+                    continue
+                valid_protocol = all(
+                    current.get(key) == ANSWER_PROTOCOL[key]
+                    for key in (
+                        "answer_model",
+                        "answer_thinking_mode",
+                        "answer_mode",
+                        "answer_prompt_version",
+                    )
+                )
+                valid_answer = bool(str(current.get("raw_answer") or "").strip()) and not str(
+                    current.get("raw_answer") or ""
+                ).startswith("ERROR:")
+                if not valid_protocol or not valid_answer:
+                    failures.append(f"invalid pre-existing answer cache: {path}")
+                    continue
+                if path in expected and current == expected[path]:
                     existing_identical[method] += 1
+                elif "source_report" not in current:
+                    existing_valid_fresh[method] += 1
+                else:
+                    failures.append(f"pre-existing propagated cache differs: {path}")
 
     written = {method: 0 for method in METHODS}
     if not failures:
@@ -266,6 +291,7 @@ def main() -> None:
         "duplicate_source_raw_answer_disagreements": answer_disagreements,
         "per_method": per_method,
         "existing_identical_cache_files": existing_identical,
+        "existing_valid_fresh_cache_files": existing_valid_fresh,
         "written_cache_files": written,
         "total_target_contexts": sum(
             int(row.get("qids") or 0) for row in per_method.values()

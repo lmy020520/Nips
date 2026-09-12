@@ -102,10 +102,20 @@ The audit keeps the pre-registered source priority and never selects an answer
 by its measured correctness. This preserves protocol validity despite residual
 API nondeterminism at temperature zero.
 
+## Answer smoke
+
+The registry-first BM25 method completed the frozen 20-qid answer smoke. All
+20 answer caches match the frozen selection prefix and protocol; all were
+fresh calls, with zero empty/error answers and zero invalid cache entries.
+Smoke EM/F1 are 0.5500/0.6429, average API tokens are 367.05, and average API
+latency is 0.739 seconds. These are execution diagnostics only.
+
 ## Authorized next gate
 
-Run one foreground 20-qid BM25 answer smoke. BM25 is selected by registry order
-and low execution cost, not by observed outcome. The smoke must match the
-frozen BM25 selection prefix and validate all answer/cache protocol fields.
+Run the five complete answer reports in fixed registry order. Before each
+method, propagate exact-context answers from already completed methods into
+the remaining caches. This realizes cross-method deduplication without
+selecting sources by correctness.
 
-Do not start complete answer generation until this bounded smoke is reviewed.
+After all five reports pass their individual audits, compute standard metrics
+and paired confidence intervals against Compact and Recall.
