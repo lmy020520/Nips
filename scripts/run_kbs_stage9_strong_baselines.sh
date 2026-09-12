@@ -363,6 +363,85 @@ prepare_answer_caches() {
   echo "No GPU inference or answer API call was started."
 }
 
+run_answer_smoke() {
+  if [[ "${KBS_STAGE9_BASELINE_ANSWER_SMOKE_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] Stage 9.3 answer smoke is locked pending cache review" >&2
+    exit 1
+  fi
+  if [[ -z "${DEEPSEEK_API_KEY:-}" || -z "${DEEPSEEK_API_KEY//[[:space:]]/}" ]]; then
+    echo "[ERROR] export a non-empty DEEPSEEK_API_KEY" >&2
+    exit 1
+  fi
+  export DEEPSEEK_MODEL=deepseek-v4-flash
+  export DEEPSEEK_THINKING_MODE=disabled
+
+  local readiness="$OUTPUT_ROOT/answer_cache_readiness.json"
+  local selection="$OUTPUT_ROOT/selection3000/bm25.json"
+  local cache_dir="outputs/rag/cache_kbs_stage9_strong_baselines/bm25"
+  local report="outputs/rag/kbs_stage9_strong_baselines/bm25_smoke20.json"
+  local audit="$OUTPUT_ROOT/bm25_answer_smoke20.json"
+  local path
+  for path in "$readiness" "$selection" "$cache_dir"; do
+    if [[ ! -e "$path" ]]; then
+      echo "[ERROR] missing answer-smoke prerequisite: $path" >&2
+      exit 1
+    fi
+  done
+  python3 - "$readiness" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+report = json.loads(path.read_text(encoding="utf-8"))
+if report.get("status") != "OK" or report.get("failures"):
+    raise SystemExit(f"cache readiness is not a clean OK: {path}")
+PY
+  if [[ -e "$report" || -e "$audit" ]]; then
+    echo "[ERROR] answer-smoke output already exists; refusing overwrite" >&2
+    exit 1
+  fi
+
+  echo "[INFO] checking frozen DeepSeek endpoint before bounded BM25 smoke"
+  python3 scripts/check_deepseek_api.py
+  echo "[START] Stage 9.3 BM25 answer smoke; qids=20"
+  python3 scripts/run_hotpotqa_policy_rag.py \
+    --samples data/hotpotqa_distractor_eval_3000_cand50/samples/test.jsonl \
+    --memory data/hotpotqa_distractor_eval_3000_cand50/unit_registry/raw_units_test.jsonl \
+    --queries data/hotpotqa_distractor_eval_3000_cand50/queries/test.jsonl \
+    --checkpoint "$CHECKPOINT" \
+    --state-mode policy \
+    --policy-context-source online_state \
+    --selector bm25 \
+    --dense-query-mode question \
+    --hybrid-alpha 0.5 \
+    --candidate-top-k 8 \
+    --select-top-k 5 \
+    --state-update-top-k 5 \
+    --answer-mode json \
+    --generate-answers \
+    --answer-cache-dir "$cache_dir" \
+    --max-qids 20 \
+    --ks 1,2,3,5 \
+    --llm-max-retries 8 \
+    --llm-retry-sleep 2.0 \
+    --seed 20260608 \
+    --device cpu \
+    --output "$report"
+
+  python3 scripts/check_kbs_stage9_strong_baseline_answer_report.py \
+    --method bm25 \
+    --report "$report" \
+    --selection-report "$selection" \
+    --cache-dir "$cache_dir" \
+    --checkpoint "$CHECKPOINT" \
+    --expected-qids 20 \
+    --smoke \
+    --output "$audit"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_3_BM25_ANSWER_SMOKE_OK"
+}
+
 case "$ACTION" in
   readiness)
     python3 scripts/check_kbs_stage9_strong_baselines_readiness.py \
@@ -390,9 +469,12 @@ case "$ACTION" in
   prepare_answer_caches)
     prepare_answer_caches
     ;;
+  answer_smoke)
+    run_answer_smoke
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, prepare_answer_caches" >&2
+    echo "Allowed: readiness, selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, prepare_answer_caches, answer_smoke" >&2
     exit 2
     ;;
 esac

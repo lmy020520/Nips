@@ -77,10 +77,35 @@ the strongest complete evidence coverage. This tradeoff must be resolved with
 the frozen downstream answer, support, joint, and closure metrics; selection
 metrics alone do not establish the final method ordering.
 
+## Exact-context cache audit
+
+All ten available source reports pass the complete frozen answer protocol,
+providing 15,143 unique eligible source contexts. Exact reuse remains limited
+for the baseline targets:
+
+| Method | Directly reusable | Fresh without cross-method propagation |
+|---|---:|---:|
+| BM25-RAG | 3 | 2,997 |
+| Dense-RAG | 14 | 2,986 |
+| Hybrid-RAG | 43 | 2,957 |
+| Iterative-Hybrid-RAG | 45 | 2,955 |
+| BGE-Reranker-RAG | 6 | 2,994 |
+
+Across 15,000 target reports, 111 exact-context answers were written into the
+new caches. The naive remaining requirement is 14,889 target answers. There
+are 1,050 duplicate target files across baseline methods, so deterministic
+cross-method propagation can reduce the theoretical number of fresh contexts
+to 13,839.
+
+There are 413 duplicate eligible source contexts whose raw API strings differ.
+The audit keeps the pre-registered source priority and never selects an answer
+by its measured correctness. This preserves protocol validity despite residual
+API nondeterminism at temperature zero.
+
 ## Authorized next gate
 
-Audit exact-context reuse from existing reports that contain the complete
-frozen V4-Flash answer protocol. Report both the naive fresh target count and
-the unique count after cross-baseline context deduplication.
+Run one foreground 20-qid BM25 answer smoke. BM25 is selected by registry order
+and low execution cost, not by observed outcome. The smoke must match the
+frozen BM25 selection prefix and validate all answer/cache protocol fields.
 
-Do not generate answers until the cache-readiness report has been reviewed.
+Do not start complete answer generation until this bounded smoke is reviewed.
