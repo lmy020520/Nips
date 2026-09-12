@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: complete multiseed selection passed; exact-context cache audit authorized.
+- Status: exact-context cache audit passed; bounded answer smoke authorized.
 - Primary model: v27 seed 42, trained only on HotpotQA.
 - Robustness models: v27 seeds 43 and 44, selection-only until reviewed.
 - Transfer dataset: fixed 1,000-qid 2Wiki question-local evaluation memory.
@@ -84,7 +84,14 @@ claims remain pending.
 
 ## Next gate
 
-Audit exact ordered-context answer reuse for only the five final answer
-methods: seed-42 Compact/Balanced/Recall, Hybrid, and BGE-Reranker. Seeds 43
-and 44 remain selection-only robustness runs. This gate must not call the
-answer API.
+The frozen v22 Compact and Recall reports provide 1,919 eligible unique source
+contexts. Exact historical reuse covers only 19/18/10/1/0 targets for
+Compact/Balanced/Recall/Hybrid/BGE. Of the remaining 4,952 target files, 521
+are duplicates across final methods; deterministic cross-method propagation
+therefore lowers the theoretical fresh-call requirement to 4,431. No protocol
+differences, answer disagreements, invalid caches, or audit failures were
+found.
+
+Run one bounded 20-qid answer smoke for seed-42 Compact. Complete answer
+generation remains locked until this smoke validates both the frozen context
+and cache records.

@@ -450,6 +450,100 @@ prepare_answer_caches() {
   echo "No training, GPU inference, or answer API call was started."
 }
 
+run_answer_smoke() {
+  if [[ "${KBS_STAGE9_2WIKI_ANSWER_SMOKE_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] Stage 9.4 answer smoke is locked pending cache review" >&2
+    exit 1
+  fi
+  if [[ -z "${DEEPSEEK_API_KEY:-}" || -z "${DEEPSEEK_API_KEY//[[:space:]]/}" ]]; then
+    echo "[ERROR] export a non-empty DEEPSEEK_API_KEY" >&2
+    exit 1
+  fi
+  export DEEPSEEK_MODEL=deepseek-v4-flash
+  export DEEPSEEK_THINKING_MODE=disabled
+
+  local readiness="$OUTPUT_ROOT/answer_cache_readiness.json"
+  local selection="$OUTPUT_ROOT/selection1000/compact_seed42.json"
+  local cache_dir="outputs/rag/cache_kbs_stage9_2wiki/compact_seed42"
+  local report="outputs/rag/kbs_stage9_2wiki/compact_seed42_smoke20.json"
+  local audit="$OUTPUT_ROOT/compact_seed42_answer_smoke20.json"
+  local path
+  for path in "$readiness" "$selection" "$cache_dir"; do
+    if [[ ! -e "$path" ]]; then
+      echo "[ERROR] missing answer-smoke prerequisite: $path" >&2
+      exit 1
+    fi
+  done
+  python3 - "$readiness" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+report = json.loads(path.read_text(encoding="utf-8"))
+if (
+    report.get("status") != "OK"
+    or report.get("mode")
+    != "final_policy_2wiki_exact_context_answer_cache_preparation"
+    or report.get("failures")
+):
+    raise SystemExit(f"cache readiness is not a clean registered OK: {path}")
+PY
+  if [[ -e "$report" || -e "$audit" ]]; then
+    echo "[ERROR] answer-smoke output already exists; refusing overwrite" >&2
+    exit 1
+  fi
+  mkdir -p "$cache_dir" "$(dirname "$report")"
+
+  echo "[INFO] checking frozen DeepSeek endpoint before bounded 2Wiki Compact smoke"
+  python3 scripts/check_deepseek_api.py
+  echo "[START] Stage 9.4 Compact answer smoke; qids=20"
+  CUDA_VISIBLE_DEVICES="$CUDA_DEVICE" python3 scripts/run_hotpotqa_policy_rag.py \
+    --samples data/2wiki_multihopqa_eval_1000_cand50/samples/test.jsonl \
+    --memory data/2wiki_multihopqa_eval_1000_cand50/unit_registry/raw_units_test.jsonl \
+    --queries data/2wiki_multihopqa_eval_1000_cand50/queries/test.jsonl \
+    --checkpoint "$CHECKPOINT" \
+    --state-mode policy \
+    --policy-context-source online_state \
+    --selector hybrid_policy \
+    --dense-model models/bge-large-en-v1.5 \
+    --dense-query-mode state \
+    --hybrid-alpha 0.5 \
+    --front-pool-k 30 \
+    --front-fusion rrf \
+    --local-expansion-window 1 \
+    --mmr-lambda 0.7 \
+    --mmr-same-doc-similarity 0.35 \
+    --candidate-top-k 10 \
+    --select-top-k 5 \
+    --state-update-top-k 1 \
+    --policy-score-mode front_policy_blend \
+    --policy-blend-weight 0.5 \
+    --answer-mode json \
+    --generate-answers \
+    --answer-cache-dir "$cache_dir" \
+    --save-online-states \
+    --max-qids 20 \
+    --ks 1,2,3,5 \
+    --llm-max-retries 8 \
+    --llm-retry-sleep 2.0 \
+    --seed 20260608 \
+    --device cuda \
+    --output "$report"
+
+  python3 scripts/check_kbs_stage9_2wiki_answer_report.py \
+    --method compact_seed42 \
+    --report "$report" \
+    --selection-report "$selection" \
+    --cache-dir "$cache_dir" \
+    --checkpoint "$CHECKPOINT" \
+    --expected-qids 20 \
+    --smoke \
+    --output "$audit"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_4_COMPACT_ANSWER_SMOKE_OK"
+}
+
 case "$ACTION" in
   readiness)
     python3 scripts/check_kbs_stage9_2wiki_readiness.py \
@@ -477,9 +571,12 @@ case "$ACTION" in
   prepare_answer_caches)
     prepare_answer_caches
     ;;
+  answer_smoke)
+    run_answer_smoke
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, prepare_answer_caches" >&2
+    echo "Allowed: readiness, selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, prepare_answer_caches, answer_smoke" >&2
     exit 2
     ;;
 esac
