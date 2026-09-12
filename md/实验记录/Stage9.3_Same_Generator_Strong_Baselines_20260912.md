@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: all five 3,000-qid answer reports passed; offline finalization authorized.
+- Status: closed as `FINAL_PROTOCOL_BASELINES_COMPLETE`.
 - Readiness date: 2026-09-12.
 - API calls during readiness: 0.
 - GPU inference runs during readiness: 0.
@@ -130,9 +130,50 @@ propagated across completed baselines. The final cache audit covers all 15,000
 method--qid targets. These answer-only point estimates do not replace the
 registered supporting-fact, joint, closure, and paired-bootstrap analysis.
 
-## Authorized next gate
+## Standard downstream results
 
-Compute standard Supporting-Fact, Joint, Full Coverage, and ClosureSuccess
-metrics from the completed raw reports, then run 10,000-sample paired qid
-bootstrap comparisons against KSG-EA-Compact and KSG-EA-Recall. This is an
-offline-only action and must not start training, GPU inference, or API calls.
+The offline evaluator reproduced all source answer and coverage summaries,
+found 3,000 identical qids for every method, and verified the Gold Oracle at
+1.0 Supporting-Fact recall and EM. The table reports final-protocol results.
+
+| Method | Answer F1 | SF F1 | SF EM | Joint F1 | Joint EM | Full support | Closure |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| BM25-RAG | 0.6686 | 0.3948 | 0.0543 | 0.2888 | 0.0373 | 0.3697 | 0.2603 @10 |
+| Dense-RAG | 0.7046 | 0.4407 | 0.0937 | 0.3344 | 0.0667 | 0.5700 | 0.3983 @10 |
+| Hybrid-RAG | 0.7185 | 0.4714 | **0.0970** | 0.3581 | **0.0667** | 0.5810 | 0.4020 @10 |
+| Iterative-Hybrid-RAG | 0.7114 | 0.4614 | 0.0927 | 0.3464 | 0.0630 | 0.5810 | 0.3990 @10 |
+| BGE-Reranker-RAG | **0.7709** | **0.4756** | 0.0570 | **0.3756** | 0.0400 | **0.7353** | **0.4757 @10** |
+| KSG-EA-Compact | 0.7678 | 0.6561 | 0.3623 | 0.5293 | 0.2520 | 0.7823 | 0.5153 @10 |
+| KSG-EA-Recall | **0.7904** | **0.7113** | **0.4340** | **0.5794** | **0.3030** | **0.8730** | **0.5873 @50** |
+
+Bold within the first five rows denotes the strongest conventional baseline;
+bold KSG-EA-Recall values denote the strongest overall operating point. The
+Closure column uses each KSG operating point's registered budget, so Compact
+comparisons use ClosureSuccess@10 and Recall comparisons use
+ClosureSuccess@50.
+
+## Paired uncertainty and conclusion
+
+Each comparison uses 10,000 paired qid-bootstrap samples. KSG-EA-Compact is
+significantly higher than BM25, Dense, Hybrid, and Iterative-Hybrid on all
+eight registered metrics. Against the strongest BGE-Reranker baseline,
+Compact Answer EM/F1 are statistically indistinguishable: `-0.0080`
+`[-0.0207,0.0043]` and `-0.0031` `[-0.0140,0.0078]`. In contrast, Compact
+significantly improves Supporting-Fact F1 by `+0.1805`
+`[0.1683,0.1928]`, Joint F1 by `+0.1537` `[0.1415,0.1656]`, full support
+coverage by `+0.0470` `[0.0307,0.0633]`, and ClosureSuccess@10 by `+0.0397`
+`[0.0243,0.0550]`.
+
+KSG-EA-Recall is significantly higher than every baseline on all 40 registered
+metric--baseline comparisons. Against BGE-Reranker specifically, Recall gains
+`+0.0195` Answer F1 `[0.0089,0.0302]`, `+0.2356` Supporting-Fact F1
+`[0.2239,0.2473]`, `+0.2038` Joint F1 `[0.1921,0.2157]`, `+0.1377` full
+support coverage `[0.1227,0.1533]`, and `+0.0847` ClosureSuccess@50
+`[0.0697,0.0997]`.
+
+The final decision is `FINAL_PROTOCOL_BASELINES_COMPLETE`. These results
+support the paper's core compiled-evidence claim: Compact preserves answer
+quality relative to the strongest reranker while materially improving support
+and joint quality, whereas Recall provides a statistically reliable quality
+gain at the higher-cost operating point. The result does not imply that
+Compact dominates BGE-Reranker on answer-only metrics.

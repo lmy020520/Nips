@@ -156,11 +156,14 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-12 | 9.3 | Exact-context answer-cache audit | Passed; bounded answer smoke authorized | Ten frozen-protocol reports provide 15,143 unique source contexts, but only 3/14/43/45/6 target contexts can be reused for BM25/Dense/Hybrid/Iterative-Hybrid/BGE. The naive fresh requirement is 14,889; cross-baseline context deduplication lowers the theoretical minimum to 13,839 by removing 1,050 duplicate targets. The deterministic source priority resolves 413 duplicate-source raw-answer disagreements without outcome selection. No API call was made. |
 | 2026-09-12 | 9.3 | BM25 bounded answer smoke | Passed; full answer chain authorized | The registry-first method completed 20/20 frozen-protocol answers with zero context mismatches, empty/error answers, or invalid caches. All 20 were fresh calls. Smoke EM/F1 0.5500/0.6429 and 367.05 tokens are execution diagnostics only. |
 | 2026-09-12 | 9.3 | Five-baseline complete answers | Passed; offline finalization authorized | All five methods completed 3,000 qids with no answer or cache-audit failures. BM25/Dense/Hybrid/Iterative-Hybrid/BGE Answer F1 is 0.6686/0.7046/0.7185/0.7114/0.7709. The fixed answer chain made exactly 13,839 fresh calls and reused 1,161 exact contexts, fully realizing the registered cross-method deduplication. |
+| 2026-09-12 | 9.3 | Final-protocol downstream comparison | Passed; Stage 9.3 closed | Compact is statistically tied with BGE-Reranker on Answer EM/F1 but significantly improves Supporting-Fact F1 by 0.1805, Joint F1 by 0.1537, full support coverage by 0.0470, and ClosureSuccess@10 by 0.0397. Recall exceeds all five baselines on all 40 registered metric--baseline comparisons; versus BGE it gains 0.0195 Answer F1, 0.2356 Supporting-Fact F1, 0.2038 Joint F1, 0.1377 full coverage, and 0.0847 ClosureSuccess@50. All reports contain the same 3,000 qids, all source-summary checks pass, and the Gold Oracle reaches 1.0 supporting-fact recall/EM. Decision: `FINAL_PROTOCOL_BASELINES_COMPLETE`. |
 
 ## Current authorized action
 
-Stages 9.1 and 9.2 are closed. Stage 9.2 supports a replicated targeted anti-
-reselection effect but not a broad end-to-end gain. Stage 9.3 readiness,
-selection, cache audit, answer smoke, and all five complete answer reports
-passed. The next authorized action is offline standard-metric evaluation and
-10,000-sample paired qid Bootstrap comparisons against Compact and Recall.
+Stages 9.1--9.3 are closed. Stage 9.2 supports a replicated targeted anti-
+reselection effect but not a broad end-to-end gain. Stage 9.3 establishes
+same-generator final-protocol superiority in evidence, joint, coverage, and
+closure metrics, with Recall also significantly improving answer quality over
+the strongest BGE-Reranker baseline. The next authorized action is Stage 9.4
+readiness for final-policy 2Wiki zero-shot transfer; no new run is authorized
+until data, checkpoint, baseline, generator, and cache compatibility pass.
