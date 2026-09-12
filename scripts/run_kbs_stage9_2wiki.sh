@@ -436,6 +436,20 @@ finalize_full_selection() {
   echo "No GPU inference or answer API call was started by finalization."
 }
 
+prepare_answer_caches() {
+  if [[ "${KBS_STAGE9_2WIKI_CACHE_PREP_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] Stage 9.4 answer-cache preparation is locked pending selection review" >&2
+    exit 1
+  fi
+  python3 scripts/prepare_kbs_stage9_2wiki_answer_caches.py \
+    --selection-root "$OUTPUT_ROOT/selection1000" \
+    --cache-root outputs/rag/cache_kbs_stage9_2wiki \
+    --output "$OUTPUT_ROOT/answer_cache_readiness.json"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_4_ANSWER_CACHE_READINESS_OK"
+  echo "No training, GPU inference, or answer API call was started."
+}
+
 case "$ACTION" in
   readiness)
     python3 scripts/check_kbs_stage9_2wiki_readiness.py \
@@ -460,9 +474,12 @@ case "$ACTION" in
   selection_finalize)
     finalize_full_selection
     ;;
+  prepare_answer_caches)
+    prepare_answer_caches
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize" >&2
+    echo "Allowed: readiness, selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, prepare_answer_caches" >&2
     exit 2
     ;;
 esac
