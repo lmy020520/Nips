@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: readiness passed; 20-qid selection-only smoke authorized.
+- Status: 20-qid selection-only smoke passed; full selection authorized.
 - Readiness date: 2026-09-12.
 - API calls during readiness: 0.
 - GPU inference runs during readiness: 0.
@@ -41,12 +41,28 @@ reused as final-protocol reports. Exact-context cache reuse may be considered
 only after the newly generated selection contexts and the complete answer
 protocol have passed an explicit audit.
 
+## Selection smoke
+
+All five methods completed the same 20 qids and 50 teacher states. Ordered-qid
+and ordered-teacher-target SHA-256 values match across every report. No state
+was skipped, no answer was generated, and no API call was made.
+
+| Method | Step@1 | Step@5 | Full doc coverage | Full unit coverage |
+|---|---:|---:|---:|---:|
+| BM25-RAG | 0.26 | 0.58 | 0.70 | 0.25 |
+| Dense-RAG | 0.28 | 0.70 | 0.60 | 0.45 |
+| Hybrid-RAG | 0.34 | 0.76 | 0.70 | 0.45 |
+| Iterative-Hybrid-RAG | 0.32 | 0.76 | 0.70 | 0.45 |
+| BGE-Reranker-RAG | 0.24 | 0.64 | 0.95 | 0.60 |
+
+These small-sample values are execution diagnostics only. They are not used
+for method selection, scientific claims, or paper tables.
+
 ## Authorized next gate
 
-Run the five methods on the same 20 qids with answer generation disabled. The
-smoke must verify selectors, candidate and selection budgets, state-update
-behavior, ordered qids, teacher targets, zero skipped states, and zero answer
-calls. Smoke metric values validate execution only and are not paper results.
+Run five 3,000-qid selection-only reports in parallel with local runtime
+profiling. After all workers finish, audit the complete reports and their
+ordered qid and teacher-target hashes.
 
-Do not start the 3,000-qid selection runs or any answer generation until the
-smoke summary has been reviewed.
+Do not generate answers or prepare caches until the full selection summary has
+been reviewed.

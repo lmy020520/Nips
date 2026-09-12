@@ -149,6 +149,9 @@ def main() -> None:
             )
         qid_hashes[name] = digest(qids)
         target_hashes[name] = digest(target_sequence(results))
+        runtime = summary.get("runtime_profile")
+        if not isinstance(runtime, dict):
+            runtime = {}
         metrics[name] = {
             "reported_name": spec["reported_name"],
             "qids": summary.get("qids"),
@@ -157,6 +160,12 @@ def main() -> None:
             "step_acc@5": summary.get("step_acc@5"),
             "full_gold_doc_coverage": summary.get("full_gold_doc_coverage"),
             "full_gold_unit_coverage": summary.get("full_gold_unit_coverage"),
+            "selection_ms_per_qid": runtime.get("selection_avg_ms_per_qid"),
+            "selection_throughput_qids_per_second": runtime.get(
+                "selection_throughput_qids_per_second"
+            ),
+            "peak_gpu_allocated_mb": runtime.get("peak_gpu_allocated_mb"),
+            "peak_gpu_reserved_mb": runtime.get("peak_gpu_reserved_mb"),
         }
 
     if len(set(qid_hashes.values())) > 1:
