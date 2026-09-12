@@ -544,6 +544,281 @@ PY
   echo "status=STAGE9_4_COMPACT_ANSWER_SMOKE_OK"
 }
 
+answer_smoke_is_valid() {
+  python3 - "$OUTPUT_ROOT/compact_seed42_answer_smoke20.json" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+if not path.is_file():
+    raise SystemExit(f"missing answer smoke audit: {path}")
+report = json.loads(path.read_text(encoding="utf-8"))
+if (
+    report.get("status") != "SMOKE_OK"
+    or report.get("mode") != "final_policy_2wiki_answer_smoke"
+    or report.get("method") != "compact_seed42"
+    or report.get("failures")
+):
+    raise SystemExit(f"answer smoke is not a clean registered SMOKE_OK: {path}")
+PY
+}
+
+run_full_answer_method() {
+  local method="$1"
+  if [[ "${KBS_STAGE9_2WIKI_FULL_ANSWERS_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] Stage 9.4 full answers are locked pending smoke review" >&2
+    exit 1
+  fi
+  answer_smoke_is_valid
+
+  local selector dense_model dense_query_mode reranker_model
+  local candidate_top_k front_pool_k state_update_top_k
+  selector="hybrid_policy"
+  dense_model="models/bge-large-en-v1.5"
+  dense_query_mode="state"
+  reranker_model=""
+  candidate_top_k=10
+  front_pool_k=30
+  state_update_top_k=1
+  case "$method" in
+    compact_seed42)
+      ;;
+    balanced_knee_seed42)
+      candidate_top_k=15
+      ;;
+    recall_seed42)
+      candidate_top_k=50
+      front_pool_k=50
+      ;;
+    hybrid)
+      selector="hybrid"
+      candidate_top_k=8
+      state_update_top_k=5
+      ;;
+    bge_reranker)
+      selector="generic_reranker"
+      dense_model=""
+      dense_query_mode="question"
+      reranker_model="models/bge-reranker-large"
+      candidate_top_k=8
+      state_update_top_k=5
+      ;;
+    *)
+      echo "[ERROR] unknown Stage 9.4 answer method: $method" >&2
+      exit 1
+      ;;
+  esac
+
+  local selection="$OUTPUT_ROOT/selection1000/$method.json"
+  local cache_dir="outputs/rag/cache_kbs_stage9_2wiki/$method"
+  local report="outputs/rag/kbs_stage9_2wiki/${method}_full1000.json"
+  local audit="$OUTPUT_ROOT/${method}_answer_full1000.json"
+  mkdir -p "$cache_dir" "$(dirname "$report")"
+
+  if [[ -s "$report" ]]; then
+    if [[ ! -s "$audit" ]]; then
+      python3 scripts/check_kbs_stage9_2wiki_answer_report.py \
+        --method "$method" \
+        --report "$report" \
+        --selection-report "$selection" \
+        --cache-dir "$cache_dir" \
+        --checkpoint "$CHECKPOINT" \
+        --expected-qids 1000 \
+        --output "$audit"
+    fi
+    python3 - "$audit" "$method" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+method = sys.argv[2]
+report = json.loads(path.read_text(encoding="utf-8"))
+if (
+    report.get("status") != "OK"
+    or report.get("method") != method
+    or report.get("qids") != 1000
+    or report.get("failures")
+):
+    raise SystemExit(f"existing answer audit is not a clean matching OK: {path}")
+PY
+    echo "[SKIP] completed answer report: $method"
+    return
+  fi
+  if [[ -e "$audit" ]]; then
+    echo "[ERROR] audit exists without a completed answer report: $audit" >&2
+    exit 1
+  fi
+
+  local -a command=(
+    python3 scripts/run_hotpotqa_policy_rag.py
+    --samples data/2wiki_multihopqa_eval_1000_cand50/samples/test.jsonl
+    --memory data/2wiki_multihopqa_eval_1000_cand50/unit_registry/raw_units_test.jsonl
+    --queries data/2wiki_multihopqa_eval_1000_cand50/queries/test.jsonl
+    --checkpoint "$CHECKPOINT"
+    --state-mode policy
+    --policy-context-source online_state
+    --selector "$selector"
+    --dense-query-mode "$dense_query_mode"
+    --hybrid-alpha 0.5
+    --front-pool-k "$front_pool_k"
+    --candidate-top-k "$candidate_top_k"
+    --select-top-k 5
+    --state-update-top-k "$state_update_top_k"
+    --answer-mode json
+    --generate-answers
+    --answer-cache-dir "$cache_dir"
+    --max-qids 1000
+    --ks 1,2,3,5
+    --llm-max-retries 8
+    --llm-retry-sleep 2.0
+    --seed 20260608
+    --device cuda
+    --output "$report"
+  )
+  if [[ -n "$dense_model" ]]; then
+    command+=(--dense-model "$dense_model")
+  fi
+  if [[ -n "$reranker_model" ]]; then
+    command+=(--reranker-model "$reranker_model")
+  fi
+  if [[ "$selector" == "hybrid_policy" ]]; then
+    command+=(
+      --front-fusion rrf
+      --local-expansion-window 1
+      --mmr-lambda 0.7
+      --mmr-same-doc-similarity 0.35
+      --policy-score-mode front_policy_blend
+      --policy-blend-weight 0.5
+      --save-online-states
+    )
+  fi
+
+  echo "[START] Stage 9.4 full answers method=$method qids=1000"
+  CUDA_VISIBLE_DEVICES="$CUDA_DEVICE" "${command[@]}"
+  python3 scripts/check_kbs_stage9_2wiki_answer_report.py \
+    --method "$method" \
+    --report "$report" \
+    --selection-report "$selection" \
+    --cache-dir "$cache_dir" \
+    --checkpoint "$CHECKPOINT" \
+    --expected-qids 1000 \
+    --output "$audit"
+  echo "FINISHED_OK method=$method"
+}
+
+run_full_answer_chain() {
+  if [[ "${KBS_STAGE9_2WIKI_FULL_ANSWERS_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] Stage 9.4 full answers are locked pending smoke review" >&2
+    exit 1
+  fi
+  if [[ -z "${DEEPSEEK_API_KEY:-}" || -z "${DEEPSEEK_API_KEY//[[:space:]]/}" ]]; then
+    echo "[ERROR] export a non-empty DEEPSEEK_API_KEY" >&2
+    exit 1
+  fi
+  export DEEPSEEK_MODEL=deepseek-v4-flash
+  export DEEPSEEK_THINKING_MODE=disabled
+  answer_smoke_is_valid
+  echo "[INFO] checking frozen DeepSeek endpoint before full 2Wiki answer chain"
+  python3 scripts/check_deepseek_api.py
+
+  local propagation_root="$OUTPUT_ROOT/cache_propagation"
+  mkdir -p "$propagation_root"
+  local method
+  for method in \
+    compact_seed42 balanced_knee_seed42 recall_seed42 hybrid bge_reranker; do
+    python3 scripts/prepare_kbs_stage9_2wiki_answer_caches.py \
+      --selection-root "$OUTPUT_ROOT/selection1000" \
+      --cache-root outputs/rag/cache_kbs_stage9_2wiki \
+      --output "$propagation_root/before_${method}.json"
+    run_full_answer_method "$method"
+  done
+  python3 scripts/prepare_kbs_stage9_2wiki_answer_caches.py \
+    --selection-root "$OUTPUT_ROOT/selection1000" \
+    --cache-root outputs/rag/cache_kbs_stage9_2wiki \
+    --output "$propagation_root/after_all.json"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_4_ALL_ANSWERS_OK"
+}
+
+start_full_answer_chain() {
+  if [[ "${KBS_STAGE9_2WIKI_FULL_ANSWERS_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] Stage 9.4 full answers are locked pending smoke review" >&2
+    exit 1
+  fi
+  if [[ -z "${DEEPSEEK_API_KEY:-}" || -z "${DEEPSEEK_API_KEY//[[:space:]]/}" ]]; then
+    echo "[ERROR] export a non-empty DEEPSEEK_API_KEY" >&2
+    exit 1
+  fi
+  answer_smoke_is_valid
+  local log_dir="outputs/logs/kbs_stage9_2wiki"
+  local pid_file="$log_dir/answer_chain.pid"
+  mkdir -p "$log_dir"
+  if [[ -s "$pid_file" ]]; then
+    local existing_pid
+    existing_pid="$(cat "$pid_file")"
+    if [[ "$existing_pid" =~ ^[0-9]+$ ]] && kill -0 "$existing_pid" 2>/dev/null; then
+      echo "[ERROR] answer chain is already running pid=$existing_pid" >&2
+      exit 1
+    fi
+  fi
+  nohup env \
+    KBS_STAGE9_2WIKI_FULL_ANSWERS_AUTHORIZED=1 \
+    ACTION=answer_full_chain \
+    CUDA_DEVICE="$CUDA_DEVICE" \
+    bash scripts/run_kbs_stage9_2wiki.sh \
+    >"$log_dir/answer_chain_launcher.log" 2>&1 < /dev/null &
+  echo "$!" >"$pid_file"
+  echo "answer_chain: STARTED pid=$! gpu=$CUDA_DEVICE"
+  echo "Check with: ACTION=answer_status bash scripts/run_kbs_stage9_2wiki.sh"
+}
+
+show_answer_status() {
+  local log_dir="outputs/logs/kbs_stage9_2wiki"
+  local method audit
+  for method in \
+    compact_seed42 balanced_knee_seed42 recall_seed42 hybrid bge_reranker; do
+    audit="$OUTPUT_ROOT/${method}_answer_full1000.json"
+    if [[ -s "$audit" ]] && python3 - "$audit" "$method" <<'PY'
+import json
+import sys
+
+report = json.load(open(sys.argv[1], encoding="utf-8"))
+if (
+    report.get("status") != "OK"
+    or report.get("method") != sys.argv[2]
+    or report.get("qids") != 1000
+    or report.get("failures")
+):
+    raise SystemExit(1)
+PY
+    then
+      echo "$method: FINISHED_OK"
+    elif [[ -s "outputs/rag/kbs_stage9_2wiki/${method}_full1000.json" ]]; then
+      echo "$method: REPORT_WRITTEN_AUDIT_PENDING"
+    else
+      echo "$method: PENDING_OR_RUNNING"
+    fi
+  done
+  if [[ -s "$log_dir/answer_chain.pid" ]]; then
+    local pid
+    pid="$(cat "$log_dir/answer_chain.pid")"
+    if [[ "$pid" =~ ^[0-9]+$ ]] && kill -0 "$pid" 2>/dev/null; then
+      echo "answer_chain: RUNNING pid=$pid"
+    elif grep -aFq "status=STAGE9_4_ALL_ANSWERS_OK" \
+      "$log_dir/answer_chain_launcher.log" 2>/dev/null; then
+      echo "answer_chain: FINISHED_OK"
+    else
+      echo "answer_chain: FAILED_OR_INCOMPLETE"
+      echo "  inspect: $log_dir/answer_chain_launcher.log"
+    fi
+  else
+    echo "answer_chain: NOT_STARTED"
+  fi
+  echo "Status check completed; no GPU inference or API call was started."
+}
+
 case "$ACTION" in
   readiness)
     python3 scripts/check_kbs_stage9_2wiki_readiness.py \
@@ -574,9 +849,18 @@ case "$ACTION" in
   answer_smoke)
     run_answer_smoke
     ;;
+  answer_full_start)
+    start_full_answer_chain
+    ;;
+  answer_full_chain)
+    run_full_answer_chain
+    ;;
+  answer_status)
+    show_answer_status
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, prepare_answer_caches, answer_smoke" >&2
+    echo "Allowed: readiness, selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, prepare_answer_caches, answer_smoke, answer_full_start, answer_full_chain, answer_status" >&2
     exit 2
     ;;
 esac

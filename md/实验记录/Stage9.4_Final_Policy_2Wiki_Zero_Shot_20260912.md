@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: exact-context cache audit passed; bounded answer smoke authorized.
+- Status: bounded answer smoke passed; complete five-method answer chain authorized.
 - Primary model: v27 seed 42, trained only on HotpotQA.
 - Robustness models: v27 seeds 43 and 44, selection-only until reviewed.
 - Transfer dataset: fixed 1,000-qid 2Wiki question-local evaluation memory.
@@ -95,3 +95,17 @@ found.
 Run one bounded 20-qid answer smoke for seed-42 Compact. Complete answer
 generation remains locked until this smoke validates both the frozen context
 and cache records.
+
+## Answer smoke
+
+The seed-42 Compact smoke completed 20/20 qids with the frozen generator
+protocol and no failures. It exercised both cache paths: one exact historical
+context was reused and 19 answers were freshly generated. All 20 cache files
+matched the frozen selection contexts and protocol metadata. Smoke Answer
+EM/F1 is 0.6500/0.7207, but these 20-qid values are execution diagnostics and
+are not scientific estimates.
+
+The complete sequential five-method answer chain is now authorized. It must
+re-run exact-context propagation before each method and preserve the fixed
+method order; final downstream claims remain locked until all reports and
+paired confidence intervals pass offline finalization.
