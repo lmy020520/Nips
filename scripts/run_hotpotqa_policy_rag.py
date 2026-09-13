@@ -150,7 +150,7 @@ def load_external_policy_state_bank(
     path: str,
     target_qids: list[str],
 ) -> tuple[dict[str, dict[int, str]], dict[str, str]]:
-    """Load matched online states and deterministically pair each qid with another qid."""
+    """Load states and pair targets in the external report's frozen qid order."""
     if not path:
         raise ValueError(
             "--external-policy-state-report is required for "
@@ -167,10 +167,13 @@ def load_external_policy_state_bank(
         raise ValueError("external policy-state report must contain saved online states")
 
     state_bank: dict[str, dict[int, str]] = {}
+    report_qids: list[str] = []
     for record in report.get("results") or report.get("records") or []:
         qid = str(record.get("qid") or "")
         if not qid:
             continue
+        if qid in state_bank:
+            raise ValueError(f"duplicate qid in external policy-state report: {qid}")
         states = {}
         for step in record.get("steps") or []:
             state = step.get("online_state_before")
@@ -179,6 +182,7 @@ def load_external_policy_state_bank(
             states[int(step.get("t") or 0)] = str(state.get("K_t") or "")
         if states:
             state_bank[qid] = states
+            report_qids.append(qid)
 
     missing = [qid for qid in target_qids if qid not in state_bank]
     if missing:
@@ -186,15 +190,17 @@ def load_external_policy_state_bank(
             f"external policy-state report is missing {len(missing)} target qids; "
             f"examples={missing[:5]}"
         )
-    if len(target_qids) < 2:
+    if len(report_qids) < 2:
         raise ValueError("other_question_state requires at least two qids")
 
-    # A cyclic shift is deterministic, outcome-independent, and guarantees a
-    # different source question for every target question.
-    pairing = {
-        qid: target_qids[(index + 1) % len(target_qids)]
-        for index, qid in enumerate(target_qids)
+    # Pairing follows the complete frozen external report, not a --max-qids
+    # evaluation prefix. This keeps bounded answer runs identical to the same
+    # prefix of the complete selection run, including its final boundary qid.
+    full_pairing = {
+        qid: report_qids[(index + 1) % len(report_qids)]
+        for index, qid in enumerate(report_qids)
     }
+    pairing = {qid: full_pairing[qid] for qid in target_qids}
     return state_bank, pairing
 
 

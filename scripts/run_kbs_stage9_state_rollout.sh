@@ -311,8 +311,59 @@ PY
     fi
   done
   if [[ -e "$report" || -e "$audit" ]]; then
-    echo "[ERROR] answer-smoke output already exists; refusing overwrite" >&2
-    exit 1
+    if [[ "${KBS_STAGE9_STATE_RETRY_FAILED_SMOKE:-0}" != "1" ]]; then
+      echo "[ERROR] answer-smoke output already exists; refusing overwrite" >&2
+      echo "Set KBS_STAGE9_STATE_RETRY_FAILED_SMOKE=1 only for the registered boundary-pairing retry." >&2
+      exit 1
+    fi
+    python3 - "$report" "$audit" "$cache_dir" <<'PY'
+import json
+import re
+import sys
+from pathlib import Path
+
+report_path, audit_path, cache_dir = map(Path, sys.argv[1:])
+if not report_path.is_file() or not audit_path.is_file():
+    raise SystemExit("registered retry requires both the failed report and audit")
+audit = json.loads(audit_path.read_text(encoding="utf-8"))
+if (
+    audit.get("status") != "FAIL"
+    or audit.get("method") != "other_question_state"
+    or audit.get("qids") != 20
+    or audit.get("failures") != ["selection context mismatches=1"]
+    or (audit.get("cache") or {}).get("invalid") != 0
+):
+    raise SystemExit("existing smoke is not the registered one-context boundary failure")
+
+answer = json.loads(report_path.read_text(encoding="utf-8"))
+selection_path = Path(str(audit["selection_report"]))
+selection = json.loads(selection_path.read_text(encoding="utf-8"))
+answer_rows = answer.get("results") or []
+selection_rows = (selection.get("results") or [])[:20]
+if len(answer_rows) != 20 or len(selection_rows) != 20:
+    raise SystemExit("registered retry requires two complete 20-qid prefixes")
+
+mismatched = []
+for current, frozen in zip(answer_rows, selection_rows):
+    if current.get("qid") != frozen.get("qid"):
+        raise SystemExit("qid order differs; refusing automatic retry cleanup")
+    if any(
+        current.get(key) != frozen.get(key)
+        for key in ("question", "gold_answer", "selected_unit_ids")
+    ):
+        mismatched.append(str(current["qid"]))
+if len(mismatched) != 1:
+    raise SystemExit(f"expected exactly one mismatched qid, found {mismatched}")
+
+safe_qid = re.sub(r"[^A-Za-z0-9_.-]+", "_", mismatched[0])
+bad_cache = cache_dir / f"{safe_qid}.json"
+if not bad_cache.is_file():
+    raise SystemExit(f"missing mismatched cache file: {bad_cache}")
+bad_cache.unlink()
+report_path.unlink()
+audit_path.unlink()
+print(f"[RETRY] removed only mismatched qid cache: {mismatched[0]}")
+PY
   fi
   mkdir -p "$cache_dir" "$(dirname "$report")"
 

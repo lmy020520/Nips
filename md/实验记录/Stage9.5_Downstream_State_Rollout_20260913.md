@@ -115,3 +115,14 @@ outcome-independent source priority; no answer is selected by correctness.
 The audit made no API calls and found no failures. A 20-qid
 other-question-state answer smoke is authorized because this condition uses
 the newest runtime path and has the lowest exact reuse among the interventions.
+
+## Initial answer-smoke rejection
+
+The first 20-qid other-question-state answer smoke generated 20 valid answers
+with no cache or API errors, but the audit rejected one selected context. The
+cause was a boundary-scope error: the runtime constructed cyclic pairing after
+applying `--max-qids 20`, so the twentieth qid was paired with the first qid of
+the bounded prefix. Its frozen complete-run counterpart is paired with qid 21
+in the 3,000-qid ordering. The runtime now derives the pairing universe from
+the complete external online-state report. A guarded retry is authorized and
+deletes only the single mismatched cache; the other 19 answers are retained.
