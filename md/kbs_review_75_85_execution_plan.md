@@ -169,6 +169,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-13 | 9.5 | Five-condition 3,000-qid selection | Passed; exact-context cache audit authorized | Correct online state significantly exceeds query-only, frozen-initial, and other-question state on Step@1/5, MRR, full-unit/document coverage, and Top-1 acquired-evidence reselection. Against query-only it gains 0.0850 Step@1, 0.0362 Step@5, and 0.1127 full-unit coverage while reducing Top-1 reselection by 0.0611. It ties previous-only on Step@1/MRR and is slightly lower on full-unit/document coverage. Interpretation: `STATE_RELEVANCE_SUPPORTED`, not full-history superiority. |
 | 2026-09-13 | 9.5 | Exact-context answer-cache audit | Passed; bounded answer smoke authorized | All 15 source reports match the frozen answer protocol and provide 28,982 eligible unique contexts. Exact reuse covers 6,126 of 15,000 targets; the remaining 8,874 target files contain 7,924 unique fresh contexts after 950 cross-condition duplicates are removed. Online state is fully reusable, and previous-only reuses 2,261 qids. No API call or audit failure occurred. |
 | 2026-09-13 | 9.5 | Initial other-question answer smoke | Rejected; corrected retry authorized | All 20 answers were valid, but one selected context differed from the frozen full-run prefix. The bounded rerun paired its final qid against the first qid of the 20-qid prefix rather than the next qid in the complete 3,000-qid ordering. This was a boundary-scope implementation error, not a model or API failure. The runtime now derives cyclic pairing from the complete external report, and the guarded retry removes only the one invalid-context cache. |
+| 2026-09-13 | 9.5 | Corrected other-question answer smoke | Passed; complete answer chain authorized | The corrected 20-qid run matches every frozen selection context and completes all answers under the registered V4-Flash protocol. It has no empty/error answers, invalid caches, context mismatches, or audit failures. Smoke EM/F1 are execution diagnostics only. |
 
 ## Current authorized action
 
@@ -185,7 +186,8 @@ state significantly outperforms query-only, frozen-initial, and mismatched
 other-question states, but does not outperform previous-evidence-only. The
 cache audit also passed: 6,126 of 15,000 targets are immediately reusable and
 cross-condition propagation reduces 8,874 unresolved target files to 7,924
-unique fresh contexts. The initial other-question answer smoke produced 20
-valid answers but was rejected because its final boundary qid used a 20-qid
-rather than 3,000-qid cyclic pairing universe. The next authorized action is
-the guarded corrected smoke retry; complete answer generation remains locked.
+unique fresh contexts. The initial other-question answer smoke was rejected
+because its final boundary qid used a 20-qid rather than 3,000-qid cyclic
+pairing universe; after correcting that scope, all 20 contexts and answers pass
+audit. The next authorized action is the sequential five-condition answer
+chain with exact-context propagation after each completed condition.

@@ -418,6 +418,245 @@ PY
   echo "status=STAGE9_5_OTHER_QUESTION_ANSWER_SMOKE_OK"
 }
 
+answer_smoke_is_valid() {
+  python3 - "$OUTPUT_ROOT/other_question_state_answer_smoke20.json" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+if not path.is_file():
+    raise SystemExit(f"missing answer smoke audit: {path}")
+report = json.loads(path.read_text(encoding="utf-8"))
+if (
+    report.get("status") != "SMOKE_OK"
+    or report.get("method") != "other_question_state"
+    or report.get("qids") != 20
+    or report.get("failures")
+):
+    raise SystemExit(f"answer smoke is not a clean registered SMOKE_OK: {path}")
+PY
+}
+
+run_full_answer_condition() {
+  local condition="$1"
+  if [[ "${KBS_STAGE9_STATE_FULL_ANSWERS_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] Stage 9.5 full answers are locked pending smoke review" >&2
+    exit 1
+  fi
+  answer_smoke_is_valid
+
+  local selection="$OUTPUT_ROOT/selection3000/$condition.json"
+  local online_report="$OUTPUT_ROOT/selection3000/online_state.json"
+  local cache_dir="outputs/rag/cache_kbs_stage9_state_rollout/$condition"
+  local report="outputs/rag/kbs_stage9_state_rollout/${condition}_full3000.json"
+  local audit="$OUTPUT_ROOT/${condition}_answer_full3000.json"
+  if [[ "$condition" == "online_state" ]]; then
+    report="$CORRECT_REPORT"
+  fi
+  mkdir -p "$cache_dir" "$(dirname "$report")"
+
+  if [[ -s "$report" ]]; then
+    if [[ ! -s "$audit" ]]; then
+      python3 scripts/check_kbs_stage9_state_rollout_answer_report.py \
+        --method "$condition" \
+        --report "$report" \
+        --selection-report "$selection" \
+        --online-state-report "$online_report" \
+        --cache-dir "$cache_dir" \
+        --expected-qids 3000 \
+        --output "$audit"
+    fi
+    python3 - "$audit" "$condition" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+condition = sys.argv[2]
+report = json.loads(path.read_text(encoding="utf-8"))
+if (
+    report.get("status") != "OK"
+    or report.get("method") != condition
+    or report.get("qids") != 3000
+    or report.get("failures")
+):
+    raise SystemExit(f"existing answer audit is not a clean matching OK: {path}")
+PY
+    echo "[SKIP] completed answer report: $condition"
+    return
+  fi
+  if [[ -e "$audit" ]]; then
+    echo "[ERROR] audit exists without a completed answer report: $audit" >&2
+    exit 1
+  fi
+
+  local -a command=(
+    python3 scripts/run_hotpotqa_policy_rag.py
+    --samples data/hotpotqa_distractor_eval_3000_cand50/samples/test.jsonl
+    --memory data/hotpotqa_distractor_eval_3000_cand50/unit_registry/raw_units_test.jsonl
+    --queries data/hotpotqa_distractor_eval_3000_cand50/queries/test.jsonl
+    --checkpoint "$CHECKPOINT"
+    --model-dir models/deberta-v3-large
+    --state-mode policy
+    --policy-context-source "$condition"
+    --selector hybrid_policy
+    --dense-model models/bge-large-en-v1.5
+    --dense-query-mode state
+    --hybrid-alpha 0.5
+    --front-pool-k 30
+    --front-fusion rrf
+    --local-expansion-window 1
+    --mmr-lambda 0.7
+    --mmr-same-doc-similarity 0.35
+    --candidate-top-k 10
+    --select-top-k 5
+    --state-update-top-k 1
+    --policy-score-mode front_policy_blend
+    --policy-blend-weight 0.5
+    --answer-mode json
+    --generate-answers
+    --answer-cache-dir "$cache_dir"
+    --save-online-states
+    --max-qids 3000
+    --ks 1,2,3,5
+    --llm-max-retries 8
+    --llm-retry-sleep 2.0
+    --seed 20260608
+    --device cuda
+    --output "$report"
+  )
+  if [[ "$condition" == "other_question_state" ]]; then
+    command+=(--external-policy-state-report "$online_report")
+  fi
+
+  echo "[START] Stage 9.5 full answers condition=$condition qids=3000"
+  CUDA_VISIBLE_DEVICES="$CUDA_DEVICE" "${command[@]}"
+  python3 scripts/check_kbs_stage9_state_rollout_answer_report.py \
+    --method "$condition" \
+    --report "$report" \
+    --selection-report "$selection" \
+    --online-state-report "$online_report" \
+    --cache-dir "$cache_dir" \
+    --expected-qids 3000 \
+    --output "$audit"
+  echo "FINISHED_OK condition=$condition"
+}
+
+run_full_answer_chain() {
+  if [[ "${KBS_STAGE9_STATE_FULL_ANSWERS_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] Stage 9.5 full answers are locked pending smoke review" >&2
+    exit 1
+  fi
+  if [[ -z "${DEEPSEEK_API_KEY:-}" || -z "${DEEPSEEK_API_KEY//[[:space:]]/}" ]]; then
+    echo "[ERROR] export a non-empty DEEPSEEK_API_KEY" >&2
+    exit 1
+  fi
+  export DEEPSEEK_MODEL=deepseek-v4-flash
+  export DEEPSEEK_THINKING_MODE=disabled
+  answer_smoke_is_valid
+  echo "[INFO] checking frozen DeepSeek endpoint before full state-condition answer chain"
+  python3 scripts/check_deepseek_api.py
+
+  local propagation_root="$OUTPUT_ROOT/cache_propagation"
+  mkdir -p "$propagation_root"
+  run_full_answer_condition online_state
+  local condition
+  for condition in other_question_state query_only frozen_initial_state previous_evidence_only; do
+    python3 scripts/prepare_kbs_stage9_state_rollout_answer_caches.py \
+      --selection-root "$OUTPUT_ROOT/selection3000" \
+      --cache-root outputs/rag/cache_kbs_stage9_state_rollout \
+      --output "$propagation_root/before_${condition}.json"
+    run_full_answer_condition "$condition"
+  done
+  python3 scripts/prepare_kbs_stage9_state_rollout_answer_caches.py \
+    --selection-root "$OUTPUT_ROOT/selection3000" \
+    --cache-root outputs/rag/cache_kbs_stage9_state_rollout \
+    --output "$propagation_root/after_all.json"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_5_ALL_STATE_ANSWERS_OK"
+}
+
+start_full_answer_chain() {
+  if [[ "${KBS_STAGE9_STATE_FULL_ANSWERS_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] Stage 9.5 full answers are locked pending smoke review" >&2
+    exit 1
+  fi
+  if [[ -z "${DEEPSEEK_API_KEY:-}" || -z "${DEEPSEEK_API_KEY//[[:space:]]/}" ]]; then
+    echo "[ERROR] export a non-empty DEEPSEEK_API_KEY" >&2
+    exit 1
+  fi
+  answer_smoke_is_valid
+  local log_dir="outputs/logs/kbs_stage9_state_rollout"
+  local pid_file="$log_dir/answer_chain.pid"
+  mkdir -p "$log_dir"
+  if [[ -s "$pid_file" ]]; then
+    local existing_pid
+    existing_pid="$(cat "$pid_file")"
+    if [[ "$existing_pid" =~ ^[0-9]+$ ]] && kill -0 "$existing_pid" 2>/dev/null; then
+      echo "[ERROR] answer chain is already running pid=$existing_pid" >&2
+      exit 1
+    fi
+  fi
+  nohup env \
+    KBS_STAGE9_STATE_FULL_ANSWERS_AUTHORIZED=1 \
+    ACTION=answer_full_chain \
+    CUDA_DEVICE="$CUDA_DEVICE" \
+    bash scripts/run_kbs_stage9_state_rollout.sh \
+    >"$log_dir/answer_chain_launcher.log" 2>&1 < /dev/null &
+  echo "$!" >"$pid_file"
+  echo "answer_chain: STARTED pid=$! gpu=$CUDA_DEVICE"
+  echo "Check with: ACTION=answer_status bash scripts/run_kbs_stage9_state_rollout.sh"
+}
+
+show_answer_status() {
+  local log_dir="outputs/logs/kbs_stage9_state_rollout"
+  local condition audit report
+  for condition in online_state other_question_state query_only frozen_initial_state previous_evidence_only; do
+    audit="$OUTPUT_ROOT/${condition}_answer_full3000.json"
+    report="outputs/rag/kbs_stage9_state_rollout/${condition}_full3000.json"
+    if [[ "$condition" == "online_state" ]]; then
+      report="$CORRECT_REPORT"
+    fi
+    if [[ -s "$audit" ]] && python3 - "$audit" "$condition" <<'PY'
+import json
+import sys
+
+report = json.load(open(sys.argv[1], encoding="utf-8"))
+if (
+    report.get("status") != "OK"
+    or report.get("method") != sys.argv[2]
+    or report.get("qids") != 3000
+    or report.get("failures")
+):
+    raise SystemExit(1)
+PY
+    then
+      echo "$condition: FINISHED_OK"
+    elif [[ -s "$report" ]]; then
+      echo "$condition: REPORT_WRITTEN_AUDIT_PENDING"
+    else
+      echo "$condition: PENDING_OR_RUNNING"
+    fi
+  done
+  if [[ -s "$log_dir/answer_chain.pid" ]]; then
+    local pid
+    pid="$(cat "$log_dir/answer_chain.pid")"
+    if [[ "$pid" =~ ^[0-9]+$ ]] && kill -0 "$pid" 2>/dev/null; then
+      echo "answer_chain: RUNNING pid=$pid"
+    elif grep -aFq "status=STAGE9_5_ALL_STATE_ANSWERS_OK" \
+      "$log_dir/answer_chain_launcher.log" 2>/dev/null; then
+      echo "answer_chain: FINISHED_OK"
+    else
+      echo "answer_chain: FAILED_OR_INCOMPLETE"
+      echo "  inspect: $log_dir/answer_chain_launcher.log"
+    fi
+  else
+    echo "answer_chain: NOT_STARTED"
+  fi
+  echo "Status check completed; no GPU inference or API call was started."
+}
+
 case "$ACTION" in
   readiness)
     python3 scripts/check_kbs_stage9_state_rollout_readiness.py \
@@ -442,9 +681,18 @@ case "$ACTION" in
   answer_smoke)
     run_answer_smoke
     ;;
+  answer_full_start)
+    start_full_answer_chain
+    ;;
+  answer_full_chain)
+    run_full_answer_chain
+    ;;
+  answer_status)
+    show_answer_status
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, selection_smoke, selection_full, selection_status, prepare_answer_caches, answer_smoke" >&2
+    echo "Allowed: readiness, selection_smoke, selection_full, selection_status, prepare_answer_caches, answer_smoke, answer_full_start, answer_full_chain, answer_status" >&2
     exit 2
     ;;
 esac

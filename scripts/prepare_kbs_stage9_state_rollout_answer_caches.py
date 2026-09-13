@@ -25,6 +25,11 @@ METHODS = (
     "other_question_state",
     "previous_evidence_only",
 )
+STATE_ANSWER_REPORTS = tuple(
+    Path(f"outputs/rag/kbs_stage9_state_rollout/{method}_full3000.json")
+    for method in METHODS
+    if method != "online_state"
+)
 
 
 def cache_payload(
@@ -82,7 +87,7 @@ def main() -> None:
         tuple[str, str, tuple[str, ...]], tuple[Path, dict[str, Any]]
     ] = {}
     answer_disagreements = 0
-    for path in SOURCE_REPORTS:
+    for path in (*SOURCE_REPORTS, *STATE_ANSWER_REPORTS):
         audit: dict[str, Any] = {"exists": path.is_file(), "eligible": False}
         if not path.is_file():
             source_audit[str(path)] = audit
@@ -231,7 +236,9 @@ def main() -> None:
                 "question, gold answer, full ordered selected-unit sequence, "
                 "and complete answer protocol must match exactly"
             ),
-            "source_priority": [str(path) for path in SOURCE_REPORTS],
+            "source_priority": [
+                str(path) for path in (*SOURCE_REPORTS, *STATE_ANSWER_REPORTS)
+            ],
             "cache_root": str(args.cache_root),
         },
         "eligible_source_contexts": len(source_by_context),

@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: exact-context cache audit passed; bounded answer smoke authorized.
+- Status: corrected answer smoke passed; complete answer chain authorized.
 - Dataset: fixed 3,000-qid HotpotQA evaluation subset.
 - Model: frozen v27 seed-42 checkpoint.
 - Operating point: Compact, with candidate budget 10, front pool 30,
@@ -126,3 +126,11 @@ the bounded prefix. Its frozen complete-run counterpart is paired with qid 21
 in the 3,000-qid ordering. The runtime now derives the pairing universe from
 the complete external online-state report. A guarded retry is authorized and
 deletes only the single mismatched cache; the other 19 answers are retained.
+
+## Corrected answer smoke
+
+The guarded retry completed with `SMOKE_OK`. All 20 answer contexts now match
+the frozen 3,000-qid selection prefix, all 20 cache files are valid, and there
+are no empty answers, API errors, or audit failures. The execution-only smoke
+obtains EM 0.6000 and F1 0.7262. Complete sequential answer generation is now
+authorized; these smoke quality values are not scientific results.

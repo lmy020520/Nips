@@ -99,7 +99,6 @@ def main() -> None:
                 "generate_answers": True,
                 "answer_judged": args.expected_qids,
                 "answer_errors": 0,
-                "refresh_answer_cache": False,
                 "save_online_states": True,
                 **ANSWER_PROTOCOL,
             }
