@@ -9,6 +9,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+import numpy as np
+
 
 CONDITIONS = {
     "online_state": "online_state",
@@ -17,6 +19,15 @@ CONDITIONS = {
     "other_question_state": "other_question_state",
     "previous_evidence_only": "previous_evidence_only",
 }
+METRICS = (
+    "step_at_1",
+    "step_at_5",
+    "mrr",
+    "full_unit_coverage",
+    "full_doc_coverage",
+    "top1_acquired_reselection_rate",
+    "top5_acquired_slot_rate",
+)
 
 
 def named_path(value: str) -> tuple[str, Path]:
@@ -49,50 +60,109 @@ def target_sequence(results: list[dict[str, Any]]) -> list[str]:
     ]
 
 
-def selection_metrics(results: list[dict[str, Any]]) -> dict[str, float | int]:
-    step1 = step5 = steps = top1_reselected = top5_reselected = top5_slots = 0
+def qid_totals(record: dict[str, Any]) -> np.ndarray:
+    step1 = step5 = top1_reselected = top5_reselected = top5_slots = 0
     reciprocal_rank = 0.0
-    full_units = full_docs = 0
-    for record in results:
-        acquired: set[str] = set()
-        for step in record.get("steps") or []:
-            rank = int(step.get("positive_rank") or 0)
-            if rank <= 0:
-                raise ValueError("positive_rank must be a positive integer")
-            steps += 1
-            step1 += int(rank == 1)
-            step5 += int(rank <= 5)
-            reciprocal_rank += 1.0 / rank
-            predicted = str(step.get("predicted_unit_id") or "")
-            top1_reselected += int(bool(predicted) and predicted in acquired)
-            selected = [str(value) for value in step.get("selected_unit_ids") or []]
-            top5_reselected += sum(value in acquired for value in selected)
-            top5_slots += len(selected)
-            acquired.update(str(value) for value in step.get("state_update_unit_ids") or [])
-        gold_units = {str(value) for value in record.get("gold_unit_ids") or []}
-        selected_units = {str(value) for value in record.get("selected_unit_ids") or []}
-        gold_docs = {str(value) for value in record.get("gold_doc_ids") or []}
-        selected_docs = {str(value) for value in record.get("selected_doc_ids") or []}
-        full_units += int(bool(gold_units) and gold_units.issubset(selected_units))
-        full_docs += int(bool(gold_docs) and gold_docs.issubset(selected_docs))
-    qids = len(results)
+    acquired: set[str] = set()
+    steps = record.get("steps") or []
+    for step in steps:
+        rank = int(step.get("positive_rank") or 0)
+        if rank <= 0:
+            raise ValueError("positive_rank must be a positive integer")
+        step1 += int(rank == 1)
+        step5 += int(rank <= 5)
+        reciprocal_rank += 1.0 / rank
+        predicted = str(step.get("predicted_unit_id") or "")
+        top1_reselected += int(bool(predicted) and predicted in acquired)
+        selected = [str(value) for value in step.get("selected_unit_ids") or []]
+        top5_reselected += sum(value in acquired for value in selected)
+        top5_slots += len(selected)
+        acquired.update(str(value) for value in step.get("state_update_unit_ids") or [])
+    gold_units = {str(value) for value in record.get("gold_unit_ids") or []}
+    selected_units = {str(value) for value in record.get("selected_unit_ids") or []}
+    gold_docs = {str(value) for value in record.get("gold_doc_ids") or []}
+    selected_docs = {str(value) for value in record.get("selected_doc_ids") or []}
+    return np.asarray(
+        [
+            step1,
+            step5,
+            reciprocal_rank,
+            int(bool(gold_units) and gold_units.issubset(selected_units)),
+            int(bool(gold_docs) and gold_docs.issubset(selected_docs)),
+            top1_reselected,
+            top5_reselected,
+            len(steps),
+            1,
+            top5_slots,
+        ],
+        dtype=np.float64,
+    )
+
+
+def metric(rows: np.ndarray, name: str) -> float:
+    numerator = {
+        "step_at_1": 0,
+        "step_at_5": 1,
+        "mrr": 2,
+        "full_unit_coverage": 3,
+        "full_doc_coverage": 4,
+        "top1_acquired_reselection_rate": 5,
+        "top5_acquired_slot_rate": 6,
+    }[name]
+    denominator = {
+        "step_at_1": 7,
+        "step_at_5": 7,
+        "mrr": 7,
+        "full_unit_coverage": 8,
+        "full_doc_coverage": 8,
+        "top1_acquired_reselection_rate": 7,
+        "top5_acquired_slot_rate": 9,
+    }[name]
+    total = rows[:, denominator].sum()
+    return float(rows[:, numerator].sum() / total) if total else 0.0
+
+
+def selection_metrics(rows: np.ndarray) -> dict[str, float | int]:
     return {
-        "qids": qids,
-        "steps": steps,
-        "step_at_1": round(step1 / steps, 6) if steps else 0.0,
-        "step_at_5": round(step5 / steps, 6) if steps else 0.0,
-        "mrr": round(reciprocal_rank / steps, 6) if steps else 0.0,
-        "full_unit_coverage": round(full_units / qids, 6) if qids else 0.0,
-        "full_doc_coverage": round(full_docs / qids, 6) if qids else 0.0,
-        "top1_acquired_reselection_rate": round(top1_reselected / steps, 6) if steps else 0.0,
-        "top5_acquired_slot_rate": round(top5_reselected / top5_slots, 6) if top5_slots else 0.0,
+        "qids": len(rows),
+        "steps": int(rows[:, 7].sum()),
+        **{name: round(metric(rows, name), 6) for name in METRICS},
     }
+
+
+def paired_bootstrap(
+    reference: np.ndarray,
+    comparison: np.ndarray,
+    n_bootstrap: int,
+    seed: int,
+) -> dict[str, Any]:
+    output = {}
+    for offset, name in enumerate(METRICS):
+        observed = metric(reference, name) - metric(comparison, name)
+        rng = np.random.default_rng(seed + offset)
+        samples = np.empty(n_bootstrap, dtype=np.float64)
+        for index in range(n_bootstrap):
+            selected = rng.integers(0, len(reference), len(reference))
+            samples[index] = metric(reference[selected], name) - metric(
+                comparison[selected], name
+            )
+        low, high = np.percentile(samples, [2.5, 97.5])
+        output[name] = {
+            "online_state_minus_comparison": round(observed, 6),
+            "ci95_low": round(float(low), 6),
+            "ci95_high": round(float(high), 6),
+            "bootstrap_samples": n_bootstrap,
+        }
+    return output
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--report", action="append", type=named_path, required=True)
     parser.add_argument("--expected-qids", type=int, default=20)
+    parser.add_argument("--smoke", action="store_true")
+    parser.add_argument("--n-bootstrap", type=int, default=10000)
+    parser.add_argument("--seed", type=int, default=20260913)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
 
@@ -104,6 +174,7 @@ def main() -> None:
     method_metrics = {}
     qid_hashes = {}
     target_hashes = {}
+    method_rows = {}
     common_expected = {
         "samples": "data/hotpotqa_distractor_eval_3000_cand50/samples/test.jsonl",
         "memory": "data/hotpotqa_distractor_eval_3000_cand50/unit_registry/raw_units_test.jsonl",
@@ -182,7 +253,9 @@ def main() -> None:
         qid_hashes[name] = digest(qids)
         target_hashes[name] = digest(target_sequence(results))
         try:
-            method_metrics[name] = selection_metrics(results)
+            rows = np.stack([qid_totals(record) for record in results])
+            method_rows[name] = rows
+            method_metrics[name] = selection_metrics(rows)
         except ValueError as exc:
             failures.append(f"{name}: {exc}")
 
@@ -194,11 +267,29 @@ def main() -> None:
     if len(step_counts) > 1:
         failures.append("evaluated step counts differ across conditions")
 
+    paired_deltas = {}
+    if not failures and "online_state" in method_rows:
+        for offset, name in enumerate(CONDITIONS):
+            if name == "online_state":
+                continue
+            paired_deltas[f"online_state-minus-{name}"] = paired_bootstrap(
+                method_rows["online_state"],
+                method_rows[name],
+                args.n_bootstrap,
+                args.seed + 100 * offset,
+            )
+
     output = {
-        "status": "SMOKE_OK" if not failures else "FAIL",
+        "status": "SMOKE_OK" if args.smoke and not failures else (
+            "OK" if not failures else "FAIL"
+        ),
         "stage": 9,
         "step": "9.5",
-        "mode": "downstream_state_rollout_selection_smoke",
+        "mode": (
+            "downstream_state_rollout_selection_smoke"
+            if args.smoke
+            else "downstream_state_rollout_selection"
+        ),
         "api_calls": 0,
         "qids": args.expected_qids,
         "protocol": {
@@ -214,7 +305,12 @@ def main() -> None:
         "ordered_qids_sha256": qid_hashes,
         "ordered_teacher_targets_sha256": target_hashes,
         "method_metrics": method_metrics,
-        "interpretation": "Smoke metrics validate execution only and are not scientific results.",
+        "paired_deltas": paired_deltas,
+        "interpretation": (
+            "Smoke metrics validate execution only and are not scientific results."
+            if args.smoke
+            else "Selection results precede the exact-context answer-cache gate."
+        ),
         "next_gate": (
             "Run five complete 3,000-qid selection-only rollouts."
             if not failures

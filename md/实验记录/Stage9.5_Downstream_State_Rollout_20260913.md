@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: readiness passed; 20-qid selection smoke authorized.
+- Status: selection smoke passed; five-condition 3,000-qid selection authorized.
 - Dataset: fixed 3,000-qid HotpotQA evaluation subset.
 - Model: frozen v27 seed-42 checkpoint.
 - Operating point: Compact, with candidate budget 10, front pool 30,
@@ -42,3 +42,22 @@ The readiness audit passed. It verified 3,000 matching query/sample qids,
 v27 Compact protocol, and all five runtime conditions. The correct report has
 no duplicate or missing qids and no missing state steps. Run the 20-qid
 selection-only smoke next; do not generate answers.
+
+## Selection smoke
+
+All five conditions completed the same 20 qids and 50 teacher states. Ordered
+qid and teacher-target hashes match, all state metadata passed, and no API call
+or failure occurred.
+
+| Condition | Step@1 | Step@5 | MRR | Full unit | Top-1 reselection |
+|---|---:|---:|---:|---:|---:|
+| Correct online state | 0.48 | 0.90 | 0.6571 | 0.85 | 0.26 |
+| Query only | 0.28 | 0.90 | 0.5386 | 0.75 | 0.36 |
+| Frozen initial state | 0.32 | 0.90 | 0.5563 | 0.75 | 0.36 |
+| Other-question state | 0.36 | 0.88 | 0.5769 | 0.80 | 0.32 |
+| Previous evidence only | 0.52 | 0.90 | 0.6771 | 0.85 | 0.30 |
+
+These smoke values establish execution only. In particular, the apparent
+previous-only advantage cannot be interpreted scientifically at 20 qids. The
+next gate is five complete 3,000-qid selection-only rollouts with 10,000-sample
+paired bootstrap intervals; answer generation remains locked.
