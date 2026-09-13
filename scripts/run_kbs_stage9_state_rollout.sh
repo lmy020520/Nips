@@ -13,6 +13,7 @@ ACTION="${ACTION:-readiness}"
 OUTPUT_ROOT="${OUTPUT_ROOT:-outputs/analysis/kbs_stage9_state_rollout}"
 CORRECT_REPORT="${CORRECT_REPORT:-outputs/rag/kbs_v27_final_hotpot/full_compact.json}"
 GPU_LIST="${GPU_LIST:-0,1,2,3}"
+CUDA_DEVICE="${CUDA_DEVICE:-0}"
 CHECKPOINT="outputs/ranker/deberta_v3_large_v27_counterfactual_dual/best_model.pt"
 
 for plan in \
@@ -269,6 +270,103 @@ PY
   echo "No training, GPU inference, or API call was started."
 }
 
+run_answer_smoke() {
+  if [[ "${KBS_STAGE9_STATE_ANSWER_SMOKE_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] Stage 9.5 answer smoke is locked pending cache review" >&2
+    exit 1
+  fi
+  if [[ -z "${DEEPSEEK_API_KEY:-}" || -z "${DEEPSEEK_API_KEY//[[:space:]]/}" ]]; then
+    echo "[ERROR] export a non-empty DEEPSEEK_API_KEY" >&2
+    exit 1
+  fi
+  export DEEPSEEK_MODEL=deepseek-v4-flash
+  export DEEPSEEK_THINKING_MODE=disabled
+
+  local readiness="$OUTPUT_ROOT/answer_cache_readiness.json"
+  local selection="$OUTPUT_ROOT/selection3000/other_question_state.json"
+  local online_report="$OUTPUT_ROOT/selection3000/online_state.json"
+  local cache_dir="outputs/rag/cache_kbs_stage9_state_rollout/other_question_state"
+  local report="outputs/rag/kbs_stage9_state_rollout/other_question_state_smoke20.json"
+  local audit="$OUTPUT_ROOT/other_question_state_answer_smoke20.json"
+  python3 - "$readiness" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+if not path.is_file():
+    raise SystemExit(f"missing cache readiness: {path}")
+report = json.loads(path.read_text(encoding="utf-8"))
+if (
+    report.get("status") != "OK"
+    or report.get("mode") != "state_rollout_exact_context_answer_cache_preparation"
+    or report.get("failures")
+):
+    raise SystemExit(f"cache readiness is not a clean registered OK: {path}")
+PY
+  for path in "$selection" "$online_report" "$cache_dir"; do
+    if [[ ! -e "$path" ]]; then
+      echo "[ERROR] missing answer-smoke prerequisite: $path" >&2
+      exit 1
+    fi
+  done
+  if [[ -e "$report" || -e "$audit" ]]; then
+    echo "[ERROR] answer-smoke output already exists; refusing overwrite" >&2
+    exit 1
+  fi
+  mkdir -p "$cache_dir" "$(dirname "$report")"
+
+  echo "[INFO] checking frozen DeepSeek endpoint before bounded state-rollout smoke"
+  python3 scripts/check_deepseek_api.py
+  echo "[START] Stage 9.5 other-question-state answer smoke; qids=20"
+  CUDA_VISIBLE_DEVICES="$CUDA_DEVICE" python3 scripts/run_hotpotqa_policy_rag.py \
+    --samples data/hotpotqa_distractor_eval_3000_cand50/samples/test.jsonl \
+    --memory data/hotpotqa_distractor_eval_3000_cand50/unit_registry/raw_units_test.jsonl \
+    --queries data/hotpotqa_distractor_eval_3000_cand50/queries/test.jsonl \
+    --checkpoint "$CHECKPOINT" \
+    --model-dir models/deberta-v3-large \
+    --state-mode policy \
+    --policy-context-source other_question_state \
+    --external-policy-state-report "$online_report" \
+    --selector hybrid_policy \
+    --dense-model models/bge-large-en-v1.5 \
+    --dense-query-mode state \
+    --hybrid-alpha 0.5 \
+    --front-pool-k 30 \
+    --front-fusion rrf \
+    --local-expansion-window 1 \
+    --mmr-lambda 0.7 \
+    --mmr-same-doc-similarity 0.35 \
+    --candidate-top-k 10 \
+    --select-top-k 5 \
+    --state-update-top-k 1 \
+    --policy-score-mode front_policy_blend \
+    --policy-blend-weight 0.5 \
+    --answer-mode json \
+    --generate-answers \
+    --answer-cache-dir "$cache_dir" \
+    --save-online-states \
+    --max-qids 20 \
+    --ks 1,2,3,5 \
+    --llm-max-retries 8 \
+    --llm-retry-sleep 2.0 \
+    --seed 20260608 \
+    --device cuda \
+    --output "$report"
+
+  python3 scripts/check_kbs_stage9_state_rollout_answer_report.py \
+    --method other_question_state \
+    --report "$report" \
+    --selection-report "$selection" \
+    --online-state-report "$online_report" \
+    --cache-dir "$cache_dir" \
+    --expected-qids 20 \
+    --smoke \
+    --output "$audit"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_5_OTHER_QUESTION_ANSWER_SMOKE_OK"
+}
+
 case "$ACTION" in
   readiness)
     python3 scripts/check_kbs_stage9_state_rollout_readiness.py \
@@ -290,9 +388,12 @@ case "$ACTION" in
   prepare_answer_caches)
     prepare_answer_caches
     ;;
+  answer_smoke)
+    run_answer_smoke
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, selection_smoke, selection_full, selection_status, prepare_answer_caches" >&2
+    echo "Allowed: readiness, selection_smoke, selection_full, selection_status, prepare_answer_caches, answer_smoke" >&2
     exit 2
     ;;
 esac

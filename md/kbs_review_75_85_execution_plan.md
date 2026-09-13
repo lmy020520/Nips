@@ -167,6 +167,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-13 | 9.5 | Downstream state-rollout readiness | Passed; selection smoke authorized | The frozen HotpotQA set contains 3,000 matching query/sample qids and 7,296 states. The existing v27 Compact correct-state report matches every registered protocol field and preserves all 7,296 pre-step online states, with no missing or duplicate qids. All five task-level state conditions are implemented. No training, inference, or API call was made. |
 | 2026-09-13 | 9.5 | Five-condition selection smoke | Passed; full selection authorized | All five conditions completed the same 20 qids/50 states with identical ordered-qid and teacher-target hashes, valid state-intervention metadata, and no skips or API calls. Correct state exceeds query-only on Step@1, MRR, full-unit coverage, and Top-1 reselection, while previous-only is slightly higher on Step@1/MRR. These small-sample directions are diagnostics only. |
 | 2026-09-13 | 9.5 | Five-condition 3,000-qid selection | Passed; exact-context cache audit authorized | Correct online state significantly exceeds query-only, frozen-initial, and other-question state on Step@1/5, MRR, full-unit/document coverage, and Top-1 acquired-evidence reselection. Against query-only it gains 0.0850 Step@1, 0.0362 Step@5, and 0.1127 full-unit coverage while reducing Top-1 reselection by 0.0611. It ties previous-only on Step@1/MRR and is slightly lower on full-unit/document coverage. Interpretation: `STATE_RELEVANCE_SUPPORTED`, not full-history superiority. |
+| 2026-09-13 | 9.5 | Exact-context answer-cache audit | Passed; bounded answer smoke authorized | All 15 source reports match the frozen answer protocol and provide 28,982 eligible unique contexts. Exact reuse covers 6,126 of 15,000 targets; the remaining 8,874 target files contain 7,924 unique fresh contexts after 950 cross-condition duplicates are removed. Online state is fully reusable, and previous-only reuses 2,261 qids. No API call or audit failure occurred. |
 
 ## Current authorized action
 
@@ -181,7 +182,8 @@ improves all eight registered metrics. Stage 9.5 readiness and the five-
 condition smoke and complete 3,000-qid selection have passed. Correct online
 state significantly outperforms query-only, frozen-initial, and mismatched
 other-question states, but does not outperform previous-evidence-only. The
-next authorized action is an exact-context answer-cache audit across the five
-conditions, using only frozen-protocol source answers and deterministic cross-
-condition deduplication. It must make no API calls; answer smoke remains locked
-until the fresh-call requirement is reviewed.
+cache audit also passed: 6,126 of 15,000 targets are immediately reusable and
+cross-condition propagation reduces 8,874 unresolved target files to 7,924
+unique fresh contexts. The next authorized action is a bounded 20-qid answer
+smoke for other-question state, which exercises the newest runtime and least-
+reused intervention path. Complete answer generation remains locked.

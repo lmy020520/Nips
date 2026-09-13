@@ -185,7 +185,13 @@ def main() -> None:
                     failures.append(f"cache does not map to a target qid: {path}")
                     continue
                 valid_protocol = all(
-                    current.get(key) == value for key, value in ANSWER_PROTOCOL.items()
+                    current.get(key) == ANSWER_PROTOCOL[key]
+                    for key in (
+                        "answer_model",
+                        "answer_thinking_mode",
+                        "answer_mode",
+                        "answer_prompt_version",
+                    )
                 )
                 raw_answer = str(current.get("raw_answer") or "").strip()
                 if not valid_protocol or not raw_answer or raw_answer.startswith("ERROR:"):

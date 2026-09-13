@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: full selection passed; exact-context answer-cache audit authorized.
+- Status: exact-context cache audit passed; bounded answer smoke authorized.
 - Dataset: fixed 3,000-qid HotpotQA evaluation subset.
 - Model: frozen v27 seed-42 checkpoint.
 - Operating point: Compact, with candidate budget 10, front pool 30,
@@ -94,3 +94,24 @@ is better than conditioning on the latest evidence.
 The next gate is an offline exact-context cache audit across all five
 conditions. No answer call is authorized until its reuse and deduplication
 counts are reviewed.
+
+## Exact-context cache audit
+
+All 15 historical source reports match the frozen V4-Flash answer protocol,
+providing 28,982 eligible unique contexts. Of 15,000 state-condition targets,
+6,126 can be reused immediately. The remaining 8,874 target files collapse to
+7,924 unique fresh contexts after removing 950 cross-condition duplicates.
+
+| Condition | Exact reuse | Fresh before cross-condition propagation |
+|---|---:|---:|
+| Correct online state | 3,000 | 0 |
+| Query only | 279 | 2,721 |
+| Frozen initial state | 386 | 2,614 |
+| Other-question state | 200 | 2,800 |
+| Previous evidence only | 2,261 | 739 |
+
+The 413 duplicate-source raw-answer disagreements are resolved by the frozen,
+outcome-independent source priority; no answer is selected by correctness.
+The audit made no API calls and found no failures. A 20-qid
+other-question-state answer smoke is authorized because this condition uses
+the newest runtime path and has the lowest exact reuse among the interventions.
