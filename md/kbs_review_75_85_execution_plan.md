@@ -166,6 +166,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-13 | 9.4 | Final-policy 2Wiki downstream comparison | Passed; Stage 9.4 closed | Against Hybrid, every registered metric is significantly higher for all three KSG-EA operating points. Against BGE, Compact and Balanced are tied on answer metrics but significantly improve evidence and joint metrics; Recall significantly improves all eight metrics, including +0.0418 Answer F1, +0.1760 Support F1, +0.1650 Joint F1, +0.205 full support, and +0.124 ClosureSuccess@50. Decision: `FINAL_POLICY_2WIKI_COMPLETE`. |
 | 2026-09-13 | 9.5 | Downstream state-rollout readiness | Passed; selection smoke authorized | The frozen HotpotQA set contains 3,000 matching query/sample qids and 7,296 states. The existing v27 Compact correct-state report matches every registered protocol field and preserves all 7,296 pre-step online states, with no missing or duplicate qids. All five task-level state conditions are implemented. No training, inference, or API call was made. |
 | 2026-09-13 | 9.5 | Five-condition selection smoke | Passed; full selection authorized | All five conditions completed the same 20 qids/50 states with identical ordered-qid and teacher-target hashes, valid state-intervention metadata, and no skips or API calls. Correct state exceeds query-only on Step@1, MRR, full-unit coverage, and Top-1 reselection, while previous-only is slightly higher on Step@1/MRR. These small-sample directions are diagnostics only. |
+| 2026-09-13 | 9.5 | Five-condition 3,000-qid selection | Passed; exact-context cache audit authorized | Correct online state significantly exceeds query-only, frozen-initial, and other-question state on Step@1/5, MRR, full-unit/document coverage, and Top-1 acquired-evidence reselection. Against query-only it gains 0.0850 Step@1, 0.0362 Step@5, and 0.1127 full-unit coverage while reducing Top-1 reselection by 0.0611. It ties previous-only on Step@1/MRR and is slightly lower on full-unit/document coverage. Interpretation: `STATE_RELEVANCE_SUPPORTED`, not full-history superiority. |
 
 ## Current authorized action
 
@@ -177,9 +178,10 @@ the strongest BGE-Reranker baseline. Stage 9.4 establishes zero-shot 2Wiki
 transfer: Compact and Balanced significantly improve evidence and joint
 metrics over BGE while tying on answer metrics, and Recall significantly
 improves all eight registered metrics. Stage 9.5 readiness and the five-
-condition smoke have passed. The next authorized action is five complete
-3,000-qid selection-only rollouts with 10,000-sample paired bootstrap
-intervals. The correct online-state run must finish first and serve as the
-fixed external state bank for the deterministically paired other-question
-condition; the remaining four conditions may then run in parallel. No answer
-API call is authorized.
+condition smoke and complete 3,000-qid selection have passed. Correct online
+state significantly outperforms query-only, frozen-initial, and mismatched
+other-question states, but does not outperform previous-evidence-only. The
+next authorized action is an exact-context answer-cache audit across the five
+conditions, using only frozen-protocol source answers and deterministic cross-
+condition deduplication. It must make no API calls; answer smoke remains locked
+until the fresh-call requirement is reviewed.

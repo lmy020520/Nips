@@ -246,6 +246,29 @@ PY
   echo "Status check completed; no training, GPU inference, or API call was started."
 }
 
+prepare_answer_caches() {
+  local selection_summary="$OUTPUT_ROOT/selection3000/summary.json"
+  python3 - "$selection_summary" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+if not path.is_file():
+    raise SystemExit(f"missing full selection summary: {path}")
+report = json.loads(path.read_text(encoding="utf-8"))
+if report.get("status") != "OK" or report.get("failures"):
+    raise SystemExit(f"full selection is not a clean OK: {path}")
+PY
+  python3 scripts/prepare_kbs_stage9_state_rollout_answer_caches.py \
+    --selection-root "$OUTPUT_ROOT/selection3000" \
+    --cache-root outputs/rag/cache_kbs_stage9_state_rollout \
+    --output "$OUTPUT_ROOT/answer_cache_readiness.json"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_5_ANSWER_CACHE_READINESS_OK"
+  echo "No training, GPU inference, or API call was started."
+}
+
 case "$ACTION" in
   readiness)
     python3 scripts/check_kbs_stage9_state_rollout_readiness.py \
@@ -264,9 +287,12 @@ case "$ACTION" in
   selection_status)
     selection_status
     ;;
+  prepare_answer_caches)
+    prepare_answer_caches
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, selection_smoke, selection_full, selection_status" >&2
+    echo "Allowed: readiness, selection_smoke, selection_full, selection_status, prepare_answer_caches" >&2
     exit 2
     ;;
 esac

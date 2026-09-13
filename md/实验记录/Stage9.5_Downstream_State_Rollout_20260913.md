@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: selection smoke passed; five-condition 3,000-qid selection authorized.
+- Status: full selection passed; exact-context answer-cache audit authorized.
 - Dataset: fixed 3,000-qid HotpotQA evaluation subset.
 - Model: frozen v27 seed-42 checkpoint.
 - Operating point: Compact, with candidate budget 10, front pool 30,
@@ -61,3 +61,36 @@ These smoke values establish execution only. In particular, the apparent
 previous-only advantage cannot be interpreted scientifically at 20 qids. The
 next gate is five complete 3,000-qid selection-only rollouts with 10,000-sample
 paired bootstrap intervals; answer generation remains locked.
+
+## Complete selection results
+
+All five conditions completed the same 3,000 qids and 7,296 states with
+identical qid/target hashes, zero skipped states, and no API calls.
+
+| Condition | Step@1 | Step@5 | MRR | Full unit | Full doc | Top-1 reselection |
+|---|---:|---:|---:|---:|---:|---:|
+| Correct online state | 0.5515 | 0.8677 | 0.6900 | 0.7823 | 0.9393 | 0.2046 |
+| Query only | 0.4666 | 0.8316 | 0.6262 | 0.6697 | 0.8610 | 0.2658 |
+| Frozen initial state | 0.4633 | 0.8266 | 0.6217 | 0.6590 | 0.8567 | 0.2667 |
+| Other-question state | 0.4561 | 0.7939 | 0.6053 | 0.6720 | 0.8687 | 0.2351 |
+| Previous evidence only | 0.5510 | 0.8703 | 0.6908 | 0.7880 | 0.9437 | 0.2015 |
+
+Correct online state significantly exceeds query-only, frozen-initial, and
+other-question state on Step@1/5, MRR, full-unit coverage, and full-document
+coverage, while significantly reducing Top-1 acquired-evidence reselection.
+For example, relative to query-only it gains 0.0850 Step@1 [0.0745, 0.0958],
+0.0362 Step@5 [0.0288, 0.0435], and 0.1127 full-unit coverage
+[0.0993, 0.1263], while changing Top-1 reselection by -0.0611
+[-0.0684, -0.0539].
+
+Correct online state does not outperform previous-evidence-only: Step@1 and
+MRR are statistically tied, while previous-only has small but significant
+advantages of 0.0057 full-unit and 0.0043 full-document coverage. The
+registered interpretation is therefore `STATE_RELEVANCE_SUPPORTED`, not
+`FULL_HISTORY_SUPERIOR`: relevant, dynamically updated evidence state matters,
+but this benchmark does not show that retaining the full accumulated history
+is better than conditioning on the latest evidence.
+
+The next gate is an offline exact-context cache audit across all five
+conditions. No answer call is authorized until its reuse and deduplication
+counts are reviewed.

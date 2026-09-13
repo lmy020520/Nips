@@ -313,6 +313,8 @@ def main() -> None:
         ),
         "next_gate": (
             "Run five complete 3,000-qid selection-only rollouts."
+            if args.smoke and not failures
+            else "Prepare exact-context answer caches without API calls."
             if not failures
             else "Resolve failures; do not start full rollouts or answer generation."
         ),
