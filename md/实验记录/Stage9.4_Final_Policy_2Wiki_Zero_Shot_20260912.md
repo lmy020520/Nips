@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: complete five-method answers passed; offline finalization authorized.
+- Status: closed with `FINAL_POLICY_2WIKI_COMPLETE`.
 - Primary model: v27 seed 42, trained only on HotpotQA.
 - Robustness models: v27 seeds 43 and 44, selection-only until reviewed.
 - Transfer dataset: fixed 1,000-qid 2Wiki question-local evaluation memory.
@@ -124,6 +124,31 @@ context reuses, matching all 5,000 method--qid targets.
 | Hybrid-RAG | 0.497 | 0.5475 | 0.321 | 330.31 | 0.649 |
 | BGE-Reranker-RAG | 0.619 | 0.6912 | 0.565 | 384.25 | 0.669 |
 
-These point estimates are not yet the final paper table. Offline standard
-Supporting-Fact, Joint, ClosureSuccess, and paired-bootstrap reports must pass
-before Stage 9.4 is closed.
+## Final downstream metrics
+
+Offline finalization completed with no API calls or audit failures. All five
+methods contain the same 1,000 qids, and all paired intervals use 10,000
+question-level bootstrap samples.
+
+| Method | Answer F1 | Support F1 | Support EM | Joint F1 | Joint EM | Full support | ClosureSuccess |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| KSG-EA-Compact | 0.6711 | 0.5445 | 0.278 | 0.4069 | 0.212 | 0.619 | 0.463@10 |
+| KSG-EA-Balanced | 0.6999 | 0.5734 | 0.308 | 0.4372 | 0.234 | 0.676 | 0.502@15 |
+| KSG-EA-Recall | 0.7330 | 0.6209 | 0.360 | 0.4813 | 0.269 | 0.770 | 0.563@50 |
+| Hybrid-RAG | 0.5475 | 0.2853 | 0.026 | 0.1893 | 0.022 | 0.321 | 0.259 |
+| BGE-Reranker-RAG | 0.6912 | 0.4450 | 0.061 | 0.3162 | 0.046 | 0.565 | 0.439 |
+
+Against Hybrid-RAG, every registered downstream metric is significantly
+higher for all three KSG-EA operating points. Against BGE-Reranker, Compact is
+tied on Answer EM/F1 and ClosureSuccess@10 but significantly improves Support
+F1 by 0.0995 [0.0774, 0.1214], Joint F1 by 0.0907 [0.0684, 0.1130], and full
+support coverage by 0.054 [0.023, 0.085]. Balanced is tied on Answer EM/F1 and
+significantly improves the remaining six metrics. Recall significantly
+improves all eight metrics; its BGE-relative deltas include +0.0418 Answer F1
+[0.0196, 0.0642], +0.1760 Support F1 [0.1546, 0.1973], +0.1650 Joint F1
+[0.1437, 0.1867], +0.205 full support [0.174, 0.235], and +0.124
+ClosureSuccess@50 [0.097, 0.152].
+
+The final decision is `FINAL_POLICY_2WIKI_COMPLETE`. The defensible claim is
+zero-shot policy transfer with strong evidence and joint-quality gains;
+Compact and Balanced do not establish answer-quality superiority over BGE.

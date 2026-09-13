@@ -146,6 +146,69 @@ def load_queries(path: str) -> dict[str, dict]:
     return {str(row.get("qid")): row for row in read_jsonl(query_path) if row.get("qid")}
 
 
+def load_external_policy_state_bank(
+    path: str,
+    target_qids: list[str],
+) -> tuple[dict[str, dict[int, str]], dict[str, str]]:
+    """Load matched online states and deterministically pair each qid with another qid."""
+    if not path:
+        raise ValueError(
+            "--external-policy-state-report is required for "
+            "--policy-context-source other_question_state"
+        )
+    report_path = Path(path)
+    if not report_path.is_file():
+        raise FileNotFoundError(report_path)
+    report = json.loads(report_path.read_text(encoding="utf-8"))
+    summary = report.get("summary") or {}
+    if summary.get("policy_context_source") != "online_state":
+        raise ValueError("external policy-state report must use policy_context_source=online_state")
+    if not summary.get("save_online_states"):
+        raise ValueError("external policy-state report must contain saved online states")
+
+    state_bank: dict[str, dict[int, str]] = {}
+    for record in report.get("results") or report.get("records") or []:
+        qid = str(record.get("qid") or "")
+        if not qid:
+            continue
+        states = {}
+        for step in record.get("steps") or []:
+            state = step.get("online_state_before")
+            if not isinstance(state, dict):
+                raise ValueError(f"external state is missing for qid={qid}, t={step.get('t')}")
+            states[int(step.get("t") or 0)] = str(state.get("K_t") or "")
+        if states:
+            state_bank[qid] = states
+
+    missing = [qid for qid in target_qids if qid not in state_bank]
+    if missing:
+        raise ValueError(
+            f"external policy-state report is missing {len(missing)} target qids; "
+            f"examples={missing[:5]}"
+        )
+    if len(target_qids) < 2:
+        raise ValueError("other_question_state requires at least two qids")
+
+    # A cyclic shift is deterministic, outcome-independent, and guarantees a
+    # different source question for every target question.
+    pairing = {
+        qid: target_qids[(index + 1) % len(target_qids)]
+        for index, qid in enumerate(target_qids)
+    }
+    return state_bank, pairing
+
+
+def external_policy_state_at_step(
+    state_bank: dict[str, dict[int, str]],
+    source_qid: str,
+    target_t: int,
+) -> tuple[str, int]:
+    states = state_bank[source_qid]
+    available = [step for step in states if step <= target_t]
+    source_t = max(available) if available else min(states)
+    return states[source_t], source_t
+
+
 def normalize_answer(text: str) -> str:
     def remove_articles(value: str) -> str:
         return re.sub(r"\b(a|an|the)\b", " ", value)
@@ -947,6 +1010,8 @@ def build_parser() -> argparse.ArgumentParser:
             "legacy",
             "online_state",
             "query_only",
+            "frozen_initial_state",
+            "other_question_state",
             "previous_evidence_only",
             "direct_evidence_only",
             "clue_state",
@@ -955,9 +1020,18 @@ def build_parser() -> argparse.ArgumentParser:
         help=(
             "For --state-mode policy, use legacy selected-evidence notebook, "
             "rendered online K_t, deterministic textual clue state, question-only "
-            "context, or only the previous online top-1 prediction as an anchor. "
+            "context, a frozen initial notebook, a deterministic other-question "
+            "online state, or only the previous online top-1 prediction as an anchor. "
             "direct_evidence_only freezes the first online top-1 prediction as "
             "the anchor for all later steps."
+        ),
+    )
+    parser.add_argument(
+        "--external-policy-state-report",
+        default="",
+        help=(
+            "Saved online-state report used only by other_question_state. Each "
+            "target qid receives the next qid's state under a deterministic cyclic pairing."
         ),
     )
     parser.add_argument(
@@ -1135,6 +1209,14 @@ def main() -> None:
     if args.max_qids > 0:
         qids = qids[: args.max_qids]
 
+    external_state_bank: dict[str, dict[int, str]] = {}
+    external_state_pairing: dict[str, str] = {}
+    if args.policy_context_source == "other_question_state":
+        external_state_bank, external_state_pairing = load_external_policy_state_bank(
+            args.external_policy_state_report,
+            qids,
+        )
+
     policy = None
     if args.selector in {"policy", "dense_policy", "hybrid_policy"}:
         policy = PolicyModel(
@@ -1206,6 +1288,7 @@ def main() -> None:
         selected_doc_ids: set[str] = set()
         state_written_units: set[str] = set()
         online_state = init_online_state()
+        frozen_initial_notebook = str(online_state.get("K_t") or "")
         clue_evidence_texts: list[str] = []
         clue_state = None
         previous_predicted_unit_id = None
@@ -1247,9 +1330,30 @@ def main() -> None:
                 continue
 
             context_anchor_unit_id = None
+            context_state_metadata = None
             if args.state_mode == "policy":
                 if args.policy_context_source == "query_only":
                     context = f"Question: {question}"
+                elif args.policy_context_source == "frozen_initial_state":
+                    context = f"Question: {question}\nNotebook:\n{frozen_initial_notebook}"
+                    context_state_metadata = {
+                        "source_qid": qid,
+                        "source_t": 0,
+                        "frozen": True,
+                    }
+                elif args.policy_context_source == "other_question_state":
+                    source_qid = external_state_pairing[qid]
+                    notebook, source_t = external_policy_state_at_step(
+                        external_state_bank,
+                        source_qid,
+                        int(row.get("t") or 0),
+                    )
+                    context = f"Question: {question}\nNotebook:\n{notebook}"
+                    context_state_metadata = {
+                        "source_qid": source_qid,
+                        "source_t": source_t,
+                        "pairing": "cyclic_next_qid",
+                    }
                 elif args.policy_context_source == "previous_evidence_only":
                     context_anchor_unit_id = previous_predicted_unit_id
                     previous_item = memory.get(previous_predicted_unit_id or "")
@@ -1653,6 +1757,8 @@ def main() -> None:
                 "direct_evidence_only",
             }:
                 step_record["context_anchor_unit_id"] = context_anchor_unit_id
+            if context_state_metadata is not None:
+                step_record["context_state_metadata"] = context_state_metadata
             if args.policy_context_source == "direct_evidence_only":
                 step_record["direct_evidence_unit_id"] = (
                     direct_predicted_unit_id
@@ -1783,6 +1889,16 @@ def main() -> None:
         "checkpoint": args.checkpoint,
         "state_mode": args.state_mode,
         "policy_context_source": args.policy_context_source,
+        "external_policy_state_report": (
+            args.external_policy_state_report
+            if args.policy_context_source == "other_question_state"
+            else ""
+        ),
+        "external_policy_state_pairing": (
+            "cyclic_next_qid"
+            if args.policy_context_source == "other_question_state"
+            else ""
+        ),
         "clue_state_version": (
             CLUE_STATE_VERSION if args.policy_context_source == "clue_state" else ""
         ),
