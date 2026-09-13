@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: readiness tooling prepared; server audit pending.
+- Status: readiness passed; 20-qid selection smoke authorized.
 - Dataset: fixed 3,000-qid HotpotQA evaluation subset.
 - Model: frozen v27 seed-42 checkpoint.
 - Operating point: Compact, with candidate budget 10, front pool 30,
@@ -37,7 +37,8 @@ rollout experiment.
 
 ## Next gate
 
-Run the readiness audit. It must verify the existing correct online-state
-report, all saved pre-step states, the v27 Compact protocol, and the five
-runtime conditions without training, GPU inference, or API calls. Only a
-clean `OK` authorizes a 20-qid selection-only smoke.
+The readiness audit passed. It verified 3,000 matching query/sample qids,
+7,296 evaluation states, all 7,296 saved pre-step online states, the complete
+v27 Compact protocol, and all five runtime conditions. The correct report has
+no duplicate or missing qids and no missing state steps. Run the 20-qid
+selection-only smoke next; do not generate answers.

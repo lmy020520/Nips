@@ -164,6 +164,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-13 | 9.4 | Seed-42 Compact answer smoke | Passed; complete five-method answer chain authorized | The frozen 20-qid run completed without answer, context, protocol, or cache failures. It exercised one exact historical reuse and 19 fresh answers. Smoke EM/F1 0.6500/0.7207 are execution diagnostics only. The full chain must run sequentially with cache propagation before each method. |
 | 2026-09-13 | 9.4 | Complete five-method answers | Passed; offline finalization authorized | Compact/Balanced/Recall/Hybrid/BGE completed 1,000 qids with Answer F1 0.6711/0.6999/0.7330/0.5475/0.6912 and no answer, context, protocol, or cache failures. The chain made exactly 4,431 fresh calls and 569 exact-context reuses, accounting for all 5,000 method--qid targets. |
 | 2026-09-13 | 9.4 | Final-policy 2Wiki downstream comparison | Passed; Stage 9.4 closed | Against Hybrid, every registered metric is significantly higher for all three KSG-EA operating points. Against BGE, Compact and Balanced are tied on answer metrics but significantly improve evidence and joint metrics; Recall significantly improves all eight metrics, including +0.0418 Answer F1, +0.1760 Support F1, +0.1650 Joint F1, +0.205 full support, and +0.124 ClosureSuccess@50. Decision: `FINAL_POLICY_2WIKI_COMPLETE`. |
+| 2026-09-13 | 9.5 | Downstream state-rollout readiness | Passed; selection smoke authorized | The frozen HotpotQA set contains 3,000 matching query/sample qids and 7,296 states. The existing v27 Compact correct-state report matches every registered protocol field and preserves all 7,296 pre-step online states, with no missing or duplicate qids. All five task-level state conditions are implemented. No training, inference, or API call was made. |
 
 ## Current authorized action
 
@@ -174,7 +175,9 @@ closure metrics, with Recall also significantly improving answer quality over
 the strongest BGE-Reranker baseline. Stage 9.4 establishes zero-shot 2Wiki
 transfer: Compact and Balanced significantly improve evidence and joint
 metrics over BGE while tying on answer metrics, and Recall significantly
-improves all eight registered metrics. The next authorized action is Stage 9.5
-downstream state-rollout readiness. It must verify the matched v27 Compact
-online-state report and the five registered state conditions without training,
-GPU inference, or API calls.
+improves all eight registered metrics. Stage 9.5 readiness has passed. The next
+authorized action is a 20-qid, five-condition selection-only rollout smoke.
+The correct online-state run must finish first and serve as the fixed external
+state bank for the deterministically paired other-question condition; the
+remaining four conditions may then run in parallel. No answer API call is
+authorized.
