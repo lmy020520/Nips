@@ -176,6 +176,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-14 | 9.6 | Breadth-readiness instrumentation | Prepared; server audit authorized | The no-run audit discovers official MuSiQue-Ans dev data, validates answerable rows and decomposition-to-support mappings, checks paragraph-budget feasibility and frozen v27 prerequisites, and records that MuSiQue evidence metrics are paragraph-level. It also verifies that the current answer runtime is not yet an independent non-DeepSeek backend. The audit performs no download, training, GPU inference, or API call. |
 | 2026-09-14 | 9.6 | Initial breadth-readiness audit | Blocked only on official MuSiQue data | All plans, evaluators, the frozen v27 checkpoint, and DeBERTa/BGE model assets are present. No MuSiQue-Ans dev file or archive was found, and the current DeepSeek-specific runtime does not qualify as an independent second-generator branch. The next authorized action is official MuSiQue v1.0 data acquisition followed by the same no-run schema audit; no model run or API call is authorized. |
 | 2026-09-14 | 9.6 | MuSiQue data readiness | Passed; deterministic adapter build authorized | The official MuSiQue-Ans dev file contains 2,417/2,417 schema-valid answerable rows, no duplicate ids or exclusions, and exactly matched 2/3/4-hop decomposition and support counts. All rows support budgets 10/15, 2,401 support 20, and none support 50. Compact-10 is primary, Balanced-15 is optional, and Recall-50 is prohibited. The next action builds and independently audits a fixed 1,000-qid paragraph-unit subset without training, GPU inference, or API calls. |
+| 2026-09-14 | 9.6 | MuSiQue paragraph adapter | Passed; bounded Compact selection smoke authorized | Deterministic construction and independent replay agree on 1,000 qids, 2,629 states, 19,995 paragraph units, source/qid hashes, candidate pools, and ordered paragraph targets. The policy-facing files contain zero teacher-only decomposition keys. Candidate pools contain 15--20 units after acquired-support removal, so Compact-10 is feasible throughout. One seed-42 20-qid selection-only smoke is authorized; answer generation remains locked. |
 
 ## Current authorized action
 
@@ -213,4 +214,6 @@ repeat of the no-run audit were authorized. The repeated audit passed as
 `READY_MUSIQUE`: all 2,417 dev rows are schema-valid, while candidate budget 50
 is impossible. Deterministic construction and independent replay audit of the
 fixed 1,000-qid paragraph-unit subset are now authorized; all model and answer
-runs remain locked.
+runs remain locked. The adapter audit subsequently passed with exact replay and
+zero teacher-key leakage. One 20-qid seed-42 Compact selection-only smoke is
+now authorized; complete selection and all answer runs remain locked.

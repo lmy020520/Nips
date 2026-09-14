@@ -90,3 +90,18 @@ primary point and may use Balanced-15 as a secondary point, but Recall-50 is
 prohibited. The next authorized action is deterministic construction and
 independent replay audit of a fixed 1,000-qid paragraph-unit subset. This
 action remains CPU-only and makes no API call.
+
+## Adapter audit
+
+The deterministic adapter and independent replay audit passed on the server.
+The fixed subset contains 1,000 qids, 2,629 trajectory states, and 19,995
+paragraph units. It preserves 287 rows with answer aliases. The generated
+source SHA-256 and ordered-qid SHA-256 match independent replay, all candidate
+pools and ordered positive targets are reproducible, and no teacher-only
+decomposition key appears in policy-facing queries or samples.
+
+Candidate pools range from 15 to 20 units after previously acquired teacher
+supports are removed. Compact-10 is therefore feasible for every state. The
+next authorized action is one seed-42, 20-qid Compact selection-only smoke
+under the frozen v27 protocol. Its evidence metrics must be labelled paragraph
+alignment and paragraph coverage. No answer generation is authorized.
