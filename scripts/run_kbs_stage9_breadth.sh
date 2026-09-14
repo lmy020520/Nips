@@ -292,6 +292,47 @@ finalize_full_selection() {
   echo "No GPU inference or answer API call was started by finalization."
 }
 
+run_selection_bootstrap() {
+  local output_dir="$OUTPUT_ROOT/selection1000"
+  local selection_summary="$output_dir/summary.json"
+  local bootstrap_report="$output_dir/paired_bootstrap.json"
+  python3 - "$selection_summary" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+if not path.is_file():
+    raise SystemExit(f"missing full selection summary: {path}")
+report = json.loads(path.read_text(encoding="utf-8"))
+if (
+    report.get("status") != "OK"
+    or report.get("mode") != "musique_zero_shot_selection"
+    or report.get("qids") != 1000
+    or report.get("failures")
+):
+    raise SystemExit(f"full selection summary is not a clean registered OK: {path}")
+PY
+  if [[ -e "$bootstrap_report" ]]; then
+    echo "[ERROR] refusing to overwrite bootstrap report: $bootstrap_report" >&2
+    exit 1
+  fi
+  python3 scripts/bootstrap_kbs_stage9_musique_selection.py \
+    --report "compact_seed42=$output_dir/compact_seed42.json" \
+    --report "balanced_seed42=$output_dir/balanced_seed42.json" \
+    --report "hybrid=$output_dir/hybrid.json" \
+    --report "bge_reranker=$output_dir/bge_reranker.json" \
+    --selection-summary "$selection_summary" \
+    --expected-qids 1000 \
+    --n-bootstrap 10000 \
+    --seed 20260914 \
+    --output "$bootstrap_report"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_6_MUSIQUE_SELECTION_BOOTSTRAP_OK"
+  echo "report=$bootstrap_report"
+  echo "No GPU inference or answer API call was started."
+}
+
 case "$ACTION" in
   readiness)
     command=(
@@ -417,9 +458,12 @@ case "$ACTION" in
   selection_finalize)
     finalize_full_selection
     ;;
+  selection_bootstrap)
+    run_selection_bootstrap
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, build_adapter, audit_adapter, selection_smoke, audit_selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize" >&2
+    echo "Allowed: readiness, build_adapter, audit_adapter, selection_smoke, audit_selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, selection_bootstrap" >&2
     exit 2
     ;;
 esac

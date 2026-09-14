@@ -2,8 +2,8 @@
 
 ## Current status
 
-- Status: MuSiQue adapter and corrected Compact selection smoke passed.
-- Authorized action: four-method 1,000-qid selection-only evaluation.
+- Status: four-method MuSiQue selection passed on all 1,000 qids.
+- Authorized action: offline paired qid-cluster Bootstrap; no answer call.
 - Preferred branch: MuSiQue zero-shot transfer when its official development
   data and paragraph-level support mapping pass the registered checks.
 - Alternative branch: one non-DeepSeek generator replication only when an
@@ -136,3 +136,27 @@ secondary operating point, Hybrid-RAG, and BGE-Reranker-RAG. Recall-50 remains
 prohibited because the official question-local memories contain at most 20
 paragraphs. All runs are selection-only and use the same ordered qids and
 paragraph targets; answer generation remains locked.
+
+## Complete zero-shot selection result
+
+All four methods completed the same 1,000 qids and 2,629 paragraph-level
+states. Ordered qid and target hashes agree, no state was skipped, and no
+answer output or invalid evidence granularity was observed.
+
+| Method | Para Align@1 | Para Align@5 | Full paragraph | Full title | ms/qid |
+|---|---:|---:|---:|---:|---:|
+| KSG-EA-Compact-10 | 0.4892 | 0.8186 | 0.700 | 0.721 | 1474.97 |
+| KSG-EA-Balanced-15 | 0.4941 | 0.8383 | 0.717 | 0.735 | 1775.28 |
+| Hybrid-RAG | 0.3275 | 0.6946 | 0.436 | 0.463 | 730.85 |
+| BGE-Reranker-RAG | 0.3827 | 0.7155 | 0.669 | 0.684 | 1010.21 |
+
+Compact minus BGE is +0.1065/+0.1031 on paragraph Alignment@1/5 and
++0.031/+0.037 on full paragraph/title coverage. Balanced minus BGE is
++0.1114/+0.1229 and +0.048/+0.051, respectively. The gains over Hybrid are
+larger, while Balanced provides a small quality gain over Compact at greater
+latency. These are currently point estimates; significance language remains
+locked until the registered 10,000-sample paired qid-cluster Bootstrap passes.
+
+Because MuSiQue uses paragraph units, none of these values may be merged into
+the sentence-level HotpotQA/2Wiki Step@k table. They support a separate
+zero-shot paragraph-evidence transfer analysis.
