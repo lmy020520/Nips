@@ -134,3 +134,19 @@ the frozen 3,000-qid selection prefix, all 20 cache files are valid, and there
 are no empty answers, API errors, or audit failures. The execution-only smoke
 obtains EM 0.6000 and F1 0.7262. Complete sequential answer generation is now
 authorized; these smoke quality values are not scientific results.
+
+## Complete-chain interruption and recovery
+
+The first complete-chain attempt successfully audited the existing online-
+state report and completed both other-question-state and query-only reports.
+It stopped during cache preparation before frozen-initial answer generation.
+The failure was provenance-only: after query-only became available, the cache
+builder placed it ahead of the previously completed other-question source and
+therefore expected a different `source_report` for duplicate contexts. The
+answer text, frozen protocol, and selected contexts were not invalidated.
+
+Dynamic source reports are now ordered exactly as the sequential execution:
+other-question, query-only, frozen-initial, and previous-only. A later source
+can fill a missing context but cannot supersede established provenance. The
+completed reports and all valid caches are retained, and a guarded normal
+restart will skip completed conditions and resume before frozen-initial.

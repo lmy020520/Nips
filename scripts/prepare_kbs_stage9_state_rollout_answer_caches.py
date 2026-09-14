@@ -27,8 +27,12 @@ METHODS = (
 )
 STATE_ANSWER_REPORTS = tuple(
     Path(f"outputs/rag/kbs_stage9_state_rollout/{method}_full3000.json")
-    for method in METHODS
-    if method != "online_state"
+    for method in (
+        "other_question_state",
+        "query_only",
+        "frozen_initial_state",
+        "previous_evidence_only",
+    )
 )
 
 

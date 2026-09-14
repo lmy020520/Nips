@@ -170,6 +170,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-13 | 9.5 | Exact-context answer-cache audit | Passed; bounded answer smoke authorized | All 15 source reports match the frozen answer protocol and provide 28,982 eligible unique contexts. Exact reuse covers 6,126 of 15,000 targets; the remaining 8,874 target files contain 7,924 unique fresh contexts after 950 cross-condition duplicates are removed. Online state is fully reusable, and previous-only reuses 2,261 qids. No API call or audit failure occurred. |
 | 2026-09-13 | 9.5 | Initial other-question answer smoke | Rejected; corrected retry authorized | All 20 answers were valid, but one selected context differed from the frozen full-run prefix. The bounded rerun paired its final qid against the first qid of the 20-qid prefix rather than the next qid in the complete 3,000-qid ordering. This was a boundary-scope implementation error, not a model or API failure. The runtime now derives cyclic pairing from the complete external report, and the guarded retry removes only the one invalid-context cache. |
 | 2026-09-13 | 9.5 | Corrected other-question answer smoke | Passed; complete answer chain authorized | The corrected 20-qid run matches every frozen selection context and completes all answers under the registered V4-Flash protocol. It has no empty/error answers, invalid caches, context mismatches, or audit failures. Smoke EM/F1 are execution diagnostics only. |
+| 2026-09-14 | 9.5 | First complete-answer-chain attempt | Interrupted; metadata-priority fix and resume authorized | Online-state reuse and the complete other-question/query-only reports passed audit. Before frozen-initial generation, cache preparation rejected propagated files because newly available query-only reports were ordered ahead of the earlier other-question source, changing only `source_report` provenance. The source priority is now frozen to the execution order, so later reports can fill missing contexts but cannot supersede prior provenance. No completed answer report is invalidated and cached answers are retained. |
 
 ## Current authorized action
 
@@ -189,5 +190,8 @@ cross-condition propagation reduces 8,874 unresolved target files to 7,924
 unique fresh contexts. The initial other-question answer smoke was rejected
 because its final boundary qid used a 20-qid rather than 3,000-qid cyclic
 pairing universe; after correcting that scope, all 20 contexts and answers pass
-audit. The next authorized action is the sequential five-condition answer
-chain with exact-context propagation after each completed condition.
+audit. The first complete-chain attempt finished and audited online-state,
+other-question, and query-only outputs, then stopped before frozen-initial
+generation because dynamic source ordering changed propagated provenance. The
+priority is now frozen to execution order. The next authorized action is a
+resumed chain, retaining all valid reports and caches.
