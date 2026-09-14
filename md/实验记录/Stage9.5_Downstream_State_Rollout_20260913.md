@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: corrected answer smoke passed; complete answer chain authorized.
+- Status: closed with `STATE_RELEVANCE_DOWNSTREAM_SUPPORTED`.
 - Dataset: fixed 3,000-qid HotpotQA evaluation subset.
 - Model: frozen v27 seed-42 checkpoint.
 - Operating point: Compact, with candidate budget 10, front pool 30,
@@ -157,3 +157,45 @@ The resumed chain completed all five conditions. Each condition has 3,000
 valid cache files and a clean answer audit, and the launcher reached
 `STAGE9_5_ALL_STATE_ANSWERS_OK`. Offline standard-metric replay and paired qid
 bootstrap are authorized next; no further generator call is required.
+
+## Final downstream results
+
+All five conditions contain the same 3,000 qids and use the frozen answer
+protocol. Standard metric replay and 10,000-sample paired qid bootstrap pass
+without failures.
+
+| Condition | Answer F1 | Support F1 | Support EM | Joint F1 | Joint EM | Full support | Closure@10 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Correct online state | 0.7678 | 0.6561 | 0.3623 | 0.5293 | 0.2520 | 0.7823 | 0.5153 |
+| Query only | 0.7342 | 0.5273 | 0.1813 | 0.4052 | 0.1297 | 0.6697 | 0.4583 |
+| Frozen initial state | 0.7329 | 0.5244 | 0.1793 | 0.4024 | 0.1273 | 0.6590 | 0.4550 |
+| Other-question state | 0.7371 | 0.5268 | 0.1727 | 0.4061 | 0.1217 | 0.6720 | 0.4607 |
+| Previous evidence only | 0.7741 | 0.6575 | 0.3657 | 0.5347 | 0.2593 | 0.7880 | 0.5200 |
+
+The key paired deltas below are Correct Online State minus the stated
+condition.
+
+| Contrast | Answer F1 | Support F1 | Joint F1 | Full support | Closure@10 |
+|---|---:|---:|---:|---:|---:|
+| vs Query only | +0.0336 [0.0230, 0.0445] | +0.1288 [0.1191, 0.1387] | +0.1241 [0.1133, 0.1350] | +0.1127 [0.0990, 0.1260] | +0.0570 [0.0433, 0.0707] |
+| vs Frozen initial | +0.0349 [0.0243, 0.0453] | +0.1317 [0.1228, 0.1407] | +0.1269 [0.1167, 0.1371] | +0.1233 [0.1107, 0.1360] | +0.0603 [0.0477, 0.0733] |
+| vs Other question | +0.0307 [0.0204, 0.0411] | +0.1293 [0.1199, 0.1385] | +0.1232 [0.1129, 0.1333] | +0.1103 [0.0973, 0.1237] | +0.0547 [0.0420, 0.0677] |
+| vs Previous only | -0.0063 [-0.0113, -0.0016] | -0.0014 [-0.0043, 0.0015] | -0.0054 [-0.0093, -0.0016] | -0.0057 [-0.0097, -0.0020] | -0.0047 [-0.0107, 0.0013] |
+
+Correct online state significantly improves all eight registered downstream
+metrics over query-only, frozen-initial, and other-question state. This is
+direct task-level evidence that relevant, dynamically updated state affects
+both evidence acquisition and final answering, rather than serving only as a
+conceptual wrapper. The registered decision is
+`STATE_RELEVANCE_DOWNSTREAM_SUPPORTED`.
+
+Previous-evidence-only is statistically tied on Supporting-Fact F1 and
+Closure@10 and is slightly better on Answer F1, Joint F1, and full support.
+Consequently, `FULL_HISTORY_SUPERIOR` is not supported. The paper must present
+this as a scope boundary: HotpotQA establishes the value of relevant changing
+state, but does not show that retaining the entire accumulated notebook is
+better than a compact latest-evidence state.
+
+The completed cache accounting exactly matches the preregistered deduplicated
+requirement: 7,924 answers were fresh and 7,076 were reused, totaling all
+15,000 condition--qid targets with no invalid cache entries.
