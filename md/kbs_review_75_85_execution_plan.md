@@ -173,6 +173,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-14 | 9.5 | First complete-answer-chain attempt | Interrupted; metadata-priority fix and resume authorized | Online-state reuse and the complete other-question/query-only reports passed audit. Before frozen-initial generation, cache preparation rejected propagated files because newly available query-only reports were ordered ahead of the earlier other-question source, changing only `source_report` provenance. The source priority is now frozen to the execution order, so later reports can fill missing contexts but cannot supersede prior provenance. No completed answer report is invalidated and cached answers are retained. |
 | 2026-09-14 | 9.5 | Complete five-condition answers | Passed; offline finalization authorized | All five conditions contain 3,000 valid caches and clean answer audits, and the sequential chain reached `STAGE9_5_ALL_STATE_ANSWERS_OK`. The remaining work is deterministic standard-metric replay and 10,000-sample paired qid bootstrap; no further answer call is authorized. |
 | 2026-09-14 | 9.5 | Final downstream state intervention | Passed; Stage 9.5 closed | Correct online state significantly exceeds query-only, frozen-initial, and other-question state on all eight registered downstream metrics. Relative to query-only, it gains 0.0336 Answer F1, 0.1288 Supporting-Fact F1, 0.1241 Joint F1, 0.1127 full support, and 0.0570 Closure@10; every paired interval excludes zero. The corresponding gains over frozen and mismatched states are also all significant. Previous-only is tied on Support F1/Closure and slightly better on Answer/Joint/full support, so the decision is `STATE_RELEVANCE_DOWNSTREAM_SUPPORTED`, not `FULL_HISTORY_SUPERIOR`. Exact accounting records 7,924 fresh and 7,076 reused answers. |
+| 2026-09-14 | 9.6 | Breadth-readiness instrumentation | Prepared; server audit authorized | The no-run audit discovers official MuSiQue-Ans dev data, validates answerable rows and decomposition-to-support mappings, checks paragraph-budget feasibility and frozen v27 prerequisites, and records that MuSiQue evidence metrics are paragraph-level. It also verifies that the current answer runtime is not yet an independent non-DeepSeek backend. The audit performs no download, training, GPU inference, or API call. |
 
 ## Current authorized action
 
@@ -200,6 +201,8 @@ priority is now frozen to execution order. The resumed chain completed all
 significant gains on all eight downstream metrics over query-only, frozen, and
 mismatched states, while previous-only remains tied or slightly stronger. Stage
 9.5 is closed as `STATE_RELEVANCE_DOWNSTREAM_SUPPORTED`. The next authorized
-action is a no-run Stage 9.6 breadth-readiness audit, preferring MuSiQue only if
-its question-local memory and supporting-fact mapping can be constructed
-reliably; no API call is authorized by that audit.
+action is the no-run Stage 9.6 breadth-readiness audit now implemented in
+`scripts/run_kbs_stage9_breadth.sh`. MuSiQue is preferred only if its official
+question-local paragraphs and decomposition-to-support mapping pass the
+registered checks. No download, training, GPU inference, or API call is
+authorized by this audit.
