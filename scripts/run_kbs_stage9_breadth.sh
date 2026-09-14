@@ -73,6 +73,225 @@ if report.get("status") != "OK" or report.get("failure_count") != 0:
 PY
 }
 
+selection_smoke_is_valid() {
+  python3 - "$OUTPUT_ROOT/selection_smoke20/summary.json" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+if not path.is_file():
+    raise SystemExit(f"missing selection smoke summary: {path}")
+report = json.loads(path.read_text(encoding="utf-8"))
+if report.get("status") != "SMOKE_OK" or report.get("failures"):
+    raise SystemExit(f"selection smoke is not a clean SMOKE_OK: {path}")
+PY
+}
+
+run_full_selection_method() {
+  local method="$1"
+  local device="$2"
+  local output_dir="$OUTPUT_ROOT/selection1000"
+  local output="$output_dir/$method.json"
+  local selector candidate_top_k state_update_top_k
+  selector="hybrid_policy"
+  candidate_top_k=10
+  state_update_top_k=1
+
+  case "$method" in
+    compact_seed42)
+      ;;
+    balanced_seed42)
+      candidate_top_k=15
+      ;;
+    hybrid)
+      selector="hybrid"
+      candidate_top_k=8
+      state_update_top_k=5
+      ;;
+    bge_reranker)
+      selector="generic_reranker"
+      candidate_top_k=8
+      state_update_top_k=5
+      ;;
+    *)
+      echo "[ERROR] unknown Stage 9.6 full-selection method: $method" >&2
+      return 1
+      ;;
+  esac
+  if [[ -e "$output" ]]; then
+    echo "[ERROR] refusing to overwrite full selection report: $output" >&2
+    return 1
+  fi
+
+  local -a command=(
+    python3 scripts/run_hotpotqa_policy_rag.py
+    --samples "$DATA_ROOT/samples/test.jsonl"
+    --memory "$DATA_ROOT/unit_registry/raw_units_test.jsonl"
+    --queries "$DATA_ROOT/queries/test.jsonl"
+    --checkpoint "$CHECKPOINT"
+    --state-mode policy
+    --policy-context-source online_state
+    --selector "$selector"
+    --hybrid-alpha 0.5
+    --front-pool-k 30
+    --candidate-top-k "$candidate_top_k"
+    --select-top-k 5
+    --state-update-top-k "$state_update_top_k"
+    --answer-mode json
+    --max-qids 1000
+    --ks 1,2,3,5
+    --seed 20260608
+    --profile-runtime
+    --profile-warmup-qids 20
+    --device cuda
+    --output "$output"
+  )
+  if [[ "$selector" == "hybrid_policy" ]]; then
+    command+=(
+      --dense-model models/bge-large-en-v1.5
+      --dense-query-mode state
+      --front-fusion rrf
+      --local-expansion-window 1
+      --mmr-lambda 0.7
+      --mmr-same-doc-similarity 0.35
+      --policy-score-mode front_policy_blend
+      --policy-blend-weight 0.5
+      --save-online-states
+    )
+  elif [[ "$selector" == "hybrid" ]]; then
+    command+=(--dense-model models/bge-large-en-v1.5 --dense-query-mode state)
+  else
+    command+=(
+      --dense-query-mode question
+      --reranker-model models/bge-reranker-large
+    )
+  fi
+
+  echo "[START] Stage 9.6 method=$method qids=1000 gpu=$device"
+  CUDA_VISIBLE_DEVICES="$device" "${command[@]}"
+  echo "FINISHED_OK method=$method"
+}
+
+run_full_selection_worker() {
+  if [[ "${KBS_STAGE9_MUSIQUE_FULL_SELECTION_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] MuSiQue full selection is locked pending smoke review" >&2
+    exit 1
+  fi
+  selection_smoke_is_valid
+  if [[ -z "${METHOD:-}" ]]; then
+    echo "[ERROR] METHOD is required" >&2
+    exit 1
+  fi
+  run_full_selection_method "$METHOD" "$CUDA_DEVICE"
+}
+
+start_full_selection() {
+  if [[ "${KBS_STAGE9_MUSIQUE_FULL_SELECTION_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] MuSiQue full selection is locked pending smoke review" >&2
+    exit 1
+  fi
+  adapter_is_valid
+  selection_smoke_is_valid
+  for path in \
+    "$CHECKPOINT" \
+    models/deberta-v3-large \
+    models/bge-large-en-v1.5 \
+    models/bge-reranker-large; do
+    if [[ ! -e "$path" ]]; then
+      echo "[ERROR] missing full-selection prerequisite: $path" >&2
+      exit 1
+    fi
+  done
+
+  local -a gpu_ids methods
+  IFS=',' read -r -a gpu_ids <<< "${GPU_LIST:-0,1,2,3}"
+  methods=(compact_seed42 balanced_seed42 hybrid bge_reranker)
+  if [[ "${#gpu_ids[@]}" -lt "${#methods[@]}" ]]; then
+    echo "[ERROR] GPU_LIST needs four GPUs, for example 0,1,2,3" >&2
+    exit 1
+  fi
+
+  local output_dir="$OUTPUT_ROOT/selection1000"
+  local log_dir="outputs/logs/kbs_stage9_breadth"
+  mkdir -p "$output_dir" "$log_dir"
+  local index method
+  for method in "${methods[@]}"; do
+    if [[ -e "$output_dir/$method.json" || -e "$log_dir/${method}.pid" ]]; then
+      echo "[ERROR] existing output or pid for $method; inspect before restarting" >&2
+      exit 1
+    fi
+  done
+
+  for index in "${!methods[@]}"; do
+    method="${methods[$index]}"
+    nohup env \
+      KBS_STAGE9_MUSIQUE_FULL_SELECTION_AUTHORIZED=1 \
+      ACTION=selection_full_worker \
+      METHOD="$method" \
+      CUDA_DEVICE="${gpu_ids[$index]}" \
+      bash scripts/run_kbs_stage9_breadth.sh \
+      >"$log_dir/${method}_launcher.log" 2>&1 < /dev/null &
+    echo "$!" >"$log_dir/${method}.pid"
+    echo "$method: STARTED pid=$! gpu=${gpu_ids[$index]}"
+  done
+  echo "All MuSiQue selection workers started; no answer API call is enabled."
+  echo "Check with: ACTION=selection_status bash scripts/run_kbs_stage9_breadth.sh"
+}
+
+show_selection_status() {
+  local output_dir="$OUTPUT_ROOT/selection1000"
+  local log_dir="outputs/logs/kbs_stage9_breadth"
+  local method pid
+  for method in compact_seed42 balanced_seed42 hybrid bge_reranker; do
+    if [[ -s "$output_dir/$method.json" ]] && python3 - "$output_dir/$method.json" <<'PY'
+import json
+import sys
+
+report = json.load(open(sys.argv[1], encoding="utf-8"))
+summary = report.get("summary") or {}
+results = report.get("results") or []
+if (
+    summary.get("qids") != 1000
+    or summary.get("answer_judged") != 0
+    or summary.get("skipped") != 0
+    or len(results) != 1000
+):
+    raise SystemExit(1)
+PY
+    then
+      echo "$method: FINISHED_OK"
+    elif [[ -s "$log_dir/${method}.pid" ]]; then
+      pid="$(cat "$log_dir/${method}.pid")"
+      if [[ "$pid" =~ ^[0-9]+$ ]] && kill -0 "$pid" 2>/dev/null; then
+        echo "$method: RUNNING pid=$pid"
+      else
+        echo "$method: FAILED_OR_INCOMPLETE"
+        echo "  inspect: $log_dir/${method}_launcher.log"
+      fi
+    else
+      echo "$method: NOT_STARTED_OR_INCOMPLETE"
+    fi
+  done
+  echo "Status check completed; no GPU inference or API call was started."
+}
+
+finalize_full_selection() {
+  local output_dir="$OUTPUT_ROOT/selection1000"
+  python3 scripts/check_kbs_stage9_musique_full_selection.py \
+    --report "compact_seed42=$output_dir/compact_seed42.json" \
+    --report "balanced_seed42=$output_dir/balanced_seed42.json" \
+    --report "hybrid=$output_dir/hybrid.json" \
+    --report "bge_reranker=$output_dir/bge_reranker.json" \
+    --data-root "$DATA_ROOT" \
+    --expected-qids 1000 \
+    --adapter-audit "$OUTPUT_ROOT/adapter_readiness.json" \
+    --output "$output_dir/summary.json"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_6_MUSIQUE_SELECTION1000_FINALIZED"
+  echo "No GPU inference or answer API call was started by finalization."
+}
+
 case "$ACTION" in
   readiness)
     command=(
@@ -186,9 +405,21 @@ case "$ACTION" in
     echo "report=$summary"
     echo "The existing GPU report was reused; no inference or API call was started."
     ;;
+  selection_full_start)
+    start_full_selection
+    ;;
+  selection_full_worker)
+    run_full_selection_worker
+    ;;
+  selection_status)
+    show_selection_status
+    ;;
+  selection_finalize)
+    finalize_full_selection
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, build_adapter, audit_adapter, selection_smoke, audit_selection_smoke" >&2
+    echo "Allowed: readiness, build_adapter, audit_adapter, selection_smoke, audit_selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize" >&2
     exit 2
     ;;
 esac

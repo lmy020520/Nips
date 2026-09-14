@@ -2,8 +2,8 @@
 
 ## Current status
 
-- Status: `READY_MUSIQUE`; deterministic adapter build authorized.
-- Authorized action: no-run breadth-readiness audit only.
+- Status: MuSiQue adapter and corrected Compact selection smoke passed.
+- Authorized action: four-method 1,000-qid selection-only evaluation.
 - Preferred branch: MuSiQue zero-shot transfer when its official development
   data and paragraph-level support mapping pass the registered checks.
 - Alternative branch: one non-DeepSeek generator replication only when an
@@ -120,3 +120,19 @@ The raw GPU report is retained. The checker now mirrors
 existing report without model inference or an API call. The preliminary
 paragraph-alignment and coverage values remain smoke diagnostics rather than
 scientific results until this corrected audit passes.
+
+## Corrected Compact smoke result
+
+The corrected audit passed as `SMOKE_OK`. The frozen v27 Compact policy
+completed 20 qids and 40 paragraph-level states with no skipped states, answer
+outputs, non-paragraph memory rows, or missing online-state records. Paragraph
+Alignment@1/5 was 0.6500/0.9500, and full support-paragraph/title coverage was
+0.9000/0.9000. These values validate the execution path only and are not used
+as scientific results.
+
+The next registered gate evaluates exactly four methods on all 1,000 fixed
+MuSiQue qids: KSG-EA-Compact-10 as the primary method, KSG-EA-Balanced-15 as a
+secondary operating point, Hybrid-RAG, and BGE-Reranker-RAG. Recall-50 remains
+prohibited because the official question-local memories contain at most 20
+paragraphs. All runs are selection-only and use the same ordered qids and
+paragraph targets; answer generation remains locked.

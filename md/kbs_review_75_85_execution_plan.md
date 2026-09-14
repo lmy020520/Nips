@@ -178,6 +178,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-14 | 9.6 | MuSiQue data readiness | Passed; deterministic adapter build authorized | The official MuSiQue-Ans dev file contains 2,417/2,417 schema-valid answerable rows, no duplicate ids or exclusions, and exactly matched 2/3/4-hop decomposition and support counts. All rows support budgets 10/15, 2,401 support 20, and none support 50. Compact-10 is primary, Balanced-15 is optional, and Recall-50 is prohibited. The next action builds and independently audits a fixed 1,000-qid paragraph-unit subset without training, GPU inference, or API calls. |
 | 2026-09-14 | 9.6 | MuSiQue paragraph adapter | Passed; bounded Compact selection smoke authorized | Deterministic construction and independent replay agree on 1,000 qids, 2,629 states, 19,995 paragraph units, source/qid hashes, candidate pools, and ordered paragraph targets. The policy-facing files contain zero teacher-only decomposition keys. Candidate pools contain 15--20 units after acquired-support removal, so Compact-10 is feasible throughout. One seed-42 20-qid selection-only smoke is authorized; answer generation remains locked. |
 | 2026-09-14 | 9.6 | Initial Compact smoke audit | Audit-only mismatch; offline re-audit authorized | Runtime completed 20 qids/40 states with no skips, answer calls, or missing online states, but the checker expected the first 20 physical query rows (55 states). The runtime actually uses lexicographically sorted grouped sample qids before applying `max_qids`. The raw GPU report is retained and only the corrected offline audit may be rerun. |
+| 2026-09-14 | 9.6 | Corrected Compact selection smoke | Passed; complete four-method selection authorized | The retained runtime report passes the corrected qid/target audit on 20 qids and 40 paragraph states, with no skips, answer outputs, non-paragraph units, or missing online states. Compact paragraph Alignment@1/5 is 0.6500/0.9500 and full paragraph/title coverage is 0.9000/0.9000; these are smoke diagnostics only. Full selection is pre-registered for Compact-10, Balanced-15, Hybrid, and BGE-Reranker on all 1,000 qids; Recall-50 remains prohibited. |
 
 ## Current authorized action
 
@@ -216,7 +217,9 @@ repeat of the no-run audit were authorized. The repeated audit passed as
 is impossible. Deterministic construction and independent replay audit of the
 fixed 1,000-qid paragraph-unit subset are now authorized; all model and answer
 runs remain locked. The adapter audit subsequently passed with exact replay and
-zero teacher-key leakage. One 20-qid seed-42 Compact selection-only smoke is
-now authorized. Its first audit exposed only a checker/runtime qid-order
-mismatch, so reuse of the existing GPU report for a corrected offline audit is
-authorized; complete selection and all answer runs remain locked.
+zero teacher-key leakage. The retained 20-qid Compact report passes the
+corrected audit with 40 expected states and no protocol failures. The next
+authorized action is the complete selection-only evaluation of Compact-10,
+Balanced-15, Hybrid, and BGE-Reranker on the fixed 1,000 qids. Recall-50 is not
+supported, and all answer generation remains locked pending full-selection
+review.
