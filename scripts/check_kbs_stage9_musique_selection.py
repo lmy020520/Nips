@@ -82,8 +82,16 @@ def main() -> None:
         queries = read_jsonl(queries_path)
         samples = read_jsonl(samples_path)
         memory = read_jsonl(memory_path)
-        expected_qids = [str(row.get("qid") or "") for row in queries[: args.expected_qids]]
+        query_qids = {str(row.get("qid") or "") for row in queries}
+        # Match the runtime exactly: it groups sample rows, sorts qids, and only
+        # then applies --max-qids. Query-file order is not used for selection.
+        runtime_qids = sorted(
+            {str(row.get("qid") or "") for row in samples if row.get("qid")}
+        )
+        expected_qids = runtime_qids[: args.expected_qids]
         qid_set = set(expected_qids)
+        if not qid_set.issubset(query_qids):
+            failures.append("runtime smoke qids are missing from the query file")
         grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
         for row in samples:
             qid = str(row.get("qid") or "")

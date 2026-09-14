@@ -105,3 +105,18 @@ supports are removed. Compact-10 is therefore feasible for every state. The
 next authorized action is one seed-42, 20-qid Compact selection-only smoke
 under the frozen v27 protocol. Its evidence metrics must be labelled paragraph
 alignment and paragraph coverage. No answer generation is authorized.
+
+## Initial smoke-audit correction
+
+The first smoke audit returned `FAIL` even though the runtime completed 20
+qids and 40 states with no skipped states, answer calls, or missing online
+states. All four reported failures had one audit-only cause: the runtime sorts
+the grouped sample qids lexicographically before applying `max_qids=20`, while
+the checker incorrectly treated the first 20 physical query rows as the
+runtime prefix and therefore expected 55 states.
+
+The raw GPU report is retained. The checker now mirrors
+`sorted(grouped_qids)[:20]`, and a dedicated audit-only action rechecks the
+existing report without model inference or an API call. The preliminary
+paragraph-alignment and coverage values remain smoke diagnostics rather than
+scientific results until this corrected audit passes.

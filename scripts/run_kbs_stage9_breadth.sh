@@ -166,9 +166,29 @@ case "$ACTION" in
     echo "report=$summary"
     echo "No answer API call was started."
     ;;
+  audit_selection_smoke)
+    adapter_is_valid
+    smoke_dir="$OUTPUT_ROOT/selection_smoke20"
+    report="$smoke_dir/compact_seed42.json"
+    summary="$smoke_dir/summary.json"
+    if [[ ! -s "$report" ]]; then
+      echo "[ERROR] missing existing MuSiQue smoke report: $report" >&2
+      exit 1
+    fi
+    python3 scripts/check_kbs_stage9_musique_selection.py \
+      --report "$report" \
+      --data-root "$DATA_ROOT" \
+      --expected-qids 20 \
+      --adapter-audit "$OUTPUT_ROOT/adapter_readiness.json" \
+      --output "$summary"
+    echo "AUDIT_COMPLETE"
+    echo "status=STAGE9_6_MUSIQUE_SELECTION_SMOKE_AUDITED"
+    echo "report=$summary"
+    echo "The existing GPU report was reused; no inference or API call was started."
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, build_adapter, audit_adapter, selection_smoke" >&2
+    echo "Allowed: readiness, build_adapter, audit_adapter, selection_smoke, audit_selection_smoke" >&2
     exit 2
     ;;
 esac
