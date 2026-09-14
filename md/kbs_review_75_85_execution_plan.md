@@ -175,6 +175,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-14 | 9.5 | Final downstream state intervention | Passed; Stage 9.5 closed | Correct online state significantly exceeds query-only, frozen-initial, and other-question state on all eight registered downstream metrics. Relative to query-only, it gains 0.0336 Answer F1, 0.1288 Supporting-Fact F1, 0.1241 Joint F1, 0.1127 full support, and 0.0570 Closure@10; every paired interval excludes zero. The corresponding gains over frozen and mismatched states are also all significant. Previous-only is tied on Support F1/Closure and slightly better on Answer/Joint/full support, so the decision is `STATE_RELEVANCE_DOWNSTREAM_SUPPORTED`, not `FULL_HISTORY_SUPERIOR`. Exact accounting records 7,924 fresh and 7,076 reused answers. |
 | 2026-09-14 | 9.6 | Breadth-readiness instrumentation | Prepared; server audit authorized | The no-run audit discovers official MuSiQue-Ans dev data, validates answerable rows and decomposition-to-support mappings, checks paragraph-budget feasibility and frozen v27 prerequisites, and records that MuSiQue evidence metrics are paragraph-level. It also verifies that the current answer runtime is not yet an independent non-DeepSeek backend. The audit performs no download, training, GPU inference, or API call. |
 | 2026-09-14 | 9.6 | Initial breadth-readiness audit | Blocked only on official MuSiQue data | All plans, evaluators, the frozen v27 checkpoint, and DeBERTa/BGE model assets are present. No MuSiQue-Ans dev file or archive was found, and the current DeepSeek-specific runtime does not qualify as an independent second-generator branch. The next authorized action is official MuSiQue v1.0 data acquisition followed by the same no-run schema audit; no model run or API call is authorized. |
+| 2026-09-14 | 9.6 | MuSiQue data readiness | Passed; deterministic adapter build authorized | The official MuSiQue-Ans dev file contains 2,417/2,417 schema-valid answerable rows, no duplicate ids or exclusions, and exactly matched 2/3/4-hop decomposition and support counts. All rows support budgets 10/15, 2,401 support 20, and none support 50. Compact-10 is primary, Balanced-15 is optional, and Recall-50 is prohibited. The next action builds and independently audits a fixed 1,000-qid paragraph-unit subset without training, GPU inference, or API calls. |
 
 ## Current authorized action
 
@@ -208,5 +209,8 @@ question-local paragraphs and decomposition-to-support mapping pass the
 registered checks. No download, training, GPU inference, or API call is
 authorized by this audit. The initial server audit passed every runtime check
 but found no MuSiQue data asset. Official MuSiQue v1.0 data acquisition and a
-repeat of the no-run audit are now authorized; all model and answer runs remain
-locked.
+repeat of the no-run audit were authorized. The repeated audit passed as
+`READY_MUSIQUE`: all 2,417 dev rows are schema-valid, while candidate budget 50
+is impossible. Deterministic construction and independent replay audit of the
+fixed 1,000-qid paragraph-unit subset are now authorized; all model and answer
+runs remain locked.

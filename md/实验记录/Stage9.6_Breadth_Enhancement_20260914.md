@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: readiness blocked only on the official MuSiQue data asset.
+- Status: `READY_MUSIQUE`; deterministic adapter build authorized.
 - Authorized action: no-run breadth-readiness audit only.
 - Preferred branch: MuSiQue zero-shot transfer when its official development
   data and paragraph-level support mapping pass the registered checks.
@@ -74,3 +74,19 @@ frozen protocol is registered. Consequently, the authorized next action is
 data acquisition only: download and extract the official `musique_v1.0.zip`,
 then rerun the same no-run readiness audit. No adapter implementation,
 selection inference, or answer generation is authorized yet.
+
+## Successful data readiness
+
+After the official archive was provided, the repeated audit returned
+`READY_MUSIQUE`. All 2,417 MuSiQue-Ans dev rows are answerable and schema-valid,
+with no exclusions or duplicate ids. The split contains 1,252 two-hop, 760
+three-hop, and 405 four-hop questions, and the support-count distribution is
+identical to the decomposition-hop distribution. There is no observed qid
+overlap with the available HotpotQA evaluation qids.
+
+All 2,417 rows support candidate budgets 10 and 15; 2,401 support budget 20,
+and none support budget 50. Stage 9.6 therefore registers Compact-10 as the
+primary point and may use Balanced-15 as a secondary point, but Recall-50 is
+prohibited. The next authorized action is deterministic construction and
+independent replay audit of a fixed 1,000-qid paragraph-unit subset. This
+action remains CPU-only and makes no API call.

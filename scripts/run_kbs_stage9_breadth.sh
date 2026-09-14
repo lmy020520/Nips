@@ -12,6 +12,7 @@ OUTPUT_ROOT="${OUTPUT_ROOT:-outputs/analysis/kbs_stage9_breadth}"
 MUSIQUE_PATH="${MUSIQUE_PATH:-}"
 TARGET_QIDS="${TARGET_QIDS:-1000}"
 SEED="${SEED:-20260914}"
+DATA_ROOT="${DATA_ROOT:-data/musique_ans_eval_1000_paragraph20}"
 
 for plan in \
   md/kbs_three_review_execution_plan.md \
@@ -23,6 +24,35 @@ for plan in \
 done
 
 mkdir -p "$OUTPUT_ROOT"
+
+ready_musique_source() {
+  python3 - "$OUTPUT_ROOT/readiness.json" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+if not path.is_file():
+    raise SystemExit(f"missing readiness report: {path}")
+report = json.loads(path.read_text(encoding="utf-8"))
+if report.get("status") != "READY_MUSIQUE" or report.get("readiness_failures"):
+    raise SystemExit(f"readiness is not a clean READY_MUSIQUE: {path}")
+source = ((report.get("schema_audit") or {}).get("path") or "").strip()
+if not source or not Path(source).is_file():
+    raise SystemExit(f"audited MuSiQue source is missing: {source!r}")
+print(source)
+PY
+}
+
+audit_adapter() {
+  local source_path="$1"
+  python3 scripts/check_kbs_stage9_musique_adapter.py \
+    --source-json "$source_path" \
+    --data-root "$DATA_ROOT" \
+    --size "$TARGET_QIDS" \
+    --seed "$SEED" \
+    --output "$OUTPUT_ROOT/adapter_readiness.json"
+}
 
 case "$ACTION" in
   readiness)
@@ -40,9 +70,33 @@ case "$ACTION" in
     echo "report=$OUTPUT_ROOT/readiness.json"
     echo "No download, training, GPU inference, or API call was started."
     ;;
+  build_adapter)
+    if [[ "${KBS_STAGE9_MUSIQUE_ADAPTER_AUTHORIZED:-0}" != "1" ]]; then
+      echo "[ERROR] MuSiQue adapter build is locked pending readiness review" >&2
+      exit 1
+    fi
+    source_path="$(ready_musique_source)"
+    python3 scripts/prepare_musique_policy_rag_eval.py \
+      --source-json "$source_path" \
+      --output-root "$DATA_ROOT" \
+      --size "$TARGET_QIDS" \
+      --seed "$SEED"
+    audit_adapter "$source_path"
+    echo "FINISHED_OK"
+    echo "status=STAGE9_6_MUSIQUE_ADAPTER_OK"
+    echo "report=$OUTPUT_ROOT/adapter_readiness.json"
+    echo "No training, GPU inference, or API call was started."
+    ;;
+  audit_adapter)
+    source_path="$(ready_musique_source)"
+    audit_adapter "$source_path"
+    echo "AUDIT_COMPLETE"
+    echo "report=$OUTPUT_ROOT/adapter_readiness.json"
+    echo "No training, GPU inference, or API call was started."
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness" >&2
+    echo "Allowed: readiness, build_adapter, audit_adapter" >&2
     exit 2
     ;;
 esac
