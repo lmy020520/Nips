@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Status: readiness instrumentation prepared; server audit pending.
+- Status: readiness blocked only on the official MuSiQue data asset.
 - Authorized action: no-run breadth-readiness audit only.
 - Preferred branch: MuSiQue zero-shot transfer when its official development
   data and paragraph-level support mapping pass the registered checks.
@@ -58,3 +58,19 @@ the generated qids, memory, gold mapping, candidate sizes, and split manifest
 have passed that second audit. If neither MuSiQue nor an independent generator
 is ready, Stage 9.6 remains blocked rather than substituting another DeepSeek
 service tier.
+
+## Initial readiness result
+
+The server audit returned `BLOCKED_MISSING_PREREQUISITES` without performing
+any download, training, GPU inference, or API call. Every registered runtime
+prerequisite passed: the experiment plans, Policy-RAG runtime, standard metric
+and bootstrap evaluators, frozen v27 checkpoint, DeBERTa model, and BGE model
+are present. The sole MuSiQue-branch failure is that no official MuSiQue-Ans
+development JSONL or archive was found.
+
+The alternative generator branch is also not currently admissible. The answer
+runtime remains DeepSeek-specific and no independent non-DeepSeek adapter or
+frozen protocol is registered. Consequently, the authorized next action is
+data acquisition only: download and extract the official `musique_v1.0.zip`,
+then rerun the same no-run readiness audit. No adapter implementation,
+selection inference, or answer generation is authorized yet.
