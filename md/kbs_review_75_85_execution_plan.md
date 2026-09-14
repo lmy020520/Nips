@@ -171,6 +171,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-13 | 9.5 | Initial other-question answer smoke | Rejected; corrected retry authorized | All 20 answers were valid, but one selected context differed from the frozen full-run prefix. The bounded rerun paired its final qid against the first qid of the 20-qid prefix rather than the next qid in the complete 3,000-qid ordering. This was a boundary-scope implementation error, not a model or API failure. The runtime now derives cyclic pairing from the complete external report, and the guarded retry removes only the one invalid-context cache. |
 | 2026-09-13 | 9.5 | Corrected other-question answer smoke | Passed; complete answer chain authorized | The corrected 20-qid run matches every frozen selection context and completes all answers under the registered V4-Flash protocol. It has no empty/error answers, invalid caches, context mismatches, or audit failures. Smoke EM/F1 are execution diagnostics only. |
 | 2026-09-14 | 9.5 | First complete-answer-chain attempt | Interrupted; metadata-priority fix and resume authorized | Online-state reuse and the complete other-question/query-only reports passed audit. Before frozen-initial generation, cache preparation rejected propagated files because newly available query-only reports were ordered ahead of the earlier other-question source, changing only `source_report` provenance. The source priority is now frozen to the execution order, so later reports can fill missing contexts but cannot supersede prior provenance. No completed answer report is invalidated and cached answers are retained. |
+| 2026-09-14 | 9.5 | Complete five-condition answers | Passed; offline finalization authorized | All five conditions contain 3,000 valid caches and clean answer audits, and the sequential chain reached `STAGE9_5_ALL_STATE_ANSWERS_OK`. The remaining work is deterministic standard-metric replay and 10,000-sample paired qid bootstrap; no further answer call is authorized. |
 
 ## Current authorized action
 
@@ -193,5 +194,7 @@ pairing universe; after correcting that scope, all 20 contexts and answers pass
 audit. The first complete-chain attempt finished and audited online-state,
 other-question, and query-only outputs, then stopped before frozen-initial
 generation because dynamic source ordering changed propagated provenance. The
-priority is now frozen to execution order. The next authorized action is a
-resumed chain, retaining all valid reports and caches.
+priority is now frozen to execution order. The resumed chain completed all
+15,000 condition--qid targets with clean audits. The next authorized action is
+offline standard-metric and paired-bootstrap finalization; no API call is
+required.

@@ -657,6 +657,103 @@ PY
   echo "Status check completed; no GPU inference or API call was started."
 }
 
+finalize_answers() {
+  local output_dir="$OUTPUT_ROOT/downstream3000"
+  local standard_summary="$output_dir/standard_metrics.json"
+  local standard_records="$output_dir/standard_metric_records.jsonl"
+  local bootstrap="$output_dir/online_state_paired_bootstrap.json"
+  local final_summary="$output_dir/final_summary.json"
+  local selection_summary="$OUTPUT_ROOT/selection3000/summary.json"
+  local cache_summary="$OUTPUT_ROOT/cache_propagation/after_all.json"
+  local online_report="$CORRECT_REPORT"
+  local gold_report="outputs/rag/full3000_gold_oracle.json"
+  local condition path audit report
+
+  for path in "$selection_summary" "$cache_summary" "$online_report" "$gold_report"; do
+    if [[ ! -s "$path" ]]; then
+      echo "[ERROR] missing finalization prerequisite: $path" >&2
+      exit 1
+    fi
+  done
+  for condition in online_state other_question_state query_only frozen_initial_state previous_evidence_only; do
+    audit="$OUTPUT_ROOT/${condition}_answer_full3000.json"
+    if [[ ! -s "$audit" ]]; then
+      echo "[ERROR] missing answer audit: $audit" >&2
+      exit 1
+    fi
+    python3 - "$audit" "$condition" <<'PY'
+import json
+import sys
+
+report = json.load(open(sys.argv[1], encoding="utf-8"))
+if (
+    report.get("status") != "OK"
+    or report.get("method") != sys.argv[2]
+    or report.get("qids") != 3000
+    or report.get("failures")
+):
+    raise SystemExit(f"answer audit is not a clean matching OK: {sys.argv[1]}")
+PY
+  done
+  if [[ -s "$final_summary" ]] && python3 - "$final_summary" <<'PY'
+import json
+import sys
+
+report = json.load(open(sys.argv[1], encoding="utf-8"))
+raise SystemExit(0 if report.get("status") == "OK" and not report.get("failures") else 1)
+PY
+  then
+    echo "FINISHED_OK"
+    echo "status=STAGE9_5_DOWNSTREAM_OK"
+    echo "summary=$final_summary"
+    echo "Existing clean summary was retained; no GPU inference or API call was started."
+    return
+  fi
+  mkdir -p "$output_dir"
+
+  python3 scripts/evaluate_kbs_standard_metrics.py \
+    --report "Online-State=$online_report" \
+    --report "Query-Only=outputs/rag/kbs_stage9_state_rollout/query_only_full3000.json" \
+    --report "Frozen-Initial=outputs/rag/kbs_stage9_state_rollout/frozen_initial_state_full3000.json" \
+    --report "Other-Question=outputs/rag/kbs_stage9_state_rollout/other_question_state_full3000.json" \
+    --report "Previous-Evidence-Only=outputs/rag/kbs_stage9_state_rollout/previous_evidence_only_full3000.json" \
+    --report "Gold-Oracle=$gold_report" \
+    --gold-oracle-name Gold-Oracle \
+    --expected-qids 3000 \
+    --closure-unit-budgets 10 \
+    --output "$standard_summary" \
+    --records-output "$standard_records"
+
+  local metrics="answer_em,answer_f1,supporting_fact_f1,supporting_fact_em,joint_f1,joint_em,full_support_coverage,closure_success_at_10"
+  python3 scripts/bootstrap_kbs_stage4_metrics.py \
+    --records "$standard_records" \
+    --primary Online-State \
+    --baseline Query-Only \
+    --baseline Frozen-Initial \
+    --baseline Other-Question \
+    --baseline Previous-Evidence-Only \
+    --metrics "$metrics" \
+    --n-bootstrap 10000 \
+    --seed 20260914 \
+    --output "$bootstrap"
+
+  python3 scripts/summarize_kbs_stage9_state_rollout_downstream.py \
+    --standard-summary "$standard_summary" \
+    --selection-summary "$selection_summary" \
+    --bootstrap "$bootstrap" \
+    --cache-summary "$cache_summary" \
+    --answer-audit "online_state=$OUTPUT_ROOT/online_state_answer_full3000.json" \
+    --answer-audit "query_only=$OUTPUT_ROOT/query_only_answer_full3000.json" \
+    --answer-audit "frozen_initial_state=$OUTPUT_ROOT/frozen_initial_state_answer_full3000.json" \
+    --answer-audit "other_question_state=$OUTPUT_ROOT/other_question_state_answer_full3000.json" \
+    --answer-audit "previous_evidence_only=$OUTPUT_ROOT/previous_evidence_only_answer_full3000.json" \
+    --output "$final_summary"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_5_DOWNSTREAM_OK"
+  echo "summary=$final_summary"
+  echo "No training, GPU inference, or API call was started by finalization."
+}
+
 case "$ACTION" in
   readiness)
     python3 scripts/check_kbs_stage9_state_rollout_readiness.py \
@@ -690,9 +787,12 @@ case "$ACTION" in
   answer_status)
     show_answer_status
     ;;
+  finalize_answers)
+    finalize_answers
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, selection_smoke, selection_full, selection_status, prepare_answer_caches, answer_smoke, answer_full_start, answer_full_chain, answer_status" >&2
+    echo "Allowed: readiness, selection_smoke, selection_full, selection_status, prepare_answer_caches, answer_smoke, answer_full_start, answer_full_chain, answer_status, finalize_answers" >&2
     exit 2
     ;;
 esac

@@ -150,3 +150,10 @@ other-question, query-only, frozen-initial, and previous-only. A later source
 can fill a missing context but cannot supersede established provenance. The
 completed reports and all valid caches are retained, and a guarded normal
 restart will skip completed conditions and resume before frozen-initial.
+
+## Complete answer chain
+
+The resumed chain completed all five conditions. Each condition has 3,000
+valid cache files and a clean answer audit, and the launcher reached
+`STAGE9_5_ALL_STATE_ANSWERS_OK`. Offline standard-metric replay and paired qid
+bootstrap are authorized next; no further generator call is required.
