@@ -739,6 +739,112 @@ PY
   echo "Status check completed; no GPU inference or API call was started."
 }
 
+repair_hybrid_single_api_error() {
+  if [[ "${KBS_STAGE9_MUSIQUE_HYBRID_REPAIR_AUTHORIZED:-0}" != "1" ]]; then
+    echo "[ERROR] Hybrid repair is locked pending failure review" >&2
+    exit 1
+  fi
+  python3 - "$OUTPUT_ROOT" <<'PY'
+import json
+import re
+import sys
+from pathlib import Path
+
+output_root = Path(sys.argv[1])
+report_path = Path("outputs/rag/kbs_stage9_musique/hybrid_full1000.json")
+audit_path = output_root / "hybrid_answer_full1000.json"
+log_path = Path("outputs/logs/kbs_stage9_breadth/answer_chain_launcher.log")
+pid_path = Path("outputs/logs/kbs_stage9_breadth/answer_chain.pid")
+
+for path in (report_path, audit_path):
+    if not path.is_file():
+        raise SystemExit(f"missing Hybrid repair prerequisite: {path}")
+
+audit = json.loads(audit_path.read_text(encoding="utf-8"))
+expected_failures = {
+    "summary answer_errors=1 != 0",
+    "empty answers=1, error answers=1",
+}
+if (
+    audit.get("status") != "FAIL"
+    or audit.get("method") != "hybrid"
+    or audit.get("qids") != 1000
+    or set(audit.get("failures") or []) != expected_failures
+):
+    raise SystemExit("Hybrid failure differs from the reviewed single-API-error case")
+
+report = json.loads(report_path.read_text(encoding="utf-8"))
+rows = report.get("results") or []
+bad_rows = [
+    row for row in rows
+    if (
+        not str(row.get("answer") or "").strip()
+        or not str(row.get("raw_answer") or "").strip()
+        or str(row.get("raw_answer") or "").startswith("ERROR:")
+    )
+]
+if len(rows) != 1000 or len(bad_rows) != 1:
+    raise SystemExit(
+        f"expected 1000 Hybrid rows and one failed answer; "
+        f"found rows={len(rows)}, failures={len(bad_rows)}"
+    )
+
+qid = str(bad_rows[0].get("qid") or "")
+safe_qid = re.sub(r"[^A-Za-z0-9_.-]+", "_", qid)
+cache_path = Path("outputs/rag/cache_kbs_stage9_musique/hybrid") / f"{safe_qid}.json"
+if not qid or not cache_path.is_file():
+    raise SystemExit(f"failed Hybrid cache is missing for qid={qid!r}: {cache_path}")
+cache = json.loads(cache_path.read_text(encoding="utf-8"))
+if (
+    str(cache.get("qid") or "") != qid
+    or (
+        str(cache.get("answer") or "").strip()
+        and str(cache.get("raw_answer") or "").strip()
+        and not str(cache.get("raw_answer") or "").startswith("ERROR:")
+    )
+):
+    raise SystemExit(f"cache is not the reviewed failed answer for qid={qid}")
+
+archive = output_root / "failed_attempts" / f"hybrid_single_api_error_{safe_qid}"
+if archive.exists():
+    raise SystemExit(f"repair archive already exists: {archive}")
+archive.mkdir(parents=True)
+artifacts = {
+    report_path: archive / "hybrid_full1000_failed.json",
+    audit_path: archive / "hybrid_answer_full1000_failed_audit.json",
+    cache_path: archive / f"{safe_qid}_failed_cache.json",
+}
+if log_path.is_file():
+    artifacts[log_path] = archive / "answer_chain_failed.log"
+if pid_path.is_file():
+    artifacts[pid_path] = archive / "answer_chain_failed.pid"
+for source, destination in artifacts.items():
+    source.replace(destination)
+
+manifest = {
+    "status": "READY_TO_RETRY_ONE_ANSWER",
+    "stage": 9,
+    "step": "9.6",
+    "method": "hybrid",
+    "failed_qid": qid,
+    "preserved_valid_cache_files": 999,
+    "quarantined_cache_files": 1,
+    "quarantined_artifacts": [str(path) for path in artifacts.values()],
+    "api_calls": 0,
+    "next_gate": "Resume the guarded sequential answer chain.",
+}
+(archive / "repair_manifest.json").write_text(
+    json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+    encoding="utf-8",
+)
+print(json.dumps(manifest, ensure_ascii=False, indent=2))
+print(f"archive: {archive}")
+PY
+  echo "FINISHED_OK"
+  echo "status=STAGE9_6_HYBRID_SINGLE_API_ERROR_QUARANTINED"
+  echo "No GPU inference or API call was started."
+}
+
 case "$ACTION" in
   readiness)
     command=(
@@ -882,9 +988,12 @@ case "$ACTION" in
   answer_status)
     show_answer_status
     ;;
+  repair_hybrid_single_api_error)
+    repair_hybrid_single_api_error
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, build_adapter, audit_adapter, selection_smoke, audit_selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, selection_bootstrap, prepare_answer_caches, answer_smoke, answer_full_start, answer_full_chain, answer_status" >&2
+    echo "Allowed: readiness, build_adapter, audit_adapter, selection_smoke, audit_selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, selection_bootstrap, prepare_answer_caches, answer_smoke, answer_full_start, answer_full_chain, answer_status, repair_hybrid_single_api_error" >&2
     exit 2
     ;;
 esac

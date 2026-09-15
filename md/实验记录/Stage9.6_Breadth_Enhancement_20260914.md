@@ -2,8 +2,8 @@
 
 ## Current status
 
-- Status: selection, paired Bootstrap, cache audit, and answer smoke passed.
-- Authorized action: sequential four-method complete answer chain.
+- Status: Compact/Balanced passed; Hybrid has one isolated API error.
+- Authorized action: quarantine one failed Hybrid cache and resume the chain.
 - Preferred branch: MuSiQue zero-shot transfer when its official development
   data and paragraph-level support mapping pass the registered checks.
 - Alternative branch: one non-DeepSeek generator replication only when an
@@ -235,3 +235,19 @@ then BGE-Reranker. Before each method, completed reports are propagated only
 when the question, canonical answer, ordered aliases, selected paragraphs, and
 answer protocol match exactly. Running the four methods concurrently is not
 allowed because it would forfeit the registered 242-context deduplication.
+
+## First complete-chain interruption
+
+Compact and Balanced completed and passed all 1,000-qid audits. Hybrid also
+generated 1,000 records and preserved the frozen paragraph-selection metrics,
+but its audit found one exhausted API retry: 999 answers are valid and one row
+has an empty/error answer. Hybrid's provisional EM/F1 of 0.4340/0.5409 is not
+reportable until the failed row is repaired. BGE was not started.
+
+This is an operational API failure rather than a model, context, alias, or
+cache-protocol failure. The authorized repair identifies the single failed qid,
+moves its bad cache together with the failed report, audit, launcher log, and
+pid into an immutable failed-attempt directory, and preserves the other 999
+Hybrid caches. It performs no inference or API call. The resumed chain must
+skip clean Compact/Balanced reports, regenerate only the missing Hybrid answer,
+reaudit all 1,000 Hybrid rows, and then continue to BGE.

@@ -183,6 +183,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-15 | 9.6 | MuSiQue paired selection Bootstrap | Passed; exact-context cache audit authorized | The 10,000-sample paired qid-cluster Bootstrap passed on all 1,000 qids. Balanced exceeds Hybrid and BGE on all four paragraph metrics with intervals excluding zero. Compact exceeds Hybrid on all four and BGE on Alignment@1/5 and full-title coverage; Compact's +0.031 full-paragraph gain over BGE has CI [0.000, 0.063] and is treated as borderline rather than strictly significant. Balanced versus Compact is tied on Alignment@1 but significantly improves the other three metrics at higher latency. The next action is a no-API cache audit with canonical-plus-alias scoring locked for 287 alias-bearing qids. |
 | 2026-09-15 | 9.6 | MuSiQue exact-context cache audit | Passed; bounded Compact answer smoke authorized | All 4,000 method--qid targets and 1,000 query records passed, including 287 alias-bearing qids. No historical MuSiQue answer context is reusable. Cross-method exact-context deduplication removes 242 duplicate target files, reducing the theoretical fresh requirement from 4,000 to 3,758 calls. The answer scorer now maximizes over the canonical answer and aliases without changing historical single-reference datasets. One 20-qid Compact answer smoke is authorized; complete answers remain locked. |
 | 2026-09-15 | 9.6 | Compact answer smoke | Passed; sequential complete answer chain authorized | All 20 frozen Compact contexts and caches passed, including five alias-bearing qids and independent per-qid score replay. There were 20 fresh answers, zero invalid/error answers, and zero context or alias mismatches. Smoke EM/F1 0.7500/0.8167 are diagnostics only. Complete answers must run Compact, Balanced, Hybrid, then BGE sequentially with exact-context propagation; concurrent execution is prohibited because it would discard the 242-context saving. |
+| 2026-09-15 | 9.6 | First complete-answer-chain attempt | Interrupted by one API error; surgical Hybrid repair authorized | Compact and Balanced passed 1,000-qid audits. Hybrid wrote all 1,000 rows and reproduced the frozen evidence metrics, but one fresh answer exhausted retries, yielding exactly one empty/error answer; its other 999 caches are valid. BGE was not started. The guarded repair archives the failed report, audit, log, pid, and one bad cache while preserving 999 valid Hybrid caches, then the sequential chain may resume. No wholesale rerun or cache deletion is allowed. |
 
 ## Current authorized action
 
@@ -235,7 +236,11 @@ while 242 exact cross-method duplicates reduce 4,000 target files to 3,758
 unique fresh contexts. Recall-50 remains unsupported. The next authorized
 Compact-10 answer smoke has now passed all 20 qids, including five alias-
 bearing cases, with exact context, cache, and score replay. The next authorized
-action is the sequential four-method answer chain in fixed Compact, Balanced,
-Hybrid, BGE order. This chain may run in the background on one GPU and must
-propagate exact contexts before each method. No scientific answer claim is
-allowed until all 4,000 targets pass final offline audit and paired Bootstrap.
+Compact and Balanced complete reports have passed. The first chain attempt
+stopped after Hybrid produced one exhausted API retry among 1,000 rows; BGE was
+not started. The next authorized action is a no-API surgical repair that
+archives only the bad Hybrid cache and failed derived artifacts while retaining
+999 valid Hybrid answers. The guarded sequential chain may then resume, skip
+Compact/Balanced, repair Hybrid with one answer call, and continue to BGE. No
+scientific answer claim is allowed until all 4,000 targets pass final offline
+audit and paired Bootstrap.
