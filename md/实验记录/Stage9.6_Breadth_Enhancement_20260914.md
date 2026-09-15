@@ -2,8 +2,8 @@
 
 ## Current status
 
-- Status: four-method MuSiQue selection and paired Bootstrap passed.
-- Authorized action: exact-context answer-cache audit; no answer call.
+- Status: selection, paired Bootstrap, and exact-context cache audit passed.
+- Authorized action: one 20-qid Compact answer smoke.
 - Preferred branch: MuSiQue zero-shot transfer when its official development
   data and paragraph-level support mapping pass the registered checks.
 - Alternative branch: one non-DeepSeek generator replication only when an
@@ -189,3 +189,23 @@ over the canonical answer and its aliases. Exact-context cache identity must
 also include the ordered alias list. The next action is therefore a CPU-only
 cache-readiness audit over Compact, Balanced, Hybrid, and BGE; answer generation
 remains locked until its unique fresh-call count is reviewed.
+
+## Exact-context answer-cache audit
+
+The no-API cache audit passed on all 4,000 method--qid targets. No historical
+MuSiQue answer report exists, so the initial exact reuse count is zero. Across
+the four target methods, 242 target files share an identical question,
+canonical answer, ordered alias list, and ordered selected paragraph sequence.
+Sequential cross-method propagation therefore reduces the theoretical fresh
+answer requirement from 4,000 to 3,758 calls.
+
+The audit confirms 1,000 query records and 287 qids with aliases. The frozen
+answer protocol is DeepSeek V4-Flash, thinking disabled, JSON extraction,
+temperature 0, and prompt version `kbs_extractive_answer_json_v1`. Reporting
+must use `max_over_canonical_and_aliases`; canonical-only MuSiQue EM/F1 is not
+an admissible final result.
+
+The next gate is one Compact-10 answer smoke on the first 20 runtime-ordered
+qids. It must reproduce the frozen selection contexts and pass cache, alias,
+and per-qid score replay. Smoke values are execution diagnostics only. Complete
+four-method answer generation remains unauthorized until this smoke passes.
