@@ -333,6 +333,37 @@ PY
   echo "No GPU inference or answer API call was started."
 }
 
+prepare_answer_caches() {
+  local output_dir="$OUTPUT_ROOT/selection1000"
+  local bootstrap_report="$output_dir/paired_bootstrap.json"
+  python3 - "$bootstrap_report" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+if not path.is_file():
+    raise SystemExit(f"missing selection bootstrap report: {path}")
+report = json.loads(path.read_text(encoding="utf-8"))
+if (
+    report.get("status") != "OK"
+    or report.get("mode") != "musique_zero_shot_selection_bootstrap"
+    or report.get("qids") != 1000
+    or report.get("failures")
+):
+    raise SystemExit(f"selection bootstrap is not a clean registered OK: {path}")
+PY
+  python3 scripts/prepare_kbs_stage9_musique_answer_caches.py \
+    --selection-root "$output_dir" \
+    --queries "$DATA_ROOT/queries/test.jsonl" \
+    --cache-root outputs/rag/cache_kbs_stage9_musique \
+    --output "$OUTPUT_ROOT/answer_cache_readiness.json"
+  echo "FINISHED_OK"
+  echo "status=STAGE9_6_MUSIQUE_ANSWER_CACHE_READY"
+  echo "report=$OUTPUT_ROOT/answer_cache_readiness.json"
+  echo "No GPU inference or answer API call was started."
+}
+
 case "$ACTION" in
   readiness)
     command=(
@@ -461,9 +492,12 @@ case "$ACTION" in
   selection_bootstrap)
     run_selection_bootstrap
     ;;
+  prepare_answer_caches)
+    prepare_answer_caches
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, build_adapter, audit_adapter, selection_smoke, audit_selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, selection_bootstrap" >&2
+    echo "Allowed: readiness, build_adapter, audit_adapter, selection_smoke, audit_selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, selection_bootstrap, prepare_answer_caches" >&2
     exit 2
     ;;
 esac

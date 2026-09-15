@@ -180,6 +180,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-14 | 9.6 | Initial Compact smoke audit | Audit-only mismatch; offline re-audit authorized | Runtime completed 20 qids/40 states with no skips, answer calls, or missing online states, but the checker expected the first 20 physical query rows (55 states). The runtime actually uses lexicographically sorted grouped sample qids before applying `max_qids`. The raw GPU report is retained and only the corrected offline audit may be rerun. |
 | 2026-09-14 | 9.6 | Corrected Compact selection smoke | Passed; complete four-method selection authorized | The retained runtime report passes the corrected qid/target audit on 20 qids and 40 paragraph states, with no skips, answer outputs, non-paragraph units, or missing online states. Compact paragraph Alignment@1/5 is 0.6500/0.9500 and full paragraph/title coverage is 0.9000/0.9000; these are smoke diagnostics only. Full selection is pre-registered for Compact-10, Balanced-15, Hybrid, and BGE-Reranker on all 1,000 qids; Recall-50 remains prohibited. |
 | 2026-09-14 | 9.6 | Complete MuSiQue zero-shot selection | Passed; paired selection Bootstrap authorized | All four methods complete the same 1,000 qids/2,629 paragraph states with identical qid/target hashes, no skips, and no answer output. Compact/Balanced paragraph Alignment@5 is 0.8186/0.8383 versus 0.6946 Hybrid and 0.7155 BGE; full paragraph coverage is 0.700/0.717 versus 0.436/0.669. Compact and Balanced exceed BGE on all four point estimates, while costing 1,474.97/1,775.28 ms per qid versus 1,010.21 ms. Significance and answer claims remain locked pending offline paired Bootstrap and cache audit. |
+| 2026-09-15 | 9.6 | MuSiQue paired selection Bootstrap | Passed; exact-context cache audit authorized | The 10,000-sample paired qid-cluster Bootstrap passed on all 1,000 qids. Balanced exceeds Hybrid and BGE on all four paragraph metrics with intervals excluding zero. Compact exceeds Hybrid on all four and BGE on Alignment@1/5 and full-title coverage; Compact's +0.031 full-paragraph gain over BGE has CI [0.000, 0.063] and is treated as borderline rather than strictly significant. Balanced versus Compact is tied on Alignment@1 but significantly improves the other three metrics at higher latency. The next action is a no-API cache audit with canonical-plus-alias scoring locked for 287 alias-bearing qids. |
 
 ## Current authorized action
 
@@ -223,6 +224,12 @@ corrected audit with 40 expected states and no protocol failures. The next
 authorized four-method selection-only evaluation has now passed on all 1,000
 qids. Both KSG-EA operating points exceed Hybrid and BGE on every registered
 paragraph-level evidence point estimate, with the expected latency cost. The
-next authorized action is a 10,000-sample paired qid-cluster Bootstrap over the
-four selection metrics. Recall-50 is not supported, and all answer generation
-remains locked pending the Bootstrap and exact-context cache audit.
+registered 10,000-sample paired qid-cluster Bootstrap has now passed. Balanced
+significantly exceeds both baselines on all four paragraph metrics; Compact
+significantly exceeds Hybrid on all four and BGE on three, with the full-
+paragraph interval touching zero. The next authorized action is the CPU-only
+exact-context answer-cache audit. It must include MuSiQue's ordered answer
+aliases in context identity and lock answer scoring to the maximum over
+canonical and alias references. Recall-50 remains unsupported, and answer
+generation remains locked pending review of the cache audit and unique fresh-
+call count.

@@ -2,8 +2,8 @@
 
 ## Current status
 
-- Status: four-method MuSiQue selection passed on all 1,000 qids.
-- Authorized action: offline paired qid-cluster Bootstrap; no answer call.
+- Status: four-method MuSiQue selection and paired Bootstrap passed.
+- Authorized action: exact-context answer-cache audit; no answer call.
 - Preferred branch: MuSiQue zero-shot transfer when its official development
   data and paragraph-level support mapping pass the registered checks.
 - Alternative branch: one non-DeepSeek generator replication only when an
@@ -160,3 +160,32 @@ locked until the registered 10,000-sample paired qid-cluster Bootstrap passes.
 Because MuSiQue uses paragraph units, none of these values may be merged into
 the sentence-level HotpotQA/2Wiki Step@k table. They support a separate
 zero-shot paragraph-evidence transfer analysis.
+
+## Paired selection Bootstrap result
+
+The registered 10,000-sample paired qid-cluster Bootstrap completed on all
+1,000 qids with no failures. The intervals below are for method differences;
+an interval excluding zero supports a directional significance statement.
+
+| Contrast | Para Align@1 | Para Align@5 | Full paragraph | Full title |
+|---|---:|---:|---:|---:|
+| Compact - Hybrid | +0.1617 [0.1418, 0.1814] | +0.1240 [0.1085, 0.1396] | +0.264 [0.236, 0.293] | +0.258 [0.229, 0.287] |
+| Compact - BGE | +0.1065 [0.0860, 0.1276] | +0.1031 [0.0833, 0.1225] | +0.031 [0.000, 0.063] | +0.037 [0.007, 0.068] |
+| Balanced - Hybrid | +0.1666 [0.1466, 0.1865] | +0.1438 [0.1280, 0.1599] | +0.281 [0.251, 0.311] | +0.272 [0.242, 0.301] |
+| Balanced - BGE | +0.1114 [0.0904, 0.1322] | +0.1229 [0.1041, 0.1419] | +0.048 [0.018, 0.079] | +0.051 [0.022, 0.080] |
+| Balanced - Compact | +0.0049 [-0.0023, 0.0124] | +0.0198 [0.0118, 0.0280] | +0.017 [0.003, 0.031] | +0.014 [0.001, 0.027] |
+
+Balanced significantly exceeds both baselines on all four paragraph-level
+metrics. Compact significantly exceeds Hybrid on all four metrics and BGE on
+Alignment@1, Alignment@5, and full-title coverage. Its full-paragraph gain over
+BGE is borderline because the percentile interval touches zero; it must not be
+described as strictly significant. Balanced and Compact are tied on
+Alignment@1, while Balanced has small significant gains on the other three
+metrics at an additional 300.31 ms per qid.
+
+The adapter preserves answer aliases for 287 qids. Before any answer call, the
+runtime and offline evaluator must score each prediction against the maximum
+over the canonical answer and its aliases. Exact-context cache identity must
+also include the ordered alias list. The next action is therefore a CPU-only
+cache-readiness audit over Compact, Balanced, Hybrid, and BGE; answer generation
+remains locked until its unique fresh-call count is reviewed.

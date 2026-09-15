@@ -253,6 +253,33 @@ def f1_score(prediction: str, gold_answer: str) -> float:
     return 2 * precision * recall / (precision + recall)
 
 
+def answer_references(query: dict) -> list[str]:
+    """Return the canonical answer followed by distinct annotated aliases."""
+    references = []
+    seen = set()
+    for value in [query.get("answer"), *(query.get("answer_aliases") or [])]:
+        text = str(value or "").strip()
+        normalized = normalize_answer(text)
+        if text and normalized not in seen:
+            seen.add(normalized)
+            references.append(text)
+    return references
+
+
+def multireference_answer_scores(
+    prediction: str,
+    references: list[str],
+) -> tuple[int, int, float]:
+    """Score against the best canonical-or-alias reference for each metric."""
+    if not references:
+        return 0, 0, 0.0
+    return (
+        max(exact_match_score(prediction, value) for value in references),
+        max(answer_contains_score(prediction, value) for value in references),
+        max(f1_score(prediction, value) for value in references),
+    )
+
+
 def deepseek_chat(
     api_key: str,
     base_url: str,
@@ -1847,12 +1874,22 @@ def main() -> None:
                     encoding="utf-8",
                 )
 
-        gold_answer = str((queries.get(qid) or {}).get("answer") or "")
-        if args.generate_answers and gold_answer:
+        query_record = queries.get(qid) or {}
+        gold_answer = str(query_record.get("answer") or "")
+        gold_answer_aliases = [
+            str(value).strip()
+            for value in query_record.get("answer_aliases") or []
+            if str(value).strip()
+        ]
+        references = answer_references(query_record)
+        answer_em, answer_contains, answer_f1 = multireference_answer_scores(
+            answer, references
+        )
+        if args.generate_answers and references:
             answer_metrics["answer_judged"] += 1
-            answer_metrics["answer_em"] += exact_match_score(answer, gold_answer)
-            answer_metrics["answer_contains"] += answer_contains_score(answer, gold_answer)
-            answer_metrics["answer_f1"] += f1_score(answer, gold_answer)
+            answer_metrics["answer_em"] += answer_em
+            answer_metrics["answer_contains"] += answer_contains
+            answer_metrics["answer_f1"] += answer_f1
             answer_metrics["answer_tokens"] += answer_tokens
             answer_metrics["answer_latency"] += answer_latency
 
@@ -1865,9 +1902,10 @@ def main() -> None:
                 "answer_tokens": answer_tokens,
                 "answer_latency": round(answer_latency, 3),
                 "gold_answer": gold_answer,
-                "answer_em": exact_match_score(answer, gold_answer) if gold_answer and answer else None,
-                "answer_contains": answer_contains_score(answer, gold_answer) if gold_answer and answer else None,
-                "answer_f1": round(f1_score(answer, gold_answer), 6) if gold_answer and answer else None,
+                "gold_answer_aliases": gold_answer_aliases,
+                "answer_em": answer_em if references and answer else None,
+                "answer_contains": answer_contains if references and answer else None,
+                "answer_f1": round(answer_f1, 6) if references and answer else None,
                 "selected_unit_ids": selected_units,
                 "gold_unit_ids": target_gold_units,
                 "selected_doc_ids": sorted(selected_doc_ids),
@@ -1940,6 +1978,9 @@ def main() -> None:
         "answer_temperature": 0.0 if args.generate_answers else None,
         "answer_prompt_version": (
             ANSWER_PROMPT_VERSIONS[args.answer_mode] if args.generate_answers else ""
+        ),
+        "answer_reference_mode": (
+            "max_over_canonical_and_aliases" if args.generate_answers else ""
         ),
         "refresh_answer_cache": args.refresh_answer_cache,
         "save_online_states": args.save_online_states,

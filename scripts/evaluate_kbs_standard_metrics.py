@@ -21,7 +21,7 @@ def normalize_answer(value: object) -> str:
     return " ".join(text.split())
 
 
-def answer_metrics(prediction: object, gold: object) -> dict[str, float]:
+def _single_answer_metrics(prediction: object, gold: object) -> dict[str, float]:
     prediction_norm = normalize_answer(prediction)
     gold_norm = normalize_answer(gold)
     exact_match = float(prediction_norm == gold_norm)
@@ -50,6 +50,31 @@ def answer_metrics(prediction: object, gold: object) -> dict[str, float]:
         "answer_recall": recall,
         "answer_f1": f1,
     }
+
+
+def answer_metrics(
+    prediction: object,
+    gold: object,
+    aliases: list[object] | None = None,
+) -> dict[str, float]:
+    """Evaluate against the canonical answer and any annotated aliases."""
+    references = []
+    seen = set()
+    for value in [gold, *(aliases or [])]:
+        normalized = normalize_answer(value)
+        if normalized and normalized not in seen:
+            seen.add(normalized)
+            references.append(value)
+    if not references:
+        references = [gold]
+
+    candidates = [_single_answer_metrics(prediction, value) for value in references]
+    best = max(
+        candidates,
+        key=lambda row: (row["answer_f1"], row["answer_em"]),
+    ).copy()
+    best["answer_em"] = max(row["answer_em"] for row in candidates)
+    return best
 
 
 def unit_pair(unit_id: object, qid: str) -> tuple[str, int]:
@@ -139,7 +164,11 @@ def evaluate_report(name: str, path: Path, budgets: list[int]) -> tuple[dict, li
             if source.get(key) is None:
                 raise ValueError(f"qid={qid} is missing source per-qid {key}")
             source_replay[key].append(float(source[key]))
-        answer = answer_metrics(source.get("answer", ""), source.get("gold_answer", ""))
+        answer = answer_metrics(
+            source.get("answer", ""),
+            source.get("gold_answer", ""),
+            source.get("gold_answer_aliases") or [],
+        )
         gold_ids = source.get("gold_unit_ids") or []
         predicted_fact_ids = [
             step.get("predicted_unit_id")
@@ -214,8 +243,9 @@ def evaluate_report(name: str, path: Path, budgets: list[int]) -> tuple[dict, li
         "closure_budgets": budgets,
         "metrics": metrics,
         "answer_metric_note": (
-            "metrics use official HotpotQA special-answer handling; source-summary "
-            "checks replay the historical per-qid values stored in each report"
+            "metrics use official HotpotQA special-answer handling and maximize over "
+            "annotated aliases when present; source-summary checks replay the "
+            "historical per-qid values stored in each report"
         ),
         "source_summary_checks": checks,
     }
