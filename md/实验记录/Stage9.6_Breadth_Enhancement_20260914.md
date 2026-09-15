@@ -2,8 +2,8 @@
 
 ## Current status
 
-- Status: all four 1,000-qid answer reports and caches passed final audit.
-- Authorized action: offline paragraph-level metric replay and paired Bootstrap.
+- Status: closed as `MUSIQUE_ZERO_SHOT_BREADTH_SUPPORTED`.
+- Authorized action: integrate the frozen Stage 9 results into the paper.
 - Preferred branch: MuSiQue zero-shot transfer when its official development
   data and paragraph-level support mapping pass the registered checks.
 - Alternative branch: one non-DeepSeek generator replication only when an
@@ -274,3 +274,45 @@ metrics, paragraph evidence, joint, and ClosureSuccess metrics, followed by a
 10,000-sample paired qid Bootstrap. Final answer and downstream values must be
 read from those generated artifacts rather than copied from provisional or
 smoke reports.
+
+## Final downstream result
+
+The alias-aware offline replay and 10,000-sample paired qid Bootstrap passed on
+all 1,000 MuSiQue questions. Every source-summary check matches, all reports
+use paragraph units, and no API call was made during finalization.
+
+| Method | Answer EM | Answer F1 | Support Para F1 | Support Para EM | Joint F1 | Joint EM | Full Para | Full Title | Closure@10 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| KSG-EA-Compact-10 | 0.523 | 0.6292 | 0.5738 | 0.248 | 0.4026 | 0.165 | 0.700 | 0.721 | 0.433 |
+| KSG-EA-Balanced-15 | 0.518 | 0.6251 | 0.5795 | 0.246 | 0.3993 | 0.161 | 0.717 | 0.735 | 0.436 |
+| Hybrid-RAG | 0.434 | 0.5409 | 0.4072 | 0.067 | 0.2497 | 0.052 | 0.436 | 0.463 | 0.279 |
+| BGE-Reranker-RAG | 0.543 | 0.6393 | 0.4978 | 0.104 | 0.3390 | 0.078 | 0.669 | 0.684 | 0.376 |
+
+Key paired differences are shown below. Intervals are percentile 95% CIs over
+1,000 paired qids.
+
+| Contrast | Answer F1 | Support Para F1 | Joint F1 | Full Para | Closure@10 |
+|---|---:|---:|---:|---:|---:|
+| Compact - Hybrid | +0.0883 [0.0652, 0.1110] | +0.1666 [0.1461, 0.1870] | +0.1528 [0.1317, 0.1734] | +0.264 [0.234, 0.294] | +0.154 [0.128, 0.181] |
+| Compact - BGE | -0.0101 [-0.0325, 0.0121] | +0.0760 [0.0550, 0.0965] | +0.0636 [0.0436, 0.0840] | +0.031 [0.000, 0.062] | +0.057 [0.028, 0.086] |
+| Balanced - Hybrid | +0.0843 [0.0601, 0.1081] | +0.1723 [0.1519, 0.1932] | +0.1496 [0.1278, 0.1716] | +0.281 [0.251, 0.311] | +0.157 [0.131, 0.184] |
+| Balanced - BGE | -0.0142 [-0.0366, 0.0082] | +0.0817 [0.0612, 0.1023] | +0.0604 [0.0398, 0.0809] | +0.048 [0.018, 0.077] | +0.060 [0.033, 0.087] |
+
+Compact significantly outperforms Hybrid on every registered downstream
+metric. Against BGE-Reranker, Compact is statistically tied on Answer EM/F1,
+but significantly improves supporting-paragraph F1/EM, Joint F1/EM,
+full-title coverage, and Closure@10. Its full-paragraph coverage interval
+touches zero and is therefore described as borderline. Closure@15 is also a
+tie. Balanced follows the same pattern, except its Answer EM is significantly
+lower than BGE by 0.025, while its paragraph and title coverage gains are
+significant.
+
+Balanced significantly improves full-paragraph coverage by 0.017 and
+full-title coverage by 0.014 over Compact, but their answer, support F1/EM,
+joint, and closure metrics are tied. Compact therefore remains the primary
+efficiency-oriented operating point; Balanced is reported only as the
+completeness-oriented point. Together with the selection results, this closes
+Stage 9.6 as `MUSIQUE_ZERO_SHOT_BREADTH_SUPPORTED`. The claim is specifically
+zero-shot paragraph-evidence and joint-quality transfer from a HotpotQA-only
+Student; it is not a claim of universal answer-score superiority or direct
+equivalence with sentence-level HotpotQA/2Wiki metrics.

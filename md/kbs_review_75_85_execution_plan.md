@@ -185,6 +185,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-15 | 9.6 | Compact answer smoke | Passed; sequential complete answer chain authorized | All 20 frozen Compact contexts and caches passed, including five alias-bearing qids and independent per-qid score replay. There were 20 fresh answers, zero invalid/error answers, and zero context or alias mismatches. Smoke EM/F1 0.7500/0.8167 are diagnostics only. Complete answers must run Compact, Balanced, Hybrid, then BGE sequentially with exact-context propagation; concurrent execution is prohibited because it would discard the 242-context saving. |
 | 2026-09-15 | 9.6 | First complete-answer-chain attempt | Interrupted by one API error; surgical Hybrid repair authorized | Compact and Balanced passed 1,000-qid audits. Hybrid wrote all 1,000 rows and reproduced the frozen evidence metrics, but one fresh answer exhausted retries, yielding exactly one empty/error answer; its other 999 caches are valid. BGE was not started. The guarded repair archives the failed report, audit, log, pid, and one bad cache while preserving 999 valid Hybrid caches, then the sequential chain may resume. No wholesale rerun or cache deletion is allowed. |
 | 2026-09-15 | 9.6 | Complete four-method MuSiQue answers | Passed; offline finalization authorized | The surgical Hybrid retry and resumed BGE run closed all 4,000 method--qid targets with clean protocol and cache audits. Compact/Balanced/Hybrid/BGE used 1,000/759/999/1,000 fresh answers and 0/241/1/0 exact-context reuses, totaling exactly 3,758 fresh calls and 242 reuses with no raw-answer disagreements or unresolved targets. No further answer call is authorized; final canonical-plus-alias downstream metrics and paired Bootstrap must now be computed offline. |
+| 2026-09-15 | 9.6 | Final MuSiQue downstream comparison | Passed; Stage 9.6 closed | Compact significantly exceeds Hybrid on all ten downstream metrics. Against BGE, Compact ties on Answer EM/F1 but gains +0.0760 Supporting-Paragraph F1, +0.0636 Joint F1, and +0.057 Closure@10 with intervals excluding zero; its +0.031 full-paragraph gain is borderline because the interval touches zero. Balanced significantly improves evidence, joint, coverage, and Closure@10 over BGE, but its Answer EM is 0.025 lower. Compact remains primary and Balanced remains completeness-oriented. Decision: `MUSIQUE_ZERO_SHOT_BREADTH_SUPPORTED`. |
 
 ## Historical authorized action before answer-chain completion
 
@@ -246,7 +247,7 @@ Compact/Balanced, repair Hybrid with one answer call, and continue to BGE. No
 scientific answer claim is allowed until all 4,000 targets pass final offline
 audit and paired Bootstrap.
 
-## Current authorized action
+## Historical authorized action before downstream finalization
 
 Stages 9.1--9.5 are closed. Stage 9.6 has completed its fixed MuSiQue paragraph
 adapter, four-method selection, selection Bootstrap, answer-cache audit,
@@ -261,3 +262,20 @@ metric replay and a 10,000-sample paired qid Bootstrap entirely offline. It
 must not receive an API key and does not start training or GPU inference. No
 final MuSiQue answer, joint, or closure claim may be written into the paper
 until those artifacts pass and are reviewed.
+
+## Current authorized action after Stage 9 completion
+
+Stages 9.1--9.6 are complete. Stage 9.6 closes as
+`MUSIQUE_ZERO_SHOT_BREADTH_SUPPORTED`: the frozen HotpotQA-only v27 Student
+transfers to paragraph-level MuSiQue evidence acquisition without fine-tuning.
+Compact is statistically tied with BGE-Reranker on Answer EM/F1 while
+significantly improving supporting-paragraph and joint metrics; Balanced adds
+significant paragraph/title coverage at greater latency but does not improve
+answer quality.
+
+No additional Stage 9 experiment, training run, GPU inference, or answer API
+call is authorized. The next task is paper integration and consistency audit:
+replace provisional v21/v22 breadth values with the frozen v27 Stage 9 results,
+keep MuSiQue metrics explicitly paragraph-level, retain Compact as the primary
+operating point, and preserve the negative boundaries for previous-only state,
+coverage-greedy supervision, auxiliary heads, and BGE answer quality.
