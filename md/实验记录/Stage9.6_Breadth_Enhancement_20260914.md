@@ -2,8 +2,8 @@
 
 ## Current status
 
-- Status: Compact/Balanced passed; Hybrid has one isolated API error.
-- Authorized action: quarantine one failed Hybrid cache and resume the chain.
+- Status: all four 1,000-qid answer reports and caches passed final audit.
+- Authorized action: offline paragraph-level metric replay and paired Bootstrap.
 - Preferred branch: MuSiQue zero-shot transfer when its official development
   data and paragraph-level support mapping pass the registered checks.
 - Alternative branch: one non-DeepSeek generator replication only when an
@@ -251,3 +251,26 @@ pid into an immutable failed-attempt directory, and preserves the other 999
 Hybrid caches. It performs no inference or API call. The resumed chain must
 skip clean Compact/Balanced reports, regenerate only the missing Hybrid answer,
 reaudit all 1,000 Hybrid rows, and then continue to BGE.
+
+## Complete answer-chain result
+
+The surgical retry repaired the single Hybrid API failure, and the resumed
+chain subsequently completed BGE-Reranker. The final cache-propagation audit
+passes all four 1,000-qid reports with no protocol differences, raw-answer
+disagreements, unresolved targets, or failures. All 4,000 method--qid targets
+are now accounted for.
+
+| Method | Freshly generated | Exact-context reuse | Total |
+|---|---:|---:|---:|
+| KSG-EA-Compact-10 | 1,000 | 0 | 1,000 |
+| KSG-EA-Balanced-15 | 759 | 241 | 1,000 |
+| Hybrid-RAG | 999 | 1 | 1,000 |
+| BGE-Reranker-RAG | 1,000 | 0 | 1,000 |
+| Total | 3,758 | 242 | 4,000 |
+
+The answer-generation phase is closed. No further API call is authorized.
+The next action is deterministic offline replay of canonical-plus-alias answer
+metrics, paragraph evidence, joint, and ClosureSuccess metrics, followed by a
+10,000-sample paired qid Bootstrap. Final answer and downstream values must be
+read from those generated artifacts rather than copied from provisional or
+smoke reports.

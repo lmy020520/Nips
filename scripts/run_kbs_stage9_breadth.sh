@@ -845,6 +845,72 @@ PY
   echo "No GPU inference or API call was started."
 }
 
+finalize_answers() {
+  local downstream_dir="$OUTPUT_ROOT/downstream1000"
+  local cache_summary="$OUTPUT_ROOT/cache_propagation/after_all.json"
+  local standard_summary="$downstream_dir/standard_metrics.json"
+  local records="$downstream_dir/standard_metric_records.jsonl"
+  local bootstrap="$downstream_dir/paired_bootstrap.json"
+  local standard_tmp records_tmp bootstrap_tmp
+  local path
+
+  for path in \
+    "$cache_summary" \
+    "$OUTPUT_ROOT/compact_seed42_answer_full1000.json" \
+    "$OUTPUT_ROOT/balanced_seed42_answer_full1000.json" \
+    "$OUTPUT_ROOT/hybrid_answer_full1000.json" \
+    "$OUTPUT_ROOT/bge_reranker_answer_full1000.json" \
+    outputs/rag/kbs_stage9_musique/compact_seed42_full1000.json \
+    outputs/rag/kbs_stage9_musique/balanced_seed42_full1000.json \
+    outputs/rag/kbs_stage9_musique/hybrid_full1000.json \
+    outputs/rag/kbs_stage9_musique/bge_reranker_full1000.json; do
+    if [[ ! -s "$path" ]]; then
+      echo "[ERROR] missing finalization prerequisite: $path" >&2
+      exit 1
+    fi
+  done
+  for path in "$standard_summary" "$records" "$bootstrap"; do
+    if [[ -e "$path" ]]; then
+      echo "[ERROR] refusing to overwrite downstream artifact: $path" >&2
+      exit 1
+    fi
+  done
+  mkdir -p "$downstream_dir"
+  standard_tmp="$(mktemp "$downstream_dir/.standard_metrics.XXXXXX.json")"
+  records_tmp="$(mktemp "$downstream_dir/.standard_metric_records.XXXXXX.jsonl")"
+
+  python3 scripts/evaluate_kbs_stage9_musique.py \
+    --report "KSG-EA-Compact=outputs/rag/kbs_stage9_musique/compact_seed42_full1000.json" \
+    --report "KSG-EA-Balanced=outputs/rag/kbs_stage9_musique/balanced_seed42_full1000.json" \
+    --report "Hybrid-RAG=outputs/rag/kbs_stage9_musique/hybrid_full1000.json" \
+    --report "BGE-Reranker-RAG=outputs/rag/kbs_stage9_musique/bge_reranker_full1000.json" \
+    --answer-audit "$OUTPUT_ROOT/compact_seed42_answer_full1000.json" \
+    --answer-audit "$OUTPUT_ROOT/balanced_seed42_answer_full1000.json" \
+    --answer-audit "$OUTPUT_ROOT/hybrid_answer_full1000.json" \
+    --answer-audit "$OUTPUT_ROOT/bge_reranker_answer_full1000.json" \
+    --cache-summary "$cache_summary" \
+    --expected-qids 1000 \
+    --output "$standard_tmp" \
+    --records-output "$records_tmp"
+  bootstrap_tmp="$(mktemp "$downstream_dir/.paired_bootstrap.XXXXXX.json")"
+  python3 scripts/bootstrap_kbs_stage9_musique_downstream.py \
+    --records "$records_tmp" \
+    --standard-summary "$standard_tmp" \
+    --expected-qids 1000 \
+    --n-bootstrap 10000 \
+    --seed 20260914 \
+    --output "$bootstrap_tmp"
+  mv "$standard_tmp" "$standard_summary"
+  mv "$records_tmp" "$records"
+  mv "$bootstrap_tmp" "$bootstrap"
+
+  echo "FINISHED_OK"
+  echo "status=STAGE9_6_MUSIQUE_DOWNSTREAM_OK"
+  echo "standard_metrics=$standard_summary"
+  echo "paired_bootstrap=$bootstrap"
+  echo "No GPU inference or answer API call was started."
+}
+
 case "$ACTION" in
   readiness)
     command=(
@@ -991,9 +1057,12 @@ case "$ACTION" in
   repair_hybrid_single_api_error)
     repair_hybrid_single_api_error
     ;;
+  finalize_answers)
+    finalize_answers
+    ;;
   *)
     echo "[ERROR] unsupported ACTION=$ACTION" >&2
-    echo "Allowed: readiness, build_adapter, audit_adapter, selection_smoke, audit_selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, selection_bootstrap, prepare_answer_caches, answer_smoke, answer_full_start, answer_full_chain, answer_status, repair_hybrid_single_api_error" >&2
+    echo "Allowed: readiness, build_adapter, audit_adapter, selection_smoke, audit_selection_smoke, selection_full_start, selection_full_worker, selection_status, selection_finalize, selection_bootstrap, prepare_answer_caches, answer_smoke, answer_full_start, answer_full_chain, answer_status, repair_hybrid_single_api_error, finalize_answers" >&2
     exit 2
     ;;
 esac

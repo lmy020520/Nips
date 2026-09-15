@@ -184,8 +184,9 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-15 | 9.6 | MuSiQue exact-context cache audit | Passed; bounded Compact answer smoke authorized | All 4,000 method--qid targets and 1,000 query records passed, including 287 alias-bearing qids. No historical MuSiQue answer context is reusable. Cross-method exact-context deduplication removes 242 duplicate target files, reducing the theoretical fresh requirement from 4,000 to 3,758 calls. The answer scorer now maximizes over the canonical answer and aliases without changing historical single-reference datasets. One 20-qid Compact answer smoke is authorized; complete answers remain locked. |
 | 2026-09-15 | 9.6 | Compact answer smoke | Passed; sequential complete answer chain authorized | All 20 frozen Compact contexts and caches passed, including five alias-bearing qids and independent per-qid score replay. There were 20 fresh answers, zero invalid/error answers, and zero context or alias mismatches. Smoke EM/F1 0.7500/0.8167 are diagnostics only. Complete answers must run Compact, Balanced, Hybrid, then BGE sequentially with exact-context propagation; concurrent execution is prohibited because it would discard the 242-context saving. |
 | 2026-09-15 | 9.6 | First complete-answer-chain attempt | Interrupted by one API error; surgical Hybrid repair authorized | Compact and Balanced passed 1,000-qid audits. Hybrid wrote all 1,000 rows and reproduced the frozen evidence metrics, but one fresh answer exhausted retries, yielding exactly one empty/error answer; its other 999 caches are valid. BGE was not started. The guarded repair archives the failed report, audit, log, pid, and one bad cache while preserving 999 valid Hybrid caches, then the sequential chain may resume. No wholesale rerun or cache deletion is allowed. |
+| 2026-09-15 | 9.6 | Complete four-method MuSiQue answers | Passed; offline finalization authorized | The surgical Hybrid retry and resumed BGE run closed all 4,000 method--qid targets with clean protocol and cache audits. Compact/Balanced/Hybrid/BGE used 1,000/759/999/1,000 fresh answers and 0/241/1/0 exact-context reuses, totaling exactly 3,758 fresh calls and 242 reuses with no raw-answer disagreements or unresolved targets. No further answer call is authorized; final canonical-plus-alias downstream metrics and paired Bootstrap must now be computed offline. |
 
-## Current authorized action
+## Historical authorized action before answer-chain completion
 
 Stages 9.1--9.4 are closed. Stage 9.2 supports a replicated targeted anti-
 reselection effect but not a broad end-to-end gain. Stage 9.3 establishes
@@ -244,3 +245,19 @@ archives only the bad Hybrid cache and failed derived artifacts while retaining
 Compact/Balanced, repair Hybrid with one answer call, and continue to BGE. No
 scientific answer claim is allowed until all 4,000 targets pass final offline
 audit and paired Bootstrap.
+
+## Current authorized action
+
+Stages 9.1--9.5 are closed. Stage 9.6 has completed its fixed MuSiQue paragraph
+adapter, four-method selection, selection Bootstrap, answer-cache audit,
+bounded answer smoke, and all 4,000 final answer targets. The final cache ledger
+contains exactly 3,758 fresh answers and 242 exact-context reuses, with zero
+unresolved targets or answer disagreements. Recall-50 remains unsupported
+because MuSiQue memories contain at most 20 paragraphs.
+
+The only authorized next action is `ACTION=finalize_answers` in
+`scripts/run_kbs_stage9_breadth.sh`. It performs canonical-plus-alias standard-
+metric replay and a 10,000-sample paired qid Bootstrap entirely offline. It
+must not receive an API key and does not start training or GPU inference. No
+final MuSiQue answer, joint, or closure claim may be written into the paper
+until those artifacts pass and are reviewed.
