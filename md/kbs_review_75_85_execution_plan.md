@@ -182,6 +182,7 @@ Do not use another DeepSeek service tier as an independent generator family.
 | 2026-09-14 | 9.6 | Complete MuSiQue zero-shot selection | Passed; paired selection Bootstrap authorized | All four methods complete the same 1,000 qids/2,629 paragraph states with identical qid/target hashes, no skips, and no answer output. Compact/Balanced paragraph Alignment@5 is 0.8186/0.8383 versus 0.6946 Hybrid and 0.7155 BGE; full paragraph coverage is 0.700/0.717 versus 0.436/0.669. Compact and Balanced exceed BGE on all four point estimates, while costing 1,474.97/1,775.28 ms per qid versus 1,010.21 ms. Significance and answer claims remain locked pending offline paired Bootstrap and cache audit. |
 | 2026-09-15 | 9.6 | MuSiQue paired selection Bootstrap | Passed; exact-context cache audit authorized | The 10,000-sample paired qid-cluster Bootstrap passed on all 1,000 qids. Balanced exceeds Hybrid and BGE on all four paragraph metrics with intervals excluding zero. Compact exceeds Hybrid on all four and BGE on Alignment@1/5 and full-title coverage; Compact's +0.031 full-paragraph gain over BGE has CI [0.000, 0.063] and is treated as borderline rather than strictly significant. Balanced versus Compact is tied on Alignment@1 but significantly improves the other three metrics at higher latency. The next action is a no-API cache audit with canonical-plus-alias scoring locked for 287 alias-bearing qids. |
 | 2026-09-15 | 9.6 | MuSiQue exact-context cache audit | Passed; bounded Compact answer smoke authorized | All 4,000 method--qid targets and 1,000 query records passed, including 287 alias-bearing qids. No historical MuSiQue answer context is reusable. Cross-method exact-context deduplication removes 242 duplicate target files, reducing the theoretical fresh requirement from 4,000 to 3,758 calls. The answer scorer now maximizes over the canonical answer and aliases without changing historical single-reference datasets. One 20-qid Compact answer smoke is authorized; complete answers remain locked. |
+| 2026-09-15 | 9.6 | Compact answer smoke | Passed; sequential complete answer chain authorized | All 20 frozen Compact contexts and caches passed, including five alias-bearing qids and independent per-qid score replay. There were 20 fresh answers, zero invalid/error answers, and zero context or alias mismatches. Smoke EM/F1 0.7500/0.8167 are diagnostics only. Complete answers must run Compact, Balanced, Hybrid, then BGE sequentially with exact-context propagation; concurrent execution is prohibited because it would discard the 242-context saving. |
 
 ## Current authorized action
 
@@ -232,6 +233,9 @@ paragraph interval touching zero. The exact-context answer-cache audit has also
 passed under canonical-plus-alias scoring: no historical answer is reusable,
 while 242 exact cross-method duplicates reduce 4,000 target files to 3,758
 unique fresh contexts. Recall-50 remains unsupported. The next authorized
-action is one Compact-10, 20-qid answer smoke. Complete answer generation
-remains locked until the smoke reproduces frozen contexts and passes cache,
-alias, and score replay.
+Compact-10 answer smoke has now passed all 20 qids, including five alias-
+bearing cases, with exact context, cache, and score replay. The next authorized
+action is the sequential four-method answer chain in fixed Compact, Balanced,
+Hybrid, BGE order. This chain may run in the background on one GPU and must
+propagate exact contexts before each method. No scientific answer claim is
+allowed until all 4,000 targets pass final offline audit and paired Bootstrap.

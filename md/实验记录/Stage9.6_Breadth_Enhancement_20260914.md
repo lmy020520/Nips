@@ -2,8 +2,8 @@
 
 ## Current status
 
-- Status: selection, paired Bootstrap, and exact-context cache audit passed.
-- Authorized action: one 20-qid Compact answer smoke.
+- Status: selection, paired Bootstrap, cache audit, and answer smoke passed.
+- Authorized action: sequential four-method complete answer chain.
 - Preferred branch: MuSiQue zero-shot transfer when its official development
   data and paragraph-level support mapping pass the registered checks.
 - Alternative branch: one non-DeepSeek generator replication only when an
@@ -209,3 +209,29 @@ The next gate is one Compact-10 answer smoke on the first 20 runtime-ordered
 qids. It must reproduce the frozen selection contexts and pass cache, alias,
 and per-qid score replay. Smoke values are execution diagnostics only. Complete
 four-method answer generation remains unauthorized until this smoke passes.
+
+## Compact answer smoke
+
+The bounded Compact-10 answer smoke passed all 20 runtime-ordered qids. It
+reproduced every frozen selection context, generated 20 fresh answers, and had
+zero empty answers, API errors, invalid caches, alias mismatches, or score-
+replay mismatches. Five of the 20 qids contain answer aliases, directly testing
+the canonical-plus-alias scoring path.
+
+| Metric | Smoke value |
+|---|---:|
+| Answer EM | 0.7500 |
+| Answer F1 | 0.8167 |
+| Paragraph Alignment@1 | 0.6500 |
+| Paragraph Alignment@5 | 0.9500 |
+| Full support-title coverage | 0.9000 |
+| Full support-paragraph coverage | 0.9000 |
+| Average API tokens | 880.55 |
+| Average answer latency | 5.158 s |
+
+These 20-qid values validate execution only and are not scientific results.
+The complete chain is authorized in fixed order: Compact, Balanced, Hybrid,
+then BGE-Reranker. Before each method, completed reports are propagated only
+when the question, canonical answer, ordered aliases, selected paragraphs, and
+answer protocol match exactly. Running the four methods concurrently is not
+allowed because it would forfeit the registered 242-context deduplication.
